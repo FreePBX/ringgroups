@@ -253,7 +253,7 @@ function checkGRP(theForm) {
 	var msgInvalidGrpNum = "<?php echo _('Invalid Group Number specified'); ?>";
 	var msgInvalidGrpNumStartWithZero = "<?php echo _('Group numbers with more than one digit cannot begin with 0'); ?>";
 	var msgInvalidExtList = "<?php echo _('Please enter an extension list.'); ?>";
-	var msgInvalidGrpPrefix = "<?php echo _('Invalid prefix. Valid characters: a-z A-Z 0-9 : _ -'); ?>";
+	var msgInvalidGrpPrefix = "<?php echo _('Invalid Caller ID prefix.'); ?>";
 	var msgInvalidTime = "<?php echo _('Invalid time specified'); ?>";
 	var msgInvalidGrpTimeRange = "<?php echo _('Time must be between 1 and 60 seconds'); ?>";
 	var msgInvalidDescription = "<?php echo _('Please enter a valid Group Description'); ?>";
@@ -277,7 +277,7 @@ function checkGRP(theForm) {
 		return warnInvalid(theForm.grplist, msgInvalidExtList);
 
 	defaultEmptyOK = true;
-	if (!isPrefix(theForm.grppre.value))
+	if (!isCallerID(theForm.grppre.value))
 		return warnInvalid(theForm.grppre, msgInvalidGrpPrefix);
 	
 	defaultEmptyOK = false;
