@@ -1,13 +1,13 @@
 <module>
 	<rawname>ringgroups</rawname>
 	<name>Ring Groups</name>
-	<version>1.1</version>
+	<version>1.1.1</version>
 	<type>setup</type>
 	<category>Basic</category>
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/ringgroups-1.1.tgz</location>
+	<location>release/ringgroups-1.1.1.tgz</location>
 	<info>http://freepbx.org/wiki/RingGroups</info>
-	<md5sum>c4eb67f72d67d2d2fab0ed3721494437</md5sum>
+	<md5sum>d56a82a8ca2d43faa217c585338c1ce1</md5sum>
 </module>
