@@ -37,5 +37,6 @@ if(DB::IsError($check)) {
     if(DB::IsError($result)) {
             die($result->getDebugInfo());
     }
+}
 ?>
 
