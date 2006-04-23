@@ -27,6 +27,15 @@ if(DB::IsError($check)) {
             die($result->getDebugInfo());
     }
 }
-
+// Version 1.2 upgrade
+$sql = "SELECT alertinfo FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ringgroups ADD alertinfo VARCHAR( 35 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) {
+            die($result->getDebugInfo());
+    }
 ?>
 

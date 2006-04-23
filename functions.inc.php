@@ -41,6 +41,7 @@ function ringgroups_get_config($engine) {
 					$postdest = $grp['postdest'];
 					$grppre = $grp['grppre'];
 					$annmsg = (isset($grp['annmsg'])?$grp['annmsg']:'');
+					$alertinfo = $grp['alertinfo'];
 					
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 					// check for old prefix
@@ -51,6 +52,10 @@ function ringgroups_get_config($engine) {
 					$ext->add($contextname, $grpnum, 'NEWPREFIX', new ext_setvar('RGPREFIX',$grppre));
 					// add prefix to callerid name
 					$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)','${RGPREFIX}${CALLERID(name)}'));
+					// Set Alert_Info
+					if ($alertinfo != '') {
+						$ext->add($contextname, $grpnum, '', new ext_setvar('_ALERT_INFO',$alertinfo));
+					}
 					// recording stuff
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RecordMethod','Group'));
 					$ext->add($contextname, $grpnum, '', new ext_macro('record-enable','${MACRO_EXTEN},${RecordMethod}'));
@@ -74,8 +79,8 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg='') {
-	$results = sql("INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."')");
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg='',$alertinfo) {
+	$results = sql("INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."')");
 }
 
 function ringgroups_del($grpnum) {
@@ -96,7 +101,7 @@ function ringgroups_list() {
 }
 
 function ringgroups_get($grpnum) {
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description FROM ringgroups WHERE grpnum = $grpnum","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo FROM ringgroups WHERE grpnum = $grpnum","getRow",DB_FETCHMODE_ASSOC);
 	return $results;
 }
 ?>

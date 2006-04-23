@@ -22,6 +22,7 @@ isset($_REQUEST['grppre'])?$grppre = $_REQUEST['grppre']:$grppre='';
 isset($_REQUEST['strategy'])?$strategy = $_REQUEST['strategy']:$strategy='';
 isset($_REQUEST['annmsg'])?$annmsg = $_REQUEST['annmsg']:$annmsg='';
 isset($_REQUEST['description'])?$description = $_REQUEST['description']:$description='';
+isset($_REQUEST['alertinfo'])?$alertinfo = $_REQUEST['alertinfo']:$alertinfo='';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
@@ -61,7 +62,7 @@ if(isset($_POST['action'])){
 		//add group
 		if ($action == 'addGRP') {
 			//ringgroups_add($account,implode("-",$grplist),$strategy,$grptime,$grppre,$goto);
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo);
 			needreload();
 		}
 		
@@ -74,7 +75,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo);
 			needreload();
 		}
 	}
@@ -112,6 +113,7 @@ if ($action == 'delGRP') {
 		$goto = $thisgrp['postdest'];
 		$annmsg = $thisgrp['annmsg'];
 		$description = $thisgrp['description'];
+		$alertinfo = $thisgrp['alertinfo'];
 		unset($grpliststr);
 		unset($thisgrp);
 		
@@ -132,6 +134,7 @@ if ($action == 'delGRP') {
 		$grptime = '';
 		$goto = '';
 		$annmsg = '';
+		$alertinfo = '';
 
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
@@ -228,6 +231,10 @@ if ($action == 'delGRP') {
 	</tr>
 <?php } ?>
 			
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Alert Info")?><span><?php echo _('ALERT_INFO can be used for distinctive ring with SIP devices.')?></span></a>:</td>
+		<td><input type="text" name="alertinfo" size="10" value="<?php echo ($alertinfo)?$alertinfo:'' ?>"></td>
+	</tr>
 			<tr><td colspan="2"><br><h5><?php echo _("Destination if no answer")?>:<hr></h5></td></tr>
 
 <?php 
