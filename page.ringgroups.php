@@ -199,7 +199,7 @@ if ($action == 'delGRP') {
 
 			<tr>
 				<td><?php echo _("ring time (max 60 sec)")?>:</td>
-				<td><input size="4" type="text" name="grptime" value="<?php  echo $grptime ?>"></td>
+				<td><input size="4" type="text" name="grptime" value="<?php  echo $grptime?$grptime:20 ?>"></td>
 			</tr>
 <?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
 	<tr>
