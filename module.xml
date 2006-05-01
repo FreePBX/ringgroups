@@ -1,13 +1,13 @@
 <module>
 	<rawname>ringgroups</rawname>
 	<name>Ring Groups</name>
-	<version>1.2</version>
+	<version>1.2.1</version>
 	<type>setup</type>
 	<category>Basic</category>
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/ringgroups-1.2.tgz</location>
+	<location>release/ringgroups-1.2.1.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-RingGroups</info>
-	<md5sum>2241003b93c50ba408184c90ed0c1b1f</md5sum>
+	<md5sum>921f35763aea6474cb60259771d2c3f1</md5sum>
 </module>
