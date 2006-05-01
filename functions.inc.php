@@ -58,7 +58,7 @@ function ringgroups_get_config($engine) {
 					}
 					// recording stuff
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RecordMethod','Group'));
-					$ext->add($contextname, $grpnum, '', new ext_macro('record-enable','${MACRO_EXTEN},${RecordMethod}'));
+					$ext->add($contextname, $grpnum, '', new ext_macro('record-enable',$grplist.',${RecordMethod}'));
 					// group dial
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',$strategy));
 					if ($annmsg != '') {
