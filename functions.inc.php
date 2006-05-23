@@ -45,7 +45,7 @@ function ringgroups_get_config($engine) {
 					
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 					// check for old prefix
-					$ext->add($contextname, $grpnum, '', new ext_gotoif('$[${CALLERID(name):0:${LEN(${RGPREFIX})}} != ${RGPREFIX}]', 'NEWPREFIX'));
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${CALLERID(name):0:${LEN(${RGPREFIX})}}" != "${RGPREFIX}"]', 'NEWPREFIX'));
 					// strip off old prefix
 					$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)','${CALLERID(name):${LEN(${RGPREFIX})}}'));
 					// set new prefix
