@@ -39,26 +39,32 @@ function ringgroups_get_config($engine) {
 					$grptime = $grp['grptime'];
 					$grplist = $grp['grplist'];
 					$postdest = $grp['postdest'];
-					$grppre = $grp['grppre'];
+					$grppre = (isset($grp['grppre'])?$grp['grppre']:'');
 					$annmsg = (isset($grp['annmsg'])?$grp['annmsg']:'');
 					$alertinfo = $grp['alertinfo'];
-					
+
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
-					// check for old prefix
-					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${CALLERID(name):0:${LEN(${RGPREFIX})}}" != "${RGPREFIX}"]', 'NEWPREFIX'));
-					// strip off old prefix
-					$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)','${CALLERID(name):${LEN(${RGPREFIX})}}'));
-					// set new prefix
-					$ext->add($contextname, $grpnum, 'NEWPREFIX', new ext_setvar('RGPREFIX',$grppre));
-					// add prefix to callerid name
-					$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)','${RGPREFIX}${CALLERID(name)}'));
+					
+					// deal with group CID prefix
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RGPREFIX}" = "foo"]', 'REPCID'));
+					$ext->add($contextname, $grpnum, '', new ext_noop('Current RGPREFIX is ${RGPREFIX}....stripping from Caller ID'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)', '${CALLERID(name):${LEN(${RGPREFIX})}}'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('RGPREFIX', ''));
+					$ext->add($contextname, $grpnum, 'REPCID', new ext_noop('CALLERID(name) is ${CALLERID(name)}'));
+					if ($grppre != '') {
+						$ext->add($contextname, $grpnum, '', new ext_setvar('RGPREFIX', $grppre));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('CALLERID(name)','${RGPREFIX}${CALLERID(name)}'));
+					}
+					
 					// Set Alert_Info
 					if ($alertinfo != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('_ALERT_INFO',$alertinfo));
 					}
+
 					// recording stuff
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RecordMethod','Group'));
 					$ext->add($contextname, $grpnum, '', new ext_macro('record-enable',$grplist.',${RecordMethod}'));
+
 					// group dial
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',$strategy));
 					if ($annmsg != '') {
@@ -68,11 +74,13 @@ function ringgroups_get_config($engine) {
 					}
 					$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.',${DIAL_OPTIONS},'.$grplist));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
+
 					// where next?
-					if ((isset($postdest) ? $postdest : '') != '')
+					if ((isset($postdest) ? $postdest : '') != '') {
 						$ext->add($contextname, $grpnum, '', new ext_goto($postdest));
-					else
+					} else {
 						$ext->add($contextname, $grpnum, '', new ext_hangup(''));
+					}
 				}
 			}
 		break;
