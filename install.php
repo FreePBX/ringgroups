@@ -38,4 +38,23 @@ if(DB::IsError($check)) {
             die($result->getDebugInfo());
     }
 }
+
+// Version 2.0 upgrade. Yeah. 2.0 baby! 
+$sql = "SELECT remotealert FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ringgroups ADD remotealert VARCHAR( 80 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+
+    $sql = "ALTER TABLE ringgroups ADD needsconf VARCHAR( 10 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+
+    $sql = "ALTER TABLE ringgroups ADD toolate VARCHAR( 80 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+}
+
 ?>

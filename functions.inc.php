@@ -42,6 +42,9 @@ function ringgroups_get_config($engine) {
 					$grppre = (isset($grp['grppre'])?$grp['grppre']:'');
 					$annmsg = (isset($grp['annmsg'])?$grp['annmsg']:'');
 					$alertinfo = $grp['alertinfo'];
+					$needsconf = $grp['needsconf'];
+					$remotealert = $grp['remotealert'];
+					$toolate = $grp['toolate'];
 
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 					
@@ -72,7 +75,14 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_wait(1));
 						$ext->add($contextname, $grpnum, '', new ext_playback($annmsg));
 					}
-					$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.',${DIAL_OPTIONS},'.$grplist));
+					if ($needsconf == "CHECKED") {
+						$len=strlen($grpnum)+4;
+						$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial',$grptime.
+							",M(confirm^${remotealert}^${toolate}^${grpnum})".'${DIAL_OPTIONS},${EXTEN:'.$len.'}'));
+						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial-confirm',$grptime.',${EXTEN},'.$grplist));
+					} else {
+						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.',${DIAL_OPTIONS},'.$grplist));
+					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
 					// where next?
@@ -87,8 +97,9 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg='',$alertinfo) {
-	$results = sql("INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."')");
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg='',$alertinfo,$needsconf,$remotealert,$toolate) {
+	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."', '$needsconf', '$remotealert', '$toolate')";
+	$results = sql($sql);
 }
 
 function ringgroups_del($grpnum) {
@@ -109,7 +120,7 @@ function ringgroups_list() {
 }
 
 function ringgroups_get($grpnum) {
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo FROM ringgroups WHERE grpnum = $grpnum","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate FROM ringgroups WHERE grpnum = $grpnum","getRow",DB_FETCHMODE_ASSOC);
 	return $results;
 }
 ?>
