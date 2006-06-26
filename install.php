@@ -56,5 +56,15 @@ if(DB::IsError($check)) {
     $result = $db->query($sql);
     if(DB::IsError($result)) { die($result->getDebugInfo()); }
 }
+// Version 2.1 upgrade. Add support for ${DIALOPTS} override, playing MOH
+$sql = "SELECT ringing FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ringgroups ADD ringing VARCHAR( 80 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+}
+
 
 ?>

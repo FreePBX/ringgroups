@@ -26,6 +26,7 @@ isset($_REQUEST['alertinfo'])?$alertinfo = $_REQUEST['alertinfo']:$alertinfo='';
 isset($_REQUEST['needsconf'])?$needsconf = $_REQUEST['needsconf']:$needsconf='';
 isset($_REQUEST['remotealert'])?$remotealert = $_REQUEST['remotealert']:$remotealert='';
 isset($_REQUEST['toolate'])?$toolate = $_REQUEST['toolate']:$toolate='';
+isset($_REQUEST['ringing'])?$ringing = $_REQUEST['ringing']:$ringing='';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
@@ -65,7 +66,7 @@ if(isset($_POST['action'])){
 		//add group
 		if ($action == 'addGRP') {
 			//ringgroups_add($account,implode("-",$grplist),$strategy,$grptime,$grppre,$goto);
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
 		}
 		
@@ -78,7 +79,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
 		}
 	}
@@ -120,6 +121,7 @@ if ($action == 'delGRP') {
 		$remotealert = $thisgrp['remotealert'];
 		$needsconf = $thisgrp['needsconf'];
 		$toolate = $thisgrp['toolate'];
+		$ringing = $thisgrp['ringing'];
 		unset($grpliststr);
 		unset($thisgrp);
 		
@@ -144,6 +146,7 @@ if ($action == 'delGRP') {
 		$remotealert = '';
 		$needsconf = '';
 		$toolate = '';
+		$ringing = '';
 
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
@@ -236,6 +239,24 @@ if ($action == 'delGRP') {
 				$default = (isset($annmsg) ? $annmsg : '');
 			?>
 			<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
+		</td>
+	</tr>
+<?php } if (function_exists('music_list')) { ?>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Play Music On Hold?")?><span><?php echo _("If you select a Music on Hold class to play, instead of 'Ring', they will hear that instead of Ringing while they are waiting for someone to pick up. Note this DOES NOT WORK with call confirmation, due to limitations of Asterisk")?></span></a></td>
+		<td>
+			&nbsp;&nbsp;<select name="ringing"/>
+			<?php
+				$tresults = music_list("/var/lib/asterisk/mohmp3");
+				$cur = (isset($ringing) ? $ringing : 'Ring');
+				echo '<option value="Ring">'._("Ring")."</option>";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'.$tresult."</option>\n";
+					}
+				}
+			?>		
+			</select>		
 		</td>
 	</tr>
 <?php } ?>
