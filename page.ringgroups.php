@@ -267,8 +267,11 @@ if ($action == 'delGRP') {
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Confirm Calls")?><span><?php echo _('Enable this if you\'re calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through.')?></span></a>:</td>
-		<td><input type="checkbox" name="needsconf" value="CHECKED" <?php echo $needsconf ?>  /></td>
+		<td> <?php if (!function_exists('recordings_list')) { echo _("System Recordings not installed. Option Disabled"); } else { ?>
+			<input type="checkbox" name="needsconf" value="CHECKED" <?php echo $needsconf ?>  /></td>
+<?php } ?>
 	</tr>
+<?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Remote Announce:")?><span><?php echo _("Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
@@ -303,6 +306,7 @@ if ($action == 'delGRP') {
 			</select>		
 		</td>
 	</tr>
+<?php } ?>
 			<tr><td colspan="2"><br><h5><?php echo _("Destination if no answer")?>:<hr></h5></td></tr>
 
 <?php 
