@@ -51,7 +51,7 @@ function ringgroups_get_config($engine) {
 						$dialopts = '${DIAL_OPTIONS}';
 					} else {
 						// We need the DIAL_OPTIONS variable
-						$sops = sql("SELECT value from globals where variable='DIAL_OPTIONS'", getRow);
+						$sops = sql("SELECT value from globals where variable='DIAL_OPTIONS'", "getRow");
 						$dialopts = "m(${ringing})".str_replace('r', '', $sops[0]);
 					}
 						
