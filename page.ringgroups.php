@@ -23,6 +23,10 @@ isset($_REQUEST['strategy'])?$strategy = $_REQUEST['strategy']:$strategy='';
 isset($_REQUEST['annmsg'])?$annmsg = $_REQUEST['annmsg']:$annmsg='';
 isset($_REQUEST['description'])?$description = $_REQUEST['description']:$description='';
 isset($_REQUEST['alertinfo'])?$alertinfo = $_REQUEST['alertinfo']:$alertinfo='';
+isset($_REQUEST['needsconf'])?$needsconf = $_REQUEST['needsconf']:$needsconf='';
+isset($_REQUEST['remotealert'])?$remotealert = $_REQUEST['remotealert']:$remotealert='';
+isset($_REQUEST['toolate'])?$toolate = $_REQUEST['toolate']:$toolate='';
+isset($_REQUEST['ringing'])?$ringing = $_REQUEST['ringing']:$ringing='';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
@@ -62,7 +66,7 @@ if(isset($_POST['action'])){
 		//add group
 		if ($action == 'addGRP') {
 			//ringgroups_add($account,implode("-",$grplist),$strategy,$grptime,$grppre,$goto);
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
 		}
 		
@@ -75,7 +79,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
 		}
 	}
@@ -114,6 +118,10 @@ if ($action == 'delGRP') {
 		$annmsg = $thisgrp['annmsg'];
 		$description = $thisgrp['description'];
 		$alertinfo = $thisgrp['alertinfo'];
+		$remotealert = $thisgrp['remotealert'];
+		$needsconf = $thisgrp['needsconf'];
+		$toolate = $thisgrp['toolate'];
+		$ringing = $thisgrp['ringing'];
 		unset($grpliststr);
 		unset($thisgrp);
 		
@@ -135,6 +143,10 @@ if ($action == 'delGRP') {
 		$goto = '';
 		$annmsg = '';
 		$alertinfo = '';
+		$remotealert = '';
+		$needsconf = '';
+		$toolate = '';
+		$ringing = '';
 
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
@@ -165,11 +177,11 @@ if ($action == 'delGRP') {
 					<b><?php echo _("ringall")?></b>:  <?php echo _("ring all available channels until one answers (default)")?><br>
 					<b><?php echo _("hunt")?></b>: <?php echo _("take turns ringing each available extension")?><br>
 					<b><?php echo _("memoryhunt")?></b>: <?php echo _("ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")?><br>
-					<b><?php echo _("*-prim")?></b>:  <?php echo _("these modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freepbx DND, it won't be run. If the primary is freepbx CF unconditional, then all will be rung")?><br>
+                                        <b><?php echo _("*-prim")?></b>:  <?php echo _("these modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freepbx DND, it won't be run. If the primary is freepbx CF unconditional, then all will be rung")?><br>
 				</span>
 				</a></td>
 				<td>
-					<select name="strategy"/>
+					&nbsp;&nbsp;<select name="strategy"/>
 					<?php
 						$default = (isset($strategy) ? $strategy : 'ringall');
                                                 $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim');
@@ -206,7 +218,7 @@ if ($action == 'delGRP') {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("announcement:")?><span><?php echo _("Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
-			<select name="annmsg"/>
+			&nbsp;&nbsp;<select name="annmsg"/>
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($annmsg) ? $annmsg : '');
@@ -230,12 +242,72 @@ if ($action == 'delGRP') {
 			<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
 		</td>
 	</tr>
+<?php } if (function_exists('music_list')) { ?>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Play Music On Hold?")?><span><?php echo _("If you select a Music on Hold class to play, instead of 'Ring', they will hear that instead of Ringing while they are waiting for someone to pick up. Note this DOES NOT WORK with call confirmation, due to limitations of Asterisk")?></span></a></td>
+		<td>
+			&nbsp;&nbsp;<select name="ringing"/>
+			<?php
+				$tresults = music_list("/var/lib/asterisk/mohmp3");
+				$cur = (isset($ringing) ? $ringing : 'Ring');
+				echo '<option value="Ring">'._("Ring")."</option>";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'.$tresult."</option>\n";
+					}
+				}
+			?>		
+			</select>		
+		</td>
+	</tr>
 <?php } ?>
 			
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Alert Info")?><span><?php echo _('ALERT_INFO can be used for distinctive ring with SIP devices.')?></span></a>:</td>
 		<td><input type="text" name="alertinfo" size="10" value="<?php echo ($alertinfo)?$alertinfo:'' ?>"></td>
 	</tr>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Confirm Calls")?><span><?php echo _('Enable this if you\'re calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through.')?></span></a>:</td>
+		<td> <?php if (!function_exists('recordings_list')) { echo _("System Recordings not installed. Option Disabled"); } else { ?>
+			<input type="checkbox" name="needsconf" value="CHECKED" <?php echo $needsconf ?>  /></td>
+<?php } ?>
+	</tr>
+<?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Remote Announce:")?><span><?php echo _("Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td>
+			&nbsp;&nbsp;<select name="remotealert"/>
+			<?php
+				$tresults = recordings_list();
+				$default = (isset($remotealert) ? $remotealert : '');
+				echo '<option value="">'._("None")."</option>";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult[2].'"'.($tresult[2] == $default ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+					}
+				}
+			?>		
+			</select>		
+		</td>
+	</tr>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Too-Late Announce:")?><span><?php echo _("Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td>
+			&nbsp;&nbsp;<select name="toolate"/>
+			<?php
+				$tresults = recordings_list();
+				$default = (isset($toolate) ? $toolate : '');
+				echo '<option value="">'._("None")."</option>";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult[2].'"'.($tresult[2] == $default ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+					}
+				}
+			?>		
+			</select>		
+		</td>
+	</tr>
+<?php } ?>
 			<tr><td colspan="2"><br><h5><?php echo _("Destination if no answer")?>:<hr></h5></td></tr>
 
 <?php 
