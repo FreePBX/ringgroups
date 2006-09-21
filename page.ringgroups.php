@@ -267,7 +267,7 @@ if ($action == 'delGRP') {
 		<td><input type="text" name="alertinfo" size="10" value="<?php echo ($alertinfo)?$alertinfo:'' ?>"></td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Confirm Calls")?><span><?php echo _('Enable this if you\'re calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through.')?></span></a>:</td>
+		<td><a href="#" class="info"><?php echo _("Confirm Calls")?><span><?php echo _('Enable this if you\'re calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through. This feature only works with the ringall ring strategy')?></span></a>:</td>
 		<td> <?php if (!function_exists('recordings_list')) { echo _("System Recordings not installed. Option Disabled"); } else { ?>
 			<input type="checkbox" name="needsconf" value="CHECKED" <?php echo $needsconf ?>  /></td>
 <?php } ?>
@@ -337,6 +337,7 @@ function checkGRP(theForm) {
 	var msgInvalidTime = "<?php echo _('Invalid time specified'); ?>";
 	var msgInvalidGrpTimeRange = "<?php echo _('Time must be between 1 and 60 seconds'); ?>";
 	var msgInvalidDescription = "<?php echo _('Please enter a valid Group Description'); ?>";
+	var msgInvalidRingStrategy = "<?php echo _('You must choose ringall ring strategy when using Confirm Calls'); ?>";
 
 	// set up the Destination stuff
 	setDestinations(theForm, 1);
@@ -367,6 +368,10 @@ function checkGRP(theForm) {
 		var grptimeVal = theForm.grptime.value;
 		if (grptimeVal < 1 || grptimeVal > 60)
 			return warnInvalid(theForm.grptime, msgInvalidGrpTimeRange);
+	}
+
+	if (theForm.needsconf.checked && theForm.strategy.value != "ringall") {
+		return warnInvalid(theForm.needsconf, msgInvalidRingStrategy);
 	}
 
 	if (!validateDestinations(theForm, 1, true))
