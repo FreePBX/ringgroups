@@ -71,7 +71,7 @@ function ringgroups_get_config($engine) {
 					
 					// Set Alert_Info
 					if ($alertinfo != '') {
-						$ext->add($contextname, $grpnum, '', new ext_setvar('_ALERT_INFO',$alertinfo));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('_ALERT_INFO', str_replace(';', '\;', $alertinfo)));
 					}
 
 					// recording stuff
