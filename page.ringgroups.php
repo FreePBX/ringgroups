@@ -87,7 +87,7 @@ if(isset($_POST['action'])){
 ?>
 </div>
 
-<div class="rnav">
+<div class="rnav"><ul>
     <li><a id="<?php  echo ($extdisplay=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Ring Group")?></a></li>
 <?php 
 //get unique ring groups
@@ -99,7 +99,7 @@ if (isset($gresults)) {
 	}
 }
 ?>
-</div>
+</ul></div>
 
 <div class="content">
 <?php 
