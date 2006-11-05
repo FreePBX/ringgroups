@@ -164,7 +164,7 @@ if ($action == 'delGRP') {
 				<input size="5" type="hidden" name="account" value="<?php  echo ltrim($extdisplay,'GRP-'); ?>">
 <?php 		} else { ?>
 				<td><a href="#" class="info"><?php echo _("Ring-Group Number")?>:<span><?php echo _("The number users will dial to ring extensions in this ring group")?></span></a></td>
-				<td><input size="5" type="text" name="account" value="<?php  echo $gresult[0] + 1; ?>"></td>
+				<td><input size="5" type="text" name="account" value="<?php  if ($gresult[0]==0) { echo "600"; } else { echo $gresult[0] + 1; } ?>"></td>
 <?php 		} ?>
 			</tr>
 			<tr>
