@@ -163,25 +163,25 @@ if ($action == 'delGRP') {
 ?>
 				<input size="5" type="hidden" name="account" value="<?php  echo ltrim($extdisplay,'GRP-'); ?>">
 <?php 		} else { ?>
-				<td><a href="#" class="info"><?php echo _("group number")?>:<span><?php echo _("The number users will dial to ring extensions in this ring group")?></span></a></td>
+				<td><a href="#" class="info"><?php echo _("Ring-Group Number")?>:<span><?php echo _("The number users will dial to ring extensions in this ring group")?></span></a></td>
 				<td><input size="5" type="text" name="account" value="<?php  echo $gresult[0] + 1; ?>"></td>
 <?php 		} ?>
 			</tr>
 			<tr>
-				<td> <a href="#" class="info"><?php echo _("group description:")?></td>
+				<td> <a href="#" class="info"><?php echo _("Group Description:")?></td>
 				<td><input size="20" maxlength="35" type="text" name="description" value="<?php echo htmlspecialchars($description); ?>"></td>
 			</tr>
 			<tr>
-				<td> <a href="#" class="info"><?php echo _("ring strategy:")?>
+				<td> <a href="#" class="info"><?php echo _("Ring strategy:")?>
 				<span>
-					<b><?php echo _("ringall")?></b>:  <?php echo _("ring all available channels until one answers (default)")?><br>
-					<b><?php echo _("hunt")?></b>: <?php echo _("take turns ringing each available extension")?><br>
-					<b><?php echo _("memoryhunt")?></b>: <?php echo _("ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")?><br>
-                                        <b><?php echo _("*-prim")?></b>:  <?php echo _("these modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freepbx DND, it won't be run. If the primary is freepbx CF unconditional, then all will be rung")?><br>
+					<b><?php echo _("ringall")?></b>:  <?php echo _("Ring all available channels until one answers (default)")?><br>
+					<b><?php echo _("hunt")?></b>: <?php echo _("Take turns ringing each available extension")?><br>
+					<b><?php echo _("memoryhunt")?></b>: <?php echo _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")?><br>
+                                        <b><?php echo _("*-prim")?></b>:  <?php echo _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freePBX DND, it won't be rung. If the primary is freePBX CF unconditional, then all will be rung")?><br>
 				</span>
 				</a></td>
 				<td>
-					&nbsp;&nbsp;<select name="strategy"/>
+					<select name="strategy"/>
 					<?php
 						$default = (isset($strategy) ? $strategy : 'ringall');
                                                 $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim');
@@ -193,8 +193,8 @@ if ($action == 'delGRP') {
 				</td>
 			</tr>
 			<tr>
-				<td valign="top"><a href="#" class="info"><?php echo _("extension list")?>:<span><br><?php echo _("List extensions to ring, one per line.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a pound (#).  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing).")?><br><br></span></a></td>
-				<td valign="top">&nbsp;
+				<td valign="top"><a href="#" class="info"><?php echo _("Extension list")?>:<span><br><?php echo _("List extensions to ring, one per line.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a pound (#).  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing).")?><br><br></span></a></td>
+				<td valign="top">
 <?php
 		$rows = count($grplist)+1; 
 		($rows < 5) ? 5 : (($rows > 20) ? 20 : $rows);
@@ -211,14 +211,14 @@ if ($action == 'delGRP') {
 
 
 			<tr>
-				<td><?php echo _("ring time (max 60 sec)")?>:</td>
+				<td><?php echo _("Ring time (max 60 sec)")?>:</td>
 				<td><input size="4" type="text" name="grptime" value="<?php  echo $grptime?$grptime:20 ?>"></td>
 			</tr>
 <?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("announcement:")?><span><?php echo _("Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
-			&nbsp;&nbsp;<select name="annmsg"/>
+			<select name="annmsg"/>
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($annmsg) ? $annmsg : '');
@@ -234,7 +234,7 @@ if ($action == 'delGRP') {
 	</tr>
 <?php }	else { ?>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("announcement:")?><span><?php echo _("Message to be played to the caller before dialing this group.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Message to be played to the caller before dialing this group.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
 		<td>
 			<?php
 				$default = (isset($annmsg) ? $annmsg : '');
@@ -246,7 +246,7 @@ if ($action == 'delGRP') {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Play Music On Hold?")?><span><?php echo _("If you select a Music on Hold class to play, instead of 'Ring', they will hear that instead of Ringing while they are waiting for someone to pick up. Note this DOES NOT WORK with call confirmation, due to limitations of Asterisk")?></span></a></td>
 		<td>
-			&nbsp;&nbsp;<select name="ringing"/>
+			<select name="ringing"/>
 			<?php
 				$tresults = music_list("/var/lib/asterisk/mohmp3");
 				$cur = (isset($ringing) ? $ringing : 'Ring');
@@ -276,7 +276,7 @@ if ($action == 'delGRP') {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Remote Announce:")?><span><?php echo _("Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
-			&nbsp;&nbsp;<select name="remotealert"/>
+			<select name="remotealert"/>
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($remotealert) ? $remotealert : '');
@@ -293,7 +293,7 @@ if ($action == 'delGRP') {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Too-Late Announce:")?><span><?php echo _("Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
-			&nbsp;&nbsp;<select name="toolate"/>
+			<select name="toolate"/>
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($toolate) ? $toolate : '');
