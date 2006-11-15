@@ -193,7 +193,7 @@ if ($action == 'delGRP') {
 				</td>
 			</tr>
 			<tr>
-				<td valign="top"><a href="#" class="info"><?php echo _("Extension list")?>:<span><br><?php echo _("List extensions to ring, one per line.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a pound (#).  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing).")?><br><br></span></a></td>
+				<td valign="top"><a href="#" class="info"><?php echo _("Extension list")?>:<span><br><?php echo _("List extensions to ring, one per line.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a pound (#).  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions will ring the actual extension. If you want them to be sent down channel local (to ring follow-me, other ringgroups, queues, etc. then put a pound (#) at the end. Be careful!")?><br><br></span></a></td>
 				<td valign="top">
 <?php
 		$rows = count($grplist)+1; 
