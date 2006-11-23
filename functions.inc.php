@@ -57,6 +57,12 @@ function ringgroups_get_config($engine) {
 						
 
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
+
+					// Remember if we should go to our own destination (in case we are a child) and then tell all our
+					// children not to go to their destinations
+					//
+					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${NODEST}'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('NODEST', '${EXTEN}'));
 					
 					// deal with group CID prefix
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RGPREFIX}" = "foo"]', 'REPCID'));
@@ -95,12 +101,19 @@ function ringgroups_get_config($engine) {
 					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
+
+					// Now if we were told to skip the destination, do so now. Otherwise reset NODEST and proceed to our destination.
+					//
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'nodest'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('_NODEST', ''));
+
 					// where next?
 					if ((isset($postdest) ? $postdest : '') != '') {
 						$ext->add($contextname, $grpnum, '', new ext_goto($postdest));
 					} else {
 						$ext->add($contextname, $grpnum, '', new ext_hangup(''));
 					}
+					$ext->add($contextname, $grpnum, 'nodest', new ext_noop('SKIPPING DEST, CALL CAME FROM Q/RG: ${RRNODEST}'));
 				}
 			}
 		break;
