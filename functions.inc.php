@@ -62,7 +62,7 @@ function ringgroups_get_config($engine) {
 					// children not to go to their destinations
 					//
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${NODEST}'));
-					$ext->add($contextname, $grpnum, '', new ext_setvar('NODEST', '${EXTEN}'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('_NODEST', '${EXTEN}'));
 					
 					// deal with group CID prefix
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RGPREFIX}" = "foo"]', 'REPCID'));
