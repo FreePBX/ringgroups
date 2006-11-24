@@ -87,6 +87,7 @@ function ringgroups_get_config($engine) {
 					// group dial
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',$strategy));
 					if ($annmsg != '') {
+						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]','DIALGRP'));			
 						$ext->add($contextname, $grpnum, '', new ext_answer(''));
 						$ext->add($contextname, $grpnum, '', new ext_wait(1));
 						$ext->add($contextname, $grpnum, '', new ext_playback($annmsg));
