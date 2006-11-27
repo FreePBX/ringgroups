@@ -68,12 +68,14 @@ if(isset($_POST['action'])){
 			//ringgroups_add($account,implode("-",$grplist),$strategy,$grptime,$grppre,$goto);
 			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
+			redirect_standard();
 		}
 		
 		//del group
 		if ($action == 'delGRP') {
 			ringgroups_del($account);
 			needreload();
+			redirect_standard();
 		}
 		
 		//edit group - just delete and then re-add the extension
@@ -81,6 +83,7 @@ if(isset($_POST['action'])){
 			ringgroups_del($account);	
 			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
+			redirect_standard();
 		}
 	}
 }
