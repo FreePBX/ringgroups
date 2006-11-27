@@ -83,7 +83,7 @@ if(isset($_POST['action'])){
 			ringgroups_del($account);	
 			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
 			needreload();
-			redirect_standard();
+			redirect_standard('extdisplay');
 		}
 	}
 }
