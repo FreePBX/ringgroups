@@ -340,7 +340,7 @@ function checkGRP(theForm) {
 	var msgInvalidTime = "<?php echo _('Invalid time specified'); ?>";
 	var msgInvalidGrpTimeRange = "<?php echo _('Time must be between 1 and 60 seconds'); ?>";
 	var msgInvalidDescription = "<?php echo _('Please enter a valid Group Description'); ?>";
-	var msgInvalidRingStrategy = "<?php echo _('You must choose ringall ring strategy when using Confirm Calls'); ?>";
+	var msgInvalidRingStrategy = "<?php echo _('You must choose ringall or ringall-prim ring strategy when using Confirm Calls'); ?>";
 
 	// set up the Destination stuff
 	setDestinations(theForm, 1);
@@ -373,7 +373,7 @@ function checkGRP(theForm) {
 			return warnInvalid(theForm.grptime, msgInvalidGrpTimeRange);
 	}
 
-	if (theForm.needsconf.checked && theForm.strategy.value != "ringall") {
+	if (theForm.needsconf.checked && theForm.strategy.value.substring(0,7) != "ringall") {
 		return warnInvalid(theForm.needsconf, msgInvalidRingStrategy);
 	}
 
