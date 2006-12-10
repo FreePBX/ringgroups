@@ -28,6 +28,7 @@ function ringgroups_get_config($engine) {
 	switch($engine) {
 		case "asterisk":
 			$ext->addInclude('from-internal-additional','ext-group');
+			$ext->addInclude('from-internal-additional','grps');
 			$contextname = 'ext-group';
 			$ringlist = ringgroups_list();
 			if (is_array($ringlist)) {
@@ -62,7 +63,9 @@ function ringgroups_get_config($engine) {
 					// children not to go to their destinations
 					//
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${NODEST}'));
-					$ext->add($contextname, $grpnum, '', new ext_setvar('_NODEST', '${EXTEN}'));
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'skipvmblk'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${BLKVM}'));
+					$ext->add($contextname, $grpnum, 'skipvmblk', new ext_setvar('__NODEST', '${EXTEN}'));
 					
 					// deal with group CID prefix
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RGPREFIX}" = "foo"]', 'REPCID'));
@@ -98,7 +101,12 @@ function ringgroups_get_config($engine) {
 							",M(confirm^${remotealert}^${toolate}^${grpnum})$dialopts".',${EXTEN:'.$len.'}'));
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
 					} else {
+						$ext->add($contextname, $grpnum, '', new ext_setvar('RECALL', '${NODEST}'));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM', '${EXTEN}'));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', '${RECALL}'));
+						$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM', ''));
 					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
@@ -106,7 +114,7 @@ function ringgroups_get_config($engine) {
 					// Now if we were told to skip the destination, do so now. Otherwise reset NODEST and proceed to our destination.
 					//
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'nodest'));
-					$ext->add($contextname, $grpnum, '', new ext_setvar('_NODEST', ''));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
 
 					// where next?
 					if ((isset($postdest) ? $postdest : '') != '') {
