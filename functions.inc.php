@@ -59,12 +59,22 @@ function ringgroups_get_config($engine) {
 
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 
-					// Remember if we should go to our own destination (in case we are a child) and then tell all our
-					// children not to go to their destinations
+					// block voicemail until phone is answered at which point a macro should be called on the answering
+					// line to clear this flag so that subsequent transfers can occur, if already set by a the caller
+					// then don't change.
 					//
-					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${NODEST}'));
-					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'skipvmblk'));
-					$ext->add($contextname, $grpnum, '', new ext_setvar('RRNODEST', '${BLKVM}'));
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${BLKVM_OVERRIDE}" = "foo"]', 'skipdb'));
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${DB(${BLKVM_OVERRIDE})}" = "TRUE"]', 'skipov'));
+
+					$ext->add($contextname, $grpnum, 'skipdb', new ext_setvar('__NODEST', ''));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM_OVERRIDE', 'BLKVM/${EXTEN}/${CHANNEL}'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM_BASE', '${EXTEN}'));
+					$ext->add($contextname, $grpnum, '', new ext_setvar('DB(${BLKVM_OVERRIDE})', 'TRUE'));
+
+					// Remember if NODEST was set later, but clear it in case the call is answered so that subsequent
+					// transfers work.
+					//
+					$ext->add($contextname, $grpnum, 'skipov', new ext_setvar('RRNODEST', '${NODEST}'));
 					$ext->add($contextname, $grpnum, 'skipvmblk', new ext_setvar('__NODEST', '${EXTEN}'));
 					
 					// deal with group CID prefix
@@ -101,12 +111,7 @@ function ringgroups_get_config($engine) {
 							",M(confirm^${remotealert}^${toolate}^${grpnum})$dialopts".',${EXTEN:'.$len.'}'));
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
 					} else {
-						$ext->add($contextname, $grpnum, '', new ext_setvar('RECALL', '${NODEST}'));
-						$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM', '${EXTEN}'));
-						$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
-						$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', '${RECALL}'));
-						$ext->add($contextname, $grpnum, '', new ext_setvar('__BLKVM', ''));
 					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
@@ -115,6 +120,8 @@ function ringgroups_get_config($engine) {
 					//
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'nodest'));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
+
+					$ext->add($contextname, $grpnum, '', new ext_dbdel('${BLKVM_OVERRIDE}'));
 
 					// where next?
 					if ((isset($postdest) ? $postdest : '') != '') {
