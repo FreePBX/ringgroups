@@ -1,0 +1,192 @@
+# Hebrew version for Ring Groups FreePBX Module.
+# Copyright (C) 2006
+# This file is distributed under the same license as the PACKAGE package.
+# Shimi <shimi@shimi.net>, 2006.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreePBX 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-17 17:20+0300\n"
+"PO-Revision-Date: 2006-10-17 17:30+0300\n"
+"Last-Translator: Shimi <shimi@shimi.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: page.ringgroups.php:64
+msgid "Warning! Extension"
+msgstr "אזהרה! שלוחה"
+
+#: page.ringgroups.php:64
+msgid "is not allowed for your account"
+msgstr "אינה מורשית עבור חשבונך"
+
+#: page.ringgroups.php:91 page.ringgroups.php:151 page.ringgroups.php:158
+msgid "Add Ring Group"
+msgstr "הוסף קבוצת צלצול"
+
+#: page.ringgroups.php:107 page.ringgroups.php:136
+msgid "Ring Group"
+msgstr "קבוצת צלצול"
+
+#: page.ringgroups.php:107
+msgid "deleted"
+msgstr "נמחקה"
+
+#: page.ringgroups.php:133
+msgid "Delete Group"
+msgstr "מחק קבוצה"
+
+#: page.ringgroups.php:158
+msgid "Edit Ring Group"
+msgstr "ערוך קבוצת צלצול"
+
+#: page.ringgroups.php:166
+msgid "group number"
+msgstr "מספר קבוצה"
+
+#: page.ringgroups.php:166
+msgid "The number users will dial to ring extensions in this ring group"
+msgstr "המספר שאותו משתמשים יחייגו כדי לחייג לשלוחות בקבוצת חיוג זו"
+
+#: page.ringgroups.php:171
+msgid "group description:"
+msgstr "תיאור הקבוצה"
+
+#: page.ringgroups.php:175
+msgid "ring strategy:"
+msgstr "אסטרטגיית חיוג:"
+
+#: page.ringgroups.php:177
+msgid "ringall"
+msgstr "צלצל לכולם"
+
+#: page.ringgroups.php:177
+msgid "ring all available channels until one answers (default)"
+msgstr "צלצל לכל הערוצים הזמינים עד שמישהו עונה (ברירת מחדל)"
+
+#: page.ringgroups.php:178
+msgid "hunt"
+msgstr "ציד"
+
+#: page.ringgroups.php:178
+msgid "take turns ringing each available extension"
+msgstr "צלצל בתור לכל שלוחה זמינה"
+
+#: page.ringgroups.php:179
+msgid "memoryhunt"
+msgstr "ציד עם זיכרון"
+
+#: page.ringgroups.php:179
+msgid ""
+"ring first extension in the list, then ring the 1st and 2nd extension, then "
+"ring 1st 2nd and 3rd extension in the list.... etc."
+msgstr "צלצל לשלוחה הראשונה ברשימה, לאחר מכן צלצל לראשונה ולשנייה, לאחר מכן לראשונה לשנייה ולשלישית, וכך הלאה."
+
+#: page.ringgroups.php:180
+msgid "*-prim"
+msgstr ""
+
+#: page.ringgroups.php:180
+msgid ""
+"these modes act as described above. However, if the primary extension (first "
+"in list) is occupied, the other extensions will not be rung. If the primary "
+"is freepbx DND, it won't be run. If the primary is freepbx CF unconditional, "
+"then all will be rung"
+msgstr "מצבים אלה יפעלו כמתואר לעיל. אך, אם השלוחה הראשית (הראשונה ברשימה) תפוסה, השלוחות האחרות לא תצלצלנה. אם השלוחה הראשית נמצאת במצב נא-לא-להפריע במרכזיה, לא יהיה נסיון לצלצל. אם השלוחה הראשית מוגדרת במרכזיה במצב עקוב אחרי ללא תנאים, כל השלוחות תצלצלנה"
+
+#: page.ringgroups.php:196
+msgid "extension list"
+msgstr "רשימת שלוחות"
+
+#: page.ringgroups.php:196
+msgid ""
+"List extensions to ring, one per line.<br><br>You can include an extension "
+"on a remote system, or an external number by suffixing a number with a pound "
+"(#).  ex:  2448089# would dial 2448089 on the appropriate trunk (see "
+"Outbound Routing)."
+msgstr "רשימת שלוחות שיש לצלצל אליהן, אחת בכל שורה.<br /><br />אתה יכול לכלול שלוחה במערכת מרוחקת, או מספר חיצוני על ידי הקדמת המספר בסולמית (#). לדוגמא: #2448089 יחייג 2448089 דרך היציאה המתאימה (ראה ניתוב החוצה)."
+
+#: page.ringgroups.php:208
+msgid "CID name prefix"
+msgstr "הקדמת שם זיהוי שיחות"
+
+#: page.ringgroups.php:214
+msgid "ring time (max 60 sec)"
+msgstr "זמן צלצול (מקס 60 שניות)"
+
+#: page.ringgroups.php:219 page.ringgroups.php:237
+msgid "announcement:"
+msgstr "הכרזה:"
+
+#: page.ringgroups.php:219
+msgid ""
+"Message to be played to the caller before dialing this group.<br><br>To add "
+"additional recordings please use the \"System Recordings\" MENU to the left"
+msgstr "הודעה שתושמע למתקשר לפני שמחייגים לקבוצה זו.<br /><br />כדי להוסיף הקלטות נוספות, אנא השתמש <em>בתפריט</em>\"הקלטות מערכת\" אשר בצד שמאל"
+
+#: page.ringgroups.php:225 page.ringgroups.php:283 page.ringgroups.php:300
+msgid "None"
+msgstr "אין"
+
+#: page.ringgroups.php:237
+msgid ""
+"Message to be played to the caller before dialing this group.<br><br>You "
+"must install and enable the \"Systems Recordings\" Module to edit this option"
+msgstr "הודעה שתושמע למתקשר לפני שמחייגים לקבוצה זו.<br /><br />אתה חייב להתקין ולהפעיל את המודול \"הקלטות מערכת\" כדי לערוך אפשרות זו"
+
+#: page.ringgroups.php:247
+msgid "Play Music On Hold?"
+msgstr "השמע מוסיקה בהמתנה?"
+
+#: page.ringgroups.php:247
+msgid ""
+"If you select a Music on Hold class to play, instead of 'Ring', they will "
+"hear that instead of Ringing while they are waiting for someone to pick up. "
+"Note this DOES NOT WORK with call confirmation, due to limitations of "
+"Asterisk"
+msgstr "אם תבחר קטגוריית מוסיקת המתנה לנגן, במקום 'צלצל', המתקשר ישמע מוסיקה זו במקום צליל של צלצול בזמן שהם ממתינים שמישהו ירים. שים לב שדבר זה <em>לא עובד</em> עם אישור שיחות, בגלל מגבלות של אסטריסק"
+
+#: page.ringgroups.php:253
+msgid "Ring"
+msgstr "צלצל"
+
+#: page.ringgroups.php:266
+msgid "Alert Info"
+msgstr "מידע התראה"
+
+#: page.ringgroups.php:270
+msgid "Confirm Calls"
+msgstr "אשר שיחות"
+
+#: page.ringgroups.php:271
+msgid "System Recordings not installed. Option Disabled"
+msgstr "הקלטות מערכת אינן מותקנות. האפשרות מבוטלת"
+
+#: page.ringgroups.php:277
+msgid "Remote Announce:"
+msgstr "הכרזה למקבל השיחה:"
+
+#: page.ringgroups.php:277
+msgid ""
+"Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
+"enabled.<br><br>To add additional recordings use the \"System Recordings\" "
+"MENU to the left"
+msgstr "הודעה שתושמע ל<em>מקבל</em> השיחה, אם 'אשר שיחות' מסומן.<br /><br />כדי להוסיף הקלטות נוספות, השתמש <em>בתפריט</em> \"הקלטות מערכת\" אשר בצד שמאל"
+
+#: page.ringgroups.php:294
+msgid "Too-Late Announce:"
+msgstr "הכרזת מאוחר-מדי:"
+
+#: page.ringgroups.php:294
+msgid ""
+"Message to be played to the person RECEIVING the call, if the call has "
+"already been accepted before they push 1.<br><br>To add additional "
+"recordings use the \"System Recordings\" MENU to the left"
+msgstr "הודעה שיש להשמיע לאדם <em>שמקבל</em> את השיחה, אם השיחה כבר התקבלה לפני שהוא לחץ 1.<br /><br />כדי להוסיף הקלטות נוספות, השתמש <em>בתפריט</em> \"הקלטות מערכת\" אשר בצד שמאל"
+
+#: page.ringgroups.php:311
+msgid "Destination if no answer"
+msgstr "יעד אם אף אחד לא עונה"
