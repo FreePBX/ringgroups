@@ -183,14 +183,16 @@ if ($action == 'delGRP') {
 					<b><?php echo _("ringall")?></b>:  <?php echo _("Ring all available channels until one answers (default)")?><br>
 					<b><?php echo _("hunt")?></b>: <?php echo _("Take turns ringing each available extension")?><br>
 					<b><?php echo _("memoryhunt")?></b>: <?php echo _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")?><br>
-                                        <b><?php echo _("*-prim")?></b>:  <?php echo _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freePBX DND, it won't be rung. If the primary is freePBX CF unconditional, then all will be rung")?><br>
+					<b><?php echo _("*-prim")?></b>:  <?php echo _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is freePBX DND, it won't be rung. If the primary is freePBX CF unconditional, then all will be rung")?><br>
+					<b><?php echo _("firstavailable")?></b>:  <?php echo _("ring only the first available channel")?><br>
+					<b><?php echo _("firstnotonphone")?></b>:  <?php echo _("ring only the first channel which is not offhook - ignore CW")?><br>
 				</span>
 				</a></td>
 				<td>
 					<select name="strategy"/>
 					<?php
 						$default = (isset($strategy) ? $strategy : 'ringall');
-                                                $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim');
+                                                $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone');
 						foreach ($items as $item) {
 							echo '<option value="'.$item.'" '.($default == $item ? 'SELECTED' : '').'>'._($item);
 						}
