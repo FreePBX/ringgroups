@@ -26,7 +26,7 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.3/ringgroups-2.2.13.tgz</location>
+	<location>release/2.3/ringgroups-2.2.14.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-RingGroups</info>
-	<md5sum>e2fa4c853f8096df8fc19f7199ce1e6a</md5sum>
+	<md5sum>cd99fefa4fcb8ef972f0f6c32a6410b2</md5sum>
 </module>
