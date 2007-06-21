@@ -32,12 +32,14 @@ $sql = "SELECT alertinfo FROM ringgroups";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	// add new field
-    $sql = "ALTER TABLE ringgroups ADD alertinfo VARCHAR( 35 ) NULL ;";
+    $sql = "ALTER TABLE ringgroups ADD alertinfo VARCHAR( 255 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
             die($result->getDebugInfo());
     }
 }
+// increase size for older installs
+$db->query("ALTER TABLE ringgroups CHANGE alertinfo alertinfo VARCHAR( 255 ) NULL");
 
 // Version 2.0 upgrade. Yeah. 2.0 baby! 
 $sql = "SELECT remotealert FROM ringgroups";
