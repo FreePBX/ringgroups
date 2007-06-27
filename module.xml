@@ -30,7 +30,7 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.3/ringgroups-2.2.14.3.tgz</location>
+	<location>release/2.3/ringgroups-2.2.15.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-RingGroups</info>
-	<md5sum>4ba5e6f247cbc9f18e6a549a8cd220ec</md5sum>
+	<md5sum>ca2d5c45cd6d72643be226e118ce8040</md5sum>
 </module>
