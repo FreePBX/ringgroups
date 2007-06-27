@@ -138,8 +138,21 @@ function ringgroups_get_config($engine) {
 }
 
 function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg='',$alertinfo,$needsconf,$remotealert,$toolate,$ringing) {
+
+	$extens = ringgroups_list();
+	if(is_array($extens)) {
+		foreach($extens as $exten) {
+			if ($exten[0]===$grpnum) {
+				echo "<script>javascript:alert('"._("This ringgroup")." ({$grpnum}) "._("is already in use")."');</script>";
+				return false;
+			}
+		}
+	}
+	print_r($extens);
+
 	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."', '$needsconf', '$remotealert', '$toolate', '$ringing')";
 	$results = sql($sql);
+	return true;
 }
 
 function ringgroups_del($grpnum) {
@@ -156,7 +169,7 @@ function ringgroups_list() {
 	if (isset($grps))
 		return $grps;
 	else
-		return null;
+		return array();
 }
 
 function ringgroups_get($grpnum) {

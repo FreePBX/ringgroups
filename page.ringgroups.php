@@ -68,10 +68,10 @@ if(isset($_POST['action'])){
 	} else {
 		//add group
 		if ($action == 'addGRP') {
-			//ringgroups_add($account,implode("-",$grplist),$strategy,$grptime,$grppre,$goto);
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
-			needreload();
-			redirect_standard();
+			if (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing)) {
+				needreload();
+				redirect_standard('extdisplay');
+			}
 		}
 		
 		//del group
