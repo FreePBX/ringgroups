@@ -69,7 +69,7 @@ if(DB::IsError($check)) {
 }
 
 $results = array();
-$sql = "SELECT grpnum, postdest FROM findmefollow";
+$sql = "SELECT grpnum, postdest FROM ringgroups";
 $results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 if (!DB::IsError($results)) { // error - table must not be there
 	foreach ($results as $result) {
@@ -78,7 +78,7 @@ if (!DB::IsError($results)) { // error - table must not be there
 
 		$new_dest = merge_ext_followme(trim($old_dest));
 		if ($new_dest != $old_dest) {
-			$sql = "UPDATE findmefollow SET postdest = '$new_dest' WHERE grpnum = $grpnum  AND postdest = '$old_dest'";
+			$sql = "UPDATE ringgroups SET postdest = '$new_dest' WHERE grpnum = $grpnum  AND postdest = '$old_dest'";
 			$results = $db->query($sql);
 			if(DB::IsError($results)) {
 				die($results->getMessage());
