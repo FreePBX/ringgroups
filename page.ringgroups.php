@@ -339,7 +339,6 @@ echo drawselects($goto,0);
 
 function checkGRP(theForm) {
 	var msgInvalidGrpNum = "<?php echo _('Invalid Group Number specified'); ?>";
-	var msgInvalidGrpNumStartWithZero = "<?php echo _('Group numbers with more than one digit cannot begin with 0'); ?>";
 	var msgInvalidExtList = "<?php echo _('Please enter an extension list.'); ?>";
 	var msgInvalidGrpPrefix = "<?php echo _('Invalid Caller ID prefix.'); ?>";
 	var msgInvalidTime = "<?php echo _('Invalid time specified'); ?>";
@@ -354,8 +353,6 @@ function checkGRP(theForm) {
 	defaultEmptyOK = false;
 	if (!isInteger(theForm.account.value)) {
 		return warnInvalid(theForm.account, msgInvalidGrpNum);
-	} else if (theForm.account.value.indexOf('0') == 0 && theForm.account.value.length > 1) {
-		return warnInvalid(theForm.account, msgInvalidGrpNumStartWithZero);
 	}
 	
 	defaultEmptyOK = false;	

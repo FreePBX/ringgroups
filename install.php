@@ -87,4 +87,12 @@ if (!DB::IsError($results)) { // error - table must not be there
 	}
 }
 
+// Version 2.2.16 change (#1961)
+//
+$results = $db->query("ALTER TABLE `ringgroups` CHANGE `grpnum` `grpnum` VARCHAR( 20 ) NOT NULL");
+if(DB::IsError($results)) {
+	echo $results->getMessage();
+	return false;
+}
+
 ?>

@@ -151,17 +151,17 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 	}
 	print_r($extens);
 
-	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing) VALUES (".$grpnum.", '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."', '$needsconf', '$remotealert', '$toolate', '$ringing')";
+	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing) VALUES ('".str_replace("'","''",$grpnum)."', '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."', '$needsconf', '$remotealert', '$toolate', '$ringing')";
 	$results = sql($sql);
 	return true;
 }
 
 function ringgroups_del($grpnum) {
-	$results = sql("DELETE FROM ringgroups WHERE grpnum = $grpnum","query");
+	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".str_replace("'","''",$grpnum)."'","query");
 }
 
 function ringgroups_list() {
-	$results = sql("SELECT grpnum, description FROM ringgroups ORDER BY grpnum","getAll",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)","getAll",DB_FETCHMODE_ASSOC);
 	foreach ($results as $result) {
 		if (isset($result['grpnum']) && checkRange($result['grpnum'])) {
 			$grps[] = array($result['grpnum'], $result['description']);
@@ -174,7 +174,7 @@ function ringgroups_list() {
 }
 
 function ringgroups_get($grpnum) {
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing FROM ringgroups WHERE grpnum = $grpnum","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing FROM ringgroups WHERE grpnum = '".str_replace("'", "''", $grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	return $results;
 }
 ?>
