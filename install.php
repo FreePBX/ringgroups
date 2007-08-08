@@ -10,21 +10,21 @@ if(DB::IsError($check)) {
     $sql = "ALTER TABLE ringgroups ADD description VARCHAR( 35 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     }
 
     // update existing groups
     $sql = "UPDATE ringgroups SET description = CONCAT('Ring Group ', grpnum) WHERE description IS NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     }
 
 	// make new field required
 	$sql = "ALTER TABLE `ringgroups` CHANGE `description` `description` VARCHAR( 35 ) NOT NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     }
 }
 // Version 1.2 upgrade
@@ -35,7 +35,7 @@ if(DB::IsError($check)) {
     $sql = "ALTER TABLE ringgroups ADD alertinfo VARCHAR( 255 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     }
 }
 // increase size for older installs
@@ -48,15 +48,15 @@ if(DB::IsError($check)) {
 	// add new field
     $sql = "ALTER TABLE ringgroups ADD remotealert VARCHAR( 80 ) NULL ;";
     $result = $db->query($sql);
-    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 
     $sql = "ALTER TABLE ringgroups ADD needsconf VARCHAR( 10 ) NULL ;";
     $result = $db->query($sql);
-    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 
     $sql = "ALTER TABLE ringgroups ADD toolate VARCHAR( 80 ) NULL ;";
     $result = $db->query($sql);
-    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 // Version 2.1 upgrade. Add support for ${DIALOPTS} override, playing MOH
 $sql = "SELECT ringing FROM ringgroups";
@@ -65,7 +65,7 @@ if(DB::IsError($check)) {
 	// add new field
     $sql = "ALTER TABLE ringgroups ADD ringing VARCHAR( 80 ) NULL ;";
     $result = $db->query($sql);
-    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 
 $results = array();
@@ -81,7 +81,7 @@ if (!DB::IsError($results)) { // error - table must not be there
 			$sql = "UPDATE ringgroups SET postdest = '$new_dest' WHERE grpnum = $grpnum  AND postdest = '$old_dest'";
 			$results = $db->query($sql);
 			if(DB::IsError($results)) {
-				die($results->getMessage());
+				die_freepbx($results->getMessage());
 			}
 		}
 	}
