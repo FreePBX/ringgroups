@@ -173,6 +173,53 @@ function ringgroups_list() {
 		return array();
 }
 
+function ringgroups_check_extensions($exten=true) {
+	$extenlist = array();
+	if (is_array($exten) && empty($exten)) {
+		return $extenlist;
+	}
+	$sql = "SELECT grpnum ,description FROM ringgroups ";
+	if (is_array($exten)) {
+		$sql .= "WHERE grpnum in ('".implode("','",$exten)."')";
+	}
+	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+
+	foreach ($results as $result) {
+		$thisexten = $result['grpnum'];
+		$extenlist[$thisexten]['description'] = _("Ring Group: ").$result['description'];
+		$extenlist[$thisexten]['status'] = 'INUSE';
+		$extenlist[$thisexten]['edit_url'] = 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisexten);
+	}
+	return $extenlist;
+}
+
+function ringgroup_check_destinations($dest=true) {
+	global $active_modules;
+
+	$destlist = array();
+	if (is_array($dest) && empty($dest)) {
+		return $destlist;
+	}
+	$sql = "SELECT grpnum, postdest, description FROM ringgroups ";
+	if ($dest !== true) {
+		$sql .= "WHERE postdest in ('".implode("','",$dest)."')";
+	}
+	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+
+	//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+
+	foreach ($results as $result) {
+		$thisdest = $result['postdest'];
+		$thisid   = $result['grpnum'];
+		$destlist[] = array(
+			'dest' => $thisdest,
+			'description' => 'Ringroup: '.$result['description'].'('.$thisid.')',
+			'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisid),
+		);
+	}
+	return $destlist;
+}
+
 function ringgroups_get($grpnum) {
 	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg, postdest, description, alertinfo, needsconf, remotealert, toolate, ringing FROM ringgroups WHERE grpnum = '".str_replace("'", "''", $grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	return $results;

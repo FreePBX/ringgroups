@@ -68,9 +68,15 @@ if(isset($_POST['action'])){
 	} else {
 		//add group
 		if ($action == 'addGRP') {
-			if (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing)) {
+
+			$conflict_url = array();
+			$usage_arr = framework_check_extension_usage($account);
+			if (!empty($usage_arr)) {
+				$conflict_url = framework_display_extension_usage_alert($usage_arr);
+
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing)) {
 				needreload();
-				redirect_standard('extdisplay');
+				redirect_standard();
 			}
 		}
 		
@@ -153,6 +159,11 @@ if ($action == 'delGRP') {
 		$needsconf = '';
 		$toolate = '';
 		$ringing = '';
+
+		if (!empty($conflict_url)) {
+			echo "<h5>"._("Conflicting Extensions")."</h5>";
+			echo implode('<br .>',$conflict_url);
+		}
 
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
