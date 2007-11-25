@@ -20,6 +20,27 @@ function ringgroups_destinations() {
 		return null;
 }
 
+function ringgroups_getdest($exten) {
+	return array("ext-group,$exten,1");
+}
+
+function ringgroups_getdestinfo($dest) {
+	if (substr(trim($dest),0,10) == 'ext-group,') {
+		$grp = explode(',',$dest);
+		$grp = $grp[1];
+		$thisgrp = ringgroups_get($grp);
+		if (empty($thisgrp)) {
+			return array();
+		} else {
+			return array('description' => 'Ring Group '.$grp.': '.$thisgrp['description'],
+			             'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($grp),
+								  );
+		}
+	} else {
+		return false;
+	}
+}
+
 /* 	Generates dialplan for ringgroups
 	We call this with retrieve_conf
 */

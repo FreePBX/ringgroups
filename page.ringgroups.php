@@ -147,6 +147,14 @@ if ($action == 'delGRP') {
 			
 		echo "<h2>"._("Ring Group").": ".ltrim($extdisplay,'GRP-')."</h2>";
 		echo "<p>".$delButton."</p>";
+
+		$usage_list = framework_display_destination_usage(ringgroups_getdest(ltrim($extdisplay,'GRP-')));
+		if (!empty($usage_list)) {
+		?>
+			<a href="#" class="info"><?php echo $usage_list['text']?>:<span><?php echo $usage_list['tooltip']?></span></a>
+		<?php
+		}
+
 	} else {
 		$grplist = explode("-", '');;
 		$strategy = '';
