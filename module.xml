@@ -1,13 +1,14 @@
 <module>
 	<rawname>ringgroups</rawname>
 	<name>Ring Groups</name>
-	<version>2.4.0</version>
+	<version>2.4.0.1</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*2.4.0.1* added depends on 2.4.0
 		*2.4.0* Extension/dest registry, extension quickpick, added hunt strategy with confirmation, it trans, formatting changes
 		*2.2.16.2* #2193 moh path hardcoded
 		*2.2.16.1* bump for rc1
@@ -32,10 +33,14 @@
 		*2.2.3* Clarification on help message if you want to ring follow-me and other non-extension numbers
 		*2.2.2* Forgot to add default starting RG number as 600
 		*2.2.1* Cleanup of the UI, remove workaround of formatting bugs with previous UI
-		*2.2* First release for FreePBX 2.2 - Fixed compatibility issue with new UI</changelog>
+		*2.2* First release for FreePBX 2.2 - Fixed compatibility issue with new UI
+	</changelog>
+	<depends>
+		<version>2.4.0</version>
+	</depends>
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.4/ringgroups-2.4.0.tgz</location>
-	<md5sum>77be2567e18c82e5ac078e9288c239d2</md5sum>
+	<location>release/2.4/ringgroups-2.4.0.1.tgz</location>
+	<md5sum>e6eeb80e6de6803db04c48514e51aaa1</md5sum>
 </module>
