@@ -367,6 +367,11 @@ if ($action == 'delGRP') {
 				</td>
 			</tr>
 <?php } ?>
+<?php
+			// implementation of module hook
+			// object was initialized in config.php
+			echo $module_hook->hookHtml;
+?>
 
 			<tr><td colspan="2"><br><h5><?php echo _("Destination if no answer")?>:<hr></h5></td></tr>
 
