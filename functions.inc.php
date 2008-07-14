@@ -51,7 +51,7 @@ function ringgroups_get_config($engine) {
 			$ext->addInclude('from-internal-additional','ext-group');
 			$ext->addInclude('from-internal-additional','grps');
 			$contextname = 'ext-group';
-			$ringlist = ringgroups_list();
+			$ringlist = ringgroups_list(true);
 			if (is_array($ringlist)) {
 				foreach($ringlist as $item) {
 					$grpnum = ltrim($item['0']);
@@ -181,11 +181,16 @@ function ringgroups_del($grpnum) {
 	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".str_replace("'","''",$grpnum)."'","query");
 }
 
-function ringgroups_list() {
+function ringgroups_list($get_all=false) {
 	$results = sql("SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)","getAll",DB_FETCHMODE_ASSOC);
 	foreach ($results as $result) {
-		if (isset($result['grpnum']) && checkRange($result['grpnum'])) {
-			$grps[] = array($result['grpnum'], $result['description']);
+		if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
+			$grps[] = array(
+				0 => $result['grpnum'], 
+				1 => $result['description'],
+				'grpnum' => $result['grpnum'], 
+				'description' => $result['description'],
+			);
 		}
 	}
 	if (isset($grps))
@@ -214,7 +219,7 @@ function ringgroups_check_extensions($exten=true) {
 	return $extenlist;
 }
 
-function ringgroup_check_destinations($dest=true) {
+function ringgroups_check_destinations($dest=true) {
 	global $active_modules;
 
 	$destlist = array();
