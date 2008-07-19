@@ -95,4 +95,23 @@ if(DB::IsError($results)) {
 	return false;
 }
 
+// 2.5 upgrades
+$sql = "SELECT cwignore FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ringgroups ADD cwignore VARCHAR( 10 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+}
+
+$sql = "SELECT cfignore FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ringgroups ADD cfignore VARCHAR( 10 ) NULL ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+}
+
 ?>

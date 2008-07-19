@@ -24,6 +24,8 @@ isset($_REQUEST['annmsg'])?$annmsg = $_REQUEST['annmsg']:$annmsg='';
 isset($_REQUEST['description'])?$description = $_REQUEST['description']:$description='';
 isset($_REQUEST['alertinfo'])?$alertinfo = $_REQUEST['alertinfo']:$alertinfo='';
 isset($_REQUEST['needsconf'])?$needsconf = $_REQUEST['needsconf']:$needsconf='';
+isset($_REQUEST['cwignore'])?$cwignore = $_REQUEST['cwignore']:$cwignore='';
+isset($_REQUEST['cfignore'])?$cfignore = $_REQUEST['cfignore']:$cfignore='';
 isset($_REQUEST['remotealert'])?$remotealert = $_REQUEST['remotealert']:$remotealert='';
 isset($_REQUEST['toolate'])?$toolate = $_REQUEST['toolate']:$toolate='';
 isset($_REQUEST['ringing'])?$ringing = $_REQUEST['ringing']:$ringing='';
@@ -74,7 +76,7 @@ if(isset($_POST['action'])){
 			if (!empty($usage_arr)) {
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing)) {
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing,$cwignore,$cfignore)) {
 				needreload();
 				redirect_standard();
 			}
@@ -90,7 +92,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg,$alertinfo,$needsconf,$remotealert,$toolate,$ringing,$cwignore,$cfignore);
 			needreload();
 			redirect_standard('extdisplay');
 		}
@@ -132,6 +134,8 @@ if ($action == 'delGRP') {
 		$alertinfo = $thisgrp['alertinfo'];
 		$remotealert = $thisgrp['remotealert'];
 		$needsconf = $thisgrp['needsconf'];
+		$cwignore = $thisgrp['cwignore'];
+		$cfignore = $thisgrp['cfignore'];
 		$toolate = $thisgrp['toolate'];
 		$ringing = $thisgrp['ringing'];
 		unset($grpliststr);
@@ -165,6 +169,8 @@ if ($action == 'delGRP') {
 		$alertinfo = '';
 		$remotealert = '';
 		$needsconf = '';
+		$cwignore = '';
+		$cfignore = '';
 		$toolate = '';
 		$ringing = '';
 
@@ -321,6 +327,20 @@ if ($action == 'delGRP') {
 			<tr>
 				<td><a href="#" class="info"><?php echo _("Alert Info")?><span><?php echo _('ALERT_INFO can be used for distinctive ring with SIP devices.')?></span></a>:</td>
 				<td><input type="text" name="alertinfo" size="20" value="<?php echo ($alertinfo)?$alertinfo:'' ?>" tabindex="<?php echo ++$tabindex;?>"></td>
+			</tr>
+
+			<tr>
+		<td><a href="#" class="info"><?php echo _("Ignore CF Settings")?><span> <?php echo _("When checked, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, mightn not honor this setting .") ?></span></a>:</td>
+				<td>
+					<input type="checkbox" name="cfignore" value="CHECKED" <?php echo $cfignore ?>   tabindex="<?php echo ++$tabindex;?>"/>
+				</td>
+			</tr>
+
+			<tr>
+		<td><a href="#" class="info"><?php echo _("Skip Busy Agent")?><span> <?php echo _("When checked, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted.") ?></span></a>:</td>
+				<td>
+					<input type="checkbox" name="cwignore" value="CHECKED" <?php echo $cwignore ?>   tabindex="<?php echo ++$tabindex;?>"/>
+				</td>
 			</tr>
 
 			<tr>
