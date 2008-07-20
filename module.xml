@@ -44,6 +44,6 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.5/ringgroups-2.5.0.tgz</location>
-	<md5sum>97014204306774290af671da7a4f53a0</md5sum>
+	<location>release/2.5/ringgroups-2.5.0.1.tgz</location>
+	<md5sum>143326fe4ab0eec9f18c4a4a02d037fb</md5sum>
 </module>
