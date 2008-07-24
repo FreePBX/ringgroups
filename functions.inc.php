@@ -149,7 +149,7 @@ function ringgroups_get_config($engine) {
 
 					// group dial
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',$strategy));
-					if ($annmsg_id != '') {
+					if ($annmsg_id) {
 						$annmsg = recordings_get_file($annmsg_id);
 						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]','DIALGRP'));			
 						$ext->add($contextname, $grpnum, '', new ext_answer(''));
