@@ -282,7 +282,7 @@ if ($action == 'delGRP') {
 						echo '<option value="">'._("None")."</option>";
 						if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
-								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $annmsg_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
 					?>		
@@ -361,7 +361,7 @@ if ($action == 'delGRP') {
 						echo '<option value="">'._("Default")."</option>";
 						if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
-								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $remotealert_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
 					?>		
@@ -379,7 +379,7 @@ if ($action == 'delGRP') {
 						echo '<option value="">'._("Default")."</option>";
 						if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
-								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $toolate_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
 					?>		
