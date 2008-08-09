@@ -330,7 +330,7 @@ if ($action == 'delGRP') {
 			</tr>
 
 			<tr>
-		<td><a href="#" class="info"><?php echo _("Ignore CF Settings")?><span> <?php echo _("When checked, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, mightn not honor this setting .") ?></span></a>:</td>
+		<td><a href="#" class="info"><?php echo _("Ignore CF Settings")?><span> <?php echo _("When checked, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting .") ?></span></a>:</td>
 				<td>
 					<input type="checkbox" name="cfignore" value="CHECKED" <?php echo $cfignore ?>   tabindex="<?php echo ++$tabindex;?>"/>
 				</td>
