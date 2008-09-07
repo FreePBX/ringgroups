@@ -190,6 +190,7 @@ function ringgroups_get_config($engine) {
 }
 
 function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore) {
+	global $db;
 
 	$extens = ringgroups_list();
 	if(is_array($extens)) {
@@ -202,13 +203,15 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 	}
 	print_r($extens);
 
-	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore) VALUES ('".str_replace("'","''",$grpnum)."', '".str_replace("'", "''", $strategy)."', ".str_replace("'", "''", $grptime).", '".str_replace("'", "''", $grppre)."', '".str_replace("'", "''", $grplist)."', '".str_replace("'", "''", $annmsg_id)."', '".str_replace("'", "''", $postdest)."', '".str_replace("'", "''", $desc)."', '".str_replace("'", "''", $alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore')";
+	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$db->escapeSimple($annmsg_id)."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore')";
 	$results = sql($sql);
 	return true;
 }
 
 function ringgroups_del($grpnum) {
-	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".str_replace("'","''",$grpnum)."'","query");
+	global $db;
+
+	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","query");
 }
 
 function ringgroups_list($get_all=false) {
@@ -277,7 +280,9 @@ function ringgroups_check_destinations($dest=true) {
 }
 
 function ringgroups_get($grpnum) {
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore FROM ringgroups WHERE grpnum = '".str_replace("'", "''", $grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+	global $db;
+
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	return $results;
 }
 ?>
