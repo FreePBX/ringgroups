@@ -163,7 +163,7 @@ $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	//  Add recording_id field
 	//
-	out("migrating");
+	out(_("migrating"));
 	outn(_("adding annmsg_id field.."));
   $sql = "ALTER TABLE ringgroups ADD annmsg_id INTEGER";
   $result = $db->query($sql);
@@ -246,7 +246,7 @@ if(DB::IsError($check)) {
 	}
 	out(sprintf(_("migrated %s entries"),$count));
 
-	outn(_("migrate toolate to  ids.."));
+	outn(_("migrate toolate to ids.."));
   $sql = "SELECT `grpnum`, `toolate` FROM `ringgroups`";
 	$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 	if(DB::IsError($results)) {
@@ -300,7 +300,7 @@ if(DB::IsError($check)) {
 	}
 
 } else {
-	out("already migrated");
+	out(_("already migrated"));
 }
 
 
