@@ -136,7 +136,7 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $alertinfo)));
 					}
 					if ($cwignore != '') {
- 						$ext->add($contextname, $grpnum, '', new ext_setvar('_CWIGNORE', 'TRUE'));
+ 						$ext->add($contextname, $grpnum, '', new ext_setvar('__CWIGNORE', 'TRUE'));
 					}
 					if ($cwignore != '') {
  						$ext->add($contextname, $grpnum, '', new ext_setvar('_CFIGNORE', 'TRUE'));
