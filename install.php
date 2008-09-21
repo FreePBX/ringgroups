@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `ringgroups`
 	`remotealert_id` INTEGER,
 	`needsconf` VARCHAR ( 10 ), 
 	`toolate_id` INTEGER,
+  `ringing` VARCHAR( 80 ) NULL,
 	`cwignore` VARCHAR ( 10 ), 
 	`cfignore` VARCHAR ( 10 ), 
 	PRIMARY KEY  (`grpnum`) 
