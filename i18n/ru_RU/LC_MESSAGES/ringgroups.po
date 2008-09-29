@@ -62,7 +62,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Этот номер используется для того, чтобы можно было позвонить в э ту группу"
 
 #: page.ringgroups.php:177
-msgid "Group Description:"
+msgid "Group Description"
 msgstr "Описание группы"
 
 #: page.ringgroups.php:177

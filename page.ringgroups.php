@@ -200,7 +200,7 @@ if ($action == 'delGRP') {
 			</tr>
 
 			<tr>
-		    <td> <a href="#" class="info"><?php echo _("Group Description:")?>:<span><?php echo _("Provide a descriptive title for this Ring Group.")?></span></a></td>
+		    <td> <a href="#" class="info"><?php echo _("Group Description")?>:<span><?php echo _("Provide a descriptive title for this Ring Group.")?></span></a></td>
 				<td><input size="20" maxlength="35" type="text" name="description" value="<?php echo htmlspecialchars($description); ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 			</tr>
 

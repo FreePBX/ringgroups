@@ -61,7 +61,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Il numero del Gruppo di Chiamata"
 
 #: page.ringgroups.php:177
-msgid "Group Description:"
+msgid "Group Description"
 msgstr "Descrizione Gruppo"
 
 #: page.ringgroups.php:177

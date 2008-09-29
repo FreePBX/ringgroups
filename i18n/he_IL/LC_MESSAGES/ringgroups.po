@@ -52,7 +52,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr "המספר שאותו משתמשים יחייגו כדי לחייג לשלוחות בקבוצת חיוג זו"
 
 #: page.ringgroups.php:171
-msgid "group description:"
+msgid "group description"
 msgstr "תיאור הקבוצה"
 
 #: page.ringgroups.php:175

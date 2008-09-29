@@ -161,7 +161,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Detta nummer kommer användarna att ringa för att komma till denna ringgrupp"
 
 #: page.ringgroups.php:203
-msgid "Group Description:"
+msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
 #: page.ringgroups.php:203
