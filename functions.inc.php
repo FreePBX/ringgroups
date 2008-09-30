@@ -32,7 +32,7 @@ function ringgroups_getdestinfo($dest) {
 		if (empty($thisgrp)) {
 			return array();
 		} else {
-			return array('description' => 'Ring Group '.$grp.': '.$thisgrp['description'],
+			return array('description' => sprintf(_("Ring Group %s: "),$grp).$thisgrp['description'],
 			             'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($grp),
 								  );
 		}
@@ -52,7 +52,7 @@ function ringgroups_recordings_usage($recording_id) {
 		foreach ($results as $result) {
 			$usage_arr[] = array(
 				'url_query' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($result['grpnum']),
-				'description' => "Ring Group: ".$result['description'],
+				'description' => sprintf(_("Ring Group: %s "),$result['description']),
 			);
 		}
 		return $usage_arr;
@@ -245,8 +245,8 @@ function ringgroups_check_extensions($exten=true) {
 
 	foreach ($results as $result) {
 		$thisexten = $result['grpnum'];
-		$extenlist[$thisexten]['description'] = _("Ring Group: ").$result['description'];
-		$extenlist[$thisexten]['status'] = 'INUSE';
+		$extenlist[$thisexten]['description'] = sprintf(_("Ring Group: %s"),$result['description']);
+		$extenlist[$thisexten]['status'] = _('INUSE');
 		$extenlist[$thisexten]['edit_url'] = 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisexten);
 	}
 	return $extenlist;
@@ -272,7 +272,7 @@ function ringgroups_check_destinations($dest=true) {
 		$thisid   = $result['grpnum'];
 		$destlist[] = array(
 			'dest' => $thisdest,
-			'description' => 'Ringroup: '.$result['description'].'('.$thisid.')',
+			'description' => sprintf(_("Ringroup: %s (%s)"),$result['description'],$thisid),
 			'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisid),
 		);
 	}
