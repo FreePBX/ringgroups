@@ -52,7 +52,7 @@ function ringgroups_recordings_usage($recording_id) {
 		foreach ($results as $result) {
 			$usage_arr[] = array(
 				'url_query' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($result['grpnum']),
-				'description' => sprintf(_("Ring Group: %s "),$result['description']),
+				'description' => sprintf(_("Ring Group: %s"),$result['description']),
 			);
 		}
 		return $usage_arr;

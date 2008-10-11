@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-27 20:22+0200\n"
-"PO-Revision-Date: 2008-09-28 00:57+0100\n"
+"POT-Creation-Date: 2008-10-06 00:29+0200\n"
+"PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
+
+#: functions.inc.php:35
+#, php-format
+msgid "Ring Group %s: "
+msgstr "Ringgrupp %s: "
+
+#: functions.inc.php:55
+#: functions.inc.php:248
+#, php-format
+msgid "Ring Group: %s"
+msgstr "Ringgrupp: %s"
 
 #: functions.inc.php:199
 msgid "This ringgroup"
@@ -25,9 +36,14 @@ msgstr "Denna ringgrupp"
 msgid "is already in use"
 msgstr "används redan"
 
-#: functions.inc.php:248
-msgid "Ring Group: "
-msgstr "Ringgrupp: "
+#: functions.inc.php:249
+msgid "INUSE"
+msgstr "ANVÄNDS"
+
+#: functions.inc.php:275
+#, php-format
+msgid "Ringroup: %s (%s)"
+msgstr "Ringgrupp: %s (%s)"
 
 #: install.php:164
 msgid "Checking if recordings need migration.."
@@ -378,6 +394,10 @@ msgstr "Endast ringalla, ringallav2, runda och respektive -prim stöds när bekr
 msgid "Ring Groups"
 msgstr "Ringgrupper"
 
+#~ msgid "Ring Group: "
+#~ msgstr "Ringgrupp: "
+#~ msgid "Inbound Route"
+#~ msgstr "Inkommande vag"
 #~ msgid "migrate toolate to  ids.."
 #~ msgstr "migrerar toolate to  ods.."
 

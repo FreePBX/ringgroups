@@ -8,13 +8,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-27 20:22+0200\n"
+"POT-Creation-Date: 2008-10-06 00:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: functions.inc.php:35
+#, php-format
+msgid "Ring Group %s: "
+msgstr ""
+
+#: functions.inc.php:55 functions.inc.php:248
+#, php-format
+msgid "Ring Group: %s"
+msgstr ""
 
 #: functions.inc.php:199
 msgid "This ringgroup"
@@ -24,8 +34,13 @@ msgstr ""
 msgid "is already in use"
 msgstr ""
 
-#: functions.inc.php:248
-msgid "Ring Group: "
+#: functions.inc.php:249
+msgid "INUSE"
+msgstr ""
+
+#: functions.inc.php:275
+#, php-format
+msgid "Ringroup: %s (%s)"
 msgstr ""
 
 #: install.php:164
@@ -145,7 +160,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 
 #: page.ringgroups.php:203
-msgid "Group Description:"
+msgid "Group Description"
 msgstr ""
 
 #: page.ringgroups.php:203
