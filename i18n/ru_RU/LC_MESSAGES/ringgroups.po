@@ -62,7 +62,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Этот номер используется для того, чтобы можно было позвонить в э ту группу"
 
 #: page.ringgroups.php:177
-msgid "Group Description"
+msgid "Group Description:"
 msgstr "Описание группы"
 
 #: page.ringgroups.php:177
@@ -133,6 +133,14 @@ msgstr "первый-на-телефоне"
 #: page.ringgroups.php:188
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "звонит первый телефон, у которого не снята трубка."
+
+#: page.ringgroups.php:235
+msgid ""
+"Time in seconds that the phones will ring. For all hunt style ring "
+"strategies, this is the time for each iteration of phone(s) that are rung"
+msgstr ""
+"Время в секундах в течение которого телефоны будут звонить. Для всех типов серийного "
+"искания в стратегиях звонков, это время звонка для каждого шага стратегий звонков."
 
 #: page.ringgroups.php:204
 msgid "Extension List"
@@ -221,6 +229,35 @@ msgstr "Звонок"
 #: page.ringgroups.php:274
 msgid "Alert Info"
 msgstr "Дополнительная информация"
+
+#: page.ringgroups.php:333
+msgid "Ignore CF Settings"
+msgstr "Игнорировать установки форварда звонков (CF)"
+
+#: page.ringgroups.php:333
+msgid ""
+"When checked, agents who attempt to Call Forward will be ignored, this "
+"applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+"example to access the extension's Follow-Me, might not honor this setting ."
+msgstr ""
+"Если отмечено, форвардинг звонка будет игнорироваться. Это относится к общим установкам CF, "
+"форвардингу на Занято и на Неответе. Внутренний номер, набранный с '#' на конце, например "
+"для доступа к опции Следуйте сюда, может быть не сработать." 
+
+#: page.ringgroups.php:340
+msgid "Skip Busy Agent"
+msgstr "Пропускать занятого оператора"
+
+#: page.ringgroups.php:340
+msgid ""
+"When checked, agents who are on an occupied phone will be skipped as if the "
+"line were returning busy. This means that Call Waiting or multi-line phones "
+"will not be presented with the call and in the various hunt style ring "
+"strategies, the next agent will be attempted."
+msgstr "Если отмечено, оператор на вызове будет пропущен и линия возвратит статус "
+"Занято. Это служит для тех случаев, когда используются мультиканальные телефоны и телефоны "
+"с опцией ожидания второго звонка, которые не верно отрабатывают в различных стратегиях звонков "
+"с серийным исканием, таким образом звонок перейдёт следующему члену группы дозвона."
 
 #: page.ringgroups.php:278
 msgid "Confirm Calls"
