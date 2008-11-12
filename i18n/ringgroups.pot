@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-06 00:29+0200\n"
+"POT-Creation-Date: 2008-11-12 22:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -296,41 +296,49 @@ msgstr ""
 msgid "Ring"
 msgstr ""
 
-#: page.ringgroups.php:323
+#: page.ringgroups.php:313
+msgid "none"
+msgstr ""
+
+#: page.ringgroups.php:314
+msgid "default"
+msgstr ""
+
+#: page.ringgroups.php:325
 msgid "CID Name Prefix"
 msgstr ""
 
-#: page.ringgroups.php:323
+#: page.ringgroups.php:325
 msgid ""
 "You can optionally prefix the Caller ID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
-#: page.ringgroups.php:328
+#: page.ringgroups.php:330
 msgid "Alert Info"
 msgstr ""
 
-#: page.ringgroups.php:328
+#: page.ringgroups.php:330
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ringgroups.php:333
+#: page.ringgroups.php:335
 msgid "Ignore CF Settings"
 msgstr ""
 
-#: page.ringgroups.php:333
+#: page.ringgroups.php:335
 msgid ""
 "When checked, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: page.ringgroups.php:340
+#: page.ringgroups.php:342
 msgid "Skip Busy Agent"
 msgstr ""
 
-#: page.ringgroups.php:340
+#: page.ringgroups.php:342
 msgid ""
 "When checked, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -338,11 +346,11 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: page.ringgroups.php:347
+#: page.ringgroups.php:349
 msgid "Confirm Calls"
 msgstr ""
 
-#: page.ringgroups.php:347
+#: page.ringgroups.php:349
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -350,70 +358,70 @@ msgid ""
 "through. This feature only works with the ringall ring strategy"
 msgstr ""
 
-#: page.ringgroups.php:355
+#: page.ringgroups.php:357
 msgid "Remote Announce:"
 msgstr ""
 
-#: page.ringgroups.php:355
+#: page.ringgroups.php:357
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU to the left"
 msgstr ""
 
-#: page.ringgroups.php:361 page.ringgroups.php:379
+#: page.ringgroups.php:363 page.ringgroups.php:381
 msgid "Default"
 msgstr ""
 
-#: page.ringgroups.php:373
+#: page.ringgroups.php:375
 msgid "Too-Late Announce:"
 msgstr ""
 
-#: page.ringgroups.php:373
+#: page.ringgroups.php:375
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
 
-#: page.ringgroups.php:396
+#: page.ringgroups.php:398
 msgid "Destination if no answer"
 msgstr ""
 
-#: page.ringgroups.php:404
+#: page.ringgroups.php:406
 msgid "Submit Changes"
 msgstr ""
 
-#: page.ringgroups.php:432
+#: page.ringgroups.php:434
 msgid "Invalid Group Number specified"
 msgstr ""
 
-#: page.ringgroups.php:433
+#: page.ringgroups.php:435
 msgid "Please enter an extension list."
 msgstr ""
 
-#: page.ringgroups.php:434
+#: page.ringgroups.php:436
 msgid "Invalid Caller ID prefix."
 msgstr ""
 
-#: page.ringgroups.php:435
+#: page.ringgroups.php:437
 msgid "Invalid time specified"
 msgstr ""
 
-#: page.ringgroups.php:436
+#: page.ringgroups.php:438
 msgid "Time must be between 1 and 60 seconds"
 msgstr ""
 
-#: page.ringgroups.php:437
+#: page.ringgroups.php:439
 msgid "Please enter a valid Group Description"
 msgstr ""
 
-#: page.ringgroups.php:438
+#: page.ringgroups.php:440
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
 
-#: module.xml
+#: modules.xml
 msgid "Ring Groups"
 msgstr ""

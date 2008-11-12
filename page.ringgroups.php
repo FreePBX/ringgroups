@@ -310,7 +310,9 @@ if ($action == 'delGRP') {
 						echo '<option value="Ring">'._("Ring")."</option>";
 						if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
-								echo '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'.$tresult."</option>\n";
+							    ( $tresult == 'none' ? $ttext = _("none") : $ttext = $tresult );
+							    ( $tresult == 'default' ? $ttext = _("default") : $ttext = $tresult );
+								echo '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'._($ttext)."</option>\n";
 							}
 						}
 					?>		
