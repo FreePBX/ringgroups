@@ -138,7 +138,7 @@ function ringgroups_get_config($engine) {
 					if ($cwignore != '') {
  						$ext->add($contextname, $grpnum, '', new ext_setvar('__CWIGNORE', 'TRUE'));
 					}
-					if ($cwignore != '') {
+					if ($cfignore != '') {
  						$ext->add($contextname, $grpnum, '', new ext_setvar('_CFIGNORE', 'TRUE'));
  						$ext->add($contextname, $grpnum, '', new ext_setvar('_FORWARD_CONTEXT', 'block-cf'));
 					}
