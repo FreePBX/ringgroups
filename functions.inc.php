@@ -172,6 +172,17 @@ function ringgroups_get_config($engine) {
 					// Now if we were told to skip the destination, do so now. Otherwise reset NODEST and proceed to our destination.
 					//
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'nodest'));
+					if ($cwignore != '') {
+ 						$ext->add($contextname, $grpnum, '', new ext_setvar('__CWIGNORE', ''));
+					}
+					// TODO: Asterisk uses a blank FORWARD_CONTEXT as a literal at the time of this change. A better solution would be
+					//       if it would ignore blank, since it is possible in a customcontext setup you would not want this set to
+					//       from-internal
+					//
+					if ($cfignore != '') {
+ 						$ext->add($contextname, $grpnum, '', new ext_setvar('_CFIGNORE', ''));
+ 						$ext->add($contextname, $grpnum, '', new ext_setvar('_FORWARD_CONTEXT', 'from-internal'));
+					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
 
 					$ext->add($contextname, $grpnum, '', new ext_dbdel('${BLKVM_OVERRIDE}'));
