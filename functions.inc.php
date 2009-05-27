@@ -252,6 +252,7 @@ function ringgroups_check_extensions($exten=true) {
 	if (is_array($exten)) {
 		$sql .= "WHERE grpnum in ('".implode("','",$exten)."')";
 	}
+	$sql .= " ORDER BY CAST(grpnum AS UNSIGNED)";
 	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
 
 	foreach ($results as $result) {
