@@ -38,7 +38,7 @@ msgstr "EN USO"
 
 #: functions.inc.php:275
 #, php-format
-msgid "Ringroup: %s (%s)"
+msgid "Ring Group: %s (%s)"
 msgstr "Grupo de extensiones: %s (%s)"
 
 #: install.php:164

@@ -40,7 +40,7 @@ msgstr ""
 
 #: functions.inc.php:275
 #, php-format
-msgid "Ringroup: %s (%s)"
+msgid "Ring Group: %s (%s)"
 msgstr ""
 
 #: install.php:164

@@ -52,7 +52,7 @@ msgstr "UTILISÉ"
 
 #: functions.inc.php:275
 #, php-format
-msgid "Ringroup: %s (%s)"
+msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
 
 #: install.php:164

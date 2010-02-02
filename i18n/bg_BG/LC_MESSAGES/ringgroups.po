@@ -43,7 +43,7 @@ msgstr "ANVÄNDS"
 
 #: functions.inc.php:275
 #, php-format
-msgid "Ringroup: %s (%s)"
+msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
 
 #: install.php:164

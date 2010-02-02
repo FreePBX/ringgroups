@@ -284,7 +284,7 @@ function ringgroups_check_destinations($dest=true) {
 		$thisid   = $result['grpnum'];
 		$destlist[] = array(
 			'dest' => $thisdest,
-			'description' => sprintf(_("Ringroup: %s (%s)"),$result['description'],$thisid),
+			'description' => sprintf(_("Ring Group: %s (%s)"),$result['description'],$thisid),
 			'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisid),
 		);
 	}
