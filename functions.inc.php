@@ -244,6 +244,7 @@ function ringgroups_get_config($engine) {
 
 function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='') {
 	global $db;
+	global $astman;
 
 	$extens = ringgroups_list();
 	if(is_array($extens)) {
@@ -266,19 +267,20 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 	  $fixedcid = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
 		$astman->database_put("RINGGROUP",$grpnum."/fixedcid",$fixedcid);
 	} else {
-		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
 	}
 	return true;
 }
 
 function ringgroups_del($grpnum) {
 	global $db;
+	global $astman;
 
 	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","query");
 	if ($astman) {
 		$astman->database_deltree("RINGGROUP/".$grpnum);
 	} else {
-		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
 	}
 }
 
@@ -350,6 +352,7 @@ function ringgroups_check_destinations($dest=true) {
 
 function ringgroups_get($grpnum) {
 	global $db;
+	global $astman;
 
 	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
   if ($astman) {
@@ -368,7 +371,7 @@ function ringgroups_get($grpnum) {
     $fixedcid = $astman->database_get("RINGGROUP",$grpnum."/fixedcid");
     $results['fixedcid'] = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
 	} else {
-		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
 	}
 	return $results;
 }
