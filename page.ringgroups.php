@@ -310,7 +310,7 @@ if ($action == 'delGRP') {
 				<td>
 					<select name="ringing" tabindex="<?php echo ++$tabindex;?>">
 					<?php
-						$tresults = music_list($amp_conf['ASTVARLIBDIR']."/mohmp3");
+						$tresults = music_list();
 						$cur = (isset($ringing) ? $ringing : 'Ring');
 						echo '<option value="Ring">'._("Ring")."</option>";
 						if (isset($tresults[0])) {
