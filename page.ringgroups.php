@@ -30,6 +30,9 @@ isset($_REQUEST['remotealert_id'])?$remotealert_id = $_REQUEST['remotealert_id']
 isset($_REQUEST['toolate_id'])?$toolate_id = $_REQUEST['toolate_id']:$toolate_id='';
 isset($_REQUEST['ringing'])?$ringing = $_REQUEST['ringing']:$ringing='';
 
+isset($_REQUEST['changecid'])?$changecid = $_REQUEST['changecid']:$changecid='default';
+isset($_REQUEST['fixedcid'])?$fixedcid = $_REQUEST['fixedcid']:$fixedcid='';
+
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
 } else {
@@ -76,7 +79,7 @@ if(isset($_POST['action'])){
 			if (!empty($usage_arr)) {
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore)) {
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid)) {
 				needreload();
 				redirect_standard();
 			}
@@ -92,7 +95,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid);
 			needreload();
 			redirect_standard('extdisplay');
 		}
@@ -138,6 +141,8 @@ if ($action == 'delGRP') {
 		$cfignore = $thisgrp['cfignore'];
 		$toolate_id = $thisgrp['toolate_id'];
 		$ringing = $thisgrp['ringing'];
+		$changecid   = isset($thisgrp['changecid'])   ? $thisgrp['changecid']   : 'default';
+		$fixedcid    = isset($thisgrp['fixedcid'])    ? $thisgrp['fixedcid']    : '';
 		unset($grpliststr);
 		unset($thisgrp);
 		
@@ -389,6 +394,39 @@ if ($action == 'delGRP') {
 				</td>
 			</tr>
 <?php } ?>
+			<tr><td colspan="2"><h5><?php echo _("Change External CID Configuration") ?><hr></h5></td></tr>
+			<tr>
+				<td>
+				<a href="#" class="info"><?php echo _("Mode")?>:
+				<span>
+					<b><?php echo _("Default")?></b>:  <?php echo _("Transmits the Callers CID if allowed by the trunk.")?><br>
+					<b><?php echo _("Fixed CID Value")?></b>:  <?php echo _("Always transmit the Fixed CID Value below.")?><br>
+					<b><?php echo _("Outside Calls Fixed CID Value")?></b>: <?php echo _("Transmit the Fixed CID Value below on calls that come in from outside only. Internal extension to extension calls will continue to operate in default mode.")?><br>
+					<b><?php echo _("Use Dialed Number")?></b>: <?php echo _("Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This will be BLOCKED on trunks that block foreign callerid")?><br>
+					<b><?php echo _("Force Dialed Number")?></b>: <?php echo _("Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This WILL be transmitted on trunks that block foreign callerid")?><br>
+				</span>
+				</a>
+				</td>
+				<td>
+					<select name="changecid" id="changecid" tabindex="<?php echo ++$tabindex;?>">
+					<?php
+						$default = (isset($changecid) ? $changecid : 'default');
+						echo '<option value="default" '.($default == 'default' ? 'SELECTED' : '').'>'._("Default");
+						echo '<option value="fixed" '.($default == 'fixed' ? 'SELECTED' : '').'>'._("Fixed CID Value");
+						echo '<option value="extern" '.($default == 'extern' ? 'SELECTED' : '').'>'._("Outside Calls Fixed CID Value");
+						echo '<option value="did" '.($default == 'did' ? 'SELECTED' : '').'>'._("Use Dialed Number");
+						echo '<option value="forcedid" '.($default == 'forcedid' ? 'SELECTED' : '').'>'._("Force Dialed Number");
+            $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled = "disabled"':'';
+					?>		
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="#" class="info"><?php echo _("Fixed CID Value")?>:<span><?php echo _('Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading "+".')?></span></a></td>
+        <td><input size="30" type="text" name="fixedcid" id="fixedcid" value="<?php  echo $fixedcid ?>" tabindex="<?php echo ++$tabindex;?>" <?php echo $fixedcid_disabled ?>></td>
+			</tr>
+			
 <?php
 			// implementation of module hook
 			// object was initialized in config.php
@@ -415,6 +453,13 @@ echo drawselects($goto,0);
 ?>
 <script language="javascript">
 <!--
+
+$(document).ready(function(){
+	$("#changecid").change(function(){
+    state = (this.value == "fixed" || this.value == "extern") ? "" : "disabled";
+	  $("#fixedcid").attr("disabled",state);
+	});
+});
 
 function insertExten() {
 	exten = document.getElementById('insexten').value;
@@ -453,6 +498,13 @@ function checkGRP(theForm) {
 	
 	if (isEmpty(theForm.grplist.value))
 		return warnInvalid(theForm.grplist, msgInvalidExtList);
+
+  if (!theForm.fixedcid.disabled) {
+    fixedcid = $.trim(theForm.fixedcid.value);
+	  if (!fixedcid.match('^[+]{0,1}[0-9]+$')) {
+		  return warnInvalid(theForm.fixedcid, msgInvalidCID);
+    }
+  }
 
 	defaultEmptyOK = false;
 	if (!isInteger(theForm.grptime.value)) {

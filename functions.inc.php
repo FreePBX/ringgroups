@@ -117,6 +117,8 @@ function ringgroups_get_config($engine) {
 					//
 					$ext->add($contextname, $grpnum, 'skipov', new ext_setvar('RRNODEST', '${NODEST}'));
 					$ext->add($contextname, $grpnum, 'skipvmblk', new ext_setvar('__NODEST', '${EXTEN}'));
+
+					$ext->add($contextname, $grpnum, '', new ext_gosubif('$[${DB_EXISTS(RINGGROUP/'.$grpnum.'/changecid)} = 1 & "${DB(RINGGROUP/'.$grpnum.'/changecid)}" != "default" & "${DB(RINGGROUP/'.$grpnum.'/changecid)}" != ""]', 'sub-rgsetcid,s,1'));
 					
 					// deal with group CID prefix
 					// but strip only if you plan on setting a new one
@@ -195,12 +197,52 @@ function ringgroups_get_config($engine) {
 					}
 					$ext->add($contextname, $grpnum, 'nodest', new ext_noop('SKIPPING DEST, CALL CAME FROM Q/RG: ${RRNODEST}'));
 				}
+        /*
+          ASTDB Settings:
+          RINGGROUP/nnn/changecid default | did | fixed | extern
+          RINGGROUP/nnn/fixedcid XXXXXXXX
+
+          changecid:
+            default   - works as always, same as if not present
+            fixed     - set to the fixedcid
+            extern    - set to the fixedcid if the call is from the outside only
+            did       - set to the DID that the call came in on or leave alone, treated as foreign
+            forcedid  - set to the DID that the call came in on or leave alone, not treated as foreign
+          
+          BLKVM_BASE - has the exten num called, hoaky if that goes away but for now use it
+        */
+        if (count($ringlist)) {
+          $contextname = 'sub-rgsetcid';
+          $exten = 's';
+          $ext->add($contextname, $exten, '', new ext_goto('1','s-${DB(RINGGROUP/${BLKVM_BASE}/changecid)}'));
+
+          $exten = 's-fixed';
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)})}" = "1"]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)}'));
+          $ext->add($contextname, $exten, '', new ext_return(''));
+
+          $exten = 's-extern';
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)})}" == "1" & "${FROM_DID}" != ""]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)}'));
+          $ext->add($contextname, $exten, '', new ext_return(''));
+
+          $exten = 's-did';
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${FROM_DID})}" = "1"]', 'Set', '__REALCALLERIDNUM=${FROM_DID}'));
+          $ext->add($contextname, $exten, '', new ext_return(''));
+
+          $exten = 's-forcedid';
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${FROM_DID})}" = "1"]', 'Set', '__TRUNKCIDOVERRIDE=${FROM_DID}'));
+          $ext->add($contextname, $exten, '', new ext_return(''));
+
+          $exten = '_s-.';
+          $ext->add($contextname, $exten, '', new ext_noop('Unknown value for RINGGROUP/${BLKVM_BASE}/changecid of ${DB(RINGGROUP/${BLKVM_BASE}/changecid)} set to "default"'));
+          $ext->add($contextname, $exten, '', new ext_setvar('DB(RINGGROUP/${BLKVM_BASE}/changecid)', 'default'));
+          $ext->add($contextname, $exten, '', new ext_return(''));
+        }
 			}
 		break;
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore) {
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='') {
 	global $db;
 
 	$extens = ringgroups_list();
@@ -216,6 +258,16 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 
 	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore')";
 	$results = sql($sql);
+
+  // from followme, put these in astdb, should migrate more settings to astdb from sql so that user portal control can be
+  // added. So consider this a start.
+	if ($astman) {
+		$astman->database_put("RINGGROUP",$grpnum."/changecid",$changecid);
+	  $fixedcid = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
+		$astman->database_put("RINGGROUP",$grpnum."/fixedcid",$fixedcid);
+	} else {
+		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+	}
 	return true;
 }
 
@@ -223,6 +275,11 @@ function ringgroups_del($grpnum) {
 	global $db;
 
 	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","query");
+	if ($astman) {
+		$astman->database_deltree("RINGGROUP/".$grpnum);
+	} else {
+		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+	}
 }
 
 function ringgroups_list($get_all=false) {
@@ -295,6 +352,24 @@ function ringgroups_get($grpnum) {
 	global $db;
 
 	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+  if ($astman) {
+    $astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
+    switch($astdb_changecid) {
+      case 'default':
+      case 'did':
+      case 'forcedid':
+      case 'fixed':
+      case 'extern':
+        break;
+      default:
+        $astdb_changecid = 'default';
+    }
+    $results['changecid'] = $astdb_changecid;
+    $fixedcid = $astman->database_get("RINGGROUP",$grpnum."/fixedcid");
+    $results['fixedcid'] = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
+	} else {
+		fatal("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
+	}
 	return $results;
 }
 ?>
