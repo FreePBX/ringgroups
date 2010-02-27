@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,197 +28,144 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ringgroups/functions.inc.php:35
 #, php-format
 msgid "Ring Group %s: "
 msgstr ""
 
-#: ringgroups/functions.inc.php:55 ringgroups/functions.inc.php:319
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: ringgroups/functions.inc.php:253
 msgid "This ringgroup"
 msgstr ""
 
-#: ringgroups/functions.inc.php:253
 msgid "is already in use"
 msgstr ""
 
-#: ringgroups/functions.inc.php:320
 msgid "INUSE"
 msgstr ""
 
-#: ringgroups/functions.inc.php:346
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""
 
-#: ringgroups/install.php:164
 msgid "Checking if recordings need migration.."
 msgstr ""
 
-#: ringgroups/install.php:170
 msgid "migrating"
 msgstr ""
 
-#: ringgroups/install.php:171
 msgid "adding annmsg_id field.."
 msgstr ""
 
-#: ringgroups/install.php:175 ringgroups/install.php:184
-#: ringgroups/install.php:193 ringgroups/install.php:205
-#: ringgroups/install.php:221 ringgroups/install.php:231
-#: ringgroups/install.php:247 ringgroups/install.php:257
-#: ringgroups/install.php:273
 msgid "fatal error"
 msgstr ""
 
-#: ringgroups/install.php:178 ringgroups/install.php:187
-#: ringgroups/install.php:196 ringgroups/install.php:287
-#: ringgroups/install.php:295 ringgroups/install.php:303
 msgid "ok"
 msgstr ""
 
-#: ringgroups/install.php:180
 msgid "adding remotealert_id field.."
 msgstr ""
 
-#: ringgroups/install.php:189
 msgid "adding toolate_id field.."
 msgstr ""
 
-#: ringgroups/install.php:201
 msgid "migrate annmsg to ids.."
 msgstr ""
 
-#: ringgroups/install.php:225 ringgroups/install.php:251
-#: ringgroups/install.php:277
 #, php-format
 msgid "migrated %s entries"
 msgstr ""
 
-#: ringgroups/install.php:227
 msgid "migrate remotealert to  ids.."
 msgstr ""
 
-#: ringgroups/install.php:253
 msgid "migrate toolate to ids.."
 msgstr ""
 
-#: ringgroups/install.php:281
 msgid "dropping annmsg field.."
 msgstr ""
 
-#: ringgroups/install.php:285
 msgid "no annmsg field???"
 msgstr ""
 
-#: ringgroups/install.php:289
 msgid "dropping remotealert field.."
 msgstr ""
 
-#: ringgroups/install.php:293
 msgid "no remotealert field???"
 msgstr ""
 
-#: ringgroups/install.php:297
 msgid "dropping toolate field.."
 msgstr ""
 
-#: ringgroups/install.php:301
 msgid "no toolate field???"
 msgstr ""
 
-#: ringgroups/install.php:307
 msgid "already migrated"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:72
 msgid "Warning! Extension"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:72
 msgid "is not allowed for your account"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:108 ringgroups/page.ringgroups.php:187
-#: ringgroups/page.ringgroups.php:194
 msgid "Add Ring Group"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:124 ringgroups/page.ringgroups.php:157
 msgid "Ring Group"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:124
 msgid "deleted"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:154
 msgid "Delete Group"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:183
 msgid "Conflicting Extensions"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:194
 msgid "Edit Ring Group"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:202
 msgid "Ring-Group Number"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:202
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:208
 msgid "Group Description"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:208
 msgid "Provide a descriptive title for this Ring Group."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:213
 msgid "Ring Strategy:"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:215
 msgid "ringall"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:215
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:216
 msgid "hunt"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:216
 msgid "Take turns ringing each available extension"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:217
 msgid "memoryhunt"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:217
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:218
 msgid "*-prim"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:218
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -226,37 +173,29 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:219
 msgid "firstavailable"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:219
 msgid "ring only the first available channel"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:220
 msgid "firstnotonphone"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:220
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:238
 msgid "Ring Time (max 60 sec)"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:240
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:248
 msgid "Extension List"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:248
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -267,95 +206,75 @@ msgid ""
 "the end."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:260
 msgid "Extension Quick Pick"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:262
 msgid "Choose an extension to append to the end of the extension list above."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:268
 msgid "(pick extension)"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:281 ringgroups/page.ringgroups.php:299
 msgid "Announcement:"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:281
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU to the left"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:287
 msgid "None"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:299
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>You "
 "must install and enable the \"Systems Recordings\" Module to edit this option"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:309
 msgid "Play Music On Hold?"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:309
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:315
 msgid "Ring"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:318
 msgid "none"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:319
 msgid "default"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:330
 msgid "CID Name Prefix"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:330
 msgid ""
 "You can optionally prefix the Caller ID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:335
 msgid "Alert Info"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:335
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:340
 msgid "Ignore CF Settings"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:340
 msgid ""
 "When checked, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:347
 msgid "Skip Busy Agent"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:347
 msgid ""
 "When checked, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -363,11 +282,9 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:354
 msgid "Confirm Calls"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:354
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -375,70 +292,54 @@ msgid ""
 "through. This feature only works with the ringall ring strategy"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:362
 msgid "Remote Announce:"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:362
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU to the left"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:368 ringgroups/page.ringgroups.php:386
-#: ringgroups/page.ringgroups.php:402 ringgroups/page.ringgroups.php:414
 msgid "Default"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:380
 msgid "Too-Late Announce:"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:380
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:397
 msgid "Change External CID Configuration"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:400
 msgid "Mode"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:402
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:403 ringgroups/page.ringgroups.php:415
-#: ringgroups/page.ringgroups.php:426
 msgid "Fixed CID Value"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:403
 msgid "Always transmit the Fixed CID Value below."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:404 ringgroups/page.ringgroups.php:416
 msgid "Outside Calls Fixed CID Value"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:404
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:405 ringgroups/page.ringgroups.php:417
 msgid "Use Dialed Number"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:405
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -446,11 +347,9 @@ msgid ""
 "be BLOCKED on trunks that block foreign callerid"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:406 ringgroups/page.ringgroups.php:418
 msgid "Force Dialed Number"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:406
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -458,56 +357,44 @@ msgid ""
 "be transmitted on trunks that block foreign callerid"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:426
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading \"+\"."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:436
 msgid "Destination if no answer"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:444
 msgid "Submit Changes"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:479
 msgid "Invalid Group Number specified"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:480
 msgid "Please enter an extension list."
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:481
 msgid "Invalid time specified"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:482
 msgid "Time must be between 1 and 60 seconds"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:483
 msgid "Please enter a valid Group Description"
 msgstr ""
 
-#: ringgroups/page.ringgroups.php:484
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
 
-#: ringgroups/ringgroups.i18n.php:5 ringgroups/ringgroups.i18n.php:11
 msgid "Ring Groups"
 msgstr ""
 
-#: ringgroups/ringgroups.i18n.php:7
 msgid "Inbound Call Control"
 msgstr ""
 
-#: ringgroups/ringgroups.i18n.php:9
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
 "all at once, or in various 'hunt' configurations. Additionally, external "
