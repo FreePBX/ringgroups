@@ -208,19 +208,19 @@ function ringgroups_get_config($engine) {
             did       - set to the DID that the call came in on or leave alone, treated as foreign
             forcedid  - set to the DID that the call came in on or leave alone, not treated as foreign
           
-          BLKVM_BASE - has the exten num called, hoaky if that goes away but for now use it
+          NODEST      - has the exten num called, hoaky if that goes away but for now use it
         */
         if (count($ringlist)) {
           $contextname = 'sub-rgsetcid';
           $exten = 's';
-          $ext->add($contextname, $exten, '', new ext_goto('1','s-${DB(RINGGROUP/${BLKVM_BASE}/changecid)}'));
+          $ext->add($contextname, $exten, '', new ext_goto('1','s-${DB(RINGGROUP/${NODEST}/changecid)}'));
 
           $exten = 's-fixed';
-          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)})}" = "1"]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)}'));
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${NODEST}/fixedcid)})}" = "1"]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${NODEST}/fixedcid)}'));
           $ext->add($contextname, $exten, '', new ext_return(''));
 
           $exten = 's-extern';
-          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)})}" == "1" & "${FROM_DID}" != ""]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${BLKVM_BASE}/fixedcid)}'));
+          $ext->add($contextname, $exten, '', new ext_execif('$["${REGEX("^[\+]?[0-9]+$" ${DB(RINGGROUP/${NODEST}/fixedcid)})}" == "1" & "${FROM_DID}" != ""]', 'Set', '__TRUNKCIDOVERRIDE=${DB(RINGGROUP/${NODEST}/fixedcid)}'));
           $ext->add($contextname, $exten, '', new ext_return(''));
 
           $exten = 's-did';
@@ -232,8 +232,8 @@ function ringgroups_get_config($engine) {
           $ext->add($contextname, $exten, '', new ext_return(''));
 
           $exten = '_s-.';
-          $ext->add($contextname, $exten, '', new ext_noop('Unknown value for RINGGROUP/${BLKVM_BASE}/changecid of ${DB(RINGGROUP/${BLKVM_BASE}/changecid)} set to "default"'));
-          $ext->add($contextname, $exten, '', new ext_setvar('DB(RINGGROUP/${BLKVM_BASE}/changecid)', 'default'));
+          $ext->add($contextname, $exten, '', new ext_noop('Unknown value for RINGGROUP/${NODEST}/changecid of ${DB(RINGGROUP/${NODEST}/changecid)} set to "default"'));
+          $ext->add($contextname, $exten, '', new ext_setvar('DB(RINGGROUP/${NODEST}/changecid)', 'default'));
           $ext->add($contextname, $exten, '', new ext_return(''));
         }
 			}
