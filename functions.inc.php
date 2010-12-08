@@ -196,6 +196,9 @@ function ringgroups_get_config($engine) {
 					}
 					$ext->add($contextname, $grpnum, 'nodest', new ext_noop('SKIPPING DEST, CALL CAME FROM Q/RG: ${RRNODEST}'));
 				}
+				// We need to have a hangup here, if call is ended by the caller during Playback it will end in the
+				// h context and do a proper hangup and clean the BLKVM, see #4671
+				$ext->add($contextname, 'h', '', new ext_macro('hangupcall'));
         /*
           ASTDB Settings:
           RINGGROUP/nnn/changecid default | did | fixed | extern
