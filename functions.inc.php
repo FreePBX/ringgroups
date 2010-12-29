@@ -352,6 +352,11 @@ function ringgroups_check_destinations($dest=true) {
 	return $destlist;
 }
 
+function ringgroups_change_destination($old_dest, $new_dest) {
+	$sql = 'UPDATE ringgroups SET postdest = "' . $new_dest . '" WHERE postdest = "' . $old_dest . '"';
+	sql($sql, "query");
+}
+
 function ringgroups_get($grpnum) {
 	global $db;
 	global $astman;
