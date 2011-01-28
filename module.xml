@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>2.9.0.0</version>
+	<version>2.9.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<type>setup</type>
@@ -11,6 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*2.9.0.1* removed duplicate functions
 		*2.9.0.0* #4671, #4655
 		*2.8.0.2* #4484
 		*2.8.0.1* #4422
@@ -44,6 +45,6 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.9/ringgroups-2.9.0.0.tgz</location>
-	<md5sum>402d2e2ec18b4a1ce557851ab48a3d77</md5sum>
+	<location>release/2.9/ringgroups-2.9.0.1.tgz</location>
+	<md5sum>3ed309de1caff313e25cb37c5fbc3465</md5sum>
 </module>
