@@ -137,6 +137,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
     $sql = "ALTER TABLE ringgroups ADD cwignore VARCHAR( 10 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+		out(_("added field cwignore to ringgroups table"));
 	}
 
 	$sql = "SELECT cfignore FROM ringgroups";
@@ -146,6 +147,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
     $sql = "ALTER TABLE ringgroups ADD cfignore VARCHAR( 10 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+		out(_("added field cfignore to ringgroups table"));
 	}
 
 	$sql = "SELECT cpickup FROM ringgroups";
@@ -155,6 +157,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
     $sql = "ALTER TABLE ringgroups ADD cpickup VARCHAR( 10 ) NULL ;";
     $result = $db->query($sql);
     if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+		out(_("added field cpickup to ringgroups table"));
 	}
 
 	// Version 2.5 migrate to recording ids
