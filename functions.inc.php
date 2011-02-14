@@ -83,6 +83,7 @@ function ringgroups_get_config($engine) {
 					$alertinfo = $grp['alertinfo'];
 					$needsconf = $grp['needsconf'];
 					$cwignore = $grp['cwignore'];
+					$cpickup = $grp['cpickup'];
 					$cfignore = $grp['cfignore'];
 					$remotealert_id = $grp['remotealert_id'];
 					$toolate_id = $grp['toolate_id'];
@@ -140,6 +141,9 @@ function ringgroups_get_config($engine) {
  						$ext->add($contextname, $grpnum, '', new ext_setvar('_CFIGNORE', 'TRUE'));
  						$ext->add($contextname, $grpnum, '', new ext_setvar('_FORWARD_CONTEXT', 'block-cf'));
 					}
+					if ($cpickup != '') {
+					  $ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK','${EXTEN}'));
+					}
 
 					// recording stuff
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RecordMethod','Group'));
@@ -172,6 +176,9 @@ function ringgroups_get_config($engine) {
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]', 'nodest'));
 					if ($cwignore != '') {
  						$ext->add($contextname, $grpnum, '', new ext_setvar('__CWIGNORE', ''));
+					}
+					if ($cpickup != '') {
+					  $ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK',''));
 					}
 					// TODO: Asterisk uses a blank FORWARD_CONTEXT as a literal at the time of this change. A better solution would be
 					//       if it would ignore blank, since it is possible in a customcontext setup you would not want this set to
@@ -240,7 +247,7 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='') {
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='') {
 	global $db;
 	global $astman;
 
@@ -255,7 +262,7 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 	}
 	print_r($extens);
 
-	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore')";
+	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore', '$cpickup')";
 	$results = sql($sql);
 
   // from followme, put these in astdb, should migrate more settings to astdb from sql so that user portal control can be
@@ -357,7 +364,7 @@ function ringgroups_get($grpnum) {
 	global $db;
 	global $astman;
 
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
   if ($astman) {
     $astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
     switch($astdb_changecid) {

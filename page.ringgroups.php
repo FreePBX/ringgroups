@@ -25,6 +25,7 @@ isset($_REQUEST['description'])?$description = $_REQUEST['description']:$descrip
 isset($_REQUEST['alertinfo'])?$alertinfo = $_REQUEST['alertinfo']:$alertinfo='';
 isset($_REQUEST['needsconf'])?$needsconf = $_REQUEST['needsconf']:$needsconf='';
 isset($_REQUEST['cwignore'])?$cwignore = $_REQUEST['cwignore']:$cwignore='';
+isset($_REQUEST['cpickup'])?$cpickup = $_REQUEST['cpickup']:$cpickup='';
 isset($_REQUEST['cfignore'])?$cfignore = $_REQUEST['cfignore']:$cfignore='';
 isset($_REQUEST['remotealert_id'])?$remotealert_id = $_REQUEST['remotealert_id']:$remotealert_id='';
 isset($_REQUEST['toolate_id'])?$toolate_id = $_REQUEST['toolate_id']:$toolate_id='';
@@ -79,7 +80,7 @@ if(isset($_POST['action'])){
 			if (!empty($usage_arr)) {
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid)) {
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup)) {
 				needreload();
 				redirect_standard();
 			}
@@ -95,7 +96,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup);
 			needreload();
 			redirect_standard('extdisplay');
 		}
@@ -138,6 +139,7 @@ if ($action == 'delGRP') {
 		$remotealert_id = $thisgrp['remotealert_id'];
 		$needsconf = $thisgrp['needsconf'];
 		$cwignore = $thisgrp['cwignore'];
+		$cpickup = $thisgrp['cpickup'];
 		$cfignore = $thisgrp['cfignore'];
 		$toolate_id = $thisgrp['toolate_id'];
 		$ringing = $thisgrp['ringing'];
@@ -175,6 +177,7 @@ if ($action == 'delGRP') {
 		$remotealert_id = '';
 		$needsconf = '';
 		$cwignore = '';
+		$cpickup = '';
 		$cfignore = '';
 		$toolate_id = '';
 		$ringing = '';
@@ -347,6 +350,13 @@ if ($action == 'delGRP') {
 		<td><a href="#" class="info"><?php echo _("Skip Busy Agent")?><span> <?php echo _("When checked, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted.") ?></span></a>:</td>
 				<td>
 					<input type="checkbox" name="cwignore" value="CHECKED" <?php echo $cwignore ?>   tabindex="<?php echo ++$tabindex;?>"/>
+				</td>
+			</tr>
+
+			<tr>
+        <td><a href="#" class="info"><?php echo _("Enable Call Pickup")?><span> <?php echo _("Checking this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked.") ?></span></a>:</td>
+				<td>
+					<input type="checkbox" name="cpickup" value="CHECKED" <?php echo $cpickup ?>   tabindex="<?php echo ++$tabindex;?>"/>
 				</td>
 			</tr>
 
