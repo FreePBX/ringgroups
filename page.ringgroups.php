@@ -330,7 +330,7 @@ if ($action == 'delGRP') {
 <?php } ?>
 			
 			<tr>
-				<td><a href="#" class="info"><?php echo _("CID Name Prefix")?>:<span><?php echo _('You can optionally prefix the Caller ID name when ringing extensions in this group. ie: If you prefix with "Sales:", a call from John Doe would display as "Sales:John Doe" on the extensions that ring.')?></span></a></td>
+				<td><a href="#" class="info"><?php echo _("CID Name Prefix")?>:<span><?php echo _('You can optionally prefix the CallerID name when ringing extensions in this group. ie: If you prefix with "Sales:", a call from John Doe would display as "Sales:John Doe" on the extensions that ring.')?></span></a></td>
 				<td><input size="4" type="text" name="grppre" value="<?php  echo $grppre ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 			</tr>
 
