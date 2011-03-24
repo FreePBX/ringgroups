@@ -93,7 +93,9 @@ function ringgroups_get_config($engine) {
 						$dialopts = '${DIAL_OPTIONS}';
 					} else {
 						// We need the DIAL_OPTIONS variable
-						$sops = sql("SELECT value from globals where variable='DIAL_OPTIONS'", "getRow");
+            if (!isset($sops)) {
+						  $sops = sql("SELECT value from globals where variable='DIAL_OPTIONS'", "getRow");
+            }
 						$dialopts = "m(${ringing})".str_replace('r', '', $sops[0]);
 					}
 						
@@ -154,8 +156,7 @@ function ringgroups_get_config($engine) {
 						$remotealert = recordings_get_file($remotealert_id);
 						$toolate = recordings_get_file($toolate_id);
 						$len=strlen($grpnum)+4;
-						$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial',$grptime.
-							",M(confirm^${remotealert}^${toolate}^${grpnum})$dialopts".',${EXTEN:'.$len.'}'));
+						$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^${remotealert}^${toolate}^${grpnum})" . ',${EXTEN:' . $len . '}'));
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
 					} else {
 						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
