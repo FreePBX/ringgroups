@@ -378,4 +378,45 @@ function ringgroups_get($grpnum) {
 	}
 	return $results;
 }
+/* Get a list of all extensions that belongs to a ringgroup */
+function ringgroups_get_extensions($grpnum) {
+        global $db;
+        $results = sql("SELECT grplist FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+        return $results;
+}
+
+/* Update the list of extensions for the specific ringgroup */
+function ringgroups_update_extensions($grpnum, $extensions) {
+        global $db;
+        $sql = 'UPDATE ringgroups SET grplist = "' . $extensions . '" WHERE grpnum = "' . $grpnum . '"';
+        sql($sql, "query");
+}
+
+function ringgroups_hook_core($viewing_itemid, $request) {
+// This is empty. Need to be here for the ringgroups_hookProcess_core function to work
+}
+
+function ringgroups_hookProcess_core($viewing_itemid, $request) {
+
+        if (!isset($request['action']))
+                return;
+        switch ($request['action']) {
+            case 'del':
+                // Get all ringgroups
+                $grouplist = ringgroups_list();
+                foreach($grouplist as $list => $group){
+                    // Get the extension list for the ringgroup
+                    $extensionlist = ringgroups_get_extensions($group['grpnum']);
+                    $extensions = explode('-', $extensionlist['grplist']);
+                    $key = array_search($viewing_itemid, $extensions);
+                    if(isset($key)) {
+                        unset($extensions[$key]);
+                        $new_grplist = implode('-',$extensions);
+                        ringgroups_update_extensions($group['grpnum'], $new_grplist);
+                    }
+
+                }
+            break;
+        }
+}
 ?>
