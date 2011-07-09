@@ -404,17 +404,18 @@ function ringgroups_hookProcess_core($viewing_itemid, $request) {
             case 'del':
                 // Get all ringgroups
                 $grouplist = ringgroups_list();
-                foreach($grouplist as $list => $group){
-                    // Get the extension list for the ringgroup
-                    $extensionlist = ringgroups_get_extensions($group['grpnum']);
-                    $extensions = explode('-', $extensionlist['grplist']);
-                    $key = array_search($viewing_itemid, $extensions);
-                    if(isset($key)) {
-                        unset($extensions[$key]);
-                        $new_grplist = implode('-',$extensions);
-                        ringgroups_update_extensions($group['grpnum'], $new_grplist);
+                if(isset($grouplist)) {
+                    foreach($grouplist as $list => $group){
+                        // Get the extension list for the ringgroup
+                        $extensionlist = ringgroups_get_extensions($group['grpnum']);
+                        $extensions = explode('-', $extensionlist['grplist']);
+                        $key = array_search($viewing_itemid, $extensions);
+                        if(isset($key)) {
+                            unset($extensions[$key]);
+                            $new_grplist = implode('-',$extensions);
+                            ringgroups_update_extensions($group['grpnum'], $new_grplist);
+                        }
                     }
-
                 }
             break;
         }
