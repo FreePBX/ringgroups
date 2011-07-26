@@ -12,7 +12,6 @@
 //GNU General Public License for more details.
 
 $dispnum = 'ringgroups'; //used for switch on config.php
-
 isset($_REQUEST['action'])?$action = $_REQUEST['action']:$action='';
 //the extension we are currently displaying
 isset($_REQUEST['extdisplay'])?$extdisplay=$_REQUEST['extdisplay']:$extdisplay='';
@@ -33,6 +32,7 @@ isset($_REQUEST['ringing'])?$ringing = $_REQUEST['ringing']:$ringing='';
 
 isset($_REQUEST['changecid'])?$changecid = $_REQUEST['changecid']:$changecid='default';
 isset($_REQUEST['fixedcid'])?$fixedcid = $_REQUEST['fixedcid']:$fixedcid='';
+isset($_REQUEST['recording'])?$recording = $_REQUEST['recording']:$recording='dontcare';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
@@ -80,7 +80,7 @@ if(isset($_POST['action'])){
 			if (!empty($usage_arr)) {
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup)) {
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording)) {
 				needreload();
 				redirect_standard();
 			}
@@ -96,7 +96,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);	
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
 			needreload();
 			redirect_standard('extdisplay');
 		}
@@ -145,6 +145,7 @@ if ($action == 'delGRP') {
 		$ringing = $thisgrp['ringing'];
 		$changecid   = isset($thisgrp['changecid'])   ? $thisgrp['changecid']   : 'default';
 		$fixedcid    = isset($thisgrp['fixedcid'])    ? $thisgrp['fixedcid']    : '';
+		$recording = $thisgrp['recording'];
 		unset($grpliststr);
 		unset($thisgrp);
 		
@@ -437,6 +438,16 @@ if ($action == 'delGRP') {
         <td><input size="30" type="text" name="fixedcid" id="fixedcid" value="<?php  echo $fixedcid ?>" tabindex="<?php echo ++$tabindex;?>" <?php echo $fixedcid_disabled ?>></td>
 			</tr>
 			
+			<tr><td colspan="2"><h5><?php echo _("Call Recording") ?><hr></h5></td></tr>
+      <tr>
+        <td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked.')?></span></a></td>
+        <td><span class="radioset">
+          <input type="radio" id="record_always" name="recording" value="always" <?php echo ($recording=='always'?'checked':'');?>><label for="record_always"><?php echo _('Always'); ?></label>
+          <input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _('On Demand')?></label>
+          <input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('Never'); ?></label>
+        </span></td>
+      </tr>
+
 <?php
 			// implementation of module hook
 			// object was initialized in config.php

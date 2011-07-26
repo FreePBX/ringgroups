@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `ringgroups`
 	`cwignore` VARCHAR ( 10 ), 
 	`cfignore` VARCHAR ( 10 ), 
 	`cpickup` VARCHAR ( 10 ), 
+	`recording` VARCHAR ( 10 ) default 'dontcare', 
 	PRIMARY KEY  (`grpnum`) 
 ) 
 ";
@@ -158,6 +159,16 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
     $result = $db->query($sql);
     if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 		out(_("added field cpickup to ringgroups table"));
+	}
+
+	$sql = "SELECT recording FROM ringgroups";
+	$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+	if(DB::IsError($check)) {
+		// add new field
+    $sql = "ALTER TABLE ringgroups ADD recording VARCHAR( 10 ) default 'dontcare' ;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+		out(_("added field recording to ringgroups table"));
 	}
 
 	// Version 2.5 migrate to recording ids
