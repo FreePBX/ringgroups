@@ -103,7 +103,6 @@ if(isset($_POST['action'])){
 	}
 }
 ?>
-</div>
 
 <div class="rnav"><ul>
     <li><a class="<?php  echo ($extdisplay=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Ring Group")?></a></li>
@@ -119,7 +118,6 @@ if (isset($gresults)) {
 ?>
 </ul></div>
 
-<div class="content">
 <?php 
 if ($action == 'delGRP') {
 	echo '<br><h3>'._("Ring Group").' '.$account.' '._("deleted").'!</h3><br><br><br><br><br><br><br><br>';
