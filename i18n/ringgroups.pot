@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-20 20:00+0100\n"
+"POT-Creation-Date: 2011-09-04 18:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,6 +56,9 @@ msgid "added field cfignore to ringgroups table"
 msgstr ""
 
 msgid "added field cpickup to ringgroups table"
+msgstr ""
+
+msgid "added field recording to ringgroups table"
 msgstr ""
 
 msgid "Checking if recordings need migration.."
@@ -383,6 +386,27 @@ msgid ""
 "leading \"+\"."
 msgstr ""
 
+msgid "Call Recording"
+msgstr ""
+
+msgid "Record Calls"
+msgstr ""
+
+msgid ""
+"You can always record calls that come into this ring group, never record "
+"them, or allow the extension that answers to do on-demand recording. If "
+"recording is denied then one-touch on demand recording will be blocked."
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "On Demand"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
 msgid "Destination if no answer"
 msgstr ""
 
@@ -412,7 +436,7 @@ msgstr ""
 msgid "Ring Groups"
 msgstr ""
 
-msgid "Inbound Call Control"
+msgid "Apps"
 msgstr ""
 
 msgid ""
