@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-20 20:00+0100\n"
+"POT-Creation-Date: 2011-09-23 09:52+0000\n"
 "PO-Revision-Date: 2011-04-11 12:00+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
 "Language-Team: Russian <faq@postmet.com>\n"
@@ -45,6 +45,9 @@ msgid "added field cfignore to ringgroups table"
 msgstr ""
 
 msgid "added field cpickup to ringgroups table"
+msgstr ""
+
+msgid "added field recording to ringgroups table"
 msgstr ""
 
 msgid "Checking if recordings need migration.."
@@ -285,9 +288,9 @@ msgid ""
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 "Опционально, можно использовать какой-то префикс для звонка в эту группу. "
-"Например, если это группа \"Sales:\", то, установив такой префикс для "
-"этой группы, можно видеть, если звонит John Doe, то мы увидим на дисплее "
-"Sales:John Doe."
+"Например, если это группа \"Sales:\", то, установив такой префикс для этой "
+"группы, можно видеть, если звонит John Doe, то мы увидим на дисплее Sales:"
+"John Doe."
 
 msgid "Alert Info"
 msgstr "Дополнительная информация"
@@ -442,6 +445,27 @@ msgstr ""
 "режимов выше. Должен быть только в цифровом формате, или опционально - в "
 "формате Е164 с использованием \"+\" впереди номера."
 
+msgid "Call Recording"
+msgstr ""
+
+msgid "Record Calls"
+msgstr ""
+
+msgid ""
+"You can always record calls that come into this ring group, never record "
+"them, or allow the extension that answers to do on-demand recording. If "
+"recording is denied then one-touch on demand recording will be blocked."
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "On Demand"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
 msgid "Destination if no answer"
 msgstr "Назначение, если никто не ответил"
 
@@ -473,8 +497,8 @@ msgstr ""
 msgid "Ring Groups"
 msgstr "Группы вызова"
 
-msgid "Inbound Call Control"
-msgstr "Контроль входящих вызовов"
+msgid "Applications"
+msgstr ""
 
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
@@ -489,3 +513,6 @@ msgstr ""
 "внешние номера, и здесь можно указать опцию подтверждения для внешнего "
 "номера. Которая даёт возможность подтвердить желание принять звонок прежде, "
 "чем звонок будет туда перенаправлен."
+
+#~ msgid "Inbound Call Control"
+#~ msgstr "Контроль входящих вызовов"
