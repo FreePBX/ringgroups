@@ -320,4 +320,23 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		out(_("already migrated"));
 	}
 }
+
+$freepbx_conf =& freepbx_conf::create();
+
+// EXTENSION_LIST_RINGGROUPS
+//
+$set['value'] = false;
+$set['defaultval'] =& $set['value'];
+$set['readonly'] = 0;
+$set['hidden'] = 0;
+$set['level'] = 0;
+$set['module'] = 'ringgroups';
+$set['category'] = 'Ring Group Module';
+$set['emptyok'] = 0;
+$set['sortorder'] = 50;
+$set['name'] = 'Display Extension Ring Group Members';
+$set['description'] = 'When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of.';
+$set['type'] = CONF_TYPE_BOOL;
+$freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS',$set);
+
 ?>

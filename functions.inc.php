@@ -427,4 +427,41 @@ function ringgroups_hookProcess_core($viewing_itemid, $request) {
             break;
         }
 }
+
+if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
+
+	function ringgroups_configpageinit($pagename) {
+		global $currentcomponent;
+		// On a 'new' user, 'tech_hardware' is set, and there's no extension.
+		if (($_REQUEST['display'] == 'users'||$_REQUEST['display'] == 'extensions')&& isset($_REQUEST['extdisplay']) && $_REQUEST['extdisplay'] != '') {
+		$currentcomponent->addprocessfunc('ringgroups_configpageload', 1);
+		}
+	}
+
+	// This is called before the page is actually displayed, so we can use addguielem(). draws hook on the extensions/users page
+	function ringgroups_configpageload() {
+		global $currentcomponent;
+		global $display;
+		$extdisplay=isset($_REQUEST['extdisplay'])?$_REQUEST['extdisplay']:'';
+	
+		if ($display == 'extensions' || $display == 'users') {
+			$section = _('Ring Group Membership');
+		
+			$sql = "SELECT grpnum, description FROM ringgroups WHERE grplist LIKE '$extdisplay-%' OR grplist LIKE '%-$extdisplay-%' OR grplist LIKE '%-$extdisplay' OR grplist = '$extdisplay'";
+			$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+		
+			$ringgroup_count = 0;
+			foreach($results as $result) {
+				$addURL = $_SERVER['PHP_SELF'].'?display=ringgroups&extdisplay='.$result['grpnum'];
+				$ringgroup_icon = 'images/email_edit.png';
+				$ringgroup_label = $result['grpnum']." ".$result['description'];
+				$ringgroup_label = '&nbsp;<span>
+					<img width="16" height="16" border="0" title="'.$ringgroup_label.'" alt="" src="'.$ringgroup_icon.'"/> '.$ringgroup_label.
+				'</span> ';
+				$currentcomponent->addguielem($section, new gui_link('ringgroup_'.$ringgroup_count++, $ringgroup_label, $addURL, true, false), 9);
+			}
+		}
+	}
+
+} // only included if feature enabled
 ?>
