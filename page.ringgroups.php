@@ -238,7 +238,7 @@ if ($action == 'delGRP') {
 
 			<tr>
 				<td>
-					<a href=# class="info"><?php echo _("Ring Time (max 60 sec)")?>
+					<a href=# class="info"><?php echo _("Ring Time (max 300 sec)")?>
 						<span>
 							<?php echo _("Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung")?>
 						</span>
@@ -499,7 +499,7 @@ function checkGRP(theForm) {
 	var msgInvalidGrpNum = "<?php echo _('Invalid Group Number specified'); ?>";
 	var msgInvalidExtList = "<?php echo _('Please enter an extension list.'); ?>";
 	var msgInvalidTime = "<?php echo _('Invalid time specified'); ?>";
-	var msgInvalidGrpTimeRange = "<?php echo _('Time must be between 1 and 60 seconds'); ?>";
+	var msgInvalidGrpTimeRange = "<?php echo _('Time must be between 1 and 300 seconds'); ?>";
 	var msgInvalidDescription = "<?php echo _('Please enter a valid Group Description'); ?>";
 	var msgInvalidRingStrategy = "<?php echo _('Only ringall, ringallv2, hunt and the respective -prim versions are supported when confirmation is checked'); ?>";
 
@@ -531,7 +531,7 @@ function checkGRP(theForm) {
 		return warnInvalid(theForm.grptime, msgInvalidTime);
 	} else {
 		var grptimeVal = theForm.grptime.value;
-		if (grptimeVal < 1 || grptimeVal > 60)
+		if (grptimeVal < 1 || grptimeVal > 300)
 			return warnInvalid(theForm.grptime, msgInvalidGrpTimeRange);
 	}
 
