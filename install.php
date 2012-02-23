@@ -337,6 +337,6 @@ $set['sortorder'] = 50;
 $set['name'] = 'Display Extension Ring Group Members';
 $set['description'] = 'When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of.';
 $set['type'] = CONF_TYPE_BOOL;
-$freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS',$set);
+$freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS',$set, true);
 
 ?>
