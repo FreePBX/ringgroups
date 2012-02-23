@@ -29,6 +29,6 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.10/ringgroups-2.10.0.2.tgz</location>
-	<md5sum>5ad0cf03dcf69823a3c67a0884b949b7</md5sum>
+	<location>release/2.10/ringgroups-2.10.0.3.tgz</location>
+	<md5sum>d744ea304e1ffd3e3532210f3e3c43ab</md5sum>
 </module>
