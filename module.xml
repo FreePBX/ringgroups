@@ -30,6 +30,6 @@
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>
 	</menuitems>
-	<location>release/2.10/ringgroups-2.10.0.3.tgz</location>
-	<md5sum>d744ea304e1ffd3e3532210f3e3c43ab</md5sum>
+	<location>release/2.10/ringgroups-2.10.0.4.tgz</location>
+	<md5sum>7714f5d7bfb7f79c310923cde001b390</md5sum>
 </module>
