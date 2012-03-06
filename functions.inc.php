@@ -417,7 +417,7 @@ function ringgroups_hookProcess_core($viewing_itemid, $request) {
                         $extensionlist = ringgroups_get_extensions($group['grpnum']);
                         $extensions = explode('-', $extensionlist['grplist']);
                         $key = array_search($viewing_itemid, $extensions);
-                        if(isset($key)) {
+                        if($key !== FALSE) {
                             unset($extensions[$key]);
                             $new_grplist = implode('-',$extensions);
                             ringgroups_update_extensions($group['grpnum'], $new_grplist);
