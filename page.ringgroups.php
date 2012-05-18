@@ -476,8 +476,12 @@ echo drawselects($goto,0);
 
 $(document).ready(function(){
 	$("#changecid").change(function(){
-    state = (this.value == "fixed" || this.value == "extern") ? "" : "disabled";
+        state = (this.value == "fixed" || this.value == "extern") ? "" : "disabled";
+    if (state == "disabled") {
 	  $("#fixedcid").attr("disabled",state);
+    } else {
+      $("#fixedcid").removeAttr("disabled");
+    }
 	});
 });
 
