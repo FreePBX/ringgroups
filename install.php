@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `ringgroups`
 ";
 $check = $db->query($sql);
 if(DB::IsError($check)) {
-	die_freepbx("Can not create annoucment table");
+	die_freepbx("Can not create ringgroups table");
 }
 
 // The following updates were all pre-2.5 when sqlite3 was not supported)
