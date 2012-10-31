@@ -12,6 +12,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //GNU General Public License for more details.
 
+$tabindex = 0;
 $dispnum = 'ringgroups'; //used for switch on config.php
 isset($_REQUEST['action'])?$action = $_REQUEST['action']:$action='';
 //the extension we are currently displaying
@@ -82,6 +83,11 @@ if(isset($_POST['action'])){
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
 			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording)) {
+
+				// save the most recent created destination which will be picked up by
+				//
+				$this_dest = ringgroups_getdest($account);
+				fwmsg::set_dest($this_dest[0]);
 				needreload();
 				redirect_standard();
 			}
@@ -190,7 +196,7 @@ if ($action == 'delGRP') {
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
 	?>
-			<form name="editGRP" action="<?php  $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return checkGRP(editGRP);">
+			<form class="popover-form" name="editGRP" action="<?php  $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return checkGRP(editGRP);">
 			<input type="hidden" name="display" value="<?php echo $dispnum?>">
 			<input type="hidden" name="action" value="<?php echo ($extdisplay ? 'edtGRP' : 'addGRP'); ?>">
 			<table>
