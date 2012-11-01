@@ -35,7 +35,6 @@
 	<popovers>
 		<ringgroups>
 			<display>ringgroups</display>
-			<tag2>nonsense</tag2>
 		</ringgroups>
  	</popovers>
 	<location>release/2.11/ringgroups-2.10.0.6.tgz</location>
