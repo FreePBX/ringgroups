@@ -209,7 +209,7 @@ if ($action == 'delGRP') {
 				<input size="5" type="hidden" name="account" value="<?php  echo ltrim($extdisplay,'GRP-'); ?>" tabindex="<?php echo ++$tabindex;?>">
 <?php 		} else { ?>
 				<td><a href="#" class="info"><?php echo _("Ring-Group Number")?>:<span><?php echo _("The number users will dial to ring extensions in this ring group")?></span></a></td>
-				<td><input size="5" type="text" name="account" value="<?php  if ($gresult[0]==0) { echo "600"; } else { echo $gresult[0] + 1; } ?>" tabindex="<?php echo ++$tabindex;?>"></td>
+				<td><input size="5" type="text" data-extdisplay="" name="account" value="<?php  if ($gresult[0]==0) { echo "600"; } else { echo $gresult[0] + 1; } ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 <?php 		} ?>
 			</tr>
 
@@ -250,7 +250,7 @@ if ($action == 'delGRP') {
 						</span>
 					</a>
 				</td>
-				<td><input size="4" type="text" name="grptime" value="<?php  echo $grptime?$grptime:20 ?>" tabindex="<?php echo ++$tabindex;?>"></td>
+				<td><input size="4" type="number" min="0" max="300" name="grptime" value="<?php  echo $grptime?$grptime:20 ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 			</tr>
 
 			<tr>
