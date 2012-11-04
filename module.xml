@@ -39,6 +39,6 @@
 			<display>ringgroups</display>
 		</ringgroups>
  	</popovers>
-	<location>release/2.11/ringgroups-2.11.0.0.tgz</location>
-	<md5sum>12eed94424ec84c6290558824b13d38d</md5sum>
+	<location>release/2.11/ringgroups-2.11.0.1.tgz</location>
+	<md5sum>da1cb6cb69b59032c59c47248478bc31</md5sum>
 </module>
