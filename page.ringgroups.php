@@ -248,7 +248,7 @@ if ($action == 'delGRP') {
 			</tr>
 
 			<tr>
-				<td valign="top"><a href="#" class="info"><?php echo _("Extension List")?>:<span><br><?php echo _("List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions (without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end.")?><br><br></span></a></td>
+				<td valign="top"><a href="#" class="info"><?php echo _("Extension List")?>:<span><br><?php echo _("List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end.")?><br><br></span></a></td>
 				<td valign="top">
 <?php
 		$rows = count($grplist)+1; 
