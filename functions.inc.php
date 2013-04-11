@@ -95,9 +95,9 @@ function ringgroups_get_config($engine) {
 						$dialopts = '${DIAL_OPTIONS}';
 					} else {
 						// We need the DIAL_OPTIONS variable
-            if (!isset($sops)) {
-						  $sops = sql("SELECT value from globals where variable='DIAL_OPTIONS'", "getRow");
-            }
+		            if (!isset($sops)) {
+						$sops = sql("SELECT value from freepbx_settings where keyword='DIAL_OPTIONS'", "getRow");
+		            }
 						$dialopts = "m(${ringing})".str_replace('r', '', $sops[0]);
 					}
 						
