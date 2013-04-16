@@ -91,14 +91,15 @@ function ringgroups_get_config($engine) {
 					$ringing = $grp['ringing'];
 					$recording = $grp['recording'] == '' ? 'dontcare' : $grp['recording'];
 
+					// TODO: this looks potentially problematic given the new per-user DIAL_OPTIONS. Need to further
+					//       evaluate/understand if there are implications. The issue may be that we are trying to
+					//       avoid getting a 'polluted' version of the DIAL_OPTIONS in which case we may need to modify
+					//       macro-user-callerid (where it is set) to preserve the version we should be using.
+					//
 					if($ringing == 'Ring' || empty($ringing) ) {
 						$dialopts = '${DIAL_OPTIONS}';
 					} else {
-						// We need the DIAL_OPTIONS variable
-		            if (!isset($sops)) {
-						$sops = sql("SELECT value from freepbx_settings where keyword='DIAL_OPTIONS'", "getRow");
-		            }
-						$dialopts = "m(${ringing})".str_replace('r', '', $sops[0]);
+						$dialopts = "m(${ringing})".str_replace('r', '', $amp_conf['DIAL_OPTIONS']);
 					}
 						
 
