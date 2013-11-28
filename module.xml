@@ -30,4 +30,4 @@
 	</menuitems>
 	<location>release/2.10/ringgroups-2.10.0.2.tgz</location>
 	<md5sum>5ad0cf03dcf69823a3c67a0884b949b7</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
