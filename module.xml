@@ -41,4 +41,4 @@
  	</popovers>
 	<location>release/2.11/ringgroups-2.11.0.1.tgz</location>
 	<md5sum>da1cb6cb69b59032c59c47248478bc31</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
