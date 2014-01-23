@@ -64,6 +64,7 @@ function ringgroups_recordings_usage($recording_id) {
 */
 function ringgroups_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
+	global $amp_conf;
 	switch($engine) {
 		case "asterisk":
 			$ext->addInclude('from-internal-additional','ext-group');
@@ -99,7 +100,7 @@ function ringgroups_get_config($engine) {
 					if($ringing == 'Ring' || empty($ringing) ) {
 						$dialopts = '${DIAL_OPTIONS}';
 					} else {
-						$dialopts = "m(${ringing})".str_replace('r', '', $amp_conf['DIAL_OPTIONS']);
+						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}
 						
 
