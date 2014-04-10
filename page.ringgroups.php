@@ -523,7 +523,7 @@ function checkGRP(theForm) {
 	}
 	
 	defaultEmptyOK = false;	
-	var sizeDisplayName = "<?php echo ringgroups_get_field_size('description', 35); ?>";
+	var sizeDisplayName = "<?php echo module_get_field_size('ringgroups', 'description', 35); ?>";
 	if (!isCorrectLength(theForm.description.value, sizeDisplayName))
                 return warnInvalid(theForm.description, "<?php echo _('The Group Description provided is too long.'); ?>")
 	if (!isAlphanumeric(theForm.description.value))
