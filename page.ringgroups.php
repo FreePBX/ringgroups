@@ -26,9 +26,9 @@ isset($_REQUEST['fixedcid'])?$fixedcid = $_REQUEST['fixedcid']:$fixedcid='';
 isset($_REQUEST['recording'])?$recording = $_REQUEST['recording']:$recording='dontcare';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
-        $goto = $_REQUEST[$_REQUEST['goto0']."0"];
+				$goto = $_REQUEST[$_REQUEST['goto0']."0"];
 } else {
-        $goto = '';
+				$goto = '';
 }
 
 
@@ -38,21 +38,21 @@ if (isset($_REQUEST["grplist"])) {
 	if (!$grplist) {
 		$grplist = null;
 	}
-	
+
 	foreach (array_keys($grplist) as $key) {
 		//trim it
 		$grplist[$key] = trim($grplist[$key]);
-		
+
 		// remove invalid chars
 		$grplist[$key] = preg_replace("/[^0-9#*]/", "", $grplist[$key]);
-		
+
 		if ($grplist[$key] == ltrim($extdisplay,'GRP-').'#')
 			$grplist[$key] = rtrim($grplist[$key],'#');
-		
+
 		// remove blanks
 		if ($grplist[$key] == "") unset($grplist[$key]);
 	}
-	
+
 	// check for duplicates, and re-sequence
 	$grplist = array_values(array_unique($grplist));
 }
@@ -81,17 +81,17 @@ if(isset($_POST['action'])){
 				redirect_standard();
 			}
 		}
-		
+
 		//del group
 		if ($action == 'delGRP') {
 			ringgroups_del($account);
 			needreload();
 			redirect_standard();
 		}
-		
+
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
-			ringgroups_del($account);	
+			ringgroups_del($account);
 			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
 			needreload();
 			redirect_standard('extdisplay');
@@ -101,8 +101,8 @@ if(isset($_POST['action'])){
 ?>
 
 <div class="rnav"><ul>
-    <li><a class="<?php  echo ($extdisplay=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Ring Group")?></a></li>
-<?php 
+		<li><a class="<?php  echo ($extdisplay=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Ring Group")?></a></li>
+<?php
 //get unique ring groups
 $gresults = ringgroups_list();
 
@@ -114,7 +114,7 @@ if (isset($gresults)) {
 ?>
 </ul></div>
 
-<?php 
+<?php
 if ($action == 'delGRP') {
 	echo '<br><h3>'._("Ring Group").' '.$account.' '._("deleted").'!</h3><br><br><br><br><br><br><br><br>';
 } else {
@@ -142,7 +142,7 @@ if ($action == 'delGRP') {
 		$recording = $thisgrp['recording'];
 		unset($grpliststr);
 		unset($thisgrp);
-		
+
 		$delButton = "
 			<form name=delete action=\"{$_SERVER['PHP_SELF']}\" method=POST>
 				<input type=\"hidden\" name=\"display\" value=\"{$dispnum}\">
@@ -150,7 +150,7 @@ if ($action == 'delGRP') {
 				<input type=\"hidden\" name=\"action\" value=\"delGRP\">
 				<input type=submit value=\""._("Delete Group")."\">
 			</form>";
-			
+
 		echo "<h2>"._("Ring Group").": ".ltrim($extdisplay,'GRP-')."</h2>";
 		echo "<p>".$delButton."</p>";
 
@@ -192,7 +192,7 @@ if ($action == 'delGRP') {
 			<tr><td colspan="2"><h5><?php  echo ($extdisplay ? _("Edit Ring Group") : _("Add Ring Group")) ?><hr></h5></td></tr>
 			<tr>
 <?php
-	if ($extdisplay) { 
+	if ($extdisplay) {
 
 ?>
 				<input size="5" type="hidden" name="account" value="<?php  echo ltrim($extdisplay,'GRP-'); ?>" tabindex="<?php echo ++$tabindex;?>">
@@ -222,11 +222,11 @@ if ($action == 'delGRP') {
 					<select name="strategy" tabindex="<?php echo ++$tabindex;?>">
 					<?php
 						$default = (isset($strategy) ? $strategy : 'ringall');
-                                                $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone');
+																								$items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone');
 						foreach ($items as $item) {
 							echo '<option value="'.$item.'" '.($default == $item ? 'SELECTED' : '').'>'._($item);
 						}
-					?>		
+					?>
 					</select>
 				</td>
 			</tr>
@@ -246,7 +246,7 @@ if ($action == 'delGRP') {
 				<td valign="top"><a href="#" class="info"><?php echo _("Extension List")?>:<span><br><?php echo _("List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end.")?><br><br></span></a></td>
 				<td valign="top">
 <?php
-		$rows = count($grplist)+1; 
+		$rows = count($grplist)+1;
 		($rows < 5) ? 5 : (($rows > 20) ? 20 : $rows);
 ?>
 					<textarea id="grplist" cols="15" rows="<?php  echo $rows ?>" name="grplist" tabindex="<?php echo ++$tabindex;?>"><?php echo implode("\n",$grplist);?></textarea>
@@ -288,8 +288,8 @@ if ($action == 'delGRP') {
 								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
-					?>		
-					</select>		
+					?>
+					</select>
 				</td>
 			</tr>
 <?php }	else { ?>
@@ -318,12 +318,12 @@ if ($action == 'delGRP') {
 								echo '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'._($ttext)."</option>\n";
 							}
 						}
-					?>		
-					</select>		
+					?>
+					</select>
 				</td>
 			</tr>
 <?php } ?>
-			
+
 			<tr>
 				<td><a href="#" class="info"><?php echo _("CID Name Prefix")?>:<span><?php echo _('You can optionally prefix the CallerID name when ringing extensions in this group. ie: If you prefix with "Sales:", a call from John Doe would display as "Sales:John Doe" on the extensions that ring.')?></span></a></td>
 				<td><input size="4" type="text" name="grppre" value="<?php  echo $grppre ?>" tabindex="<?php echo ++$tabindex;?>"></td>
@@ -349,7 +349,7 @@ if ($action == 'delGRP') {
 			</tr>
 
 			<tr>
-        <td><a href="#" class="info"><?php echo _("Enable Call Pickup")?><span> <?php echo _("Checking this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked.") ?></span></a>:</td>
+				<td><a href="#" class="info"><?php echo _("Enable Call Pickup")?><span> <?php echo _("Checking this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked.") ?></span></a>:</td>
 				<td>
 					<input type="checkbox" name="cpickup" value="CHECKED" <?php echo $cpickup ?>   tabindex="<?php echo ++$tabindex;?>"/>
 				</td>
@@ -376,8 +376,8 @@ if ($action == 'delGRP') {
 								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
-					?>		
-					</select>		
+					?>
+					</select>
 				</td>
 			</tr>
 
@@ -394,8 +394,8 @@ if ($action == 'delGRP') {
 								echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 							}
 						}
-					?>		
-					</select>		
+					?>
+					</select>
 				</td>
 			</tr>
 <?php } ?>
@@ -421,26 +421,26 @@ if ($action == 'delGRP') {
 						echo '<option value="extern" '.($default == 'extern' ? 'SELECTED' : '').'>'._("Outside Calls Fixed CID Value");
 						echo '<option value="did" '.($default == 'did' ? 'SELECTED' : '').'>'._("Use Dialed Number");
 						echo '<option value="forcedid" '.($default == 'forcedid' ? 'SELECTED' : '').'>'._("Force Dialed Number");
-            $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled = "disabled"':'';
-					?>		
+						$fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled = "disabled"':'';
+					?>
 					</select>
 				</td>
 			</tr>
 
 			<tr>
 				<td><a href="#" class="info"><?php echo _("Fixed CID Value")?>:<span><?php echo _('Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading "+".')?></span></a></td>
-        <td><input size="30" type="text" name="fixedcid" id="fixedcid" value="<?php  echo $fixedcid ?>" tabindex="<?php echo ++$tabindex;?>" <?php echo $fixedcid_disabled ?>></td>
+				<td><input size="30" type="text" name="fixedcid" id="fixedcid" value="<?php  echo $fixedcid ?>" tabindex="<?php echo ++$tabindex;?>" <?php echo $fixedcid_disabled ?>></td>
 			</tr>
-			
+
 			<tr><td colspan="2"><h5><?php echo _("Call Recording") ?><hr></h5></td></tr>
-      <tr>
-        <td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked.')?></span></a></td>
-        <td><span class="radioset">
-          <input type="radio" id="record_always" name="recording" value="always" <?php echo ($recording=='always'?'checked':'');?>><label for="record_always"><?php echo _('Always'); ?></label>
-          <input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _('On Demand')?></label>
-          <input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('Never'); ?></label>
-        </span></td>
-      </tr>
+			<tr>
+				<td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked.')?></span></a></td>
+				<td><span class="radioset">
+					<input type="radio" id="record_always" name="recording" value="always" <?php echo ($recording=='always'?'checked':'');?>><label for="record_always"><?php echo _('Always'); ?></label>
+					<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _('On Demand')?></label>
+					<input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('Never'); ?></label>
+				</span></td>
+			</tr>
 
 <?php
 			// implementation of module hook
@@ -450,20 +450,20 @@ if ($action == 'delGRP') {
 
 			<tr><td colspan="2"><br><h5><?php echo _("Destination if no answer")?>:<hr></h5></td></tr>
 
-<?php 
+<?php
 //draw goto selects
 echo drawselects($goto,0);
 ?>
-			
+
 			<tr>
-			<td colspan="2"><br><h6><input name="Submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>		
-			
+			<td colspan="2"><br><h6><input name="Submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>
+
 			</tr>
 			</table>
 			</form>
-<?php 		
+<?php
 		} //end if action == delGRP
-		
+
 
 ?>
 <script language="javascript">
@@ -471,12 +471,12 @@ echo drawselects($goto,0);
 
 $(document).ready(function(){
 	$("#changecid").change(function(){
-        state = (this.value == "fixed" || this.value == "extern") ? "" : "disabled";
-    if (state == "disabled") {
+				state = (this.value == "fixed" || this.value == "extern") ? "" : "disabled";
+		if (state == "disabled") {
 	  $("#fixedcid").attr("disabled",state);
-    } else {
-      $("#fixedcid").removeAttr("disabled");
-    }
+		} else {
+			$("#fixedcid").removeAttr("disabled");
+		}
 	});
 });
 
@@ -510,23 +510,27 @@ function checkGRP(theForm) {
 	if (!isInteger(theForm.account.value)) {
 		return warnInvalid(theForm.account, msgInvalidGrpNum);
 	}
-	
-	defaultEmptyOK = false;	
+
+	defaultEmptyOK = false;
+
+	<?php if (function_exists('module_get_field_size')) { ?>
 	var sizeDisplayName = "<?php echo module_get_field_size('ringgroups', 'description', 35); ?>";
 	if (!isCorrectLength(theForm.description.value, sizeDisplayName))
-                return warnInvalid(theForm.description, "<?php echo _('The Group Description provided is too long.'); ?>")
+		return warnInvalid(theForm.description, "<?php echo _('The Group Description provided is too long.'); ?>")
+	<?php } ?>
+	
 	if (!isAlphanumeric(theForm.description.value))
 		return warnInvalid(theForm.description, msgInvalidDescription);
-	
+
 	if (isEmpty(theForm.grplist.value))
 		return warnInvalid(theForm.grplist, msgInvalidExtList);
 
-  if (!theForm.fixedcid.disabled) {
-    fixedcid = $.trim(theForm.fixedcid.value);
+	if (!theForm.fixedcid.disabled) {
+		fixedcid = $.trim(theForm.fixedcid.value);
 	  if (!fixedcid.match('^[+]{0,1}[0-9]+$')) {
 		  return warnInvalid(theForm.fixedcid, msgInvalidCID);
-    }
-  }
+		}
+	}
 
 	defaultEmptyOK = false;
 	if (!isInteger(theForm.grptime.value)) {
@@ -543,9 +547,8 @@ function checkGRP(theForm) {
 
 	if (!validateDestinations(theForm, 1, true))
 		return false;
-		
+
 	return true;
 }
 //-->
 </script>
-
