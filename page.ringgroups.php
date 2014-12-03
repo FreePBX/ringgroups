@@ -144,7 +144,7 @@ if ($action == 'delGRP') {
 		unset($thisgrp);
 
 		$delButton = "
-			<form name=delete action=\"{$_SERVER['PHP_SELF']}\" method=POST>
+			<form name=delete action=\"\" method=POST>
 				<input type=\"hidden\" name=\"display\" value=\"{$dispnum}\">
 				<input type=\"hidden\" name=\"account\" value=\"".ltrim($extdisplay,'GRP-')."\">
 				<input type=\"hidden\" name=\"action\" value=\"delGRP\">
@@ -185,7 +185,7 @@ if ($action == 'delGRP') {
 		echo "<h2>"._("Add Ring Group")."</h2>";
 	}
 	?>
-			<form class="popover-form" name="editGRP" action="<?php  $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return checkGRP(editGRP);">
+			<form class="popover-form" name="editGRP" action="" method="post" onsubmit="return checkGRP(editGRP);">
 			<input type="hidden" name="display" value="<?php echo $dispnum?>">
 			<input type="hidden" name="action" value="<?php echo ($extdisplay ? 'edtGRP' : 'addGRP'); ?>">
 			<table>
@@ -436,15 +436,17 @@ if ($action == 'delGRP') {
 			<tr>
 				<td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked.')?></span></a></td>
 				<td><span class="radioset">
-					<input type="radio" id="record_always" name="recording" value="always" <?php echo ($recording=='always'?'checked':'');?>><label for="record_always"><?php echo _('Always'); ?></label>
-					<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _('On Demand')?></label>
+					<input type="radio" id="record_force" name="recording" value="force" <?php echo ($recording=='force'?'checked':'');?>><label for="record_force"><?php echo _('Force'); ?></label>
+					<input type="radio" id="record_always" name="recording" value="yes" <?php echo ($recording=='yes'?'checked':'');?>><label for="record_always"><?php echo _('Yes'); ?></label>
+					<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _("Don't Care")?></label>
+					<input type="radio" id="record_no" name="recording" value="no" <?php echo ($recording=='no'?'checked':'');?>><label for="record_no"><?php echo _('No'); ?></label>
 					<input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('Never'); ?></label>
 				</span></td>
 			</tr>
 
 <?php
 			// implementation of module hook
-			// object was initialized in config.php
+			$module_hook = moduleHook::create();
 			echo $module_hook->hookHtml;
 ?>
 
@@ -518,7 +520,7 @@ function checkGRP(theForm) {
 	if (!isCorrectLength(theForm.description.value, sizeDisplayName))
 		return warnInvalid(theForm.description, "<?php echo _('The Group Description provided is too long.'); ?>")
 	<?php } ?>
-	
+
 	if (!isAlphanumeric(theForm.description.value))
 		return warnInvalid(theForm.description, msgInvalidDescription);
 

@@ -8,15 +8,15 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 function ringgroups_destinations() {
 	//get the list of ringgroups
 	$results = ringgroups_list();
-	
+
 	// return an associative array with destination and description
 	if (isset($results)) {
 		foreach($results as $result){
 				$extens[] = array('destination' => 'ext-group,'.$result['grpnum'].',1', 'description' => $result['description'].' <'.$result['grpnum'].'>');
 		}
 	}
-	
-	if (isset($extens)) 
+
+	if (isset($extens))
 		return $extens;
 	else
 		return null;
@@ -77,7 +77,7 @@ function ringgroups_get_config($engine) {
 				foreach($ringlist as $item) {
 					$grpnum = ltrim($item['0']);
 					$grp = ringgroups_get($grpnum);
-					
+
 					$strategy = $grp['strategy'];
 					$grptime = $grp['grptime'];
 					$grplist = $grp['grplist'];
@@ -104,7 +104,7 @@ function ringgroups_get_config($engine) {
 					} else {
 						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}
-						
+
 
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 
@@ -124,12 +124,12 @@ function ringgroups_get_config($engine) {
 					$ext->add($contextname, $grpnum, 'skipvmblk', new ext_setvar('__NODEST', '${EXTEN}'));
 
 					$ext->add($contextname, $grpnum, '', new ext_gosubif('$[${DB_EXISTS(RINGGROUP/'.$grpnum.'/changecid)} = 1 & "${DB(RINGGROUP/'.$grpnum.'/changecid)}" != "default" & "${DB(RINGGROUP/'.$grpnum.'/changecid)}" != ""]', 'sub-rgsetcid,s,1'));
-					
+
 					// deal with group CID prefix
 					if ($grppre != '') {
 						$ext->add($contextname, $grpnum, '', new ext_macro('prepend-cid', $grppre));
 					}
-					
+
 					// Set Alert_Info
 					if ($alertinfo != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $alertinfo)));
@@ -156,7 +156,7 @@ function ringgroups_get_config($engine) {
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',$strategy));
 					if ($annmsg_id) {
 						$annmsg = recordings_get_file($annmsg_id);
-						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]','DIALGRP'));			
+						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["foo${RRNODEST}" != "foo"]','DIALGRP'));
 						$ext->add($contextname, $grpnum, '', new ext_answer(''));
 						$ext->add($contextname, $grpnum, '', new ext_wait(1));
 						$ext->add($contextname, $grpnum, '', new ext_playback($annmsg));
@@ -217,7 +217,7 @@ function ringgroups_get_config($engine) {
             extern    - set to the fixedcid if the call is from the outside only
             did       - set to the DID that the call came in on or leave alone, treated as foreign
             forcedid  - set to the DID that the call came in on or leave alone, not treated as foreign
-          
+
           NODEST      - has the exten num called, hoaky if that goes away but for now use it
         */
         if (count($ringlist)) {
@@ -299,9 +299,9 @@ function ringgroups_list($get_all=false) {
 	foreach ($results as $result) {
 		if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
 			$grps[] = array(
-				0 => $result['grpnum'], 
+				0 => $result['grpnum'],
 				1 => $result['description'],
-				'grpnum' => $result['grpnum'], 
+				'grpnum' => $result['grpnum'],
 				'description' => $result['description'],
 			);
 		}
@@ -448,16 +448,16 @@ if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
 		global $currentcomponent;
 		global $display;
 		$extdisplay=isset($_REQUEST['extdisplay'])?$_REQUEST['extdisplay']:'';
-	
+
 		if ($display == 'extensions' || $display == 'users') {
 			$section = _('Ring Group Membership');
-		
+
 			$sql = "SELECT grpnum, description FROM ringgroups WHERE grplist LIKE '$extdisplay-%' OR grplist LIKE '%-$extdisplay-%' OR grplist LIKE '%-$extdisplay' OR grplist = '$extdisplay'";
 			$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
-		
+
 			$ringgroup_count = 0;
 			foreach($results as $result) {
-				$addURL = $_SERVER['PHP_SELF'].'?display=ringgroups&extdisplay='.$result['grpnum'];
+				$addURL = '?display=ringgroups&extdisplay='.$result['grpnum'];
 				$ringgroup_icon = 'images/email_edit.png';
 				$ringgroup_label = $result['grpnum']." ".$result['description'];
 				$ringgroup_label = '&nbsp;<span>
