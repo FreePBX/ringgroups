@@ -216,13 +216,14 @@ if ($action == 'delGRP') {
 					<b><?php echo _("*-prim")?></b>:  <?php echo _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")?><br>
 					<b><?php echo _("firstavailable")?></b>:  <?php echo _("ring only the first available channel")?><br>
 					<b><?php echo _("firstnotonphone")?></b>:  <?php echo _("ring only the first channel which is not offhook - ignore CW")?><br>
+					<b><?php echo _("random")?></b>:  <?php echo _("Makes a call could hop between the included extensions without a predefined priority to ensure that calls in the groups are (almost) evenly spread. Simulates a Queue when a Queue can not otherwise be used.")?><br>
 				</span>
 				</a></td>
 				<td>
 					<select name="strategy" tabindex="<?php echo ++$tabindex;?>">
 					<?php
 						$default = (isset($strategy) ? $strategy : 'ringall');
-																								$items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone');
+						$items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone','random');
 						foreach ($items as $item) {
 							echo '<option value="'.$item.'" '.($default == $item ? 'SELECTED' : '').'>'._($item);
 						}
