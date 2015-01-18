@@ -435,13 +435,11 @@ if ($action == 'delGRP') {
 
 			<tr><td colspan="2"><h5><?php echo _("Call Recording") ?><hr></h5></td></tr>
 			<tr>
-				<td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked.')?></span></a></td>
+				<td><a href="#" class="info"><?php echo _("Record Calls")?><span><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked, unless they have the "Override" call recording setting.')?></span></a></td>
 				<td><span class="radioset">
-					<input type="radio" id="record_force" name="recording" value="force" <?php echo ($recording=='force'?'checked':'');?>><label for="record_force"><?php echo _('Force'); ?></label>
-					<input type="radio" id="record_always" name="recording" value="yes" <?php echo ($recording=='yes'?'checked':'');?>><label for="record_always"><?php echo _('Yes'); ?></label>
-					<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _("Don't Care")?></label>
-					<input type="radio" id="record_no" name="recording" value="no" <?php echo ($recording=='no'?'checked':'');?>><label for="record_no"><?php echo _('No'); ?></label>
-					<input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('Never'); ?></label>
+					<input type="radio" id="record_force" name="recording" value="force" <?php echo ($recording=='force'?'checked':'');?>><label for="record_force"><?php echo _('Yes'); ?></label>
+					<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>><label for="record_dontcare"><?php echo _("On Demand")?></label>
+					<input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>><label for="record_never"><?php echo _('No'); ?></label>
 				</span></td>
 			</tr>
 
