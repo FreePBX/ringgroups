@@ -339,4 +339,9 @@ $set['description'] = 'When set to true extensions that belong to one or more Ri
 $set['type'] = CONF_TYPE_BOOL;
 $freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS',$set, true);
 
-?>
+
+// Fix recording status. If it's 'yes' or 'no, it should be 'force' or 'never'.
+$sql = 'UPDATE `ringgroups` SET `recording`="never" WHERE `recording`="no"';
+$db->query($sql);
+$sql = 'UPDATE `ringgroups` SET `recording`="force" WHERE `recording`="yes"';
+$db->query($sql);
