@@ -1,0 +1,2 @@
+<a href="config.php?display=ringgroups" class="list-group-item <?php echo ($request['view'] == ''? 'hidden':'')?>"><i class="fa fa-list"></i>&nbsp; <?php echo _("List Ring Groups") ?></a>
+<a href="config.php?display=ringgroups&view=form" class="list-group-item <?php echo ($request['view'] == 'form'? 'hidden':'')?>" ><i class="fa fa-plus"></i>&nbsp; <?php echo _("Add Ring Group") ?></a>
