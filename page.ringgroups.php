@@ -1,5 +1,4 @@
 <?php /* $Id$ */
-namespace FreePBX\modules;
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 $rg = \FreePBX::create()->Ringgroups;
 

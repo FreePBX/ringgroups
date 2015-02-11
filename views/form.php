@@ -1,5 +1,4 @@
 <?php
-namespace FreePBX\modules;
 extract($request);
 if ($extdisplay) {
 	// We need to populate grplist with the existing extension list.
