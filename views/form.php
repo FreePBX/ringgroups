@@ -443,8 +443,10 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="cfignorew"></i>
 					</div>
 					<div class="col-md-9 radioset">
-						<input type="checkbox" name="cfignore" id="cfignore" value="CHECKED" <?php echo $cfignore ?>>
-						<label for="cfignore"><?php echo _("Enabled");?></label>
+						<input type="radio" name="cfignore" id="cfignoreyes" value="CHECKED" <?php echo ($cfignore == "CHECKED"?"CHECKED":"") ?>>
+						<label for="cfignoreyes"><?php echo _("Yes");?></label>
+						<input type="radio" name="cfignore" id="cfignoreno" <?php echo ($cfignore == "CHECKED"?"":"CHECKED") ?>>
+						<label for="cfignoreno"><?php echo _("No");?></label>
 					</div>
 				</div>
 			</div>
@@ -452,7 +454,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<span id="cfignorew-help" class="help-block fpbx-help-block"><?php echo _("When Enabled, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting .")?></span>
+			<span id="cfignorew-help" class="help-block fpbx-help-block"><?php echo _("When set to Yes, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting .")?></span>
 		</div>
 	</div>
 </div>
@@ -468,8 +470,10 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="cwignorew"></i>
 					</div>
 					<div class="col-md-9 radioset">
-						<input type="checkbox" name="cwignore" id="cwignore" value="CHECKED" <?php echo $cwignore ?>>
-						<label for="cwignore"><?php echo _("Enabled");?></label>
+						<input type="radio" name="cwignore" id="cwignoreyes" value="CHECKED" <?php echo ($cwignore == "CHECKED"?"CHECKED":"") ?>>
+						<label for="cwignoreyes"><?php echo _("Yes");?></label>
+						<input type="radio" name="cwignore" id="cwignoreno" <?php echo ($cwignore == "CHECKED"?"":"CHECKED") ?>>
+						<label for="cwignoreno"><?php echo _("No");?></label>
 					</div>
 				</div>
 			</div>
@@ -493,8 +497,10 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="cpickupw"></i>
 					</div>
 					<div class="col-md-9 radioset">
-						<input type="checkbox" name="cpickup" id="cpickup" value="CHECKED" <?php echo $cpickup ?>>
-						<label for="cpickup"><?php echo _("Enabled");?></label>
+						<input type="radio" name="cpickup" id="cpickupyes" value="CHECKED" <?php echo ($cpickup == "CHECKED"?"CHECKED":"") ?>>
+						<label for="cpickupyes"><?php echo _("Yes");?></label>
+						<input type="radio" name="cpickup" id="cpickupno" <?php echo ($cpickup == "CHECKED"?"":"CHECKED") ?>>
+						<label for="cpickupno"><?php echo _("No");?></label>
 					</div>
 				</div>
 			</div>
@@ -518,8 +524,10 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="needsconfw"></i>
 					</div>
 					<div class="col-md-9 radioset">
-						<input type="checkbox" name="needsconf" id="needsconf" value="CHECKED" <?php echo $needsconf ?>>
-						<label for="needsconf"><?php echo _("Enabled");?></label>
+						<input type="radio" name="needsconf" id="needsconfyes" value="CHECKED" <?php echo ($needsconf == "CHECKED"?"CHECKED":"") ?>>
+						<label for="needsconfyes"><?php echo _("Yes");?></label>
+						<input type="radio" name="needsconf" id="needsconfno" <?php echo ($needsconf == "CHECKED"?"":"CHECKED") ?>>
+						<label for="needsconfno"><?php echo _("No");?></label>
 					</div>
 				</div>
 			</div>

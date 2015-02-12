@@ -1,22 +1,6 @@
-//Max Length counter
-//Maybe move this to framework
-$(document).ready(function(){
-	$(".maxlen").each(function(){
-		var curid = $(this).attr('id');
-		var maxl = $(this).attr('maxlength');
-		var curl = $(this).val().length;
-		$(this).wrap('<div class="input-group"></div>');
-		$(this).after('<span class="input-group-addon" id="basic-addon-'+curid+'">'+curl+'/'+maxl+'</span>');
-	});
-});
-$(".maxlen").keyup(function(){
-		var curid = $(this).attr('id');
-		var maxl = $(this).attr('maxlength');
-		var curl = $(this).val().length;
-		$('#basic-addon-'+curid).html(curl+'/'+maxl);
-});
-//end Max Length counter
-
+//	License for all code of this FreePBX module can be found in the license file inside the module directory
+//	Copyright 2015 Sangoma Technologies.
+//
 //Agent Quick Select
 $("[id^='qsagents']").change(function(){
 	var taelm = $(this).data('for');
