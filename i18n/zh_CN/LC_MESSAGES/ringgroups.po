@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:09-0500\n"
+"POT-Creation-Date: 2015-02-20 12:35-0500\n"
 "PO-Revision-Date: 2009-02-01 18:54+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,54 +18,55 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:267
+#: page.ringgroups.php:267
 msgid "(pick extension)"
 msgstr "（选取分机）"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:216
+#: page.ringgroups.php:216
 msgid "*-prim"
 msgstr "依从主分机（策略名-prim）"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:334
+#: page.ringgroups.php:334
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "警告信息可以用于为SIP设备产生独特的铃声"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:104
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:185
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:192
+#: page.ringgroups.php:104 page.ringgroups.php:185 page.ringgroups.php:192
 msgid "Add Ring Group"
 msgstr "添加拨号小组"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:334
+#: page.ringgroups.php:334
 msgid "Alert Info"
 msgstr "警告信息"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:409
+#: page.ringgroups.php:409
 msgid "Always transmit the Fixed CID Value below."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:280
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:298
+#: page.ringgroups.php:280 page.ringgroups.php:298
 msgid "Announcement:"
 msgstr "通告："
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:329
+#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
+msgid "Applications"
+msgstr ""
+
+#: page.ringgroups.php:329
 msgid "CID Name Prefix"
 msgstr "主叫ID名的前缀"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:436
+#: page.ringgroups.php:436
 msgid "Call Recording"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:403
+#: page.ringgroups.php:403
 msgid "Change External CID Configuration"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:177
+#: install.php:177
 msgid "Checking if recordings need migration.."
 msgstr "正在检查录音是否需要迁移。。。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:353
+#: page.ringgroups.php:353
 msgid ""
 "Checking this will allow calls to the Ring Group to be picked up with the "
 "directed call pickup feature using the group number. When not checked, "
@@ -74,42 +75,66 @@ msgid ""
 "or not this is checked."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:261
+#: page.ringgroups.php:261
 msgid "Choose an extension to append to the end of the extension list above."
 msgstr "选择一个分机以添加到上面的分机列表的末尾。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:360
+#: page.ringgroups.php:360
 msgid "Confirm Calls"
 msgstr "呼叫确认"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:181
+#: page.ringgroups.php:181
 msgid "Conflicting Extensions"
 msgstr "分机号冲突"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:374
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:392
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:408
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:420
+#: ringgroups.i18n.php:12
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
+#: ringgroups.i18n.php:5
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
+#: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
+#: page.ringgroups.php:420
 msgid "Default"
 msgstr "默认"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:151
+#: page.ringgroups.php:151
 msgid "Delete Group"
 msgstr "删除小组"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:452
+#: page.ringgroups.php:452
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:192
+#: ringgroups.i18n.php:16
+msgid "Display Extension Ring Group Members"
+msgstr ""
+
+#: page.ringgroups.php:441
+msgid "Dont Care"
+msgstr ""
+
+#: page.ringgroups.php:192
 msgid "Edit Ring Group"
 msgstr "编辑拨号小组"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:353
+#: page.ringgroups.php:353
 msgid "Enable Call Pickup"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:360
+#: page.ringgroups.php:360
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -120,41 +145,42 @@ msgstr ""
 "由语音邮箱接听。要启用这个选项，需要远端在接通前在电话上按下1。这个功能只会在"
 "全部响铃的策略下起作用。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:247
+#: page.ringgroups.php:247
 msgid "Extension List"
 msgstr "分机列表"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:259
+#: page.ringgroups.php:259
 msgid "Extension Quick Pick"
 msgstr "快速分机选取"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:409
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:421
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:432
+#: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
 msgid "Fixed CID Value"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:432
+#: page.ringgroups.php:432
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading \"+\"."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:412
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:424
+#: page.ringgroups.php:440
+msgid "Force"
+msgstr ""
+
+#: page.ringgroups.php:412 page.ringgroups.php:424
 msgid "Force Dialed Number"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:206
+#: page.ringgroups.php:206
 msgid "Group Description"
 msgstr "小组描述"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:330
+#: functions.inc.php:330
 msgid "INUSE"
 msgstr "正在使用"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:308
+#: page.ringgroups.php:308
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -162,19 +188,19 @@ msgstr ""
 "如果你选择了一个等待音乐类别，而不是“振铃”，呼叫者在等待接听的时候会听到音"
 "乐。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:339
+#: page.ringgroups.php:339
 msgid "Ignore CF Settings"
 msgstr "忽略呼叫转移的相关设置"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:499
+#: page.ringgroups.php:499
 msgid "Invalid Group Number specified"
 msgstr "指定了无效的组号码"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:501
+#: page.ringgroups.php:501
 msgid "Invalid time specified"
 msgstr "指定了无效的时间"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:247
+#: page.ringgroups.php:247
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -185,14 +211,14 @@ msgid ""
 "the end."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:219
+#: page.ringgroups.php:219
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:280
+#: page.ringgroups.php:280
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU to the left"
@@ -200,7 +226,7 @@ msgstr ""
 "在拨打这个小组之前，要播放给主叫的消息。<br /><br />要添加额外的录音，请使用"
 "左边的“系统录音”菜单"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:298
+#: page.ringgroups.php:298
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>You "
 "must install and enable the \"Systems Recordings\" Module to edit this option"
@@ -208,7 +234,7 @@ msgstr ""
 "在拨打这个小组之前，要播放给主叫的消息。<br /><br />请安装并启用“系统录音”模"
 "块以编辑这个选项"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:368
+#: page.ringgroups.php:368
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -217,7 +243,7 @@ msgstr ""
 "如果“呼叫确认”被启用，这是对接听呼叫的人播放的消息。<br /><br />要添加额外的"
 "录音，请使用左边的“系统录音”菜单"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:386
+#: page.ringgroups.php:386
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -226,100 +252,102 @@ msgstr ""
 "如果呼叫被接听，却还没来得及按下1键，这是要对接听者播放的消息<br /><br />要添"
 "加而外的录音，请使用左边的“系统录音”菜单"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:406
+#: page.ringgroups.php:406
 msgid "Mode"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:442
-msgid "No"
+#: page.ringgroups.php:442
+msgid "Never"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:286
+#: page.ringgroups.php:286
 msgid "None"
 msgstr "无"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:441
-msgid "On Demand"
-msgstr ""
-
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:504
+#: page.ringgroups.php:504
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
 "若“确认”选项被启用，就只支持全部响铃、全部响铃2、搜寻和各自的主分机依从策略。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:410
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:422
+#: page.ringgroups.php:410 page.ringgroups.php:422
 msgid "Outside Calls Fixed CID Value"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:308
+#: page.ringgroups.php:308
 msgid "Play Music On Hold?"
 msgstr "播放等待音乐？"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:503
+#: page.ringgroups.php:503
 msgid "Please enter a valid Group Description"
 msgstr "请输入有效的组描述"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:500
+#: page.ringgroups.php:500
 msgid "Please enter an extension list."
 msgstr "请输入一个分机列表。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:206
+#: page.ringgroups.php:206
 msgid "Provide a descriptive title for this Ring Group."
 msgstr "为拨号小组提供一个描述性的标题"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:438
+#: page.ringgroups.php:438
 msgid "Record Calls"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:368
+#: page.ringgroups.php:368
 msgid "Remote Announce:"
 msgstr "远程公告："
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:314
+#: page.ringgroups.php:314
 msgid "Ring"
 msgstr "振铃"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:119
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:154
+#: page.ringgroups.php:119 page.ringgroups.php:154
 msgid "Ring Group"
 msgstr "拨号小组"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:37
+#: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
 msgstr "拨号小组 %s："
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:453
+#: functions.inc.php:453
 msgid "Ring Group Membership"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:57
-#: /usr/src/freepbx/ringgroups/functions.inc.php:329
+#: ringgroups.i18n.php:18
+msgid "Ring Group Module"
+msgstr ""
+
+#: functions.inc.php:57 functions.inc.php:329
 #, php-format
 msgid "Ring Group: %s"
 msgstr "拨号小组：%s"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:356
+#: functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:211
+#: ringgroups.i18n.php:3 ringgroups.i18n.php:6 ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
+msgid "Ring Groups"
+msgstr "拨号小组"
+
+#: page.ringgroups.php:211
 msgid "Ring Strategy:"
 msgstr "振铃策略："
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:237
+#: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:213
+#: page.ringgroups.php:213
 msgid "Ring all available channels until one answers (default)"
 msgstr "全部可用频道都响铃直到其中一个接听（默认设置）"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:215
+#: page.ringgroups.php:215
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -327,31 +355,31 @@ msgstr ""
 "首先使列表中第一个分机响铃，然后是第一个和第二个响，接着是第一、二、三个"
 "响。。。以次类推。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:200
+#: page.ringgroups.php:200
 msgid "Ring-Group Number"
 msgstr "拨号小组号码"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:346
+#: page.ringgroups.php:346
 msgid "Skip Busy Agent"
 msgstr "跳过忙碌的坐席"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:460
+#: page.ringgroups.php:460
 msgid "Submit Changes"
 msgstr "提交更改"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:214
+#: page.ringgroups.php:214
 msgid "Take turns ringing each available extension"
 msgstr "在可用的分机上轮流响铃"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:520
+#: page.ringgroups.php:520
 msgid "The Group Description provided is too long."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:200
+#: page.ringgroups.php:200
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "用户拨打此号码以呼叫这个拨号小组中的分机"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:216
+#: page.ringgroups.php:216
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -362,11 +390,11 @@ msgstr ""
 "就不会响铃。如果主分机是设置了免打扰，它就不会振铃。如果主分机设置了无条件转"
 "移呼叫，那么所有的分机会响铃"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:262
+#: functions.inc.php:262
 msgid "This ringgroup"
 msgstr "这个拨号小组"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:239
+#: page.ringgroups.php:239
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
@@ -374,22 +402,22 @@ msgstr ""
 "电话响铃的秒数。对于所有的搜寻式的响铃策略，这是每次搜寻出的电话的响铃的时"
 "间。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:502
+#: page.ringgroups.php:502
 msgid "Time must be between 1 and 300 seconds"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:386
+#: page.ringgroups.php:386
 msgid "Too-Late Announce:"
 msgstr "按键太晚公告："
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:410
+#: page.ringgroups.php:410
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:412
+#: page.ringgroups.php:412
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -397,7 +425,7 @@ msgid ""
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:411
+#: page.ringgroups.php:411
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -405,20 +433,19 @@ msgid ""
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:408
+#: page.ringgroups.php:408
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:411
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:423
+#: page.ringgroups.php:411 page.ringgroups.php:423
 msgid "Use Dialed Number"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:64
+#: page.ringgroups.php:64
 msgid "Warning! Extension"
 msgstr "警告！你的帐户无法使用分机"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:346
+#: page.ringgroups.php:346
 msgid ""
 "When checked, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -429,7 +456,7 @@ msgstr ""
 "导致有呼叫等待功能的电话，或具有多根线路的电话，在占线时都会被跳过，然后呼叫"
 "根据自己的搜寻策略去尝试下一个可用的坐席。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:339
+#: page.ringgroups.php:339
 msgid ""
 "When checked, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -439,174 +466,165 @@ msgstr ""
 "CFB。以“#”号作为按键输入结尾的分机号（例如访问分机的“跟我来”），可能不接收此"
 "设置。"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:440
-msgid "Yes"
-msgstr ""
-
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:438
+#: ringgroups.i18n.php:20
 msgid ""
-"You can always record calls that come into this ring group, never record "
-"them, or allow the extension that answers to do on-demand recording. If "
-"recording is denied then one-touch on demand recording will be blocked, "
-"unless they have the \"Override\" call recording setting."
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:329
+#: page.ringgroups.php:438
+msgid ""
+"You can always record calls that come into this ring group (Force), never "
+"record them (Never), or allow the extension that answers to do on-demand "
+"recording (Dont Care). If recording is denied then one-touch on demand "
+"recording will be blocked, unless they have the \"Override\" call recording "
+"setting."
+msgstr ""
+
+#: page.ringgroups.php:329
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:152
+#: install.php:152
 msgid "added field cfignore to ringgroups table"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:162
+#: install.php:162
 msgid "added field cpickup to ringgroups table"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:142
+#: install.php:142
 msgid "added field cwignore to ringgroups table"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:172
+#: install.php:172
 msgid "added field recording to ringgroups table"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/install.php:184
+#: install.php:184
 msgid "adding annmsg_id field.."
 msgstr "正在添加annmsg_id字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:193
+#: install.php:193
 msgid "adding remotealert_id field.."
 msgstr "正在添加remotealert_id字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:202
+#: install.php:202
 msgid "adding toolate_id field.."
 msgstr "正在添加toolate_id字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:320
+#: install.php:320
 msgid "already migrated"
 msgstr "已经迁移过了"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:318
+#: page.ringgroups.php:318
 msgid "default"
 msgstr "默认"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:119
+#: page.ringgroups.php:119
 msgid "deleted"
 msgstr "已删除"
 
-#: /usr/src/freepbx/ringgroups/install.php:294
+#: install.php:294
 msgid "dropping annmsg field.."
 msgstr "正在删除annmsg字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:302
+#: install.php:302
 msgid "dropping remotealert field.."
 msgstr "正在删除remotealert字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:310
+#: install.php:310
 msgid "dropping toolate field.."
 msgstr "正在删除toolate字段。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:188
-#: /usr/src/freepbx/ringgroups/install.php:197
-#: /usr/src/freepbx/ringgroups/install.php:206
-#: /usr/src/freepbx/ringgroups/install.php:218
-#: /usr/src/freepbx/ringgroups/install.php:234
-#: /usr/src/freepbx/ringgroups/install.php:244
-#: /usr/src/freepbx/ringgroups/install.php:260
-#: /usr/src/freepbx/ringgroups/install.php:270
-#: /usr/src/freepbx/ringgroups/install.php:286
+#: install.php:188 install.php:197 install.php:206 install.php:218
+#: install.php:234 install.php:244 install.php:260 install.php:270
+#: install.php:286
 msgid "fatal error"
 msgstr "致命错误"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:217
+#: page.ringgroups.php:217
 msgid "firstavailable"
 msgstr "首个可用频道"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:218
+#: page.ringgroups.php:218
 msgid "firstnotonphone"
 msgstr "首个未离钩频道"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:214
+#: page.ringgroups.php:214
 msgid "hunt"
 msgstr "搜寻"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:262
+#: functions.inc.php:262
 msgid "is already in use"
 msgstr "已经在使用中了"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:64
+#: page.ringgroups.php:64
 msgid "is not allowed for your account"
 msgstr " "
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:215
+#: page.ringgroups.php:215
 msgid "memoryhunt"
 msgstr "记忆性搜寻"
 
-#: /usr/src/freepbx/ringgroups/install.php:214
+#: install.php:214
 msgid "migrate annmsg to ids.."
 msgstr "将annmsg迁移到ids。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:240
+#: install.php:240
 msgid "migrate remotealert to  ids.."
 msgstr "将remotealert迁移到ids。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:266
+#: install.php:266
 msgid "migrate toolate to ids.."
 msgstr "将toolate迁移到ids。。。"
 
-#: /usr/src/freepbx/ringgroups/install.php:238
-#: /usr/src/freepbx/ringgroups/install.php:264
-#: /usr/src/freepbx/ringgroups/install.php:290
+#: install.php:238 install.php:264 install.php:290
 #, php-format
 msgid "migrated %s entries"
 msgstr "迁移了%s个项目"
 
-#: /usr/src/freepbx/ringgroups/install.php:183
+#: install.php:183
 msgid "migrating"
 msgstr "正在迁移"
 
-#: /usr/src/freepbx/ringgroups/install.php:298
+#: install.php:298
 msgid "no annmsg field???"
 msgstr "没有annmsg字段？"
 
-#: /usr/src/freepbx/ringgroups/install.php:306
+#: install.php:306
 msgid "no remotealert field???"
 msgstr "没有remotealert字段？"
 
-#: /usr/src/freepbx/ringgroups/install.php:314
+#: install.php:314
 msgid "no toolate field???"
 msgstr "没有toolate字段？"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:317
+#: page.ringgroups.php:317
 msgid "none"
 msgstr "无"
 
-#: /usr/src/freepbx/ringgroups/install.php:191
-#: /usr/src/freepbx/ringgroups/install.php:200
-#: /usr/src/freepbx/ringgroups/install.php:209
-#: /usr/src/freepbx/ringgroups/install.php:300
-#: /usr/src/freepbx/ringgroups/install.php:308
-#: /usr/src/freepbx/ringgroups/install.php:316
+#: install.php:191 install.php:200 install.php:209 install.php:300
+#: install.php:308 install.php:316
 msgid "ok"
 msgstr "完成"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:219
+#: page.ringgroups.php:219
 msgid "random"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:217
+#: page.ringgroups.php:217
 msgid "ring only the first available channel"
 msgstr "只在第一个可用的频道响铃"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:218
+#: page.ringgroups.php:218
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "只在第一个不是离钩状态下的频道响铃——忽略呼叫等待"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:213
+#: page.ringgroups.php:213
 msgid "ringall"
 msgstr "全部响铃"
 
@@ -629,9 +647,6 @@ msgstr "全部响铃"
 
 #~ msgid "Time must be between 1 and 60 seconds"
 #~ msgstr "时间必须在1到60秒之间"
-
-#~ msgid "Ring Groups"
-#~ msgstr "拨号小组"
 
 #~ msgid ""
 #~ "You can optionally prefix the Caller ID name when ringing extensions in "
