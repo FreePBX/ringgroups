@@ -46,12 +46,12 @@ if ($extdisplay) {
 	$accountinput = '<input type="text" class="form-control" id="account" name="account" value="">';
 }
 //Ring Strategy Help
-$rshelp = '<b>' . _("ringall")				.'</b>: '. _("Ring all available channels until one answers (default)") 
+$rshelp = '<b>' . _("ringall")				.'</b>: '. _("Ring all available channels until one answers (default)")
 		. '<br>'
 		. '<b>'. _("hunt")				.'</b>: '. _("Take turns ringing each available extension")
 		. '<br>'
 		. '<b>'. _("memoryhunt") 		.'</b>: '. _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")
-		. '<br>'	
+		. '<br>'
 		. '<b>'. _("*-prim")  			.'</b>: '. _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")
 		. '<br>'
 		. '<b>'. _("firstavailable")  	.'</b>: '. _("ring only the first available channel")
@@ -202,7 +202,7 @@ if(function_exists('music_list')) {
 							<select name="ringing" id="ringing" class="form-control">';
 							$cur = (isset($ringing) ? $ringing : 'Ring');
 							$tresults = \music_list();
-							$ringhtml .= '<option value="Ring">'._("Ring").'</option>'; 
+							$ringhtml .= '<option value="Ring">'._("Ring").'</option>';
 							if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
 							    ( $tresult == 'none' ? $ttext = _("none") : $ttext = $tresult );
@@ -210,7 +210,7 @@ if(function_exists('music_list')) {
 								$ringhtml .= '<option value="'.$tresult.'"'.($tresult == $cur ? ' SELECTED' : '').'>'._($ttext)."</option>\n";
 							}
 						}
-										
+
 	$ringhtml .= '			</select>
 						</div>
 					</div>
@@ -238,7 +238,7 @@ $ccidhelp = _("Mode").':'
 			.'<br>'
 			.'<b>'. _("Force Dialed Number")			.'</b>: '. _("Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This WILL be transmitted on trunks that block foreign CallerID")
 			.'<br>';
-					
+
 $default = (isset($changecid) ? $changecid : 'default');
 $ccidrows .= '<option value="default" '.($default == 'default' ? 'SELECTED' : '').'>'._("Default").'</option>';
 $ccidrows .= '<option value="fixed" '.($default == 'fixed' ? 'SELECTED' : '').'>'._("Fixed CID Value").'</option>';
@@ -604,11 +604,11 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 					</div>
 					<div class="col-md-9 radioset">
 						<input type="radio" id="record_force" name="recording" value="force" <?php echo ($recording=='force'?'checked':'');?>>
-						<label for="record_force"><?php echo _('Yes'); ?></label>
+						<label for="record_force"><?php echo _('Force'); ?></label>
 						<input type="radio" id="record_dontcare" name="recording" value="dontcare" <?php echo ($recording=='dontcare'?'checked':'');?>>
-						<label for="record_dontcare"><?php echo _("On Demand")?></label>
+						<label for="record_dontcare"><?php echo _("Dont Care")?></label>
 						<input type="radio" id="record_never" name="recording" value="never" <?php echo ($recording=='never'?'checked':'');?>>
-						<label for="record_never"><?php echo _('No'); ?></label>
+						<label for="record_never"><?php echo _('Never'); ?></label>
 					</div>
 				</div>
 			</div>
@@ -616,7 +616,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<span id="recordingw-help" class="help-block fpbx-help-block"><?php echo _('You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked, unless they have the "Override" call recording setting.')?></span>
+			<span id="recordingw-help" class="help-block fpbx-help-block"><?php echo _('You can always record calls that come into this ring group (Force), never record them (Never), or allow the extension that answers to do on-demand recording (Dont Care). If recording is denied then one-touch on demand recording will be blocked, unless they have the "Override" call recording setting.')?></span>
 		</div>
 	</div>
 </div>
