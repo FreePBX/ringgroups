@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>12.0.3.1</version>
+	<version>12.0.3.2</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*12.0.3.2* FREEPBX-8809 Make the recording buttons more uniform
 		*12.0.3.1* Fix misleading call recording buttons.
 		*12.0.3* FREEPBX-7384 add new strategy
 		*12.0.2* Call Recordings Update
