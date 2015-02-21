@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 12:35-0500\n"
+"POT-Creation-Date: 2015-02-20 19:59-0500\n"
 "PO-Revision-Date: 2008-11-06 14:54+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Announcement:"
 msgstr "Annuncio:"
 
-#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: ringgroups.i18n.php:4
 msgid "Applications"
 msgstr ""
 
@@ -88,15 +88,6 @@ msgstr "Conferma Chiamate"
 msgid "Conflicting Extensions"
 msgstr "Interni in conflitto"
 
-#: ringgroups.i18n.php:12
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-
 #: ringgroups.i18n.php:5
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
@@ -119,7 +110,7 @@ msgstr "Elimina Gruppo di Chiamata"
 msgid "Destination if no answer"
 msgstr "Destinazione se nessuna risposta"
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -325,7 +316,7 @@ msgstr "Gruppo di Chiamata %s:"
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:10
 msgid "Ring Group Module"
 msgstr ""
 
@@ -339,8 +330,7 @@ msgstr "Gruppo di Chiamata: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6 ringgroups.i18n.php:8
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
 msgid "Ring Groups"
 msgstr "Gruppi di chiamata"
 
@@ -480,7 +470,7 @@ msgstr ""
 "hanno il '#' alla fine, per esempio utilizzato per adoperare il Seguimi, "
 "potrebbero ignorare questa impostazione."
 
-#: ringgroups.i18n.php:20
+#: ringgroups.i18n.php:12
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."

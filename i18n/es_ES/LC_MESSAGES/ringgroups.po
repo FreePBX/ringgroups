@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 12:35-0500\n"
+"POT-Creation-Date: 2015-02-20 19:59-0500\n"
 "PO-Revision-Date: 2014-02-28 09:21+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Spanish <http://example.com/projects/freepbx-211/ringgroups/"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Announcement:"
 msgstr "Anuncio:"
 
-#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: ringgroups.i18n.php:4
 msgid "Applications"
 msgstr ""
 
@@ -88,15 +88,6 @@ msgstr "Confirmar llamadas"
 msgid "Conflicting Extensions"
 msgstr "Extensiones en conflicto"
 
-#: ringgroups.i18n.php:12
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-
 #: ringgroups.i18n.php:5
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
@@ -119,7 +110,7 @@ msgstr "Eliminar grupo de extensiones"
 msgid "Destination if no answer"
 msgstr "Destino si no hay respuesta"
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -325,7 +316,7 @@ msgstr "Grupo de extensiones %s:"
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:10
 msgid "Ring Group Module"
 msgstr ""
 
@@ -339,8 +330,7 @@ msgstr "Grupo de extensiones: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de extensiones: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6 ringgroups.i18n.php:8
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
 msgid "Ring Groups"
 msgstr "Grupos de extensiones"
 
@@ -486,7 +476,7 @@ msgstr ""
 "símbolo '#' al final, para acceder por ejemplo a los números de búsqueda "
 "(Follow Me) puede que no tengan en cuenta esta opción."
 
-#: ringgroups.i18n.php:20
+#: ringgroups.i18n.php:12
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
