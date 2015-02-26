@@ -56,11 +56,11 @@ msgstr "主叫ID名的前缀"
 
 #: page.ringgroups.php:436
 msgid "Call Recording"
-msgstr ""
+msgstr "呼叫录音:"
 
 #: page.ringgroups.php:403
 msgid "Change External CID Configuration"
-msgstr ""
+msgstr "修改外部CID配置"
 
 #: install.php:177
 msgid "Checking if recordings need migration.."
@@ -123,7 +123,7 @@ msgstr "编辑拨号小组"
 
 #: page.ringgroups.php:353
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "启用呼叫接听"
 
 #: page.ringgroups.php:360
 msgid ""
@@ -146,7 +146,7 @@ msgstr "快速分机选取"
 
 #: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
 msgid "Fixed CID Value"
-msgstr ""
+msgstr "固定CID"
 
 #: page.ringgroups.php:432
 msgid ""
@@ -245,11 +245,11 @@ msgstr ""
 
 #: page.ringgroups.php:406
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: page.ringgroups.php:442
 msgid "Never"
-msgstr ""
+msgstr "从不录音"
 
 #: page.ringgroups.php:286
 msgid "None"
@@ -284,7 +284,7 @@ msgstr "为拨号小组提供一个描述性的标题"
 
 #: page.ringgroups.php:438
 msgid "Record Calls"
-msgstr ""
+msgstr "对通话录音"
 
 #: page.ringgroups.php:368
 msgid "Remote Announce:"
@@ -331,7 +331,7 @@ msgstr "振铃策略："
 
 #: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "最长振铃时间(最长300秒)"
 
 #: page.ringgroups.php:213
 msgid "Ring all available channels until one answers (default)"
@@ -630,10 +630,8 @@ msgstr "全部响铃"
 #~ "Me. To dial Follow-Me, Queues and other numbers that are not extensions, "
 #~ "put a '#' at the end."
 #~ msgstr ""
-#~ "列出了要响铃的分机，一行一个，或者使用下面的“快速分机选取”功能。<br /"
-#~ "><br />你可以包含一个远程系统上的分机，或者在分机号之后添加井号（#）以包含"
-#~ "一个外部分机。例如：2448089#会在合适的中继（可参考出局线路）上拨打"
-#~ "2448089。"
+#~ "列出了要响铃的分机，一行一个，或者使用下面的“快速分机选取”功能。<br /><br />你可以包含一个远程系统上的分机，或者在分机号之后添加井号（#）以"
+#~ "包含一个外部分机。例如：2448089#会在合适的中继（可参考出局线路）上拨打2448089。"
 
 #~ msgid "Time must be between 1 and 60 seconds"
 #~ msgstr "时间必须在1到60秒之间"
@@ -643,8 +641,7 @@ msgstr "全部响铃"
 #~ "this group. ie: If you prefix with \"Sales:\", a call from John Doe would "
 #~ "display as \"Sales:John Doe\" on the extensions that ring."
 #~ msgstr ""
-#~ "在为这个小组的分机响铃时，你可以为主叫ID名字添加可选的前缀。例如：如果你添"
-#~ "加了“销售：”前缀，从小王打来的电话在响铃的分机上会显示为：“销售：小王”。"
+#~ "在为这个小组的分机响铃时，你可以为主叫ID名字添加可选的前缀。例如：如果你添加了“销售：”前缀，从小王打来的电话在响铃的分机上会显示为：“销售：小王”。"
 
 #~ msgid "Invalid Caller ID prefix."
 #~ msgstr "无效的主叫ID前缀。"
