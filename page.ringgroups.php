@@ -43,5 +43,4 @@ switch($request['view']){
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="modules/ringgroups/assets/js/ringgroups.js"></script>
 
