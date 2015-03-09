@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2015-03-09 14:17-0400\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -17,48 +17,48 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: page.ringgroups.php:267
-msgid "(pick extension)"
-msgstr "(välj anknytning)"
-
-#: page.ringgroups.php:216
+#: views/form.php:55
 msgid "*-prim"
 msgstr "*-första"
 
-#: page.ringgroups.php:334
+#: views/form.php:430
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "Alertinfo kan användas för att sätta en speciell ringsignal på SIP telefoner"
 
-#: page.ringgroups.php:104 page.ringgroups.php:185 page.ringgroups.php:192
+#: views/rggrid.php:13
+msgid "Actions"
+msgstr ""
+
+#: views/bootnav.php:2
 msgid "Add Ring Group"
 msgstr "Lägg till ringgrupp"
 
-#: page.ringgroups.php:334
+#: views/form.php:418
 msgid "Alert Info"
 msgstr "Alertinfo"
 
-#: page.ringgroups.php:409
+#: views/form.php:233
 msgid "Always transmit the Fixed CID Value below."
 msgstr ""
 
-#: page.ringgroups.php:280 page.ringgroups.php:298
-msgid "Announcement:"
-msgstr "Påannonsering"
+#: views/form.php:88
+msgid "Announcement"
+msgstr ""
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr ""
 
-#: page.ringgroups.php:329
+#: views/form.php:394
 msgid "CID Name Prefix"
 msgstr "Prefix för nummerpresentation"
 
-#: page.ringgroups.php:436
+#: views/form.php:602
 msgid "Call Recording"
 msgstr ""
 
-#: page.ringgroups.php:403
+#: views/form.php:552
 msgid "Change External CID Configuration"
 msgstr ""
 
@@ -66,67 +66,48 @@ msgstr ""
 msgid "Checking if recordings need migration.."
 msgstr "Kontrollerar om inspelningar behöver migreras.."
 
-#: page.ringgroups.php:353
-msgid ""
-"Checking this will allow calls to the Ring Group to be picked up with the "
-"directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
-msgstr ""
-
-#: page.ringgroups.php:261
-msgid "Choose an extension to append to the end of the extension list above."
-msgstr ""
-"Välj en anknytning för att lägga till den i slutet på anknytningslista ovan."
-
-#: page.ringgroups.php:360
+#: views/form.php:523
 msgid "Confirm Calls"
 msgstr "Bekräfta samtal"
 
-#: page.ringgroups.php:181
-msgid "Conflicting Extensions"
-msgstr "Konfliktande anknytning"
-
-#: ringgroups.i18n.php:5
+#: ringgroups.i18n.php:8
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"all at once, or in various 'hunt' configurations. Additionally, external "
 "numbers are supported, and there is a call confirmation option where the "
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
 
-#: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
-#: page.ringgroups.php:420
+#: views/form.php:165 views/form.php:231 views/form.php:243
 msgid "Default"
 msgstr "Standard"
 
-#: page.ringgroups.php:151
-msgid "Delete Group"
-msgstr "Ta bort grupp"
+#: Ringgroups.class.php:120
+msgid "Delete"
+msgstr ""
 
-#: page.ringgroups.php:452
+#: views/rggrid.php:12
+msgid "Description"
+msgstr ""
+
+#: views/form.php:636
 msgid "Destination if no answer"
 msgstr "Destination vid inget svar"
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
-#: page.ringgroups.php:441
+#: views/form.php:609
 msgid "Dont Care"
 msgstr ""
 
-#: page.ringgroups.php:192
-msgid "Edit Ring Group"
-msgstr "Redigera ringgrupp"
-
-#: page.ringgroups.php:353
+#: views/form.php:496
 msgid "Enable Call Pickup"
 msgstr ""
 
-#: page.ringgroups.php:360
+#: views/form.php:538
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -138,34 +119,30 @@ msgstr ""
 "det att uppringaren trycker 1 för att samtalet ska kopplas upp. Denna "
 "funktion fungera endast med strategin ringalla."
 
-#: page.ringgroups.php:247
+#: views/form.php:359
 msgid "Extension List"
 msgstr "Anknytningslista"
 
-#: page.ringgroups.php:259
-msgid "Extension Quick Pick"
-msgstr "Snabbvalslista för anknytningar"
-
-#: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
+#: views/form.php:233 views/form.php:244 views/form.php:578
 msgid "Fixed CID Value"
 msgstr ""
 
-#: page.ringgroups.php:432
+#: views/form.php:590
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
-"leading \"+\"."
+"leading '+'."
 msgstr ""
 
-#: page.ringgroups.php:440
+#: views/form.php:607
 msgid "Force"
 msgstr ""
 
-#: page.ringgroups.php:412 page.ringgroups.php:424
+#: views/form.php:239 views/form.php:247
 msgid "Force Dialed Number"
 msgstr ""
 
-#: page.ringgroups.php:206
+#: views/form.php:285
 msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
@@ -173,7 +150,7 @@ msgstr "Beskrivning för gruppen"
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
-#: page.ringgroups.php:308
+#: views/form.php:222
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -181,19 +158,23 @@ msgstr ""
 "Om du valt Pausmusik i stället för 'Ring' kommer uppringaren att höra musik "
 "i stället för ringljud under tiden de väntar på att samtalet ska besvaras."
 
-#: page.ringgroups.php:339
+#: views/form.php:442
 msgid "Ignore CF Settings"
 msgstr "Ignorera Vidarebefordra samtal (CF)"
 
-#: page.ringgroups.php:499
+#: assets/js/ringgroups.js:52
 msgid "Invalid Group Number specified"
 msgstr "Ogiltigt gruppnummer angivet"
 
-#: page.ringgroups.php:501
+#: assets/js/ringgroups.js:54
 msgid "Invalid time specified"
 msgstr "Ogiltig tid angiven"
 
-#: page.ringgroups.php:247
+#: views/bootnav.php:1
+msgid "List Ring Groups"
+msgstr ""
+
+#: views/form.php:380
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -204,65 +185,50 @@ msgid ""
 "the end."
 msgstr ""
 
-#: page.ringgroups.php:219
+#: views/form.php:61
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
-#: page.ringgroups.php:280
+#: views/form.php:109
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
-"additional recordings please use the \"System Recordings\" MENU to the left"
+"additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
-"Meddelande som kommer att spelas för uppringaren innan det börjar ringa "
-"gruppanknytningar.<br><br>För att lägga till fler meddelanden använd "
-"\"Systeminspelningar\" i menyn till vänster."
 
-#: page.ringgroups.php:298
-msgid ""
-"Message to be played to the caller before dialing this group.<br><br>You "
-"must install and enable the \"Systems Recordings\" Module to edit this option"
-msgstr ""
-"Meddelande som kommer att spelas för uppringaren innan det börjar ringa "
-"gruppanknytningar.<br><br>Du måste ha installerat och aktiverat modulen "
-"\"Systeminspelningar\" för att redigera detta val."
-
-#: page.ringgroups.php:368
+#: views/form.php:144
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
-"MENU to the left"
+"MENU above"
 msgstr ""
-"Meddelande som kommer att spelas upp för den UPPRINGDA anknytningen om "
-"Bekräfta samtal är valt.<br><br>För att lägga till meddelanden använd "
-"\"Systeminspelningar\" "
 
-#: page.ringgroups.php:386
+#: views/form.php:179
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
-"recordings use the \"System Recordings\" MENU to the left"
+"recordings use the \"System Recordings\" MENU above"
 msgstr ""
-"Meddelande som kommer att spelas upp för den UPPRINGDA anknytningen om "
-"samtalet redan har besvarats av annan anknytning innan denna hunnit trycka 1."
-"<br><br>För att lägga till meddelanden använd \"Systeminspelningar\" i menyn "
-"till vänster"
 
-#: page.ringgroups.php:406
+#: views/form.php:229
 msgid "Mode"
 msgstr ""
 
-#: page.ringgroups.php:442
+#: views/form.php:611
 msgid "Never"
 msgstr ""
 
-#: page.ringgroups.php:286
+#: views/form.php:449 views/form.php:476 views/form.php:503 views/form.php:530
+msgid "No"
+msgstr ""
+
+#: views/form.php:95 views/form.php:130
 msgid "None"
 msgstr "Inga"
 
-#: page.ringgroups.php:504
+#: assets/js/ringgroups.js:57
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
@@ -270,39 +236,39 @@ msgstr ""
 "Endast ringalla, ringallav2, runda och respektive -prim stöds när "
 "bekräftelse krävs"
 
-#: page.ringgroups.php:410 page.ringgroups.php:422
+#: views/form.php:235 views/form.php:245
 msgid "Outside Calls Fixed CID Value"
 msgstr ""
 
-#: page.ringgroups.php:308
-msgid "Play Music On Hold?"
-msgstr "Spela Pausmusik"
+#: views/form.php:198
+msgid "Play Music On Hold"
+msgstr ""
 
-#: page.ringgroups.php:503
+#: assets/js/ringgroups.js:56
 msgid "Please enter a valid Group Description"
 msgstr "Skriv in en giltig gruppbeskrivning"
 
-#: page.ringgroups.php:500
+#: assets/js/ringgroups.js:53
 msgid "Please enter an extension list."
 msgstr "Skriv in en anknytningslista"
 
-#: page.ringgroups.php:206
+#: views/form.php:297
 msgid "Provide a descriptive title for this Ring Group."
 msgstr "Skriv in en kortfattat beskrivning för denna grupp"
 
-#: page.ringgroups.php:438
-msgid "Record Calls"
+#: views/form.php:123
+msgid "Remote Announce"
 msgstr ""
 
-#: page.ringgroups.php:368
-msgid "Remote Announce:"
-msgstr "Fjärrannonsering"
+#: Ringgroups.class.php:130
+msgid "Reset"
+msgstr ""
 
-#: page.ringgroups.php:314
+#: views/form.php:205
 msgid "Ring"
 msgstr "Ring"
 
-#: page.ringgroups.php:119 page.ringgroups.php:154
+#: views/rggrid.php:11
 msgid "Ring Group"
 msgstr "Ringgrupp"
 
@@ -315,7 +281,7 @@ msgstr "Ringgrupp %s: "
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr ""
 
@@ -329,23 +295,23 @@ msgstr "Ringgrupp: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Ringgrupper"
 
-#: page.ringgroups.php:211
-msgid "Ring Strategy:"
-msgstr "Ringstrategi"
+#: views/form.php:309
+msgid "Ring Strategy"
+msgstr ""
 
-#: page.ringgroups.php:237
+#: views/form.php:335
 msgid "Ring Time (max 300 sec)"
 msgstr ""
 
-#: page.ringgroups.php:213
+#: views/form.php:49
 msgid "Ring all available channels until one answers (default)"
 msgstr "Ring på alla anknytningar tills någon svarar (standard)"
 
-#: page.ringgroups.php:215
+#: views/form.php:53
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -353,32 +319,28 @@ msgstr ""
 "Ring första anknytningen i listan, ring sedan ettan och tvåan, ring sedan "
 "första, andra och tredje i listan..... etc"
 
-#: page.ringgroups.php:200
+#: views/form.php:261
 msgid "Ring-Group Number"
 msgstr "Ringgruppsnummer"
 
-#: page.ringgroups.php:346
+#: views/form.php:469
 msgid "Skip Busy Agent"
 msgstr "Ignorera upptagna telefoner"
 
-#: page.ringgroups.php:460
-msgid "Submit Changes"
-msgstr "Spara ändringar"
+#: Ringgroups.class.php:125
+msgid "Submit"
+msgstr ""
 
-#: page.ringgroups.php:214
+#: views/form.php:51
 msgid "Take turns ringing each available extension"
 msgstr "Ring runt på respektive anknytning"
 
-#: page.ringgroups.php:520
-msgid "The Group Description provided is too long."
-msgstr ""
-
-#: page.ringgroups.php:200
+#: views/form.php:273
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 "Detta nummer kommer användarna att ringa för att komma till denna ringgrupp"
 
-#: page.ringgroups.php:216
+#: views/form.php:55
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -395,30 +357,22 @@ msgstr ""
 msgid "This ringgroup"
 msgstr "Denna ringgrupp"
 
-#: page.ringgroups.php:239
-msgid ""
-"Time in seconds that the phones will ring. For all hunt style ring "
-"strategies, this is the time for each iteration of phone(s) that are rung"
-msgstr ""
-"Tid i sekunder som telefonen kommer att ringa. För alla rund-rings-"
-"strategier, detta är tiden för varje runda av telefoner som rings"
-
-#: page.ringgroups.php:502
+#: assets/js/ringgroups.js:55
 msgid "Time must be between 1 and 300 seconds"
 msgstr ""
 
-#: page.ringgroups.php:386
-msgid "Too-Late Announce:"
-msgstr "För-sent meddelande"
+#: views/form.php:158
+msgid "Too-Late Announce"
+msgstr ""
 
-#: page.ringgroups.php:410
+#: views/form.php:235
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
 
-#: page.ringgroups.php:412
+#: views/form.php:239
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -426,7 +380,7 @@ msgid ""
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
 
-#: page.ringgroups.php:411
+#: views/form.php:237
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -434,48 +388,57 @@ msgid ""
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
 
-#: page.ringgroups.php:408
+#: views/form.php:231
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 
-#: page.ringgroups.php:411 page.ringgroups.php:423
+#: views/form.php:237 views/form.php:246
 msgid "Use Dialed Number"
 msgstr ""
 
-#: page.ringgroups.php:64
+#: Ringgroups.class.php:75
 msgid "Warning! Extension"
 msgstr "Varning! Anknytning"
 
-#: page.ringgroups.php:346
+#: views/form.php:484
 msgid ""
-"When checked, agents who are on an occupied phone will be skipped as if the "
+"When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
 "will not be presented with the call and in the various hunt style ring "
 "strategies, the next agent will be attempted."
 msgstr ""
-"Om detta är valt kommer telefoner som är upptagna att hoppas över. Detta "
-"innebär att om Samtal väntar (CW) är satt eller om det är en multilinje-"
-"telefon kommer det inte att ringa i den telefonen, beroende på ringstrategi "
-"kommer nästa telefon att ringa"
 
-#: page.ringgroups.php:339
+#: views/form.php:511
 msgid ""
-"When checked, agents who attempt to Call Forward will be ignored, this "
+"When enabled, this will allow calls to the Ring Group to be picked up with "
+"the directed call pickup feature using the group number. When not checked, "
+"individual extensions that are part of the group can still be picked up by "
+"doing a directed call pickup to the ringing extension, which works whether "
+"or not this is checked."
+msgstr ""
+
+#: views/form.php:457
+msgid ""
+"When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
-"Om detta är valt kommer telefoner med Vidarebefordra samtal inte att skicka "
-"samtalet vidare, detta gäller för Vidarebefordra samtal (CF), Vidarebefordra "
-"alltid samtal (CFU) och Vidarebefordra samtal vid upptaget (CFB). "
-"Anknytningar med '#' i slutet behöver alltid inte följa detta"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:18
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
-#: page.ringgroups.php:438
+#: views/form.php:648
+msgid "Where to send callers if there is no answer."
+msgstr ""
+
+#: views/form.php:447 views/form.php:474 views/form.php:501 views/form.php:528
+msgid "Yes"
+msgstr ""
+
+#: views/form.php:619
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -484,7 +447,7 @@ msgid ""
 "setting."
 msgstr ""
 
-#: page.ringgroups.php:329
+#: views/form.php:406
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
@@ -523,13 +486,9 @@ msgstr "lägger till fältet toolate_id.."
 msgid "already migrated"
 msgstr "redan migrerad"
 
-#: page.ringgroups.php:318
+#: views/form.php:209
 msgid "default"
 msgstr "standard"
-
-#: page.ringgroups.php:119
-msgid "deleted"
-msgstr "borttagen"
 
 #: install.php:294
 msgid "dropping annmsg field.."
@@ -549,27 +508,33 @@ msgstr "kastar toolate fältet"
 msgid "fatal error"
 msgstr "kritiskt fel"
 
-#: page.ringgroups.php:217
+#: views/form.php:57
 msgid "firstavailable"
 msgstr "först-tillgänglig"
 
-#: page.ringgroups.php:218
+#: views/form.php:59
 msgid "firstnotonphone"
 msgstr "första-inte-upptagen"
 
-#: page.ringgroups.php:214
+#: views/form.php:51
 msgid "hunt"
 msgstr "runda"
+
+#: views/form.php:347
+msgid ""
+"ime in seconds that the phones will ring. For all hunt style ring "
+"strategies, this is the time for each iteration of phone(s) that are rung"
+msgstr ""
 
 #: functions.inc.php:262
 msgid "is already in use"
 msgstr "används redan"
 
-#: page.ringgroups.php:64
+#: Ringgroups.class.php:75
 msgid "is not allowed for your account"
 msgstr "är inte tillåtet för ditt konto"
 
-#: page.ringgroups.php:215
+#: views/form.php:53
 msgid "memoryhunt"
 msgstr "minnesrunda"
 
@@ -606,7 +571,7 @@ msgstr "inget remotealert fält???"
 msgid "no toolate field???"
 msgstr "inget toolate fät???"
 
-#: page.ringgroups.php:317
+#: views/form.php:208
 msgid "none"
 msgstr "ingen"
 
@@ -615,23 +580,131 @@ msgstr "ingen"
 msgid "ok"
 msgstr "ok"
 
-#: page.ringgroups.php:219
+#: views/form.php:61
 msgid "random"
 msgstr ""
 
-#: page.ringgroups.php:217
+#: views/form.php:57
 msgid "ring only the first available channel"
 msgstr "ring bara den första tillgängliga kanalen"
 
-#: page.ringgroups.php:218
+#: views/form.php:59
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 "ring endast den första kanalen som inte är upptagen - strunta i Samtal "
 "Väntar (CF)"
 
-#: page.ringgroups.php:213
+#: views/form.php:49
 msgid "ringall"
 msgstr "ringalla"
+
+#~ msgid "(pick extension)"
+#~ msgstr "(välj anknytning)"
+
+#~ msgid "Announcement:"
+#~ msgstr "Påannonsering"
+
+#~ msgid ""
+#~ "Choose an extension to append to the end of the extension list above."
+#~ msgstr ""
+#~ "Välj en anknytning för att lägga till den i slutet på anknytningslista "
+#~ "ovan."
+
+#~ msgid "Conflicting Extensions"
+#~ msgstr "Konfliktande anknytning"
+
+#~ msgid "Delete Group"
+#~ msgstr "Ta bort grupp"
+
+#~ msgid "Edit Ring Group"
+#~ msgstr "Redigera ringgrupp"
+
+#~ msgid "Extension Quick Pick"
+#~ msgstr "Snabbvalslista för anknytningar"
+
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>To "
+#~ "add additional recordings please use the \"System Recordings\" MENU to "
+#~ "the left"
+#~ msgstr ""
+#~ "Meddelande som kommer att spelas för uppringaren innan det börjar ringa "
+#~ "gruppanknytningar.<br><br>För att lägga till fler meddelanden använd "
+#~ "\"Systeminspelningar\" i menyn till vänster."
+
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>You "
+#~ "must install and enable the \"Systems Recordings\" Module to edit this "
+#~ "option"
+#~ msgstr ""
+#~ "Meddelande som kommer att spelas för uppringaren innan det börjar ringa "
+#~ "gruppanknytningar.<br><br>Du måste ha installerat och aktiverat modulen "
+#~ "\"Systeminspelningar\" för att redigera detta val."
+
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if 'Confirm Calls' "
+#~ "is enabled.<br><br>To add additional recordings use the \"System "
+#~ "Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "Meddelande som kommer att spelas upp för den UPPRINGDA anknytningen om "
+#~ "Bekräfta samtal är valt.<br><br>För att lägga till meddelanden använd "
+#~ "\"Systeminspelningar\" "
+
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if the call has "
+#~ "already been accepted before they push 1.<br><br>To add additional "
+#~ "recordings use the \"System Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "Meddelande som kommer att spelas upp för den UPPRINGDA anknytningen om "
+#~ "samtalet redan har besvarats av annan anknytning innan denna hunnit "
+#~ "trycka 1.<br><br>För att lägga till meddelanden använd "
+#~ "\"Systeminspelningar\" i menyn till vänster"
+
+#~ msgid "Play Music On Hold?"
+#~ msgstr "Spela Pausmusik"
+
+#~ msgid "Remote Announce:"
+#~ msgstr "Fjärrannonsering"
+
+#~ msgid "Ring Strategy:"
+#~ msgstr "Ringstrategi"
+
+#~ msgid "Submit Changes"
+#~ msgstr "Spara ändringar"
+
+#~ msgid ""
+#~ "Time in seconds that the phones will ring. For all hunt style ring "
+#~ "strategies, this is the time for each iteration of phone(s) that are rung"
+#~ msgstr ""
+#~ "Tid i sekunder som telefonen kommer att ringa. För alla rund-rings-"
+#~ "strategier, detta är tiden för varje runda av telefoner som rings"
+
+#~ msgid "Too-Late Announce:"
+#~ msgstr "För-sent meddelande"
+
+#~ msgid ""
+#~ "When checked, agents who are on an occupied phone will be skipped as if "
+#~ "the line were returning busy. This means that Call Waiting or multi-line "
+#~ "phones will not be presented with the call and in the various hunt style "
+#~ "ring strategies, the next agent will be attempted."
+#~ msgstr ""
+#~ "Om detta är valt kommer telefoner som är upptagna att hoppas över. Detta "
+#~ "innebär att om Samtal väntar (CW) är satt eller om det är en multilinje-"
+#~ "telefon kommer det inte att ringa i den telefonen, beroende på "
+#~ "ringstrategi kommer nästa telefon att ringa"
+
+#~ msgid ""
+#~ "When checked, agents who attempt to Call Forward will be ignored, this "
+#~ "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+#~ "example to access the extension's Follow-Me, might not honor this "
+#~ "setting ."
+#~ msgstr ""
+#~ "Om detta är valt kommer telefoner med Vidarebefordra samtal inte att "
+#~ "skicka samtalet vidare, detta gäller för Vidarebefordra samtal (CF), "
+#~ "Vidarebefordra alltid samtal (CFU) och Vidarebefordra samtal vid upptaget "
+#~ "(CFB). Anknytningar med '#' i slutet behöver alltid inte följa detta"
+
+#~ msgid "deleted"
+#~ msgstr "borttagen"
 
 #~ msgid "Ring Time (max 60 sec)"
 #~ msgstr "Ringtid (max 60 sek)"
