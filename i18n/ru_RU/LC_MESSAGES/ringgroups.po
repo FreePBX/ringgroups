@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:09-0500\n"
+"POT-Creation-Date: 2015-02-20 19:59-0500\n"
 "PO-Revision-Date: 2014-02-28 04:52+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://example.com/projects/freepbx-211/ringgroups/"
@@ -20,57 +20,58 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 1.9-dev\n"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:267
+#: page.ringgroups.php:267
 msgid "(pick extension)"
 msgstr "(выбрать внутренний номер)"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:216
+#: page.ringgroups.php:216
 msgid "*-prim"
 msgstr "*-прим"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:334
+#: page.ringgroups.php:334
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "Дополнительная информация ALERT_INFO может быть использования для "
 "распознавания адресата чтобы присвоить различный тип звонков на SIP "
 "устройствах."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:104
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:185
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:192
+#: page.ringgroups.php:104 page.ringgroups.php:185 page.ringgroups.php:192
 msgid "Add Ring Group"
 msgstr "Добавить группу вызова"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:334
+#: page.ringgroups.php:334
 msgid "Alert Info"
 msgstr "Дополнительная информация"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:409
+#: page.ringgroups.php:409
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Всегда передавать фиксированное значение Caller ID указанное ниже"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:280
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:298
+#: page.ringgroups.php:280 page.ringgroups.php:298
 msgid "Announcement:"
 msgstr "Приветствие:"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:329
+#: ringgroups.i18n.php:4
+msgid "Applications"
+msgstr "Приложения"
+
+#: page.ringgroups.php:329
 msgid "CID Name Prefix"
 msgstr "Префикс ИД имени"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:436
+#: page.ringgroups.php:436
 msgid "Call Recording"
 msgstr "Запись соединений"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:403
+#: page.ringgroups.php:403
 msgid "Change External CID Configuration"
 msgstr "Изменить кофигурацию Caller ID для внешних вызовов"
 
-#: /usr/src/freepbx/ringgroups/install.php:177
+#: install.php:177
 msgid "Checking if recordings need migration.."
 msgstr "Проверка нуждаются ли записи в перемещении.."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:353
+#: page.ringgroups.php:353
 msgid ""
 "Checking this will allow calls to the Ring Group to be picked up with the "
 "directed call pickup feature using the group number. When not checked, "
@@ -83,42 +84,57 @@ msgstr ""
 "группы, могут перехватывать вызовы, используя сервисный код прямого "
 "перехвата, который будет работать вне зависимости отмечено здесь или нет."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:261
+#: page.ringgroups.php:261
 msgid "Choose an extension to append to the end of the extension list above."
 msgstr "Выберите внутренний номер для добавления в список."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:360
+#: page.ringgroups.php:360
 msgid "Confirm Calls"
 msgstr "Подтверждение звонков"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:181
+#: page.ringgroups.php:181
 msgid "Conflicting Extensions"
 msgstr "Конфликт внутренних номеров"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:374
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:392
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:408
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:420
+#: ringgroups.i18n.php:5
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
+#: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
+#: page.ringgroups.php:420
 msgid "Default"
 msgstr "По умолчанию"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:151
+#: page.ringgroups.php:151
 msgid "Delete Group"
 msgstr "Удалить группу"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:452
+#: page.ringgroups.php:452
 msgid "Destination if no answer"
 msgstr "Назначение, если никто не ответил"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:192
+#: ringgroups.i18n.php:8
+msgid "Display Extension Ring Group Members"
+msgstr "Отображает внутренние номера членов ринг-группы"
+
+#: page.ringgroups.php:441
+msgid "Dont Care"
+msgstr ""
+
+#: page.ringgroups.php:192
 msgid "Edit Ring Group"
 msgstr "Редактировать группу вызова"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:353
+#: page.ringgroups.php:353
 msgid "Enable Call Pickup"
 msgstr "Задействовать перехват звонка"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:360
+#: page.ringgroups.php:360
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -130,21 +146,19 @@ msgstr ""
 "которая перехватит этот вызов. Нажатием на 1 можно заблокировать такие "
 "действия. Опция действительна только при стратегии вызова звонят-все."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:247
+#: page.ringgroups.php:247
 msgid "Extension List"
 msgstr "Лист внутренних номеров"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:259
+#: page.ringgroups.php:259
 msgid "Extension Quick Pick"
 msgstr "Выбрать номера"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:409
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:421
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:432
+#: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
 msgid "Fixed CID Value"
 msgstr "Фиксированное значение Caller ID"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:432
+#: page.ringgroups.php:432
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -154,20 +168,23 @@ msgstr ""
 "режимов выше. Должен быть только в цифровом формате, или опционально - в "
 "формате Е164 с использованием \"+\" впереди номера."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:412
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:424
+#: page.ringgroups.php:440
+msgid "Force"
+msgstr ""
+
+#: page.ringgroups.php:412 page.ringgroups.php:424
 msgid "Force Dialed Number"
 msgstr "Форсировать набранный номер"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:206
+#: page.ringgroups.php:206
 msgid "Group Description"
 msgstr "Описание группы"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:330
+#: functions.inc.php:330
 msgid "INUSE"
 msgstr "ИСПОЛБЗУЕТСЯ"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:308
+#: page.ringgroups.php:308
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -175,19 +192,19 @@ msgstr ""
 "Если выбран класс Музыки в ожидании вместо простого сигнала вызова, то "
 "позвонивший будет слушать музыку, пока кто-то не поднимет трубку."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:339
+#: page.ringgroups.php:339
 msgid "Ignore CF Settings"
 msgstr "Игнорировать установки форварда звонков (CF)"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:499
+#: page.ringgroups.php:499
 msgid "Invalid Group Number specified"
 msgstr "Указан неверный номер группы"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:501
+#: page.ringgroups.php:501
 msgid "Invalid time specified"
 msgstr "Указано неверное время"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:247
+#: page.ringgroups.php:247
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -198,14 +215,14 @@ msgid ""
 "the end."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:219
+#: page.ringgroups.php:219
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:280
+#: page.ringgroups.php:280
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU to the left"
@@ -214,7 +231,7 @@ msgstr ""
 "чем пойдет звонок в эту группу.<br><br>Для создания такого приветствия "
 "используйте раздел меню Запись сообщений."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:298
+#: page.ringgroups.php:298
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>You "
 "must install and enable the \"Systems Recordings\" Module to edit this option"
@@ -222,7 +239,7 @@ msgstr ""
 "Должен быть инсталлирован и задействован модуль 'Запись сообщений' для "
 "редакции этой опции."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:368
+#: page.ringgroups.php:368
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -232,7 +249,7 @@ msgstr ""
 "Подтверждение звонков.<br><br>Для создания такого приветствия используйте "
 "раздел меню Запись сообщений."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:386
+#: page.ringgroups.php:386
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -242,23 +259,19 @@ msgstr ""
 "прежде чем он успел нажать 1.<br><br>Для создания такого сообщения "
 "используйте раздел меню Запись сообщений."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:406
+#: page.ringgroups.php:406
 msgid "Mode"
 msgstr "Режим"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:442
-msgid "No"
-msgstr ""
+#: page.ringgroups.php:442
+msgid "Never"
+msgstr "Никогда"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:286
+#: page.ringgroups.php:286
 msgid "None"
 msgstr "Нет"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:441
-msgid "On Demand"
-msgstr "По запросу"
-
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:504
+#: page.ringgroups.php:504
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
@@ -266,77 +279,82 @@ msgstr ""
 "Если отмечено, поддерживаются только сценарии звонят-все, звонят-все-v2, "
 "серийное искание и соответствующие им -прим варианты"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:410
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:422
+#: page.ringgroups.php:410 page.ringgroups.php:422
 msgid "Outside Calls Fixed CID Value"
 msgstr "Фиксированное значение Caller ID для внешних вызовов"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:308
+#: page.ringgroups.php:308
 msgid "Play Music On Hold?"
 msgstr "Использовать Музыку в ожидании?"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:503
+#: page.ringgroups.php:503
 msgid "Please enter a valid Group Description"
 msgstr "Укажите разрешённое названание группы"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:500
+#: page.ringgroups.php:500
 msgid "Please enter an extension list."
 msgstr "Укажите список внутренних номеров"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:206
+#: page.ringgroups.php:206
 msgid "Provide a descriptive title for this Ring Group."
 msgstr "Предложите понятное название для этой группы вызова"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:438
+#: page.ringgroups.php:438
 msgid "Record Calls"
 msgstr "Записывать соединения"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:368
+#: page.ringgroups.php:368
 msgid "Remote Announce:"
 msgstr "Удалённое приветствие: "
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:314
+#: page.ringgroups.php:314
 msgid "Ring"
 msgstr "Звонок"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:119
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:154
+#: page.ringgroups.php:119 page.ringgroups.php:154
 msgid "Ring Group"
 msgstr "Группа вызова"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:37
+#: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
 msgstr "Группа вызова %s: "
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:453
+#: functions.inc.php:453
 msgid "Ring Group Membership"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:57
-#: /usr/src/freepbx/ringgroups/functions.inc.php:329
+#: ringgroups.i18n.php:10
+msgid "Ring Group Module"
+msgstr ""
+
+#: functions.inc.php:57 functions.inc.php:329
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Группа вызова %s"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:356
+#: functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Группа вызова: %s (%s)"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:211
+#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+msgid "Ring Groups"
+msgstr "Группы вызова"
+
+#: page.ringgroups.php:211
 msgid "Ring Strategy:"
 msgstr "Стратегия дозвона:"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:237
+#: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:213
+#: page.ringgroups.php:213
 msgid "Ring all available channels until one answers (default)"
 msgstr "Звонят все каналы, пока один кто либо не ответит (по умолчанию)"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:215
+#: page.ringgroups.php:215
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -344,32 +362,32 @@ msgstr ""
 "Звонит первый внутренний номер в списке, затем первый и второй, затем "
 "первый, второй и третий в списке, и так далее."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:200
+#: page.ringgroups.php:200
 msgid "Ring-Group Number"
 msgstr "Номер группы вызова"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:346
+#: page.ringgroups.php:346
 msgid "Skip Busy Agent"
 msgstr "Пропускать занятого оператора"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:460
+#: page.ringgroups.php:460
 msgid "Submit Changes"
 msgstr "Применить изменения"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:214
+#: page.ringgroups.php:214
 msgid "Take turns ringing each available extension"
 msgstr "Звонок поступает на любой доступный внутренний номер"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:520
+#: page.ringgroups.php:520
 msgid "The Group Description provided is too long."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:200
+#: page.ringgroups.php:200
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 "Этот номер используется для того, чтобы можно было позвонить в э ту группу"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:216
+#: page.ringgroups.php:216
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -383,11 +401,11 @@ msgstr ""
 "заканчивается. Если CF (перенаправление) не перенаправит, то поиск в группе "
 "продолжится."
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:262
+#: functions.inc.php:262
 msgid "This ringgroup"
 msgstr "Эта группа вызова"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:239
+#: page.ringgroups.php:239
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
@@ -396,15 +414,15 @@ msgstr ""
 "серийного искания в стратегиях звонков, это время звонка для каждого шага "
 "стратегий звонков."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:502
+#: page.ringgroups.php:502
 msgid "Time must be between 1 and 300 seconds"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:386
+#: page.ringgroups.php:386
 msgid "Too-Late Announce:"
 msgstr "Сообщение Уже-поздно:"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:410
+#: page.ringgroups.php:410
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -414,7 +432,7 @@ msgstr ""
 "исходящих внешних звонков. Внутренние соединения не будут использовать этот "
 "Caller ID."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:412
+#: page.ringgroups.php:412
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -427,7 +445,7 @@ msgstr ""
 "DID. Он будет передаваться через транк, где провайдеры блокируют чужие "
 "Caller ID."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:411
+#: page.ringgroups.php:411
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -439,20 +457,19 @@ msgstr ""
 "Для этого предполагается входящий маршрут по DID. Он будет блокироваться на "
 "транке, где провайдеры блокируют чужие Caller ID."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:408
+#: page.ringgroups.php:408
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Передавать Callers ID если транк это разрешает"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:411
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:423
+#: page.ringgroups.php:411 page.ringgroups.php:423
 msgid "Use Dialed Number"
 msgstr "Использовать набранный номер"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:64
+#: page.ringgroups.php:64
 msgid "Warning! Extension"
 msgstr "Внимание! Внутренний номер"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:346
+#: page.ringgroups.php:346
 msgid ""
 "When checked, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -465,7 +482,7 @@ msgstr ""
 "отрабатывают в различных стратегиях звонков с серийным исканием, таким "
 "образом звонок перейдёт следующему члену группы дозвона."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:339
+#: page.ringgroups.php:339
 msgid ""
 "When checked, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -476,19 +493,25 @@ msgstr ""
 "набранный с '#' на конце, например для доступа к опции Следуйте сюда, может "
 "быть не сработать."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:440
-msgid "Yes"
-msgstr ""
-
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:438
+#: ringgroups.i18n.php:12
 msgid ""
-"You can always record calls that come into this ring group, never record "
-"them, or allow the extension that answers to do on-demand recording. If "
-"recording is denied then one-touch on demand recording will be blocked, "
-"unless they have the \"Override\" call recording setting."
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Если установлено в True, внутренние номера, которые принадлежат к одной или "
+"более ринг-группе будут отображаться как в секции Ринг-группы, так и в "
+"каждой ринг-группе, членами которой они являются."
+
+#: page.ringgroups.php:438
+msgid ""
+"You can always record calls that come into this ring group (Force), never "
+"record them (Never), or allow the extension that answers to do on-demand "
+"recording (Dont Care). If recording is denied then one-touch on demand "
+"recording will be blocked, unless they have the \"Override\" call recording "
+"setting."
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:329
+#: page.ringgroups.php:329
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
@@ -499,157 +522,162 @@ msgstr ""
 "группы, можно видеть, если звонит John Doe, то мы увидим на дисплее Sales:"
 "John Doe."
 
-#: /usr/src/freepbx/ringgroups/install.php:152
+#: install.php:152
 msgid "added field cfignore to ringgroups table"
 msgstr "добавлено поле cfignore в таблицу ringgroups"
 
-#: /usr/src/freepbx/ringgroups/install.php:162
+#: install.php:162
 msgid "added field cpickup to ringgroups table"
 msgstr "добавлено поле cpickup в таблицу ringgroups"
 
-#: /usr/src/freepbx/ringgroups/install.php:142
+#: install.php:142
 msgid "added field cwignore to ringgroups table"
 msgstr "добавлено поле cwignore в таблицу ringgroups"
 
-#: /usr/src/freepbx/ringgroups/install.php:172
+#: install.php:172
 msgid "added field recording to ringgroups table"
 msgstr "добавлено поле recordings в таблицу ringgroups"
 
-#: /usr/src/freepbx/ringgroups/install.php:184
+#: install.php:184
 msgid "adding annmsg_id field.."
 msgstr "добавляется поле annmsg_id.."
 
-#: /usr/src/freepbx/ringgroups/install.php:193
+#: install.php:193
 msgid "adding remotealert_id field.."
 msgstr "добавляется поле remotealert_id.."
 
-#: /usr/src/freepbx/ringgroups/install.php:202
+#: install.php:202
 msgid "adding toolate_id field.."
 msgstr "добавляется поле toolate_id.."
 
-#: /usr/src/freepbx/ringgroups/install.php:320
+#: install.php:320
 msgid "already migrated"
 msgstr "уже перенесено"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:318
+#: page.ringgroups.php:318
 msgid "default"
 msgstr "По умолчанию"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:119
+#: page.ringgroups.php:119
 msgid "deleted"
 msgstr "удалено"
 
-#: /usr/src/freepbx/ringgroups/install.php:294
+#: install.php:294
 msgid "dropping annmsg field.."
 msgstr "сброс значений поля annmsg.."
 
-#: /usr/src/freepbx/ringgroups/install.php:302
+#: install.php:302
 msgid "dropping remotealert field.."
 msgstr "сброс поля remotealert.."
 
-#: /usr/src/freepbx/ringgroups/install.php:310
+#: install.php:310
 msgid "dropping toolate field.."
 msgstr "сброс поля toolate.."
 
-#: /usr/src/freepbx/ringgroups/install.php:188
-#: /usr/src/freepbx/ringgroups/install.php:197
-#: /usr/src/freepbx/ringgroups/install.php:206
-#: /usr/src/freepbx/ringgroups/install.php:218
-#: /usr/src/freepbx/ringgroups/install.php:234
-#: /usr/src/freepbx/ringgroups/install.php:244
-#: /usr/src/freepbx/ringgroups/install.php:260
-#: /usr/src/freepbx/ringgroups/install.php:270
-#: /usr/src/freepbx/ringgroups/install.php:286
+#: install.php:188 install.php:197 install.php:206 install.php:218
+#: install.php:234 install.php:244 install.php:260 install.php:270
+#: install.php:286
 msgid "fatal error"
 msgstr "неустранимая ошибка"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:217
+#: page.ringgroups.php:217
 msgid "firstavailable"
 msgstr "первый-доступный"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:218
+#: page.ringgroups.php:218
 msgid "firstnotonphone"
 msgstr "первый-на-телефоне"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:214
+#: page.ringgroups.php:214
 msgid "hunt"
 msgstr "серийное-искание"
 
-#: /usr/src/freepbx/ringgroups/functions.inc.php:262
+#: functions.inc.php:262
 msgid "is already in use"
 msgstr "уже используется"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:64
+#: page.ringgroups.php:64
 msgid "is not allowed for your account"
 msgstr "отказан в вашем доступе"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:215
+#: page.ringgroups.php:215
 msgid "memoryhunt"
 msgstr "прогресс-серийное-искание"
 
-#: /usr/src/freepbx/ringgroups/install.php:214
+#: install.php:214
 msgid "migrate annmsg to ids.."
 msgstr "перенос annmsg в ИД.."
 
-#: /usr/src/freepbx/ringgroups/install.php:240
+#: install.php:240
 msgid "migrate remotealert to  ids.."
 msgstr "перенос remotealert в ИД.."
 
-#: /usr/src/freepbx/ringgroups/install.php:266
+#: install.php:266
 msgid "migrate toolate to ids.."
 msgstr "перенос toolate в ИД.."
 
-#: /usr/src/freepbx/ringgroups/install.php:238
-#: /usr/src/freepbx/ringgroups/install.php:264
-#: /usr/src/freepbx/ringgroups/install.php:290
+#: install.php:238 install.php:264 install.php:290
 #, php-format
 msgid "migrated %s entries"
 msgstr "перемещено %s записей"
 
-#: /usr/src/freepbx/ringgroups/install.php:183
+#: install.php:183
 msgid "migrating"
 msgstr "перемещение"
 
-#: /usr/src/freepbx/ringgroups/install.php:298
+#: install.php:298
 msgid "no annmsg field???"
 msgstr "нет поля annmsg???"
 
-#: /usr/src/freepbx/ringgroups/install.php:306
+#: install.php:306
 msgid "no remotealert field???"
 msgstr "нет поля remotealert???"
 
-#: /usr/src/freepbx/ringgroups/install.php:314
+#: install.php:314
 msgid "no toolate field???"
 msgstr "нет поля toolate???"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:317
+#: page.ringgroups.php:317
 msgid "none"
 msgstr "Нет"
 
-#: /usr/src/freepbx/ringgroups/install.php:191
-#: /usr/src/freepbx/ringgroups/install.php:200
-#: /usr/src/freepbx/ringgroups/install.php:209
-#: /usr/src/freepbx/ringgroups/install.php:300
-#: /usr/src/freepbx/ringgroups/install.php:308
-#: /usr/src/freepbx/ringgroups/install.php:316
+#: install.php:191 install.php:200 install.php:209 install.php:300
+#: install.php:308 install.php:316
 msgid "ok"
 msgstr "ok"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:219
+#: page.ringgroups.php:219
 msgid "random"
 msgstr ""
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:217
+#: page.ringgroups.php:217
 msgid "ring only the first available channel"
 msgstr "звонит первый доступный канал"
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:218
+#: page.ringgroups.php:218
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "звонит первый телефон, у которого не снята трубка."
 
-#: /usr/src/freepbx/ringgroups/page.ringgroups.php:213
+#: page.ringgroups.php:213
 msgid "ringall"
 msgstr "звонят-все"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Создаёт группу внутренних номеров, которые будут звонить одновременно. "
+#~ "Сценарии групповых вызовов различны: все вместе, или различные варианты "
+#~ "серийных исканий. Дополнительно в группе могут быть так же использованы "
+#~ "внешние номера, и здесь можно указать опцию подтверждения для внешнего "
+#~ "номера. Которая даёт возможность подтвердить желание принять звонок "
+#~ "прежде, чем звонок будет туда перенаправлен."
+
+#~ msgid "On Demand"
+#~ msgstr "По запросу"
 
 #~ msgid ""
 #~ "List extensions to ring, one per line, or use the Extension Quick Pick "
@@ -682,41 +710,6 @@ msgstr "звонят-все"
 
 #~ msgid "Always"
 #~ msgstr "Всегда"
-
-#~ msgid "Never"
-#~ msgstr "Никогда"
-
-#~ msgid "Ring Groups"
-#~ msgstr "Группы вызова"
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Создаёт группу внутренних номеров, которые будут звонить одновременно. "
-#~ "Сценарии групповых вызовов различны: все вместе, или различные варианты "
-#~ "серийных исканий. Дополнительно в группе могут быть так же использованы "
-#~ "внешние номера, и здесь можно указать опцию подтверждения для внешнего "
-#~ "номера. Которая даёт возможность подтвердить желание принять звонок "
-#~ "прежде, чем звонок будет туда перенаправлен."
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "Отображает внутренние номера членов ринг-группы"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Если установлено в True, внутренние номера, которые принадлежат к одной "
-#~ "или более ринг-группе будут отображаться как в секции Ринг-группы, так и "
-#~ "в каждой ринг-группе, членами которой они являются."
 
 #~ msgid "Inbound Call Control"
 #~ msgstr "Контроль входящих вызовов"
