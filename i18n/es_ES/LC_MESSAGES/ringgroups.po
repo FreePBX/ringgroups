@@ -23,11 +23,13 @@ msgstr "(Seleccione una extensión)"
 
 #: page.ringgroups.php:216
 msgid "*-prim"
-msgstr ""
+msgstr "*-primaria"
 
 #: page.ringgroups.php:334
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
+"ALERT_INFO (Información de Alerta), puede ser utilizado como timbre "
+"distintivo en dispositivos SIP."
 
 #: page.ringgroups.php:104 page.ringgroups.php:185 page.ringgroups.php:192
 msgid "Add Ring Group"
@@ -39,7 +41,7 @@ msgstr "Información de alerta"
 
 #: page.ringgroups.php:409
 msgid "Always transmit the Fixed CID Value below."
-msgstr ""
+msgstr "Siempre transmite el Valor Fijo CID de abajo."
 
 #: page.ringgroups.php:280 page.ringgroups.php:298
 msgid "Announcement:"
@@ -47,19 +49,19 @@ msgstr "Anuncio:"
 
 #: ringgroups.i18n.php:4
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: page.ringgroups.php:329
 msgid "CID Name Prefix"
-msgstr ""
+msgstr "Nombre Prefijo CID"
 
 #: page.ringgroups.php:436
 msgid "Call Recording"
-msgstr ""
+msgstr "Grabación Llamadas"
 
 #: page.ringgroups.php:403
 msgid "Change External CID Configuration"
-msgstr ""
+msgstr "Configuración Cambio CID Externo"
 
 #: install.php:177
 msgid "Checking if recordings need migration.."
@@ -73,6 +75,11 @@ msgid ""
 "doing a directed call pickup to the ringing extension, which works whether "
 "or not this is checked."
 msgstr ""
+"Al marcar esto permitirá que las llamadas al Grupo de Extensiones puedan ser "
+"capturadas con la función de captura de llamadas directamente usando el "
+"número del grupo. Si no está seleccionada, las extensiones individuales que "
+"forman parte del grupo todavía pueden capturar llamadas dirigidas al timbre "
+"de extensión, que funciona independientemente de si es o no seleccionada."
 
 #: page.ringgroups.php:261
 msgid "Choose an extension to append to the end of the extension list above."
@@ -124,7 +131,7 @@ msgstr "Editar grupo de extensiones"
 
 #: page.ringgroups.php:353
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "Habilitar Capturar Llamada"
 
 #: page.ringgroups.php:360
 msgid ""
@@ -149,7 +156,7 @@ msgstr "Selector rápido de extensiones"
 
 #: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
 msgid "Fixed CID Value"
-msgstr ""
+msgstr "Valor Fijo CID"
 
 #: page.ringgroups.php:432
 msgid ""
@@ -157,6 +164,9 @@ msgid ""
 "Should be in a format of digits only with an option of E164 format using a "
 "leading \"+\"."
 msgstr ""
+"Valor Fijo para reemplazar el CID utilizando algunos de los modos "
+"mencionados anteriormente. Debe estar en un formato de sólo dígitos con una "
+"opción de formato E164 utilizando \"+\"."
 
 #: page.ringgroups.php:440
 msgid "Force"
@@ -164,7 +174,7 @@ msgstr ""
 
 #: page.ringgroups.php:412 page.ringgroups.php:424
 msgid "Force Dialed Number"
-msgstr ""
+msgstr "Forzar Número Marcado"
 
 #: page.ringgroups.php:206
 msgid "Group Description"
@@ -185,7 +195,7 @@ msgstr ""
 
 #: page.ringgroups.php:339
 msgid "Ignore CF Settings"
-msgstr ""
+msgstr "Ignorar Configuraciones CF"
 
 #: page.ringgroups.php:499
 msgid "Invalid Group Number specified"
@@ -254,11 +264,11 @@ msgstr ""
 
 #: page.ringgroups.php:406
 msgid "Mode"
-msgstr ""
+msgstr "Modo"
 
 #: page.ringgroups.php:442
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: page.ringgroups.php:286
 msgid "None"
@@ -269,10 +279,12 @@ msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
+"Sólo sonar todos, sonar todos-v2, lineal y las respectivas versiones -"
+"primarias son compatibles cuando confirmación es marcada"
 
 #: page.ringgroups.php:410 page.ringgroups.php:422
 msgid "Outside Calls Fixed CID Value"
-msgstr ""
+msgstr "Valor Fijo CID Llamadas Salientes"
 
 #: page.ringgroups.php:308
 msgid "Play Music On Hold?"
@@ -293,7 +305,7 @@ msgstr "Indique una descripción para este grupo de extensiones."
 
 #: page.ringgroups.php:438
 msgid "Record Calls"
-msgstr ""
+msgstr "Grabar Llamadas"
 
 #: page.ringgroups.php:368
 msgid "Remote Announce:"
@@ -314,7 +326,7 @@ msgstr "Grupo de extensiones %s:"
 
 #: functions.inc.php:453
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "Miembro del Grupo Extensiones"
 
 #: ringgroups.i18n.php:10
 msgid "Ring Group Module"
@@ -336,7 +348,7 @@ msgstr "Grupos de extensiones"
 
 #: page.ringgroups.php:211
 msgid "Ring Strategy:"
-msgstr ""
+msgstr "Estrategia a Sonar:"
 
 #: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
@@ -370,7 +382,7 @@ msgstr "Enviar cambios"
 
 #: page.ringgroups.php:214
 msgid "Take turns ringing each available extension"
-msgstr ""
+msgstr "Por turnos, sonando cada extensión disponible"
 
 #: page.ringgroups.php:520
 msgid "The Group Description provided is too long."
@@ -412,7 +424,7 @@ msgstr ""
 
 #: page.ringgroups.php:386
 msgid "Too-Late Announce:"
-msgstr ""
+msgstr "Anuncio Retardado"
 
 #: page.ringgroups.php:410
 msgid ""
@@ -420,6 +432,9 @@ msgid ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
+"Transmitir el Valor Fijo CID de abajo en las llamadas que vienen de afuera "
+"solamente. Las llamadas entre extensiones internas seguirán funcionando en "
+"el modo por defecto."
 
 #: page.ringgroups.php:412
 msgid ""
@@ -428,6 +443,10 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
+"Transmitir el número que se marcó como el CID para las llamadas procedentes "
+"del exterior. Las llamadas entre extensiones internas seguirán funcionando "
+"en el modo predeterminado. Debe haber un DID en la Ruta Entrante para esto. "
+"Este será transmitido en las líneas que bloquean CallerID no reconocidos"
 
 #: page.ringgroups.php:411
 msgid ""
@@ -436,14 +455,18 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
+"Transmitir el número que se marcó como el CID para las llamadas procedentes "
+"del exterior. Las llamadas entre extensiones internas seguirán funcionando "
+"en el modo predeterminado. Debe haber un DID en la Ruta Entrante para esto. "
+"Este será bloqueado en las líneas que bloquean el CallerID no reconocidos"
 
 #: page.ringgroups.php:408
 msgid "Transmits the Callers CID if allowed by the trunk."
-msgstr ""
+msgstr "Transmite el CID del Llamante si lo permite la línea."
 
 #: page.ringgroups.php:411 page.ringgroups.php:423
 msgid "Use Dialed Number"
-msgstr ""
+msgstr "Usar Número Marcado"
 
 #: page.ringgroups.php:64
 msgid "Warning! Extension"
@@ -497,18 +520,22 @@ msgid ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
+"Si lo desea, puede anteponer un nombre de CallerID al sonar las extensiones "
+"de este grupo, es decir: Si utiliza el prefijo \"Ventas:\", una llamada de "
+"John Doe se mostraban como \"Ventas:John Doe\" en las extensiones de este "
+"grupo. "
 
 #: install.php:152
 msgid "added field cfignore to ringgroups table"
-msgstr ""
+msgstr "agregando campo cfignore a tabla ringgroups"
 
 #: install.php:162
 msgid "added field cpickup to ringgroups table"
-msgstr ""
+msgstr "agregando campo cpickup tabla ringgroups"
 
 #: install.php:142
 msgid "added field cwignore to ringgroups table"
-msgstr ""
+msgstr "agregando campo cwignore a tabla ringgroups"
 
 #: install.php:172
 msgid "added field recording to ringgroups table"
@@ -566,7 +593,7 @@ msgstr "Primero que no esté al teléfono"
 
 #: page.ringgroups.php:214
 msgid "hunt"
-msgstr ""
+msgstr "lineal"
 
 #: functions.inc.php:262
 msgid "is already in use"
@@ -578,7 +605,7 @@ msgstr "no está permitida por su cuenta."
 
 #: page.ringgroups.php:215
 msgid "memoryhunt"
-msgstr ""
+msgstr "memoria-lineal"
 
 #: install.php:214
 msgid "migrate annmsg to ids.."
@@ -649,14 +676,14 @@ msgstr "Sonar todos"
 #~ "Me. To dial Follow-Me, Queues and other numbers that are not extensions, "
 #~ "put a '#' at the end."
 #~ msgstr ""
-#~ "Lista de extensiones que sonarán, una por línea, o use el 'Selector "
-#~ "rápido de extensiones' de más abajo.<br/><br/>Puede incluir una extensión "
-#~ "en un sistema remoto, o un número externo añadiendo el sufijo '#', por "
-#~ "ejemplo, 2448089# marcaría el teléfono 2448089 por la línea troncal "
-#~ "apropiada (vea la sección 'Rutas salientes').<br/><br/>Las extensiones "
-#~ "(sin el símbolo '#') no llamarán a los números de búsqueda (Follow Me) de "
-#~ "esta extensión. Para llamar a números de búsqueda (Follow Me), colas, y "
-#~ "otros números que no sean extensiones, ponga el símbolo '#' al final."
+#~ "Lista de extensiones que sonarán, una por línea, o use el 'Selector rápido "
+#~ "de extensiones' de más abajo.<br/><br/>Puede incluir una extensión en un "
+#~ "sistema remoto, o un número externo añadiendo el sufijo '#', por ejemplo, "
+#~ "2448089# marcaría el teléfono 2448089 por la línea apropiada (vea la sección "
+#~ "'Rutas Salientes').<br/><br/>Las extensiones (sin el símbolo '#') no "
+#~ "llamarán a los números de búsqueda (Sígueme) de esta extensión. Para llamar "
+#~ "a números de búsqueda (Sígueme), Colas, y otros números que no sean "
+#~ "extensiones, ponga el símbolo '#' al final."
 
 #~ msgid "Time must be between 1 and 60 seconds"
 #~ msgstr "El tiempo debe estar entre 1 y 60 segundos."
