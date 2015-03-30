@@ -49,6 +49,7 @@
 	<popovers>
 		<ringgroups>
 			<display>ringgroups</display>
+			<view>form</view>
 		</ringgroups>
  	</popovers>
 	<supported>
