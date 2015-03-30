@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:59-0500\n"
-"PO-Revision-Date: 2015-03-30 08:58+0200\n"
+"PO-Revision-Date: 2015-03-30 09:00+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
@@ -149,7 +149,7 @@ msgstr ""
 "confirmación, por ejemplo, un teléfono mil que puede ir a su buzón de voz "
 "que contestará la llamada. Habilitando esta opción hará que el destino pulse "
 "la tecla 1 en su teléfono antes de pasarle la llamada. Esta opción sólo "
-"funciona con la estrategia 'Sonar todos'."
+"funciona con la estrategia 'Sonar todos'"
 
 #: page.ringgroups.php:247
 msgid "Extension List"
@@ -338,7 +338,7 @@ msgstr "Grupo de extensiones"
 #: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
-msgstr "Grupo de extensiones %s:"
+msgstr "Grupo de Timbrado%s: "
 
 #: functions.inc.php:453
 msgid "Ring Group Membership"
@@ -374,7 +374,7 @@ msgstr "Tiempo de Timbrado (máx. 300 seg)"
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
 "Hacer sonar todos los canales disponibles hasta que alguien conteste (opción "
-"por defecto)."
+"por defecto)"
 
 #: page.ringgroups.php:215
 msgid ""
@@ -419,9 +419,9 @@ msgid ""
 msgstr ""
 "Estos modos actúan como se han descrito anteriormente. Aún así, si la "
 "primera extensión (la primera de la lista) está ocupada, las otras "
-"extensiones no sonarán. Si la primera extensión está en modo 'No "
-"molestar' (DND), no sonará. Si la primera extensión está en modo 'Desvío de "
-"llamada incondicional', entonces sonarán todas."
+"extensiones no sonarán. Si la primera extensión está en modo 'No molestar' "
+"(DND), no sonará. Si la primera extensión está en modo 'Desvío de llamada "
+"incondicional', entonces sonarán todas"
 
 #: functions.inc.php:262
 msgid "This ringgroup"
@@ -442,7 +442,7 @@ msgstr "El tiempo debe ser entre 1 y 300 segindos"
 
 #: page.ringgroups.php:386
 msgid "Too-Late Announce:"
-msgstr "Anuncio Retardado"
+msgstr "Anuncio Retardado:"
 
 #: page.ringgroups.php:410
 msgid ""
@@ -547,7 +547,7 @@ msgstr ""
 "Si lo desea, puede anteponer un nombre de CallerID al sonar las extensiones "
 "de este grupo, es decir: Si utiliza el prefijo \"Ventas:\", una llamada de "
 "John Doe se mostraban como \"Ventas:John Doe\" en las extensiones de este "
-"grupo. "
+"grupo."
 
 #: install.php:152
 msgid "added field cfignore to ringgroups table"
@@ -637,11 +637,11 @@ msgstr "Migrando la tabla 'annmgs' a identificadores... "
 
 #: install.php:240
 msgid "migrate remotealert to  ids.."
-msgstr "Migrando la tabla 'remotealert' a identificadores... "
+msgstr "Migrando la tabla 'remotealert' a identificadores.."
 
 #: install.php:266
 msgid "migrate toolate to ids.."
-msgstr "Migrando tabla 'toolate' a identificadores... "
+msgstr "Migrando tabla 'toolate' a identificadores.."
 
 #: install.php:238 install.php:264 install.php:290
 #, php-format
@@ -685,7 +685,7 @@ msgstr "Sólo hace sonar el primer canal activo."
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 "Hace sonar el primer canal que no esté al teléfono, ignorando la opción de "
-"llamada en espera."
+"llamada en espera"
 
 #: page.ringgroups.php:213
 msgid "ringall"
