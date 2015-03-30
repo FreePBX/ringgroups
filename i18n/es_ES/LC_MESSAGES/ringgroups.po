@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:59-0500\n"
-"PO-Revision-Date: 2014-02-28 09:21+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
-"Language-Team: Spanish <http://example.com/projects/freepbx-211/ringgroups/"
-"es/>\n"
+"PO-Revision-Date: 2015-03-30 08:58+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -103,6 +103,11 @@ msgid ""
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
+"Crea un grupo de extensiones que todas timbren juntas. Las extensiones "
+"pueden timbrar una a la vez, o en varias configuraciones \\'hunt\\'. Además, "
+"números externos son soportados, y hay una opción de confirmación de llamada "
+"cuando el destinatario de la llamada tiene que confirmar si realmente "
+"quieren tomar la llamada antes de ser transferida."
 
 #: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
 #: page.ringgroups.php:420
@@ -119,11 +124,11 @@ msgstr "Destino si no hay respuesta"
 
 #: ringgroups.i18n.php:8
 msgid "Display Extension Ring Group Members"
-msgstr ""
+msgstr "Desplegar Extensiones Miembros de un Grupo de Timbrado (Ring Group)"
 
 #: page.ringgroups.php:441
 msgid "Dont Care"
-msgstr ""
+msgstr "No importa"
 
 #: page.ringgroups.php:192
 msgid "Edit Ring Group"
@@ -170,7 +175,7 @@ msgstr ""
 
 #: page.ringgroups.php:440
 msgid "Force"
-msgstr ""
+msgstr "Forzar"
 
 #: page.ringgroups.php:412 page.ringgroups.php:424
 msgid "Force Dialed Number"
@@ -215,6 +220,13 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
+"Liste Extensiones a sonar, uno por línea, o utilizar la \"Extensión Quick "
+"Pick\" abajo para insertarlos aquí. Usted puede incluir una extensión en un "
+"sistema remoto, o un número externo sufijando un número con un '#' . ej: "
+"2448089# marcaría 2448089 en el troncal adecuado (vea Enrutamiento de "
+"Salida)<br><br> extensiones sin un '#' no sonará Sigue-Me de un usuario. "
+"Para marcar Sigue-Me, colas y otros números que no son extensiones, poner un "
+"siempre '#' al final."
 
 #: page.ringgroups.php:219
 msgid ""
@@ -222,6 +234,10 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Realiza una llamada podía saltar entre las extensiones incluidas sin una "
+"prioridad predefinida para garantizar que las llamadas de los grupos están "
+"(casi) distribuidos uniformemente. Simula una cola cuando una cola no se "
+"puede utilizar de otra manera."
 
 #: page.ringgroups.php:280
 msgid ""
@@ -330,7 +346,7 @@ msgstr "Miembro del Grupo Extensiones"
 
 #: ringgroups.i18n.php:10
 msgid "Ring Group Module"
-msgstr ""
+msgstr "Modulo Grupo de Timbrado"
 
 #: functions.inc.php:57 functions.inc.php:329
 #, php-format
@@ -352,7 +368,7 @@ msgstr "Estrategia a Sonar:"
 
 #: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "Tiempo de Timbrado (máx. 300 seg)"
 
 #: page.ringgroups.php:213
 msgid "Ring all available channels until one answers (default)"
@@ -386,7 +402,7 @@ msgstr "Por turnos, sonando cada extensión disponible"
 
 #: page.ringgroups.php:520
 msgid "The Group Description provided is too long."
-msgstr ""
+msgstr "La Descripción de Grupo provista es muy larga."
 
 #: page.ringgroups.php:200
 msgid "The number users will dial to ring extensions in this ring group"
@@ -412,15 +428,17 @@ msgid "This ringgroup"
 msgstr "Este grupo de extensiones"
 
 #: page.ringgroups.php:239
-#, fuzzy
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
-msgstr "Tiempo en segundos que sonarán los teléfonos. *********************"
+msgstr ""
+"Tiempo en segundos que sonarán los teléfonos. Para todos los tipos de "
+"estrategia de \"hunt\", esto es el tiempo de cada interacción en cada "
+"teléfono a sonar"
 
 #: page.ringgroups.php:502
 msgid "Time must be between 1 and 300 seconds"
-msgstr ""
+msgstr "El tiempo debe ser entre 1 y 300 segindos"
 
 #: page.ringgroups.php:386
 msgid "Too-Late Announce:"
@@ -473,7 +491,6 @@ msgid "Warning! Extension"
 msgstr "Atención. La extensión"
 
 #: page.ringgroups.php:346
-#, fuzzy
 msgid ""
 "When checked, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -481,10 +498,9 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 "Cuando esté marcada esta opción, se ignorarán los agentes que estén ocupados "
-"como si la extensión estuviera ocupada. Esto significa que la en teléfonos "
-"con llamada en espera o multilínea no recibirán la llamada en varias de las "
-"estrategias de ***********ring*********; se intentará con el siguiente "
-"agente."
+"como si la extensión estuviera ocupada. Esto significa que  teléfonos con "
+"llamada en espera o multilínea no recibirán la llamada en varias de las "
+"estrategias de \"hunt\"; se intentará con el siguiente agente."
 
 #: page.ringgroups.php:339
 msgid ""
@@ -504,6 +520,9 @@ msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
+"Cuando se ajusta a las extensiones verdaderas que pertenecen a uno o más "
+"Grupos de timbre tendrá una sección Grupo de timbre y enlace a cada grupo de "
+"los que son miembros."
 
 #: page.ringgroups.php:438
 msgid ""
@@ -513,6 +532,11 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
+"Siempre se puede grabar las llamadas que entran en este grupo de timbre "
+"(Forzar), nunca grabarlas (Nunca), o permitir la extensión que contesta que "
+"se pueden hacer a pedido la grabación (Dont Care). Si la grabación se negó "
+"entonces grabación por un toque (one touch) será bloqueada, a menos que "
+"tengan la configuración de grabación de la llamada en \"Ignorar\"."
 
 #: page.ringgroups.php:329
 msgid ""
@@ -539,7 +563,7 @@ msgstr "agregando campo cwignore a tabla ringgroups"
 
 #: install.php:172
 msgid "added field recording to ringgroups table"
-msgstr ""
+msgstr "agregado campo de grabación a tabla de ringgroups"
 
 #: install.php:184
 msgid "adding annmsg_id field.."
@@ -651,7 +675,7 @@ msgstr "ok"
 
 #: page.ringgroups.php:219
 msgid "random"
-msgstr ""
+msgstr "Aleatorio"
 
 #: page.ringgroups.php:217
 msgid "ring only the first available channel"
