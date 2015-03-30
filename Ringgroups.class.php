@@ -35,7 +35,7 @@ class Ringgroups implements \BMO {
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
 		isset($request['recording'])?$recording = $request['recording']:$recording='dontcare';
-
+		debug($request[$request['goto0']."0"]);
 		if (isset($request['goto0']) && isset($request[$request['goto0']."0"])) {
 						$goto = $request[$request['goto0']."0"];
 		} else {
@@ -89,7 +89,6 @@ class Ringgroups implements \BMO {
 						$this_dest = ringgroups_getdest($account);
 						\fwmsg::set_dest($this_dest[0]);
 						needreload();
-						redirect("config.php?display=ringgroups&view=form&extdisplay=".$account);
 					}
 				}
 
@@ -97,7 +96,8 @@ class Ringgroups implements \BMO {
 				if ($action == 'delGRP') {
 					ringgroups_del($account);
 					needreload();
-					redirect_standard();
+					unset($_REQUEST['view']);
+					unset($_REQUEST['extdisplay']);
 				}
 
 				//edit group - just delete and then re-add the extension
@@ -105,7 +105,6 @@ class Ringgroups implements \BMO {
 					ringgroups_del($account);
 					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
 					needreload();
-					redirect("config.php?display=ringgroups&view=form&extdisplay=".$extdisplay);
 				}
 			}
 		}
