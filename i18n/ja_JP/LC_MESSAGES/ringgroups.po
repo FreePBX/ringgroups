@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-09 14:17-0400\n"
+"POT-Creation-Date: 2015-04-14 19:24-0400\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ringgroups.class.php:120
+#: Ringgroups.class.php:119
 msgid "Delete"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgstr "この着信グループの説明。"
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:130
+#: Ringgroups.class.php:129
 msgid "Reset"
 msgstr ""
 
@@ -363,7 +363,7 @@ msgstr "着信グループ番号"
 msgid "Skip Busy Agent"
 msgstr "ビジー状態のエージェントをスキップ"
 
-#: Ringgroups.class.php:125
+#: Ringgroups.class.php:124
 msgid "Submit"
 msgstr ""
 

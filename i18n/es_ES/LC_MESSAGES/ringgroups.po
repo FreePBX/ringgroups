@@ -1,8 +1,8 @@
-#: page.ringgroups.php:216
+#: views/form.php:55
 msgid "*-prim"
 msgstr ""
 
-#: page.ringgroups.php:334
+#: views/form.php:430
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Alert Info"
 msgstr ""
 
-#: page.ringgroups.php:409
+#: views/form.php:233
 msgid "Always transmit the Fixed CID Value below."
 msgstr ""
 
@@ -26,19 +26,19 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr ""
 
-#: page.ringgroups.php:329
+#: views/form.php:394
 msgid "CID Name Prefix"
 msgstr ""
 
-#: page.ringgroups.php:436
+#: views/form.php:602
 msgid "Call Recording"
 msgstr ""
 
-#: page.ringgroups.php:403
+#: views/form.php:552
 msgid "Change External CID Configuration"
 msgstr ""
 
@@ -51,14 +51,19 @@ msgid "Confirm Calls"
 msgstr ""
 
 #: ringgroups.i18n.php:8
-msgid "Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred."
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
 msgstr ""
 
 #: views/form.php:165 views/form.php:231 views/form.php:243
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:120
+#: Ringgroups.class.php:119
 msgid "Delete"
 msgstr ""
 
@@ -70,39 +75,46 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr ""
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
-#: page.ringgroups.php:441
+#: views/form.php:609
 msgid "Dont Care"
 msgstr ""
 
-#: page.ringgroups.php:353
+#: views/form.php:496
 msgid "Enable Call Pickup"
 msgstr ""
 
 #: views/form.php:538
-msgid "Enable this if you're calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through. This feature only works with the ringall ring strategy"
+msgid ""
+"Enable this if you're calling external numbers that need confirmation - eg, "
+"a mobile phone may go to voicemail which will pick up the call. Enabling "
+"this requires the remote side push 1 on their phone before the call is put "
+"through. This feature only works with the ringall ring strategy"
 msgstr ""
 
 #: views/form.php:359
 msgid "Extension List"
 msgstr ""
 
-#: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
+#: views/form.php:233 views/form.php:244 views/form.php:578
 msgid "Fixed CID Value"
 msgstr ""
 
 #: views/form.php:590
-msgid "Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading '+'."
+msgid ""
+"Fixed value to replace the CID with used with some of the modes above. "
+"Should be in a format of digits only with an option of E164 format using a "
+"leading '+'."
 msgstr ""
 
-#: page.ringgroups.php:440
+#: views/form.php:607
 msgid "Force"
 msgstr ""
 
-#: page.ringgroups.php:412 page.ringgroups.php:424
+#: views/form.php:239 views/form.php:247
 msgid "Force Dialed Number"
 msgstr ""
 
@@ -115,10 +127,12 @@ msgid "INUSE"
 msgstr ""
 
 #: views/form.php:222
-msgid "If you select a Music on Hold class to play, instead of 'Ring', they will hear that instead of Ringing while they are waiting for someone to pick up."
+msgid ""
+"If you select a Music on Hold class to play, instead of 'Ring', they will "
+"hear that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
 
-#: page.ringgroups.php:339
+#: views/form.php:442
 msgid "Ignore CF Settings"
 msgstr ""
 
@@ -134,31 +148,49 @@ msgstr ""
 msgid "List Ring Groups"
 msgstr ""
 
-#: page.ringgroups.php:247
-msgid "List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end."
+#: views/form.php:380
+msgid ""
+"List extensions to ring, one per line, or use the Extension Quick Pick below "
+"to insert them here.<br><br>You can include an extension on a remote system, "
+"or an external number by suffixing a number with a '#'.  ex:  2448089# would "
+"dial 2448089 on the appropriate trunk (see Outbound Routing)"
+"<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial "
+"Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
+"the end."
 msgstr ""
 
-#: page.ringgroups.php:219
-msgid "Makes a call could hop between the included extensions without a predefined priority to ensure that calls in the groups are (almost) evenly spread. Simulates a Queue when a Queue can not otherwise be used."
+#: views/form.php:61
+msgid ""
+"Makes a call could hop between the included extensions without a predefined "
+"priority to ensure that calls in the groups are (almost) evenly spread. "
+"Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
 #: views/form.php:109
-msgid "Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the caller before dialing this group.<br><br>To add "
+"additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
 
 #: views/form.php:144
-msgid "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
+"enabled.<br><br>To add additional recordings use the \"System Recordings\" "
+"MENU above"
 msgstr ""
 
 #: views/form.php:179
-msgid "Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.<br><br>To add additional recordings use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the person RECEIVING the call, if the call has "
+"already been accepted before they push 1.<br><br>To add additional "
+"recordings use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: page.ringgroups.php:406
+#: views/form.php:229
 msgid "Mode"
 msgstr ""
 
-#: page.ringgroups.php:442
+#: views/form.php:611
 msgid "Never"
 msgstr ""
 
@@ -170,11 +202,13 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: page.ringgroups.php:504
-msgid "Only ringall, ringallv2, hunt and the respective -prim versions are supported when confirmation is checked"
+#: assets/js/ringgroups.js:57
+msgid ""
+"Only ringall, ringallv2, hunt and the respective -prim versions are "
+"supported when confirmation is checked"
 msgstr ""
 
-#: page.ringgroups.php:410 page.ringgroups.php:422
+#: views/form.php:235 views/form.php:245
 msgid "Outside Calls Fixed CID Value"
 msgstr ""
 
@@ -198,7 +232,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:130
+#: Ringgroups.class.php:129
 msgid "Reset"
 msgstr ""
 
@@ -219,7 +253,7 @@ msgstr ""
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr ""
 
@@ -241,7 +275,7 @@ msgstr ""
 msgid "Ring Strategy"
 msgstr ""
 
-#: page.ringgroups.php:237
+#: views/form.php:335
 msgid "Ring Time (max 300 sec)"
 msgstr ""
 
@@ -250,7 +284,9 @@ msgid "Ring all available channels until one answers (default)"
 msgstr ""
 
 #: views/form.php:53
-msgid "Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc."
+msgid ""
+"Ring first extension in the list, then ring the 1st and 2nd extension, then "
+"ring 1st 2nd and 3rd extension in the list.... etc."
 msgstr ""
 
 #: views/form.php:261
@@ -261,11 +297,11 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr ""
 
-#: Ringgroups.class.php:125
+#: Ringgroups.class.php:124
 msgid "Submit"
 msgstr ""
 
-#: page.ringgroups.php:214
+#: views/form.php:51
 msgid "Take turns ringing each available extension"
 msgstr ""
 
@@ -274,14 +310,18 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 
 #: views/form.php:55
-msgid "These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung"
+msgid ""
+"These modes act as described above. However, if the primary extension (first "
+"in list) is occupied, the other extensions will not be rung. If the primary "
+"is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
+"unconditional, then all will be rung"
 msgstr ""
 
 #: functions.inc.php:262
 msgid "This ringgroup"
 msgstr ""
 
-#: page.ringgroups.php:502
+#: assets/js/ringgroups.js:55
 msgid "Time must be between 1 and 300 seconds"
 msgstr ""
 
@@ -289,23 +329,34 @@ msgstr ""
 msgid "Too-Late Announce"
 msgstr ""
 
-#: page.ringgroups.php:410
-msgid "Transmit the Fixed CID Value below on calls that come in from outside only. Internal extension to extension calls will continue to operate in default mode."
+#: views/form.php:235
+msgid ""
+"Transmit the Fixed CID Value below on calls that come in from outside only. "
+"Internal extension to extension calls will continue to operate in default "
+"mode."
 msgstr ""
 
-#: page.ringgroups.php:412
-msgid "Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This WILL be transmitted on trunks that block foreign CallerID"
+#: views/form.php:239
+msgid ""
+"Transmit the number that was dialed as the CID for calls coming from "
+"outside. Internal extension to extension calls will continue to operate in "
+"default mode. There must be a DID on the inbound route for this. This WILL "
+"be transmitted on trunks that block foreign CallerID"
 msgstr ""
 
-#: page.ringgroups.php:411
-msgid "Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This will be BLOCKED on trunks that block foreign CallerID"
+#: views/form.php:237
+msgid ""
+"Transmit the number that was dialed as the CID for calls coming from "
+"outside. Internal extension to extension calls will continue to operate in "
+"default mode. There must be a DID on the inbound route for this. This will "
+"be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
 
-#: page.ringgroups.php:408
+#: views/form.php:231
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 
-#: page.ringgroups.php:411 page.ringgroups.php:423
+#: views/form.php:237 views/form.php:246
 msgid "Use Dialed Number"
 msgstr ""
 
@@ -314,19 +365,33 @@ msgid "Warning! Extension"
 msgstr ""
 
 #: views/form.php:484
-msgid "When enabled, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted."
+msgid ""
+"When enabled, agents who are on an occupied phone will be skipped as if the "
+"line were returning busy. This means that Call Waiting or multi-line phones "
+"will not be presented with the call and in the various hunt style ring "
+"strategies, the next agent will be attempted."
 msgstr ""
 
 #: views/form.php:511
-msgid "When enabled, this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked."
+msgid ""
+"When enabled, this will allow calls to the Ring Group to be picked up with "
+"the directed call pickup feature using the group number. When not checked, "
+"individual extensions that are part of the group can still be picked up by "
+"doing a directed call pickup to the ringing extension, which works whether "
+"or not this is checked."
 msgstr ""
 
 #: views/form.php:457
-msgid "When set to Yes, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting ."
+msgid ""
+"When set to Yes, agents who attempt to Call Forward will be ignored, this "
+"applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+"example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:12
-msgid "When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of."
+#: ringgroups.i18n.php:18
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
 #: views/form.php:648
@@ -337,12 +402,20 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: page.ringgroups.php:438
-msgid "You can always record calls that come into this ring group (Force), never record them (Never), or allow the extension that answers to do on-demand recording (Dont Care). If recording is denied then one-touch on demand recording will be blocked, unless they have the \"Override\" call recording setting."
+#: views/form.php:619
+msgid ""
+"You can always record calls that come into this ring group (Force), never "
+"record them (Never), or allow the extension that answers to do on-demand "
+"recording (Dont Care). If recording is denied then one-touch on demand "
+"recording will be blocked, unless they have the \"Override\" call recording "
+"setting."
 msgstr ""
 
-#: page.ringgroups.php:329
-msgid "You can optionally prefix the CallerID name when ringing extensions in this group. ie: If you prefix with \"Sales:\", a call from John Doe would display as \"Sales:John Doe\" on the extensions that ring."
+#: views/form.php:406
+msgid ""
+"You can optionally prefix the CallerID name when ringing extensions in this "
+"group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
+"as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
 #: install.php:152
@@ -407,12 +480,14 @@ msgstr ""
 msgid "firstnotonphone"
 msgstr ""
 
-#: page.ringgroups.php:214
+#: views/form.php:51
 msgid "hunt"
 msgstr ""
 
 #: views/form.php:347
-msgid "ime in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung"
+msgid ""
+"ime in seconds that the phones will ring. For all hunt style ring "
+"strategies, this is the time for each iteration of phone(s) that are rung"
 msgstr ""
 
 #: functions.inc.php:262
@@ -423,7 +498,7 @@ msgstr ""
 msgid "is not allowed for your account"
 msgstr ""
 
-#: page.ringgroups.php:215
+#: views/form.php:53
 msgid "memoryhunt"
 msgstr ""
 
@@ -469,7 +544,7 @@ msgstr ""
 msgid "ok"
 msgstr ""
 
-#: page.ringgroups.php:219
+#: views/form.php:61
 msgid "random"
 msgstr ""
 
@@ -483,40 +558,4 @@ msgstr ""
 
 #: views/form.php:49
 msgid "ringall"
-msgstr ""
-
-#: page.ringgroups.php:239
-msgid "Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung"
-msgstr ""
-
-#: page.ringgroups.php:346
-msgid "When checked, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted."
-msgstr ""
-
-#: page.ringgroups.php:353
-msgid "Checking this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked."
-msgstr ""
-
-#: ringgroups.i18n.php:5
-msgid "Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various \\'hunt\\' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred."
-msgstr ""
-
-#: page.ringgroups.php:432
-msgid "Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading \"+\"."
-msgstr ""
-
-#: page.ringgroups.php:438
-msgid "Record Calls"
-msgstr ""
-
-#: page.ringgroups.php:211
-msgid "Ring Strategy:"
-msgstr ""
-
-#: page.ringgroups.php:520
-msgid "The Group Description provided is too long."
-msgstr ""
-
-#: page.ringgroups.php:386
-msgid "Too-Late Announce:"
 msgstr ""
