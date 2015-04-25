@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:59-0500\n"
-"PO-Revision-Date: 2014-02-28 04:52+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
-"Language-Team: Russian <http://example.com/projects/freepbx-211/ringgroups/"
-"ru/>\n"
+"PO-Revision-Date: 2015-04-25 18:55+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: page.ringgroups.php:267
 msgid "(pick extension)"
@@ -45,7 +45,7 @@ msgstr "Дополнительная информация"
 
 #: page.ringgroups.php:409
 msgid "Always transmit the Fixed CID Value below."
-msgstr "Всегда передавать фиксированное значение Caller ID указанное ниже"
+msgstr "Всегда передавать фиксированное значение Caller ID указанное ниже."
 
 #: page.ringgroups.php:280 page.ringgroups.php:298
 msgid "Announcement:"
@@ -142,9 +142,9 @@ msgid ""
 "through. This feature only works with the ringall ring strategy"
 msgstr ""
 "Используйте это, если звонок идёт на внешний номер, который нуждается в "
-"подтверждении. Например, мобильный телефон может включить головую почту, "
+"подтверждении. Например, мобильный телефон может включить голосовую почту, "
 "которая перехватит этот вызов. Нажатием на 1 можно заблокировать такие "
-"действия. Опция действительна только при стратегии вызова звонят-все."
+"действия. Опция действительна только при стратегии вызова звонят-все"
 
 #: page.ringgroups.php:247
 msgid "Extension List"
@@ -227,17 +227,18 @@ msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU to the left"
 msgstr ""
-"Сообщение, которое будет воспроизведено для входящего респондента, прежде "
-"чем пойдет звонок в эту группу.<br><br>Для создания такого приветствия "
-"используйте раздел меню Запись сообщений."
+"Сообщение, которое воспроизводится позвонившему прежде, чем звонок перейдёт "
+"в группу.<br><br>Для создания такого сообщения используйте раздел меню "
+"Запись сообщений"
 
 #: page.ringgroups.php:298
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>You "
 "must install and enable the \"Systems Recordings\" Module to edit this option"
 msgstr ""
-"Должен быть инсталлирован и задействован модуль 'Запись сообщений' для "
-"редакции этой опции."
+"Сообщение, которое воспроизводится позвонившему прежде, чем звонок перейдёт "
+"в группу.<br><br>Необходимо инсталлировать модуль \"Запись сообщений\" чтобы "
+"менять что-либо в этой опции"
 
 #: page.ringgroups.php:368
 msgid ""
@@ -245,9 +246,9 @@ msgid ""
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU to the left"
 msgstr ""
-"Сообщение воспроизводится для принявшего этот звонок, если включена опция "
-"Подтверждение звонков.<br><br>Для создания такого приветствия используйте "
-"раздел меню Запись сообщений."
+"Сообщение, которое будет воспроизведено для принявшего звонок, если "
+"задействована опция Подтверждение вызова.<br><br>Добавить запись можно в "
+"секции \"Запись сообщений\" в меню слева"
 
 #: page.ringgroups.php:386
 msgid ""
@@ -257,7 +258,7 @@ msgid ""
 msgstr ""
 "Сообщение воспроизводится для принявшего этот звонок, если звонок уже принят "
 "прежде чем он успел нажать 1.<br><br>Для создания такого сообщения "
-"используйте раздел меню Запись сообщений."
+"используйте раздел меню \"Запись сообщений\" слева"
 
 #: page.ringgroups.php:406
 msgid "Mode"
@@ -297,7 +298,7 @@ msgstr "Укажите список внутренних номеров"
 
 #: page.ringgroups.php:206
 msgid "Provide a descriptive title for this Ring Group."
-msgstr "Предложите понятное название для этой группы вызова"
+msgstr "Предложите понятное название для этой группы вызова."
 
 #: page.ringgroups.php:438
 msgid "Record Calls"
@@ -305,7 +306,7 @@ msgstr "Записывать соединения"
 
 #: page.ringgroups.php:368
 msgid "Remote Announce:"
-msgstr "Удалённое приветствие: "
+msgstr "Удалённое приветствие:"
 
 #: page.ringgroups.php:314
 msgid "Ring"
@@ -399,7 +400,7 @@ msgstr ""
 "звонить. Также зависит от установок 'Не беспокоить' и 'Перенаправление' на "
 "первом внутреннем номере списка. Если DND, то поиск в группе на этом "
 "заканчивается. Если CF (перенаправление) не перенаправит, то поиск в группе "
-"продолжится."
+"продолжится"
 
 #: functions.inc.php:262
 msgid "This ringgroup"
@@ -412,7 +413,7 @@ msgid ""
 msgstr ""
 "Время в секундах в течение которого телефоны будут звонить. Для всех типов "
 "серийного искания в стратегиях звонков, это время звонка для каждого шага "
-"стратегий звонков."
+"стратегий звонков"
 
 #: page.ringgroups.php:502
 msgid "Time must be between 1 and 300 seconds"
@@ -443,7 +444,7 @@ msgstr ""
 "ИД, для звонков пришедших снаружи. Внутренние соединения будут передавать "
 "Caller ID в обычном режиме. Для этого предполагается входящий маршрут по "
 "DID. Он будет передаваться через транк, где провайдеры блокируют чужие "
-"Caller ID."
+"Caller ID"
 
 #: page.ringgroups.php:411
 msgid ""
@@ -455,11 +456,11 @@ msgstr ""
 "Передавать набранный Caller ID для перенаправленных звонков, пришедших "
 "снаружи. Внутренние соединения будут передавать Caller ID в обычном режиме. "
 "Для этого предполагается входящий маршрут по DID. Он будет блокироваться на "
-"транке, где провайдеры блокируют чужие Caller ID."
+"транке, где провайдеры блокируют чужие Caller ID"
 
 #: page.ringgroups.php:408
 msgid "Transmits the Callers CID if allowed by the trunk."
-msgstr "Передавать Callers ID если транк это разрешает"
+msgstr "Передавать Callers ID, если транк это разрешает."
 
 #: page.ringgroups.php:411 page.ringgroups.php:423
 msgid "Use Dialed Number"
@@ -656,7 +657,7 @@ msgstr "звонит первый доступный канал"
 
 #: page.ringgroups.php:218
 msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr "звонит первый телефон, у которого не снята трубка."
+msgstr "звонит первый телефон, у которого не снята трубка - игнорировать CW"
 
 #: page.ringgroups.php:213
 msgid "ringall"
