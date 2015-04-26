@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:59-0500\n"
-"PO-Revision-Date: 2015-04-25 18:55+0200\n"
+"PO-Revision-Date: 2015-04-25 21:10+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/ru_RU/>\n"
@@ -104,6 +104,11 @@ msgid ""
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
+"Создает группу абонентов, у которых телефоны звонят вместе. Телефоны могут "
+"звонить вместе, или нет, в зависимости от различных настроек. Кроме того, "
+"при входящем внешнем вызове, есть вариант подтверждения вызова, когда "
+"вызываемый абонент должен подтвердить, что он действительно хочет принять "
+"вызов, прежде чем входящий звонок будет переведен на него."
 
 #: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
 #: page.ringgroups.php:420
@@ -124,7 +129,7 @@ msgstr "Отображает внутренние номера членов ри
 
 #: page.ringgroups.php:441
 msgid "Dont Care"
-msgstr ""
+msgstr "Все равно"
 
 #: page.ringgroups.php:192
 msgid "Edit Ring Group"
@@ -170,7 +175,7 @@ msgstr ""
 
 #: page.ringgroups.php:440
 msgid "Force"
-msgstr ""
+msgstr "Всегда"
 
 #: page.ringgroups.php:412 page.ringgroups.php:424
 msgid "Force Dialed Number"
@@ -214,6 +219,13 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
+"Список внутренних номеров, один в строке, или используйте выпадающий список "
+"ниже, чтоб вставить номер сюда.<br><br>Вы можете включать сюда внутренние "
+"номера на удаленной системе или внешние номера, путем добавления суффикса '#"
+"' к номеру. Например: 2448089# наберет 2448089 по соответствующей линии (см. "
+"исходящую маршрутизацию).<br><br>Номера без '#' не будут звонить "
+"пользователям модуля Follow-Me. Для набора Follow-Me, очередей и других "
+"номеров, которые не являются внутренними, добавляйте '#' в конце номера."
 
 #: page.ringgroups.php:219
 msgid ""
@@ -221,6 +233,9 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Создание звонков на членов группы без определенного приоритета позволяет "
+"гарантировать, что вызовы в группе будут распределены равномерно. Моделирует "
+"Очередь, когда Очередь не может использоваться."
 
 #: page.ringgroups.php:280
 msgid ""
@@ -323,11 +338,11 @@ msgstr "Группа вызова %s: "
 
 #: functions.inc.php:453
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "Членство в группе вызова"
 
 #: ringgroups.i18n.php:10
 msgid "Ring Group Module"
-msgstr ""
+msgstr "Модуль группы вызова"
 
 #: functions.inc.php:57 functions.inc.php:329
 #, php-format
@@ -349,7 +364,7 @@ msgstr "Стратегия дозвона:"
 
 #: page.ringgroups.php:237
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "Время звонка (макс. 300 сек.)"
 
 #: page.ringgroups.php:213
 msgid "Ring all available channels until one answers (default)"
@@ -381,7 +396,7 @@ msgstr "Звонок поступает на любой доступный вн�
 
 #: page.ringgroups.php:520
 msgid "The Group Description provided is too long."
-msgstr ""
+msgstr "Указанное описание группы слишком длинное."
 
 #: page.ringgroups.php:200
 msgid "The number users will dial to ring extensions in this ring group"
@@ -417,7 +432,7 @@ msgstr ""
 
 #: page.ringgroups.php:502
 msgid "Time must be between 1 and 300 seconds"
-msgstr ""
+msgstr "Время должно быть между 1 и 300 секундами"
 
 #: page.ringgroups.php:386
 msgid "Too-Late Announce:"
@@ -511,6 +526,10 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
+"Вы всегда можете записывать вызовы, поступающие в Группу вызова (Всегда), "
+"никогда не записывать их (Никогда), или разрешить запись по требованию (Все "
+"равно). Если запись отключена, то запись по требованию будет заблокирована, "
+"если в настройках записи вызова не выбрано \"Переопределить\"."
 
 #: page.ringgroups.php:329
 msgid ""
@@ -649,7 +668,7 @@ msgstr "ok"
 
 #: page.ringgroups.php:219
 msgid "random"
-msgstr ""
+msgstr "случайный-выбор"
 
 #: page.ringgroups.php:217
 msgid "ring only the first available channel"
