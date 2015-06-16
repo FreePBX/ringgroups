@@ -8,12 +8,14 @@ class Ringgroups implements \BMO {
 		$this->FreePBX = $freepbx;
 		$this->db = $freepbx->Database;
 	}
-    public function install() {}
-    public function uninstall() {}
-    public function backup() {}
-    public function restore($backup) {}
-    public function doConfigPageInit($page) {
-    	$request = $_REQUEST;
+
+	public function install() {}
+	public function uninstall() {}
+	public function backup() {}
+	public function restore($backup) {}
+
+	public function doConfigPageInit($page) {
+		$request = $_REQUEST;
 		isset($request['action'])?$action = $request['action']:$action='';
 		//the extension we are currently displaying
 		isset($request['extdisplay'])?$extdisplay=$request['extdisplay']:$extdisplay='';
@@ -35,7 +37,6 @@ class Ringgroups implements \BMO {
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
 		isset($request['recording'])?$recording = $request['recording']:$recording='dontcare';
-		debug($request[$request['goto0']."0"]);
 		if (isset($request['goto0']) && isset($request[$request['goto0']."0"])) {
 						$goto = $request[$request['goto0']."0"];
 		} else {
@@ -108,7 +109,28 @@ class Ringgroups implements \BMO {
 				}
 			}
 		}
-    }
+	}
+
+	public function search($query, &$results) {
+		if(!ctype_digit($query)) {
+			$sql = "SELECT * FROM ringgroups WHERE description LIKE ?";
+			$sth = $this->db->prepare($sql);
+			$sth->execute(array("%".$query."%"));
+			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			foreach($rows as $row) {
+				$results[] = array("text" => _("RingGroup")." ".$row['grpnum'], "type" => "get", "dest" => "?display=ringgroups&view=form&extdisplay=GRP-".$row['grpnum']);
+			}
+		} else {
+			$sql = "SELECT * FROM ringgroups WHERE grpnum LIKE ?";
+			$sth = $this->db->prepare($sql);
+			$sth->execute(array("%".$query."%"));
+			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			foreach($rows as $row) {
+				$results[] = array("text" => $row['description'] . " (".$row['grpnum'].")", "type" => "get", "dest" => "?display=ringgroups&view=form&extdisplay=GRP-".$row['grpnum']);
+			}
+		}
+	}
+
 	public function getActionBar($request){
 		switch($request['display']){
 			case 'ringgroups':
@@ -138,5 +160,5 @@ class Ringgroups implements \BMO {
     		unset($buttons);
     	}
     	return $buttons;
-    }    
+    }
 }
