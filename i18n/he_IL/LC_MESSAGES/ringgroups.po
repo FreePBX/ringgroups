@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:24-0400\n"
+"POT-Creation-Date: 2015-06-19 18:40-0400\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -47,10 +47,6 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
-#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
-msgid "Applications"
-msgstr "יישומים"
-
 #: views/form.php:394
 #, fuzzy
 msgid "CID Name Prefix"
@@ -72,20 +68,11 @@ msgstr ""
 msgid "Confirm Calls"
 msgstr "אשר שיחות"
 
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-
 #: views/form.php:165 views/form.php:231 views/form.php:243
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:119
+#: Ringgroups.class.php:141
 msgid "Delete"
 msgstr ""
 
@@ -96,10 +83,6 @@ msgstr ""
 #: views/form.php:636
 msgid "Destination if no answer"
 msgstr "יעד אם אף אחד לא עונה"
-
-#: ringgroups.i18n.php:14
-msgid "Display Extension Ring Group Members"
-msgstr ""
 
 #: views/form.php:609
 msgid "Dont Care"
@@ -260,7 +243,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:129
+#: Ringgroups.class.php:151
 msgid "Reset"
 msgstr ""
 
@@ -281,10 +264,6 @@ msgstr "קבוצת צלצול %s: "
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:16
-msgid "Ring Group Module"
-msgstr ""
-
 #: functions.inc.php:57 functions.inc.php:329
 #, php-format
 msgid "Ring Group: %s"
@@ -295,7 +274,7 @@ msgstr "קבוצת צלצול %s:"
 msgid "Ring Group: %s (%s)"
 msgstr "קבוצת צלצול (%s% (s"
 
-#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:9
 #, fuzzy
 msgid "Ring Groups"
 msgstr "קבוצת צלצול"
@@ -325,11 +304,15 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "מספר קבוצת צלצול"
 
+#: Ringgroups.class.php:121
+msgid "RingGroup"
+msgstr ""
+
 #: views/form.php:469
 msgid "Skip Busy Agent"
 msgstr "דלג הסוכן תפוס"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:146
 msgid "Submit"
 msgstr ""
 
@@ -398,7 +381,7 @@ msgstr ""
 msgid "Use Dialed Number"
 msgstr ""
 
-#: Ringgroups.class.php:75
+#: Ringgroups.class.php:76
 msgid "Warning! Extension"
 msgstr "אזהרה! שלוחה"
 
@@ -424,12 +407,6 @@ msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
-msgstr ""
-
-#: ringgroups.i18n.php:18
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
 #: views/form.php:648
@@ -532,7 +509,7 @@ msgstr ""
 msgid "is already in use"
 msgstr "כבר בשימוש"
 
-#: Ringgroups.class.php:75
+#: Ringgroups.class.php:76
 msgid "is not allowed for your account"
 msgstr "אינה מורשית עבור חשבונך"
 
@@ -598,6 +575,9 @@ msgstr ""
 #: views/form.php:49
 msgid "ringall"
 msgstr "צלצל לכולם"
+
+#~ msgid "Applications"
+#~ msgstr "יישומים"
 
 #~ msgid "(pick extension)"
 #~ msgstr "(בחר שלוחות)"
