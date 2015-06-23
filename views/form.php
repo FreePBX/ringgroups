@@ -65,11 +65,13 @@ $rshelp = '<b>' . _("ringall")				.'</b>: '. _("Ring all available channels unti
 //Ring Strategy Rows
 $default = (isset($strategy) ? $strategy : 'ringall');
 $items = array('ringall','ringall-prim','hunt','hunt-prim','memoryhunt','memoryhunt-prim','firstavailable','firstnotonphone','random');
+$rsrows = '';
 foreach ($items as $item) {
 	$rsrows .= '<option value="'.$item.'" '.($default == $item ? 'SELECTED' : '').'>'._($item) .'</option>';
 }
 //For Quick Select
 $results = core_users_list();
+$qsagentlist = '';
 foreach($results as $result){
 	$qsagentlist .= "<option value='".$result[0]."'>".$result[0]." (".$result[1].")</option>\n";
 }
@@ -240,7 +242,7 @@ $ccidhelp = _("Mode").':'
 			.'<br>';
 
 $default = (isset($changecid) ? $changecid : 'default');
-$ccidrows .= '<option value="default" '.($default == 'default' ? 'SELECTED' : '').'>'._("Default").'</option>';
+$ccidrows = '<option value="default" '.($default == 'default' ? 'SELECTED' : '').'>'._("Default").'</option>';
 $ccidrows .= '<option value="fixed" '.($default == 'fixed' ? 'SELECTED' : '').'>'._("Fixed CID Value").'</option>';
 $ccidrows .= '<option value="extern" '.($default == 'extern' ? 'SELECTED' : '').'>'._("Outside Calls Fixed CID Value").'</option>';
 $ccidrows .= '<option value="did" '.($default == 'did' ? 'SELECTED' : '').'>'._("Use Dialed Number").'</option>';
@@ -363,9 +365,8 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<div class="input-group">
 							<textarea id="grplist" class="form-control" cols="15" rows="<?php echo $glrows?>" name="grplist"><?php echo implode("\n",$grplist);?></textarea>
 							<span class="input-group-addon">
-								<label for="qsagents1"><strong><?php echo("Agent Quick Select")?></strong></label>
-								<select id="qsagents1" class="form-control" data-for="grplist">
-									<option SELECTED>
+								<select id="qsagents1" class="form-control" data-for="grplist" style="width:170px;">
+									<option SELECTED><?php echo("Agent Quick Select")?></option>
 									<?php echo $qsagentlist ?>
 								</select>
 							</span>
