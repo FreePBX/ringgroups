@@ -43,6 +43,7 @@ if ($extdisplay) {
 	$cfignore = '';
 	$toolate_id = '';
 	$ringing = '';
+	$recording = 'dontcare';
 	$accountinput = '<input type="text" class="form-control" id="account" name="account" value="">';
 }
 //Ring Strategy Help
