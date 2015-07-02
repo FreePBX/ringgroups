@@ -5,13 +5,20 @@ foreach($gresults as $g){
 }
 ?>
 
-<table class="table table-striped">
+<table id= "ringgroupgrid"
+        data-cookie="true"
+        data-cookie-id-table="ringgroupgrid"
+        data-maintain-selected="true"
+        data-toggle="table"
+        data-pagination="true"
+        data-search="true"
+        class="table table-striped">
 <thead>
 	<tr>
-		<th><?php echo _("Ring Group")?></th>
+		<th data-sortable="true"><?php echo _("Ring Group")?></th>
 		<th><?php echo _("Description")?></th>
 		<th><?php echo _("Actions")?></th>
-	</tr>	
+	</tr>
 </thead>
 <tbody>
 	<?php echo $grows ?>
