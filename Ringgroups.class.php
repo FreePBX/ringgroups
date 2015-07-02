@@ -90,6 +90,7 @@ class Ringgroups implements \BMO {
 						$this_dest = ringgroups_getdest($account);
 						\fwmsg::set_dest($this_dest[0]);
 						needreload();
+						$_REQUEST['extdisplay'] = $account;
 					}
 				}
 
@@ -106,6 +107,7 @@ class Ringgroups implements \BMO {
 					ringgroups_del($account);
 					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
 					needreload();
+					$_REQUEST['extdisplay'] = $account;
 				}
 			}
 		}
