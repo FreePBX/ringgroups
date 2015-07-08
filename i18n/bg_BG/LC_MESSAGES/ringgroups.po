@@ -7,63 +7,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2015-07-08 18:03-0400\n"
 "PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
-"Language-Team: Bulgarian "
-"<http://weblate.freepbx.org/projects/freepbx/ringgroups/bg_BG/>\n"
-"Language: bg_BG\n"
+"Language-Team: Bulgarian <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/bg_BG/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg_BG\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: page.ringgroups.php:267
-msgid "(pick extension)"
-msgstr "(избери вътрешна линия)"
-
-#: page.ringgroups.php:216
+#: views/form.php:56
 msgid "*-prim"
 msgstr "*-основна"
 
-#: page.ringgroups.php:334
+#: views/form.php:432
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "ALERT_INFO може да се използва за различно звънене при някои SIP устройства."
 
-#: page.ringgroups.php:104 page.ringgroups.php:185 page.ringgroups.php:192
+#: views/rggrid.php:20
+msgid "Actions"
+msgstr ""
+
+#: views/bootnav.php:2
 msgid "Add Ring Group"
 msgstr "Добави Група на Звънене"
 
-#: page.ringgroups.php:334
+#: views/form.php:420
 msgid "Alert Info"
 msgstr "Информация за Сигнал"
 
-#: page.ringgroups.php:409
+#: views/form.php:236
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Винаги предава Фиксиран CID определен по-долу."
 
-#: page.ringgroups.php:280 page.ringgroups.php:298
-msgid "Announcement:"
-msgstr "Съобщение:"
+#: views/form.php:91
+msgid "Announcement"
+msgstr ""
 
-#: ringgroups.i18n.php:4
-msgid "Applications"
-msgstr "Приложения"
-
-#: page.ringgroups.php:329
+#: views/form.php:396
 msgid "CID Name Prefix"
 msgstr "Префикс на CID Име"
 
-#: page.ringgroups.php:436
+#: views/form.php:604
 msgid "Call Recording"
 msgstr "Запис на Разговор"
 
-#: page.ringgroups.php:403
+#: views/form.php:554
 msgid "Change External CID Configuration"
 msgstr "Промяна на Настройки за Външен CID"
 
@@ -71,77 +67,35 @@ msgstr "Промяна на Настройки за Външен CID"
 msgid "Checking if recordings need migration.."
 msgstr "Проверка дали записите имат нужда от преместване.."
 
-#: page.ringgroups.php:353
-msgid ""
-"Checking this will allow calls to the Ring Group to be picked up with the "
-"directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
-msgstr ""
-"Ако е маркирано ще позволи на обажданията към Група на Звънене да бъдат "
-"изтегляни с директно изтегляне на обажданията като използвате номера на "
-"групата. Ако не е маркирано индивидуалните вътрешни линии които са част от "
-"групата пак ще могат да се  изтеглят с директно изтегляне на обажданията "
-"като използвате номера на вътрешната линия, което работи независимо дали е "
-"маркирано или не."
-
-#: page.ringgroups.php:261
-msgid "Choose an extension to append to the end of the extension list above."
-msgstr "Изберете вътрешна линия за поставяне в края на списъка по-горе."
-
-#: page.ringgroups.php:360
+#: views/form.php:525
 msgid "Confirm Calls"
 msgstr "Потвърди Обажданията"
 
-#: page.ringgroups.php:181
-msgid "Conflicting Extensions"
-msgstr "Вътрешни Линии в Конфликт"
-
-#: ringgroups.i18n.php:5
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
-"могат да звънят едновременно или в различни конфигурации на \\'преследване\\"
-"'. Допълнително се поддържат и външни номера, а също и опция за потвърждение "
-"на обаждането където трябва да се потвърди че искате да поемете обаждането "
-"преди да ви се прехвърли."
-
-#: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
-#: page.ringgroups.php:420
+#: views/form.php:168 views/form.php:234 views/form.php:246
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: page.ringgroups.php:151
-msgid "Delete Group"
-msgstr "Изтрий Групата"
+#: Ringgroups.class.php:143
+msgid "Delete"
+msgstr ""
 
-#: page.ringgroups.php:452
+#: views/rggrid.php:19
+msgid "Description"
+msgstr ""
+
+#: views/form.php:638
 msgid "Destination if no answer"
 msgstr "Направление ако не е отговорено"
 
-#: ringgroups.i18n.php:8
-msgid "Display Extension Ring Group Members"
-msgstr "Покажи Потребители на Група на Звънене"
-
-#: page.ringgroups.php:441
+#: views/form.php:611
 msgid "Dont Care"
 msgstr "Без Значение"
 
-#: page.ringgroups.php:192
-msgid "Edit Ring Group"
-msgstr "Редактирай Група на Звънене"
-
-#: page.ringgroups.php:353
+#: views/form.php:498
 msgid "Enable Call Pickup"
 msgstr "Разреши Изтегляне на Обаждане"
 
-#: page.ringgroups.php:360
+#: views/form.php:540
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -154,37 +108,30 @@ msgstr ""
 "обаждането да се достави. Тази услуга работи само със звъни на всички "
 "стратегия"
 
-#: page.ringgroups.php:247
+#: views/form.php:362
 msgid "Extension List"
 msgstr "Списък с Вътрешни Линии"
 
-#: page.ringgroups.php:259
-msgid "Extension Quick Pick"
-msgstr "Бързо Избиране на Вътрешни Линии"
-
-#: page.ringgroups.php:409 page.ringgroups.php:421 page.ringgroups.php:432
+#: views/form.php:236 views/form.php:247 views/form.php:580
 msgid "Fixed CID Value"
 msgstr "Фиксиран CID"
 
-#: page.ringgroups.php:432
+#: views/form.php:592
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
-"leading \"+\"."
+"leading '+'."
 msgstr ""
-"Фиксирана стойност за замяна на CID с използването на някой от режимите по-"
-"горе. Трябва да е само от цифри с възможност за E164 формат с използване на "
-"водещ \"+\"."
 
-#: page.ringgroups.php:440
+#: views/form.php:609
 msgid "Force"
 msgstr "Винаги"
 
-#: page.ringgroups.php:412 page.ringgroups.php:424
+#: views/form.php:242 views/form.php:250
 msgid "Force Dialed Number"
 msgstr "Принудително Използвай Избрания Номер"
 
-#: page.ringgroups.php:206
+#: views/form.php:288
 msgid "Group Description"
 msgstr "Описание на Групата"
 
@@ -192,7 +139,7 @@ msgstr "Описание на Групата"
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: page.ringgroups.php:308
+#: views/form.php:225
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -200,19 +147,23 @@ msgstr ""
 "Ако изберете категория на Музика При Задържане за възпроизвеждане вместо "
 "Звънене, те ще чуват това вместо Звънене докато чакат някой да оговори."
 
-#: page.ringgroups.php:339
+#: views/form.php:444
 msgid "Ignore CF Settings"
 msgstr "Игнорирай настройките за CF"
 
-#: page.ringgroups.php:499
+#: assets/js/ringgroups.js:52
 msgid "Invalid Group Number specified"
 msgstr "Неправилен Номер на Група е определен"
 
-#: page.ringgroups.php:501
+#: assets/js/ringgroups.js:54
 msgid "Invalid time specified"
 msgstr "Неправилно въведено време"
 
-#: page.ringgroups.php:247
+#: views/bootnav.php:1
+msgid "List Ring Groups"
+msgstr ""
+
+#: views/form.php:382
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -231,7 +182,7 @@ msgstr ""
 "Ме', 'Опашки' и други номера които не са вътрешни линии, поставете '#' в "
 "края."
 
-#: page.ringgroups.php:219
+#: views/form.php:62
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -242,57 +193,43 @@ msgstr ""
 "равномерно разпределени. Симулира Опашка, когато не може по друг начин да се "
 "използва Опашка."
 
-#: page.ringgroups.php:280
+#: views/form.php:112
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
-"additional recordings please use the \"System Recordings\" MENU to the left"
+"additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
-"Съобщение което ще се възпроизведе на обаждащия се преди да се набере "
-"групата.<br><br>За да добавите допълнителни записи, моля използвайте Меню "
-"\"Системни Записи\" отляво"
 
-#: page.ringgroups.php:298
-msgid ""
-"Message to be played to the caller before dialing this group.<br><br>You "
-"must install and enable the \"Systems Recordings\" Module to edit this option"
-msgstr ""
-"Съобщение което ще се възпроизведе на обаждащия се преди да се набере "
-"групата.<br><br>Трябва да сте инсталирали и разрешили Модул \"Системни Записи"
-"\" за да редактирате тази опция"
-
-#: page.ringgroups.php:368
+#: views/form.php:147
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
-"MENU to the left"
+"MENU above"
 msgstr ""
-"Съобщение което ще се възпроизведе на  ПРИЕМАЩИЯ обаждането, ако Потвърди "
-"Обажданията е маркирано.<br><br>За да добавите допълнителни записи, моля "
-"използвайте Меню \"Системни Записи\" отляво"
 
-#: page.ringgroups.php:386
+#: views/form.php:182
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
-"recordings use the \"System Recordings\" MENU to the left"
+"recordings use the \"System Recordings\" MENU above"
 msgstr ""
-"Съобщение което ще се възпроизведе на  ПРИЕМАЩИЯ обаждането, ако обаждането "
-"вече е било прието преди те да натиснат 1.<br><br>За да добавите "
-"допълнителни записи, моля използвайте Меню \"Системни Записи\" отляво"
 
-#: page.ringgroups.php:406
+#: views/form.php:232
 msgid "Mode"
 msgstr "Режим"
 
-#: page.ringgroups.php:442
+#: views/form.php:613
 msgid "Never"
 msgstr "Никога"
 
-#: page.ringgroups.php:286
+#: views/form.php:451 views/form.php:478 views/form.php:505 views/form.php:532
+msgid "No"
+msgstr ""
+
+#: views/form.php:98 views/form.php:133
 msgid "None"
 msgstr "Няма"
 
-#: page.ringgroups.php:504
+#: assets/js/ringgroups.js:57
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
@@ -300,39 +237,39 @@ msgstr ""
 "Само ringall, ringallv2, hunt и съответните - osnowna версии се поддържат "
 "когато е маркирано потвърждението"
 
-#: page.ringgroups.php:410 page.ringgroups.php:422
+#: views/form.php:238 views/form.php:248
 msgid "Outside Calls Fixed CID Value"
 msgstr "Фиксиран CID за Изходящи Разговори"
 
-#: page.ringgroups.php:308
-msgid "Play Music On Hold?"
-msgstr "Пускане на Музика при Задържане?"
+#: views/form.php:201
+msgid "Play Music On Hold"
+msgstr ""
 
-#: page.ringgroups.php:503
+#: assets/js/ringgroups.js:56
 msgid "Please enter a valid Group Description"
 msgstr "Моля въведете правилно Описание за Групата"
 
-#: page.ringgroups.php:500
+#: assets/js/ringgroups.js:53
 msgid "Please enter an extension list."
 msgstr "Моля въведете списъка с вътрешни линии."
 
-#: page.ringgroups.php:206
+#: views/form.php:300
 msgid "Provide a descriptive title for this Ring Group."
 msgstr "Наименование за тази Група на Звънене."
 
-#: page.ringgroups.php:438
-msgid "Record Calls"
-msgstr "Записвай Разговори"
+#: views/form.php:126
+msgid "Remote Announce"
+msgstr ""
 
-#: page.ringgroups.php:368
-msgid "Remote Announce:"
-msgstr "Кратко Съобщение:"
+#: Ringgroups.class.php:153
+msgid "Reset"
+msgstr ""
 
-#: page.ringgroups.php:314
+#: views/form.php:208
 msgid "Ring"
 msgstr "Звънене"
 
-#: page.ringgroups.php:119 page.ringgroups.php:154
+#: views/rggrid.php:18
 msgid "Ring Group"
 msgstr "Група на Звънене"
 
@@ -345,10 +282,6 @@ msgstr "Група на Звънене %s: "
 msgid "Ring Group Membership"
 msgstr "Потребители на Група на Звънене"
 
-#: ringgroups.i18n.php:10
-msgid "Ring Group Module"
-msgstr "Модул Група на Звънене"
-
 #: functions.inc.php:57 functions.inc.php:329
 #, php-format
 msgid "Ring Group: %s"
@@ -359,23 +292,23 @@ msgstr "Група на Звънене: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: page.ringgroups.php:9
 msgid "Ring Groups"
 msgstr "Групи на Звънене"
 
-#: page.ringgroups.php:211
-msgid "Ring Strategy:"
-msgstr "Стратегия на Звънене:"
+#: views/form.php:312
+msgid "Ring Strategy"
+msgstr ""
 
-#: page.ringgroups.php:237
+#: views/form.php:338
 msgid "Ring Time (max 300 sec)"
 msgstr "Време на Звънене (max 300 секунди)"
 
-#: page.ringgroups.php:213
+#: views/form.php:50
 msgid "Ring all available channels until one answers (default)"
 msgstr "Звъни на всички достъпни канали докато отговорят (по-подразбиране)"
 
-#: page.ringgroups.php:215
+#: views/form.php:54
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -383,31 +316,31 @@ msgstr ""
 "Звъни на първата свободна вътрешна линия от списъка, след това на 1-та и 2-"
 "та, след това на 1-та, 2-та и 3-та вътрешна линия в списъка... и т.н."
 
-#: page.ringgroups.php:200
+#: views/form.php:264
 msgid "Ring-Group Number"
 msgstr "Номер на Група на Звънене"
 
-#: page.ringgroups.php:346
+#: Ringgroups.class.php:123
+msgid "RingGroup"
+msgstr ""
+
+#: views/form.php:471
 msgid "Skip Busy Agent"
 msgstr "Пропусни Зает Агент"
 
-#: page.ringgroups.php:460
-msgid "Submit Changes"
-msgstr "Приеми Промените"
+#: Ringgroups.class.php:148
+msgid "Submit"
+msgstr ""
 
-#: page.ringgroups.php:214
+#: views/form.php:52
 msgid "Take turns ringing each available extension"
 msgstr "Върти звъненето по всички достъпни вътрешни линии"
 
-#: page.ringgroups.php:520
-msgid "The Group Description provided is too long."
-msgstr "Въведеното Описание за Групата е прекалено дълго."
-
-#: page.ringgroups.php:200
+#: views/form.php:276
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Номерът който потребителите ще избират за звънене в тази група"
 
-#: page.ringgroups.php:216
+#: views/form.php:56
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -423,24 +356,15 @@ msgstr ""
 msgid "This ringgroup"
 msgstr "Тази група на звънене"
 
-#: page.ringgroups.php:239
-msgid ""
-"Time in seconds that the phones will ring. For all hunt style ring "
-"strategies, this is the time for each iteration of phone(s) that are rung"
-msgstr ""
-"Времето в секунди за което телефона ще звъни. За всички типове преследване "
-"за стратегии на звънене, това е времето за всяко повторение на телефона(ите) "
-"които звънят"
-
-#: page.ringgroups.php:502
+#: assets/js/ringgroups.js:55
 msgid "Time must be between 1 and 300 seconds"
 msgstr "Времето трябва да е между 1 и 300 секунди"
 
-#: page.ringgroups.php:386
-msgid "Too-Late Announce:"
-msgstr "Много-Късно Съобщение:"
+#: views/form.php:161
+msgid "Too-Late Announce"
+msgstr ""
 
-#: page.ringgroups.php:410
+#: views/form.php:238
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -449,7 +373,7 @@ msgstr ""
 "Предава Фиксиран CID определен по-долу само за входящи външни обаждания. "
 "Вътрешните обаждания ще продължат да се извършват в режима по-подразбиране."
 
-#: page.ringgroups.php:412
+#: views/form.php:242
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -461,7 +385,7 @@ msgstr ""
 "има DID на входящ маршрут за това.Ще се ПРЕДАДЕ за външни линии които "
 "блокират външен CallerID"
 
-#: page.ringgroups.php:411
+#: views/form.php:240
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -473,51 +397,51 @@ msgstr ""
 "има DID на входящ маршрут за това.Ще бъде БЛОКИРАН за външни линии които "
 "блокират външен CallerID"
 
-#: page.ringgroups.php:408
+#: views/form.php:234
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Предава CID на обаждащия се ако се поддържа от външната линия."
 
-#: page.ringgroups.php:411 page.ringgroups.php:423
+#: views/form.php:240 views/form.php:249
 msgid "Use Dialed Number"
 msgstr "Използвай Избрания Номер"
 
-#: page.ringgroups.php:64
+#: Ringgroups.class.php:76
 msgid "Warning! Extension"
 msgstr "Внимание! Вътрешна Линия"
 
-#: page.ringgroups.php:346
+#: views/form.php:486
 msgid ""
-"When checked, agents who are on an occupied phone will be skipped as if the "
+"When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
 "will not be presented with the call and in the various hunt style ring "
 "strategies, the next agent will be attempted."
 msgstr ""
-"Когато е маркирано, агентите които говорят ще бъдат пропуснати като заета "
-"линия. Това означава че Чакащо Повикване или телефони с няклоко линии няма "
-"да се представят в обаждането и в различните стратегии на звънене, следващия "
-"агент ще бъде повикан."
 
-#: page.ringgroups.php:339
+#: views/form.php:513
 msgid ""
-"When checked, agents who attempt to Call Forward will be ignored, this "
+"When enabled, this will allow calls to the Ring Group to be picked up with "
+"the directed call pickup feature using the group number. When not checked, "
+"individual extensions that are part of the group can still be picked up by "
+"doing a directed call pickup to the ringing extension, which works whether "
+"or not this is checked."
+msgstr ""
+
+#: views/form.php:459
+msgid ""
+"When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
-"Когато е маркирано, агентите които опитват Пренасочване на Обаждането ще се "
-"игнорират, това важи за CF, CF Общ и CF Заето. Вътрешните Номера въведени с "
-"'#' в края, например за достъп до Следвай Ме, може да не зачетат тези "
-"настройки."
 
-#: ringgroups.i18n.php:12
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
+#: views/form.php:650
+msgid "Where to send callers if there is no answer."
 msgstr ""
-"Когато е установено вярно вътрешните линии които принадлежат на една или "
-"повече Групи на Звънене ще имат секция Група на Звънене и линк към вяка "
-"група в която участват."
 
-#: page.ringgroups.php:438
+#: views/form.php:449 views/form.php:476 views/form.php:503 views/form.php:530
+msgid "Yes"
+msgstr ""
+
+#: views/form.php:621
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -530,7 +454,7 @@ msgstr ""
 "желае да започне запис 'Без Значение'. Ако записването е забранено "
 "стартирането на запис при поискване ще е блокирано."
 
-#: page.ringgroups.php:329
+#: views/form.php:408
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
@@ -573,13 +497,9 @@ msgstr "добаване на toolate_id поле.."
 msgid "already migrated"
 msgstr "вече са преместени"
 
-#: page.ringgroups.php:318
+#: views/form.php:212
 msgid "default"
 msgstr "по-подразбиране"
-
-#: page.ringgroups.php:119
-msgid "deleted"
-msgstr "изтрита"
 
 #: install.php:294
 msgid "dropping annmsg field.."
@@ -599,27 +519,33 @@ msgstr "премахване на поле toolate.."
 msgid "fatal error"
 msgstr "фатална грешка"
 
-#: page.ringgroups.php:217
+#: views/form.php:58
 msgid "firstavailable"
 msgstr "първия свободен"
 
-#: page.ringgroups.php:218
+#: views/form.php:60
 msgid "firstnotonphone"
 msgstr "първия не на телефона"
 
-#: page.ringgroups.php:214
+#: views/form.php:52
 msgid "hunt"
 msgstr "преследване"
+
+#: views/form.php:350
+msgid ""
+"ime in seconds that the phones will ring. For all hunt style ring "
+"strategies, this is the time for each iteration of phone(s) that are rung"
+msgstr ""
 
 #: functions.inc.php:262
 msgid "is already in use"
 msgstr "вече се използва"
 
-#: page.ringgroups.php:64
+#: Ringgroups.class.php:76
 msgid "is not allowed for your account"
 msgstr "не е разрешена за вашия акаунт"
 
-#: page.ringgroups.php:215
+#: views/form.php:54
 msgid "memoryhunt"
 msgstr "преследване с запомняне"
 
@@ -656,7 +582,7 @@ msgstr "няма remotealert поле???"
 msgid "no toolate field???"
 msgstr "няма toolate поле???"
 
-#: page.ringgroups.php:317
+#: views/form.php:211
 msgid "none"
 msgstr "няма"
 
@@ -665,21 +591,188 @@ msgstr "няма"
 msgid "ok"
 msgstr "ok"
 
-#: page.ringgroups.php:219
+#: views/form.php:62
 msgid "random"
 msgstr "случаен"
 
-#: page.ringgroups.php:217
+#: views/form.php:58
 msgid "ring only the first available channel"
 msgstr "звъни само на първия свободен канал"
 
-#: page.ringgroups.php:218
+#: views/form.php:60
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "звъни само на първия канал който не е отворен - игнорира CW"
 
-#: page.ringgroups.php:213
+#: views/form.php:50
 msgid "ringall"
 msgstr "звъни на всички"
+
+#~ msgid "(pick extension)"
+#~ msgstr "(избери вътрешна линия)"
+
+#~ msgid "Announcement:"
+#~ msgstr "Съобщение:"
+
+#~ msgid "Applications"
+#~ msgstr "Приложения"
+
+#~ msgid ""
+#~ "Checking this will allow calls to the Ring Group to be picked up with the "
+#~ "directed call pickup feature using the group number. When not checked, "
+#~ "individual extensions that are part of the group can still be picked up "
+#~ "by doing a directed call pickup to the ringing extension, which works "
+#~ "whether or not this is checked."
+#~ msgstr ""
+#~ "Ако е маркирано ще позволи на обажданията към Група на Звънене да бъдат "
+#~ "изтегляни с директно изтегляне на обажданията като използвате номера на "
+#~ "групата. Ако не е маркирано индивидуалните вътрешни линии които са част "
+#~ "от групата пак ще могат да се  изтеглят с директно изтегляне на "
+#~ "обажданията като използвате номера на вътрешната линия, което работи "
+#~ "независимо дали е маркирано или не."
+
+#~ msgid ""
+#~ "Choose an extension to append to the end of the extension list above."
+#~ msgstr "Изберете вътрешна линия за поставяне в края на списъка по-горе."
+
+#~ msgid "Conflicting Extensions"
+#~ msgstr "Вътрешни Линии в Конфликт"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various \\'hunt\\' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
+#~ "могат да звънят едновременно или в различни конфигурации на \\'преследване"
+#~ "\\'. Допълнително се поддържат и външни номера, а също и опция за "
+#~ "потвърждение на обаждането където трябва да се потвърди че искате да "
+#~ "поемете обаждането преди да ви се прехвърли."
+
+#~ msgid "Delete Group"
+#~ msgstr "Изтрий Групата"
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr "Покажи Потребители на Група на Звънене"
+
+#~ msgid "Edit Ring Group"
+#~ msgstr "Редактирай Група на Звънене"
+
+#~ msgid "Extension Quick Pick"
+#~ msgstr "Бързо Избиране на Вътрешни Линии"
+
+#~ msgid ""
+#~ "Fixed value to replace the CID with used with some of the modes above. "
+#~ "Should be in a format of digits only with an option of E164 format using "
+#~ "a leading \"+\"."
+#~ msgstr ""
+#~ "Фиксирана стойност за замяна на CID с използването на някой от режимите "
+#~ "по-горе. Трябва да е само от цифри с възможност за E164 формат с "
+#~ "използване на водещ \"+\"."
+
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>To "
+#~ "add additional recordings please use the \"System Recordings\" MENU to "
+#~ "the left"
+#~ msgstr ""
+#~ "Съобщение което ще се възпроизведе на обаждащия се преди да се набере "
+#~ "групата.<br><br>За да добавите допълнителни записи, моля използвайте Меню "
+#~ "\"Системни Записи\" отляво"
+
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>You "
+#~ "must install and enable the \"Systems Recordings\" Module to edit this "
+#~ "option"
+#~ msgstr ""
+#~ "Съобщение което ще се възпроизведе на обаждащия се преди да се набере "
+#~ "групата.<br><br>Трябва да сте инсталирали и разрешили Модул \"Системни "
+#~ "Записи\" за да редактирате тази опция"
+
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if 'Confirm Calls' "
+#~ "is enabled.<br><br>To add additional recordings use the \"System "
+#~ "Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "Съобщение което ще се възпроизведе на  ПРИЕМАЩИЯ обаждането, ако Потвърди "
+#~ "Обажданията е маркирано.<br><br>За да добавите допълнителни записи, моля "
+#~ "използвайте Меню \"Системни Записи\" отляво"
+
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if the call has "
+#~ "already been accepted before they push 1.<br><br>To add additional "
+#~ "recordings use the \"System Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "Съобщение което ще се възпроизведе на  ПРИЕМАЩИЯ обаждането, ако "
+#~ "обаждането вече е било прието преди те да натиснат 1.<br><br>За да "
+#~ "добавите допълнителни записи, моля използвайте Меню \"Системни Записи\" "
+#~ "отляво"
+
+#~ msgid "Play Music On Hold?"
+#~ msgstr "Пускане на Музика при Задържане?"
+
+#~ msgid "Record Calls"
+#~ msgstr "Записвай Разговори"
+
+#~ msgid "Remote Announce:"
+#~ msgstr "Кратко Съобщение:"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "Модул Група на Звънене"
+
+#~ msgid "Ring Strategy:"
+#~ msgstr "Стратегия на Звънене:"
+
+#~ msgid "Submit Changes"
+#~ msgstr "Приеми Промените"
+
+#~ msgid "The Group Description provided is too long."
+#~ msgstr "Въведеното Описание за Групата е прекалено дълго."
+
+#~ msgid ""
+#~ "Time in seconds that the phones will ring. For all hunt style ring "
+#~ "strategies, this is the time for each iteration of phone(s) that are rung"
+#~ msgstr ""
+#~ "Времето в секунди за което телефона ще звъни. За всички типове "
+#~ "преследване за стратегии на звънене, това е времето за всяко повторение "
+#~ "на телефона(ите) които звънят"
+
+#~ msgid "Too-Late Announce:"
+#~ msgstr "Много-Късно Съобщение:"
+
+#~ msgid ""
+#~ "When checked, agents who are on an occupied phone will be skipped as if "
+#~ "the line were returning busy. This means that Call Waiting or multi-line "
+#~ "phones will not be presented with the call and in the various hunt style "
+#~ "ring strategies, the next agent will be attempted."
+#~ msgstr ""
+#~ "Когато е маркирано, агентите които говорят ще бъдат пропуснати като заета "
+#~ "линия. Това означава че Чакащо Повикване или телефони с няклоко линии "
+#~ "няма да се представят в обаждането и в различните стратегии на звънене, "
+#~ "следващия агент ще бъде повикан."
+
+#~ msgid ""
+#~ "When checked, agents who attempt to Call Forward will be ignored, this "
+#~ "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+#~ "example to access the extension's Follow-Me, might not honor this "
+#~ "setting ."
+#~ msgstr ""
+#~ "Когато е маркирано, агентите които опитват Пренасочване на Обаждането ще "
+#~ "се игнорират, това важи за CF, CF Общ и CF Заето. Вътрешните Номера "
+#~ "въведени с '#' в края, например за достъп до Следвай Ме, може да не "
+#~ "зачетат тези настройки."
+
+#~ msgid ""
+#~ "When set to true extensions that belong to one or more Ring Groups will "
+#~ "have a Ring Group section and link back to each group they are a member "
+#~ "of."
+#~ msgstr ""
+#~ "Когато е установено вярно вътрешните линии които принадлежат на една или "
+#~ "повече Групи на Звънене ще имат секция Група на Звънене и линк към вяка "
+#~ "група в която участват."
+
+#~ msgid "deleted"
+#~ msgstr "изтрита"
 
 #~ msgid ""
 #~ "Creates a group of extensions that all ring together. Extensions can be "

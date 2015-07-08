@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-23 18:20-0400\n"
+"POT-Creation-Date: 2015-07-08 18:03-0400\n"
 "PO-Revision-Date: 2009-02-01 18:54+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: views/form.php:55
+#: views/form.php:56
 msgid "*-prim"
 msgstr "依从主分机（策略名-prim）"
 
-#: views/form.php:431
+#: views/form.php:432
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "警告信息可以用于为SIP设备产生独特的铃声"
 
-#: views/rggrid.php:13
+#: views/rggrid.php:20
 msgid "Actions"
 msgstr ""
 
@@ -34,27 +34,27 @@ msgstr ""
 msgid "Add Ring Group"
 msgstr "添加拨号小组"
 
-#: views/form.php:419
+#: views/form.php:420
 msgid "Alert Info"
 msgstr "警告信息"
 
-#: views/form.php:235
+#: views/form.php:236
 msgid "Always transmit the Fixed CID Value below."
 msgstr ""
 
-#: views/form.php:90
+#: views/form.php:91
 msgid "Announcement"
 msgstr ""
 
-#: views/form.php:395
+#: views/form.php:396
 msgid "CID Name Prefix"
 msgstr "主叫ID名的前缀"
 
-#: views/form.php:603
+#: views/form.php:604
 msgid "Call Recording"
 msgstr "呼叫录音:"
 
-#: views/form.php:553
+#: views/form.php:554
 msgid "Change External CID Configuration"
 msgstr "修改外部CID配置"
 
@@ -62,35 +62,35 @@ msgstr "修改外部CID配置"
 msgid "Checking if recordings need migration.."
 msgstr "正在检查录音是否需要迁移。。。"
 
-#: views/form.php:524
+#: views/form.php:525
 msgid "Confirm Calls"
 msgstr "呼叫确认"
 
-#: views/form.php:167 views/form.php:233 views/form.php:245
+#: views/form.php:168 views/form.php:234 views/form.php:246
 msgid "Default"
 msgstr "默认"
 
-#: Ringgroups.class.php:141
+#: Ringgroups.class.php:143
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:12
+#: views/rggrid.php:19
 msgid "Description"
 msgstr ""
 
-#: views/form.php:637
+#: views/form.php:638
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
 
-#: views/form.php:610
+#: views/form.php:611
 msgid "Dont Care"
 msgstr ""
 
-#: views/form.php:497
+#: views/form.php:498
 msgid "Enable Call Pickup"
 msgstr "启用呼叫接听"
 
-#: views/form.php:539
+#: views/form.php:540
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -101,30 +101,30 @@ msgstr ""
 "由语音邮箱接听。要启用这个选项，需要远端在接通前在电话上按下1。这个功能只会在"
 "全部响铃的策略下起作用。"
 
-#: views/form.php:361
+#: views/form.php:362
 msgid "Extension List"
 msgstr "分机列表"
 
-#: views/form.php:235 views/form.php:246 views/form.php:579
+#: views/form.php:236 views/form.php:247 views/form.php:580
 msgid "Fixed CID Value"
 msgstr "固定CID"
 
-#: views/form.php:591
+#: views/form.php:592
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
 
-#: views/form.php:608
+#: views/form.php:609
 msgid "Force"
 msgstr ""
 
-#: views/form.php:241 views/form.php:249
+#: views/form.php:242 views/form.php:250
 msgid "Force Dialed Number"
 msgstr ""
 
-#: views/form.php:287
+#: views/form.php:288
 msgid "Group Description"
 msgstr "小组描述"
 
@@ -132,7 +132,7 @@ msgstr "小组描述"
 msgid "INUSE"
 msgstr "正在使用"
 
-#: views/form.php:224
+#: views/form.php:225
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -140,7 +140,7 @@ msgstr ""
 "如果你选择了一个等待音乐类别，而不是“振铃”，呼叫者在等待接听的时候会听到音"
 "乐。"
 
-#: views/form.php:443
+#: views/form.php:444
 msgid "Ignore CF Settings"
 msgstr "忽略呼叫转移的相关设置"
 
@@ -156,7 +156,7 @@ msgstr "指定了无效的时间"
 msgid "List Ring Groups"
 msgstr ""
 
-#: views/form.php:381
+#: views/form.php:382
 msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Pick below "
 "to insert them here.<br><br>You can include an extension on a remote system, "
@@ -167,46 +167,46 @@ msgid ""
 "the end."
 msgstr ""
 
-#: views/form.php:61
+#: views/form.php:62
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
-#: views/form.php:111
+#: views/form.php:112
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: views/form.php:146
+#: views/form.php:147
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU above"
 msgstr ""
 
-#: views/form.php:181
+#: views/form.php:182
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: views/form.php:231
+#: views/form.php:232
 msgid "Mode"
 msgstr "模式"
 
-#: views/form.php:612
+#: views/form.php:613
 msgid "Never"
 msgstr "从不录音"
 
-#: views/form.php:450 views/form.php:477 views/form.php:504 views/form.php:531
+#: views/form.php:451 views/form.php:478 views/form.php:505 views/form.php:532
 msgid "No"
 msgstr ""
 
-#: views/form.php:97 views/form.php:132
+#: views/form.php:98 views/form.php:133
 msgid "None"
 msgstr "无"
 
@@ -217,11 +217,11 @@ msgid ""
 msgstr ""
 "若“确认”选项被启用，就只支持全部响铃、全部响铃2、搜寻和各自的主分机依从策略。"
 
-#: views/form.php:237 views/form.php:247
+#: views/form.php:238 views/form.php:248
 msgid "Outside Calls Fixed CID Value"
 msgstr ""
 
-#: views/form.php:200
+#: views/form.php:201
 msgid "Play Music On Hold"
 msgstr ""
 
@@ -233,23 +233,23 @@ msgstr "请输入有效的组描述"
 msgid "Please enter an extension list."
 msgstr "请输入一个分机列表。"
 
-#: views/form.php:299
+#: views/form.php:300
 msgid "Provide a descriptive title for this Ring Group."
 msgstr "为拨号小组提供一个描述性的标题"
 
-#: views/form.php:125
+#: views/form.php:126
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:153
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:207
+#: views/form.php:208
 msgid "Ring"
 msgstr "振铃"
 
-#: views/rggrid.php:11
+#: views/rggrid.php:18
 msgid "Ring Group"
 msgstr "拨号小组"
 
@@ -276,19 +276,19 @@ msgstr "拨号小组：%s (%s)"
 msgid "Ring Groups"
 msgstr "拨号小组"
 
-#: views/form.php:311
+#: views/form.php:312
 msgid "Ring Strategy"
 msgstr ""
 
-#: views/form.php:337
+#: views/form.php:338
 msgid "Ring Time (max 300 sec)"
 msgstr "最长振铃时间(最长300秒)"
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "Ring all available channels until one answers (default)"
 msgstr "全部可用频道都响铃直到其中一个接听（默认设置）"
 
-#: views/form.php:53
+#: views/form.php:54
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -296,31 +296,31 @@ msgstr ""
 "首先使列表中第一个分机响铃，然后是第一个和第二个响，接着是第一、二、三个"
 "响。。。以次类推。"
 
-#: views/form.php:263
+#: views/form.php:264
 msgid "Ring-Group Number"
 msgstr "拨号小组号码"
 
-#: Ringgroups.class.php:121
+#: Ringgroups.class.php:123
 msgid "RingGroup"
 msgstr ""
 
-#: views/form.php:470
+#: views/form.php:471
 msgid "Skip Busy Agent"
 msgstr "跳过忙碌的坐席"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:148
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:51
+#: views/form.php:52
 msgid "Take turns ringing each available extension"
 msgstr "在可用的分机上轮流响铃"
 
-#: views/form.php:275
+#: views/form.php:276
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "用户拨打此号码以呼叫这个拨号小组中的分机"
 
-#: views/form.php:55
+#: views/form.php:56
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -339,18 +339,18 @@ msgstr "这个拨号小组"
 msgid "Time must be between 1 and 300 seconds"
 msgstr ""
 
-#: views/form.php:160
+#: views/form.php:161
 msgid "Too-Late Announce"
 msgstr ""
 
-#: views/form.php:237
+#: views/form.php:238
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
 
-#: views/form.php:241
+#: views/form.php:242
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -358,7 +358,7 @@ msgid ""
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
 
-#: views/form.php:239
+#: views/form.php:240
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -366,11 +366,11 @@ msgid ""
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
 
-#: views/form.php:233
+#: views/form.php:234
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 
-#: views/form.php:239 views/form.php:248
+#: views/form.php:240 views/form.php:249
 msgid "Use Dialed Number"
 msgstr ""
 
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Warning! Extension"
 msgstr "警告！你的帐户无法使用分机"
 
-#: views/form.php:485
+#: views/form.php:486
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -386,7 +386,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/form.php:512
+#: views/form.php:513
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number. When not checked, "
@@ -395,22 +395,22 @@ msgid ""
 "or not this is checked."
 msgstr ""
 
-#: views/form.php:458
+#: views/form.php:459
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: views/form.php:649
+#: views/form.php:650
 msgid "Where to send callers if there is no answer."
 msgstr ""
 
-#: views/form.php:448 views/form.php:475 views/form.php:502 views/form.php:529
+#: views/form.php:449 views/form.php:476 views/form.php:503 views/form.php:530
 msgid "Yes"
 msgstr ""
 
-#: views/form.php:620
+#: views/form.php:621
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -419,7 +419,7 @@ msgid ""
 "setting."
 msgstr ""
 
-#: views/form.php:407
+#: views/form.php:408
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
@@ -458,7 +458,7 @@ msgstr "正在添加toolate_id字段。。。"
 msgid "already migrated"
 msgstr "已经迁移过了"
 
-#: views/form.php:211
+#: views/form.php:212
 msgid "default"
 msgstr "默认"
 
@@ -480,19 +480,19 @@ msgstr "正在删除toolate字段。。。"
 msgid "fatal error"
 msgstr "致命错误"
 
-#: views/form.php:57
+#: views/form.php:58
 msgid "firstavailable"
 msgstr "首个可用频道"
 
-#: views/form.php:59
+#: views/form.php:60
 msgid "firstnotonphone"
 msgstr "首个未离钩频道"
 
-#: views/form.php:51
+#: views/form.php:52
 msgid "hunt"
 msgstr "搜寻"
 
-#: views/form.php:349
+#: views/form.php:350
 msgid ""
 "ime in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
@@ -506,7 +506,7 @@ msgstr "已经在使用中了"
 msgid "is not allowed for your account"
 msgstr " "
 
-#: views/form.php:53
+#: views/form.php:54
 msgid "memoryhunt"
 msgstr "记忆性搜寻"
 
@@ -543,7 +543,7 @@ msgstr "没有remotealert字段？"
 msgid "no toolate field???"
 msgstr "没有toolate字段？"
 
-#: views/form.php:210
+#: views/form.php:211
 msgid "none"
 msgstr "无"
 
@@ -552,19 +552,19 @@ msgstr "无"
 msgid "ok"
 msgstr "完成"
 
-#: views/form.php:61
+#: views/form.php:62
 msgid "random"
 msgstr ""
 
-#: views/form.php:57
+#: views/form.php:58
 msgid "ring only the first available channel"
 msgstr "只在第一个可用的频道响铃"
 
-#: views/form.php:59
+#: views/form.php:60
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "只在第一个不是离钩状态下的频道响铃——忽略呼叫等待"
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "ringall"
 msgstr "全部响铃"
 
