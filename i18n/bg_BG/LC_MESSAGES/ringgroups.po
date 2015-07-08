@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:59-0500\n"
-"PO-Revision-Date: 2015-03-11 21:54+0200\n"
+"PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/bg_BG/>\n"
@@ -190,7 +190,7 @@ msgstr "Описание на Групата"
 
 #: functions.inc.php:330
 msgid "INUSE"
-msgstr "ANVÄNDS"
+msgstr "ИЗПОЛЗВА СЕ"
 
 #: page.ringgroups.php:308
 msgid ""
