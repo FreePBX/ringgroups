@@ -101,6 +101,8 @@ function ringgroups_get_config($engine) {
 					//
 					if($ringing == 'Ring' || empty($ringing) ) {
 						$dialopts = '${DIAL_OPTIONS}';
+					} elseif($ringing == "inherit") {
+						$dialopts = 'm(${CHANNEL(musicclass)})${REPLACE(DIAL_OPTIONS,r)}';
 					} else {
 						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}

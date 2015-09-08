@@ -206,6 +206,7 @@ if(function_exists('music_list')) {
 							$cur = (isset($ringing) ? $ringing : 'Ring');
 							$tresults = \music_list();
 							$ringhtml .= '<option value="Ring">'._("Ring").'</option>';
+							$ringhtml .= '<option value="inherit">'._("Inherit").'</option>';
 							if (isset($tresults[0])) {
 							foreach ($tresults as $tresult) {
 							    ( $tresult == 'none' ? $ttext = _("none") : $ttext = $tresult );
