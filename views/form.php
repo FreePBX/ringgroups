@@ -502,7 +502,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 					<div class="col-md-9 radioset">
 						<input type="radio" name="cpickup" id="cpickupyes" value="CHECKED" <?php echo ($cpickup == "CHECKED"?"CHECKED":"") ?>>
 						<label for="cpickupyes"><?php echo _("Yes");?></label>
-						<input type="radio" name="cpickup" id="cpickupno" <?php echo ($cpickup == "CHECKED"?"":"CHECKED") ?>>
+						<input type="radio" name="cpickup" id="cpickupno" value="" <?php echo ($cpickup == "CHECKED"?"":"CHECKED") ?>>
 						<label for="cpickupno"><?php echo _("No");?></label>
 					</div>
 				</div>
@@ -529,7 +529,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 					<div class="col-md-9 radioset">
 						<input type="radio" name="needsconf" id="needsconfyes" value="CHECKED" <?php echo ($needsconf == "CHECKED"?"CHECKED":"") ?>>
 						<label for="needsconfyes"><?php echo _("Yes");?></label>
-						<input type="radio" name="needsconf" id="needsconfno" <?php echo ($needsconf == "CHECKED"?"":"CHECKED") ?>>
+						<input type="radio" name="needsconf" id="needsconfno" value="" <?php echo ($needsconf == "CHECKED"?"":"CHECKED") ?>>
 						<label for="needsconfno"><?php echo _("No");?></label>
 					</div>
 				</div>
