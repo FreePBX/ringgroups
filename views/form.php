@@ -448,7 +448,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 					<div class="col-md-9 radioset">
 						<input type="radio" name="cfignore" id="cfignoreyes" value="CHECKED" <?php echo ($cfignore == "CHECKED"?"CHECKED":"") ?>>
 						<label for="cfignoreyes"><?php echo _("Yes");?></label>
-						<input type="radio" name="cfignore" id="cfignoreno" <?php echo ($cfignore == "CHECKED"?"":"CHECKED") ?>>
+						<input type="radio" name="cfignore" id="cfignoreno" value = "" <?php echo ($cfignore == "CHECKED"?"":"CHECKED") ?>>
 						<label for="cfignoreno"><?php echo _("No");?></label>
 					</div>
 				</div>
@@ -475,7 +475,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 					<div class="col-md-9 radioset">
 						<input type="radio" name="cwignore" id="cwignoreyes" value="CHECKED" <?php echo ($cwignore == "CHECKED"?"CHECKED":"") ?>>
 						<label for="cwignoreyes"><?php echo _("Yes");?></label>
-						<input type="radio" name="cwignore" id="cwignoreno" <?php echo ($cwignore == "CHECKED"?"":"CHECKED") ?>>
+						<input type="radio" name="cwignore" id="cwignoreno" value="" <?php echo ($cwignore == "CHECKED"?"":"CHECKED") ?>>
 						<label for="cwignoreno"><?php echo _("No");?></label>
 					</div>
 				</div>
