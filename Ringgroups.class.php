@@ -163,4 +163,58 @@ class Ringgroups implements \BMO {
     	}
     	return $buttons;
     }
+		public function listRinggroups($get_all=false) {
+			$sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
+			$stmt = $this->db->prepare($sql);
+			$stmt->execute();
+			$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
+			foreach ($results as $result) {
+				if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
+					$grps[] = array(
+						0 => $result['grpnum'],
+						1 => $result['description'],
+						'grpnum' => $result['grpnum'],
+						'description' => $result['description'],
+					);
+				}
+			}
+			if (isset($grps))
+				return $grps;
+			else
+				return array();
+		}
+		public function ajaxRequest($req, &$setting) {
+			switch ($req) {
+				case 'getJSON':
+					return true;
+				break;
+				default:
+					return false;
+				break;
+			}
+		}
+	public function ajaxHandler(){
+		switch ($_REQUEST['command']) {
+			case 'getJSON':
+				switch ($_REQUEST['jdata']) {
+					case 'grid':
+						return array_values($this->listRinggroups());
+					break;
+
+					default:
+						return false;
+					break;
+				}
+			break;
+
+			default:
+				return false;
+			break;
+		}
+	}
+	public function getRightNav($request) {
+	  if(isset($request['view']) && $request['view'] == 'form'){
+	    return load_view(__DIR__."/views/bootnav.php",array());
+	  }
+	}
 }

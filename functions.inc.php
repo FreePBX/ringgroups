@@ -297,21 +297,8 @@ function ringgroups_del($grpnum) {
 }
 
 function ringgroups_list($get_all=false) {
-	$results = sql("SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)","getAll",DB_FETCHMODE_ASSOC);
-	foreach ($results as $result) {
-		if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
-			$grps[] = array(
-				0 => $result['grpnum'],
-				1 => $result['description'],
-				'grpnum' => $result['grpnum'],
-				'description' => $result['description'],
-			);
-		}
-	}
-	if (isset($grps))
-		return $grps;
-	else
-		return array();
+	dbug("ringgroups_list has been moved to BMO Ringgroups->listRinggroups");
+	return \FreePBX::Ringgroups()->listRinggroups($get_all);
 }
 
 function ringgroups_check_extensions($exten=true) {
