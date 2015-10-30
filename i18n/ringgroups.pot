@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,12 @@ msgstr ""
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
 #: views/bootnav.php:2
+#: views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr ""
 
@@ -75,7 +76,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -129,7 +130,7 @@ msgstr ""
 msgid "Group Description"
 msgstr ""
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr ""
 
@@ -155,7 +156,7 @@ msgstr ""
 msgid "Invalid time specified"
 msgstr ""
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -256,7 +257,8 @@ msgstr ""
 msgid "Ring"
 msgstr ""
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14
+#: views/rggrid.php:16
 msgid "Ring Group"
 msgstr ""
 
@@ -265,17 +267,17 @@ msgstr ""
 msgid "Ring Group %s: "
 msgstr ""
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr ""
 
 #: functions.inc.php:57
-#: functions.inc.php:331
+#: functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""

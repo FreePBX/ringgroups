@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -26,11 +26,11 @@ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "Alertinfo kan användas för att sätta en speciell ringsignal på SIP telefoner"
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "Lägg till ringgrupp"
 
@@ -74,7 +74,7 @@ msgstr "Standard"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
@@ -157,7 +157,7 @@ msgstr "Ogiltigt gruppnummer angivet"
 msgid "Invalid time specified"
 msgstr "Ogiltig tid angiven"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -255,7 +255,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Ring"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Ringgrupp"
 
@@ -264,16 +264,16 @@ msgstr "Ringgrupp"
 msgid "Ring Group %s: "
 msgstr "Ringgrupp %s: "
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Ringgrupp: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"

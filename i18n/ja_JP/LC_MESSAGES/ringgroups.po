@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -57,11 +57,11 @@ msgstr "*-prim"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "アラート情報（ALERT_INFO）を使ってSIP端末の着信音に設定できます。"
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "着信グループを追加"
 
@@ -105,7 +105,7 @@ msgstr "デフォルト"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgstr "ダイヤルした呼び出し側の番号を強制する"
 msgid "Group Description"
 msgstr "グループの説明"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "使用中"
 
@@ -188,7 +188,7 @@ msgstr "不正なグループ番号が入力されています。"
 msgid "Invalid time specified"
 msgstr "不正な時間が入力されています。"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Ring"
 msgstr "リング"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "着信グループ"
 
@@ -295,16 +295,16 @@ msgstr "着信グループ"
 msgid "Ring Group %s: "
 msgstr "着信グループ %s: "
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "着信グループ: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"

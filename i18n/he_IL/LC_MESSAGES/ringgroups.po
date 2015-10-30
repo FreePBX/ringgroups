@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -27,11 +27,11 @@ msgstr "*-ראשוני"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "הוסף קבוצת צלצול"
 
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "תיאור הקבוצה"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "בשימוש"
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Invalid time specified"
 msgstr "ציון זמן לא חוקי"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -255,7 +255,7 @@ msgstr ""
 msgid "Ring"
 msgstr "צלצל"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "קבוצת צלצול"
 
@@ -264,16 +264,16 @@ msgstr "קבוצת צלצול"
 msgid "Ring Group %s: "
 msgstr "קבוצת צלצול %s: "
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "קבוצת צלצול %s:"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "קבוצת צלצול (%s% (s"

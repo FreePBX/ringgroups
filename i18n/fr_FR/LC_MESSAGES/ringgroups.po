@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2009-04-21 11:18+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -38,11 +38,11 @@ msgstr ""
 "ALERT_INFO peut être utilisé pour avoir des sonneries distinctes avec les "
 "périphériques SIP."
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "Ajouter Groupe de Sonnerie"
 
@@ -86,7 +86,7 @@ msgstr "Par défaut"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Description du Groupe"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "UTILISÉ"
 
@@ -172,7 +172,7 @@ msgstr "Numéro de Groupe spécifié invalide"
 msgid "Invalid time specified"
 msgstr "Temps spécifié invalide"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -270,7 +270,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Sonner"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Groupe de Sonnerie"
 
@@ -279,16 +279,16 @@ msgstr "Groupe de Sonnerie"
 msgid "Ring Group %s: "
 msgstr "Groupe de Sonnerie %s :"
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Groupe de Sonnerie : %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://weblate.freepbx.org/projects/freepbx/"
@@ -31,11 +31,11 @@ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "ALERT_INFO може да се използва за различно звънене при някои SIP устройства."
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "Добави Група на Звънене"
 
@@ -79,7 +79,7 @@ msgstr "По-Подразбиране"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr "Принудително Използвай Избрания Номер"
 msgid "Group Description"
 msgstr "Описание на Групата"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
@@ -163,7 +163,7 @@ msgstr "Неправилен Номер на Група е определен"
 msgid "Invalid time specified"
 msgstr "Неправилно въведено време"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -273,7 +273,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Звънене"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Група на Звънене"
 
@@ -282,16 +282,16 @@ msgstr "Група на Звънене"
 msgid "Ring Group %s: "
 msgstr "Група на Звънене %s: "
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr "Потребители на Група на Звънене"
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Група на Звънене: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"

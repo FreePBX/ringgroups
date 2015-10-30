@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:27-0700\n"
+"POT-Creation-Date: 2015-10-29 18:44-0700\n"
 "PO-Revision-Date: 2015-04-25 21:10+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -31,11 +31,11 @@ msgstr ""
 "распознавания адресата чтобы присвоить различный тип звонков на SIP "
 "устройствах."
 
-#: views/rggrid.php:20
+#: views/rggrid.php:18
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
 msgstr "Добавить группу вызова"
 
@@ -79,7 +79,7 @@ msgstr "По умолчанию"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:19
+#: views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -134,7 +134,7 @@ msgstr "Форсировать набранный номер"
 msgid "Group Description"
 msgstr "Описание группы"
 
-#: functions.inc.php:332
+#: functions.inc.php:319
 msgid "INUSE"
 msgstr "ИСПОЛБЗУЕТСЯ"
 
@@ -162,7 +162,7 @@ msgstr "Указан неверный номер группы"
 msgid "Invalid time specified"
 msgstr "Указано неверное время"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List Ring Groups"
 msgstr ""
 
@@ -270,7 +270,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Звонок"
 
-#: views/rggrid.php:18
+#: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Группа вызова"
 
@@ -279,16 +279,16 @@ msgstr "Группа вызова"
 msgid "Ring Group %s: "
 msgstr "Группа вызова %s: "
 
-#: functions.inc.php:455
+#: functions.inc.php:442
 msgid "Ring Group Membership"
 msgstr "Членство в группе вызова"
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Группа вызова %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Группа вызова: %s (%s)"
