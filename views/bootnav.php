@@ -11,6 +11,7 @@
 <thead>
 	<tr>
 		<th data-sortable="true" data-field="grpnum"><?php echo _("Ring Group")?></th>
+		<th data-sortable="true" data-field="description"><?php echo _("Description")?></th>
 	</tr>
 </thead>
 </table>
