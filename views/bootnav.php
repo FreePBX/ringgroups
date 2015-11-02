@@ -6,7 +6,6 @@
 				data-url="ajax.php?module=ringgroups&command=getJSON&jdata=grid"
 				data-toolbar="#toolbar-rgnav"
         data-toggle="table"
-        data-pagination="true"
         data-search="true"
         class="table">
 <thead>
