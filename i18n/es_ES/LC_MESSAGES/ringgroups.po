@@ -3,14 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-08 23:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-12-08 23:33+0200\n"
+"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
-"X-Generator: Translate Toolkit 1.11.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/form.php:56
 msgid "*-prim"
@@ -124,7 +126,7 @@ msgstr "Forzar Número Marcado"
 
 #: views/form.php:289
 msgid "Group Description"
-msgstr "Descripción del grupo de extensiones:"
+msgstr "Descripción del grupo de extensiones"
 
 #: functions.inc.php:319
 msgid "INUSE"
@@ -153,7 +155,7 @@ msgstr "Número de grupo de extensiones no válido"
 
 #: assets/js/ringgroups.js:54
 msgid "Invalid time specified"
-msgstr "Tiempo especificado no válido."
+msgstr "Tiempo especificado no válido"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
@@ -242,7 +244,7 @@ msgstr ""
 
 #: assets/js/ringgroups.js:56
 msgid "Please enter a valid Group Description"
-msgstr "Por favor, introduzca una descripción de grupo de extensiones válido."
+msgstr "Por favor, introduzca una descripción de grupo de extensiones válido"
 
 #: assets/js/ringgroups.js:53
 msgid "Please enter an extension list."
@@ -338,7 +340,7 @@ msgstr "Por turnos, sonando cada extensión disponible"
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 "El número al que los usuarios deberán llamar para contactar con este grupo "
-"de extensiones."
+"de extensiones"
 
 #: views/form.php:56
 msgid ""
@@ -490,15 +492,15 @@ msgstr "Añadiendo campo 'annmsg_id'..."
 
 #: install.php:193
 msgid "adding remotealert_id field.."
-msgstr "Añadiendo campo 'remotealert_id'... "
+msgstr "Añadiendo campo 'remotealert_id'.."
 
 #: install.php:202
 msgid "adding toolate_id field.."
-msgstr "Añadiendo campo 'toolate_id'... "
+msgstr "Añadiendo campo 'toolate_id'.."
 
 #: install.php:320
 msgid "already migrated"
-msgstr "Ya migrado."
+msgstr "Ya migrado"
 
 #: views/form.php:213
 msgid "default"
@@ -506,15 +508,15 @@ msgstr "Por defecto"
 
 #: install.php:294
 msgid "dropping annmsg field.."
-msgstr "Eliminando campo 'annmsg'... "
+msgstr "Eliminando campo 'annmsg'.."
 
 #: install.php:302
 msgid "dropping remotealert field.."
-msgstr "Eliminando campo 'remotealert'... "
+msgstr "Eliminando campo 'remotealert'.."
 
 #: install.php:310
 msgid "dropping toolate field.."
-msgstr "Eliminando campo 'toolate'... "
+msgstr "Eliminando campo 'toolate'.."
 
 #: install.php:188 install.php:197 install.php:206 install.php:218
 #: install.php:234 install.php:244 install.php:260 install.php:270
@@ -546,7 +548,7 @@ msgstr "ya está en uso"
 
 #: Ringgroups.class.php:76
 msgid "is not allowed for your account"
-msgstr "no está permitida por su cuenta."
+msgstr "no está permitida por su cuenta"
 
 #: views/form.php:54
 msgid "memoryhunt"
@@ -554,7 +556,7 @@ msgstr "memoria-lineal"
 
 #: install.php:214
 msgid "migrate annmsg to ids.."
-msgstr "Migrando la tabla 'annmgs' a identificadores... "
+msgstr "Migrando la tabla 'annmgs' a identificadores.."
 
 #: install.php:240
 msgid "migrate remotealert to  ids.."
@@ -567,7 +569,7 @@ msgstr "Migrando tabla 'toolate' a identificadores.."
 #: install.php:238 install.php:264 install.php:290
 #, php-format
 msgid "migrated %s entries"
-msgstr "Migrados %s elementos."
+msgstr "Migrados %s elementos"
 
 #: install.php:183
 msgid "migrating"
@@ -575,15 +577,15 @@ msgstr "migrando"
 
 #: install.php:298
 msgid "no annmsg field???"
-msgstr "No existe el campo annmsg."
+msgstr "No existe el campo annmsg???"
 
 #: install.php:306
 msgid "no remotealert field???"
-msgstr "No existe el campo 'remotealert'."
+msgstr "No existe el campo 'remotealert'???"
 
 #: install.php:314
 msgid "no toolate field???"
-msgstr "No existe el campo 'toolate'."
+msgstr "No existe el campo 'toolate'???"
 
 #: views/form.php:212
 msgid "none"
@@ -600,7 +602,7 @@ msgstr "Aleatorio"
 
 #: views/form.php:58
 msgid "ring only the first available channel"
-msgstr "Sólo hace sonar el primer canal activo."
+msgstr "Sólo hace sonar el primer canal activo"
 
 #: views/form.php:60
 msgid "ring only the first channel which is not offhook - ignore CW"
