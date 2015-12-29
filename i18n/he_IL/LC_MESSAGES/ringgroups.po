@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -47,6 +47,10 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr "יישומים"
+
 #: views/form.php:397
 #, fuzzy
 msgid "CID Name Prefix"
@@ -68,6 +72,15 @@ msgstr ""
 msgid "Confirm Calls"
 msgstr "אשר שיחות"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr ""
@@ -76,7 +89,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -255,7 +268,7 @@ msgstr ""
 msgid "Ring"
 msgstr "צלצל"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "קבוצת צלצול"
 
@@ -278,7 +291,7 @@ msgstr "קבוצת צלצול %s:"
 msgid "Ring Group: %s (%s)"
 msgstr "קבוצת צלצול (%s% (s"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 #, fuzzy
 msgid "Ring Groups"
 msgstr "קבוצת צלצול"
@@ -579,9 +592,6 @@ msgstr ""
 #: views/form.php:50
 msgid "ringall"
 msgstr "צלצל לכולם"
-
-#~ msgid "Applications"
-#~ msgstr "יישומים"
 
 #~ msgid "(pick extension)"
 #~ msgstr "(בחר שלוחות)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://weblate.freepbx.org/projects/freepbx/"
@@ -51,6 +51,10 @@ msgstr "Винаги предава Фиксиран CID определен по
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr "Приложения"
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "Префикс на CID Име"
@@ -71,6 +75,20 @@ msgstr "Проверка дали записите имат нужда от пр
 msgid "Confirm Calls"
 msgstr "Потвърди Обажданията"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
+"могат да звънят едновременно или в различни конфигурации на 'преследване'. "
+"Допълнително се поддържат и външни номера, а също и опция за потвърждение на "
+"обаждането където трябва да се потвърди че искате да поемете обаждането "
+"преди да ви се прехвърли."
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "По-Подразбиране"
@@ -79,7 +97,7 @@ msgstr "По-Подразбиране"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -273,7 +291,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Звънене"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Група на Звънене"
 
@@ -296,7 +314,7 @@ msgstr "Група на Звънене: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Групи на Звънене"
 
@@ -617,9 +635,6 @@ msgstr "звъни на всички"
 #~ msgid "Announcement:"
 #~ msgstr "Съобщение:"
 
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
 #~ msgid ""
 #~ "Checking this will allow calls to the Ring Group to be picked up with the "
 #~ "directed call pickup feature using the group number. When not checked, "
@@ -777,19 +792,6 @@ msgstr "звъни на всички"
 
 #~ msgid "deleted"
 #~ msgstr "изтрита"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
-#~ "могат да звънят едновременно или в различни конфигурации на "
-#~ "'преследване'. Допълнително се поддържат и външни номера, а също и опция "
-#~ "за потвърждение на обаждането където трябва да се потвърди че искате да "
-#~ "поемете обаждането преди да ви се прехвърли."
 
 #~ msgid "On Demand"
 #~ msgstr "При Поискване"

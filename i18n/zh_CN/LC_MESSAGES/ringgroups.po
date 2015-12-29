@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -50,6 +50,10 @@ msgstr "总是传输以下Fixed CID 值。"
 msgid "Announcement"
 msgstr "语音播报"
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr ""
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "主叫ID名的前缀"
@@ -70,6 +74,15 @@ msgstr "正在检查录音是否需要迁移。。。"
 msgid "Confirm Calls"
 msgstr "呼叫确认"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "默认"
@@ -78,7 +91,7 @@ msgstr "默认"
 msgid "Delete"
 msgstr "删除"
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr "描述"
 
@@ -259,7 +272,7 @@ msgstr "重新设置"
 msgid "Ring"
 msgstr "振铃"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "拨号小组"
 
@@ -282,7 +295,7 @@ msgstr "拨号小组：%s"
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "拨号小组"
 

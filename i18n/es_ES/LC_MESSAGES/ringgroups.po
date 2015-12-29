@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 23:31+0200\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2015-12-08 23:33+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
-"Language-Team: Spanish "
-"<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/es_ES/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -44,6 +44,10 @@ msgstr "Siempre transmite el Valor Fijo CID de abajo."
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr ""
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "Nombre Prefijo CID"
@@ -64,6 +68,15 @@ msgstr "Comprobando si las grabaciones necesitan migrarse..."
 msgid "Confirm Calls"
 msgstr "Confirmar llamadas"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "Por defecto"
@@ -72,7 +85,7 @@ msgstr "Por defecto"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -174,9 +187,9 @@ msgstr ""
 "Liste Extensiones a sonar, uno por línea, o utilizar la \"Extensión Quick "
 "Pick\" abajo para insertarlos aquí. Usted puede incluir una extensión en un "
 "sistema remoto, o un número externo sufijando un número con un '#' . ej: "
-"2448089# marcaría 2448089 en el troncal adecuado (vea Enrutamiento de "
-"Salida)<br><br> extensiones sin un '#' no sonará Sigue-Me de un usuario. "
-"Para marcar Sigue-Me, colas y otros números que no son extensiones, poner un "
+"2448089# marcaría 2448089 en el troncal adecuado (vea Enrutamiento de Salida)"
+"<br><br> extensiones sin un '#' no sonará Sigue-Me de un usuario. Para "
+"marcar Sigue-Me, colas y otros números que no son extensiones, poner un "
 "siempre '#' al final."
 
 #: views/form.php:62
@@ -267,7 +280,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Sonar"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Grupo de extensiones"
 
@@ -290,7 +303,7 @@ msgstr "Grupo de extensiones: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de extensiones: %s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Grupos de extensiones"
 
@@ -351,9 +364,9 @@ msgid ""
 msgstr ""
 "Estos modos actúan como se han descrito anteriormente. Aún así, si la "
 "primera extensión (la primera de la lista) está ocupada, las otras "
-"extensiones no sonarán. Si la primera extensión está en modo 'No molestar' "
-"(DND), no sonará. Si la primera extensión está en modo 'Desvío de llamada "
-"incondicional', entonces sonarán todas"
+"extensiones no sonarán. Si la primera extensión está en modo 'No "
+"molestar' (DND), no sonará. Si la primera extensión está en modo 'Desvío de "
+"llamada incondicional', entonces sonarán todas"
 
 #: functions.inc.php:264
 msgid "This ringgroup"

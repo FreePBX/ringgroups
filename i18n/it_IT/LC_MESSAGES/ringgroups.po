@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2008-11-06 14:54+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -47,6 +47,10 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr ""
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "Prefisso ID Chiamante"
@@ -67,6 +71,15 @@ msgstr "Controllo se le registrazioni hanno bisogno di una migrazione.."
 msgid "Confirm Calls"
 msgstr "Conferma Chiamate"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "Predefinito"
@@ -75,7 +88,7 @@ msgstr "Predefinito"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -257,7 +270,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Squillo"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Gruppo di Chiamata"
 
@@ -280,7 +293,7 @@ msgstr "Gruppo di Chiamata: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Gruppi di chiamata"
 

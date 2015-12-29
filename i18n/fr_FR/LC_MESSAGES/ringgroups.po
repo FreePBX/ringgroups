@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2009-04-21 11:18+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -58,6 +58,10 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr ""
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "Préfixe de Nom CID"
@@ -78,6 +82,15 @@ msgstr "Contrôle si les enregistrements ont besoin d'être migrés..."
 msgid "Confirm Calls"
 msgstr "Confirmer les Appels"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "Par défaut"
@@ -86,7 +99,7 @@ msgstr "Par défaut"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -270,7 +283,7 @@ msgstr ""
 msgid "Ring"
 msgstr "Sonner"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "Groupe de Sonnerie"
 
@@ -293,7 +306,7 @@ msgstr "Groupe de Sonnerie : %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Groupes de Sonnerie"
 

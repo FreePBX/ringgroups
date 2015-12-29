@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:44-0700\n"
+"POT-Creation-Date: 2015-12-28 18:57-0800\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -77,6 +77,10 @@ msgstr "常に以下の固定CIDを送信します。"
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+msgid "Applications"
+msgstr "アプリケーション"
+
 #: views/form.php:397
 msgid "CID Name Prefix"
 msgstr "CID名前プリフィックス"
@@ -97,6 +101,19 @@ msgstr "録音の移行が必要かチェック中.."
 msgid "Confirm Calls"
 msgstr "コールを確認する"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
+"様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
+"他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認でき"
+"るオプションも使えます。"
+
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "デフォルト"
@@ -105,7 +122,7 @@ msgstr "デフォルト"
 msgid "Delete"
 msgstr ""
 
-#: views/rggrid.php:17
+#: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
 
@@ -286,7 +303,7 @@ msgstr ""
 msgid "Ring"
 msgstr "リング"
 
-#: views/bootnav.php:14 views/rggrid.php:16
+#: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
 msgstr "着信グループ"
 
@@ -309,7 +326,7 @@ msgstr "着信グループ: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"
 
-#: page.ringgroups.php:9
+#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "着信グループ"
 
@@ -619,21 +636,6 @@ msgstr ""
 #: views/form.php:50
 msgid "ringall"
 msgstr "ringall"
-
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
-#~ "様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
-#~ "他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認で"
-#~ "きるオプションも使えます。"
 
 #~ msgid "Display Extension Ring Group Members"
 #~ msgstr "内線着信グループのメンバーを表示する"
