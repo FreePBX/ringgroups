@@ -6,12 +6,12 @@
 				data-url="ajax.php?module=ringgroups&command=getJSON&jdata=grid"
 				data-toolbar="#toolbar-rgnav"
         data-toggle="table"
-        data-pagination="true"
         data-search="true"
         class="table">
 <thead>
 	<tr>
 		<th data-sortable="true" data-field="grpnum"><?php echo _("Ring Group")?></th>
+		<th data-sortable="true" data-field="description"><?php echo _("Description")?></th>
 	</tr>
 </thead>
 </table>
