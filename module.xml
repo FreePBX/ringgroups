@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>13.0.7</version>
+	<version>13.0.8</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*13.0.8* Use Alert Info Drop down
 		*13.0.7* Move grid to ajax, slideout menu
 		*13.0.6* FREEPBX-10444 Honor CF/CW settings
 		*13.0.5* FREEPBX-6161 Add MOH Category "Inherit" for Ringgroups Similar to Queues
@@ -20,37 +21,11 @@
 		*13.0.1alpha3* FREEPBX-9467 add search hooks
 		*13.0.1alpha2* Forms updates
 		*13.0.1alpha1* Visual Changes
-		*12.0.3.2* FREEPBX-8809 Make the recording buttons more uniform
-		*12.0.3.1* Fix misleading call recording buttons.
-		*12.0.3* FREEPBX-7384 add new strategy
-		*12.0.2* Call Recordings Update
-		*12.0.1* Redo module_hook calls to use static obj
-		*2.11.0.6* #1953
-		*2.11.0.5* update license file
-		*2.11.0.4* Fixes minor bug in adding or editing new ring groups
-		*2.11.0.3* Fixes Cant Park calls on ring group that have MoH set, might fix #6474 as well
-		*2.11.0.2* #6477
-		*2.11.0.1* #6055
-		*2.11.0.0* #6051
-		*2.10.0.6* typo in error message
-		*2.10.0.5* #5832
-		*2.10.0.4* #5652
-		*2.10.0.3* #4834 again
-		*2.10.0.2* #4834, #5263
-		*2.10.0.1* #5478
-		*2.10.0.0* #5283 Overhaul Call Recording
-		*2.9.0.6* #5011
-		*2.9.0.5* spellings, locazliations
-		*2.9.0.4* #4977
-		*2.9.0.3* #4334
-		*2.9.0.2* #4799
-		*2.9.0.1* removed duplicate functions
-		*2.9.0.0* #4671, #4655
 	</changelog>
 	<depends>
 		<module>callrecording ge 12.0.1</module>
 		<module>core ge 12.0.16</module>
-		<version>13.0.6</version>
+		<version>13.0.42</version>
 	</depends>
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>

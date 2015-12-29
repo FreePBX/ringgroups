@@ -422,7 +422,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="alertinfo" name="alertinfo" value="<?php echo ($alertinfo)?$alertinfo:'' ?>">
+						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($alertinfo)?$alertinfo:''));?>
 					</div>
 				</div>
 			</div>
