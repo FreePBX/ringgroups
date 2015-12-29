@@ -1,10 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-08 23:31+0200\n"
+"PO-Revision-Date: 2015-12-08 23:33+0200\n"
+"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
+
 #: views/form.php:56
 msgid "*-prim"
-msgstr ""
+msgstr "*-primaria"
 
 #: views/form.php:433
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
+"ALERT_INFO (Información de Alerta), puede ser utilizado como timbre "
+"distintivo en dispositivos SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -12,15 +30,15 @@ msgstr ""
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
-msgstr ""
+msgstr "Añadir grupo de extensiones"
 
 #: views/form.php:421
 msgid "Alert Info"
-msgstr ""
+msgstr "Información de alerta"
 
 #: views/form.php:237
 msgid "Always transmit the Fixed CID Value below."
-msgstr ""
+msgstr "Siempre transmite el Valor Fijo CID de abajo."
 
 #: views/form.php:91
 msgid "Announcement"
@@ -28,27 +46,27 @@ msgstr ""
 
 #: views/form.php:397
 msgid "CID Name Prefix"
-msgstr ""
+msgstr "Nombre Prefijo CID"
 
 #: views/form.php:605
 msgid "Call Recording"
-msgstr ""
+msgstr "Grabación Llamadas"
 
 #: views/form.php:555
 msgid "Change External CID Configuration"
-msgstr ""
+msgstr "Configuración Cambio CID Externo"
 
 #: install.php:177
 msgid "Checking if recordings need migration.."
-msgstr ""
+msgstr "Comprobando si las grabaciones necesitan migrarse..."
 
 #: views/form.php:526
 msgid "Confirm Calls"
-msgstr ""
+msgstr "Confirmar llamadas"
 
 #: views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
-msgstr ""
+msgstr "Por defecto"
 
 #: Ringgroups.class.php:143
 msgid "Delete"
@@ -60,15 +78,15 @@ msgstr ""
 
 #: views/form.php:639
 msgid "Destination if no answer"
-msgstr ""
+msgstr "Destino si no hay respuesta"
 
 #: views/form.php:612
 msgid "Dont Care"
-msgstr ""
+msgstr "No importa"
 
 #: views/form.php:499
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "Habilitar Capturar Llamada"
 
 #: views/form.php:541
 msgid ""
@@ -77,14 +95,19 @@ msgid ""
 "this requires the remote side push 1 on their phone before the call is put "
 "through. This feature only works with the ringall ring strategy"
 msgstr ""
+"Active esta opción si está llamando a números externos que necesitan "
+"confirmación, por ejemplo, un teléfono mil que puede ir a su buzón de voz "
+"que contestará la llamada. Habilitando esta opción hará que el destino pulse "
+"la tecla 1 en su teléfono antes de pasarle la llamada. Esta opción sólo "
+"funciona con la estrategia 'Sonar todos'"
 
 #: views/form.php:363
 msgid "Extension List"
-msgstr ""
+msgstr "Lista de extensiones"
 
 #: views/form.php:237 views/form.php:248 views/form.php:581
 msgid "Fixed CID Value"
-msgstr ""
+msgstr "Valor Fijo CID"
 
 #: views/form.php:593
 msgid ""
@@ -95,29 +118,32 @@ msgstr ""
 
 #: views/form.php:610
 msgid "Force"
-msgstr ""
+msgstr "Forzar"
 
 #: views/form.php:243 views/form.php:251
 msgid "Force Dialed Number"
-msgstr ""
+msgstr "Forzar Número Marcado"
 
 #: views/form.php:289
 msgid "Group Description"
-msgstr ""
+msgstr "Descripción del grupo de extensiones"
 
 #: functions.inc.php:319
 msgid "INUSE"
-msgstr ""
+msgstr "EN USO"
 
 #: views/form.php:226
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
+"Si ha seleccionado reproducir música en espera en lugar de sonar, el "
+"llamante escuchará esa música en espera en lugar de los tonos de llamada "
+"mientras espera a que alguien conteste a su llamada."
 
 #: views/form.php:445
 msgid "Ignore CF Settings"
-msgstr ""
+msgstr "Ignorar Configuraciones CF"
 
 #: views/form.php:209
 msgid "Inherit"
@@ -125,11 +151,11 @@ msgstr ""
 
 #: assets/js/ringgroups.js:52
 msgid "Invalid Group Number specified"
-msgstr ""
+msgstr "Número de grupo de extensiones no válido"
 
 #: assets/js/ringgroups.js:54
 msgid "Invalid time specified"
-msgstr ""
+msgstr "Tiempo especificado no válido"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
@@ -145,6 +171,13 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
+"Liste Extensiones a sonar, uno por línea, o utilizar la \"Extensión Quick "
+"Pick\" abajo para insertarlos aquí. Usted puede incluir una extensión en un "
+"sistema remoto, o un número externo sufijando un número con un '#' . ej: "
+"2448089# marcaría 2448089 en el troncal adecuado (vea Enrutamiento de "
+"Salida)<br><br> extensiones sin un '#' no sonará Sigue-Me de un usuario. "
+"Para marcar Sigue-Me, colas y otros números que no son extensiones, poner un "
+"siempre '#' al final."
 
 #: views/form.php:62
 msgid ""
@@ -152,6 +185,10 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Realiza una llamada podía saltar entre las extensiones incluidas sin una "
+"prioridad predefinida para garantizar que las llamadas de los grupos están "
+"(casi) distribuidos uniformemente. Simula una cola cuando una cola no se "
+"puede utilizar de otra manera."
 
 #: views/form.php:112
 msgid ""
@@ -175,11 +212,11 @@ msgstr ""
 
 #: views/form.php:233
 msgid "Mode"
-msgstr ""
+msgstr "Modo"
 
 #: views/form.php:614
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: views/form.php:452 views/form.php:479 views/form.php:506 views/form.php:533
 msgid "No"
@@ -187,17 +224,19 @@ msgstr ""
 
 #: views/form.php:98 views/form.php:133
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: assets/js/ringgroups.js:57
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
+"Sólo sonar todos, sonar todos-v2, lineal y las respectivas versiones -"
+"primarias son compatibles cuando confirmación es marcada"
 
 #: views/form.php:239 views/form.php:249
 msgid "Outside Calls Fixed CID Value"
-msgstr ""
+msgstr "Valor Fijo CID Llamadas Salientes"
 
 #: views/form.php:201
 msgid "Play Music On Hold"
@@ -205,15 +244,16 @@ msgstr ""
 
 #: assets/js/ringgroups.js:56
 msgid "Please enter a valid Group Description"
-msgstr ""
+msgstr "Por favor, introduzca una descripción de grupo de extensiones válido"
 
 #: assets/js/ringgroups.js:53
 msgid "Please enter an extension list."
 msgstr ""
+"Por favor, especifique al menos una extensión en la lista de extensiones."
 
 #: views/form.php:301
 msgid "Provide a descriptive title for this Ring Group."
-msgstr ""
+msgstr "Indique una descripción para este grupo de extensiones."
 
 #: views/form.php:126
 msgid "Remote Announce"
@@ -225,34 +265,34 @@ msgstr ""
 
 #: views/form.php:208
 msgid "Ring"
-msgstr ""
+msgstr "Sonar"
 
 #: views/bootnav.php:14 views/rggrid.php:16
 msgid "Ring Group"
-msgstr ""
+msgstr "Grupo de extensiones"
 
 #: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
-msgstr ""
+msgstr "Grupo de Timbrado%s: "
 
 #: functions.inc.php:442
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "Miembro del Grupo Extensiones"
 
 #: functions.inc.php:57 functions.inc.php:318
 #, php-format
 msgid "Ring Group: %s"
-msgstr ""
+msgstr "Grupo de extensiones: %s"
 
 #: functions.inc.php:345
 #, php-format
 msgid "Ring Group: %s (%s)"
-msgstr ""
+msgstr "Grupo de extensiones: %s (%s)"
 
 #: page.ringgroups.php:9
 msgid "Ring Groups"
-msgstr ""
+msgstr "Grupos de extensiones"
 
 #: views/form.php:313
 msgid "Ring Strategy"
@@ -260,21 +300,25 @@ msgstr ""
 
 #: views/form.php:339
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "Tiempo de Timbrado (máx. 300 seg)"
 
 #: views/form.php:50
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
+"Hacer sonar todos los canales disponibles hasta que alguien conteste (opción "
+"por defecto)"
 
 #: views/form.php:54
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
 msgstr ""
+"Hace sonar la primera extensión de la lista, luego la primera y la segunda, "
+"luego la primera, la segunda y la tercera, etc."
 
 #: views/form.php:265
 msgid "Ring-Group Number"
-msgstr ""
+msgstr "Número del grupo de extensiones"
 
 #: Ringgroups.class.php:123
 msgid "RingGroup"
@@ -282,7 +326,7 @@ msgstr ""
 
 #: views/form.php:472
 msgid "Skip Busy Agent"
-msgstr ""
+msgstr "Ignorar agentes ocupados"
 
 #: Ringgroups.class.php:148
 msgid "Submit"
@@ -290,11 +334,13 @@ msgstr ""
 
 #: views/form.php:52
 msgid "Take turns ringing each available extension"
-msgstr ""
+msgstr "Por turnos, sonando cada extensión disponible"
 
 #: views/form.php:277
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
+"El número al que los usuarios deberán llamar para contactar con este grupo "
+"de extensiones"
 
 #: views/form.php:56
 msgid ""
@@ -303,14 +349,19 @@ msgid ""
 "is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 msgstr ""
+"Estos modos actúan como se han descrito anteriormente. Aún así, si la "
+"primera extensión (la primera de la lista) está ocupada, las otras "
+"extensiones no sonarán. Si la primera extensión está en modo 'No molestar' "
+"(DND), no sonará. Si la primera extensión está en modo 'Desvío de llamada "
+"incondicional', entonces sonarán todas"
 
 #: functions.inc.php:264
 msgid "This ringgroup"
-msgstr ""
+msgstr "Este grupo de extensiones"
 
 #: assets/js/ringgroups.js:55
 msgid "Time must be between 1 and 300 seconds"
-msgstr ""
+msgstr "El tiempo debe ser entre 1 y 300 segindos"
 
 #: views/form.php:161
 msgid "Too-Late Announce"
@@ -322,6 +373,9 @@ msgid ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
+"Transmitir el Valor Fijo CID de abajo en las llamadas que vienen de afuera "
+"solamente. Las llamadas entre extensiones internas seguirán funcionando en "
+"el modo por defecto."
 
 #: views/form.php:243
 msgid ""
@@ -330,6 +384,10 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
+"Transmitir el número que se marcó como el CID para las llamadas procedentes "
+"del exterior. Las llamadas entre extensiones internas seguirán funcionando "
+"en el modo predeterminado. Debe haber un DID en la Ruta Entrante para esto. "
+"Este será transmitido en las líneas que bloquean CallerID no reconocidos"
 
 #: views/form.php:241
 msgid ""
@@ -338,18 +396,22 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
+"Transmitir el número que se marcó como el CID para las llamadas procedentes "
+"del exterior. Las llamadas entre extensiones internas seguirán funcionando "
+"en el modo predeterminado. Debe haber un DID en la Ruta Entrante para esto. "
+"Este será bloqueado en las líneas que bloquean el CallerID no reconocidos"
 
 #: views/form.php:235
 msgid "Transmits the Callers CID if allowed by the trunk."
-msgstr ""
+msgstr "Transmite el CID del Llamante si lo permite la línea."
 
 #: views/form.php:241 views/form.php:250
 msgid "Use Dialed Number"
-msgstr ""
+msgstr "Usar Número Marcado"
 
 #: Ringgroups.class.php:76
 msgid "Warning! Extension"
-msgstr ""
+msgstr "Atención. La extensión"
 
 #: views/form.php:487
 msgid ""
@@ -391,6 +453,11 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
+"Siempre se puede grabar las llamadas que entran en este grupo de timbre "
+"(Forzar), nunca grabarlas (Nunca), o permitir la extensión que contesta que "
+"se pueden hacer a pedido la grabación (Dont Care). Si la grabación se negó "
+"entonces grabación por un toque (one touch) será bloqueada, a menos que "
+"tengan la configuración de grabación de la llamada en \"Ignorar\"."
 
 #: views/form.php:409
 msgid ""
@@ -398,72 +465,76 @@ msgid ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
+"Si lo desea, puede anteponer un nombre de CallerID al sonar las extensiones "
+"de este grupo, es decir: Si utiliza el prefijo \"Ventas:\", una llamada de "
+"John Doe se mostraban como \"Ventas:John Doe\" en las extensiones de este "
+"grupo."
 
 #: install.php:152
 msgid "added field cfignore to ringgroups table"
-msgstr ""
+msgstr "agregando campo cfignore a tabla ringgroups"
 
 #: install.php:162
 msgid "added field cpickup to ringgroups table"
-msgstr ""
+msgstr "agregando campo cpickup tabla ringgroups"
 
 #: install.php:142
 msgid "added field cwignore to ringgroups table"
-msgstr ""
+msgstr "agregando campo cwignore a tabla ringgroups"
 
 #: install.php:172
 msgid "added field recording to ringgroups table"
-msgstr ""
+msgstr "agregado campo de grabación a tabla de ringgroups"
 
 #: install.php:184
 msgid "adding annmsg_id field.."
-msgstr ""
+msgstr "Añadiendo campo 'annmsg_id'..."
 
 #: install.php:193
 msgid "adding remotealert_id field.."
-msgstr ""
+msgstr "Añadiendo campo 'remotealert_id'.."
 
 #: install.php:202
 msgid "adding toolate_id field.."
-msgstr ""
+msgstr "Añadiendo campo 'toolate_id'.."
 
 #: install.php:320
 msgid "already migrated"
-msgstr ""
+msgstr "Ya migrado"
 
 #: views/form.php:213
 msgid "default"
-msgstr ""
+msgstr "Por defecto"
 
 #: install.php:294
 msgid "dropping annmsg field.."
-msgstr ""
+msgstr "Eliminando campo 'annmsg'.."
 
 #: install.php:302
 msgid "dropping remotealert field.."
-msgstr ""
+msgstr "Eliminando campo 'remotealert'.."
 
 #: install.php:310
 msgid "dropping toolate field.."
-msgstr ""
+msgstr "Eliminando campo 'toolate'.."
 
 #: install.php:188 install.php:197 install.php:206 install.php:218
 #: install.php:234 install.php:244 install.php:260 install.php:270
 #: install.php:286
 msgid "fatal error"
-msgstr ""
+msgstr "error fatal"
 
 #: views/form.php:58
 msgid "firstavailable"
-msgstr ""
+msgstr "Primero disponible"
 
 #: views/form.php:60
 msgid "firstnotonphone"
-msgstr ""
+msgstr "Primero que no esté al teléfono"
 
 #: views/form.php:52
 msgid "hunt"
-msgstr ""
+msgstr "lineal"
 
 #: views/form.php:351
 msgid ""
@@ -473,70 +544,72 @@ msgstr ""
 
 #: functions.inc.php:264
 msgid "is already in use"
-msgstr ""
+msgstr "ya está en uso"
 
 #: Ringgroups.class.php:76
 msgid "is not allowed for your account"
-msgstr ""
+msgstr "no está permitida por su cuenta"
 
 #: views/form.php:54
 msgid "memoryhunt"
-msgstr ""
+msgstr "memoria-lineal"
 
 #: install.php:214
 msgid "migrate annmsg to ids.."
-msgstr ""
+msgstr "Migrando la tabla 'annmgs' a identificadores.."
 
 #: install.php:240
 msgid "migrate remotealert to  ids.."
-msgstr ""
+msgstr "Migrando la tabla 'remotealert' a identificadores.."
 
 #: install.php:266
 msgid "migrate toolate to ids.."
-msgstr ""
+msgstr "Migrando tabla 'toolate' a identificadores.."
 
 #: install.php:238 install.php:264 install.php:290
 #, php-format
 msgid "migrated %s entries"
-msgstr ""
+msgstr "Migrados %s elementos"
 
 #: install.php:183
 msgid "migrating"
-msgstr ""
+msgstr "migrando"
 
 #: install.php:298
 msgid "no annmsg field???"
-msgstr ""
+msgstr "No existe el campo annmsg???"
 
 #: install.php:306
 msgid "no remotealert field???"
-msgstr ""
+msgstr "No existe el campo 'remotealert'???"
 
 #: install.php:314
 msgid "no toolate field???"
-msgstr ""
+msgstr "No existe el campo 'toolate'???"
 
 #: views/form.php:212
 msgid "none"
-msgstr ""
+msgstr "Ninguno"
 
 #: install.php:191 install.php:200 install.php:209 install.php:300
 #: install.php:308 install.php:316
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: views/form.php:62
 msgid "random"
-msgstr ""
+msgstr "Aleatorio"
 
 #: views/form.php:58
 msgid "ring only the first available channel"
-msgstr ""
+msgstr "Sólo hace sonar el primer canal activo"
 
 #: views/form.php:60
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr ""
+"Hace sonar el primer canal que no esté al teléfono, ignorando la opción de "
+"llamada en espera"
 
 #: views/form.php:50
 msgid "ringall"
-msgstr ""
+msgstr "Sonar todos"
