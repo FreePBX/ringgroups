@@ -130,7 +130,7 @@ if(function_exists('recordings_list')) {
 								<select name="remotealert_id" id="remotealert_id" class="form-control">';
 								$tresults = recordings_list();
 								$default = (isset($remotealert_id) ? $remotealert_id : '');
-								$remoteahtml .= '<option value="">'._("None")."</option>";
+								$remoteahtml .= '<option value="">'._("Default")."</option>";
 								if (isset($tresults[0])) {
 									foreach ($tresults as $tresult) {
 										$remoteahtml .= '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
