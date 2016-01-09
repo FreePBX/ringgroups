@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 18:57-0800\n"
+"POT-Creation-Date: 2016-01-08 19:04-0800\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -114,7 +114,7 @@ msgstr ""
 "他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認でき"
 "るオプションも使えます。"
 
-#: views/form.php:168 views/form.php:235 views/form.php:247
+#: views/form.php:133 views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "デフォルト"
 
@@ -259,7 +259,7 @@ msgstr "録音しない"
 msgid "No"
 msgstr ""
 
-#: views/form.php:98 views/form.php:133
+#: views/form.php:98
 msgid "None"
 msgstr "なし"
 

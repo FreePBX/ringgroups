@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 18:57-0800\n"
+"POT-Creation-Date: 2016-01-08 19:04-0800\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -83,7 +83,7 @@ msgid ""
 "caller is transferred."
 msgstr ""
 
-#: views/form.php:168 views/form.php:235 views/form.php:247
+#: views/form.php:133 views/form.php:168 views/form.php:235 views/form.php:247
 msgid "Default"
 msgstr "默认"
 
@@ -229,7 +229,7 @@ msgstr "从不录音"
 msgid "No"
 msgstr ""
 
-#: views/form.php:98 views/form.php:133
+#: views/form.php:98
 msgid "None"
 msgstr "无"
 
