@@ -12,7 +12,7 @@ function ringgroups_destinations() {
 	// return an associative array with destination and description
 	if (isset($results)) {
 		foreach($results as $result){
-				$extens[] = array('destination' => 'ext-group,'.$result['grpnum'].',1', 'description' => $result['description'].' <'.$result['grpnum'].'>');
+				$extens[] = array('destination' => 'ext-group,'.$result['grpnum'].',1', 'description' => $result['grpnum'].' '.$result['description']);
 		}
 	}
 
