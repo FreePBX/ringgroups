@@ -43,7 +43,6 @@ class Ringgroups implements \BMO {
 						$goto = '';
 		}
 
-
 		if (isset($request["grplist"])) {
 			$grplist = explode("\n",$request["grplist"]);
 
@@ -152,47 +151,50 @@ class Ringgroups implements \BMO {
 						'id' => 'reset',
 						'value' => _('Reset')
 					)
-    			);
-    		break;
-    	}
-    	if (empty($request['extdisplay'])) {
-    		unset($buttons['delete']);
-    	}
-    	if($request['view'] != 'form'){
-    		unset($buttons);
-    	}
-    	return $buttons;
-    }
-		public function listRinggroups($get_all=false) {
-			$sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
-			$stmt = $this->db->prepare($sql);
-			$stmt->execute();
-			$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
-			foreach ($results as $result) {
-				if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
-					$grps[] = array(
-						0 => $result['grpnum'],
-						1 => $result['description'],
-						'grpnum' => $result['grpnum'],
-						'description' => $result['description'],
-					);
-				}
-			}
-			if (isset($grps))
-				return $grps;
-			else
-				return array();
+				);
+			break;
 		}
-		public function ajaxRequest($req, &$setting) {
-			switch ($req) {
-				case 'getJSON':
-					return true;
-				break;
-				default:
-					return false;
-				break;
+		if (empty($request['extdisplay'])) {
+			unset($buttons['delete']);
+		}
+		if($request['view'] != 'form'){
+			unset($buttons);
+		}
+		return $buttons;
+	}
+
+	public function listRinggroups($get_all=false) {
+		$sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
+		$stmt = $this->db->prepare($sql);
+		$stmt->execute();
+		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
+		foreach ($results as $result) {
+			if ($get_all || (isset($result['grpnum']) && checkRange($result['grpnum']))) {
+				$grps[] = array(
+					0 => $result['grpnum'],
+					1 => $result['description'],
+					'grpnum' => $result['grpnum'],
+					'description' => $result['description'],
+				);
 			}
 		}
+		if (isset($grps))
+			return $grps;
+		else
+			return array();
+	}
+
+	public function ajaxRequest($req, &$setting) {
+		switch ($req) {
+			case 'getJSON':
+				return true;
+			break;
+			default:
+				return false;
+			break;
+		}
+	}
+
 	public function ajaxHandler(){
 		switch ($_REQUEST['command']) {
 			case 'getJSON':
@@ -212,6 +214,7 @@ class Ringgroups implements \BMO {
 			break;
 		}
 	}
+
 	public function getRightNav($request) {
 	  if(isset($request['view']) && $request['view'] == 'form'){
 	    return load_view(__DIR__."/views/bootnav.php",array());
