@@ -15,18 +15,21 @@
 #
 # Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:04-0800\n"
-"PO-Revision-Date: 2009-04-21 11:18+0100\n"
-"Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
-"Language-Team: Français <LL@li.org>\n"
+"PO-Revision-Date: 2016-02-01 03:20+0200\n"
+"Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/form.php:56
 msgid "*-prim"
@@ -35,20 +38,20 @@ msgstr ""
 #: views/form.php:433
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
-"ALERT_INFO peut être utilisé pour avoir des sonneries distinctes avec les "
-"périphériques SIP."
+"ALERT_INFO peut-être utilisé pour des sonneries distinctes avec des "
+"dispositifs SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
-msgstr "Ajouter Groupe de Sonnerie"
+msgstr "Ajouter groupe de sonnerie"
 
 #: views/form.php:421
 msgid "Alert Info"
-msgstr "Info d'Alerte"
+msgstr "Info d'alerte"
 
 #: views/form.php:237
 msgid "Always transmit the Fixed CID Value below."
