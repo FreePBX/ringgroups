@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:04-0800\n"
-"PO-Revision-Date: 2016-02-01 03:20+0200\n"
+"PO-Revision-Date: 2016-02-01 04:30+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/fr_FR/>\n"
@@ -55,27 +55,27 @@ msgstr "Info d'alerte"
 
 #: views/form.php:237
 msgid "Always transmit the Fixed CID Value below."
-msgstr ""
+msgstr "Toujours transmettre l'ID appelant ci-dessous."
 
 #: views/form.php:91
 msgid "Announcement"
-msgstr ""
+msgstr "Annonce"
 
 #: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: views/form.php:397
 msgid "CID Name Prefix"
-msgstr "Préfixe de Nom CID"
+msgstr "Préfixe du nom de l'ID appelant"
 
 #: views/form.php:605
 msgid "Call Recording"
-msgstr ""
+msgstr "Enregistrer l'appel"
 
 #: views/form.php:555
 msgid "Change External CID Configuration"
-msgstr ""
+msgstr "Modifier la configuration de l'ID appelant externe"
 
 #: install.php:177
 msgid "Checking if recordings need migration.."
