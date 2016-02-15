@@ -30,7 +30,7 @@ class Ringgroups implements \BMO {
 		isset($request['cwignore'])?$cwignore = $request['cwignore']:$cwignore='';
 		isset($request['cpickup'])?$cpickup = $request['cpickup']:$cpickup='';
 		isset($request['cfignore'])?$cfignore = $request['cfignore']:$cfignore='';
-		isset($request['remotealert_id'])?$remotealert_id = $request['remotealert_id']:$remotealert_id='';
+		isset($request['remotealert_id'])?$remotealert_id = $request['remotealert_id']:$remotealert_id='0';
 		isset($request['toolate_id'])?$toolate_id = $request['toolate_id']:$toolate_id='';
 		isset($request['ringing'])?$ringing = $request['ringing']:$ringing='';
 
