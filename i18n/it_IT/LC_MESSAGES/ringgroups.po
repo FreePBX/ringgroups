@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 17:52-0800\n"
+"POT-Creation-Date: 2016-02-19 14:17-0800\n"
 "PO-Revision-Date: 2008-11-06 14:54+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Descrizione Gruppo"
 
-#: functions.inc.php:319
+#: functions.inc.php:323
 msgid "INUSE"
 msgstr "INUSO"
 
@@ -307,7 +307,7 @@ msgstr "Gruppo di Chiamata"
 msgid "Ring Group %s: "
 msgstr "Gruppo di Chiamata %s:"
 
-#: functions.inc.php:441
+#: functions.inc.php:445
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -319,12 +319,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:318
+#: functions.inc.php:57 functions.inc.php:322
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Gruppo di Chiamata: %s"
 
-#: functions.inc.php:345
+#: functions.inc.php:349
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"

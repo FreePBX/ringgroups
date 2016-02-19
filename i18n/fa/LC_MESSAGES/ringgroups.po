@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 17:52-0800\n"
+"POT-Creation-Date: 2016-02-19 14:17-0800\n"
 "PO-Revision-Date: 2016-01-08 19:04-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -148,7 +148,7 @@ msgstr ""
 msgid "Group Description"
 msgstr ""
 
-#: functions.inc.php:319
+#: functions.inc.php:323
 msgid "INUSE"
 msgstr ""
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Ring Group %s: "
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:445
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -308,12 +308,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:318
+#: functions.inc.php:57 functions.inc.php:322
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: functions.inc.php:345
+#: functions.inc.php:349
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""

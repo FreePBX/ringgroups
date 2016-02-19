@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 17:52-0800\n"
+"POT-Creation-Date: 2016-02-19 14:17-0800\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
-#: functions.inc.php:319
+#: functions.inc.php:323
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
@@ -305,7 +305,7 @@ msgstr "Ringgrupp"
 msgid "Ring Group %s: "
 msgstr "Ringgrupp %s: "
 
-#: functions.inc.php:441
+#: functions.inc.php:445
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -317,12 +317,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:318
+#: functions.inc.php:57 functions.inc.php:322
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Ringgrupp: %s"
 
-#: functions.inc.php:345
+#: functions.inc.php:349
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 17:52-0800\n"
+"POT-Creation-Date: 2016-02-19 14:17-0800\n"
 "PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://weblate.freepbx.org/projects/freepbx/"
@@ -164,7 +164,7 @@ msgstr "Принудително Използвай Избрания Номер"
 msgid "Group Description"
 msgstr "Описание на Групата"
 
-#: functions.inc.php:319
+#: functions.inc.php:323
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
@@ -320,7 +320,7 @@ msgstr "Група на Звънене"
 msgid "Ring Group %s: "
 msgstr "Група на Звънене %s: "
 
-#: functions.inc.php:441
+#: functions.inc.php:445
 msgid "Ring Group Membership"
 msgstr "Потребители на Група на Звънене"
 
@@ -332,12 +332,12 @@ msgstr "Модул Група на Звънене"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:318
+#: functions.inc.php:57 functions.inc.php:322
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Група на Звънене: %s"
 
-#: functions.inc.php:345
+#: functions.inc.php:349
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"

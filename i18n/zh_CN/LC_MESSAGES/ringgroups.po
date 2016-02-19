@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 17:52-0800\n"
+"POT-Creation-Date: 2016-02-19 14:17-0800\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -156,7 +156,7 @@ msgstr "强制使用已拨号码"
 msgid "Group Description"
 msgstr "小组描述"
 
-#: functions.inc.php:319
+#: functions.inc.php:323
 msgid "INUSE"
 msgstr "正在使用"
 
@@ -309,7 +309,7 @@ msgstr "拨号小组"
 msgid "Ring Group %s: "
 msgstr "拨号小组 %s："
 
-#: functions.inc.php:441
+#: functions.inc.php:445
 msgid "Ring Group Membership"
 msgstr "振铃组成员"
 
@@ -321,12 +321,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:318
+#: functions.inc.php:57 functions.inc.php:322
 #, php-format
 msgid "Ring Group: %s"
 msgstr "拨号小组：%s"
 
-#: functions.inc.php:345
+#: functions.inc.php:349
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
