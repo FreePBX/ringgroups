@@ -29,7 +29,7 @@
 	<depends>
 		<module>callrecording ge 12.0.1</module>
 		<module>core ge 12.0.16</module>
-		<version>13.0.42</version>
+		<version>13.0.70</version>
 	</depends>
 	<menuitems>
 		<ringgroups>Ring Groups</ringgroups>

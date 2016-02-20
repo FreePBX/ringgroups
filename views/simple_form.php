@@ -142,7 +142,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="goto0"></i>
 					</div>
 					<div class="col-md-9">
-						<?php echo drawselects($goto,0,array("core","voicemail","vmblast"),false)?>
+						<?php echo drawselects($goto,0,array("core" => array("extensions","voicemail")),false)?>
 					</div>
 				</div>
 			</div>
