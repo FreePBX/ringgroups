@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>13.0.13</version>
+	<version>13.0.14</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,7 +11,8 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
-		*13.0.12* More simple mode changes
+		*13.0.14* Fix an issue with BMO and manual loading of functions.inc.php
+		*13.0.13* More simple mode changes
 		*13.0.12* Kludge around unset remotealert_id / toolate_id values by lidl
 		*13.0.11* Cleanup and create a basic mode
 		*13.0.10* FREEPBX-11233
