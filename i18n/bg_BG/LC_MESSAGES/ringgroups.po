@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 14:17-0800\n"
+"POT-Creation-Date: 2016-02-24 15:51-0600\n"
 "PO-Revision-Date: 2015-07-08 17:43+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://weblate.freepbx.org/projects/freepbx/"
@@ -164,7 +164,7 @@ msgstr "Принудително Използвай Избрания Номер"
 msgid "Group Description"
 msgstr "Описание на Групата"
 
-#: functions.inc.php:323
+#: functions.inc.php:325
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
@@ -320,7 +320,7 @@ msgstr "Група на Звънене"
 msgid "Ring Group %s: "
 msgstr "Група на Звънене %s: "
 
-#: functions.inc.php:445
+#: functions.inc.php:449
 msgid "Ring Group Membership"
 msgstr "Потребители на Група на Звънене"
 
@@ -332,12 +332,12 @@ msgstr "Модул Група на Звънене"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:322
+#: functions.inc.php:57 functions.inc.php:324
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Група на Звънене: %s"
 
-#: functions.inc.php:349
+#: functions.inc.php:351
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
@@ -424,7 +424,7 @@ msgstr ""
 "основната е FreePBX DND, няма да звъни. Ако основната е безусловен FreePBX "
 "CF, тогава всички ще звънят"
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "This ringgroup"
 msgstr "Тази група на звънене"
 
@@ -628,7 +628,7 @@ msgstr "първия не на телефона"
 msgid "hunt"
 msgstr "преследване"
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "is already in use"
 msgstr "вече се използва"
 

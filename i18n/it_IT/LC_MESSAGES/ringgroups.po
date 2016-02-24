@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 14:17-0800\n"
+"POT-Creation-Date: 2016-02-24 15:51-0600\n"
 "PO-Revision-Date: 2008-11-06 14:54+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Descrizione Gruppo"
 
-#: functions.inc.php:323
+#: functions.inc.php:325
 msgid "INUSE"
 msgstr "INUSO"
 
@@ -307,7 +307,7 @@ msgstr "Gruppo di Chiamata"
 msgid "Ring Group %s: "
 msgstr "Gruppo di Chiamata %s:"
 
-#: functions.inc.php:445
+#: functions.inc.php:449
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -319,12 +319,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:322
+#: functions.inc.php:57 functions.inc.php:324
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Gruppo di Chiamata: %s"
 
-#: functions.inc.php:349
+#: functions.inc.php:351
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
@@ -412,7 +412,7 @@ msgstr ""
 "avanti. Se il primario è un Trasferimento di Chiamata incondizionato "
 "attivato su FreePBX, tutti squilleranno."
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "This ringgroup"
 msgstr "Questo Gruppo di Chiamata"
 
@@ -594,7 +594,7 @@ msgstr "firstnotonphone"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "is already in use"
 msgstr "è gia in uso"
 
