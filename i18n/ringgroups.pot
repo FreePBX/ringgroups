@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 14:17-0800\n"
+"POT-Creation-Date: 2016-02-24 15:51-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Group Description"
 msgstr ""
 
-#: functions.inc.php:323
+#: functions.inc.php:325
 msgid "INUSE"
 msgstr ""
 
@@ -311,7 +311,7 @@ msgstr ""
 msgid "Ring Group %s: "
 msgstr ""
 
-#: functions.inc.php:445
+#: functions.inc.php:449
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -324,12 +324,12 @@ msgid "Ring Group Name"
 msgstr ""
 
 #: functions.inc.php:57
-#: functions.inc.php:322
+#: functions.inc.php:324
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: functions.inc.php:349
+#: functions.inc.php:351
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""
@@ -413,7 +413,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "This ringgroup"
 msgstr ""
 
@@ -603,7 +603,7 @@ msgstr ""
 msgid "hunt"
 msgstr ""
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "is already in use"
 msgstr ""
 

@@ -256,6 +256,7 @@ function ringgroups_get_config($engine) {
 function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare') {
 	global $db;
 	global $astman;
+	global $amp_conf;
 
 	$extens = ringgroups_list();
 	if(is_array($extens)) {
@@ -291,6 +292,7 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 function ringgroups_del($grpnum) {
 	global $db;
 	global $astman;
+	global $amp_conf;
 
 	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","query");
 	if ($astman) {
@@ -361,6 +363,7 @@ function ringgroups_change_destination($old_dest, $new_dest) {
 function ringgroups_get($grpnum) {
 	global $db;
 	global $astman;
+	global $amp_conf;
 
 	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	if ($astman) {

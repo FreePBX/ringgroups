@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 14:17-0800\n"
+"POT-Creation-Date: 2016-02-24 15:51-0600\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -156,7 +156,7 @@ msgstr "强制使用已拨号码"
 msgid "Group Description"
 msgstr "小组描述"
 
-#: functions.inc.php:323
+#: functions.inc.php:325
 msgid "INUSE"
 msgstr "正在使用"
 
@@ -309,7 +309,7 @@ msgstr "拨号小组"
 msgid "Ring Group %s: "
 msgstr "拨号小组 %s："
 
-#: functions.inc.php:445
+#: functions.inc.php:449
 msgid "Ring Group Membership"
 msgstr "振铃组成员"
 
@@ -321,12 +321,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:322
+#: functions.inc.php:57 functions.inc.php:324
 #, php-format
 msgid "Ring Group: %s"
 msgstr "拨号小组：%s"
 
-#: functions.inc.php:349
+#: functions.inc.php:351
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
@@ -412,7 +412,7 @@ msgstr ""
 "就不会响铃。如果主分机是设置了免打扰，它就不会振铃。如果主分机设置了无条件转"
 "移呼叫，那么所有的分机会响铃"
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "This ringgroup"
 msgstr "这个拨号小组"
 
@@ -594,7 +594,7 @@ msgstr "首个未离钩频道"
 msgid "hunt"
 msgstr "搜寻"
 
-#: functions.inc.php:264
+#: functions.inc.php:265
 msgid "is already in use"
 msgstr "已经在使用中了"
 
