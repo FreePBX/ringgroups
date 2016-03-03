@@ -162,9 +162,9 @@
 <input type="hidden" id="needsconf" name="needsconf"  value="<?php echo $needsconf?>">
 <?php $changecid = (isset($changecid) ? $changecid : 'default');?>
 <input type="hidden" id="changecid" name="changecid"  value="<?php echo $changecid?>">
-<input type="hidden" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?>" disabled>
+<input type="hidden" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?>" <?php echo $fixedcid_disabled ?>>
 <input type="hidden" id="recording" name="recording" value="<?php echo $recording ?>">
-<input type="hidden" id="remotealert_id" name="remotealert_id" value="<?php echo $remotealert_id ?>">
-<input type="hidden" id="toolate_id" name="toolate_id" value="<?php echo $toolate_id ?>">
-<input type="hidden" id="annmsg_id" name="annmsg_id" value="<?php echo $annmsg_id ?>">
-<input type="hidden" id="ringing" name="ringing" value="<?php echo $ringing ?>">
+<input type="hidden" id="remotealert_id" name="remotealert_id" value="<?php echo !empty($remotealert_id) ? $remotealert_id : "" ?>">
+<input type="hidden" id="toolate_id" name="toolate_id" value="<?php echo !empty($toolate_id) ? $toolate_id : "" ?>">
+<input type="hidden" id="annmsg_id" name="annmsg_id" value="<?php echo !empty($annmsg_id) ? $annmsg_id : "" ?>">
+<input type="hidden" id="ringing" name="ringing" value="<?php echo !empty($ringing) ? $ringing : "" ?>">

@@ -1,4 +1,5 @@
 <!--Ring-Group Number-->
+<?php if (!empty($accountinput)) { ?>
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
@@ -21,6 +22,7 @@
 		</div>
 	</div>
 </div>
+<?php } ?>
 <!--END Ring-Group Number-->
 <!--Group Description-->
 <div class="element-container">

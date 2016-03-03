@@ -25,8 +25,6 @@ if ($extdisplay) {
 	$recording = $thisgrp['recording'];
 	unset($grpliststr);
 	unset($thisgrp);
-	//account input
-	$accountinput = '<input type="text" class="form-control" name="account" id="account" value="'.ltrim($extdisplay,'GRP-').'" readonly>';
 }else{
 	//defaults
 	$grplist = explode("-", '');;
@@ -80,11 +78,9 @@ $glrows = count($grplist)+1;
 $glrows = ($glrows < 4) ? 4 : (($glrows > 20) ? 20 : $glrows);
 
 $display_mode = "advanced";
-if(isset($fw_popover) && $fw_popover) {
-	$mode = \FreePBX::Config()->get("FPBXOPMODE");
-	if(!empty($mode)) {
-		$display_mode = $mode;
-	}
+$mode = \FreePBX::Config()->get("FPBXOPMODE");
+if(!empty($mode)) {
+	$display_mode = $mode;
 }
 
 if(function_exists('recordings_list')) {
@@ -257,12 +253,15 @@ $ccidrows .= '<option value="fixed" '.($default == 'fixed' ? 'SELECTED' : '').'>
 $ccidrows .= '<option value="extern" '.($default == 'extern' ? 'SELECTED' : '').'>'._("Outside Calls Fixed CID Value").'</option>';
 $ccidrows .= '<option value="did" '.($default == 'did' ? 'SELECTED' : '').'>'._("Use Dialed Number").'</option>';
 $ccidrows .= '<option value="forcedid" '.($default == 'forcedid' ? 'SELECTED' : '').'>'._("Force Dialed Number").'</option>';
-$fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled = "disabled"':'';
+$fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? ' disabled':'';
 ?>
 <form class="popover-form fpbx-submit" name="editGRP" action="" method="post" onsubmit="return checkGRP(editGRP);" data-fpbx-delete="config.php?display=ringgroups&action=delGRP&account=<?php echo $account ?>">
 <input type="hidden" name="display" value="ringgroups">
 <input type="hidden" name="view" value="form">
 <input type="hidden" name="action" value="<?php echo ($extdisplay ? 'edtGRP' : 'addGRP'); ?>">
+<?php if($extdisplay) { ?>
+	<input type="hidden" name="account" id="account" value="<?php echo ltrim($extdisplay,'GRP-')?>">
+<?php } ?>
 <?php
 	if($display_mode == "basic") {
 		if (!$extdisplay) {
@@ -292,6 +291,7 @@ $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? 'disabled =
 			$toolate_id = '';
 			$ringing = '';
 			$recording = 'dontcare';
+			$fixedcid_disabled = 'disabled';
 		}
 		include(__DIR__."/simple_form.php");
 	} else {

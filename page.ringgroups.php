@@ -7,9 +7,10 @@ $tabindex = 0;
 $dispnum = 'ringgroups'; //used for switch on config.php
 
 $heading = _("Ring Groups");
-
+$border = 'no';
 switch($request['view']){
 	case "form":
+		$border = 'full';
 		if($request['extdisplay'] != ''){
 			$heading .= ": Edit ".ltrim($request['extdisplay'],'GRP-');
 		}else{
@@ -26,13 +27,11 @@ switch($request['view']){
 
 <div class="container-fluid">
 	<h1><?php echo $heading ?></h1>
-	<div class = "display full-border">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="fpbx-container">
-					<div class="display full-border">
-						<?php echo $content ?>
-					</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="fpbx-container">
+				<div class="display <?php echo $border?>-border">
+					<?php echo $content ?>
 				</div>
 			</div>
 		</div>
