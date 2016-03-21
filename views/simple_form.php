@@ -34,7 +34,7 @@
 					</div>
 					<div class="col-md-9">
 						<div class="input-group">
-							<textarea id="grplist" class="form-control" cols="15" rows="<?php echo $glrows?>" name="grplist"><?php echo implode("\n",$grplist);?></textarea>
+							<textarea id="grplist" maxlength="255" class="form-control" cols="15" rows="<?php echo $glrows?>" name="grplist"><?php echo implode("\n",$grplist);?></textarea>
 							<span class="input-group-addon">
 								<select id="qsagents1" class="form-control" data-for="grplist" style="width:170px;">
 									<option value="" SELECTED><?php echo("Extension Quick Select")?></option>

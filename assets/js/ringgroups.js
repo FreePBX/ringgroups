@@ -76,6 +76,10 @@ function checkGRP(theForm) {
 	if (isEmpty(theForm.grplist.value))
 		return warnInvalid(theForm.grplist, msgInvalidExtList);
 
+	if(theForm.grplist.length > 255){
+		return warnInvalid(theForm.grplist, _("The group list can only contain a maximum of 255 characters."));
+	}
+
 	if (!theForm.fixedcid.disabled) {
 		fixedcid = $.trim(theForm.fixedcid.value);
 		if(!fixedcid.match('^[+]{0,1}[0-9]+$')) {
