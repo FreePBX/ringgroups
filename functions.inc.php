@@ -107,6 +107,7 @@ function ringgroups_get_config($engine) {
 						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}
 
+					$ext->add($contextname, $grpnum, '', new ext_progress());
 
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 
