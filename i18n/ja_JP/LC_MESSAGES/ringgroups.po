@@ -37,10 +37,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-03 12:24-0800\n"
+"POT-Creation-Date: 2016-04-04 17:51-0700\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/ja/>\n"
+"Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
+"ja/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,7 +54,10 @@ msgid "*-prim"
 msgstr "*-prim"
 
 #: views/simple_form.php:79
-msgid "<strong>Simultaneous:</strong> Rings all extensions at once.</br><strong>Sequential:</strong> Rings each extension separately in the order defined in the list"
+msgid ""
+"<strong>Simultaneous:</strong> Rings all extensions at once.</"
+"br><strong>Sequential:</strong> Rings each extension separately in the order "
+"defined in the list"
 msgstr ""
 
 #: views/advanced_form.php:178
@@ -105,8 +109,17 @@ msgid "Confirm Calls"
 msgstr "コールを確認する"
 
 #: ringgroups.i18n.php:8
-msgid "Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred."
-msgstr "同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認できるオプションも使えます。"
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
+"様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
+"他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認でき"
+"るオプションも使えます。"
 
 #: views/form.php:137 views/form.php:172 views/form.php:239 views/form.php:251
 msgid "Default"
@@ -137,8 +150,16 @@ msgid "Enable Call Pickup"
 msgstr "コールピックアップを有効にする"
 
 #: views/advanced_form.php:286
-msgid "Enable this if you're calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through. This feature only works with the ringall ring strategy"
-msgstr "外線番号で確認動作が必要な場合（例えば、ボイスメールが応答する携帯電話がリンググループに含まれている）に、有効にしてください。有効にすると、リモート側で 1 を押すまで、コールが転送されません。この機能は、ringall ストラテジーでのみ使用できます。"
+msgid ""
+"Enable this if you're calling external numbers that need confirmation - eg, "
+"a mobile phone may go to voicemail which will pick up the call. Enabling "
+"this requires the remote side push 1 on their phone before the call is put "
+"through. This feature only works with the ringall ring strategy"
+msgstr ""
+"外線番号で確認動作が必要な場合（例えば、ボイスメールが応答する携帯電話がリン"
+"ググループに含まれている）に、有効にしてください。有効にすると、リモート側で "
+"1 を押すまで、コールが転送されません。この機能は、ringall ストラテジーでのみ"
+"使用できます。"
 
 #: views/advanced_form.php:58 views/simple_form.php:32
 msgid "Extension List"
@@ -149,7 +170,10 @@ msgid "Fixed CID Value"
 msgstr "固定CID"
 
 #: views/advanced_form.php:338
-msgid "Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading '+'."
+msgid ""
+"Fixed value to replace the CID with used with some of the modes above. "
+"Should be in a format of digits only with an option of E164 format using a "
+"leading '+'."
 msgstr ""
 
 #: views/advanced_form.php:355
@@ -164,13 +188,17 @@ msgstr "ダイヤルした呼び出し側の番号を強制する"
 msgid "Group Description"
 msgstr "グループの説明"
 
-#: functions.inc.php:325
+#: functions.inc.php:326
 msgid "INUSE"
 msgstr "使用中"
 
 #: views/form.php:230
-msgid "If you select a Music on Hold class to play, instead of 'Ring', they will hear that instead of Ringing while they are waiting for someone to pick up."
-msgstr "「リング」の代わりに保留音クラスを選択した場合は、呼び出し中に通常の呼び出し音（リング）ではなく、保留音を再生します。"
+msgid ""
+"If you select a Music on Hold class to play, instead of 'Ring', they will "
+"hear that instead of Ringing while they are waiting for someone to pick up."
+msgstr ""
+"「リング」の代わりに保留音クラスを選択した場合は、呼び出し中に通常の呼び出し"
+"音（リング）ではなく、保留音を再生します。"
 
 #: views/advanced_form.php:190
 msgid "Ignore CF Settings"
@@ -197,27 +225,49 @@ msgid "List Ring Groups"
 msgstr ""
 
 #: views/advanced_form.php:78
-msgid "List extensions to ring, one per line, or use the Extension Quick Select insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end."
+msgid ""
+"List extensions to ring, one per line, or use the Extension Quick Select "
+"insert them here.<br><br>You can include an extension on a remote system, or "
+"an external number by suffixing a number with a '#'.  ex:  2448089# would "
+"dial 2448089 on the appropriate trunk (see Outbound Routing)"
+"<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial "
+"Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
+"the end."
 msgstr ""
 
 #: views/simple_form.php:52
-msgid "List extensions to ring, one per line, or use the Extension Quick Select to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089"
+msgid ""
+"List extensions to ring, one per line, or use the Extension Quick Select to "
+"insert them here.<br><br>You can include an extension on a remote system, or "
+"an external number by suffixing a number with a '#'.  ex:  2448089# would "
+"dial 2448089"
 msgstr ""
 
 #: views/form.php:60
-msgid "Makes a call could hop between the included extensions without a predefined priority to ensure that calls in the groups are (almost) evenly spread. Simulates a Queue when a Queue can not otherwise be used."
+msgid ""
+"Makes a call could hop between the included extensions without a predefined "
+"priority to ensure that calls in the groups are (almost) evenly spread. "
+"Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 
 #: views/form.php:116
-msgid "Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the caller before dialing this group.<br><br>To add "
+"additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
 
 #: views/form.php:151
-msgid "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
+"enabled.<br><br>To add additional recordings use the \"System Recordings\" "
+"MENU above"
 msgstr ""
 
 #: views/form.php:186
-msgid "Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.<br><br>To add additional recordings use the \"System Recordings\" MENU above"
+msgid ""
+"Message to be played to the person RECEIVING the call, if the call has "
+"already been accepted before they push 1.<br><br>To add additional "
+"recordings use the \"System Recordings\" MENU above"
 msgstr ""
 
 #: views/form.php:237
@@ -238,8 +288,12 @@ msgid "None"
 msgstr "なし"
 
 #: assets/js/ringgroups.js:59
-msgid "Only ringall, ringallv2, hunt and the respective -prim versions are supported when confirmation is checked"
-msgstr "確認をチェックする場合は、ringall, ringallv2, hunt とその -prim つきバージョンのみをサポートします。"
+msgid ""
+"Only ringall, ringallv2, hunt and the respective -prim versions are "
+"supported when confirmation is checked"
+msgstr ""
+"確認をチェックする場合は、ringall, ringallv2, hunt とその -prim つきバージョ"
+"ンのみをサポートします。"
 
 #: views/form.php:243 views/form.php:253
 msgid "Outside Calls Fixed CID Value"
@@ -286,7 +340,7 @@ msgstr "着信グループ"
 msgid "Ring Group %s: "
 msgstr "着信グループ %s: "
 
-#: functions.inc.php:449
+#: functions.inc.php:450
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
@@ -298,12 +352,12 @@ msgstr "着信グループモジュール"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:324
+#: functions.inc.php:57 functions.inc.php:325
 #, php-format
 msgid "Ring Group: %s"
 msgstr "着信グループ: %s"
 
-#: functions.inc.php:351
+#: functions.inc.php:352
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"
@@ -333,8 +387,13 @@ msgid "Ring all available channels until one answers (default)"
 msgstr "誰かが応答するまで全ての空いているチャネルを鳴らす(デフォルト)"
 
 #: views/form.php:52
-msgid "Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc."
-msgstr "鳴らす内線の数が順番に増えていくルール。最初にリスト中の1番目の内線を鳴らし、その後に1番目と2番目の内線を鳴らし、その後に1番目、2番目、3番目の内線を鳴らします。"
+msgid ""
+"Ring first extension in the list, then ring the 1st and 2nd extension, then "
+"ring 1st 2nd and 3rd extension in the list.... etc."
+msgstr ""
+"鳴らす内線の数が順番に増えていくルール。最初にリスト中の1番目の内線を鳴らし、"
+"その後に1番目と2番目の内線を鳴らし、その後に1番目、2番目、3番目の内線を鳴らし"
+"ます。"
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -345,7 +404,9 @@ msgid "RingGroup"
 msgstr ""
 
 #: views/simple_form.php:130
-msgid "Select a Ring Tone from the list of options above. This will determine how your phone sounds when it is rung from this group."
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
 msgstr ""
 
 #: views/simple_form.php:70
@@ -368,24 +429,42 @@ msgstr ""
 msgid "Take turns ringing each available extension"
 msgstr "空いている内線を順番に鳴らす"
 
+#: assets/js/ringgroups.js:80
+msgid "The group list can only contain a maximum of 255 characters."
+msgstr ""
+
 #: views/advanced_form.php:21
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "このリンググループに所属する内線を鳴らすためのダイヤル番号"
 
 #: views/form.php:54
-msgid "These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung"
-msgstr "このモードは上記と同じような挙動をしますが、メインの内線(リスト中の最初の内線)が占有されている場合、他の内線は鳴りません。もしメインがFreePBX DND(do not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが鳴ります"
+msgid ""
+"These modes act as described above. However, if the primary extension (first "
+"in list) is occupied, the other extensions will not be rung. If the primary "
+"is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
+"unconditional, then all will be rung"
+msgstr ""
+"このモードは上記と同じような挙動をしますが、メインの内線(リスト中の最初の内"
+"線)が占有されている場合、他の内線は鳴りません。もしメインがFreePBX DND(do "
+"not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが"
+"鳴ります"
 
-#: functions.inc.php:265
+#: functions.inc.php:266
 msgid "This ringgroup"
 msgstr "この着信グループ"
 
 #: views/advanced_form.php:128
-msgid "Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung"
-msgstr "電話が鳴る秒数。全てのhunt型リングルールの場合は、それぞれの電話が反復して鳴る時間です。"
+msgid ""
+"Time in seconds that the phones will ring. For all hunt style ring "
+"strategies, this is the time for each iteration of phone(s) that are rung"
+msgstr ""
+"電話が鳴る秒数。全てのhunt型リングルールの場合は、それぞれの電話が反復して鳴"
+"る時間です。"
 
 #: views/simple_form.php:108
-msgid "Time in seconds that the phones will ring. For sequential ring strategies, this is the time for each iteration of phone(s) that are rung"
+msgid ""
+"Time in seconds that the phones will ring. For sequential ring strategies, "
+"this is the time for each iteration of phone(s) that are rung"
 msgstr ""
 
 #: assets/js/ringgroups.js:57
@@ -397,16 +476,36 @@ msgid "Too-Late Announce"
 msgstr ""
 
 #: views/form.php:243
-msgid "Transmit the Fixed CID Value below on calls that come in from outside only. Internal extension to extension calls will continue to operate in default mode."
-msgstr "外線から着信したコールのCIDを、以下の固定CIDに置き換えます。内部の内線間コールは引き続きデフォルトモードで動作します。"
+msgid ""
+"Transmit the Fixed CID Value below on calls that come in from outside only. "
+"Internal extension to extension calls will continue to operate in default "
+"mode."
+msgstr ""
+"外線から着信したコールのCIDを、以下の固定CIDに置き換えます。内部の内線間コー"
+"ルは引き続きデフォルトモードで動作します。"
 
 #: views/form.php:247
-msgid "Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This WILL be transmitted on trunks that block foreign CallerID"
-msgstr "外部コールの場合に、ダイアルした呼び出し側の番号をCIDとして送信します。内部の内線間コールはデフォルトモードで動作します。着信ルートにDIDが設定されている必要があります。外部のCallerIDをブロックするトランクにも送信します。"
+msgid ""
+"Transmit the number that was dialed as the CID for calls coming from "
+"outside. Internal extension to extension calls will continue to operate in "
+"default mode. There must be a DID on the inbound route for this. This WILL "
+"be transmitted on trunks that block foreign CallerID"
+msgstr ""
+"外部コールの場合に、ダイアルした呼び出し側の番号をCIDとして送信します。内部の"
+"内線間コールはデフォルトモードで動作します。着信ルートにDIDが設定されている必"
+"要があります。外部のCallerIDをブロックするトランクにも送信します。"
 
 #: views/form.php:245
-msgid "Transmit the number that was dialed as the CID for calls coming from outside. Internal extension to extension calls will continue to operate in default mode. There must be a DID on the inbound route for this. This will be BLOCKED on trunks that block foreign CallerID"
-msgstr "外線から着信したコールの場合、ダイヤルした呼び出し側の番号をそのままCIDとして送信します。内部の内線間コールはデフォルトモードで動作します。この機能を使うには、着信ルートにDIDが設定されている必要があります。この機能は、外部 CallerIDをブロックするトランク上ではブロックされます。"
+msgid ""
+"Transmit the number that was dialed as the CID for calls coming from "
+"outside. Internal extension to extension calls will continue to operate in "
+"default mode. There must be a DID on the inbound route for this. This will "
+"be BLOCKED on trunks that block foreign CallerID"
+msgstr ""
+"外線から着信したコールの場合、ダイヤルした呼び出し側の番号をそのままCIDとして"
+"送信します。内部の内線間コールはデフォルトモードで動作します。この機能を使う"
+"には、着信ルートにDIDが設定されている必要があります。この機能は、外部 "
+"CallerIDをブロックするトランク上ではブロックされます。"
 
 #: views/form.php:239
 msgid "Transmits the Callers CID if allowed by the trunk."
@@ -421,20 +520,36 @@ msgid "Warning! Extension"
 msgstr "警告! 内線"
 
 #: views/advanced_form.php:232
-msgid "When enabled, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted."
+msgid ""
+"When enabled, agents who are on an occupied phone will be skipped as if the "
+"line were returning busy. This means that Call Waiting or multi-line phones "
+"will not be presented with the call and in the various hunt style ring "
+"strategies, the next agent will be attempted."
 msgstr ""
 
 #: views/advanced_form.php:259
-msgid "When enabled, this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked."
+msgid ""
+"When enabled, this will allow calls to the Ring Group to be picked up with "
+"the directed call pickup feature using the group number. When not checked, "
+"individual extensions that are part of the group can still be picked up by "
+"doing a directed call pickup to the ringing extension, which works whether "
+"or not this is checked."
 msgstr ""
 
 #: views/advanced_form.php:205
-msgid "When set to Yes, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting ."
+msgid ""
+"When set to Yes, agents who attempt to Call Forward will be ignored, this "
+"applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+"example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
 #: ringgroups.i18n.php:18
-msgid "When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of."
-msgstr "trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信グループ」の項目が追加され、所属するグループへのリンクが表示されます。"
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信グ"
+"ループ」の項目が追加され、所属するグループへのリンクが表示されます。"
 
 #: views/advanced_form.php:396 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
@@ -446,12 +561,22 @@ msgid "Yes"
 msgstr ""
 
 #: views/advanced_form.php:367
-msgid "You can always record calls that come into this ring group (Force), never record them (Never), or allow the extension that answers to do on-demand recording (Dont Care). If recording is denied then one-touch on demand recording will be blocked, unless they have the \"Override\" call recording setting."
+msgid ""
+"You can always record calls that come into this ring group (Force), never "
+"record them (Never), or allow the extension that answers to do on-demand "
+"recording (Dont Care). If recording is denied then one-touch on demand "
+"recording will be blocked, unless they have the \"Override\" call recording "
+"setting."
 msgstr ""
 
 #: views/advanced_form.php:154
-msgid "You can optionally prefix the CallerID name when ringing extensions in this group. ie: If you prefix with \"Sales:\", a call from John Doe would display as \"Sales:John Doe\" on the extensions that ring."
-msgstr "CallerID名にプレフィックスが付けられます。例:「問合せ」と言うプレフィックスを付けると、「A様」からの着信は、着信端末に「問合せ: A様」として表示されます。"
+msgid ""
+"You can optionally prefix the CallerID name when ringing extensions in this "
+"group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
+"as \"Sales:John Doe\" on the extensions that ring."
+msgstr ""
+"CallerID名にプレフィックスが付けられます。例:「問合せ」と言うプレフィックスを"
+"付けると、「A様」からの着信は、着信端末に「問合せ: A様」として表示されます。"
 
 #: install.php:152
 msgid "added field cfignore to ringgroups table"
@@ -519,7 +644,7 @@ msgstr "電話中でない最初のもの"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:265
+#: functions.inc.php:266
 msgid "is already in use"
 msgstr "は既に使用中です"
 
@@ -583,23 +708,13 @@ msgstr "最初の空いているチャネルのみ鳴らします"
 
 #: views/form.php:58
 msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr "オフフック状態でない最初のチャネルのみ鳴らします。 - コールウェイテイングを無視します。"
+msgstr ""
+"オフフック状態でない最初のチャネルのみ鳴らします。 - コールウェイテイングを無"
+"視します。"
 
 #: views/form.php:48
 msgid "ringall"
 msgstr "ringall"
-
-#: page.ringgroups.php:247
-msgid "List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end."
-msgstr ""
-
-#: page.ringgroups.php:520
-msgid "The Group Description provided is too long."
-msgstr ""
-
-#: ringgroups.i18n.php:5
-msgid "Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various \\'hunt\\' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred."
-msgstr ""
 
 #~ msgid "(pick extension)"
 #~ msgstr "(内線を選択)"
@@ -610,10 +725,20 @@ msgstr ""
 #~ msgid "Announcement:"
 #~ msgstr "アナウンス"
 
-#~ msgid "Checking this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked."
-#~ msgstr "チェックすると、リンググループへのコールは、ダイレクトコールピックアップ機能を使用して、グループ番号で受けられます。チェックしていない場合でも、リンググループに所属している内線は、その内線へのダイレクトコールピックアップをすると、受けられます。"
+#~ msgid ""
+#~ "Checking this will allow calls to the Ring Group to be picked up with the "
+#~ "directed call pickup feature using the group number. When not checked, "
+#~ "individual extensions that are part of the group can still be picked up "
+#~ "by doing a directed call pickup to the ringing extension, which works "
+#~ "whether or not this is checked."
+#~ msgstr ""
+#~ "チェックすると、リンググループへのコールは、ダイレクトコールピックアップ機"
+#~ "能を使用して、グループ番号で受けられます。チェックしていない場合でも、リン"
+#~ "ググループに所属している内線は、その内線へのダイレクトコールピックアップを"
+#~ "すると、受けられます。"
 
-#~ msgid "Choose an extension to append to the end of the extension list above."
+#~ msgid ""
+#~ "Choose an extension to append to the end of the extension list above."
 #~ msgstr "上記の内線リストの最後に追加する内線を選択してください。"
 
 #~ msgid "Conflicting Extensions"
@@ -628,23 +753,64 @@ msgstr ""
 #~ msgid "Extension Quick Pick"
 #~ msgstr "内線クイック選択"
 
-#~ msgid "Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading \"+\"."
-#~ msgstr "CIDを置き換える固定値。上記のいくつかのモードで使用します。数字のみ、または先頭が \"+\" であるE164形式で入力してください。"
+#~ msgid ""
+#~ "Fixed value to replace the CID with used with some of the modes above. "
+#~ "Should be in a format of digits only with an option of E164 format using "
+#~ "a leading \"+\"."
+#~ msgstr ""
+#~ "CIDを置き換える固定値。上記のいくつかのモードで使用します。数字のみ、また"
+#~ "は先頭が \"+\" であるE164形式で入力してください。"
 
-#~ msgid "List extensions to ring, one per line, or use the Extension Quick Pick below to insert them here.<br><br>You can include an extension on a remote system, or an external number by suffixing a number with a '#'.  ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound Routing)<br><br>Extensions (without a '#' will not ring a user's Follow-Me. To dial Follow-Me, Queues and other numbers that are not extensions, put a '#' at the end."
-#~ msgstr "1 行にひとつずつ、呼び出す内線を直接入力するか、「内線クイック選択」を使って追加します。<br/> 番号に '#'を付けると、リモートシステムのエクステンション、または外線番号を呼び出すことができます。例えば、2448089# を入力すると、該当するトランクで 2448089 を呼び出します。<br><br>'#' なしの内線は、ユーザーの Follow-Me を呼び出しません。Follow-me やキューのような内線でない番号を呼び出すには、最後に '#' を付けてください。"
+#~ msgid ""
+#~ "List extensions to ring, one per line, or use the Extension Quick Pick "
+#~ "below to insert them here.<br><br>You can include an extension on a "
+#~ "remote system, or an external number by suffixing a number with a '#'.  "
+#~ "ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound "
+#~ "Routing)<br><br>Extensions (without a '#' will not ring a user's Follow-"
+#~ "Me. To dial Follow-Me, Queues and other numbers that are not extensions, "
+#~ "put a '#' at the end."
+#~ msgstr ""
+#~ "1 行にひとつずつ、呼び出す内線を直接入力するか、「内線クイック選択」を使っ"
+#~ "て追加します。<br/> 番号に '#'を付けると、リモートシステムのエクステンショ"
+#~ "ン、または外線番号を呼び出すことができます。例えば、2448089# を入力する"
+#~ "と、該当するトランクで 2448089 を呼び出します。<br><br>'#' なしの内線は、"
+#~ "ユーザーの Follow-Me を呼び出しません。Follow-me やキューのような内線でな"
+#~ "い番号を呼び出すには、最後に '#' を付けてください。"
 
-#~ msgid "Message to be played to the caller before dialing this group.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left"
-#~ msgstr "このグループをダイヤルする前に発信者に再生するメッセージ。<br><br>音声を追加・録音するにはメニューにある「システム録音」を使ってください。"
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>To "
+#~ "add additional recordings please use the \"System Recordings\" MENU to "
+#~ "the left"
+#~ msgstr ""
+#~ "このグループをダイヤルする前に発信者に再生するメッセージ。<br><br>音声を追"
+#~ "加・録音するにはメニューにある「システム録音」を使ってください。"
 
-#~ msgid "Message to be played to the caller before dialing this group.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option"
-#~ msgstr "グループにダイヤルする前に発信者に再生するメッセージ。<br><br>このオプションを変更するには、\"システム録音\"モジュールをインストールして有効にする必要があります。"
+#~ msgid ""
+#~ "Message to be played to the caller before dialing this group.<br><br>You "
+#~ "must install and enable the \"Systems Recordings\" Module to edit this "
+#~ "option"
+#~ msgstr ""
+#~ "グループにダイヤルする前に発信者に再生するメッセージ。<br><br>このオプショ"
+#~ "ンを変更するには、\"システム録音\"モジュールをインストールして有効にする必"
+#~ "要があります。"
 
-#~ msgid "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is enabled.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left"
-#~ msgstr "「コールを確認する」設定が有効な場合に、コールを受ける人に再生するメッセージです。<br><br>音声を追加するには、メニューにある「システム録音」を使ってください。"
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if 'Confirm Calls' "
+#~ "is enabled.<br><br>To add additional recordings use the \"System "
+#~ "Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "「コールを確認する」設定が有効な場合に、コールを受ける人に再生するメッセー"
+#~ "ジです。<br><br>音声を追加するには、メニューにある「システム録音」を使って"
+#~ "ください。"
 
-#~ msgid "Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.<br><br>To add additional recordings use the \"System Recordings\" MENU to the left"
-#~ msgstr "コールを受ける人が1を押す前に、コールが別の内線に既に接続された場合に再生する音声<br><br>音声を追加するには、メニューにある「システム録音」を使ってください。"
+#~ msgid ""
+#~ "Message to be played to the person RECEIVING the call, if the call has "
+#~ "already been accepted before they push 1.<br><br>To add additional "
+#~ "recordings use the \"System Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "コールを受ける人が1を押す前に、コールが別の内線に既に接続された場合に再生"
+#~ "する音声<br><br>音声を追加するには、メニューにある「システム録音」を使って"
+#~ "ください。"
 
 #~ msgid "On Demand"
 #~ msgstr "オンデマンド"
@@ -667,14 +833,36 @@ msgstr ""
 #~ msgid "Too-Late Announce:"
 #~ msgstr "既に接続されたアナウンス"
 
-#~ msgid "When checked, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted."
-#~ msgstr "チェックされている場合、通話中のエージェントは「ビジー」とみなし、スキップします。つまり、複数回線やコールウェイティング機能を持っている電話機はスキップされ、hunt型リングストラテジーを選択した場合でも同様にスキップされ、次のエージェントを試します。"
+#~ msgid ""
+#~ "When checked, agents who are on an occupied phone will be skipped as if "
+#~ "the line were returning busy. This means that Call Waiting or multi-line "
+#~ "phones will not be presented with the call and in the various hunt style "
+#~ "ring strategies, the next agent will be attempted."
+#~ msgstr ""
+#~ "チェックされている場合、通話中のエージェントは「ビジー」とみなし、スキップ"
+#~ "します。つまり、複数回線やコールウェイティング機能を持っている電話機はス"
+#~ "キップされ、hunt型リングストラテジーを選択した場合でも同様にスキップされ、"
+#~ "次のエージェントを試します。"
 
-#~ msgid "When checked, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with '#' at the end, for example to access the extension's Follow-Me, might not honor this setting ."
-#~ msgstr "チェックされている場合は、転送しようとするエージェントを無視します。この設定は呼び出し転送、不在転送とビジー転送に適用されます。末尾に '#\" の付いたエクステンョン、例えば Follow-Me に使うものは、この設定を無視することがあります。"
+#~ msgid ""
+#~ "When checked, agents who attempt to Call Forward will be ignored, this "
+#~ "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+#~ "example to access the extension's Follow-Me, might not honor this "
+#~ "setting ."
+#~ msgstr ""
+#~ "チェックされている場合は、転送しようとするエージェントを無視します。この設"
+#~ "定は呼び出し転送、不在転送とビジー転送に適用されます。末尾に '#\" の付いた"
+#~ "エクステンョン、例えば Follow-Me に使うものは、この設定を無視することがあ"
+#~ "ります。"
 
-#~ msgid "You can always record calls that come into this ring group, never record them, or allow the extension that answers to do on-demand recording. If recording is denied then one-touch on demand recording will be blocked."
-#~ msgstr "このリンググループへのコールを常に録音する、録音しない、または応答した内線にオンデマンド録音を許可することもできます。録音を禁止した場合は、ワンタッチオンデマンド録音はブロックされます。"
+#~ msgid ""
+#~ "You can always record calls that come into this ring group, never record "
+#~ "them, or allow the extension that answers to do on-demand recording. If "
+#~ "recording is denied then one-touch on demand recording will be blocked."
+#~ msgstr ""
+#~ "このリンググループへのコールを常に録音する、録音しない、または応答した内線"
+#~ "にオンデマンド録音を許可することもできます。録音を禁止した場合は、ワンタッ"
+#~ "チオンデマンド録音はブロックされます。"
 
 #~ msgid "deleted"
 #~ msgstr "削除済み"
