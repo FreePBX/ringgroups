@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2016-04-04 17:49-0700\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Announcement:"
 msgstr "הכרזה:"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr "יישומים"
 
@@ -90,10 +90,10 @@ msgstr "אשר שיחות"
 msgid "Conflicting Extensions"
 msgstr "אזהרה! שלוחה מתנגשת"
 
-#: ringgroups.i18n.php:5
+#: ringgroups.i18n.php:8
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"all at once, or in various 'hunt' configurations. Additionally, external "
 "numbers are supported, and there is a call confirmation option where the "
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
@@ -112,7 +112,7 @@ msgstr "מחק קבוצה"
 msgid "Destination if no answer"
 msgstr "יעד אם אף אחד לא עונה"
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "תיאור הקבוצה"
 
-#: functions.inc.php:330
+#: functions.inc.php:331
 msgid "INUSE"
 msgstr "בשימוש"
 
@@ -307,25 +307,25 @@ msgstr "קבוצת צלצול"
 msgid "Ring Group %s: "
 msgstr "קבוצת צלצול %s: "
 
-#: functions.inc.php:453
+#: functions.inc.php:454
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:329
+#: functions.inc.php:57 functions.inc.php:330
 #, php-format
 msgid "Ring Group: %s"
 msgstr "קבוצת צלצול %s:"
 
-#: functions.inc.php:356
+#: functions.inc.php:357
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "קבוצת צלצול (%s% (s"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
 #, fuzzy
 msgid "Ring Groups"
 msgstr "קבוצת צלצול"
@@ -390,7 +390,7 @@ msgstr ""
 "לא יהיה נסיון לצלצל. אם השלוחה הראשית מוגדרת במרכזיה במצב עקוב אחרי ללא "
 "תנאים, כל השלוחות תצלצלנה"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "This ringgroup"
 msgstr "הקבוצת צלצול הנוכחי"
 
@@ -458,7 +458,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:18
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -550,7 +550,7 @@ msgstr ""
 msgid "hunt"
 msgstr "ציד"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "is already in use"
 msgstr "כבר בשימוש"
 

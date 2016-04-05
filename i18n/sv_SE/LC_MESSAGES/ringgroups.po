@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2016-04-04 17:49-0700\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Announcement:"
 msgstr "Påannonsering"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr ""
 
@@ -88,10 +88,10 @@ msgstr "Bekräfta samtal"
 msgid "Conflicting Extensions"
 msgstr "Konfliktande anknytning"
 
-#: ringgroups.i18n.php:5
+#: ringgroups.i18n.php:8
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"all at once, or in various 'hunt' configurations. Additionally, external "
 "numbers are supported, and there is a call confirmation option where the "
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
@@ -110,7 +110,7 @@ msgstr "Ta bort grupp"
 msgid "Destination if no answer"
 msgstr "Destination vid inget svar"
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
-#: functions.inc.php:330
+#: functions.inc.php:331
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
@@ -311,25 +311,25 @@ msgstr "Ringgrupp"
 msgid "Ring Group %s: "
 msgstr "Ringgrupp %s: "
 
-#: functions.inc.php:453
+#: functions.inc.php:454
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:329
+#: functions.inc.php:57 functions.inc.php:330
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Ringgrupp: %s"
 
-#: functions.inc.php:356
+#: functions.inc.php:357
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Ringgrupper"
 
@@ -391,7 +391,7 @@ msgstr ""
 "inte att ringas. Om den första anknytningen är FreePBX Vidarebefordra Samtal "
 "(CF) kommer alla anknytningar att ringas"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "This ringgroup"
 msgstr "Denna ringgrupp"
 
@@ -469,7 +469,7 @@ msgstr ""
 "alltid samtal (CFU) och Vidarebefordra samtal vid upptaget (CFB). "
 "Anknytningar med '#' i slutet behöver alltid inte följa detta"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:18
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -561,7 +561,7 @@ msgstr "första-inte-upptagen"
 msgid "hunt"
 msgstr "runda"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "is already in use"
 msgstr "används redan"
 

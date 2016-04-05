@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2016-04-04 17:49-0700\n"
 "PO-Revision-Date: 2009-02-01 18:54+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Announcement:"
 msgstr "通告："
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr ""
 
@@ -87,10 +87,10 @@ msgstr "呼叫确认"
 msgid "Conflicting Extensions"
 msgstr "分机号冲突"
 
-#: ringgroups.i18n.php:5
+#: ringgroups.i18n.php:8
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"all at once, or in various 'hunt' configurations. Additionally, external "
 "numbers are supported, and there is a call confirmation option where the "
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
@@ -109,7 +109,7 @@ msgstr "删除小组"
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "小组描述"
 
-#: functions.inc.php:330
+#: functions.inc.php:331
 msgid "INUSE"
 msgstr "正在使用"
 
@@ -303,25 +303,25 @@ msgstr "拨号小组"
 msgid "Ring Group %s: "
 msgstr "拨号小组 %s："
 
-#: functions.inc.php:453
+#: functions.inc.php:454
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:329
+#: functions.inc.php:57 functions.inc.php:330
 #, php-format
 msgid "Ring Group: %s"
 msgstr "拨号小组：%s"
 
-#: functions.inc.php:356
+#: functions.inc.php:357
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "拨号小组"
 
@@ -380,7 +380,7 @@ msgstr ""
 "就不会响铃。如果主分机是设置了免打扰，它就不会振铃。如果主分机设置了无条件转"
 "移呼叫，那么所有的分机会响铃"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "This ringgroup"
 msgstr "这个拨号小组"
 
@@ -456,7 +456,7 @@ msgstr ""
 "CFB。以“#”号作为按键输入结尾的分机号（例如访问分机的“跟我来”），可能不接收此"
 "设置。"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:18
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -548,7 +548,7 @@ msgstr "首个未离钩频道"
 msgid "hunt"
 msgstr "搜寻"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "is already in use"
 msgstr "已经在使用中了"
 

@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:59-0500\n"
+"POT-Creation-Date: 2016-04-04 17:49-0700\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -77,7 +77,7 @@ msgstr "常に以下の固定CIDを送信します。"
 msgid "Announcement:"
 msgstr "アナウンス"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -122,14 +122,18 @@ msgstr "コールを確認する"
 msgid "Conflicting Extensions"
 msgstr "内線の競合"
 
-#: ringgroups.i18n.php:5
+#: ringgroups.i18n.php:8
 msgid ""
 "Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various \\'hunt\\' configurations. Additionally, external "
+"all at once, or in various 'hunt' configurations. Additionally, external "
 "numbers are supported, and there is a call confirmation option where the "
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
+"同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
+"様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
+"他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認でき"
+"るオプションも使えます。"
 
 #: page.ringgroups.php:374 page.ringgroups.php:392 page.ringgroups.php:408
 #: page.ringgroups.php:420
@@ -144,7 +148,7 @@ msgstr "グループを削除"
 msgid "Destination if no answer"
 msgstr "応答がない場合の転送先"
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
 msgstr "内線着信グループのメンバーを表示する"
 
@@ -205,7 +209,7 @@ msgstr "ダイヤルした呼び出し側の番号を強制する"
 msgid "Group Description"
 msgstr "グループの説明"
 
-#: functions.inc.php:330
+#: functions.inc.php:331
 msgid "INUSE"
 msgstr "使用中"
 
@@ -345,25 +349,25 @@ msgstr "着信グループ"
 msgid "Ring Group %s: "
 msgstr "着信グループ %s: "
 
-#: functions.inc.php:453
+#: functions.inc.php:454
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
-#: ringgroups.i18n.php:10
+#: ringgroups.i18n.php:16
 msgid "Ring Group Module"
 msgstr "着信グループモジュール"
 
-#: functions.inc.php:57 functions.inc.php:329
+#: functions.inc.php:57 functions.inc.php:330
 #, php-format
 msgid "Ring Group: %s"
 msgstr "着信グループ: %s"
 
-#: functions.inc.php:356
+#: functions.inc.php:357
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"
 
-#: ringgroups.i18n.php:3 ringgroups.i18n.php:6
+#: ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "着信グループ"
 
@@ -424,7 +428,7 @@ msgstr ""
 "not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが"
 "鳴ります"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "This ringgroup"
 msgstr "この着信グループ"
 
@@ -510,7 +514,7 @@ msgstr ""
 "は呼び出し転送、不在転送とビジー転送に適用されます。末尾に '#\" の付いたエク"
 "ステンョン、例えば Follow-Me に使うものは、この設定を無視することがあります。"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:18
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -606,7 +610,7 @@ msgstr "電話中でない最初のもの"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:262
+#: functions.inc.php:263
 msgid "is already in use"
 msgstr "は既に使用中です"
 
@@ -677,18 +681,6 @@ msgstr ""
 #: page.ringgroups.php:213
 msgid "ringall"
 msgstr "ringall"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
-#~ "様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
-#~ "他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認で"
-#~ "きるオプションも使えます。"
 
 #~ msgid "On Demand"
 #~ msgstr "オンデマンド"
