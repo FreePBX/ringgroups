@@ -10,12 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-03 12:24-0800\n"
-"PO-Revision-Date: 2016-01-08 19:04-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-04-02 20:45+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/form.php:54
 msgid "*-prim"
@@ -34,15 +38,15 @@ msgstr ""
 
 #: views/rggrid.php:18
 msgid "Actions"
-msgstr ""
+msgstr "عملیات"
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
-msgstr ""
+msgstr "افزودن گروه زنگ"
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
-msgstr ""
+msgstr "اطلاعات هشدار"
 
 #: views/form.php:241
 msgid "Always transmit the Fixed CID Value below."
@@ -50,11 +54,11 @@ msgstr ""
 
 #: views/form.php:95
 msgid "Announcement"
-msgstr ""
+msgstr "اطلاعیه"
 
 #: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "درخواست"
 
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
@@ -62,7 +66,7 @@ msgstr ""
 
 #: views/advanced_form.php:350
 msgid "Call Recording"
-msgstr ""
+msgstr "ضبط تماس"
 
 #: views/advanced_form.php:300
 msgid "Change External CID Configuration"
@@ -74,7 +78,7 @@ msgstr ""
 
 #: views/advanced_form.php:271
 msgid "Confirm Calls"
-msgstr ""
+msgstr "تایید تماسها"
 
 #: ringgroups.i18n.php:8
 msgid ""
@@ -87,19 +91,19 @@ msgstr ""
 
 #: views/form.php:137 views/form.php:172 views/form.php:239 views/form.php:251
 msgid "Default"
-msgstr ""
+msgstr "پیشفرض"
 
 #: Ringgroups.class.php:142
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
-msgstr ""
+msgstr "شرح"
 
 #: views/advanced_form.php:384 views/simple_form.php:141
 msgid "Destination if no answer"
-msgstr ""
+msgstr "مقصد در صورت عدم پاسخگویی"
 
 #: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
@@ -107,11 +111,11 @@ msgstr ""
 
 #: views/advanced_form.php:357
 msgid "Dont Care"
-msgstr ""
+msgstr "مهم نیست"
 
 #: views/advanced_form.php:244
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "فعال کردن گرفتن تماس"
 
 #: views/advanced_form.php:286
 msgid ""
@@ -123,7 +127,7 @@ msgstr ""
 
 #: views/advanced_form.php:58 views/simple_form.php:32
 msgid "Extension List"
-msgstr ""
+msgstr "فهرست داخلی"
 
 #: views/advanced_form.php:326 views/form.php:241 views/form.php:252
 msgid "Fixed CID Value"
@@ -138,19 +142,19 @@ msgstr ""
 
 #: views/advanced_form.php:355
 msgid "Force"
-msgstr ""
+msgstr "اجبار"
 
 #: views/form.php:247 views/form.php:255
 msgid "Force Dialed Number"
-msgstr ""
+msgstr "اجبار شماره گیری"
 
 #: views/advanced_form.php:34
 msgid "Group Description"
-msgstr ""
+msgstr "شرح گروه"
 
 #: functions.inc.php:325
 msgid "INUSE"
-msgstr ""
+msgstr "در حال استفاده"
 
 #: views/form.php:230
 msgid ""
@@ -164,7 +168,7 @@ msgstr ""
 
 #: views/form.php:213
 msgid "Inherit"
-msgstr ""
+msgstr "ارثی"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
@@ -180,7 +184,7 @@ msgstr ""
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
-msgstr ""
+msgstr "فهرست گروههای زنگ"
 
 #: views/advanced_form.php:78
 msgid ""
@@ -234,16 +238,16 @@ msgstr ""
 
 #: views/advanced_form.php:359
 msgid "Never"
-msgstr ""
+msgstr "هرگز"
 
 #: views/advanced_form.php:197 views/advanced_form.php:224
 #: views/advanced_form.php:251 views/advanced_form.php:278
 msgid "No"
-msgstr ""
+msgstr "خیر"
 
 #: views/form.php:102
 msgid "None"
-msgstr ""
+msgstr "هیچ"
 
 #: assets/js/ringgroups.js:59
 msgid ""
@@ -257,7 +261,7 @@ msgstr ""
 
 #: views/form.php:205
 msgid "Play Music On Hold"
-msgstr ""
+msgstr "پخش موزیک انتظار"
 
 #: assets/js/ringgroups.js:58
 msgid "Please enter a valid Group Description"
@@ -265,7 +269,7 @@ msgstr ""
 
 #: assets/js/ringgroups.js:55
 msgid "Please enter an extension list."
-msgstr ""
+msgstr "لطفا فهرستی از داخلی ها را وارد کنید"
 
 #: views/advanced_form.php:46
 msgid "Provide a descriptive title for this Ring Group."
@@ -273,23 +277,23 @@ msgstr ""
 
 #: views/simple_form.php:20
 msgid "Provide a name for this Ring Group."
-msgstr ""
+msgstr "اختصاص یک نام به گروه زنگ."
 
 #: views/form.php:130
 msgid "Remote Announce"
-msgstr ""
+msgstr "آگهی راه دور"
 
 #: Ringgroups.class.php:152
 msgid "Reset"
-msgstr ""
+msgstr "باز نشانی"
 
 #: views/form.php:212
 msgid "Ring"
-msgstr ""
+msgstr "زنگ"
 
 #: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
-msgstr ""
+msgstr "گروه زنگ"
 
 #: functions.inc.php:37
 #, php-format
@@ -298,15 +302,15 @@ msgstr ""
 
 #: functions.inc.php:449
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "اعضای گروه زنگ"
 
 #: ringgroups.i18n.php:16
 msgid "Ring Group Module"
-msgstr ""
+msgstr "ماژول گروه زنگ"
 
 #: views/simple_form.php:8
 msgid "Ring Group Name"
-msgstr ""
+msgstr "نام گروه زنگ"
 
 #: functions.inc.php:57 functions.inc.php:324
 #, php-format
@@ -320,23 +324,23 @@ msgstr ""
 
 #: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
-msgstr ""
+msgstr "گروههای زنگ"
 
 #: views/advanced_form.php:90 views/simple_form.php:64
 msgid "Ring Strategy"
-msgstr ""
+msgstr "استراتژی گروه زنگ"
 
 #: views/simple_form.php:91
 msgid "Ring Time"
-msgstr ""
+msgstr "مدت زنگ"
 
 #: views/advanced_form.php:116
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "مدت زنگ (حداکثر 300 ثانیه)"
 
 #: views/simple_form.php:118
 msgid "Ring Tone"
-msgstr ""
+msgstr "صدای زنگ"
 
 #: views/form.php:48
 msgid "Ring all available channels until one answers (default)"
@@ -350,11 +354,11 @@ msgstr ""
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
-msgstr ""
+msgstr "شماره گروه زنگ"
 
 #: Ringgroups.class.php:122
 msgid "RingGroup"
-msgstr ""
+msgstr "گروه زنگ"
 
 #: views/simple_form.php:130
 msgid ""
@@ -364,11 +368,11 @@ msgstr ""
 
 #: views/simple_form.php:70
 msgid "Sequential"
-msgstr ""
+msgstr "متوالی"
 
 #: views/simple_form.php:69
 msgid "Simultaneous"
-msgstr ""
+msgstr "همزمان"
 
 #: views/advanced_form.php:217
 msgid "Skip Busy Agent"
@@ -376,7 +380,7 @@ msgstr ""
 
 #: Ringgroups.class.php:147
 msgid "Submit"
-msgstr ""
+msgstr "ارسال"
 
 #: views/form.php:50
 msgid "Take turns ringing each available extension"
@@ -396,7 +400,7 @@ msgstr ""
 
 #: functions.inc.php:265
 msgid "This ringgroup"
-msgstr ""
+msgstr "این گروه زنگ"
 
 #: views/advanced_form.php:128
 msgid ""
@@ -538,11 +542,11 @@ msgstr ""
 
 #: install.php:320
 msgid "already migrated"
-msgstr ""
+msgstr "انتقال انجام شد"
 
 #: views/form.php:217
 msgid "default"
-msgstr ""
+msgstr "پیشفرض"
 
 #: install.php:294
 msgid "dropping annmsg field.."
@@ -560,11 +564,11 @@ msgstr ""
 #: install.php:234 install.php:244 install.php:260 install.php:270
 #: install.php:286
 msgid "fatal error"
-msgstr ""
+msgstr "خطای سیستمی"
 
 #: views/form.php:56
 msgid "firstavailable"
-msgstr ""
+msgstr "اولین دسترسی"
 
 #: views/form.php:58
 msgid "firstnotonphone"
@@ -576,7 +580,7 @@ msgstr ""
 
 #: functions.inc.php:265
 msgid "is already in use"
-msgstr ""
+msgstr "در حال استفاده"
 
 #: Ringgroups.class.php:75
 msgid "is not allowed for your account"
@@ -605,7 +609,7 @@ msgstr ""
 
 #: install.php:183
 msgid "migrating"
-msgstr ""
+msgstr "انتقال"
 
 #: install.php:298
 msgid "no annmsg field???"
@@ -621,20 +625,20 @@ msgstr ""
 
 #: views/form.php:216
 msgid "none"
-msgstr ""
+msgstr "هیچ"
 
 #: install.php:191 install.php:200 install.php:209 install.php:300
 #: install.php:308 install.php:316
 msgid "ok"
-msgstr ""
+msgstr "تایید"
 
 #: views/form.php:60
 msgid "random"
-msgstr ""
+msgstr "تصادفی"
 
 #: views/form.php:56
 msgid "ring only the first available channel"
-msgstr ""
+msgstr "زنگ فقط در اولین کانال در دسترس"
 
 #: views/form.php:58
 msgid "ring only the first channel which is not offhook - ignore CW"
@@ -642,4 +646,4 @@ msgstr ""
 
 #: views/form.php:48
 msgid "ringall"
-msgstr ""
+msgstr "زنگ به همه"
