@@ -5,27 +5,28 @@ global $db;
 global $amp_conf;
 
 $sql = "
-CREATE TABLE IF NOT EXISTS `ringgroups` 
-( 
-	`grpnum` VARCHAR( 20 ) NOT NULL , 
-	`strategy` VARCHAR( 50 ) NOT NULL , 
-	`grptime` SMALLINT NOT NULL , 
-	`grppre` VARCHAR( 100 ) NULL , 
-	`grplist` VARCHAR( 255 ) NOT NULL , 
+CREATE TABLE IF NOT EXISTS `ringgroups`
+(
+	`grpnum` VARCHAR( 20 ) NOT NULL ,
+	`strategy` VARCHAR( 50 ) NOT NULL ,
+	`grptime` SMALLINT NOT NULL ,
+	`grppre` VARCHAR( 100 ) NULL ,
+	`grplist` VARCHAR( 255 ) NOT NULL ,
 	`annmsg_id` INTEGER,
-	`postdest` VARCHAR( 255 ) NULL , 
-	`description` VARCHAR( 35 ) NOT NULL , 
-	`alertinfo` VARCHAR ( 255 ) NULL , 
+	`postdest` VARCHAR( 255 ) NULL ,
+	`description` VARCHAR( 35 ) NOT NULL ,
+	`alertinfo` VARCHAR ( 255 ) NULL ,
 	`remotealert_id` INTEGER,
-	`needsconf` VARCHAR ( 10 ), 
+	`needsconf` VARCHAR ( 10 ),
+	`progress` VARCHAR ( 10 ),
 	`toolate_id` INTEGER,
   `ringing` VARCHAR( 80 ) NULL,
-	`cwignore` VARCHAR ( 10 ), 
-	`cfignore` VARCHAR ( 10 ), 
-	`cpickup` VARCHAR ( 10 ), 
-	`recording` VARCHAR ( 10 ) default 'dontcare', 
-	PRIMARY KEY  (`grpnum`) 
-) 
+	`cwignore` VARCHAR ( 10 ),
+	`cfignore` VARCHAR ( 10 ),
+	`cpickup` VARCHAR ( 10 ),
+	`recording` VARCHAR ( 10 ) default 'dontcare',
+	PRIMARY KEY  (`grpnum`)
+)
 ";
 $check = $db->query($sql);
 if(DB::IsError($check)) {
@@ -186,7 +187,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
   	$result = $db->query($sql);
   	if(DB::IsError($result)) {
 			out(_("fatal error"));
-			die_freepbx($result->getDebugInfo()); 
+			die_freepbx($result->getDebugInfo());
 		} else {
 			out(_("ok"));
 		}
@@ -195,7 +196,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
   	$result = $db->query($sql);
   	if(DB::IsError($result)) {
 			out(_("fatal error"));
-			die_freepbx($result->getDebugInfo()); 
+			die_freepbx($result->getDebugInfo());
 		} else {
 			out(_("ok"));
 		}
@@ -204,7 +205,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
   	$result = $db->query($sql);
   	if(DB::IsError($result)) {
 			out(_("fatal error"));
-			die_freepbx($result->getDebugInfo()); 
+			die_freepbx($result->getDebugInfo());
 		} else {
 			out(_("ok"));
 		}
@@ -216,7 +217,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 		if(DB::IsError($results)) {
 			out(_("fatal error"));
-			die_freepbx($results->getDebugInfo());	
+			die_freepbx($results->getDebugInfo());
 		}
 		$migrate_arr = array();
 		$count = 0;
@@ -232,7 +233,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 			$result = $db->executeMultiple($compiled,$migrate_arr);
 			if(DB::IsError($result)) {
 				out(_("fatal error"));
-				die_freepbx($result->getDebugInfo());	
+				die_freepbx($result->getDebugInfo());
 			}
 		}
 		out(sprintf(_("migrated %s entries"),$count));
@@ -242,7 +243,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 		if(DB::IsError($results)) {
 			out(_("fatal error"));
-			die_freepbx($results->getDebugInfo());	
+			die_freepbx($results->getDebugInfo());
 		}
 		$migrate_arr = array();
 		$count = 0;
@@ -258,7 +259,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 			$result = $db->executeMultiple($compiled,$migrate_arr);
 			if(DB::IsError($result)) {
 				out(_("fatal error"));
-				die_freepbx($result->getDebugInfo());	
+				die_freepbx($result->getDebugInfo());
 			}
 		}
 		out(sprintf(_("migrated %s entries"),$count));
@@ -268,7 +269,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 		if(DB::IsError($results)) {
 			out(_("fatal error"));
-			die_freepbx($results->getDebugInfo());	
+			die_freepbx($results->getDebugInfo());
 		}
 		$migrate_arr = array();
 		$count = 0;
@@ -284,7 +285,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 			$result = $db->executeMultiple($compiled,$migrate_arr);
 			if(DB::IsError($result)) {
 				out(_("fatal error"));
-				die_freepbx($result->getDebugInfo());	
+				die_freepbx($result->getDebugInfo());
 			}
 		}
 		out(sprintf(_("migrated %s entries"),$count));
@@ -294,7 +295,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		outn(_("dropping annmsg field.."));
   	$sql = "ALTER TABLE `ringgroups` DROP `annmsg`";
   	$result = $db->query($sql);
-  	if(DB::IsError($result)) { 
+  	if(DB::IsError($result)) {
 			out(_("no annmsg field???"));
 		} else {
 			out(_("ok"));
@@ -302,7 +303,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		outn(_("dropping remotealert field.."));
   	$sql = "ALTER TABLE `ringgroups` DROP `remotealert`";
   	$result = $db->query($sql);
-  	if(DB::IsError($result)) { 
+  	if(DB::IsError($result)) {
 			out(_("no remotealert field???"));
 		} else {
 			out(_("ok"));
@@ -310,7 +311,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 		outn(_("dropping toolate field.."));
   	$sql = "ALTER TABLE `ringgroups` DROP `toolate`";
   	$result = $db->query($sql);
-  	if(DB::IsError($result)) { 
+  	if(DB::IsError($result)) {
 			out(_("no toolate field???"));
 		} else {
 			out(_("ok"));
@@ -345,3 +346,14 @@ $sql = 'UPDATE `ringgroups` SET `recording`="never" WHERE `recording`="no"';
 $db->query($sql);
 $sql = 'UPDATE `ringgroups` SET `recording`="force" WHERE `recording`="yes"';
 $db->query($sql);
+
+$sql = "SELECT progress FROM ringgroups";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+	$sql = "ALTER TABLE ringgroups ADD progress VARCHAR( 10 ) NULL ;";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
+		die_freepbx($result->getDebugInfo());
+	}
+}

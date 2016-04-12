@@ -8,6 +8,7 @@ isset($_REQUEST['action'])?$action = $_REQUEST['action']:$action='';
 isset($_REQUEST['extdisplay'])?$extdisplay=$_REQUEST['extdisplay']:$extdisplay='';
 isset($_REQUEST['account'])?$account = $_REQUEST['account']:$account='';
 isset($_REQUEST['grptime'])?$grptime = $_REQUEST['grptime']:$grptime='';
+isset($_REQUEST['progress'])?$progress = $_REQUEST['progress']:$progress='yes';
 isset($_REQUEST['grppre'])?$grppre = $_REQUEST['grppre']:$grppre='';
 isset($_REQUEST['strategy'])?$strategy = $_REQUEST['strategy']:$strategy='';
 isset($_REQUEST['annmsg_id'])?$annmsg_id = $_REQUEST['annmsg_id']:$annmsg_id='';
@@ -71,7 +72,7 @@ if(isset($_POST['action'])){
 			if (!empty($usage_arr)) {
 				$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording)) {
+			} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress)) {
 
 				// save the most recent created destination which will be picked up by
 				//
@@ -92,7 +93,7 @@ if(isset($_POST['action'])){
 		//edit group - just delete and then re-add the extension
 		if ($action == 'edtGRP') {
 			ringgroups_del($account);
-			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
+			ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress);
 			needreload();
 			redirect_standard('extdisplay');
 		}
@@ -125,6 +126,7 @@ if ($action == 'delGRP') {
 		$grplist = explode("-", $grpliststr);
 		$strategy = $thisgrp['strategy'];
 		$grppre = $thisgrp['grppre'];
+		$progress = $thisgrp['progress'];
 		$grptime = $thisgrp['grptime'];
 		$goto = $thisgrp['postdest'];
 		$annmsg_id = $thisgrp['annmsg_id'];
@@ -176,6 +178,7 @@ if ($action == 'delGRP') {
 		$cfignore = '';
 		$toolate_id = '';
 		$ringing = '';
+		$progress = 'yes';
 
 		if (!empty($conflict_url)) {
 			echo "<h5>"._("Conflicting Extensions")."</h5>";
@@ -333,6 +336,13 @@ if ($action == 'delGRP') {
 			<tr>
 				<td><a href="#" class="info"><?php echo _("Alert Info")?><span><?php echo _('ALERT_INFO can be used for distinctive ring with SIP devices.')?></span></a>:</td>
 				<td><input type="text" name="alertinfo" size="20" value="<?php echo ($alertinfo)?$alertinfo:'' ?>" tabindex="<?php echo ++$tabindex;?>"></td>
+			</tr>
+
+			<tr>
+		<td><a href="#" class="info"><?php echo _("Send Progress")?><span> <?php echo _("Should this ringgroup indicate call progress to digital channels where supported.") ?></span></a>:</td>
+				<td>
+					<input type="checkbox" name="progress" value="yes" <?php echo ($progress == 'yes')?'CHECKED':'' ?>   tabindex="<?php echo ++$tabindex;?>"/>
+				</td>
 			</tr>
 
 			<tr>
