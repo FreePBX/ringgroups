@@ -83,6 +83,7 @@ function ringgroups_get_config($engine) {
 					$grplist = $grp['grplist'];
 					$postdest = $grp['postdest'];
 					$grppre = (isset($grp['grppre'])?$grp['grppre']:'');
+					$progress = (isset($grp['progress'])?$grp['progress']:'yes');
 					$annmsg_id = (isset($grp['annmsg_id'])?$grp['annmsg_id']:'');
 					$alertinfo = $grp['alertinfo'];
 					$needsconf = $grp['needsconf'];
@@ -106,9 +107,9 @@ function ringgroups_get_config($engine) {
 					} else {
 						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}
-
-					$ext->add($contextname, $grpnum, '', new ext_progress());
-
+					if ($progress == 'yes') {
+						$ext->add($contextname, $grpnum, '', new ext_progress());
+					}
 					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
 
 					// block voicemail until phone is answered at which point a macro should be called on the answering
@@ -254,7 +255,7 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare') {
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes') {
 	global $db;
 	global $astman;
 	global $amp_conf;
@@ -275,7 +276,7 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 	$remotealert_id = (!empty($remotealert_id) && ctype_digit($remotealert_id)) ? $remotealert_id : 0;
 	$toolate_id = (!empty($toolate_id) && ctype_digit($toolate_id)) ? $toolate_id : 0;
 
-	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore', '$cpickup', '$recording')";
+	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore', '$cpickup', '$recording', '".$db->escapeSimple($progress)."')";
 	$results = sql($sql);
 
 	// from followme, put these in astdb, should migrate more settings to astdb from sql so that user portal control can be
@@ -366,7 +367,7 @@ function ringgroups_get($grpnum) {
 	global $astman;
 	global $amp_conf;
 
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	if ($astman) {
 		$astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
 		switch($astdb_changecid) {

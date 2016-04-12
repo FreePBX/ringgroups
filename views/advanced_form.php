@@ -180,6 +180,33 @@
 	</div>
 </div>
 <!--END Alert Info-->
+<!--Send Progress-->
+<div class="element-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-3">
+						<label class="control-label" for="progress"><?php echo _("Send Progress") ?></label>
+						<i class="fa fa-question-circle fpbx-help-icon" data-for="progress"></i>
+					</div>
+					<div class="col-md-9 radioset">
+            <input type="radio" name="progress" id="progressyes" value="yes" <?php echo ($progress == "yes"?"CHECKED":"") ?>>
+            <label for="progressyes"><?php echo _("Yes");?></label>
+            <input type="radio" name="progress" id="progressno" value="no" <?php echo ($progress == "yes"?"":"CHECKED") ?>>
+            <label for="progressno"><?php echo _("No");?></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<span id="progress-help" class="help-block fpbx-help-block"><?php echo _("Should this ringgroup indicate call progress to digital channels where supported.")?></span>
+		</div>
+	</div>
+</div>
+<!--END Send Progress-->
 <!--Ignore CF Settings-->
 <div class="element-container">
 	<div class="row">

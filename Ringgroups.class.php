@@ -21,6 +21,7 @@ class Ringgroups implements \BMO {
 		isset($request['extdisplay'])?$extdisplay=$request['extdisplay']:$extdisplay='';
 		isset($request['account'])?$account = $request['account']:$account='';
 		isset($request['grptime'])?$grptime = $request['grptime']:$grptime='';
+		isset($request['progress'])?$progress = $request['progress']:$progress='yes';
 		isset($request['grppre'])?$grppre = $request['grppre']:$grppre='';
 		isset($request['strategy'])?$strategy = $request['strategy']:$strategy='';
 		isset($request['annmsg_id'])?$annmsg_id = $request['annmsg_id']:$annmsg_id='';
@@ -82,7 +83,7 @@ class Ringgroups implements \BMO {
 					if (!empty($usage_arr)) {
 						$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-					} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording)) {
+					} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress)) {
 
 						// save the most recent created destination which will be picked up by
 						//
@@ -104,7 +105,7 @@ class Ringgroups implements \BMO {
 				//edit group - just delete and then re-add the extension
 				if ($action == 'edtGRP') {
 					ringgroups_del($account);
-					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording);
+					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress);
 					needreload();
 					$_REQUEST['extdisplay'] = $account;
 				}
