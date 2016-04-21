@@ -107,9 +107,10 @@ function ringgroups_get_config($engine) {
 						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
 					}
 
+					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${__RINGINGSENT}" = "TRUE"]', 'cid'));
 					$ext->add($contextname, $grpnum, '', new ext_progress());
 
-					$ext->add($contextname, $grpnum, '', new ext_macro('user-callerid'));
+					$ext->add($contextname, $grpnum, 'cid', new ext_macro('user-callerid'));
 
 					// block voicemail until phone is answered at which point a macro should be called on the answering
 					// line to clear this flag so that subsequent transfers can occur, if already set by a the caller
