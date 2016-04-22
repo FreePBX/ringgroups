@@ -8,6 +8,7 @@ if ($extdisplay) {
 	$grplist = explode("-", $grpliststr);
 	$strategy = $thisgrp['strategy'];
 	$grppre = $thisgrp['grppre'];
+	$progress = isset($thisgrp['progress'])?$thisgrp['progress']:'yes';
 	$grptime = $thisgrp['grptime'];
 	$goto = $thisgrp['postdest'];
 	$annmsg_id = $thisgrp['annmsg_id'];
@@ -31,6 +32,7 @@ if ($extdisplay) {
 	$strategy = '';
 	$grppre = '';
 	$grptime = '';
+	$progress = 'yes';
 	$goto = '';
 	$annmsg_id = '';
 	$alertinfo = '';
