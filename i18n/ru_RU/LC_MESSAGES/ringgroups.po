@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 17:51-0700\n"
+"POT-Creation-Date: 2016-04-22 09:54-0700\n"
 "PO-Revision-Date: 2015-04-25 21:10+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -20,7 +20,7 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "*-prim"
 msgstr "*-прим"
 
@@ -46,15 +46,19 @@ msgstr ""
 msgid "Add Ring Group"
 msgstr "Добавить группу вызова"
 
+#: install.php:349
+msgid "Adding Column progress"
+msgstr ""
+
 #: views/advanced_form.php:166
 msgid "Alert Info"
 msgstr "Дополнительная информация"
 
-#: views/form.php:241
+#: views/form.php:243
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Всегда передавать фиксированное значение Caller ID указанное ниже."
 
-#: views/form.php:95
+#: views/form.php:97
 msgid "Announcement"
 msgstr ""
 
@@ -66,11 +70,11 @@ msgstr "Приложения"
 msgid "CID Name Prefix"
 msgstr "Префикс ИД имени"
 
-#: views/advanced_form.php:350
+#: views/advanced_form.php:377
 msgid "Call Recording"
 msgstr "Запись соединений"
 
-#: views/advanced_form.php:300
+#: views/advanced_form.php:327
 msgid "Change External CID Configuration"
 msgstr "Изменить кофигурацию Caller ID для внешних вызовов"
 
@@ -78,7 +82,11 @@ msgstr "Изменить кофигурацию Caller ID для внешних 
 msgid "Checking if recordings need migration.."
 msgstr "Проверка нуждаются ли записи в перемещении.."
 
-#: views/advanced_form.php:271
+#: install.php:358
+msgid "Column present"
+msgstr ""
+
+#: views/advanced_form.php:298
 msgid "Confirm Calls"
 msgstr "Подтверждение звонков"
 
@@ -97,11 +105,11 @@ msgstr ""
 "номера. Которая даёт возможность подтвердить желание принять звонок прежде, "
 "чем звонок будет туда перенаправлен."
 
-#: views/form.php:137 views/form.php:172 views/form.php:239 views/form.php:251
+#: views/form.php:139 views/form.php:174 views/form.php:241 views/form.php:253
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ringgroups.class.php:142
+#: Ringgroups.class.php:143
 msgid "Delete"
 msgstr ""
 
@@ -109,7 +117,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: views/advanced_form.php:384 views/simple_form.php:141
+#: views/advanced_form.php:411 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Назначение, если никто не ответил"
 
@@ -117,15 +125,15 @@ msgstr "Назначение, если никто не ответил"
 msgid "Display Extension Ring Group Members"
 msgstr "Отображает внутренние номера членов ринг-группы"
 
-#: views/advanced_form.php:357
+#: views/advanced_form.php:384
 msgid "Dont Care"
 msgstr "Все равно"
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Enable Call Pickup"
 msgstr "Задействовать перехват звонка"
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -141,22 +149,22 @@ msgstr ""
 msgid "Extension List"
 msgstr "Лист внутренних номеров"
 
-#: views/advanced_form.php:326 views/form.php:241 views/form.php:252
+#: views/advanced_form.php:353 views/form.php:243 views/form.php:254
 msgid "Fixed CID Value"
 msgstr "Фиксированное значение Caller ID"
 
-#: views/advanced_form.php:338
+#: views/advanced_form.php:365
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
 
-#: views/advanced_form.php:355
+#: views/advanced_form.php:382
 msgid "Force"
 msgstr "Всегда"
 
-#: views/form.php:247 views/form.php:255
+#: views/form.php:249 views/form.php:257
 msgid "Force Dialed Number"
 msgstr "Форсировать набранный номер"
 
@@ -164,11 +172,11 @@ msgstr "Форсировать набранный номер"
 msgid "Group Description"
 msgstr "Описание группы"
 
-#: functions.inc.php:326
+#: functions.inc.php:330
 msgid "INUSE"
 msgstr "ИСПОЛБЗУЕТСЯ"
 
-#: views/form.php:230
+#: views/form.php:232
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -176,11 +184,11 @@ msgstr ""
 "Если выбран класс Музыки в ожидании вместо простого сигнала вызова, то "
 "позвонивший будет слушать музыку, пока кто-то не поднимет трубку."
 
-#: views/advanced_form.php:190
+#: views/advanced_form.php:217
 msgid "Ignore CF Settings"
 msgstr "Игнорировать установки форварда звонков (CF)"
 
-#: views/form.php:213
+#: views/form.php:215
 msgid "Inherit"
 msgstr ""
 
@@ -219,7 +227,7 @@ msgid ""
 "dial 2448089"
 msgstr ""
 
-#: views/form.php:60
+#: views/form.php:62
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -229,40 +237,41 @@ msgstr ""
 "гарантировать, что вызовы в группе будут распределены равномерно. Моделирует "
 "Очередь, когда Очередь не может использоваться."
 
-#: views/form.php:116
+#: views/form.php:118
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: views/form.php:151
+#: views/form.php:153
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU above"
 msgstr ""
 
-#: views/form.php:186
+#: views/form.php:188
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: views/form.php:237
+#: views/form.php:239
 msgid "Mode"
 msgstr "Режим"
 
-#: views/advanced_form.php:359
+#: views/advanced_form.php:386
 msgid "Never"
 msgstr "Никогда"
 
 #: views/advanced_form.php:197 views/advanced_form.php:224
 #: views/advanced_form.php:251 views/advanced_form.php:278
+#: views/advanced_form.php:305
 msgid "No"
 msgstr ""
 
-#: views/form.php:102
+#: views/form.php:104
 msgid "None"
 msgstr "Нет"
 
@@ -274,11 +283,11 @@ msgstr ""
 "Если отмечено, поддерживаются только сценарии звонят-все, звонят-все-v2, "
 "серийное искание и соответствующие им -прим варианты"
 
-#: views/form.php:243 views/form.php:253
+#: views/form.php:245 views/form.php:255
 msgid "Outside Calls Fixed CID Value"
 msgstr "Фиксированное значение Caller ID для внешних вызовов"
 
-#: views/form.php:205
+#: views/form.php:207
 msgid "Play Music On Hold"
 msgstr ""
 
@@ -298,15 +307,15 @@ msgstr "Предложите понятное название для этой �
 msgid "Provide a name for this Ring Group."
 msgstr ""
 
-#: views/form.php:130
+#: views/form.php:132
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:152
+#: Ringgroups.class.php:153
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:212
+#: views/form.php:214
 msgid "Ring"
 msgstr "Звонок"
 
@@ -319,7 +328,7 @@ msgstr "Группа вызова"
 msgid "Ring Group %s: "
 msgstr "Группа вызова %s: "
 
-#: functions.inc.php:450
+#: functions.inc.php:454
 msgid "Ring Group Membership"
 msgstr "Членство в группе вызова"
 
@@ -331,12 +340,12 @@ msgstr "Модуль группы вызова"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:329
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Группа вызова %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Группа вызова: %s (%s)"
@@ -361,11 +370,11 @@ msgstr "Время звонка (макс. 300 сек.)"
 msgid "Ring Tone"
 msgstr ""
 
-#: views/form.php:48
+#: views/form.php:50
 msgid "Ring all available channels until one answers (default)"
 msgstr "Звонят все каналы, пока один кто либо не ответит (по умолчанию)"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -377,7 +386,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Номер группы вызова"
 
-#: Ringgroups.class.php:122
+#: Ringgroups.class.php:123
 msgid "RingGroup"
 msgstr ""
 
@@ -387,23 +396,33 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
+#: views/advanced_form.php:190
+msgid "Send Progress"
+msgstr ""
+
 #: views/simple_form.php:70
 msgid "Sequential"
+msgstr ""
+
+#: views/advanced_form.php:205
+msgid ""
+"Should this ringgroup indicate call progress to digital channels where "
+"supported."
 msgstr ""
 
 #: views/simple_form.php:69
 msgid "Simultaneous"
 msgstr ""
 
-#: views/advanced_form.php:217
+#: views/advanced_form.php:244
 msgid "Skip Busy Agent"
 msgstr "Пропускать занятого оператора"
 
-#: Ringgroups.class.php:147
+#: Ringgroups.class.php:148
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:50
+#: views/form.php:52
 msgid "Take turns ringing each available extension"
 msgstr "Звонок поступает на любой доступный внутренний номер"
 
@@ -416,7 +435,7 @@ msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 "Этот номер используется для того, чтобы можно было позвонить в э ту группу"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -430,7 +449,7 @@ msgstr ""
 "заканчивается. Если CF (перенаправление) не перенаправит, то поиск в группе "
 "продолжится"
 
-#: functions.inc.php:266
+#: functions.inc.php:270
 msgid "This ringgroup"
 msgstr "Эта группа вызова"
 
@@ -453,11 +472,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "Время должно быть между 1 и 300 секундами"
 
-#: views/form.php:165
+#: views/form.php:167
 msgid "Too-Late Announce"
 msgstr ""
 
-#: views/form.php:243
+#: views/form.php:245
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -467,7 +486,7 @@ msgstr ""
 "исходящих внешних звонков. Внутренние соединения не будут использовать этот "
 "Caller ID."
 
-#: views/form.php:247
+#: views/form.php:249
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -480,7 +499,7 @@ msgstr ""
 "DID. Он будет передаваться через транк, где провайдеры блокируют чужие "
 "Caller ID"
 
-#: views/form.php:245
+#: views/form.php:247
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -492,19 +511,19 @@ msgstr ""
 "Для этого предполагается входящий маршрут по DID. Он будет блокироваться на "
 "транке, где провайдеры блокируют чужие Caller ID"
 
-#: views/form.php:239
+#: views/form.php:241
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Передавать Callers ID, если транк это разрешает."
 
-#: views/form.php:245 views/form.php:254
+#: views/form.php:247 views/form.php:256
 msgid "Use Dialed Number"
 msgstr "Использовать набранный номер"
 
-#: Ringgroups.class.php:75
+#: Ringgroups.class.php:76
 msgid "Warning! Extension"
 msgstr "Внимание! Внутренний номер"
 
-#: views/advanced_form.php:232
+#: views/advanced_form.php:259
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -512,7 +531,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number. When not checked, "
@@ -521,7 +540,7 @@ msgid ""
 "or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:205
+#: views/advanced_form.php:232
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -537,16 +556,17 @@ msgstr ""
 "более ринг-группе будут отображаться как в секции Ринг-группы, так и в "
 "каждой ринг-группе, членами которой они являются."
 
-#: views/advanced_form.php:396 views/simple_form.php:153
+#: views/advanced_form.php:423 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
 
 #: views/advanced_form.php:195 views/advanced_form.php:222
 #: views/advanced_form.php:249 views/advanced_form.php:276
+#: views/advanced_form.php:303
 msgid "Yes"
 msgstr ""
 
-#: views/advanced_form.php:367
+#: views/advanced_form.php:394
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -602,7 +622,7 @@ msgstr "добавляется поле toolate_id.."
 msgid "already migrated"
 msgstr "уже перенесено"
 
-#: views/form.php:217
+#: views/form.php:219
 msgid "default"
 msgstr "По умолчанию"
 
@@ -624,27 +644,27 @@ msgstr "сброс поля toolate.."
 msgid "fatal error"
 msgstr "неустранимая ошибка"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "firstavailable"
 msgstr "первый-доступный"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "firstnotonphone"
 msgstr "первый-на-телефоне"
 
-#: views/form.php:50
+#: views/form.php:52
 msgid "hunt"
 msgstr "серийное-искание"
 
-#: functions.inc.php:266
+#: functions.inc.php:270
 msgid "is already in use"
 msgstr "уже используется"
 
-#: Ringgroups.class.php:75
+#: Ringgroups.class.php:76
 msgid "is not allowed for your account"
 msgstr "отказан в вашем доступе"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "memoryhunt"
 msgstr "прогресс-серийное-искание"
 
@@ -681,28 +701,28 @@ msgstr "нет поля remotealert???"
 msgid "no toolate field???"
 msgstr "нет поля toolate???"
 
-#: views/form.php:216
+#: views/form.php:218
 msgid "none"
 msgstr "Нет"
 
 #: install.php:191 install.php:200 install.php:209 install.php:300
-#: install.php:308 install.php:316
+#: install.php:308 install.php:316 install.php:354
 msgid "ok"
 msgstr "ok"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "random"
 msgstr "случайный-выбор"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "ring only the first available channel"
 msgstr "звонит первый доступный канал"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "звонит первый телефон, у которого не снята трубка - игнорировать CW"
 
-#: views/form.php:48
+#: views/form.php:50
 msgid "ringall"
 msgstr "звонят-все"
 
