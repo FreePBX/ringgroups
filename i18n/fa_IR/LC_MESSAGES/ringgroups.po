@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-22 09:54-0700\n"
-"PO-Revision-Date: 2016-04-26 03:55+0200\n"
+"PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/fa_IR/>\n"
@@ -320,7 +320,7 @@ msgstr "لطفا یک شرح گروه معتبر وارد کنید"
 
 #: assets/js/ringgroups.js:55
 msgid "Please enter an extension list."
-msgstr "لطفا فهرستی از داخلی ها را وارد کنید"
+msgstr "لطفا فهرستی از داخلی ها را وارد کنید."
 
 #: views/advanced_form.php:46
 msgid "Provide a descriptive title for this Ring Group."
