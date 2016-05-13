@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 09:54-0700\n"
+"POT-Creation-Date: 2016-05-12 18:52-0700\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -48,7 +48,7 @@ msgstr "عملیات"
 msgid "Add Ring Group"
 msgstr "افزودن گروه زنگ"
 
-#: install.php:349
+#: install.php:350
 msgid "Adding Column progress"
 msgstr "افزودن ستون پیشرفت"
 
@@ -80,11 +80,11 @@ msgstr "ضبط تماس"
 msgid "Change External CID Configuration"
 msgstr "تغییر تنظیمات داخلی CID"
 
-#: install.php:177
+#: install.php:178
 msgid "Checking if recordings need migration.."
 msgstr "بررسی کن آیا ضبط پیام به انتقال نیاز دارد.."
 
-#: install.php:358
+#: install.php:359
 msgid "Column present"
 msgstr "ستون حاضر"
 
@@ -176,7 +176,7 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:330
+#: functions.inc.php:332
 msgid "INUSE"
 msgstr "در حال استفاده"
 
@@ -351,7 +351,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:454
+#: functions.inc.php:456
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -363,12 +363,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:329
+#: functions.inc.php:57 functions.inc.php:331
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:356
+#: functions.inc.php:358
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
@@ -472,7 +472,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: functions.inc.php:270
+#: functions.inc.php:272
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -624,35 +624,35 @@ msgstr ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 
-#: install.php:152
+#: install.php:153
 msgid "added field cfignore to ringgroups table"
 msgstr "added  field cfignore to ringgroups table"
 
-#: install.php:162
+#: install.php:163
 msgid "added field cpickup to ringgroups table"
 msgstr "added  field cpickup to ringgroups table"
 
-#: install.php:142
+#: install.php:143
 msgid "added field cwignore to ringgroups table"
 msgstr "added  field cwignore to ringgroups table"
 
-#: install.php:172
+#: install.php:173
 msgid "added field recording to ringgroups table"
 msgstr "افزودن فیلد ضبط پیام به جدول گروه زنگ ها"
 
-#: install.php:184
+#: install.php:185
 msgid "adding annmsg_id field.."
 msgstr "افزودن فیلد annmsg_id.."
 
-#: install.php:193
+#: install.php:194
 msgid "adding remotealert_id field.."
 msgstr "افزودن فیلد remotealert_id.."
 
-#: install.php:202
+#: install.php:203
 msgid "adding toolate_id field.."
 msgstr "افزودن فیلد toolate_id.."
 
-#: install.php:320
+#: install.php:321
 msgid "already migrated"
 msgstr "انتقال انجام شد"
 
@@ -660,21 +660,21 @@ msgstr "انتقال انجام شد"
 msgid "default"
 msgstr "پیشفرض"
 
-#: install.php:294
+#: install.php:295
 msgid "dropping annmsg field.."
 msgstr "لغو فیلد annmsg.."
 
-#: install.php:302
+#: install.php:303
 msgid "dropping remotealert field.."
 msgstr "dropping  remotealert field.."
 
-#: install.php:310
+#: install.php:311
 msgid "dropping toolate field.."
 msgstr "dropping  toolate field.."
 
-#: install.php:188 install.php:197 install.php:206 install.php:218
-#: install.php:234 install.php:244 install.php:260 install.php:270
-#: install.php:286
+#: install.php:189 install.php:198 install.php:207 install.php:219
+#: install.php:235 install.php:245 install.php:261 install.php:271
+#: install.php:287
 msgid "fatal error"
 msgstr "خطای سیستمی"
 
@@ -690,7 +690,7 @@ msgstr "first notonphone"
 msgid "hunt"
 msgstr "شکار"
 
-#: functions.inc.php:270
+#: functions.inc.php:272
 msgid "is already in use"
 msgstr "در حال استفاده"
 
@@ -702,36 +702,36 @@ msgstr "برای حساب شما مجاز نیست"
 msgid "memoryhunt"
 msgstr "شکار حافظه"
 
-#: install.php:214
+#: install.php:215
 msgid "migrate annmsg to ids.."
 msgstr "انتقال annmsg به شناسه ها.."
 
-#: install.php:240
+#: install.php:241
 msgid "migrate remotealert to  ids.."
 msgstr "انتقال هشدار خارجی به شناسه ها.."
 
-#: install.php:266
+#: install.php:267
 msgid "migrate toolate to ids.."
 msgstr "انتقال toolate به شناسه ها.."
 
-#: install.php:238 install.php:264 install.php:290
+#: install.php:239 install.php:265 install.php:291
 #, php-format
 msgid "migrated %s entries"
 msgstr "ورودی های %s منتقل شد"
 
-#: install.php:183
+#: install.php:184
 msgid "migrating"
 msgstr "انتقال"
 
-#: install.php:298
+#: install.php:299
 msgid "no annmsg field???"
 msgstr "بدون فیلد پیام؟؟؟"
 
-#: install.php:306
+#: install.php:307
 msgid "no remotealert field???"
 msgstr "بدون فیلد هشدار خارجی؟؟؟"
 
-#: install.php:314
+#: install.php:315
 msgid "no toolate field???"
 msgstr "بدون فیلد toolate؟؟؟"
 
@@ -739,8 +739,8 @@ msgstr "بدون فیلد toolate؟؟؟"
 msgid "none"
 msgstr "هیچ"
 
-#: install.php:191 install.php:200 install.php:209 install.php:300
-#: install.php:308 install.php:316 install.php:354
+#: install.php:192 install.php:201 install.php:210 install.php:301
+#: install.php:309 install.php:317 install.php:355
 msgid "ok"
 msgstr "تایید"
 
