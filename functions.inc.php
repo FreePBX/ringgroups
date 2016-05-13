@@ -106,6 +106,9 @@ function ringgroups_get_config($engine) {
 					}
 					if ($progress == 'yes') {
 						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${__RINGINGSENT}" = "TRUE"]', 'cid'));
+						if($ringing == 'Ring' || empty($ringing) ) {
+							$ext->add($contextname, $grpnum, '', new ext_playtones("ring"));
+						}
 						$ext->add($contextname, $grpnum, '', new ext_progress());
 					}
 
