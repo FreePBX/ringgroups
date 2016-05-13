@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `ringgroups`
 	`alertinfo` VARCHAR ( 255 ) NULL ,
 	`remotealert_id` INTEGER,
 	`needsconf` VARCHAR ( 10 ),
+	`progress` VARCHAR ( 10 ),
 	`toolate_id` INTEGER,
   `ringing` VARCHAR( 80 ) NULL,
 	`cwignore` VARCHAR ( 10 ),
