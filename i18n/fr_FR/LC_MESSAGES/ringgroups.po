@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 09:49-0700\n"
+"POT-Creation-Date: 2016-05-12 18:44-0700\n"
 "PO-Revision-Date: 2009-04-21 11:18+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -184,7 +184,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Description du Groupe"
 
-#: functions.inc.php:333
+#: functions.inc.php:336
 msgid "INUSE"
 msgstr "UTILISÉ"
 
@@ -327,7 +327,7 @@ msgstr "Groupe de Sonnerie"
 msgid "Ring Group %s: "
 msgstr "Groupe de Sonnerie %s :"
 
-#: functions.inc.php:456
+#: functions.inc.php:459
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -335,12 +335,12 @@ msgstr ""
 msgid "Ring Group Module"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:332
+#: functions.inc.php:57 functions.inc.php:335
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Groupe de Sonnerie : %s"
 
-#: functions.inc.php:359
+#: functions.inc.php:362
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
@@ -418,7 +418,7 @@ msgstr ""
 "pas. Si la primaire est FreePBX Ne pas Déranger, elle ne sonnera pas. Si la "
 "primaire est FreePBX Transfert d'Appel inconditionnel, alors toutes sonneront"
 
-#: functions.inc.php:265
+#: functions.inc.php:268
 msgid "This ringgroup"
 msgstr "Ce groupe de sonnerie"
 
@@ -589,7 +589,7 @@ msgstr "Premier pas au téléphone"
 msgid "hunt"
 msgstr "Chasse"
 
-#: functions.inc.php:265
+#: functions.inc.php:268
 msgid "is already in use"
 msgstr "est déjà utilisé"
 
