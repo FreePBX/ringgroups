@@ -310,7 +310,7 @@ function ringgroups_del($grpnum) {
 }
 
 function ringgroups_list($get_all=false) {
-	dbug("ringgroups_list has been moved to BMO Ringgroups->listRinggroups");
+	_ringgroups_backtrace();
 	return \FreePBX::Ringgroups()->listRinggroups($get_all);
 }
 
@@ -472,3 +472,11 @@ if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
 	}
 
 } // only included if feature enabled
+
+function _ringgroups_backtrace() {
+	$trace = debug_backtrace();
+	$function = $trace[1]['function'];
+	$line = $trace[1]['line'];
+	$file = $trace[1]['file'];
+	freepbx_log(FPBX_LOG_WARNING,'Depreciated Function '.$function.' detected in '.$file.' on line '.$line);
+}
