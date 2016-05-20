@@ -35,7 +35,7 @@ function ringgroups_getdestinfo($dest) {
 			return array();
 		} else {
 			return array('description' => sprintf(_("Ring Group %s: "),$grp).$thisgrp['description'],
-			             'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($grp),
+			             'edit_url' => 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($grp),
 								  );
 		}
 	} else {
@@ -53,7 +53,7 @@ function ringgroups_recordings_usage($recording_id) {
 		//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
 		foreach ($results as $result) {
 			$usage_arr[] = array(
-				'url_query' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($result['grpnum']),
+				'url_query' => 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($result['grpnum']),
 				'description' => sprintf(_("Ring Group: %s"),$result['description']),
 			);
 		}
@@ -330,7 +330,7 @@ function ringgroups_check_extensions($exten=true) {
 		$thisexten = $result['grpnum'];
 		$extenlist[$thisexten]['description'] = sprintf(_("Ring Group: %s"),$result['description']);
 		$extenlist[$thisexten]['status'] = _('INUSE');
-		$extenlist[$thisexten]['edit_url'] = 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisexten);
+		$extenlist[$thisexten]['edit_url'] = 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($thisexten);
 	}
 	return $extenlist;
 }
@@ -356,7 +356,7 @@ function ringgroups_check_destinations($dest=true) {
 		$destlist[] = array(
 			'dest' => $thisdest,
 			'description' => sprintf(_("Ring Group: %s (%s)"),$result['description'],$thisid),
-			'edit_url' => 'config.php?display=ringgroups&extdisplay=GRP-'.urlencode($thisid),
+			'edit_url' => 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($thisid),
 		);
 	}
 	return $destlist;
@@ -460,7 +460,7 @@ if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
 
 			$ringgroup_count = 0;
 			foreach($results as $result) {
-				$addURL = '?display=ringgroups&extdisplay='.$result['grpnum'];
+				$addURL = '?display=ringgroups&view=form&extdisplay='.$result['grpnum'];
 				$ringgroup_icon = 'images/email_edit.png';
 				$ringgroup_label = $result['grpnum']." ".$result['description'];
 				$ringgroup_label = '&nbsp;<span>
