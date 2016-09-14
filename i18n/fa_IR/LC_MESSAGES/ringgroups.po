@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-12 18:52-0700\n"
+"POT-Creation-Date: 2016-09-14 16:25-0700\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/form.php:56
+#: views/form.php:58
 #, fuzzy
 msgid "*-prim"
 msgstr "*-prim"
@@ -48,19 +48,15 @@ msgstr "عملیات"
 msgid "Add Ring Group"
 msgstr "افزودن گروه زنگ"
 
-#: install.php:350
-msgid "Adding Column progress"
-msgstr "افزودن ستون پیشرفت"
-
 #: views/advanced_form.php:166
 msgid "Alert Info"
 msgstr "اطلاعات هشدار"
 
-#: views/form.php:243
+#: views/form.php:245
 msgid "Always transmit the Fixed CID Value below."
 msgstr "همیشه مقدار CID ثابت زیر را منتقل کن."
 
-#: views/form.php:97
+#: views/form.php:99
 msgid "Announcement"
 msgstr "اطلاعیه"
 
@@ -72,23 +68,15 @@ msgstr "درخواست"
 msgid "CID Name Prefix"
 msgstr "پیشوند نام CID"
 
-#: views/advanced_form.php:377
+#: views/advanced_form.php:404
 msgid "Call Recording"
 msgstr "ضبط تماس"
 
-#: views/advanced_form.php:327
+#: views/advanced_form.php:354
 msgid "Change External CID Configuration"
 msgstr "تغییر تنظیمات داخلی CID"
 
-#: install.php:178
-msgid "Checking if recordings need migration.."
-msgstr "بررسی کن آیا ضبط پیام به انتقال نیاز دارد.."
-
-#: install.php:359
-msgid "Column present"
-msgstr "ستون حاضر"
-
-#: views/advanced_form.php:298
+#: views/advanced_form.php:325
 msgid "Confirm Calls"
 msgstr "تایید تماسها"
 
@@ -106,11 +94,11 @@ msgstr ""
 "where the callee has to confirm if they actually want to take the call "
 "before the caller is transferred."
 
-#: views/form.php:139 views/form.php:174 views/form.php:241 views/form.php:253
+#: views/form.php:141 views/form.php:176 views/form.php:243 views/form.php:255
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ringgroups.class.php:143
+#: Ringgroups.class.php:145
 msgid "Delete"
 msgstr "حذف"
 
@@ -118,7 +106,7 @@ msgstr "حذف"
 msgid "Description"
 msgstr "شرح"
 
-#: views/advanced_form.php:411 views/simple_form.php:141
+#: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "مقصد در صورت عدم پاسخگویی"
 
@@ -126,15 +114,15 @@ msgstr "مقصد در صورت عدم پاسخگویی"
 msgid "Display Extension Ring Group Members"
 msgstr "نمایش داخلی به اعضا گروه زنگ"
 
-#: views/advanced_form.php:384
+#: views/advanced_form.php:411
 msgid "Dont Care"
 msgstr "مهم نیست"
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:298
 msgid "Enable Call Pickup"
 msgstr "فعال کردن گرفتن تماس"
 
-#: views/advanced_form.php:313
+#: views/advanced_form.php:340
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -150,11 +138,11 @@ msgstr ""
 msgid "Extension List"
 msgstr "فهرست داخلی"
 
-#: views/advanced_form.php:353 views/form.php:243 views/form.php:254
+#: views/advanced_form.php:380 views/form.php:245 views/form.php:256
 msgid "Fixed CID Value"
 msgstr "مقدار ثابت CID"
 
-#: views/advanced_form.php:365
+#: views/advanced_form.php:392
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -164,11 +152,11 @@ msgstr ""
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 
-#: views/advanced_form.php:382
+#: views/advanced_form.php:409
 msgid "Force"
 msgstr "اجبار"
 
-#: views/form.php:249 views/form.php:257
+#: views/form.php:251 views/form.php:259
 msgid "Force Dialed Number"
 msgstr "اجبار شماره گیری"
 
@@ -176,11 +164,11 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:332
+#: functions.inc.php:301
 msgid "INUSE"
 msgstr "در حال استفاده"
 
-#: views/form.php:232
+#: views/form.php:234
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -188,11 +176,11 @@ msgstr ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead  of Ringing while they are waiting for someone to pick up."
 
-#: views/advanced_form.php:217
+#: views/advanced_form.php:244
 msgid "Ignore CF Settings"
 msgstr "لغو تنظیمات CF"
 
-#: views/form.php:215
+#: views/form.php:217
 msgid "Inherit"
 msgstr "ارثی"
 
@@ -242,7 +230,7 @@ msgstr ""
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
 "dial 2448089"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -252,7 +240,11 @@ msgstr ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 
-#: views/form.php:118
+#: views/advanced_form.php:217
+msgid "Mark Answered Elsewhere"
+msgstr ""
+
+#: views/form.php:120
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
@@ -260,7 +252,7 @@ msgstr ""
 "پیام که برای تماس گیرنده قبل از شماره گیری این گروه پخش میشود.<br><br> برای "
 "افزودن پیام ضبط شده لطفا از منوی \"ضبط سیستمی\" بالا استفاده کنید"
 
-#: views/form.php:153
+#: views/form.php:155
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -270,7 +262,7 @@ msgstr ""
 "فعال باشد.<br><br> برای افزودن پیام ضبط شده از منوی \"ضبط سیستمی\" بالا "
 "استفاده کنید"
 
-#: views/form.php:188
+#: views/form.php:190
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -280,21 +272,21 @@ msgstr ""
 "تماس پذیرفته شده باشد<br><br> برای افزودن پیام ضبط شده از منوی \"ضبط سیستمی"
 "\" بالا استفاده کنید"
 
-#: views/form.php:239
+#: views/form.php:241
 msgid "Mode"
 msgstr "حالت"
 
-#: views/advanced_form.php:386
+#: views/advanced_form.php:413
 msgid "Never"
 msgstr "هرگز"
 
 #: views/advanced_form.php:197 views/advanced_form.php:224
 #: views/advanced_form.php:251 views/advanced_form.php:278
-#: views/advanced_form.php:305
+#: views/advanced_form.php:305 views/advanced_form.php:332
 msgid "No"
 msgstr "خیر"
 
-#: views/form.php:104
+#: views/form.php:106
 msgid "None"
 msgstr "هیچ"
 
@@ -306,11 +298,11 @@ msgstr ""
 "Only ringall, ringallv2, hunt and the  respective -prim versions are "
 "supported when confirmation is checked"
 
-#: views/form.php:245 views/form.php:255
+#: views/form.php:247 views/form.php:257
 msgid "Outside Calls Fixed CID Value"
 msgstr "مقدار ثابت CID تماس های خروجی"
 
-#: views/form.php:207
+#: views/form.php:209
 msgid "Play Music On Hold"
 msgstr "پخش موزیک انتظار"
 
@@ -330,15 +322,15 @@ msgstr "لطفا یک عنوان توصیفی برای گروه تماس ایج�
 msgid "Provide a name for this Ring Group."
 msgstr "اختصاص یک نام به گروه زنگ."
 
-#: views/form.php:132
+#: views/form.php:134
 msgid "Remote Announce"
 msgstr "آگهی راه دور"
 
-#: Ringgroups.class.php:153
+#: Ringgroups.class.php:155
 msgid "Reset"
 msgstr "باز نشانی"
 
-#: views/form.php:214
+#: views/form.php:216
 msgid "Ring"
 msgstr "زنگ"
 
@@ -351,7 +343,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:456
+#: functions.inc.php:425
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -363,12 +355,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:300
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:327
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
@@ -393,11 +385,11 @@ msgstr "مدت زنگ (حداکثر 300 ثانیه)"
 msgid "Ring Tone"
 msgstr "صدای زنگ"
 
-#: views/form.php:50
+#: views/form.php:52
 msgid "Ring all available channels until one answers (default)"
 msgstr "زنگ تمام کانال های موجود تا یک پاسخ دهنده (پیشفرض)"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -409,7 +401,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "شماره گروه زنگ"
 
-#: Ringgroups.class.php:123
+#: Ringgroups.class.php:125
 msgid "RingGroup"
 msgstr "گروه زنگ"
 
@@ -429,6 +421,10 @@ msgstr "ارسال پیشرفت"
 msgid "Sequential"
 msgstr "متوالی"
 
+#: views/advanced_form.php:232
+msgid "Should calls indicate answered elsewhere when a user answers."
+msgstr ""
+
 #: views/advanced_form.php:205
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
@@ -440,15 +436,15 @@ msgstr ""
 msgid "Simultaneous"
 msgstr "همزمان"
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Skip Busy Agent"
 msgstr "رفتن به عامل اشغال"
 
-#: Ringgroups.class.php:148
+#: Ringgroups.class.php:150
 msgid "Submit"
 msgstr "ارسال"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "Take turns ringing each available extension"
 msgstr "Take turns  ringing each available extension"
 
@@ -460,7 +456,7 @@ msgstr "فهرست گروه میتواند تنها شامل 255 کاراکتر 
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "The  number users will dial to ring extensions in this ring group"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -472,7 +468,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: functions.inc.php:272
+#: Ringgroups.class.php:231
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -496,11 +492,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "زمان باید بین 1 و 300 ثانیه باشد"
 
-#: views/form.php:167
+#: views/form.php:169
 msgid "Too-Late Announce"
 msgstr "هشدار Too-Late"
 
-#: views/form.php:245
+#: views/form.php:247
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -510,7 +506,7 @@ msgstr ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 
-#: views/form.php:249
+#: views/form.php:251
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -522,7 +518,7 @@ msgstr ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 
-#: views/form.php:247
+#: views/form.php:249
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -534,19 +530,19 @@ msgstr ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 
-#: views/form.php:241
+#: views/form.php:243
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "انتقال CID تماس گیرنده ها اگر توسط ترانک مجاز باشد."
 
-#: views/form.php:247 views/form.php:256
+#: views/form.php:249 views/form.php:258
 msgid "Use Dialed Number"
 msgstr "استفاده از شماره تماس های گرفته شده"
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:78
 msgid "Warning! Extension"
 msgstr "هشدار! داخلی"
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -558,7 +554,7 @@ msgstr ""
 "will not be presented with the call and in the various hunt style ring "
 "strategies, the next agent will be attempted."
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number. When not checked, "
@@ -572,7 +568,7 @@ msgstr ""
 "doing a directed call pickup to the ringing extension, which works whether "
 "or not this is checked."
 
-#: views/advanced_form.php:232
+#: views/advanced_form.php:259
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -590,17 +586,17 @@ msgstr ""
 "When set to true extensions  that belong to one or more Ring Groups will "
 "have a Ring Group section and link back to each group they are a member of."
 
-#: views/advanced_form.php:423 views/simple_form.php:153
+#: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "اگر پاسخ خیر باشد تماس گیرنده به کجا ارسال شود."
 
 #: views/advanced_form.php:195 views/advanced_form.php:222
 #: views/advanced_form.php:249 views/advanced_form.php:276
-#: views/advanced_form.php:303
+#: views/advanced_form.php:303 views/advanced_form.php:330
 msgid "Yes"
 msgstr "بله"
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -624,138 +620,122 @@ msgstr ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 
-#: install.php:153
-msgid "added field cfignore to ringgroups table"
-msgstr "added  field cfignore to ringgroups table"
-
-#: install.php:163
-msgid "added field cpickup to ringgroups table"
-msgstr "added  field cpickup to ringgroups table"
-
-#: install.php:143
-msgid "added field cwignore to ringgroups table"
-msgstr "added  field cwignore to ringgroups table"
-
-#: install.php:173
-msgid "added field recording to ringgroups table"
-msgstr "افزودن فیلد ضبط پیام به جدول گروه زنگ ها"
-
-#: install.php:185
-msgid "adding annmsg_id field.."
-msgstr "افزودن فیلد annmsg_id.."
-
-#: install.php:194
-msgid "adding remotealert_id field.."
-msgstr "افزودن فیلد remotealert_id.."
-
-#: install.php:203
-msgid "adding toolate_id field.."
-msgstr "افزودن فیلد toolate_id.."
-
-#: install.php:321
-msgid "already migrated"
-msgstr "انتقال انجام شد"
-
-#: views/form.php:219
+#: views/form.php:221
 msgid "default"
 msgstr "پیشفرض"
 
-#: install.php:295
-msgid "dropping annmsg field.."
-msgstr "لغو فیلد annmsg.."
-
-#: install.php:303
-msgid "dropping remotealert field.."
-msgstr "dropping  remotealert field.."
-
-#: install.php:311
-msgid "dropping toolate field.."
-msgstr "dropping  toolate field.."
-
-#: install.php:189 install.php:198 install.php:207 install.php:219
-#: install.php:235 install.php:245 install.php:261 install.php:271
-#: install.php:287
-msgid "fatal error"
-msgstr "خطای سیستمی"
-
-#: views/form.php:58
+#: views/form.php:60
 msgid "firstavailable"
 msgstr "اولین دسترسی"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "firstnotonphone"
 msgstr "first notonphone"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "hunt"
 msgstr "شکار"
 
-#: functions.inc.php:272
+#: Ringgroups.class.php:231
 msgid "is already in use"
 msgstr "در حال استفاده"
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:78
 msgid "is not allowed for your account"
 msgstr "برای حساب شما مجاز نیست"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "memoryhunt"
 msgstr "شکار حافظه"
 
-#: install.php:215
-msgid "migrate annmsg to ids.."
-msgstr "انتقال annmsg به شناسه ها.."
-
-#: install.php:241
-msgid "migrate remotealert to  ids.."
-msgstr "انتقال هشدار خارجی به شناسه ها.."
-
-#: install.php:267
-msgid "migrate toolate to ids.."
-msgstr "انتقال toolate به شناسه ها.."
-
-#: install.php:239 install.php:265 install.php:291
-#, php-format
-msgid "migrated %s entries"
-msgstr "ورودی های %s منتقل شد"
-
-#: install.php:184
-msgid "migrating"
-msgstr "انتقال"
-
-#: install.php:299
-msgid "no annmsg field???"
-msgstr "بدون فیلد پیام؟؟؟"
-
-#: install.php:307
-msgid "no remotealert field???"
-msgstr "بدون فیلد هشدار خارجی؟؟؟"
-
-#: install.php:315
-msgid "no toolate field???"
-msgstr "بدون فیلد toolate؟؟؟"
-
-#: views/form.php:218
+#: views/form.php:220
 msgid "none"
 msgstr "هیچ"
 
-#: install.php:192 install.php:201 install.php:210 install.php:301
-#: install.php:309 install.php:317 install.php:355
-msgid "ok"
-msgstr "تایید"
-
-#: views/form.php:62
+#: views/form.php:64
 msgid "random"
 msgstr "تصادفی"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "ring only the first available channel"
 msgstr "زنگ فقط در اولین کانال در دسترس"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "زنگ خوردن به اولین کانال در دسترس - لغو CW"
 
-#: views/form.php:50
+#: views/form.php:52
 msgid "ringall"
 msgstr "زنگ به همه"
+
+#~ msgid "Adding Column progress"
+#~ msgstr "افزودن ستون پیشرفت"
+
+#~ msgid "Checking if recordings need migration.."
+#~ msgstr "بررسی کن آیا ضبط پیام به انتقال نیاز دارد.."
+
+#~ msgid "Column present"
+#~ msgstr "ستون حاضر"
+
+#~ msgid "added field cfignore to ringgroups table"
+#~ msgstr "added  field cfignore to ringgroups table"
+
+#~ msgid "added field cpickup to ringgroups table"
+#~ msgstr "added  field cpickup to ringgroups table"
+
+#~ msgid "added field cwignore to ringgroups table"
+#~ msgstr "added  field cwignore to ringgroups table"
+
+#~ msgid "added field recording to ringgroups table"
+#~ msgstr "افزودن فیلد ضبط پیام به جدول گروه زنگ ها"
+
+#~ msgid "adding annmsg_id field.."
+#~ msgstr "افزودن فیلد annmsg_id.."
+
+#~ msgid "adding remotealert_id field.."
+#~ msgstr "افزودن فیلد remotealert_id.."
+
+#~ msgid "adding toolate_id field.."
+#~ msgstr "افزودن فیلد toolate_id.."
+
+#~ msgid "already migrated"
+#~ msgstr "انتقال انجام شد"
+
+#~ msgid "dropping annmsg field.."
+#~ msgstr "لغو فیلد annmsg.."
+
+#~ msgid "dropping remotealert field.."
+#~ msgstr "dropping  remotealert field.."
+
+#~ msgid "dropping toolate field.."
+#~ msgstr "dropping  toolate field.."
+
+#~ msgid "fatal error"
+#~ msgstr "خطای سیستمی"
+
+#~ msgid "migrate annmsg to ids.."
+#~ msgstr "انتقال annmsg به شناسه ها.."
+
+#~ msgid "migrate remotealert to  ids.."
+#~ msgstr "انتقال هشدار خارجی به شناسه ها.."
+
+#~ msgid "migrate toolate to ids.."
+#~ msgstr "انتقال toolate به شناسه ها.."
+
+#~ msgid "migrated %s entries"
+#~ msgstr "ورودی های %s منتقل شد"
+
+#~ msgid "migrating"
+#~ msgstr "انتقال"
+
+#~ msgid "no annmsg field???"
+#~ msgstr "بدون فیلد پیام؟؟؟"
+
+#~ msgid "no remotealert field???"
+#~ msgstr "بدون فیلد هشدار خارجی؟؟؟"
+
+#~ msgid "no toolate field???"
+#~ msgstr "بدون فیلد toolate؟؟؟"
+
+#~ msgid "ok"
+#~ msgstr "تایید"
