@@ -207,6 +207,33 @@
 	</div>
 </div>
 <!--END Send Progress-->
+<!--Mark Answered Elsewhere-->
+<div class="element-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-3">
+						<label class="control-label" for="elsewhere"><?php echo _("Mark Answered Elsewhere") ?></label>
+						<i class="fa fa-question-circle fpbx-help-icon" data-for="elsewhere"></i>
+					</div>
+					<div class="col-md-9 radioset">
+            <input type="radio" name="elsewhere" id="elsewhereyes" value="yes" <?php echo ($elsewhere == "yes"?"CHECKED":"") ?>>
+            <label for="elsewhereyes"><?php echo _("Yes");?></label>
+            <input type="radio" name="elsewhere" id="elsewhereno" value="no" <?php echo ($elsewhere == "yes"?"":"CHECKED") ?>>
+            <label for="elsewhereno"><?php echo _("No");?></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<span id="elsewhere-help" class="help-block fpbx-help-block"><?php echo _("Should calls indicate answered elsewhere when a user answers.")?></span>
+		</div>
+	</div>
+</div>
+<!--END Mark Answered Elsewhere-->
 <!--Ignore CF Settings-->
 <div class="element-container">
 	<div class="row">

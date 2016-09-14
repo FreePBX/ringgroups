@@ -9,6 +9,7 @@ if ($extdisplay) {
 	$strategy = $thisgrp['strategy'];
 	$grppre = $thisgrp['grppre'];
 	$progress = isset($thisgrp['progress'])?$thisgrp['progress']:'yes';
+	$elsewhere = isset($thisgrp['elsewhere'])?$thisgrp['elsewhere']:'no';
 	$grptime = $thisgrp['grptime'];
 	$goto = $thisgrp['postdest'];
 	$annmsg_id = $thisgrp['annmsg_id'];
@@ -33,6 +34,7 @@ if ($extdisplay) {
 	$grppre = '';
 	$grptime = '';
 	$progress = 'yes';
+	$elsewhere = 'no';
 	$goto = '';
 	$annmsg_id = '';
 	$alertinfo = '';

@@ -35,8 +35,8 @@ function ringgroups_getdestinfo($dest) {
 			return array();
 		} else {
 			return array('description' => sprintf(_("Ring Group %s: "),$grp).$thisgrp['description'],
-			             'edit_url' => 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($grp),
-								  );
+									 'edit_url' => 'config.php?display=ringgroups&view=form&extdisplay=GRP-'.urlencode($grp),
+									);
 		}
 	} else {
 		return false;
@@ -65,7 +65,7 @@ function ringgroups_recordings_usage($recording_id) {
 	We call this with retrieve_conf
 */
 function ringgroups_get_config($engine) {
-	global $ext;  // is this the best way to pass this?
+	global $ext;	// is this the best way to pass this?
 	global $amp_conf;
 	switch($engine) {
 		case "asterisk":
@@ -77,7 +77,7 @@ function ringgroups_get_config($engine) {
 				foreach($ringlist as $item) {
 					$grpnum = ltrim($item['0']);
 					$grp = ringgroups_get($grpnum);
-
+					$ae = ($grp['elsewhere'] == 'yes')?'c':'';
 					$strategy = $grp['strategy'];
 					$grptime = $grp['grptime'];
 					$grplist = $grp['grplist'];
@@ -96,16 +96,16 @@ function ringgroups_get_config($engine) {
 					$recording = $grp['recording'] == '' ? 'dontcare' : $grp['recording'];
 
 					// TODO: this looks potentially problematic given the new per-user DIAL_OPTIONS. Need to further
-					//       evaluate/understand if there are implications. The issue may be that we are trying to
-					//       avoid getting a 'polluted' version of the DIAL_OPTIONS in which case we may need to modify
-					//       macro-user-callerid (where it is set) to preserve the version we should be using.
+					//			 evaluate/understand if there are implications. The issue may be that we are trying to
+					//			 avoid getting a 'polluted' version of the DIAL_OPTIONS in which case we may need to modify
+					//			 macro-user-callerid (where it is set) to preserve the version we should be using.
 					//
 					if($ringing == 'Ring' || empty($ringing) ) {
-						$dialopts = '${DIAL_OPTIONS}';
+						$dialopts = '${DIAL_OPTIONS}'.$ae;
 					} elseif($ringing == "inherit") {
-						$dialopts = 'm(${CHANNEL(musicclass)})${REPLACE(DIAL_OPTIONS,r)}';
+						$dialopts = 'm(${CHANNEL(musicclass)})${REPLACE(DIAL_OPTIONS,r'.$ae.')}';
 					} else {
-						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r)}';
+						$dialopts = 'm(' . $ringing . ')${REPLACE(DIAL_OPTIONS,r'.$ae.')}';
 					}
 					if ($progress == 'yes') {
 						$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${__RINGINGSENT}" = "TRUE"]', 'cid'));
@@ -151,7 +151,7 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('_FORWARD_CONTEXT', 'block-cf'));
 					}
 					if ($cpickup != '') {
-					  $ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK','${EXTEN}'));
+						$ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK','${EXTEN}'));
 					}
 
 					// recording stuff
@@ -194,8 +194,8 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK',''));
 					}
 					// TODO: Asterisk uses a blank FORWARD_CONTEXT as a literal at the time of this change. A better solution would be
-					//       if it would ignore blank, since it is possible in a customcontext setup you would not want this set to
-					//       from-internal
+					//			 if it would ignore blank, since it is possible in a customcontext setup you would not want this set to
+					//			 from-internal
 					//
 					if ($cfignore != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('_CFIGNORE', ''));
@@ -215,20 +215,20 @@ function ringgroups_get_config($engine) {
 				// We need to have a hangup here, if call is ended by the caller during Playback it will end in the
 				// h context and do a proper hangup and clean the blkvm keys if set, see #4671
 				$ext->add($contextname, 'h', '', new ext_macro('hangupcall'));
-        /*
-          ASTDB Settings:
-          RINGGROUP/nnn/changecid default | did | fixed | extern
-          RINGGROUP/nnn/fixedcid XXXXXXXX
+				/*
+					ASTDB Settings:
+					RINGGROUP/nnn/changecid default | did | fixed | extern
+					RINGGROUP/nnn/fixedcid XXXXXXXX
 
-          changecid:
-            default   - works as always, same as if not present
-            fixed     - set to the fixedcid
-            extern    - set to the fixedcid if the call is from the outside only
-            did       - set to the DID that the call came in on or leave alone, treated as foreign
-            forcedid  - set to the DID that the call came in on or leave alone, not treated as foreign
+					changecid:
+						default	 - works as always, same as if not present
+						fixed		 - set to the fixedcid
+						extern		- set to the fixedcid if the call is from the outside only
+						did			 - set to the DID that the call came in on or leave alone, treated as foreign
+						forcedid	- set to the DID that the call came in on or leave alone, not treated as foreign
 
-          NODEST      - has the exten num called, hoaky if that goes away but for now use it
-        */
+					NODEST			- has the exten num called, hoaky if that goes away but for now use it
+				*/
 				if (count($ringlist)) {
 					$contextname = 'sub-rgsetcid';
 					$exten = 's';
@@ -260,40 +260,9 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes') {
-	global $db;
-	global $astman;
-	global $amp_conf;
-
-	$extens = ringgroups_list();
-	if(is_array($extens)) {
-		foreach($extens as $exten) {
-			if ($exten[0]===$grpnum) {
-				echo "<script>javascript:alert('"._("This ringgroup")." ({$grpnum}) "._("is already in use")."');</script>";
-				return false;
-			}
-		}
-	}
-	// Random error that can crop up, so we fix it here, this probably
-	// happens if something went wrong with announcements.
-	$annmsg_id = (!empty($annmsg_id) && ctype_digit($annmsg_id)) ? $annmsg_id : 0;
-	// XXX: Kludge to force to zero if unset or not numeric
-	$remotealert_id = (!empty($remotealert_id) && ctype_digit($remotealert_id)) ? $remotealert_id : 0;
-	$toolate_id = (!empty($toolate_id) && ctype_digit($toolate_id)) ? $toolate_id : 0;
-
-	$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress) VALUES ('".$db->escapeSimple($grpnum)."', '".$db->escapeSimple($strategy)."', ".$db->escapeSimple($grptime).", '".$db->escapeSimple($grppre)."', '".$db->escapeSimple($grplist)."', '".$annmsg_id."', '".$db->escapeSimple($postdest)."', '".$db->escapeSimple($desc)."', '".$db->escapeSimple($alertinfo)."', '$needsconf', '$remotealert_id', '$toolate_id', '$ringing', '$cwignore', '$cfignore', '$cpickup', '$recording', '".$db->escapeSimple($progress)."')";
-	$results = sql($sql);
-
-	// from followme, put these in astdb, should migrate more settings to astdb from sql so that user portal control can be
-	// added. So consider this a start.
-	if ($astman) {
-		$astman->database_put("RINGGROUP",$grpnum."/changecid",$changecid);
-	  $fixedcid = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
-		$astman->database_put("RINGGROUP",$grpnum."/fixedcid",$fixedcid);
-	} else {
-		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
-	}
-	return true;
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere) {
+	_ringgroups_backtrace();
+	return \FreePBX::Ringgroups()->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere);
 }
 
 function ringgroups_del($grpnum) {
@@ -352,7 +321,7 @@ function ringgroups_check_destinations($dest=true) {
 
 	foreach ($results as $result) {
 		$thisdest = $result['postdest'];
-		$thisid   = $result['grpnum'];
+		$thisid	 = $result['grpnum'];
 		$destlist[] = array(
 			'dest' => $thisdest,
 			'description' => sprintf(_("Ring Group: %s (%s)"),$result['description'],$thisid),
@@ -372,7 +341,7 @@ function ringgroups_get($grpnum) {
 	global $astman;
 	global $amp_conf;
 
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	if ($astman) {
 		$astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
 		switch($astdb_changecid) {

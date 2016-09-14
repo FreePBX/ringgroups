@@ -7,6 +7,7 @@ class Ringgroups implements \BMO {
 		}
 		$this->FreePBX = $freepbx;
 		$this->db = $freepbx->Database;
+		$this->astman = $this->FreePBX->astman;
 	}
 
 	public function install() {}
@@ -22,6 +23,7 @@ class Ringgroups implements \BMO {
 		isset($request['account'])?$account = $request['account']:$account='';
 		isset($request['grptime'])?$grptime = $request['grptime']:$grptime='';
 		isset($request['progress'])?$progress = $request['progress']:$progress='yes';
+		isset($request['elsewhere'])?$elsewhere = $request['elsewhere']:$elsewhere='no';
 		isset($request['grppre'])?$grppre = $request['grppre']:$grppre='';
 		isset($request['strategy'])?$strategy = $request['strategy']:$strategy='';
 		isset($request['annmsg_id'])?$annmsg_id = $request['annmsg_id']:$annmsg_id='';
@@ -83,7 +85,7 @@ class Ringgroups implements \BMO {
 					if (!empty($usage_arr)) {
 						$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-					} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress)) {
+					} elseif ($this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress,$elsewhere)) {
 
 						// save the most recent created destination which will be picked up by
 						//
@@ -105,7 +107,7 @@ class Ringgroups implements \BMO {
 				//edit group - just delete and then re-add the extension
 				if ($action == 'edtGRP') {
 					ringgroups_del($account);
-					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress);
+					$this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress, $elsewhere);
 					needreload();
 					$_REQUEST['extdisplay'] = $account;
 				}
@@ -217,8 +219,58 @@ class Ringgroups implements \BMO {
 	}
 
 	public function getRightNav($request) {
-	  if(isset($request['view']) && $request['view'] == 'form'){
-	    return load_view(__DIR__."/views/bootnav.php",array());
-	  }
+		if(isset($request['view']) && $request['view'] == 'form'){
+			return load_view(__DIR__."/views/bootnav.php",array());
+		}
+	}
+	public function add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere){
+		$extens = $this->listRinggroups(false);
+		if(is_array($extens)) {
+			foreach($extens as $exten) {
+				if ($exten[0]===$grpnum) {
+					echo "<script>javascript:alert('"._("This ringgroup")." ({$grpnum}) "._("is already in use")."');</script>";
+					return false;
+				}
+			}
+		}
+
+		// Random error that can crop up, so we fix it here, this probably
+		// happens if something went wrong with announcements.
+		$annmsg_id = (!empty($annmsg_id) && ctype_digit($annmsg_id)) ? $annmsg_id : 0;
+		// XXX: Kludge to force to zero if unset or not numeric
+		$remotealert_id = (!empty($remotealert_id) && ctype_digit($remotealert_id)) ? $remotealert_id : 0;
+		$toolate_id = (!empty($toolate_id) && ctype_digit($toolate_id)) ? $toolate_id : 0;
+
+		$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere) VALUES (:grpnum, :strategy, :grptime, :grppre, :grplist, :annmsg_id, :postdest, :desc, :alertinfo, :needsconf, :remotealert_id, :toolate_id, :ringing, :cwignore, :cfignore, :cpickup, :recording, :progress, :elsewhere)";
+		$vars = array(
+			":grpnum" => $grpnum,
+			":strategy" => $strategy,
+			":grptime" => $grptime,
+			":grppre" => $grppre,
+			":grplist" => $grplist,
+			":annmsg_id" => $annmsg_id,
+			":postdest" => $postdest,
+			":desc" => $desc,
+			":alertinfo" => $alertinfo,
+			":needsconf" => $needsconf,
+			":remotealert_id" => $remotealert_id,
+			":toolate_id" => $toolate_id,
+			":ringing" => $ringing,
+			":cwignore" => $cwignore,
+			":cfignore" => $cfignore,
+			":cpickup" => $cpickup,
+			":recording" => $recording,
+			":progress" => $progress,
+			":elsewhere" => $elsewhere);
+		$stmt = $this->db->prepare($sql);
+		$stmt->execute($vars);
+		if($this->astman){
+			$this->astman->database_put("RINGGROUP",$grpnum."/changecid",$changecid);
+			$fixedcid = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
+			$this->astman->database_put("RINGGROUP",$grpnum."/fixedcid",$fixedcid);
+		}else{
+			die_freepbx("Cannot connect to Asterisk Manager");
+		}
+		return true;
 	}
 }
