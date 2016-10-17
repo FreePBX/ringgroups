@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-12 18:52-0700\n"
+"POT-Creation-Date: 2016-10-17 10:47-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,10 +41,6 @@ msgstr ""
 msgid "Add Ring Group"
 msgstr ""
 
-#: install.php:350
-msgid "Adding Column progress"
-msgstr ""
-
 #: views/advanced_form.php:166
 msgid "Alert Info"
 msgstr ""
@@ -66,23 +62,15 @@ msgstr ""
 msgid "CID Name Prefix"
 msgstr ""
 
-#: views/advanced_form.php:377
+#: views/advanced_form.php:404
 msgid "Call Recording"
 msgstr ""
 
-#: views/advanced_form.php:327
+#: views/advanced_form.php:354
 msgid "Change External CID Configuration"
 msgstr ""
 
-#: install.php:178
-msgid "Checking if recordings need migration.."
-msgstr ""
-
-#: install.php:359
-msgid "Column present"
-msgstr ""
-
-#: views/advanced_form.php:298
+#: views/advanced_form.php:325
 msgid "Confirm Calls"
 msgstr ""
 
@@ -102,7 +90,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:143
+#: Ringgroups.class.php:144
 msgid "Delete"
 msgstr ""
 
@@ -111,7 +99,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: views/advanced_form.php:411
+#: views/advanced_form.php:438
 #: views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr ""
@@ -120,15 +108,15 @@ msgstr ""
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
-#: views/advanced_form.php:384
+#: views/advanced_form.php:411
 msgid "Dont Care"
 msgstr ""
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:298
 msgid "Enable Call Pickup"
 msgstr ""
 
-#: views/advanced_form.php:313
+#: views/advanced_form.php:340
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -141,20 +129,20 @@ msgstr ""
 msgid "Extension List"
 msgstr ""
 
-#: views/advanced_form.php:353
+#: views/advanced_form.php:380
 #: views/form.php:243
 #: views/form.php:254
 msgid "Fixed CID Value"
 msgstr ""
 
-#: views/advanced_form.php:365
+#: views/advanced_form.php:392
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
 
-#: views/advanced_form.php:382
+#: views/advanced_form.php:409
 msgid "Force"
 msgstr ""
 
@@ -167,7 +155,7 @@ msgstr ""
 msgid "Group Description"
 msgstr ""
 
-#: functions.inc.php:332
+#: functions.inc.php:336
 msgid "INUSE"
 msgstr ""
 
@@ -177,7 +165,7 @@ msgid ""
 "hear that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
 
-#: views/advanced_form.php:217
+#: views/advanced_form.php:244
 msgid "Ignore CF Settings"
 msgstr ""
 
@@ -251,18 +239,19 @@ msgstr ""
 msgid "Mode"
 msgstr ""
 
-#: views/advanced_form.php:386
+#: views/advanced_form.php:413
 msgid "Never"
 msgstr ""
 
-#: views/advanced_form.php:197
 #: views/advanced_form.php:224
 #: views/advanced_form.php:251
 #: views/advanced_form.php:278
 #: views/advanced_form.php:305
+#: views/advanced_form.php:332
 msgid "No"
 msgstr ""
 
+#: views/advanced_form.php:194
 #: views/form.php:104
 msgid "None"
 msgstr ""
@@ -276,6 +265,13 @@ msgstr ""
 #: views/form.php:245
 #: views/form.php:255
 msgid "Outside Calls Fixed CID Value"
+msgstr ""
+
+#: views/advanced_form.php:206
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
 msgstr ""
 
 #: views/form.php:207
@@ -302,7 +298,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:153
+#: Ringgroups.class.php:154
 msgid "Reset"
 msgstr ""
 
@@ -320,7 +316,7 @@ msgstr ""
 msgid "Ring Group %s: "
 msgstr ""
 
-#: functions.inc.php:456
+#: functions.inc.php:460
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -333,12 +329,12 @@ msgid "Ring Group Name"
 msgstr ""
 
 #: functions.inc.php:57
-#: functions.inc.php:331
+#: functions.inc.php:335
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: functions.inc.php:358
+#: functions.inc.php:362
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""
@@ -380,8 +376,12 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr ""
 
-#: Ringgroups.class.php:123
+#: Ringgroups.class.php:124
 msgid "RingGroup"
+msgstr ""
+
+#: views/advanced_form.php:189
+msgid "Ringer Volume Override"
 msgstr ""
 
 #: views/simple_form.php:130
@@ -390,7 +390,7 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: views/advanced_form.php:190
+#: views/advanced_form.php:217
 msgid "Send Progress"
 msgstr ""
 
@@ -398,7 +398,7 @@ msgstr ""
 msgid "Sequential"
 msgstr ""
 
-#: views/advanced_form.php:205
+#: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported."
@@ -408,11 +408,11 @@ msgstr ""
 msgid "Simultaneous"
 msgstr ""
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Skip Busy Agent"
 msgstr ""
 
-#: Ringgroups.class.php:148
+#: Ringgroups.class.php:149
 msgid "Submit"
 msgstr ""
 
@@ -436,7 +436,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: functions.inc.php:272
+#: functions.inc.php:276
 msgid "This ringgroup"
 msgstr ""
 
@@ -492,11 +492,11 @@ msgstr ""
 msgid "Use Dialed Number"
 msgstr ""
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:77
 msgid "Warning! Extension"
 msgstr ""
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -504,7 +504,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number. When not checked, "
@@ -513,7 +513,7 @@ msgid ""
 "or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:232
+#: views/advanced_form.php:259
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -526,20 +526,20 @@ msgid ""
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
-#: views/advanced_form.php:423
+#: views/advanced_form.php:450
 #: views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
 
-#: views/advanced_form.php:195
 #: views/advanced_form.php:222
 #: views/advanced_form.php:249
 #: views/advanced_form.php:276
 #: views/advanced_form.php:303
+#: views/advanced_form.php:330
 msgid "Yes"
 msgstr ""
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -555,64 +555,8 @@ msgid ""
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
-#: install.php:153
-msgid "added field cfignore to ringgroups table"
-msgstr ""
-
-#: install.php:163
-msgid "added field cpickup to ringgroups table"
-msgstr ""
-
-#: install.php:143
-msgid "added field cwignore to ringgroups table"
-msgstr ""
-
-#: install.php:173
-msgid "added field recording to ringgroups table"
-msgstr ""
-
-#: install.php:185
-msgid "adding annmsg_id field.."
-msgstr ""
-
-#: install.php:194
-msgid "adding remotealert_id field.."
-msgstr ""
-
-#: install.php:203
-msgid "adding toolate_id field.."
-msgstr ""
-
-#: install.php:321
-msgid "already migrated"
-msgstr ""
-
 #: views/form.php:219
 msgid "default"
-msgstr ""
-
-#: install.php:295
-msgid "dropping annmsg field.."
-msgstr ""
-
-#: install.php:303
-msgid "dropping remotealert field.."
-msgstr ""
-
-#: install.php:311
-msgid "dropping toolate field.."
-msgstr ""
-
-#: install.php:189
-#: install.php:198
-#: install.php:207
-#: install.php:219
-#: install.php:235
-#: install.php:245
-#: install.php:261
-#: install.php:271
-#: install.php:287
-msgid "fatal error"
 msgstr ""
 
 #: views/form.php:58
@@ -627,11 +571,11 @@ msgstr ""
 msgid "hunt"
 msgstr ""
 
-#: functions.inc.php:272
+#: functions.inc.php:276
 msgid "is already in use"
 msgstr ""
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:77
 msgid "is not allowed for your account"
 msgstr ""
 
@@ -639,53 +583,8 @@ msgstr ""
 msgid "memoryhunt"
 msgstr ""
 
-#: install.php:215
-msgid "migrate annmsg to ids.."
-msgstr ""
-
-#: install.php:241
-msgid "migrate remotealert to  ids.."
-msgstr ""
-
-#: install.php:267
-msgid "migrate toolate to ids.."
-msgstr ""
-
-#: install.php:239
-#: install.php:265
-#: install.php:291
-#, php-format
-msgid "migrated %s entries"
-msgstr ""
-
-#: install.php:184
-msgid "migrating"
-msgstr ""
-
-#: install.php:299
-msgid "no annmsg field???"
-msgstr ""
-
-#: install.php:307
-msgid "no remotealert field???"
-msgstr ""
-
-#: install.php:315
-msgid "no toolate field???"
-msgstr ""
-
 #: views/form.php:218
 msgid "none"
-msgstr ""
-
-#: install.php:192
-#: install.php:201
-#: install.php:210
-#: install.php:301
-#: install.php:309
-#: install.php:317
-#: install.php:355
-msgid "ok"
 msgstr ""
 
 #: views/form.php:62

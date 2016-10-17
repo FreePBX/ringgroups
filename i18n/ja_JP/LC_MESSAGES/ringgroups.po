@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-12 18:52-0700\n"
+"POT-Creation-Date: 2016-10-17 10:47-0700\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -72,10 +72,6 @@ msgstr ""
 msgid "Add Ring Group"
 msgstr "着信グループを追加"
 
-#: install.php:350
-msgid "Adding Column progress"
-msgstr ""
-
 #: views/advanced_form.php:166
 msgid "Alert Info"
 msgstr "アラート情報"
@@ -96,23 +92,15 @@ msgstr "アプリケーション"
 msgid "CID Name Prefix"
 msgstr "CID名前プリフィックス"
 
-#: views/advanced_form.php:377
+#: views/advanced_form.php:404
 msgid "Call Recording"
 msgstr "通話録音"
 
-#: views/advanced_form.php:327
+#: views/advanced_form.php:354
 msgid "Change External CID Configuration"
 msgstr "外部CID設定を変更する"
 
-#: install.php:178
-msgid "Checking if recordings need migration.."
-msgstr "録音の移行が必要かチェック中.."
-
-#: install.php:359
-msgid "Column present"
-msgstr ""
-
-#: views/advanced_form.php:298
+#: views/advanced_form.php:325
 msgid "Confirm Calls"
 msgstr "コールを確認する"
 
@@ -133,7 +121,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ringgroups.class.php:143
+#: Ringgroups.class.php:144
 msgid "Delete"
 msgstr ""
 
@@ -141,7 +129,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: views/advanced_form.php:411 views/simple_form.php:141
+#: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "応答がない場合の転送先"
 
@@ -149,15 +137,15 @@ msgstr "応答がない場合の転送先"
 msgid "Display Extension Ring Group Members"
 msgstr "内線着信グループのメンバーを表示する"
 
-#: views/advanced_form.php:384
+#: views/advanced_form.php:411
 msgid "Dont Care"
 msgstr ""
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:298
 msgid "Enable Call Pickup"
 msgstr "コールピックアップを有効にする"
 
-#: views/advanced_form.php:313
+#: views/advanced_form.php:340
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -173,18 +161,18 @@ msgstr ""
 msgid "Extension List"
 msgstr "内線リスト"
 
-#: views/advanced_form.php:353 views/form.php:243 views/form.php:254
+#: views/advanced_form.php:380 views/form.php:243 views/form.php:254
 msgid "Fixed CID Value"
 msgstr "固定CID"
 
-#: views/advanced_form.php:365
+#: views/advanced_form.php:392
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
 
-#: views/advanced_form.php:382
+#: views/advanced_form.php:409
 msgid "Force"
 msgstr ""
 
@@ -196,7 +184,7 @@ msgstr "ダイヤルした呼び出し側の番号を強制する"
 msgid "Group Description"
 msgstr "グループの説明"
 
-#: functions.inc.php:332
+#: functions.inc.php:336
 msgid "INUSE"
 msgstr "使用中"
 
@@ -208,7 +196,7 @@ msgstr ""
 "「リング」の代わりに保留音クラスを選択した場合は、呼び出し中に通常の呼び出し"
 "音（リング）ではなく、保留音を再生します。"
 
-#: views/advanced_form.php:217
+#: views/advanced_form.php:244
 msgid "Ignore CF Settings"
 msgstr "転送設定を無視する"
 
@@ -282,17 +270,17 @@ msgstr ""
 msgid "Mode"
 msgstr "モード"
 
-#: views/advanced_form.php:386
+#: views/advanced_form.php:413
 msgid "Never"
 msgstr "録音しない"
 
-#: views/advanced_form.php:197 views/advanced_form.php:224
-#: views/advanced_form.php:251 views/advanced_form.php:278
-#: views/advanced_form.php:305
+#: views/advanced_form.php:224 views/advanced_form.php:251
+#: views/advanced_form.php:278 views/advanced_form.php:305
+#: views/advanced_form.php:332
 msgid "No"
 msgstr ""
 
-#: views/form.php:104
+#: views/advanced_form.php:194 views/form.php:104
 msgid "None"
 msgstr "なし"
 
@@ -307,6 +295,13 @@ msgstr ""
 #: views/form.php:245 views/form.php:255
 msgid "Outside Calls Fixed CID Value"
 msgstr "外部コール用の固定CID"
+
+#: views/advanced_form.php:206
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr ""
 
 #: views/form.php:207
 msgid "Play Music On Hold"
@@ -332,7 +327,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:153
+#: Ringgroups.class.php:154
 msgid "Reset"
 msgstr ""
 
@@ -349,7 +344,7 @@ msgstr "着信グループ"
 msgid "Ring Group %s: "
 msgstr "着信グループ %s: "
 
-#: functions.inc.php:456
+#: functions.inc.php:460
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
@@ -361,12 +356,12 @@ msgstr "着信グループモジュール"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:335
 #, php-format
 msgid "Ring Group: %s"
 msgstr "着信グループ: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:362
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"
@@ -408,8 +403,12 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "着信グループ番号"
 
-#: Ringgroups.class.php:123
+#: Ringgroups.class.php:124
 msgid "RingGroup"
+msgstr ""
+
+#: views/advanced_form.php:189
+msgid "Ringer Volume Override"
 msgstr ""
 
 #: views/simple_form.php:130
@@ -418,7 +417,7 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: views/advanced_form.php:190
+#: views/advanced_form.php:217
 msgid "Send Progress"
 msgstr ""
 
@@ -426,7 +425,7 @@ msgstr ""
 msgid "Sequential"
 msgstr ""
 
-#: views/advanced_form.php:205
+#: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported."
@@ -436,11 +435,11 @@ msgstr ""
 msgid "Simultaneous"
 msgstr ""
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Skip Busy Agent"
 msgstr "ビジー状態のエージェントをスキップ"
 
-#: Ringgroups.class.php:148
+#: Ringgroups.class.php:149
 msgid "Submit"
 msgstr ""
 
@@ -468,7 +467,7 @@ msgstr ""
 "not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが"
 "鳴ります"
 
-#: functions.inc.php:272
+#: functions.inc.php:276
 msgid "This ringgroup"
 msgstr "この着信グループ"
 
@@ -534,11 +533,11 @@ msgstr "発信者のCIDを送信する (トランクが許可する場合に)。
 msgid "Use Dialed Number"
 msgstr "ダイヤルした呼び出し側の番号を使用"
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:77
 msgid "Warning! Extension"
 msgstr "警告! 内線"
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -546,7 +545,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number. When not checked, "
@@ -555,7 +554,7 @@ msgid ""
 "or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:232
+#: views/advanced_form.php:259
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -570,17 +569,17 @@ msgstr ""
 "trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信グ"
 "ループ」の項目が追加され、所属するグループへのリンクが表示されます。"
 
-#: views/advanced_form.php:423 views/simple_form.php:153
+#: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
 
-#: views/advanced_form.php:195 views/advanced_form.php:222
-#: views/advanced_form.php:249 views/advanced_form.php:276
-#: views/advanced_form.php:303
+#: views/advanced_form.php:222 views/advanced_form.php:249
+#: views/advanced_form.php:276 views/advanced_form.php:303
+#: views/advanced_form.php:330
 msgid "Yes"
 msgstr ""
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -598,59 +597,9 @@ msgstr ""
 "CallerID名にプレフィックスが付けられます。例:「問合せ」と言うプレフィックスを"
 "付けると、「A様」からの着信は、着信端末に「問合せ: A様」として表示されます。"
 
-#: install.php:153
-msgid "added field cfignore to ringgroups table"
-msgstr "cfignoreフィールドをringgroupsテーブルに追加しました"
-
-#: install.php:163
-msgid "added field cpickup to ringgroups table"
-msgstr "cpickupフィールドをringgroupsテーブルに追加しました"
-
-#: install.php:143
-msgid "added field cwignore to ringgroups table"
-msgstr "cwignoreフィールドをringgroupsテーブルに追加しました"
-
-#: install.php:173
-msgid "added field recording to ringgroups table"
-msgstr "recordingフィールドをringgroupsテーブルに追加しました"
-
-#: install.php:185
-msgid "adding annmsg_id field.."
-msgstr "annmsg_idフィールドを追加中.."
-
-#: install.php:194
-msgid "adding remotealert_id field.."
-msgstr "remotealert_idフィールドを追加中.."
-
-#: install.php:203
-msgid "adding toolate_id field.."
-msgstr "toolate_idフィールドを追加中.."
-
-#: install.php:321
-msgid "already migrated"
-msgstr "既に移行済み"
-
 #: views/form.php:219
 msgid "default"
 msgstr "デフォルト"
-
-#: install.php:295
-msgid "dropping annmsg field.."
-msgstr "annmsgフィールドを削除中.."
-
-#: install.php:303
-msgid "dropping remotealert field.."
-msgstr "remotealertフィールドを削除中..."
-
-#: install.php:311
-msgid "dropping toolate field.."
-msgstr "toolateフィールドを削除中.."
-
-#: install.php:189 install.php:198 install.php:207 install.php:219
-#: install.php:235 install.php:245 install.php:261 install.php:271
-#: install.php:287
-msgid "fatal error"
-msgstr "致命的なエラー"
 
 #: views/form.php:58
 msgid "firstavailable"
@@ -664,11 +613,11 @@ msgstr "電話中でない最初のもの"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:272
+#: functions.inc.php:276
 msgid "is already in use"
 msgstr "は既に使用中です"
 
-#: Ringgroups.class.php:76
+#: Ringgroups.class.php:77
 msgid "is not allowed for your account"
 msgstr "はあなたのアカウントに許可されていません"
 
@@ -676,47 +625,9 @@ msgstr "はあなたのアカウントに許可されていません"
 msgid "memoryhunt"
 msgstr "memoryhunt"
 
-#: install.php:215
-msgid "migrate annmsg to ids.."
-msgstr "annmsgをidsに移行中.."
-
-#: install.php:241
-msgid "migrate remotealert to  ids.."
-msgstr "remotealertをidsに移行中..."
-
-#: install.php:267
-msgid "migrate toolate to ids.."
-msgstr "toolateをidsに移行中..."
-
-#: install.php:239 install.php:265 install.php:291
-#, php-format
-msgid "migrated %s entries"
-msgstr "%s エントリーを移行しました"
-
-#: install.php:184
-msgid "migrating"
-msgstr "移行中"
-
-#: install.php:299
-msgid "no annmsg field???"
-msgstr "annmsgフィールドは存在しません???"
-
-#: install.php:307
-msgid "no remotealert field???"
-msgstr "remotealertフィールドは存在しません???"
-
-#: install.php:315
-msgid "no toolate field???"
-msgstr "toolateフィールドは存在しません???"
-
 #: views/form.php:218
 msgid "none"
 msgstr "なし"
-
-#: install.php:192 install.php:201 install.php:210 install.php:301
-#: install.php:309 install.php:317 install.php:355
-msgid "ok"
-msgstr "OK"
 
 #: views/form.php:62
 msgid "random"
@@ -735,6 +646,72 @@ msgstr ""
 #: views/form.php:50
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "Checking if recordings need migration.."
+#~ msgstr "録音の移行が必要かチェック中.."
+
+#~ msgid "added field cfignore to ringgroups table"
+#~ msgstr "cfignoreフィールドをringgroupsテーブルに追加しました"
+
+#~ msgid "added field cpickup to ringgroups table"
+#~ msgstr "cpickupフィールドをringgroupsテーブルに追加しました"
+
+#~ msgid "added field cwignore to ringgroups table"
+#~ msgstr "cwignoreフィールドをringgroupsテーブルに追加しました"
+
+#~ msgid "added field recording to ringgroups table"
+#~ msgstr "recordingフィールドをringgroupsテーブルに追加しました"
+
+#~ msgid "adding annmsg_id field.."
+#~ msgstr "annmsg_idフィールドを追加中.."
+
+#~ msgid "adding remotealert_id field.."
+#~ msgstr "remotealert_idフィールドを追加中.."
+
+#~ msgid "adding toolate_id field.."
+#~ msgstr "toolate_idフィールドを追加中.."
+
+#~ msgid "already migrated"
+#~ msgstr "既に移行済み"
+
+#~ msgid "dropping annmsg field.."
+#~ msgstr "annmsgフィールドを削除中.."
+
+#~ msgid "dropping remotealert field.."
+#~ msgstr "remotealertフィールドを削除中..."
+
+#~ msgid "dropping toolate field.."
+#~ msgstr "toolateフィールドを削除中.."
+
+#~ msgid "fatal error"
+#~ msgstr "致命的なエラー"
+
+#~ msgid "migrate annmsg to ids.."
+#~ msgstr "annmsgをidsに移行中.."
+
+#~ msgid "migrate remotealert to  ids.."
+#~ msgstr "remotealertをidsに移行中..."
+
+#~ msgid "migrate toolate to ids.."
+#~ msgstr "toolateをidsに移行中..."
+
+#~ msgid "migrated %s entries"
+#~ msgstr "%s エントリーを移行しました"
+
+#~ msgid "migrating"
+#~ msgstr "移行中"
+
+#~ msgid "no annmsg field???"
+#~ msgstr "annmsgフィールドは存在しません???"
+
+#~ msgid "no remotealert field???"
+#~ msgstr "remotealertフィールドは存在しません???"
+
+#~ msgid "no toolate field???"
+#~ msgstr "toolateフィールドは存在しません???"
+
+#~ msgid "ok"
+#~ msgstr "OK"
 
 #~ msgid "(pick extension)"
 #~ msgstr "(内線を選択)"
