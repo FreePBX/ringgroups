@@ -34,6 +34,7 @@ class Ringgroups implements \BMO {
 		isset($request['remotealert_id'])?$remotealert_id = $request['remotealert_id']:$remotealert_id='0';
 		isset($request['toolate_id'])?$toolate_id = $request['toolate_id']:$toolate_id='';
 		isset($request['ringing'])?$ringing = $request['ringing']:$ringing='';
+		isset($request['rvolume'])?$rvolume = $request['rvolume']:$rvolume='';
 
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
@@ -83,7 +84,7 @@ class Ringgroups implements \BMO {
 					if (!empty($usage_arr)) {
 						$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-					} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress)) {
+					} elseif (ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress, $rvolume)) {
 
 						// save the most recent created destination which will be picked up by
 						//
