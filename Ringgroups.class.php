@@ -236,20 +236,22 @@ class Ringgroups implements \BMO {
 	    return load_view(__DIR__."/views/bootnav.php",array());
 	  }
 	}
-
+	
 	public function delDevice($account, $editmode=false) {
-		$grouplist = $this->listRinggroups();
-		if(isset($grouplist)) {
-			foreach($grouplist as $list => $group) {
-				$extensionlist = $this->getExtensionLists($group['grpnum']);
-				$extensions = explode('-', $extensionlist['grplist']);
-				$key = array_search($account, $extensions);
-				if ($key !== FALSE) {
-					unset($extensions[$key]);
-					$new_grplist = implode('-',$extensions);
-					$this->updateExtensionLists($group['grpnum'], $new_grplist);
-				}
-			}
+		if(!$editmode){
+			$grouplist = $this->listRinggroups();
+			if(isset($grouplist)) {
+			    foreach($grouplist as $list => $group) {
+			        $extensionlist = $this->getExtensionLists($group['grpnum']);
+			        $extensions = explode('-', $extensionlist['grplist']);
+			        $key = array_search($account, $extensions);
+			        if ($key !== FALSE) {
+			            unset($extensions[$key]);
+			            $new_grplist = implode('-',$extensions);
+			            $this->updateExtensionLists($group['grpnum'], $new_grplist);
+			        }
+			    }
+			}	
 		}
-	}
+    }
 }
