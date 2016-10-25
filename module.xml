@@ -54,4 +54,9 @@
 	</supported>
 	<location/>
 	<md5sum/>
+	<hooks>
+		<core class="Core" namespace="FreePBX\modules">
+			<method callingMethod="delDevice" class="Ringgroups" namespace="FreePBX\modules">delDevice</method>
+		</core>
+	</hooks>
 </module>
