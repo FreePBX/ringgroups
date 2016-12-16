@@ -10,17 +10,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-17 10:47-0700\n"
-"PO-Revision-Date: 2016-10-17 10:47-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-12-15 21:57+0200\n"
+"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/ringgroups/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/form.php:56
 msgid "*-prim"
-msgstr ""
+msgstr "*-prim"
 
 #: views/simple_form.php:79
 msgid ""
@@ -28,50 +31,53 @@ msgid ""
 "br><strong>Sequential:</strong> Rings each extension separately in the order "
 "defined in the list"
 msgstr ""
+"<strong> Simultâneo:</strong> Toca todos os ramais de uma vez. </br><strong> "
+"Sequencial: </strong> Toca cada ramal separadamente na ordem definida na "
+"lista"
 
 #: views/advanced_form.php:178
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr ""
+msgstr "ALERT_INFO pode ser usado para toque diferenciado com dispositivos SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
-msgstr ""
+msgstr "Adicionar Grupo de Toques"
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
-msgstr ""
+msgstr "Informação de Alerta"
 
 #: views/form.php:243
 msgid "Always transmit the Fixed CID Value below."
-msgstr ""
+msgstr "Transmita sempre o Valor de CID Fixo abaixo."
 
 #: views/form.php:97
 msgid "Announcement"
-msgstr ""
+msgstr "Anúncio"
 
 #: ringgroups.i18n.php:6 ringgroups.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "Aplicações"
 
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
-msgstr ""
+msgstr "Prefixo do Nome CID"
 
 #: views/advanced_form.php:404
 msgid "Call Recording"
-msgstr ""
+msgstr "Gravação do Chamadas"
 
 #: views/advanced_form.php:354
 msgid "Change External CID Configuration"
-msgstr ""
+msgstr "Alterar a Configuração do CID Externo"
 
 #: views/advanced_form.php:325
 msgid "Confirm Calls"
-msgstr ""
+msgstr "Confirmar Chamadas"
 
 #: ringgroups.i18n.php:8
 msgid ""
@@ -81,34 +87,39 @@ msgid ""
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
+"Cria um grupo de ramais que tocam em conjunto. Os ramais podem ser "
+"executadas de uma só vez, ou em várias configurações de 'caça'. Além disso, "
+"os números externos são suportados, e há uma opção de confirmação de chamada "
+"onde o destinatário tem de confirmar quer receber a chamada antes que "
+"usuário o chamador seja transferido."
 
 #: views/form.php:139 views/form.php:174 views/form.php:241 views/form.php:253
 msgid "Default"
-msgstr ""
+msgstr "Padrão"
 
 #: Ringgroups.class.php:144
 msgid "Delete"
-msgstr ""
+msgstr "Apagar"
 
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
-msgstr ""
+msgstr "Destino caso não responda"
 
 #: ringgroups.i18n.php:14
 msgid "Display Extension Ring Group Members"
-msgstr ""
+msgstr "Exibir Membros do Grupo de Toques de Ramais"
 
 #: views/advanced_form.php:411
 msgid "Dont Care"
-msgstr ""
+msgstr "Não Importa"
 
 #: views/advanced_form.php:298
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "Ativar Captura de Chamadas"
 
 #: views/advanced_form.php:340
 msgid ""
