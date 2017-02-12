@@ -93,42 +93,16 @@ $cols = array (
     'length' => '10',
     'notnull' => false,
   ),
+  'rvolume' =>
+  array (
+    'type' => 'string',
+    'length' => '2',
+    'default' => '',
+  ),
 );
 
 $table->modify($cols);
 unset($table);
-
-
-
-// The following updates were all pre-2.5 when sqlite3 was not supported)
-//
-if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
-	// Version 1.1 upgrade
-	$sql = "SELECT description FROM ringgroups";
-	$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
-	if(DB::IsError($check)) {
-		// add new field
-    	$sql = "ALTER TABLE ringgroups ADD description VARCHAR( 35 ) NULL ;";
-    	$result = $db->query($sql);
-    	if(DB::IsError($result)) {
-				die_freepbx($result->getDebugInfo());
-    	}
-
-    	// update existing groups
-    	$sql = "UPDATE ringgroups SET description = CONCAT('Ring Group ', grpnum) WHERE description IS NULL ;";
-    	$result = $db->query($sql);
-    	if(DB::IsError($result)) {
-				die_freepbx($result->getDebugInfo());
-			}
-
-		// make new field required
-		$sql = "ALTER TABLE `ringgroups` CHANGE `description` `description` VARCHAR( 35 ) NOT NULL ;";
-    	$result = $db->query($sql);
-    	if(DB::IsError($result)) {
-				die_freepbx($result->getDebugInfo());
-    	}
-	}
-}
 
 $freepbx_conf =& freepbx_conf::create();
 

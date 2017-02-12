@@ -36,6 +36,7 @@ class Ringgroups implements \BMO {
 		isset($request['remotealert_id'])?$remotealert_id = $request['remotealert_id']:$remotealert_id='0';
 		isset($request['toolate_id'])?$toolate_id = $request['toolate_id']:$toolate_id='';
 		isset($request['ringing'])?$ringing = $request['ringing']:$ringing='';
+		isset($request['rvolume'])?$rvolume = $request['rvolume']:$rvolume='';
 
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
@@ -85,7 +86,7 @@ class Ringgroups implements \BMO {
 					if (!empty($usage_arr)) {
 						$conflict_url = framework_display_extension_usage_alert($usage_arr);
 
-					} elseif ($this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress,$elsewhere)) {
+					} elseif ($this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording, $progress,$elsewhere,$rvolume)) {
 
 						// save the most recent created destination which will be picked up by
 						//
@@ -107,7 +108,7 @@ class Ringgroups implements \BMO {
 				//edit group - just delete and then re-add the extension
 				if ($action == 'edtGRP') {
 					ringgroups_del($account);
-					$this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress, $elsewhere);
+					$this->add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress,$elsewhere,$rvolume);
 					needreload();
 					$_REQUEST['extdisplay'] = $account;
 				}
@@ -187,6 +188,20 @@ class Ringgroups implements \BMO {
 			return array();
 	}
 
+	public function getExtensionLists($grpnum) {
+	    $sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
+	    $sth = $this->db->prepare($sql);
+	    $sth->execute(array($grpnum));
+	    $rows = $sth->fetch(\PDO::FETCH_ASSOC);
+	    return $rows;
+	}
+	
+	public function updateExtensionLists($grpnum, $extensions) {
+	    $sql = "UPDATE ringgroups SET grplist = ? WHERE grpnum = ?";
+	    $sth = $this->db->prepare($sql);
+	    $sth->execute(array($extensions, $grpnum));
+	}
+
 	public function ajaxRequest($req, &$setting) {
 		switch ($req) {
 			case 'getJSON':
@@ -223,7 +238,7 @@ class Ringgroups implements \BMO {
 			return load_view(__DIR__."/views/bootnav.php",array());
 		}
 	}
-	public function add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere){
+	public function add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere,$rvolume){
 		$extens = $this->listRinggroups(false);
 		if(is_array($extens)) {
 			foreach($extens as $exten) {
@@ -241,7 +256,7 @@ class Ringgroups implements \BMO {
 		$remotealert_id = (!empty($remotealert_id) && ctype_digit($remotealert_id)) ? $remotealert_id : 0;
 		$toolate_id = (!empty($toolate_id) && ctype_digit($toolate_id)) ? $toolate_id : 0;
 
-		$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere) VALUES (:grpnum, :strategy, :grptime, :grppre, :grplist, :annmsg_id, :postdest, :desc, :alertinfo, :needsconf, :remotealert_id, :toolate_id, :ringing, :cwignore, :cfignore, :cpickup, :recording, :progress, :elsewhere)";
+		$sql = "INSERT INTO ringgroups (grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere, rvolume) VALUES (:grpnum, :strategy, :grptime, :grppre, :grplist, :annmsg_id, :postdest, :desc, :alertinfo, :needsconf, :remotealert_id, :toolate_id, :ringing, :cwignore, :cfignore, :cpickup, :recording, :progress, :elsewhere, :rvolume)";
 		$vars = array(
 			":grpnum" => $grpnum,
 			":strategy" => $strategy,
@@ -261,7 +276,9 @@ class Ringgroups implements \BMO {
 			":cpickup" => $cpickup,
 			":recording" => $recording,
 			":progress" => $progress,
-			":elsewhere" => $elsewhere);
+			":elsewhere" => $elsewhere,
+			":rvolume" => $rvolume,
+		);
 		$stmt = $this->db->prepare($sql);
 		$stmt->execute($vars);
 		if($this->astman){
@@ -273,4 +290,22 @@ class Ringgroups implements \BMO {
 		}
 		return true;
 	}
+	
+	public function delDevice($account, $editmode=false) {
+		if(!$editmode){
+			$grouplist = $this->listRinggroups();
+			if(isset($grouplist)) {
+			    foreach($grouplist as $list => $group) {
+			        $extensionlist = $this->getExtensionLists($group['grpnum']);
+			        $extensions = explode('-', $extensionlist['grplist']);
+			        $key = array_search($account, $extensions);
+			        if ($key !== FALSE) {
+			            unset($extensions[$key]);
+			            $new_grplist = implode('-',$extensions);
+			            $this->updateExtensionLists($group['grpnum'], $new_grplist);
+			        }
+			    }
+			}	
+		}
+    }
 }

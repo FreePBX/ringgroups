@@ -86,6 +86,7 @@ function ringgroups_get_config($engine) {
 					$progress = (isset($grp['progress'])?$grp['progress']:'yes');
 					$annmsg_id = (isset($grp['annmsg_id'])?$grp['annmsg_id']:'');
 					$alertinfo = $grp['alertinfo'];
+					$rvolume = $grp['rvolume'];
 					$needsconf = $grp['needsconf'];
 					$cwignore = $grp['cwignore'];
 					$cpickup = $grp['cpickup'];
@@ -142,6 +143,9 @@ function ringgroups_get_config($engine) {
 					// Set Alert_Info
 					if ($alertinfo != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $alertinfo)));
+					}
+					if ($rvolume != '') {
+						$ext->add($contextname, $grpnum, '', new ext_setvar('__RVOL', $rvolume));
 					}
 					if ($cwignore != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__CWIGNORE', 'TRUE'));
@@ -260,9 +264,9 @@ function ringgroups_get_config($engine) {
 	}
 }
 
-function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere) {
+function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere,$rvolume='') {
 	_ringgroups_backtrace();
-	return \FreePBX::Ringgroups()->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere);
+	return \FreePBX::Ringgroups()->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume);
 }
 
 function ringgroups_del($grpnum) {
@@ -341,7 +345,7 @@ function ringgroups_get($grpnum) {
 	global $astman;
 	global $amp_conf;
 
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
 	if ($astman) {
 		$astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
 		switch($astdb_changecid) {
