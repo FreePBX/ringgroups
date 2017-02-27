@@ -35,6 +35,9 @@ class Ringgroups implements \BMO {
 		isset($request['toolate_id'])?$toolate_id = $request['toolate_id']:$toolate_id='';
 		isset($request['ringing'])?$ringing = $request['ringing']:$ringing='';
 		isset($request['rvolume'])?$rvolume = $request['rvolume']:$rvolume='';
+		if($rvolume == '0'){
+			$rvolume='';
+		}
 
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
