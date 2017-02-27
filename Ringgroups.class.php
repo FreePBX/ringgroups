@@ -35,9 +35,6 @@ class Ringgroups implements \BMO {
 		isset($request['toolate_id'])?$toolate_id = $request['toolate_id']:$toolate_id='';
 		isset($request['ringing'])?$ringing = $request['ringing']:$ringing='';
 		isset($request['rvolume'])?$rvolume = $request['rvolume']:$rvolume='';
-		if($rvolume == '0'){
-			$rvolume='';
-		}
 
 		isset($request['changecid'])?$changecid = $request['changecid']:$changecid='default';
 		isset($request['fixedcid'])?$fixedcid = $request['fixedcid']:$fixedcid='';
@@ -109,7 +106,7 @@ class Ringgroups implements \BMO {
 				//edit group - just delete and then re-add the extension
 				if ($action == 'edtGRP') {
 					ringgroups_del($account);
-					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress);
+					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress, $rvolume);
 					needreload();
 					$_REQUEST['extdisplay'] = $account;
 				}
