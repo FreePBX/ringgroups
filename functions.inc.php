@@ -144,7 +144,7 @@ function ringgroups_get_config($engine) {
 					if ($alertinfo != '') {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $alertinfo)));
 					}
-					if ($rvolume != '' && $rvolume != '0') {
+					if (!empty($rvolume)) {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('__RVOL', $rvolume));
 					}
 					if ($cwignore != '') {
