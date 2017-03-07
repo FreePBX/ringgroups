@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 10:47-0700\n"
+"POT-Creation-Date: 2017-03-07 12:45-0800\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -57,7 +57,7 @@ msgstr "总是传输以下Fixed CID 值。"
 msgid "Announcement"
 msgstr "语音播报"
 
-#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+#: ringgroups.i18n.php:6
 msgid "Applications"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr "描述"
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -317,7 +317,7 @@ msgstr "拨号小组 %s："
 msgid "Ring Group Membership"
 msgstr "振铃组成员"
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr ""
 
@@ -519,7 +519,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."

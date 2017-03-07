@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 10:47-0700\n"
+"POT-Creation-Date: 2017-03-07 12:45-0800\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
-#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+#: ringgroups.i18n.php:6
 msgid "Applications"
 msgstr "יישומים"
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr "יעד אם אף אחד לא עונה"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -313,7 +313,7 @@ msgstr "קבוצת צלצול %s: "
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr ""
 
@@ -518,7 +518,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."

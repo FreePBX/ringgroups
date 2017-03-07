@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 10:47-0700\n"
+"POT-Creation-Date: 2017-03-07 12:45-0800\n"
 "PO-Revision-Date: 2017-03-06 20:45+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
-"Language-Team: Portuguese (Brazil) "
-"<http://weblate.freepbx.org/projects/freepbx/ringgroups/pt_BR/>\n"
-"Language: pt_BR\n"
+"Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
+"freepbx/ringgroups/pt_BR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -37,7 +37,8 @@ msgstr ""
 
 #: views/advanced_form.php:178
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr "ALERT_INFO pode ser usado para toque diferenciado com dispositivos SIP."
+msgstr ""
+"ALERT_INFO pode ser usado para toque diferenciado com dispositivos SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -59,7 +60,7 @@ msgstr "Transmita sempre o Valor de CID Fixo abaixo."
 msgid "Announcement"
 msgstr "Anúncio"
 
-#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+#: ringgroups.i18n.php:6
 msgid "Applications"
 msgstr "Aplicações"
 
@@ -109,7 +110,7 @@ msgstr "Descrição"
 msgid "Destination if no answer"
 msgstr "Destino caso não responda"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr "Exibir Membros do Grupo de Toques de Ramais"
 
@@ -237,9 +238,9 @@ msgid ""
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
 "Faz com que uma chamada possa pular entre os ramais incluídos sem uma "
-"prioridade predefinida para garantir que as chamadas nos grupos sejam (quase)"
-" uniformemente distribuídas. Simula uma Fila quando uma Fila não pode ser "
-"usada de outra forma."
+"prioridade predefinida para garantir que as chamadas nos grupos sejam "
+"(quase) uniformemente distribuídas. Simula uma Fila quando uma Fila não pode "
+"ser usada de outra forma."
 
 #: views/form.php:118
 msgid ""
@@ -354,7 +355,7 @@ msgstr "Grupo de Toque %s: "
 msgid "Ring Group Membership"
 msgstr "Membros do Grupo de Toque"
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr "Módulo de Grupo de Toque"
 
@@ -472,10 +473,10 @@ msgid ""
 "is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 msgstr ""
-"Estes modos atuam como descrito acima. No entanto, se o ramal principal ("
-"primeiro na lista) estiver ocupado, os outros ramais não serão tocados. Se o "
-"principal for FreePBX DND, ele não será tocado. Se o principal é FreePBX CF "
-"incondicional, então todos serão tocados"
+"Estes modos atuam como descrito acima. No entanto, se o ramal principal "
+"(primeiro na lista) estiver ocupado, os outros ramais não serão tocados. Se "
+"o principal for FreePBX DND, ele não será tocado. Se o principal é FreePBX "
+"CF incondicional, então todos serão tocados"
 
 #: functions.inc.php:276
 msgid "This ringgroup"
@@ -590,7 +591,7 @@ msgstr ""
 "final, por exemplo, para acessar o Siga-Me do ramal, podem não respeitar "
 "essa configuração."
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."

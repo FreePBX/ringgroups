@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 10:47-0700\n"
+"POT-Creation-Date: 2017-03-07 12:45-0800\n"
 "PO-Revision-Date: 2016-12-10 23:22+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish "
-"<http://weblate.freepbx.org/projects/freepbx/ringgroups/es_ES/>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/es_ES/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Spanish\n"
@@ -57,7 +57,7 @@ msgstr "Siempre transmitir el valor de CID Fijado abajo."
 msgid "Announcement"
 msgstr "Anuncio"
 
-#: ringgroups.i18n.php:6 ringgroups.i18n.php:12
+#: ringgroups.i18n.php:6
 msgid "Applications"
 msgstr "Aplicaciones"
 
@@ -107,7 +107,7 @@ msgstr "Descripción"
 msgid "Destination if no answer"
 msgstr "Destino si no hay respuesta"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr "Mostrar Extensiones Miembro del Grupo de Timbrado"
 
@@ -209,8 +209,8 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
-"Lista de extensiones para timbrar, una por línea, o utilizar la opcion \""
-"Quick Select\" para insertarlas aquí. <br><br> Puede incluir una extensión "
+"Lista de extensiones para timbrar, una por línea, o utilizar la opcion "
+"\"Quick Select\" para insertarlas aquí. <br><br> Puede incluir una extensión "
 "en un sistema remoto, o un número externo mediante el sufijo de un número "
 "con un '#'. Ex: 2448089 # marcaría 2448089 en el troncal apropiado (vea "
 "Enrutamiento saliente) <br><br> Las extensiones sin un '#' no sonarán "
@@ -226,8 +226,8 @@ msgid ""
 msgstr ""
 "Lista de extensiones de llamada, una por línea, o utilice la opción Quick "
 "Select para insertarlas aquí. <br><br> Puede incluir una extensión en un "
-"sistema remoto o un número externo mediante el sufijo de un número con un '#"
-"'. Ejemplo: 2448089 # marcaría 2448089"
+"sistema remoto o un número externo mediante el sufijo de un número con un "
+"'#'. Ejemplo: 2448089 # marcaría 2448089"
 
 #: views/form.php:62
 msgid ""
@@ -246,8 +246,8 @@ msgid ""
 "additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
 "Mensaje que se reproducirá para la persona que llama antes de marcar este "
-"grupo. <br><br> Para agregar grabaciones adicionales, utilice el menú \""
-"Grabaciones del sistema\""
+"grupo. <br><br> Para agregar grabaciones adicionales, utilice el menú "
+"\"Grabaciones del sistema\""
 
 #: views/form.php:153
 msgid ""
@@ -354,7 +354,7 @@ msgstr "Grupo de Timbrado %s: "
 msgid "Ring Group Membership"
 msgstr "Miembros del Grupo de Timbrado"
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr "Modulo Grupo de Timbrado"
 
@@ -477,9 +477,9 @@ msgid ""
 msgstr ""
 "Estos modos actúan como se han descrito anteriormente. Aún así, si la "
 "primera extensión (la primera de la lista) está ocupada, las otras "
-"extensiones no sonarán. Si la primera extensión está en modo 'No molestar' "
-"(DND), no sonará. Si la primera extensión está en modo 'Desvío de llamada "
-"incondicional', entonces sonarán todas"
+"extensiones no sonarán. Si la primera extensión está en modo 'No "
+"molestar' (DND), no sonará. Si la primera extensión está en modo 'Desvío de "
+"llamada incondicional', entonces sonarán todas"
 
 #: functions.inc.php:276
 msgid "This ringgroup"
@@ -595,7 +595,7 @@ msgstr ""
 "'#' al final, por ejemplo para acceder al Sigue-Me de la extensión, podrían "
 "no respetar este ajuste."
 
-#: ringgroups.i18n.php:18
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -622,11 +622,11 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
-"Siempre puede grabar las llamadas que llegan a este grupo de timbres (Force)"
-", nunca grabarlas (Nunca), o permitir que la extensión que responda haga la "
-"grabación bajo demanda (Dont Care). Si se deniega la grabación, se bloqueará "
-"la grabación de un bajo demanda, a menos que tengan la configuración de "
-"grabación de llamadas \"Anular\"."
+"Siempre puede grabar las llamadas que llegan a este grupo de timbres "
+"(Force), nunca grabarlas (Nunca), o permitir que la extensión que responda "
+"haga la grabación bajo demanda (Dont Care). Si se deniega la grabación, se "
+"bloqueará la grabación de un bajo demanda, a menos que tengan la "
+"configuración de grabación de llamadas \"Anular\"."
 
 #: views/advanced_form.php:154
 msgid ""
