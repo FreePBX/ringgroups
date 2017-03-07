@@ -106,7 +106,7 @@ class Ringgroups implements \BMO {
 				//edit group - just delete and then re-add the extension
 				if ($action == 'edtGRP') {
 					ringgroups_del($account);
-					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress);
+					ringgroups_add($account,$strategy,$grptime,implode("-",$grplist),$goto,$description,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup,$recording,$progress, $rvolume);
 					needreload();
 					$_REQUEST['extdisplay'] = $account;
 				}
