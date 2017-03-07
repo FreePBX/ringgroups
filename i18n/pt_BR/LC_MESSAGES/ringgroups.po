@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-17 10:47-0700\n"
-"PO-Revision-Date: 2016-12-15 23:31+0200\n"
-"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"PO-Revision-Date: 2017-03-06 20:45+0200\n"
+"Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -69,7 +69,7 @@ msgstr "Prefixo do Nome CID"
 
 #: views/advanced_form.php:404
 msgid "Call Recording"
-msgstr "Gravação do Chamadas"
+msgstr "Gravação de Chamadas"
 
 #: views/advanced_form.php:354
 msgid "Change External CID Configuration"
