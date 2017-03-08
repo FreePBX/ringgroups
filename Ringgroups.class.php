@@ -195,7 +195,7 @@ class Ringgroups implements \BMO {
 	    $rows = $sth->fetch(\PDO::FETCH_ASSOC);
 	    return $rows;
 	}
-	
+
 	public function updateExtensionLists($grpnum, $extensions) {
 	    $sql = "UPDATE ringgroups SET grplist = ? WHERE grpnum = ?";
 	    $sth = $this->db->prepare($sql);
@@ -290,7 +290,7 @@ class Ringgroups implements \BMO {
 		}
 		return true;
 	}
-	
+
 	public function delDevice($account, $editmode=false) {
 		if(!$editmode){
 			$grouplist = $this->listRinggroups();
@@ -305,7 +305,7 @@ class Ringgroups implements \BMO {
 			            $this->updateExtensionLists($group['grpnum'], $new_grplist);
 			        }
 			    }
-			}	
+			}
 		}
     }
 }
