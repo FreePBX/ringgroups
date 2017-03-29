@@ -14,6 +14,7 @@ if ($extdisplay) {
 	$annmsg_id = $thisgrp['annmsg_id'];
 	$description = $thisgrp['description'];
 	$alertinfo = $thisgrp['alertinfo'];
+	$rvolume = $thisgrp['rvolume'];
 	$remotealert_id = $thisgrp['remotealert_id'];
 	$needsconf = $thisgrp['needsconf'];
 	$cwignore = $thisgrp['cwignore'];
@@ -36,6 +37,7 @@ if ($extdisplay) {
 	$goto = '';
 	$annmsg_id = '';
 	$alertinfo = '';
+	$rvolume = '';
 	$remotealert_id = '';
 	$needsconf = '';
 	$cwignore = '';
