@@ -14,20 +14,7 @@ switch($request['view']){
 		$border = 'full';
 		if($request['extdisplay'] != ''){
 			$heading .= ": Edit ".ltrim($request['extdisplay'],'GRP-');
-			$usage_list = framework_display_destination_usage(ringgroups_getdest(ltrim($extdisplay,'GRP-')));
-			if(!empty($usage_list)){
-				$usagehtml = <<< HTML
-<div class="panel panel-default fpbx-usageinfo">
-	<div class="panel-heading">
-		$usage_list[text]
-	</div>
-	<div class="panel-body">
-		$usage_list[tooltip]
-	</div>
-</div>
-
-HTML;
-			}
+			$usagehtml = FreePBX::View()->destinationUsage(ringgroups_getdest(ltrim($extdisplay,'GRP-')));
 		}else{
 			$heading .= ": Add";
 		}
