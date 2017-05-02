@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-29 11:31-0700\n"
+"POT-Creation-Date: 2017-05-01 22:08-0400\n"
 "PO-Revision-Date: 2016-07-07 11:27+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com.com>\n"
 "Language-Team: Russian <http://weblate.postmet.com/freepbx/trunkbalance/"
@@ -358,7 +358,7 @@ msgstr "Группа вызова %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Группа вызова: %s (%s)"
 
-#: page.ringgroups.php:9 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Группы вызова"
 
