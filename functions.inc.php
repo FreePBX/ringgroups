@@ -156,6 +156,27 @@ function ringgroups_get_config($engine) {
 					}
 					if ($cpickup != '') {
 						$ext->add($contextname, $grpnum, '', new ext_set('__PICKUPMARK','${EXTEN}'));
+					}else {
+					//need to add **grpnum in context pickup to allow this
+						$pickupcont='app-pickup';
+
+						$fcc = new featurecode('core', 'pickup');
+						$fc_code = $fcc->getCodeActive();
+						$pickup_code = $fc_code.$grpnum;
+
+						$ext->add($pickupcont,$pickup_code, '', new ext_set('ALLOWEDMEM',$grplist));
+						$ext->add($pickupcont,$pickup_code, '', new ext_macro('user-callerid'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('EXTENS','${FIELDQTY(ALLOWEDMEM,-)}'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('ITER','1'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_noop('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]',pickup));
+						$ext->add($pickupcont,$pickup_code, 'extloop', new ext_gotoif('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]',pickup));
+						$ext->add($pickupcont,$pickup_code, '', new ext_set('ITER','$[${ITER}+1]'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_gotoif('$["${ITER}" <= "${EXTENS}"]',extloop));
+						$ext->add($pickupcont,$pickup_code, '', new ext_playback('im-sorry&access-denied'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_hangup());
+						$ext->add($pickupcont,$pickup_code, 'pickup', new ext_setvar('PICKUP_EXTEN','${AMPUSER}'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_pickup('${EXTEN:2}&${EXTEN:2}@PICKUPMARK'));
+						$ext->add($pickupcont,$pickup_code, '', new ext_hangup());
 					}
 
 					// recording stuff
