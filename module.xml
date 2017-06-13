@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>13.0.23</version>
+	<version>13.0.23.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*13.0.23.1* FREEPBX-14872 Enable Call Pickup option under Ring Group is broken
 		*13.0.23* FREEPBX-12690 add view for destinations usage
 		*13.0.22.3* FREEPBX-14201 Again, issues with viewing of saved data
 		*13.0.22.2* FREEPBX-14201 Setting ring group volume override to none writes RVOL=0 in some cases
