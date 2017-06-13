@@ -337,7 +337,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<span id="cpickupw-help" class="help-block fpbx-help-block"><?php echo _("When enabled, this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup to the ringing extension, which works whether or not this is checked.")?></span>
+			<span id="cpickupw-help" class="help-block fpbx-help-block"><?php echo _("When enabled, this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number from any extension. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup by dialing the group number. Any extensions can still be picked up by doing a directed call pickup to the ringing extension , which works whether or not this is checked.")?></span>
 		</div>
 	</div>
 </div>
