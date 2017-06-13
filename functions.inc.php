@@ -435,8 +435,8 @@ if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
 	function ringgroups_configpageinit($pagename) {
 		global $currentcomponent;
 		// On a 'new' user, 'tech_hardware' is set, and there's no extension.
-		if (($_REQUEST['display'] == 'users'||$_REQUEST['display'] == 'extensions')&& isset($_REQUEST['extdisplay']) && $_REQUEST['extdisplay'] != '') {
-		$currentcomponent->addprocessfunc('ringgroups_configpageload', 1);
+		if (isset($_REQUEST['display']) && ($_REQUEST['display'] == 'users' || $_REQUEST['display'] == 'extensions') && isset($_REQUEST['extdisplay']) && $_REQUEST['extdisplay'] != '') {
+			$currentcomponent->addprocessfunc('ringgroups_configpageload', 1);
 		}
 	}
 

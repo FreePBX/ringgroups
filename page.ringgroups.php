@@ -5,6 +5,7 @@ $rg = \FreePBX::create()->Ringgroups;
 $request = $_REQUEST;
 $tabindex = 0;
 $dispnum = 'ringgroups'; //used for switch on config.php
+$usagehtml = '';
 
 $heading = _("Ring Groups");
 $border = 'no';
@@ -13,6 +14,7 @@ switch($request['view']){
 		$border = 'full';
 		if($request['extdisplay'] != ''){
 			$heading .= ": Edit ".ltrim($request['extdisplay'],'GRP-');
+			$usagehtml = FreePBX::View()->destinationUsage(ringgroups_getdest(ltrim($extdisplay,'GRP-')));
 		}else{
 			$heading .= ": Add";
 		}
@@ -27,6 +29,7 @@ switch($request['view']){
 
 <div class="container-fluid">
 	<h1><?php echo $heading ?></h1>
+	<?php echo $usagehtml?>
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="fpbx-container">
