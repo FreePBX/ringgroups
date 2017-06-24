@@ -195,16 +195,22 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_wait(1));
 						$ext->add($contextname, $grpnum, '', new ext_playback($annmsg));
 					}
+					//FREPBX-14945 Call Confirm Announcement under Virtual Queue module is broken.
 					if ($needsconf == "CHECKED") {
-						$remotealert = recordings_get_file($remotealert_id);
-						$toolate = recordings_get_file($toolate_id);
-						$len=strlen($grpnum)+4;
-						$ext->add("grps", "_RG-${grpnum}-.", '', new ext_nocdr(''));
-						$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^${remotealert}^${toolate}^${grpnum})" . ',${EXTEN:' . $len . '}'));
-						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
-					} else {
-						$ext->add($contextname, $grpnum, 'DIALGRP', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
+						$ext->add($contextname, $grpnum, '', new ext_set('RG_CONFIRM',1));
+
 					}
+					//set the VQ varible to ALT_CONFIRM_MSG
+					$ext->add($contextname, $grpnum, '', new ext_set('__ALT_CONFIRM_MSG', '${IF($[${LEN(${VQ_CONFIRMMSG})}>1]?${IF($["${VQ_CONFIRMMSG}"!="0"]?${VQ_CONFIRMMSG}: )}:)}'));
+					$remotealert = recordings_get_file($remotealert_id);
+					$toolate = recordings_get_file($toolate_id);
+					$len=strlen($grpnum)+4;
+					$ext->add("grps", "_RG-${grpnum}-.", '', new ext_nocdr(''));
+					$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^${remotealert}^${toolate}^${grpnum})" . ',${EXTEN:' . $len . '}'));
+
+					 $ext->add($contextname, $grpnum, '', new ext_gotoif('$[$["${RG_CONFIRM}"="1"] | $[${LEN(${VQ_CONFIRMMSG})}>1]]','RGVQANNOUNCE','NORGVQANNOUNCE'));
+					$ext->add($contextname, $grpnum, 'RGVQANNOUNCE', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
+					$ext->add($contextname, $grpnum, 'NORGVQANNOUNCE', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
 					$ext->add($contextname, $grpnum, '', new ext_gosub('1','s','sub-record-cancel'));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
