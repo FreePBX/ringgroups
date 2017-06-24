@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 14:53-0700\n"
+"POT-Creation-Date: 2017-06-23 17:39-0700\n"
 "PO-Revision-Date: 2016-12-10 23:22+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -157,7 +157,7 @@ msgstr "Forzar numero marcado"
 msgid "Group Description"
 msgstr ""
 
-#: functions.inc.php:326
+#: functions.inc.php:332
 msgid "INUSE"
 msgstr ""
 
@@ -345,7 +345,7 @@ msgstr ""
 msgid "Ring Group %s: "
 msgstr "Grupo de Timbrado %s: "
 
-#: functions.inc.php:450
+#: functions.inc.php:456
 msgid "Ring Group Membership"
 msgstr "Miembros del Grupo de Timbrado"
 
@@ -357,12 +357,12 @@ msgstr "Modulo Grupo de Timbrado"
 msgid "Ring Group Name"
 msgstr "Nombre de Grupo de Timbrado"
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:331
 #, php-format
 msgid "Ring Group: %s"
 msgstr ""
 
-#: functions.inc.php:352
+#: functions.inc.php:358
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr ""

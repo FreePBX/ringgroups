@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 14:53-0700\n"
+"POT-Creation-Date: 2017-06-23 17:39-0700\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -184,7 +184,7 @@ msgstr "ダイヤルした呼び出し側の番号を強制する"
 msgid "Group Description"
 msgstr "グループの説明"
 
-#: functions.inc.php:326
+#: functions.inc.php:332
 msgid "INUSE"
 msgstr "使用中"
 
@@ -348,7 +348,7 @@ msgstr "着信グループ"
 msgid "Ring Group %s: "
 msgstr "着信グループ %s: "
 
-#: functions.inc.php:450
+#: functions.inc.php:456
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
@@ -360,12 +360,12 @@ msgstr "着信グループモジュール"
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:331
 #, php-format
 msgid "Ring Group: %s"
 msgstr "着信グループ: %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:358
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"

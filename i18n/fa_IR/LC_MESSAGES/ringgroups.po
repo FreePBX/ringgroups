@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 14:53-0700\n"
+"POT-Creation-Date: 2017-06-23 17:39-0700\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -164,7 +164,7 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:326
+#: functions.inc.php:332
 msgid "INUSE"
 msgstr "در حال استفاده"
 
@@ -350,7 +350,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:450
+#: functions.inc.php:456
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -362,12 +362,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:331
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:358
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"

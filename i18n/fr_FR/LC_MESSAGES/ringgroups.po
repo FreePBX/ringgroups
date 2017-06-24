@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 14:53-0700\n"
+"POT-Creation-Date: 2017-06-23 17:39-0700\n"
 "PO-Revision-Date: 2016-02-01 04:30+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Description du Groupe"
 
-#: functions.inc.php:326
+#: functions.inc.php:332
 msgid "INUSE"
 msgstr "UTILISÉ"
 
@@ -351,7 +351,7 @@ msgstr "Groupe de Sonnerie"
 msgid "Ring Group %s: "
 msgstr "Groupe de Sonnerie %s :"
 
-#: functions.inc.php:450
+#: functions.inc.php:456
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -363,12 +363,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:331
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Groupe de Sonnerie : %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:358
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
