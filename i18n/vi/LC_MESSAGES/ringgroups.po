@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-01 22:08-0400\n"
-"PO-Revision-Date: 2017-07-13 22:56+0200\n"
+"PO-Revision-Date: 2017-07-14 07:53+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/vi/>\n"
@@ -58,7 +58,7 @@ msgstr "Luôn truyền giá trị CID cố định sau."
 
 #: views/form.php:99
 msgid "Announcement"
-msgstr "Nhạc thông báo cho cả người gọi và tổng đài viên"
+msgstr "Thông báo"
 
 #: ringgroups.i18n.php:6
 msgid "Applications"
@@ -518,6 +518,9 @@ msgid ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
+"Truyền giá trị CID cố định dưới đây vào các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi của máy nhánh sẽ tiếp tục hoạt động ở chế độ "
+"mặc định."
 
 #: views/form.php:251
 msgid ""
@@ -526,6 +529,10 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
+"Truyền số đã được quay giống như CID cho các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi nội bộ sẽ tiếp tục hoạt động ở chế độ mặc "
+"định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
+"vào các trung kế đã khóa các Caller ID nước ngoài"
 
 #: views/form.php:249
 msgid ""
@@ -534,18 +541,22 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
+"Truyền số đã được quay giống như CID cho các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi nội bộ sẽ tiếp tục hoạt động ở chế độ mặc "
+"định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
+"vào các trung kế đã khóa các Caller ID nước ngoài"
 
 #: views/form.php:243
 msgid "Transmits the Callers CID if allowed by the trunk."
-msgstr ""
+msgstr "Truyền CID của người gọi nếu trung kế cho phép."
 
 #: views/form.php:249 views/form.php:258
 msgid "Use Dialed Number"
-msgstr ""
+msgstr "Sử dụng số đã được quay"
 
 #: Ringgroups.class.php:77
 msgid "Warning! Extension"
-msgstr ""
+msgstr "Cảnh báo! Máy nhánh"
 
 #: views/advanced_form.php:286
 msgid ""
@@ -597,13 +608,13 @@ msgstr ""
 
 #: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
-msgstr ""
+msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
 
 #: views/advanced_form.php:222 views/advanced_form.php:249
 #: views/advanced_form.php:276 views/advanced_form.php:303
 #: views/advanced_form.php:330
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: views/advanced_form.php:421
 msgid ""
@@ -624,51 +635,54 @@ msgid ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
+"Bạn có thể thêm tiền tố vào tên của CallerID khi đổ chuông các máy nhánh "
+"trong nhóm náy. Ví dụ: Nếu bạn thêm tiền tố là \"Sales:\" cho một cuộc gọi "
+"từ John Doe thì trên máy nhánh đang đổ chuông sẽ hiện lên \"Sales:John Doe\"."
 
 #: views/form.php:221
 msgid "default"
-msgstr ""
+msgstr "Mặc định"
 
 #: views/form.php:60
 msgid "firstavailable"
-msgstr ""
+msgstr "Khả dụng ban đầu"
 
 #: views/form.php:62
 msgid "firstnotonphone"
-msgstr ""
+msgstr "firstnotonphone"
 
 #: views/form.php:54
 msgid "hunt"
-msgstr ""
+msgstr "hunt"
 
 #: functions.inc.php:276
 msgid "is already in use"
-msgstr ""
+msgstr "đang được sử dụng"
 
 #: Ringgroups.class.php:77
 msgid "is not allowed for your account"
-msgstr ""
+msgstr "Tài khoản của bạn không được cho phép"
 
 #: views/form.php:56
 msgid "memoryhunt"
-msgstr ""
+msgstr "memoryhunt"
 
 #: views/form.php:220
 msgid "none"
-msgstr ""
+msgstr "Không có"
 
 #: views/form.php:64
 msgid "random"
-msgstr ""
+msgstr "ngẫu nhiên"
 
 #: views/form.php:60
 msgid "ring only the first available channel"
-msgstr ""
+msgstr "Chỉ đổ chuông kênh khả dụng đầu tiên"
 
 #: views/form.php:62
 msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr ""
+msgstr "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Call Waiting)"
 
 #: views/form.php:52
 msgid "ringall"
-msgstr ""
+msgstr "Đổ chuông tất cả"
