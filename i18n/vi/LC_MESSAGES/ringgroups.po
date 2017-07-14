@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-01 22:08-0400\n"
-"PO-Revision-Date: 2017-07-13 16:54+0200\n"
+"PO-Revision-Date: 2017-07-13 21:42+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/vi/>\n"
@@ -178,27 +178,27 @@ msgstr ""
 
 #: views/advanced_form.php:244
 msgid "Ignore CF Settings"
-msgstr ""
+msgstr "Bỏ qua các cài đặt CF"
 
 #: views/form.php:217
 msgid "Inherit"
-msgstr ""
+msgstr "Kế thừa"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
-msgstr ""
+msgstr "Caller ID (CID) không hợp lệ"
 
 #: assets/js/ringgroups.js:54
 msgid "Invalid Group Number specified"
-msgstr ""
+msgstr "Số điện thoại nhóm không hợp lễ được xác định"
 
 #: assets/js/ringgroups.js:56
 msgid "Invalid time specified"
-msgstr ""
+msgstr "Thời gian không hợp lệ đã được xác định"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
-msgstr ""
+msgstr "Danh sách Ring Group"
 
 #: views/advanced_form.php:78
 msgid ""
@@ -210,6 +210,14 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
+"Danh sách máy nhánh đổ chuông, 1 dòng 1 máy, hoặc sử dụng chức  năng chọn "
+"nhanh máy nhánh Extension Quick Select để chèn chúng tại đây.<br><br>bạn có "
+"thể bao gồm một máy nhánh trên hệ thống từ xa, hoặc một số điện thoại bên "
+"ngoài bằng cách thêm vào cuối số đó dấu #. Ví dụ 2448089# sẽ quay số 2448089 "
+"trên một trung kế phù hợp ( Xem phần Outbound Routing)<br><br> Các máy nhanh "
+"không có dấu # sẽ không đổ chuông Follow-Me của người dùng. Để quay số "
+"Follow-Me, các hàng đợi và các số điện thoại khác không phải là máy nhánh "
+"phải đặt dấu # ở cuối."
 
 #: views/simple_form.php:52
 msgid ""
@@ -218,6 +226,10 @@ msgid ""
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
 "dial 2448089"
 msgstr ""
+"Danh sách máy nhánh đổ chuông, 1 dòng 1 máy, hoặc sử dụng chức  năng chọn "
+"nhanh máy nhánh Extension Quick Select để chèn chúng tại đây.<br><br>bạn có "
+"thể bao gồm một máy nhánh trên hệ thống từ xa, hoặc một số điện thoại bên "
+"ngoài bằng cách thêm vào cuối số đó dấu #. Ví dụ 2448089# sẽ quay số 2448089"
 
 #: views/form.php:64
 msgid ""
@@ -225,12 +237,19 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Thực hiện một cuộc gọi có thể nhảy giữa các máy nhánh mà không cần có quyền "
+"ưu tiên xác định trước để đảm bảo các hầu hết cuộc gọi trong các nhóm đều "
+"được lan truyền. Mô phỏng một hàng đợi đó đợi khi chính hàng đợi đó được sử "
+"dụng."
 
 #: views/form.php:120
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
+"Một tin nhắn sẽ được phát đến người gọi trước khi thực hiên quay số đến nhóm "
+"này. <br><br> Để thêm các ghi âm bổ sung vui lòng sử dụng MENU \"System "
+"Recordings\" ở trên"
 
 #: views/form.php:155
 msgid ""
@@ -238,6 +257,9 @@ msgid ""
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU above"
 msgstr ""
+"Tin nhắn sẽ được phát tới người đang nhận cuộc gọi, nếu tính năng 'Xác nhận "
+"cuộc gọi\" ('Confirm Calls') được kích hoạt. <br><br> Để thêm các ghi âm bổ "
+"sung vui lòng sử dụng MENU \"System Recordings\" ở trên"
 
 #: views/form.php:190
 msgid ""
@@ -245,34 +267,39 @@ msgid ""
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
+"Tin nhắn sẽ được phát tới người đang nhận cuộc gọi nếu cuộc gọi này đã được "
+"chấp nhận trước khi nhấn phím 1.<br><br> Để thêm các ghi âm bổ sung vui lòng "
+"sử dụng MENU \"System Recordings\" ở trên"
 
 #: views/form.php:241
 msgid "Mode"
-msgstr ""
+msgstr "Chế độ"
 
 #: views/advanced_form.php:413
 msgid "Never"
-msgstr ""
+msgstr "Không bao giờ"
 
 #: views/advanced_form.php:224 views/advanced_form.php:251
 #: views/advanced_form.php:278 views/advanced_form.php:305
 #: views/advanced_form.php:332
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: views/advanced_form.php:194 views/form.php:106
 msgid "None"
-msgstr ""
+msgstr "Không có"
 
 #: assets/js/ringgroups.js:59
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
+"Chỉ có  ringall, ringallv2, hunt và các phiên bản prim tương ứng được hỗ trợ "
+"khi kiểm tra xác nhận"
 
 #: views/form.php:247 views/form.php:257
 msgid "Outside Calls Fixed CID Value"
-msgstr ""
+msgstr "Gía trị CID cố định của các cuộc gọi bên ngoài"
 
 #: views/advanced_form.php:206
 #, php-format
@@ -280,59 +307,61 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Ghi đè âm lượng chuông. Lưu ý: Điều này chỉ hợp lệ cho các điện thoại %s tại "
+"thời điểm hiện tại"
 
 #: views/form.php:209
 msgid "Play Music On Hold"
-msgstr ""
+msgstr "Phát nhạc chờ"
 
 #: assets/js/ringgroups.js:58
 msgid "Please enter a valid Group Description"
-msgstr ""
+msgstr "Vui lòng nhập một mô tả Nhóm hợp lệ"
 
 #: assets/js/ringgroups.js:55
 msgid "Please enter an extension list."
-msgstr ""
+msgstr "Vui lòng nhập một danh sách máy nhánh."
 
 #: views/advanced_form.php:46
 msgid "Provide a descriptive title for this Ring Group."
-msgstr ""
+msgstr "Cung cấp một tiêu đề mô tả cho Ring Group này."
 
 #: views/simple_form.php:20
 msgid "Provide a name for this Ring Group."
-msgstr ""
+msgstr "Đặt tên cho Ring Group này."
 
 #: views/form.php:134
 msgid "Remote Announce"
-msgstr ""
+msgstr "Thông báo từ xa"
 
 #: Ringgroups.class.php:154
 msgid "Reset"
-msgstr ""
+msgstr "Cài đặt lại"
 
 #: views/form.php:216
 msgid "Ring"
-msgstr ""
+msgstr "Đổ chuông"
 
 #: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
-msgstr ""
+msgstr "Tính năng Nhóm đổ chuông"
 
 #: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
-msgstr ""
+msgstr "Nhóm đổ chuông: %s "
 
 #: functions.inc.php:460
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "Thành viên Nhóm đổ chuông"
 
 #: ringgroups.i18n.php:14
 msgid "Ring Group Module"
-msgstr ""
+msgstr "Mô đun Nhóm đổ chuông"
 
 #: views/simple_form.php:8
 msgid "Ring Group Name"
-msgstr ""
+msgstr "Tên của Nhóm đổ chuông"
 
 #: functions.inc.php:57 functions.inc.php:335
 #, php-format
@@ -342,11 +371,11 @@ msgstr ""
 #: functions.inc.php:362
 #, php-format
 msgid "Ring Group: %s (%s)"
-msgstr ""
+msgstr "Nhóm đổ chuông: %s (%s)"
 
 #: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
-msgstr ""
+msgstr "Các nhóm đổ chuông"
 
 #: views/advanced_form.php:90 views/simple_form.php:64
 msgid "Ring Strategy"
@@ -428,7 +457,7 @@ msgstr ""
 
 #: views/advanced_form.php:21
 msgid "The number users will dial to ring extensions in this ring group"
-msgstr ""
+msgstr "Số mà người dùng sẽ gọi đến các máy nhánh trong Nhóm đổ chuông"
 
 #: views/form.php:58
 msgid ""
@@ -513,6 +542,12 @@ msgid ""
 "doing a directed call pickup to the ringing extension, which works whether "
 "or not this is checked."
 msgstr ""
+"Khi được kích hoạt, điều này sẽ cho phép các cuộc gọi đến Nhóm đổ chuông "
+"được nhận với tính năng nhận cuộc gọi trực tiếp sử dụng bởi số điện thoại "
+"của nhóm. Khi không được kiểm tra, các máy nhánh là một phần của Nhóm đổ "
+"chuông sẽ vẫn có thể nhận cuộc gọi bằng cách thực hiện nhận cuộc gọi trực "
+"tiếp đế máy nhánh đang đổ chuông vì các máy nhánh này vẫn làm việc dù có "
+"được kiểm tra hay không."
 
 #: views/advanced_form.php:259
 msgid ""
@@ -526,6 +561,9 @@ msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
+"Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Nhóm đổ chuông "
+"sẽ có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là "
+"thành viên trong đấy."
 
 #: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
