@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-01 22:08-0400\n"
-"PO-Revision-Date: 2017-07-14 07:53+0200\n"
+"PO-Revision-Date: 2017-07-14 07:58+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/ringgroups/vi/>\n"
@@ -649,7 +649,7 @@ msgstr "Khả dụng ban đầu"
 
 #: views/form.php:62
 msgid "firstnotonphone"
-msgstr "firstnotonphone"
+msgstr "firstnotonphone (notonphone đầu tiên)"
 
 #: views/form.php:54
 msgid "hunt"
@@ -665,7 +665,7 @@ msgstr "Tài khoản của bạn không được cho phép"
 
 #: views/form.php:56
 msgid "memoryhunt"
-msgstr "memoryhunt"
+msgstr "memoryhunt ( Bộ nhớ hunt)"
 
 #: views/form.php:220
 msgid "none"
