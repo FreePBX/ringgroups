@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2016-02-01 04:30+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Description du Groupe"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "UTILISÉ"
 
@@ -347,7 +347,7 @@ msgstr "Groupe de Sonnerie"
 msgid "Ring Group %s: "
 msgstr "Groupe de Sonnerie %s :"
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -359,12 +359,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Groupe de Sonnerie : %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
@@ -472,7 +472,7 @@ msgstr ""
 "pas. Si la primaire est FreePBX Ne pas Déranger, elle ne sonnera pas. Si la "
 "primaire est FreePBX Transfert d'Appel inconditionnel, alors toutes sonneront"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "Ce groupe de sonnerie"
 
@@ -545,10 +545,11 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
 
 #: views/advanced_form.php:259
@@ -606,7 +607,7 @@ msgstr "Premier pas au téléphone"
 msgid "hunt"
 msgstr "Chasse"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "est déjà utilisé"
 

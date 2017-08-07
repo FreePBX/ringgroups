@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2017-03-06 20:45+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -165,7 +165,7 @@ msgstr "Forçar Número Discado"
 msgid "Group Description"
 msgstr "Descrição do Grupo"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "EM USO"
 
@@ -351,7 +351,7 @@ msgstr "Grupo de Toques"
 msgid "Ring Group %s: "
 msgstr "Grupo de Toque %s: "
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr "Membros do Grupo de Toque"
 
@@ -363,12 +363,12 @@ msgstr "Módulo de Grupo de Toque"
 msgid "Ring Group Name"
 msgstr "Nome do Grupo de Toque"
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Grupo de Toque: %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de Toque: %s (%s)"
@@ -478,7 +478,7 @@ msgstr ""
 "o principal for FreePBX DND, ele não será tocado. Se o principal é FreePBX "
 "CF incondicional, então todos serão tocados"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "Este grupo de toques"
 
@@ -569,16 +569,12 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
-"Quando ativado, isso permitirá que as chamadas para o Grupo de Toque sejam "
-"captadas com o recurso de captura de chamadas direcionadas usando o número "
-"do grupo. Quando não discado, os ramais individuais que fazem parte do grupo "
-"ainda podem ser capturados fazendo uma chamada direcionada para o ramal do "
-"toque, o que funciona independentemente de isso ser verificado."
 
 #: views/advanced_form.php:259
 msgid ""
@@ -650,7 +646,7 @@ msgstr "primeiro que não estiver ao telefone"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "já está em uso"
 
@@ -683,3 +679,17 @@ msgstr ""
 #: views/form.php:52
 msgid "ringall"
 msgstr "tocar todos"
+
+#~ msgid ""
+#~ "When enabled, this will allow calls to the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
+#~ msgstr ""
+#~ "Quando ativado, isso permitirá que as chamadas para o Grupo de Toque "
+#~ "sejam captadas com o recurso de captura de chamadas direcionadas usando o "
+#~ "número do grupo. Quando não discado, os ramais individuais que fazem "
+#~ "parte do grupo ainda podem ser capturados fazendo uma chamada direcionada "
+#~ "para o ramal do toque, o que funciona independentemente de isso ser "
+#~ "verificado."

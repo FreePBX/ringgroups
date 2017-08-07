@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2014-11-18 13:32+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -160,7 +160,7 @@ msgstr "Принудително Използвай Избрания Номер"
 msgid "Group Description"
 msgstr "Описание на Групата"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
@@ -320,7 +320,7 @@ msgstr "Група на Звънене"
 msgid "Ring Group %s: "
 msgstr "Група на Звънене %s: "
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -332,12 +332,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Група на Звънене: %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
@@ -442,7 +442,7 @@ msgstr ""
 "основната е FreePBX DND, няма да звъни. Ако основната е безусловен FreePBX "
 "CF, тогава всички ще звънят"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "Тази група на звънене"
 
@@ -525,10 +525,11 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
 
 #: views/advanced_form.php:259
@@ -590,7 +591,7 @@ msgstr "първия не на телефона"
 msgid "hunt"
 msgstr "преследване"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "вече се използва"
 

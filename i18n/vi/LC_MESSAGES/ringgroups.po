@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
-"Language-Team: Vietnamese "
-"<http://weblate.freepbx.org/projects/freepbx/ringgroups/vi/>\n"
-"Language: vi\n"
+"Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/vi/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -31,9 +31,9 @@ msgid ""
 "br><strong>Sequential:</strong> Rings each extension separately in the order "
 "defined in the list"
 msgstr ""
-"<strong>Simultaneous:</strong> Đổ chuông tất cả các máy nhánh cùng một "
-"lúc.</br><strong>Sequential:</strong> Đổ chuông từng máy nhánh theo thứ tứ "
-"được xác định trong danh sách"
+"<strong>Simultaneous:</strong> Đổ chuông tất cả các máy nhánh cùng một lúc.</"
+"br><strong>Sequential:</strong> Đổ chuông từng máy nhánh theo thứ tứ được "
+"xác định trong danh sách"
 
 #: views/advanced_form.php:178
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
@@ -166,7 +166,7 @@ msgstr "Bắt buộc số điện thoại đã quay"
 msgid "Group Description"
 msgstr "Mô tả nhóm"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "INUSE"
 
@@ -354,7 +354,7 @@ msgstr "Tính năng Ring Group (Nhóm đổ chuông)"
 msgid "Ring Group %s: "
 msgstr "Ring Group (Nhóm đổ chuông): %s "
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
@@ -366,12 +366,12 @@ msgstr "Mô đun Ring Group"
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Nhóm đổ chuông: %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Nhóm đổ chuông: %s (%s)"
@@ -398,7 +398,8 @@ msgstr "Nhạc chuông"
 
 #: views/form.php:52
 msgid "Ring all available channels until one answers (default)"
-msgstr "Đổ chuông tất cả các kênh đến khi một cuộc gọi được trả lời ( mặc định)"
+msgstr ""
+"Đổ chuông tất cả các kênh đến khi một cuộc gọi được trả lời ( mặc định)"
 
 #: views/form.php:56
 msgid ""
@@ -482,7 +483,7 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
@@ -574,17 +575,12 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
-"Khi được kích hoạt, điều này sẽ cho phép các cuộc gọi đến Ring Group được "
-"nhận với tính năng nhận cuộc gọi trực tiếp sử dụng bởi số điện thoại của "
-"nhóm. Khi không đánh dấu check, các máy nhánh là một phần của Nhóm đổ chuông "
-"sẽ vẫn có thể nhận cuộc gọi bằng cách thực hiện nhận cuộc gọi trực tiếp đế "
-"máy nhánh đang đổ chuông vì các máy nhánh này vẫn làm việc dù có được đánh "
-"dấu check hay không."
 
 #: views/advanced_form.php:259
 msgid ""
@@ -655,7 +651,7 @@ msgstr "firstnotonphone (notonphone đầu tiên)"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "đang được sử dụng"
 
@@ -686,3 +682,17 @@ msgstr "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Cal
 #: views/form.php:52
 msgid "ringall"
 msgstr "Đổ chuông tất cả"
+
+#~ msgid ""
+#~ "When enabled, this will allow calls to the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
+#~ msgstr ""
+#~ "Khi được kích hoạt, điều này sẽ cho phép các cuộc gọi đến Ring Group được "
+#~ "nhận với tính năng nhận cuộc gọi trực tiếp sử dụng bởi số điện thoại của "
+#~ "nhóm. Khi không đánh dấu check, các máy nhánh là một phần của Nhóm đổ "
+#~ "chuông sẽ vẫn có thể nhận cuộc gọi bằng cách thực hiện nhận cuộc gọi trực "
+#~ "tiếp đế máy nhánh đang đổ chuông vì các máy nhánh này vẫn làm việc dù có "
+#~ "được đánh dấu check hay không."

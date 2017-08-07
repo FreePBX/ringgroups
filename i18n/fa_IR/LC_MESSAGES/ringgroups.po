@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -164,7 +164,7 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "در حال استفاده"
 
@@ -346,7 +346,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -358,12 +358,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
@@ -471,7 +471,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -560,16 +560,12 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
-"When enabled, this will allow calls to  the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
 
 #: views/advanced_form.php:259
 msgid ""
@@ -639,7 +635,7 @@ msgstr "first notonphone"
 msgid "hunt"
 msgstr "شکار"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "در حال استفاده"
 
@@ -670,6 +666,19 @@ msgstr "زنگ خوردن به اولین کانال در دسترس - لغو CW
 #: views/form.php:52
 msgid "ringall"
 msgstr "زنگ به همه"
+
+#~ msgid ""
+#~ "When enabled, this will allow calls to the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
+#~ msgstr ""
+#~ "When enabled, this will allow calls to  the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
 
 #~ msgid "Adding Column progress"
 #~ msgstr "افزودن ستون پیشرفت"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 22:08-0400\n"
+"POT-Creation-Date: 2017-08-07 15:29-0400\n"
 "PO-Revision-Date: 2016-12-10 23:22+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -162,7 +162,7 @@ msgstr "Forzar numero marcado"
 msgid "Group Description"
 msgstr "Descripción del grupo de extensiones:"
 
-#: functions.inc.php:336
+#: functions.inc.php:357
 msgid "INUSE"
 msgstr "EN USO"
 
@@ -350,7 +350,7 @@ msgstr "Grupo de extensiones"
 msgid "Ring Group %s: "
 msgstr "Grupo de Timbrado %s: "
 
-#: functions.inc.php:460
+#: functions.inc.php:481
 msgid "Ring Group Membership"
 msgstr "Miembros del Grupo de Timbrado"
 
@@ -362,12 +362,12 @@ msgstr "Modulo Grupo de Timbrado"
 msgid "Ring Group Name"
 msgstr "Nombre de Grupo de Timbrado"
 
-#: functions.inc.php:57 functions.inc.php:335
+#: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Grupo de extensiones: %s"
 
-#: functions.inc.php:362
+#: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de extensiones: %s (%s)"
@@ -481,7 +481,7 @@ msgstr ""
 "molestar' (DND), no sonará. Si la primera extensión está en modo 'Desvío de "
 "llamada incondicional', entonces sonarán todas"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "This ringgroup"
 msgstr "Este grupo de extensiones"
 
@@ -572,17 +572,12 @@ msgstr ""
 #: views/advanced_form.php:313
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
-"the directed call pickup feature using the group number. When not checked, "
-"individual extensions that are part of the group can still be picked up by "
-"doing a directed call pickup to the ringing extension, which works whether "
-"or not this is checked."
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 msgstr ""
-"Cuando está activado, esto permitirá que las llamadas al Grupo de Timbre "
-"sean recogidas con la función de tomado de llamadas dirigida utilizando el "
-"número de grupo. Cuando no se comprueba, las extensiones individuales que "
-"forman parte del grupo todavía se pueden capturar haciendo una llamada "
-"dirigida a la extensión de timbre, que funciona independientemente de si "
-"está marcada."
 
 #: views/advanced_form.php:259
 msgid ""
@@ -654,7 +649,7 @@ msgstr "Primero que no esté al teléfono"
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:276
+#: functions.inc.php:297
 msgid "is already in use"
 msgstr "ya está en uso"
 
@@ -687,6 +682,20 @@ msgstr ""
 #: views/form.php:52
 msgid "ringall"
 msgstr "Sonar todos"
+
+#~ msgid ""
+#~ "When enabled, this will allow calls to the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
+#~ msgstr ""
+#~ "Cuando está activado, esto permitirá que las llamadas al Grupo de Timbre "
+#~ "sean recogidas con la función de tomado de llamadas dirigida utilizando "
+#~ "el número de grupo. Cuando no se comprueba, las extensiones individuales "
+#~ "que forman parte del grupo todavía se pueden capturar haciendo una "
+#~ "llamada dirigida a la extensión de timbre, que funciona "
+#~ "independientemente de si está marcada."
 
 #~ msgid "Checking if recordings need migration.."
 #~ msgstr "Comprobando si las grabaciones necesitan migrarse..."
