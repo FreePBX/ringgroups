@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 17:39-0700\n"
+"POT-Creation-Date: 2017-08-14 11:58-0700\n"
 "PO-Revision-Date: 2016-12-15 23:31+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -165,7 +165,7 @@ msgstr "Forçar Número Discado"
 msgid "Group Description"
 msgstr "Descrição do Grupo"
 
-#: functions.inc.php:332
+#: functions.inc.php:334
 msgid "INUSE"
 msgstr "EM USO"
 
@@ -355,7 +355,7 @@ msgstr "Grupo de Toques"
 msgid "Ring Group %s: "
 msgstr "Grupo de Toque %s: "
 
-#: functions.inc.php:456
+#: functions.inc.php:458
 msgid "Ring Group Membership"
 msgstr "Membros do Grupo de Toque"
 
@@ -367,12 +367,12 @@ msgstr "Módulo de Grupo de Toque"
 msgid "Ring Group Name"
 msgstr "Nome do Grupo de Toque"
 
-#: functions.inc.php:57 functions.inc.php:331
+#: functions.inc.php:57 functions.inc.php:333
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Grupo de Toque: %s"
 
-#: functions.inc.php:358
+#: functions.inc.php:360
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de Toque: %s (%s)"
