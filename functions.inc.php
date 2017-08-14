@@ -210,8 +210,10 @@ function ringgroups_get_config($engine) {
 
 					 $ext->add($contextname, $grpnum, '', new ext_gotoif('$[$["${RG_CONFIRM}"="1"] | $[${LEN(${VQ_CONFIRMMSG})}>1]]','RGVQANNOUNCE','NORGVQANNOUNCE'));
 					$ext->add($contextname, $grpnum, 'RGVQANNOUNCE', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
+					//FREEPBX-15547	ring groups - timeout with external number ignores call confirmation on second attempt
+					$ext->add($contextname, $grpnum, '', new ext_goto('gosubhere'));
 					$ext->add($contextname, $grpnum, 'NORGVQANNOUNCE', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
-					$ext->add($contextname, $grpnum, '', new ext_gosub('1','s','sub-record-cancel'));
+					$ext->add($contextname, $grpnum, 'gosubhere', new ext_gosub('1','s','sub-record-cancel'));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
 
