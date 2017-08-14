@@ -1,39 +1,29 @@
 # This file is part of FreePBX.
 #
-#    FreePBX is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 2 of the License, or
-#    (at your option) any later version.
+# For licensing information, please see the file named LICENSE located in the module directory
 #
-#    FreePBX is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
+# FreePBX language template for ringgroups
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-07 15:29-0400\n"
-"PO-Revision-Date: 2016-02-01 04:30+0200\n"
-"Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
-"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
-"ringgroups/fr_FR/>\n"
+"PO-Revision-Date: 2017-07-20 14:33+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/vi/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/form.php:58
 msgid "*-prim"
-msgstr ""
+msgstr "*-prim"
 
 #: views/simple_form.php:79
 msgid ""
@@ -41,72 +31,54 @@ msgid ""
 "br><strong>Sequential:</strong> Rings each extension separately in the order "
 "defined in the list"
 msgstr ""
+"<strong>Simultaneous:</strong> Đổ chuông tất cả các máy nhánh cùng một lúc.</"
+"br><strong>Sequential:</strong> Đổ chuông từng máy nhánh theo thứ tứ được "
+"xác định trong danh sách"
 
 #: views/advanced_form.php:178
-#, fuzzy
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"ALERT_INFO peut-être utilisé pour des sonneries distinctes avec des "
-"dispositifs SIP.\n"
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"ALERT_INFO peut être utilisé pour avoir des sonneries distinctes avec les "
-"périphériques SIP."
+"ALERT_INFO có thể được sử dụng để phân biệt chuông gọi với các thiết bị SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
-msgstr "Actions"
+msgstr "Các tháo tác"
 
 #: views/bootnav.php:2 views/rggrid.php:2
-#, fuzzy
 msgid "Add Ring Group"
-msgstr ""
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Ajouter Groupe de Sonnerie\n"
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Ajouter groupe de sonnerie"
+msgstr "Thêm tính năng Nhóm đổ chuông ( Ring group)"
 
 #: views/advanced_form.php:166
-#, fuzzy
 msgid "Alert Info"
-msgstr ""
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Info d'Alerte\n"
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Info d'alerte"
+msgstr "Thông tin cảnh báo"
 
 #: views/form.php:245
 msgid "Always transmit the Fixed CID Value below."
-msgstr "Toujours transmettre l'ID appelant ci-dessous."
+msgstr "Luôn truyền giá trị CID cố định sau."
 
 #: views/form.php:99
 msgid "Announcement"
-msgstr "Annonce"
+msgstr "Thông báo"
 
 #: ringgroups.i18n.php:6
 msgid "Applications"
-msgstr "Applications"
+msgstr "Các ứng dụng"
 
 #: views/advanced_form.php:142
-#, fuzzy
 msgid "CID Name Prefix"
-msgstr ""
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Préfixe de Nom CID\n"
-"#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
-"Préfixe du nom de l'ID appelant"
+msgstr "Tiền ngữ của tên CID"
 
 #: views/advanced_form.php:404
 msgid "Call Recording"
-msgstr "Enregistrer l'appel"
+msgstr "Ghi âm cuộc gọi"
 
 #: views/advanced_form.php:354
 msgid "Change External CID Configuration"
-msgstr "Modifier la configuration de l'ID appelant externe"
+msgstr "Thay đổi cấu hình CID nội bộ"
 
 #: views/advanced_form.php:325
 msgid "Confirm Calls"
-msgstr "Confirmer les Appels"
+msgstr "Xác nhận các cuộc gọi"
 
 #: ringgroups.i18n.php:8
 msgid ""
@@ -116,34 +88,40 @@ msgid ""
 "callee has to confirm if they actually want to take the call before the "
 "caller is transferred."
 msgstr ""
+"Tạo một nhóm các máy nhánh đổ chuông cùng nhau. Các máy nhánh có thể đổ "
+"chuông cùng một thời điểm hay trong các cấu hình 'hunt' khác nhau. Ngoài ra, "
+"các số điện thoại bên ngoài được hỗ trợ và có thêm một tùy chọn xác nhận "
+"cuộc gọi, theo đó người được gọi phải xác nhận nếu họ muốn nhận cuộc gọi "
+"trước khi người gọi gọi đến."
 
 #: views/form.php:141 views/form.php:176 views/form.php:243 views/form.php:255
 msgid "Default"
-msgstr "Par défaut"
+msgstr "Mặc định"
 
 #: Ringgroups.class.php:144
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
-msgstr ""
+msgstr "Mô tả"
 
 #: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
-msgstr "Destination si pas de réponse"
+msgstr "Điểm đích nếu không trả lời"
 
 #: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
+"Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy nhánh)"
 
 #: views/advanced_form.php:411
 msgid "Dont Care"
-msgstr ""
+msgstr "Không quan tâm"
 
 #: views/advanced_form.php:298
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "Kích cuộc tính năng Nhấc cuộc gọi ( Call Pickup)"
 
 #: views/advanced_form.php:340
 msgid ""
@@ -152,20 +130,19 @@ msgid ""
 "this requires the remote side push 1 on their phone before the call is put "
 "through. This feature only works with the ringall ring strategy"
 msgstr ""
-"Activez cette fonctionnalité si vous appelez des numéros extérieurs qui "
-"demandent confirmation - ex : un téléphone portable ira peut-être vers la "
-"messagerie vocale qui prendra l'appel. Activer ceci requiert qu'on appuye "
-"sur 1 de l'autre côté sur les téléphones avant que l'appel ne soit transmis. "
-"Cette fonctionnalité ne fonctionne qu'avec les stratégies de sonnerie Sonner "
-"Partout/Sonner Partout-prim"
+"Bật tính năng này nếu đang gọi cho các số bên ngoài mà cần phải xác nhận.  - "
+"ví dụ: điện thoại di động có thể truy cập vào hộp thư thoại để nhận cuộc "
+"gọi. Kích hoạt tính năng này đòi hỏi người đầu dây kia phải nhấn phím 1 trên "
+"điện thoại của họ trước khi cuộc gọi được thực hiện. Tính năng này chỉ hoạt "
+"động với chiến thuật đổ chuông tất cả (ringall)"
 
 #: views/advanced_form.php:58 views/simple_form.php:32
 msgid "Extension List"
-msgstr "Liste d'Extension"
+msgstr "Danh sách máy nhánh"
 
 #: views/advanced_form.php:380 views/form.php:245 views/form.php:256
 msgid "Fixed CID Value"
-msgstr ""
+msgstr "Gía trị CID cố định"
 
 #: views/advanced_form.php:392
 msgid ""
@@ -173,55 +150,58 @@ msgid ""
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
+"Giá trị cố định để thay thế CID được sử dụng cùng với các chế độ trên. Định "
+"dạng của giá trị này nên chỉ ở dạng chữ số với tùy chọn định dạng E164 bắt "
+"đầu bằng '+'."
 
 #: views/advanced_form.php:409
 msgid "Force"
-msgstr ""
+msgstr "Buộc phải"
 
 #: views/form.php:251 views/form.php:259
 msgid "Force Dialed Number"
-msgstr ""
+msgstr "Bắt buộc số điện thoại đã quay"
 
 #: views/advanced_form.php:34
 msgid "Group Description"
-msgstr "Description du Groupe"
+msgstr "Mô tả nhóm"
 
 #: functions.inc.php:357
 msgid "INUSE"
-msgstr "UTILISÉ"
+msgstr "INUSE"
 
 #: views/form.php:234
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
-"Si vous sélectionnez une classe de Musique d'Attente à jouer, à la place de "
-"'Sonner', ils entendront cela à la place de la Sonnerie pendant qu'ils "
-"attendent que quelqu'un ne leur réponde."
+"Nếu bạn chọn lớp nhạc chờ để phát thay vì cho đổ chuông, thì trong khi họ "
+"chờ ai đó nhấc máy họ sẽ nghe thấy tiếng nhạc chứ không phải tiếng chuông "
+"reo."
 
 #: views/advanced_form.php:244
 msgid "Ignore CF Settings"
-msgstr "Ingorer les Paramètres de TA"
+msgstr "Bỏ qua các cài đặt CF"
 
 #: views/form.php:217
 msgid "Inherit"
-msgstr ""
+msgstr "Kế thừa"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
-msgstr ""
+msgstr "Caller ID (CID) không hợp lệ"
 
 #: assets/js/ringgroups.js:54
 msgid "Invalid Group Number specified"
-msgstr "Numéro de Groupe spécifié invalide"
+msgstr "Số điện thoại nhóm không hợp lễ được xác định"
 
 #: assets/js/ringgroups.js:56
 msgid "Invalid time specified"
-msgstr "Temps spécifié invalide"
+msgstr "Thời gian không hợp lệ đã được xác định"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
-msgstr ""
+msgstr "Danh sách Ring Group"
 
 #: views/advanced_form.php:78
 msgid ""
@@ -233,6 +213,14 @@ msgid ""
 "Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
 "the end."
 msgstr ""
+"Danh sách máy nhánh đổ chuông, 1 dòng 1 máy, hoặc sử dụng chức  năng chọn "
+"nhanh máy nhánh Extension Quick Select để chèn chúng tại đây.<br><br>bạn có "
+"thể bao gồm một máy nhánh trên hệ thống từ xa, hoặc một số điện thoại bên "
+"ngoài bằng cách thêm vào cuối số đó dấu #. Ví dụ 2448089# sẽ quay số 2448089 "
+"trên một trung kế phù hợp ( Xem phần Outbound Routing)<br><br> Các máy nhanh "
+"không có dấu # sẽ không đổ chuông Follow-Me của người dùng. Để quay số "
+"Follow-Me, các hàng đợi và các số điện thoại khác không phải là máy nhánh "
+"phải đặt dấu # ở cuối."
 
 #: views/simple_form.php:52
 msgid ""
@@ -241,6 +229,10 @@ msgid ""
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
 "dial 2448089"
 msgstr ""
+"Danh sách máy nhánh đổ chuông, 1 dòng 1 máy, hoặc sử dụng chức  năng chọn "
+"nhanh máy nhánh Extension Quick Select để chèn chúng tại đây.<br><br>bạn có "
+"thể bao gồm một máy nhánh trên hệ thống từ xa, hoặc một số điện thoại bên "
+"ngoài bằng cách thêm vào cuối số đó dấu #. Ví dụ 2448089# sẽ quay số 2448089"
 
 #: views/form.php:64
 msgid ""
@@ -248,12 +240,19 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Thực hiện một cuộc gọi có thể nhảy giữa các máy nhánh mà không cần có quyền "
+"ưu tiên xác định trước để đảm bảo các hầu hết cuộc gọi trong các nhóm đều "
+"được lan truyền. Mô phỏng một hàng đợi đó đợi khi chính hàng đợi đó được sử "
+"dụng."
 
 #: views/form.php:120
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
 msgstr ""
+"Một tin nhắn sẽ được phát đến người gọi trước khi thực hiên quay số đến nhóm "
+"này. <br><br> Để thêm các ghi âm bổ sung vui lòng sử dụng MENU \"System "
+"Recordings\" ở trên"
 
 #: views/form.php:155
 msgid ""
@@ -261,6 +260,9 @@ msgid ""
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU above"
 msgstr ""
+"Tin nhắn sẽ được phát tới người đang nhận cuộc gọi, nếu tính năng 'Xác nhận "
+"cuộc gọi\" ('Confirm Calls') được kích hoạt. <br><br> Để thêm các ghi âm bổ "
+"sung vui lòng sử dụng MENU \"System Recordings\" ở trên"
 
 #: views/form.php:190
 msgid ""
@@ -268,36 +270,39 @@ msgid ""
 "already been accepted before they push 1.<br><br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
+"Tin nhắn sẽ được phát tới người đang nhận cuộc gọi nếu cuộc gọi này đã được "
+"chấp nhận trước khi nhấn phím 1.<br><br> Để thêm các ghi âm bổ sung vui lòng "
+"sử dụng MENU \"System Recordings\" ở trên"
 
 #: views/form.php:241
 msgid "Mode"
-msgstr ""
+msgstr "Chế độ"
 
 #: views/advanced_form.php:413
 msgid "Never"
-msgstr ""
+msgstr "Không bao giờ"
 
 #: views/advanced_form.php:224 views/advanced_form.php:251
 #: views/advanced_form.php:278 views/advanced_form.php:305
 #: views/advanced_form.php:332
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: views/advanced_form.php:194 views/form.php:106
 msgid "None"
-msgstr "Aucun"
+msgstr "Không có"
 
 #: assets/js/ringgroups.js:59
 msgid ""
 "Only ringall, ringallv2, hunt and the respective -prim versions are "
 "supported when confirmation is checked"
 msgstr ""
-"Sonner Partout, Sonner Partout v2, Chasse et les versions -prim respectives "
-"uniquement sont supportés lorsque confirmation est coché"
+"Chỉ có  ringall, ringallv2, hunt và các phiên bản prim tương ứng được hỗ trợ "
+"khi đánh dấu check vào confirmation"
 
 #: views/form.php:247 views/form.php:257
 msgid "Outside Calls Fixed CID Value"
-msgstr ""
+msgstr "Gía trị CID cố định của các cuộc gọi bên ngoài"
 
 #: views/advanced_form.php:206
 #, php-format
@@ -305,160 +310,165 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Ghi đè âm lượng chuông. Lưu ý: Điều này chỉ hợp lệ cho các điện thoại %s tại "
+"thời điểm hiện tại"
 
 #: views/form.php:209
 msgid "Play Music On Hold"
-msgstr ""
+msgstr "Phát nhạc chờ"
 
 #: assets/js/ringgroups.js:58
 msgid "Please enter a valid Group Description"
-msgstr "Veuillez entrer une Description de Groupe valide"
+msgstr "Vui lòng nhập một mô tả Nhóm hợp lệ"
 
 #: assets/js/ringgroups.js:55
 msgid "Please enter an extension list."
-msgstr "Veuillez entrer une liste d'extension"
+msgstr "Vui lòng nhập một danh sách máy nhánh."
 
 #: views/advanced_form.php:46
 msgid "Provide a descriptive title for this Ring Group."
-msgstr "Titre Descriptif pour ce Groupe de Sonnerie."
+msgstr "Cung cấp một tiêu đề mô tả cho Ring Group này."
 
 #: views/simple_form.php:20
 msgid "Provide a name for this Ring Group."
-msgstr ""
+msgstr "Đặt tên cho Ring Group này."
 
 #: views/form.php:134
 msgid "Remote Announce"
-msgstr ""
+msgstr "Thông báo từ xa"
 
 #: Ringgroups.class.php:154
 msgid "Reset"
-msgstr ""
+msgstr "Cài đặt lại"
 
 #: views/form.php:216
 msgid "Ring"
-msgstr "Sonner"
+msgstr "Đổ chuông"
 
 #: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
-msgstr "Groupe de Sonnerie"
+msgstr "Tính năng Ring Group (Nhóm đổ chuông)"
 
 #: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
-msgstr "Groupe de Sonnerie %s :"
+msgstr "Ring Group (Nhóm đổ chuông): %s "
 
 #: functions.inc.php:481
 msgid "Ring Group Membership"
-msgstr ""
+msgstr "Thành viên của Ring Group"
 
 #: ringgroups.i18n.php:14
 msgid "Ring Group Module"
-msgstr ""
+msgstr "Mô đun Ring Group"
 
 #: views/simple_form.php:8
 msgid "Ring Group Name"
-msgstr ""
+msgstr "Tên của Ring Group"
 
 #: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
-msgstr "Groupe de Sonnerie : %s"
+msgstr "Nhóm đổ chuông: %s"
 
 #: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
-msgstr "Groupe de Sonnerie : %s (%s)"
+msgstr "Nhóm đổ chuông: %s (%s)"
 
 #: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
-msgstr "Groupes de Sonnerie"
+msgstr "Các nhóm đổ chuông"
 
 #: views/advanced_form.php:90 views/simple_form.php:64
 msgid "Ring Strategy"
-msgstr ""
+msgstr "Chiến lược đổ chuông"
 
 #: views/simple_form.php:91
 msgid "Ring Time"
-msgstr ""
+msgstr "Thời gian rung chuông"
 
 #: views/advanced_form.php:116
 msgid "Ring Time (max 300 sec)"
-msgstr ""
+msgstr "Thời gian đổ chuông ( tối đa 300 giây)"
 
 #: views/simple_form.php:118
 msgid "Ring Tone"
-msgstr ""
+msgstr "Nhạc chuông"
 
 #: views/form.php:52
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
-"fait sonner tous les canaux disponibles jusqu'à qu'un réponde (par défaut)"
+"Đổ chuông tất cả các kênh đến khi một cuộc gọi được trả lời ( mặc định)"
 
 #: views/form.php:56
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
 msgstr ""
-"fait sonner la première extension dans la liste, puis fait sonner la 1e et "
-"la 2e extension, puis 1e, 2e et 3e extension de la liste, etc..."
+"Đổ chuông máy nhánh đầu tiên trong danh sách, sau đó đổ chuông các máy nhánh "
+"thứ nhất, thứ và thứ hai, tiếp theo là đổ chuông máy nhánh thứ nhất, thứ hai "
+"và thứ ba,... trong danh sách."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
-msgstr "Numéro de Groupe de Sonnerie"
+msgstr "Số của Ring-Group"
 
 #: Ringgroups.class.php:124
 msgid "RingGroup"
-msgstr ""
+msgstr "RingGroup ( Đổ chuông nhóm)"
 
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Ghi đè âm lượng chuông"
 
 #: views/simple_form.php:130
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"Chọn một nhạc chuông trong danh sách tùy chọn ở trên. Nó sẽ quyết đinh âm "
+"thanh cho máy của bạn khi nó đổ chuông từ nhóm này."
 
 #: views/advanced_form.php:217
 msgid "Send Progress"
-msgstr ""
+msgstr "Tiến trình gửi"
 
 #: views/simple_form.php:70
 msgid "Sequential"
-msgstr ""
+msgstr "Theo thứ tự"
 
 #: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported."
 msgstr ""
+"Ringgroup này nên chỉ thị tiến trình cuộc gọi đến các kênh kỹ thuật số được "
+"hỗ trợ."
 
 #: views/simple_form.php:69
 msgid "Simultaneous"
-msgstr ""
+msgstr "Đồng thời"
 
 #: views/advanced_form.php:271
 msgid "Skip Busy Agent"
-msgstr "Passer Agent Occupé"
+msgstr "Bỏ qua tổng đài viên đang bận"
 
 #: Ringgroups.class.php:149
 msgid "Submit"
-msgstr ""
+msgstr "Gửi đi"
 
 #: views/form.php:54
 msgid "Take turns ringing each available extension"
-msgstr "Fait sonner tour à tour chaque extension disponible"
+msgstr "Thay phiên nhau đổ chuông từng máy nhánh khả dụng"
 
 #: assets/js/ringgroups.js:80
 msgid "The group list can only contain a maximum of 255 characters."
-msgstr ""
+msgstr "Danh sách nhóm chỉ có thể bao gồm tối đa 255 ký tự."
 
 #: views/advanced_form.php:21
 msgid "The number users will dial to ring extensions in this ring group"
-msgstr ""
-"Le numéro que les utilisateurs composeront pour faire sonner les extensions "
-"de ce groupe"
+msgstr "Số mà người dùng sẽ gọi đến các máy nhánh trong Ring Group này"
 
 #: views/form.php:58
 msgid ""
@@ -467,37 +477,41 @@ msgid ""
 "is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 msgstr ""
-"ces modes se agissent tel que décrit ci-dessus. Cependant, si l'extension "
-"primaire (1e dans la liste) est occupée, les autres extensions ne sonneront "
-"pas. Si la primaire est FreePBX Ne pas Déranger, elle ne sonnera pas. Si la "
-"primaire est FreePBX Transfert d'Appel inconditionnel, alors toutes sonneront"
+"Các chế độ này hoạt động giống như được mô tả ở trên. Tuy nhiên, nếu máy "
+"nhánh chính ( máy đầu tiên trong danh sách) bị bận thì các máy nhánh khác sẽ "
+"đổ chuông. Nếu máy nhánh đầu tiên là  FreePBX DND thì nó sẽ không đổ chuông. "
+"Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
+"chuông"
 
 #: functions.inc.php:297
 msgid "This ringgroup"
-msgstr "Ce groupe de sonnerie"
+msgstr "Ringgroup này"
 
 #: views/advanced_form.php:128
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
 msgstr ""
-"Temps en secondes pendant lequel les téléphones sonneront. Pour toutes les "
-"stratégies de styles de sonnerie \"Chasse\", c'est le temps pour chaque "
-"itération de téléphone qui sonne"
+"Thời gian điện thoại đổ chuông sẽ được tính bằng giây. Đối với tất cả các "
+"chiến lược đổ chuông kiểu hunt thì đây là thời gian cho mỗi lần điện thoại "
+"rung lặp lại"
 
 #: views/simple_form.php:108
 msgid ""
 "Time in seconds that the phones will ring. For sequential ring strategies, "
 "this is the time for each iteration of phone(s) that are rung"
 msgstr ""
+"Thời gian điện thoại đổ chuông sẽ được tính bằng giây. Đối với tất cả các "
+"chiến lược đổ chuông theo thứ tự thì đây là thời gian cho mỗi lần điện thoại "
+"rung lặp lại"
 
 #: assets/js/ringgroups.js:57
 msgid "Time must be between 1 and 300 seconds"
-msgstr ""
+msgstr "Thời gian sẽ trong khoảng 1 đến 300 giây"
 
 #: views/form.php:169
 msgid "Too-Late Announce"
-msgstr ""
+msgstr "Thông báo quá muộn"
 
 #: views/form.php:247
 msgid ""
@@ -505,6 +519,9 @@ msgid ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
+"Truyền giá trị CID cố định dưới đây vào các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi của máy nhánh sẽ tiếp tục hoạt động ở chế độ "
+"mặc định."
 
 #: views/form.php:251
 msgid ""
@@ -513,6 +530,10 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
+"Truyền số đã được quay giống như CID cho các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi nội bộ sẽ tiếp tục hoạt động ở chế độ mặc "
+"định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
+"vào các trung kế đã khóa các Caller ID nước ngoài"
 
 #: views/form.php:249
 msgid ""
@@ -521,18 +542,22 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
+"Truyền số đã được quay giống như CID cho các cuộc gọi đến từ bên ngoài. Máy "
+"nhánh nội bộ đến các cuộc gọi nội bộ sẽ tiếp tục hoạt động ở chế độ mặc "
+"định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
+"vào các trung kế đã khóa các Caller ID nước ngoài"
 
 #: views/form.php:243
 msgid "Transmits the Callers CID if allowed by the trunk."
-msgstr ""
+msgstr "Truyền CID của người gọi nếu trung kế cho phép."
 
 #: views/form.php:249 views/form.php:258
 msgid "Use Dialed Number"
-msgstr ""
+msgstr "Sử dụng số đã được quay"
 
 #: Ringgroups.class.php:77
 msgid "Warning! Extension"
-msgstr "Attention ! L'Extension"
+msgstr "Cảnh báo! Máy nhánh"
 
 #: views/advanced_form.php:286
 msgid ""
@@ -541,6 +566,11 @@ msgid ""
 "will not be presented with the call and in the various hunt style ring "
 "strategies, the next agent will be attempted."
 msgstr ""
+"Khi được kích hoạt, tổng đài viên người đang dùng điện thoại sẽ bị bỏ qua "
+"như thể đường dây của điện thoại đó đang bận. Nghĩa là các cuộc gọi sẽ không "
+"xuất hiện Call Waiting hay các điện thoại đa tuyến, và trong các chiến lược "
+"đổ chuông kiểu Hunt , cuộc gọi sẽ tiếp tục đổ chuông đến tổng đài viên tiếp "
+"theo."
 
 #: views/advanced_form.php:313
 msgid ""
@@ -558,22 +588,29 @@ msgid ""
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
+"Khi cài đặt về Yes, tổng đài viên người đang cố để chuyển tiếp cuộc gọi sẽ "
+"bị bỏ qua, điều này áp dụng cho CF, CFU và CFB. Các số máy nhánh đã được "
+"nhập dấu # ở cuối, chẳng hạn để truy nhập vào tính năng Follow-Me của máy "
+"nhánh, thì có thể không cần cài đặt này."
 
 #: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
+"Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Ring Group sẽ "
+"có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là thành "
+"viên trong đấy."
 
 #: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
-msgstr ""
+msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
 
 #: views/advanced_form.php:222 views/advanced_form.php:249
 #: views/advanced_form.php:276 views/advanced_form.php:303
 #: views/advanced_form.php:330
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: views/advanced_form.php:421
 msgid ""
@@ -583,6 +620,10 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
+"Bạn luôn có thể ghi lại các cuộc gọi đến Ring Groupnày (Force), không ghi "
+"lại chúng (Never), hoặc cho phép máy nhánh phải thực hiện trả lời trên các "
+"ghi âm yêu cầu (Dont Care). Nếu ghi âm bị từ chối thì khi nhấn vào yêu cầu "
+"thì ghi âm sẽ bị khóa, trừ khi bạn cài đặt ghi âm cuộc gọi là  \"Override\"."
 
 #: views/advanced_form.php:154
 msgid ""
@@ -590,244 +631,68 @@ msgid ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
+"Bạn có thể thêm tiền tố vào tên của CallerID khi đổ chuông các máy nhánh "
+"trong nhóm náy. Ví dụ: Nếu bạn thêm tiền tố là \"Sales:\" cho một cuộc gọi "
+"từ John Doe thì trên máy nhánh đang đổ chuông sẽ hiện lên \"Sales:John Doe\"."
 
 #: views/form.php:221
 msgid "default"
-msgstr "par défaut"
+msgstr "Mặc định"
 
 #: views/form.php:60
 msgid "firstavailable"
-msgstr "Premier Disponible"
+msgstr "Khả dụng ban đầu"
 
 #: views/form.php:62
 msgid "firstnotonphone"
-msgstr "Premier pas au téléphone"
+msgstr "firstnotonphone (notonphone đầu tiên)"
 
 #: views/form.php:54
 msgid "hunt"
-msgstr "Chasse"
+msgstr "hunt"
 
 #: functions.inc.php:297
 msgid "is already in use"
-msgstr "est déjà utilisé"
+msgstr "đang được sử dụng"
 
 #: Ringgroups.class.php:77
 msgid "is not allowed for your account"
-msgstr "n'est pas autorisée pour votre compte"
+msgstr "Tài khoản của bạn không được cho phép"
 
 #: views/form.php:56
 msgid "memoryhunt"
-msgstr "Chasse avec mémoire"
+msgstr "memoryhunt ( Bộ nhớ hunt)"
 
 #: views/form.php:220
 msgid "none"
-msgstr "aucun"
+msgstr "Không có"
 
 #: views/form.php:64
 msgid "random"
-msgstr ""
+msgstr "ngẫu nhiên"
 
 #: views/form.php:60
 msgid "ring only the first available channel"
-msgstr "fait sonner uniquement le premier canal disponible"
+msgstr "Chỉ đổ chuông kênh khả dụng đầu tiên"
 
 #: views/form.php:62
 msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr ""
-"fait sonner uniquement le premier canal qui n'est pas au téléphone - ignore "
-"les alertes d'appel"
+msgstr "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Call Waiting)"
 
 #: views/form.php:52
 msgid "ringall"
-msgstr "Sonner Partout"
-
-#~ msgid "Checking if recordings need migration.."
-#~ msgstr "Contrôle si les enregistrements ont besoin d'être migrés..."
-
-#~ msgid "adding annmsg_id field.."
-#~ msgstr "ajout du champ annmsg_id..."
-
-#~ msgid "adding remotealert_id field.."
-#~ msgstr "ajout du champ remotealert_id..."
-
-#~ msgid "adding toolate_id field.."
-#~ msgstr "ajout du champ toolate_id..."
-
-#~ msgid "already migrated"
-#~ msgstr "déjà migré"
-
-#~ msgid "dropping annmsg field.."
-#~ msgstr "suppression du chamo annmsg"
-
-#~ msgid "dropping remotealert field.."
-#~ msgstr "suppression du champ remotealert..."
-
-#~ msgid "dropping toolate field.."
-#~ msgstr "suppression du champ toolate..."
-
-#~ msgid "fatal error"
-#~ msgstr "erreur fatale"
-
-#~ msgid "migrate annmsg to ids.."
-#~ msgstr "migration de annmsg vers ids..."
-
-#~ msgid "migrate remotealert to  ids.."
-#~ msgstr "migration de remotealert vers ids..."
-
-#~ msgid "migrate toolate to ids.."
-#~ msgstr "migration de toolate vers ids..."
-
-#~ msgid "migrated %s entries"
-#~ msgstr "%s entrées migrées"
-
-#~ msgid "migrating"
-#~ msgstr "en cours de migration"
-
-#~ msgid "no annmsg field???"
-#~ msgstr "pas de champ annmsg ???"
-
-#~ msgid "no remotealert field???"
-#~ msgstr "pas de champ remotealert ???"
-
-#~ msgid "no toolate field???"
-#~ msgstr "pas de champ toolate ???"
-
-#~ msgid "ok"
-#~ msgstr "ok"
-
-#~ msgid "(pick extension)"
-#~ msgstr "(choisir extension)"
-
-#~ msgid "Announcement:"
-#~ msgstr "Annonce :"
+msgstr "Đổ chuông tất cả"
 
 #~ msgid ""
-#~ "Choose an extension to append to the end of the extension list above."
+#~ "When enabled, this will allow calls to the Ring Group to be picked up "
+#~ "with the directed call pickup feature using the group number. When not "
+#~ "checked, individual extensions that are part of the group can still be "
+#~ "picked up by doing a directed call pickup to the ringing extension, which "
+#~ "works whether or not this is checked."
 #~ msgstr ""
-#~ "Choisissez une extension à placer à la fin de la liste d'extensions ci-"
-#~ "dessous."
-
-#~ msgid "Conflicting Extensions"
-#~ msgstr "Extensions Conflictuelles"
-
-#~ msgid "Delete Group"
-#~ msgstr "Supprimer Groupe"
-
-#~ msgid "Edit Ring Group"
-#~ msgstr "Editer Groupe de Sonnerie"
-
-#~ msgid "Extension Quick Pick"
-#~ msgstr "Extension de Sélection Rapide"
-
-#~ msgid ""
-#~ "Message to be played to the caller before dialing this group.<br><br>To "
-#~ "add additional recordings please use the \"System Recordings\" MENU to "
-#~ "the left"
-#~ msgstr ""
-#~ "Message qui sera joué à l'appelant avant de composer le numéro de ce "
-#~ "groupe.<br><br>Pour ajouter des enregistrements additionnels, veuillez "
-#~ "utiliser le MENU \"Enregistrements Système\" sur la gauche"
-
-#~ msgid ""
-#~ "Message to be played to the caller before dialing this group.<br><br>You "
-#~ "must install and enable the \"Systems Recordings\" Module to edit this "
-#~ "option"
-#~ msgstr ""
-#~ "Message qui sera joué à l'appelant avant de composer le numéro de ce "
-#~ "groupe.<br><br>Vous devez installer et activer le Module "
-#~ "\"Enregistrements Système\" pour éditer cette option"
-
-#~ msgid ""
-#~ "Message to be played to the person RECEIVING the call, if 'Confirm Calls' "
-#~ "is enabled.<br><br>To add additional recordings use the \"System "
-#~ "Recordings\" MENU to the left"
-#~ msgstr ""
-#~ "Message qui sera joué à la personne RECEVANT l'appel, si 'Confirmer les "
-#~ "Appels' est activé.<br><br>Pour ajouter des enregistrements additionnels, "
-#~ "utilisez le MENU \"Enregistrements Système\" sur la gauche"
-
-#~ msgid ""
-#~ "Message to be played to the person RECEIVING the call, if the call has "
-#~ "already been accepted before they push 1.<br><br>To add additional "
-#~ "recordings use the \"System Recordings\" MENU to the left"
-#~ msgstr ""
-#~ "Message qui sera joué à la personnne RECEVANT l'appel, si l'appel a déjà "
-#~ "été accepté avant qu'ils n'appuyent sur 1.<br><br>Pour ajouter des "
-#~ "enregistrements additionnels, utilisez le MENU  \"Enregistrements Système"
-#~ "\" sur la gauche"
-
-#~ msgid "Play Music On Hold?"
-#~ msgstr "Jouer la Musique d'Attente ?"
-
-#~ msgid "Remote Announce:"
-#~ msgstr "Annonce Distante :"
-
-#~ msgid "Ring Strategy:"
-#~ msgstr "Stratégie de Sonnerie :"
-
-#~ msgid "Submit Changes"
-#~ msgstr "Appliquer les Modifications"
-
-#~ msgid "Too-Late Announce:"
-#~ msgstr "Annonce Trop Tard :"
-
-#~ msgid ""
-#~ "When checked, agents who are on an occupied phone will be skipped as if "
-#~ "the line were returning busy. This means that Call Waiting or multi-line "
-#~ "phones will not be presented with the call and in the various hunt style "
-#~ "ring strategies, the next agent will be attempted."
-#~ msgstr ""
-#~ "Lorsque coché, on passe les agents qui sont sur un téléphone occupé comme "
-#~ "si la ligne était occupée. Cela signifie que l'Attente Téléphonique ou "
-#~ "les téléphones multi-lignes ne seront pas concernés par l'appel et dans "
-#~ "la plupart des styles de stratégies de sonnerie, l'agent suivant sera "
-#~ "sollicité."
-
-#~ msgid ""
-#~ "When checked, agents who attempt to Call Forward will be ignored, this "
-#~ "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
-#~ "example to access the extension's Follow-Me, might not honor this "
-#~ "setting ."
-#~ msgstr ""
-#~ "Lorsque coché, les agents qui tentent de transférer l'appel seront "
-#~ "ignorés. S'applique à tout type de transfert d'appel (Incondionnel, Non-"
-#~ "Disponible, Occupé). Les extensions entrées avec '#' à la fin, par "
-#~ "exemple pour accéder au Suivez-Moi de l'extension, n'honnoreront "
-#~ "probablement pas ce paramètre."
-
-#~ msgid "deleted"
-#~ msgstr "supprimé"
-
-#~ msgid "Invalid Caller ID prefix."
-#~ msgstr "Préfixe d'ID d'Appelant invalide."
-
-#~ msgid ""
-#~ "List extensions to ring, one per line, or use the Extension Quick Pick "
-#~ "below to insert them here.<br><br>You can include an extension on a "
-#~ "remote system, or an external number by suffixing a number with a '#'.  "
-#~ "ex:  2448089# would dial 2448089 on the appropriate trunk (see Outbound "
-#~ "Routing)<br><br>Extensions (without a '#' will not ring a user's Follow-"
-#~ "Me. To dial Follow-Me, Queues and other numbers that are not extensions, "
-#~ "put a '#' at the end."
-#~ msgstr ""
-#~ "Listez les extensions à faire sonner, une par ligne, ou utilisez "
-#~ "l'Extension Sélection Rapide ci-dessous.<br><br>Vous pouvez inclure une "
-#~ "extension sur un système distant, ou un numéro externe en suffixant un "
-#~ "numéro avec un dièse (#). exemple : 2448089# composera 2448089 sur le "
-#~ "trunk approprié (voir Routes Sortantes)."
-
-#~ msgid "Ring Time (max 60 sec)"
-#~ msgstr "Temps de Sonnerie (max 60 secondes)"
-
-#~ msgid "Time must be between 1 and 60 seconds"
-#~ msgstr "Le temps doit être compris entre 1 et 60 secondes"
-
-#~ msgid ""
-#~ "You can optionally prefix the Caller ID name when ringing extensions in "
-#~ "this group. ie: If you prefix with \"Sales:\", a call from John Doe would "
-#~ "display as \"Sales:John Doe\" on the extensions that ring."
-#~ msgstr ""
-#~ "Vous pouvez optionnellement préfixer le nom de l'identifiant de "
-#~ "l'appelant quand les extensions de ce groupe sonnent. Par exemple : Si "
-#~ "vous préfixez avec \"Ventes :\", un appel de John Doe affichera "
-#~ "\"Ventes : John Doe\" sur les extensions qui sonnent."
+#~ "Khi được kích hoạt, điều này sẽ cho phép các cuộc gọi đến Ring Group được "
+#~ "nhận với tính năng nhận cuộc gọi trực tiếp sử dụng bởi số điện thoại của "
+#~ "nhóm. Khi không đánh dấu check, các máy nhánh là một phần của Nhóm đổ "
+#~ "chuông sẽ vẫn có thể nhận cuộc gọi bằng cách thực hiện nhận cuộc gọi trực "
+#~ "tiếp đế máy nhánh đang đổ chuông vì các máy nhánh này vẫn làm việc dù có "
+#~ "được đánh dấu check hay không."
