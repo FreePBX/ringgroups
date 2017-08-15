@@ -23,7 +23,7 @@
 		<version>13.0.70</version>
 	</depends>
 	<menuitems>
-		<ringgroups>Ring Groups</ringgroups>
+		<ringgroups needsenginedb="yes">Ring Groups</ringgroups>
 	</menuitems>
 	<popovers>
 		<ringgroups>
