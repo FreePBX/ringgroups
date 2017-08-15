@@ -47,7 +47,7 @@
 		<version>13.0.191.12</version>
 	</depends>
 	<menuitems>
-		<ringgroups>Ring Groups</ringgroups>
+		<ringgroups needsenginedb="yes">Ring Groups</ringgroups>
 	</menuitems>
 	<popovers>
 		<ringgroups>
