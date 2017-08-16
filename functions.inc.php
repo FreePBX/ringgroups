@@ -168,10 +168,10 @@ function ringgroups_get_config($engine) {
 						$ext->add($pickupcont,$pickup_code, '', new ext_macro('user-callerid'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('EXTENS','${FIELDQTY(ALLOWEDMEM,-)}'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('ITER','1'));
-						$ext->add($pickupcont,$pickup_code, '', new ext_noop('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]',pickup));
-						$ext->add($pickupcont,$pickup_code, 'extloop', new ext_gotoif('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]',pickup));
+						$ext->add($pickupcont,$pickup_code, '', new ext_noop('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]','pickup'));
+						$ext->add($pickupcont,$pickup_code, 'extloop', new ext_gotoif('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]','pickup'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_set('ITER','$[${ITER}+1]'));
-						$ext->add($pickupcont,$pickup_code, '', new ext_gotoif('$["${ITER}" <= "${EXTENS}"]',extloop));
+						$ext->add($pickupcont,$pickup_code, '', new ext_gotoif('$["${ITER}" <= "${EXTENS}"]','extloop'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_playback('im-sorry&access-denied'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_hangup());
 						$ext->add($pickupcont,$pickup_code, 'pickup', new ext_setvar('PICKUP_EXTEN','${AMPUSER}'));
