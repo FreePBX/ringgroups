@@ -8,12 +8,15 @@ msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-07 15:29-0400\n"
-"PO-Revision-Date: 2008-11-06 14:54+0100\n"
-"Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
-"Language-Team: Italian\n"
+"PO-Revision-Date: 2018-05-28 07:57+0000\n"
+"Last-Translator: Maurizio Longhitano <mlonghitano@teampower.it>\n"
+"Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.19.1\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
@@ -36,7 +39,7 @@ msgstr ""
 
 #: views/rggrid.php:18
 msgid "Actions"
-msgstr ""
+msgstr "Azioni"
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
@@ -52,19 +55,19 @@ msgstr ""
 
 #: views/form.php:99
 msgid "Announcement"
-msgstr ""
+msgstr "Annuncio"
 
 #: ringgroups.i18n.php:6
 msgid "Applications"
-msgstr ""
+msgstr "Applicazioni"
 
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
-msgstr "Prefisso ID Chiamante"
+msgstr "Prefisso Nome CID"
 
 #: views/advanced_form.php:404
 msgid "Call Recording"
-msgstr ""
+msgstr "Registrazione Chiamata"
 
 #: views/advanced_form.php:354
 msgid "Change External CID Configuration"
@@ -89,11 +92,11 @@ msgstr "Predefinito"
 
 #: Ringgroups.class.php:144
 msgid "Delete"
-msgstr ""
+msgstr "Elimina"
 
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
@@ -109,7 +112,7 @@ msgstr ""
 
 #: views/advanced_form.php:298
 msgid "Enable Call Pickup"
-msgstr ""
+msgstr "Abilita Call Pickup"
 
 #: views/advanced_form.php:340
 msgid ""
@@ -122,7 +125,7 @@ msgstr ""
 "bisogno di conferma - es., un telefono cellulare potrebbe andare ad una "
 "segreteria, e in quel caso la chiamata sarà presa. Attivando questa opzione "
 "l'utente remoto dovrà digitare 1 sul proprio telefono per accettare la "
-"chiamata. Questa opzione funziona solo con la strategia di squillo ringall."
+"chiamata. Questa opzione funziona solo con la strategia di squillo ringall"
 
 #: views/advanced_form.php:58 views/simple_form.php:32
 msgid "Extension List"
@@ -141,7 +144,7 @@ msgstr ""
 
 #: views/advanced_form.php:409
 msgid "Force"
-msgstr ""
+msgstr "Forza"
 
 #: views/form.php:251 views/form.php:259
 msgid "Force Dialed Number"
@@ -169,11 +172,11 @@ msgstr "Ignora Impostazioni Trasf. Chiamata"
 
 #: views/form.php:217
 msgid "Inherit"
-msgstr ""
+msgstr "Eredita"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
-msgstr ""
+msgstr "CID non valido"
 
 #: assets/js/ringgroups.js:54
 msgid "Invalid Group Number specified"
@@ -185,7 +188,7 @@ msgstr "Tempo specificato non valido"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
-msgstr ""
+msgstr "Elenco Gruppi di Chiamata"
 
 #: views/advanced_form.php:78
 msgid ""
@@ -245,7 +248,7 @@ msgstr ""
 #: views/advanced_form.php:278 views/advanced_form.php:305
 #: views/advanced_form.php:332
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: views/advanced_form.php:194 views/form.php:106
 msgid "None"
@@ -296,7 +299,7 @@ msgstr ""
 
 #: Ringgroups.class.php:154
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #: views/form.php:216
 msgid "Ring"
@@ -407,7 +410,7 @@ msgstr "Salta Agenti Occupati"
 
 #: Ringgroups.class.php:149
 msgid "Submit"
-msgstr ""
+msgstr "Invia"
 
 #: views/form.php:54
 msgid "Take turns ringing each available extension"
@@ -534,7 +537,7 @@ msgstr ""
 #: views/advanced_form.php:276 views/advanced_form.php:303
 #: views/advanced_form.php:330
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: views/advanced_form.php:421
 msgid ""
