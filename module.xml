@@ -2,21 +2,16 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>14.0.1.4</version>
+	<version>15.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
-	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
+	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
-		*14.0.1.4* fix missing quotes by miken32
-		*14.0.1.3* FREEPBX-15547
-		*14.0.1.2* FREEPBX-14945 Call Confirm Announcement under Virtual Queue module is broken
-		*14.0.1.1* FREEPBX-14872 Enable Call Pickup option under Ring Group is broken
-		*14.0.1* Merge from 13
-		*14.0.1alpha1*  FREEPBX-12113 Add Toggle to mark calls answered elsewhere
+		*15.0.1* Impliment 15 backup
 	</changelog>
 	<depends>
 		<module>callrecording ge 12.0.1</module>
@@ -26,6 +21,30 @@
 	<menuitems>
 		<ringgroups needsenginedb="yes">Ring Groups</ringgroups>
 	</menuitems>
+    <database>
+        <table name="ringgroups">
+            <field name="grpnum" type="string" length="20" primarykey="true"/>
+            <field name="strategy" type="string" length="50"/>
+            <field name="grptime" type="smallint"/>
+            <field name="grppre" type="string" length="100" notnull="false"/>
+            <field name="grplist" type="string" length="255"/>
+            <field name="annmsg_id" type="integer" notnull="false"/>
+            <field name="postdest" type="string" length="255" notnull="false"/>
+            <field name="description" type="string" length="35"/>
+            <field name="alertinfo" type="string" length="255" notnull="false"/>
+            <field name="remotealert_id" type="integer" notnull="false"/>
+            <field name="needsconf" type="string" length="10" notnull="false"/>
+            <field name="toolate_id" type="integer" notnull="false"/>
+            <field name="ringing" type="string" length="80" notnull="false"/>
+            <field name="cwignore" type="string" length="10" notnull="false"/>
+            <field name="cfignore" type="string" length="10" notnull="false"/>
+            <field name="cpickup" type="string" length="10" notnull="false"/>
+            <field name="recording" type="string" length="10" default="dontcare" notnull="false"/>
+            <field name="progress" type="string" length="10" notnull="false"/>
+            <field name="elsewhere" type="string" length="10" notnull="false"/>
+            <field name="rvolume" type="string" length="2" default=""/>
+        </table>
+    </database>
 	<popovers>
 		<ringgroups>
 			<display>ringgroups</display>
@@ -33,8 +52,6 @@
 		</ringgroups>
  	</popovers>
 	<supported>
-		<version>14.0</version>
+		<version>15.0</version>
 	</supported>
-	<location/>
-	<md5sum/>
 </module>

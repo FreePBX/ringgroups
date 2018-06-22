@@ -299,16 +299,8 @@ function ringgroups_add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grp
 }
 
 function ringgroups_del($grpnum) {
-	global $db;
-	global $astman;
-	global $amp_conf;
-
-	$results = sql("DELETE FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","query");
-	if ($astman) {
-		$astman->database_deltree("RINGGROUP/".$grpnum);
-	} else {
-		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
-	}
+    _ringgroups_backtrace();
+    return FreePBX::Ringgroups()->delete($grpnum);
 }
 
 function ringgroups_list($get_all=false) {
@@ -370,31 +362,9 @@ function ringgroups_change_destination($old_dest, $new_dest) {
 }
 
 function ringgroups_get($grpnum) {
-	global $db;
-	global $astman;
-	global $amp_conf;
-
-	$results = sql("SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = '".$db->escapeSimple($grpnum)."'","getRow",DB_FETCHMODE_ASSOC);
-	if ($astman) {
-		$astdb_changecid = strtolower($astman->database_get("RINGGROUP",$grpnum."/changecid"));
-		switch($astdb_changecid) {
-			case 'default':
-			case 'did':
-			case 'forcedid':
-			case 'fixed':
-			case 'extern':
-				break;
-			default:
-				$astdb_changecid = 'default';
-		}
-		$results['changecid'] = $astdb_changecid;
-		$fixedcid = $astman->database_get("RINGGROUP",$grpnum."/fixedcid");
-		$results['fixedcid'] = preg_replace("/[^0-9\+]/" ,"", trim($fixedcid));
-	} else {
-		die_freepbx("Cannot connect to Asterisk Manager with ".$amp_conf["AMPMGRUSER"]."/".$amp_conf["AMPMGRPASS"]);
-	}
-	return $results;
+    return FreePBX::Ringgroups()->get($rgpnum);
 }
+
 /* Get a list of all extensions that belongs to a ringgroup */
 function ringgroups_get_extensions($grpnum) {
 	global $db;
