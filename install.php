@@ -1,118 +1,94 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
-
+$dbh = \FreePBX::Database();
+global $db;
+global $amp_conf;
 $table = \FreePBX::Database()->migrate("ringgroups");
 $cols = array (
-  'grpnum' =>
-  array (
+  'grpnum' =>array (
     'type' => 'string',
     'length' => '20',
     'primaryKey' => true,
   ),
-  'strategy' =>
-  array (
+  'strategy' =>array (
     'type' => 'string',
     'length' => '50',
   ),
-  'grptime' =>
-  array (
+  'grptime' =>array (
     'type' => 'smallint',
   ),
-  'grppre' =>
-  array (
+  'grppre' =>array (
     'type' => 'string',
     'length' => '100',
     'notnull' => false,
   ),
-  'grplist' =>
-  array (
+  'grplist' =>array (
     'type' => 'string',
     'length' => '255',
   ),
-  'annmsg_id' =>
-  array (
+  'annmsg_id' =>array (
     'type' => 'integer',
     'notnull' => false,
   ),
-  'postdest' =>
-  array (
+  'postdest' =>array (
     'type' => 'string',
     'length' => '255',
     'notnull' => false,
   ),
-  'description' =>
-  array (
+  'description' =>array (
     'type' => 'string',
     'length' => '35',
   ),
-  'alertinfo' =>
-  array (
+  'alertinfo' =>array (
     'type' => 'string',
     'length' => '255',
     'notnull' => false,
   ),
-	'rvolume' =>
-	array (
-		'type' => 'string',
-		'length' => '2',
-		'notnull' => true,
-		'default' => ''
-	),
-  'remotealert_id' =>
-  array (
+  'remotealert_id' =>array (
     'type' => 'integer',
     'notnull' => false,
   ),
-  'needsconf' =>
-  array (
+  'needsconf' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
   ),
-  'toolate_id' =>
-  array (
+  'toolate_id' =>array (
     'type' => 'integer',
     'notnull' => false,
   ),
-  'ringing' =>
-  array (
+  'ringing' =>array (
     'type' => 'string',
     'length' => '80',
     'notnull' => false,
   ),
-  'cwignore' =>
-  array (
+  'cwignore' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
   ),
-  'cfignore' =>
-  array (
+  'cfignore' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
   ),
-  'cpickup' =>
-  array (
+  'cpickup' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
   ),
-  'recording' =>
-  array (
+  'recording' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
     'default' => 'dontcare',
   ),
-  'progress' =>
-  array (
+  'progress' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
   ),
-  'elsewhere' =>
-  array (
+  'elsewhere' =>array (
     'type' => 'string',
     'length' => '10',
     'notnull' => false,
@@ -125,10 +101,7 @@ $cols = array (
   ),
 );
 
-
-$indexes = array (
-);
-$table->modify($cols, $indexes);
+$table->modify($cols);
 unset($table);
 
 $freepbx_conf =& freepbx_conf::create();

@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 15:29-0400\n"
+"POT-Creation-Date: 2017-08-14 11:58-0700\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "*-prim"
 msgstr "*-prim"
 
@@ -52,11 +52,11 @@ msgstr "Thêm tính năng Nhóm đổ chuông ( Ring group)"
 msgid "Alert Info"
 msgstr "Thông tin cảnh báo"
 
-#: views/form.php:245
+#: views/form.php:247
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Luôn truyền giá trị CID cố định sau."
 
-#: views/form.php:99
+#: views/form.php:101
 msgid "Announcement"
 msgstr "Thông báo"
 
@@ -68,15 +68,15 @@ msgstr "Các ứng dụng"
 msgid "CID Name Prefix"
 msgstr "Tiền ngữ của tên CID"
 
-#: views/advanced_form.php:404
+#: views/advanced_form.php:431
 msgid "Call Recording"
 msgstr "Ghi âm cuộc gọi"
 
-#: views/advanced_form.php:354
+#: views/advanced_form.php:381
 msgid "Change External CID Configuration"
 msgstr "Thay đổi cấu hình CID nội bộ"
 
-#: views/advanced_form.php:325
+#: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Xác nhận các cuộc gọi"
 
@@ -94,11 +94,11 @@ msgstr ""
 "cuộc gọi, theo đó người được gọi phải xác nhận nếu họ muốn nhận cuộc gọi "
 "trước khi người gọi gọi đến."
 
-#: views/form.php:141 views/form.php:176 views/form.php:243 views/form.php:255
+#: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr "Xóa"
 
@@ -106,7 +106,7 @@ msgstr "Xóa"
 msgid "Description"
 msgstr "Mô tả"
 
-#: views/advanced_form.php:438 views/simple_form.php:141
+#: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Điểm đích nếu không trả lời"
 
@@ -115,15 +115,15 @@ msgid "Display Extension Ring Group Members"
 msgstr ""
 "Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy nhánh)"
 
-#: views/advanced_form.php:411
+#: views/advanced_form.php:438
 msgid "Dont Care"
 msgstr "Không quan tâm"
 
-#: views/advanced_form.php:298
+#: views/advanced_form.php:325
 msgid "Enable Call Pickup"
 msgstr "Kích cuộc tính năng Nhấc cuộc gọi ( Call Pickup)"
 
-#: views/advanced_form.php:340
+#: views/advanced_form.php:367
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -140,11 +140,11 @@ msgstr ""
 msgid "Extension List"
 msgstr "Danh sách máy nhánh"
 
-#: views/advanced_form.php:380 views/form.php:245 views/form.php:256
+#: views/advanced_form.php:407 views/form.php:247 views/form.php:258
 msgid "Fixed CID Value"
 msgstr "Gía trị CID cố định"
 
-#: views/advanced_form.php:392
+#: views/advanced_form.php:419
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -154,11 +154,11 @@ msgstr ""
 "dạng của giá trị này nên chỉ ở dạng chữ số với tùy chọn định dạng E164 bắt "
 "đầu bằng '+'."
 
-#: views/advanced_form.php:409
+#: views/advanced_form.php:436
 msgid "Force"
 msgstr "Buộc phải"
 
-#: views/form.php:251 views/form.php:259
+#: views/form.php:253 views/form.php:261
 msgid "Force Dialed Number"
 msgstr "Bắt buộc số điện thoại đã quay"
 
@@ -166,11 +166,11 @@ msgstr "Bắt buộc số điện thoại đã quay"
 msgid "Group Description"
 msgstr "Mô tả nhóm"
 
-#: functions.inc.php:357
+#: functions.inc.php:334
 msgid "INUSE"
 msgstr "INUSE"
 
-#: views/form.php:234
+#: views/form.php:236
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -179,11 +179,11 @@ msgstr ""
 "chờ ai đó nhấc máy họ sẽ nghe thấy tiếng nhạc chứ không phải tiếng chuông "
 "reo."
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Ignore CF Settings"
 msgstr "Bỏ qua các cài đặt CF"
 
-#: views/form.php:217
+#: views/form.php:219
 msgid "Inherit"
 msgstr "Kế thừa"
 
@@ -208,10 +208,10 @@ msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Select "
 "insert them here.<br><br>You can include an extension on a remote system, or "
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
-"dial 2448089 on the appropriate trunk (see Outbound Routing)"
-"<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial "
-"Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
-"the end."
+"dial 2448089 on the appropriate trunk (see Outbound "
+"Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. "
+"To dial Follow-Me, Queues and other numbers that are not extensions, put a "
+"'#' at the end."
 msgstr ""
 "Danh sách máy nhánh đổ chuông, 1 dòng 1 máy, hoặc sử dụng chức  năng chọn "
 "nhanh máy nhánh Extension Quick Select để chèn chúng tại đây.<br><br>bạn có "
@@ -234,7 +234,7 @@ msgstr ""
 "thể bao gồm một máy nhánh trên hệ thống từ xa, hoặc một số điện thoại bên "
 "ngoài bằng cách thêm vào cuối số đó dấu #. Ví dụ 2448089# sẽ quay số 2448089"
 
-#: views/form.php:64
+#: views/form.php:66
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -245,7 +245,11 @@ msgstr ""
 "được lan truyền. Mô phỏng một hàng đợi đó đợi khi chính hàng đợi đó được sử "
 "dụng."
 
-#: views/form.php:120
+#: views/advanced_form.php:244
+msgid "Mark Answered Elsewhere"
+msgstr ""
+
+#: views/form.php:122
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
@@ -254,7 +258,7 @@ msgstr ""
 "này. <br><br> Để thêm các ghi âm bổ sung vui lòng sử dụng MENU \"System "
 "Recordings\" ở trên"
 
-#: views/form.php:155
+#: views/form.php:157
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -264,7 +268,7 @@ msgstr ""
 "cuộc gọi\" ('Confirm Calls') được kích hoạt. <br><br> Để thêm các ghi âm bổ "
 "sung vui lòng sử dụng MENU \"System Recordings\" ở trên"
 
-#: views/form.php:190
+#: views/form.php:192
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -274,21 +278,21 @@ msgstr ""
 "chấp nhận trước khi nhấn phím 1.<br><br> Để thêm các ghi âm bổ sung vui lòng "
 "sử dụng MENU \"System Recordings\" ở trên"
 
-#: views/form.php:241
+#: views/form.php:243
 msgid "Mode"
 msgstr "Chế độ"
 
-#: views/advanced_form.php:413
+#: views/advanced_form.php:440
 msgid "Never"
 msgstr "Không bao giờ"
 
 #: views/advanced_form.php:224 views/advanced_form.php:251
 #: views/advanced_form.php:278 views/advanced_form.php:305
-#: views/advanced_form.php:332
+#: views/advanced_form.php:332 views/advanced_form.php:359
 msgid "No"
 msgstr "Không"
 
-#: views/advanced_form.php:194 views/form.php:106
+#: views/advanced_form.php:194 views/form.php:108
 msgid "None"
 msgstr "Không có"
 
@@ -300,7 +304,7 @@ msgstr ""
 "Chỉ có  ringall, ringallv2, hunt và các phiên bản prim tương ứng được hỗ trợ "
 "khi đánh dấu check vào confirmation"
 
-#: views/form.php:247 views/form.php:257
+#: views/form.php:249 views/form.php:259
 msgid "Outside Calls Fixed CID Value"
 msgstr "Gía trị CID cố định của các cuộc gọi bên ngoài"
 
@@ -313,7 +317,7 @@ msgstr ""
 "Ghi đè âm lượng chuông. Lưu ý: Điều này chỉ hợp lệ cho các điện thoại %s tại "
 "thời điểm hiện tại"
 
-#: views/form.php:209
+#: views/form.php:211
 msgid "Play Music On Hold"
 msgstr "Phát nhạc chờ"
 
@@ -333,15 +337,15 @@ msgstr "Cung cấp một tiêu đề mô tả cho Ring Group này."
 msgid "Provide a name for this Ring Group."
 msgstr "Đặt tên cho Ring Group này."
 
-#: views/form.php:134
+#: views/form.php:136
 msgid "Remote Announce"
 msgstr "Thông báo từ xa"
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: views/form.php:216
+#: views/form.php:218
 msgid "Ring"
 msgstr "Đổ chuông"
 
@@ -354,7 +358,7 @@ msgstr "Tính năng Ring Group (Nhóm đổ chuông)"
 msgid "Ring Group %s: "
 msgstr "Ring Group (Nhóm đổ chuông): %s "
 
-#: functions.inc.php:481
+#: functions.inc.php:458
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
@@ -366,12 +370,12 @@ msgstr "Mô đun Ring Group"
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
 
-#: functions.inc.php:57 functions.inc.php:356
+#: functions.inc.php:57 functions.inc.php:333
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Nhóm đổ chuông: %s"
 
-#: functions.inc.php:383
+#: functions.inc.php:360
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Nhóm đổ chuông: %s (%s)"
@@ -396,12 +400,12 @@ msgstr "Thời gian đổ chuông ( tối đa 300 giây)"
 msgid "Ring Tone"
 msgstr "Nhạc chuông"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
 "Đổ chuông tất cả các kênh đến khi một cuộc gọi được trả lời ( mặc định)"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -414,7 +418,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Số của Ring-Group"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr "RingGroup ( Đổ chuông nhóm)"
 
@@ -438,6 +442,10 @@ msgstr "Tiến trình gửi"
 msgid "Sequential"
 msgstr "Theo thứ tự"
 
+#: views/advanced_form.php:259
+msgid "Should calls indicate answered elsewhere when a user answers."
+msgstr ""
+
 #: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
@@ -450,15 +458,15 @@ msgstr ""
 msgid "Simultaneous"
 msgstr "Đồng thời"
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:298
 msgid "Skip Busy Agent"
 msgstr "Bỏ qua tổng đài viên đang bận"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "Take turns ringing each available extension"
 msgstr "Thay phiên nhau đổ chuông từng máy nhánh khả dụng"
 
@@ -470,7 +478,7 @@ msgstr "Danh sách nhóm chỉ có thể bao gồm tối đa 255 ký tự."
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Số mà người dùng sẽ gọi đến các máy nhánh trong Ring Group này"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -483,7 +491,7 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: functions.inc.php:297
+#: Ringgroups.class.php:246
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
@@ -509,11 +517,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "Thời gian sẽ trong khoảng 1 đến 300 giây"
 
-#: views/form.php:169
+#: views/form.php:171
 msgid "Too-Late Announce"
 msgstr "Thông báo quá muộn"
 
-#: views/form.php:247
+#: views/form.php:249
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -523,7 +531,7 @@ msgstr ""
 "nhánh nội bộ đến các cuộc gọi của máy nhánh sẽ tiếp tục hoạt động ở chế độ "
 "mặc định."
 
-#: views/form.php:251
+#: views/form.php:253
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -535,7 +543,7 @@ msgstr ""
 "định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
 "vào các trung kế đã khóa các Caller ID nước ngoài"
 
-#: views/form.php:249
+#: views/form.php:251
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -547,19 +555,19 @@ msgstr ""
 "định. Thao tác này cần phải có một DID trên tuyến gọi vào. Nó sẽ được truyền "
 "vào các trung kế đã khóa các Caller ID nước ngoài"
 
-#: views/form.php:243
+#: views/form.php:245
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Truyền CID của người gọi nếu trung kế cho phép."
 
-#: views/form.php:249 views/form.php:258
+#: views/form.php:251 views/form.php:260
 msgid "Use Dialed Number"
 msgstr "Sử dụng số đã được quay"
 
-#: Ringgroups.class.php:77
+#: Ringgroups.class.php:79
 msgid "Warning! Extension"
 msgstr "Cảnh báo! Máy nhánh"
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -572,7 +580,7 @@ msgstr ""
 "đổ chuông kiểu Hunt , cuộc gọi sẽ tiếp tục đổ chuông đến tổng đài viên tiếp "
 "theo."
 
-#: views/advanced_form.php:313
+#: views/advanced_form.php:340
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number from any extension. "
@@ -582,7 +590,7 @@ msgid ""
 "ringing extension , which works whether or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -602,17 +610,17 @@ msgstr ""
 "có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là thành "
 "viên trong đấy."
 
-#: views/advanced_form.php:450 views/simple_form.php:153
+#: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
 
 #: views/advanced_form.php:222 views/advanced_form.php:249
 #: views/advanced_form.php:276 views/advanced_form.php:303
-#: views/advanced_form.php:330
+#: views/advanced_form.php:330 views/advanced_form.php:357
 msgid "Yes"
 msgstr "Có"
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -635,51 +643,51 @@ msgstr ""
 "trong nhóm náy. Ví dụ: Nếu bạn thêm tiền tố là \"Sales:\" cho một cuộc gọi "
 "từ John Doe thì trên máy nhánh đang đổ chuông sẽ hiện lên \"Sales:John Doe\"."
 
-#: views/form.php:221
+#: views/form.php:223
 msgid "default"
 msgstr "Mặc định"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "firstavailable"
 msgstr "Khả dụng ban đầu"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid "firstnotonphone"
 msgstr "firstnotonphone (notonphone đầu tiên)"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "hunt"
 msgstr "hunt"
 
-#: functions.inc.php:297
+#: Ringgroups.class.php:246
 msgid "is already in use"
 msgstr "đang được sử dụng"
 
-#: Ringgroups.class.php:77
+#: Ringgroups.class.php:79
 msgid "is not allowed for your account"
 msgstr "Tài khoản của bạn không được cho phép"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "memoryhunt"
 msgstr "memoryhunt ( Bộ nhớ hunt)"
 
-#: views/form.php:220
+#: views/form.php:222
 msgid "none"
 msgstr "Không có"
 
-#: views/form.php:64
+#: views/form.php:66
 msgid "random"
 msgstr "ngẫu nhiên"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "ring only the first available channel"
 msgstr "Chỉ đổ chuông kênh khả dụng đầu tiên"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Call Waiting)"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "ringall"
 msgstr "Đổ chuông tất cả"
 
