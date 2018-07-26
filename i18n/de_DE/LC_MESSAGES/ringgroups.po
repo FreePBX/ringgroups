@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-07 15:29-0400\n"
-"PO-Revision-Date: 2018-07-18 19:14+0000\n"
+"PO-Revision-Date: 2018-07-27 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19.1\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/form.php:58
 msgid "*-prim"
@@ -37,7 +37,7 @@ msgstr ""
 #: views/advanced_form.php:178
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
-"ALARM_INFO kann für einen charakteristischen Klingelton auf SIP-Geräten "
+"ALERT_INFO kann für einen charakteristischen Klingelton auf SIP-Geräten "
 "genutzt werden."
 
 #: views/rggrid.php:18
@@ -113,11 +113,11 @@ msgstr ""
 
 #: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
-msgstr ""
+msgstr "Mitglieder der Nebenstellen-Klingelgruppe anzeigen"
 
 #: views/advanced_form.php:411
 msgid "Dont Care"
-msgstr ""
+msgstr "Nicht beachten"
 
 #: views/advanced_form.php:298
 msgid "Enable Call Pickup"
@@ -168,7 +168,7 @@ msgstr "Beschreibung der Gruppe"
 
 #: functions.inc.php:357
 msgid "INUSE"
-msgstr ""
+msgstr "INUSE"
 
 #: views/form.php:234
 msgid ""
@@ -299,7 +299,7 @@ msgstr ""
 
 #: views/form.php:247 views/form.php:257
 msgid "Outside Calls Fixed CID Value"
-msgstr ""
+msgstr "Feste Anruferkennung für externe Anrufe"
 
 #: views/advanced_form.php:206
 #, php-format
@@ -307,8 +307,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
-"Überschreiben Sie die Ruftonlautstärke. Hinweis: Dies gilt zur Zeit nur für "
-"Telefone von %s."
+"Ruftonlautstärke übersteuern. Hinweis: Dies gilt zur Zeit nur für Telefone "
+"von %s"
 
 #: views/form.php:209
 msgid "Play Music On Hold"
