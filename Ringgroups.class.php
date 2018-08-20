@@ -27,9 +27,9 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
         /*Fix recording status. If it's 'yes' or 'no, it should be 'force' or 'never'. */
         $sql = 'UPDATE `ringgroups` SET `recording`="never" WHERE `recording`="no"';
-        $this->FreePBX->Database->query($sql)->execute();
+        $this->Database->query($sql)->execute();
         $sql = 'UPDATE `ringgroups` SET `recording`="force" WHERE `recording`="yes"';
-        $this->FreePBX->Database->query($sql)->execute();
+        $this->Database->query($sql)->execute();
     }
 	public function uninstall() {}
 
@@ -137,7 +137,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 	public function search($query, &$results) {
 		if(!ctype_digit($query)) {
 			$sql = "SELECT * FROM ringgroups WHERE description LIKE ?";
-			$sth = $this->FreePBX->Database->prepare($sql);
+			$sth = $this->Database->prepare($sql);
 			$sth->execute(array("%".$query."%"));
 			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
@@ -145,7 +145,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 			}
 		} else {
 			$sql = "SELECT * FROM ringgroups WHERE grpnum LIKE ?";
-			$sth = $this->FreePBX->Database->prepare($sql);
+			$sth = $this->Database->prepare($sql);
 			$sth->execute(array("%".$query."%"));
 			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
@@ -187,7 +187,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
 	public function listRinggroups($get_all=false) {
         $sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
-		$stmt = $this->FreePBX->Database->prepare($sql);
+		$stmt = $this->Database->prepare($sql);
 		$stmt->execute();
 		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
 		foreach ($results as $result) {
@@ -208,7 +208,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
 	public function getExtensionLists($grpnum) {
 	    $sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
-	    $sth = $this->FreePBX->Database->prepare($sql);
+	    $sth = $this->Database->prepare($sql);
 	    $sth->execute(array($grpnum));
 	    $rows = $sth->fetch(\PDO::FETCH_ASSOC);
 	    return $rows;
@@ -216,7 +216,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
 	public function updateExtensionLists($grpnum, $extensions) {
 	    $sql = "UPDATE ringgroups SET grplist = ? WHERE grpnum = ?";
-	    $sth = $this->FreePBX->Database->prepare($sql);
+	    $sth = $this->Database->prepare($sql);
 	    $sth->execute(array($extensions, $grpnum));
 	}
 
@@ -297,7 +297,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 			":elsewhere" => $elsewhere,
 			":rvolume" => $rvolume,
 		);
-		$stmt = $this->FreePBX->Database->prepare($sql);
+		$stmt = $this->Database->prepare($sql);
 		$stmt->execute($vars);
 		if($this->FreePBX->astman){
 			$this->FreePBX->astman->database_put("RINGGROUP",$grpnum."/changecid",$changecid);
@@ -329,7 +329,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
     public function get($grpnum){
         $sql = "SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = :grpnum LIMIT 1";
-        $stmt = $this->FreePBX->Database->prepare($sql);
+        $stmt = $this->Database->prepare($sql);
         $stmt->execute([':grpnum' => $grpnum]);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($this->FreePBX->astman->connected()) {
@@ -355,7 +355,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
     public function delete($grpnum){
         $sql = "DELETE FROM ringgroups WHERE grpnum = :grpnum";
-        $stmt = $this->FreePBX->Database->prepare($sql);
+        $stmt = $this->Database->prepare($sql);
         $stmt->execute([':grpnum' => $grpnum]);
         if ($this->FreePBX->astman->connected()) {
             $this->FreePBX->astman->database_deltree("RINGGROUP/" . $grpnum);
@@ -363,5 +363,15 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
             die_freepbx("Cannot connect to Asterisk Manager with");
         }
         return $this;
-    }
+	}
+
+	public function seDatabase($pdo){
+		$this->Database = $pdo;
+		return $this;
+	}
+
+	public function resetDatabase(){
+		$this->Database = $this->FreePBX->Database;
+		return $this;
+	}
 }
