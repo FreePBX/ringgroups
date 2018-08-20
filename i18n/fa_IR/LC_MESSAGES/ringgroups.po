@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-08-20 13:59-0400\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:164
 msgid "Delete"
 msgstr "حذف"
 
@@ -164,7 +164,7 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:334
+#: functions.inc.php:326
 msgid "INUSE"
 msgstr "در حال استفاده"
 
@@ -333,7 +333,7 @@ msgstr "اختصاص یک نام به گروه زنگ."
 msgid "Remote Announce"
 msgstr "آگهی راه دور"
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:174
 msgid "Reset"
 msgstr "باز نشانی"
 
@@ -350,7 +350,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:458
+#: functions.inc.php:428
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -362,12 +362,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:333
+#: functions.inc.php:57 functions.inc.php:325
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:360
+#: functions.inc.php:352
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
@@ -408,7 +408,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "شماره گروه زنگ"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:144
 msgid "RingGroup"
 msgstr "گروه زنگ"
 
@@ -451,7 +451,7 @@ msgstr "همزمان"
 msgid "Skip Busy Agent"
 msgstr "رفتن به عامل اشغال"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:169
 msgid "Submit"
 msgstr "ارسال"
 
@@ -479,7 +479,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -549,7 +549,7 @@ msgstr "انتقال CID تماس گیرنده ها اگر توسط ترانک �
 msgid "Use Dialed Number"
 msgstr "استفاده از شماره تماس های گرفته شده"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "Warning! Extension"
 msgstr "هشدار! داخلی"
 
@@ -643,11 +643,11 @@ msgstr "first notonphone"
 msgid "hunt"
 msgstr "شکار"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "is already in use"
 msgstr "در حال استفاده"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "is not allowed for your account"
 msgstr "برای حساب شما مجاز نیست"
 

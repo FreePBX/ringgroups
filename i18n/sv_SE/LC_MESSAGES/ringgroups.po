@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-08-20 13:59-0400\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:164
 msgid "Delete"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgstr ""
 msgid "Group Description"
 msgstr "Beskrivning för gruppen"
 
-#: functions.inc.php:334
+#: functions.inc.php:326
 msgid "INUSE"
 msgstr "ANVÄNDS"
 
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:174
 msgid "Reset"
 msgstr ""
 
@@ -314,7 +314,7 @@ msgstr "Ringgrupp"
 msgid "Ring Group %s: "
 msgstr "Ringgrupp %s: "
 
-#: functions.inc.php:458
+#: functions.inc.php:428
 msgid "Ring Group Membership"
 msgstr ""
 
@@ -326,12 +326,12 @@ msgstr ""
 msgid "Ring Group Name"
 msgstr ""
 
-#: functions.inc.php:57 functions.inc.php:333
+#: functions.inc.php:57 functions.inc.php:325
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Ringgrupp: %s"
 
-#: functions.inc.php:360
+#: functions.inc.php:352
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"
@@ -372,7 +372,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Ringgruppsnummer"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:144
 msgid "RingGroup"
 msgstr ""
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "Ignorera upptagna telefoner"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:169
 msgid "Submit"
 msgstr ""
 
@@ -442,7 +442,7 @@ msgstr ""
 "inte att ringas. Om den första anknytningen är FreePBX Vidarebefordra Samtal "
 "(CF) kommer alla anknytningar att ringas"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "This ringgroup"
 msgstr "Denna ringgrupp"
 
@@ -499,7 +499,7 @@ msgstr ""
 msgid "Use Dialed Number"
 msgstr ""
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "Warning! Extension"
 msgstr "Varning! Anknytning"
 
@@ -576,11 +576,11 @@ msgstr "första-inte-upptagen"
 msgid "hunt"
 msgstr "runda"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "is already in use"
 msgstr "används redan"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "is not allowed for your account"
 msgstr "är inte tillåtet för ditt konto"
 

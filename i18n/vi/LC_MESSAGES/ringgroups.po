@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-08-20 13:59-0400\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:164
 msgid "Delete"
 msgstr "Xóa"
 
@@ -166,7 +166,7 @@ msgstr "Bắt buộc số điện thoại đã quay"
 msgid "Group Description"
 msgstr "Mô tả nhóm"
 
-#: functions.inc.php:334
+#: functions.inc.php:326
 msgid "INUSE"
 msgstr "INUSE"
 
@@ -341,7 +341,7 @@ msgstr "Đặt tên cho Ring Group này."
 msgid "Remote Announce"
 msgstr "Thông báo từ xa"
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:174
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -358,7 +358,7 @@ msgstr "Tính năng Ring Group (Nhóm đổ chuông)"
 msgid "Ring Group %s: "
 msgstr "Ring Group (Nhóm đổ chuông): %s "
 
-#: functions.inc.php:458
+#: functions.inc.php:428
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
@@ -370,12 +370,12 @@ msgstr "Mô đun Ring Group"
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
 
-#: functions.inc.php:57 functions.inc.php:333
+#: functions.inc.php:57 functions.inc.php:325
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Nhóm đổ chuông: %s"
 
-#: functions.inc.php:360
+#: functions.inc.php:352
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Nhóm đổ chuông: %s (%s)"
@@ -418,7 +418,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Số của Ring-Group"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:144
 msgid "RingGroup"
 msgstr "RingGroup ( Đổ chuông nhóm)"
 
@@ -462,7 +462,7 @@ msgstr "Đồng thời"
 msgid "Skip Busy Agent"
 msgstr "Bỏ qua tổng đài viên đang bận"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:169
 msgid "Submit"
 msgstr "Gửi đi"
 
@@ -491,7 +491,7 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
@@ -563,7 +563,7 @@ msgstr "Truyền CID của người gọi nếu trung kế cho phép."
 msgid "Use Dialed Number"
 msgstr "Sử dụng số đã được quay"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "Warning! Extension"
 msgstr "Cảnh báo! Máy nhánh"
 
@@ -659,11 +659,11 @@ msgstr "firstnotonphone (notonphone đầu tiên)"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:264
 msgid "is already in use"
 msgstr "đang được sử dụng"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "is not allowed for your account"
 msgstr "Tài khoản của bạn không được cho phép"
 
