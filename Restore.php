@@ -12,7 +12,7 @@ class Restore Extends Base\RestoreBase{
 
   public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir){
     $tables = array_flip($tables+$unknownTables);
-    if(!isset(tables['rawname'])){
+    if(!isset($tables['rawname'])){
       return $this;
     }
     $bmo = $this->FreePBX->Ringgroups;
