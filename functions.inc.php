@@ -197,7 +197,7 @@ function ringgroups_get_config($engine) {
 					}
 					//FREPBX-14945 Call Confirm Announcement under Virtual Queue module is broken.
 					if ($needsconf == "CHECKED") {
-						$ext->add($contextname, $grpnum, '', new ext_set('RG_CONFIRM',1));
+						$ext->add($contextname, $grpnum, '', new ext_set('__RG_CONFIRM',1));
 
 					}
 					//set the VQ varible to ALT_CONFIRM_MSG
