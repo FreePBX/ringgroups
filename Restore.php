@@ -14,15 +14,15 @@ class Restore Extends Base\RestoreBase{
 
   public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir){
     $tables = array_flip($tables+$unknownTables);
-    if(!isset($tables['rawname'])){
+    if(!isset($tables['ringgroups'])){
       return $this;
     }
     $bmo = $this->FreePBX->Ringgroups;
     $bmo->setDatabase($pdo);
-    $ringroupList = $cb->listRinggroups(true);
+    $ringroupList = $bmo->listRinggroups(true);
     $configs = [];
     foreach ($ringroupList as $rg) {
-      $config = $cb->get($rg['grpnum']);
+      $config = $bmo->get($rg['grpnum']);
       $configs[] = $config[0];
     }
     $bmo->resetDatabase();

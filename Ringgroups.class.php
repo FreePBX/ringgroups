@@ -365,7 +365,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
         return $this;
 	}
 
-	public function seDatabase($pdo){
+	public function setDatabase($pdo){
 		$this->Database = $pdo;
 		return $this;
 	}
