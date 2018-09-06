@@ -1,9 +1,10 @@
 <?php
 extract($request);
+$freepbx = FreePBX::Create();
 if ($extdisplay) {
 	// We need to populate grplist with the existing extension list.
 	$account = ltrim($extdisplay,'GRP-');
-	$thisgrp = ringgroups_get(ltrim($extdisplay,'GRP-'));
+	$thisgrp = $freepbx->Ringgroups->get(ltrim($extdisplay,'GRP-'));
 	$grpliststr = $thisgrp['grplist'];
 	$grplist = explode("-", $grpliststr);
 	$strategy = $thisgrp['strategy'];
@@ -84,7 +85,7 @@ $glrows = count($grplist)+1;
 $glrows = ($glrows < 4) ? 4 : (($glrows > 20) ? 20 : $glrows);
 
 $display_mode = "advanced";
-$mode = \FreePBX::Config()->get("FPBXOPMODE");
+$mode = $freepbx->Config->get("FPBXOPMODE");
 if(!empty($mode)) {
 	$display_mode = $mode;
 }

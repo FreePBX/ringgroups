@@ -331,7 +331,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
         $sql = "SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = :grpnum LIMIT 1";
         $stmt = $this->Database->prepare($sql);
         $stmt->execute([':grpnum' => $grpnum]);
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($this->FreePBX->astman->connected()) {
             $astdb_changecid = strtolower($this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/changecid"));
             switch ($astdb_changecid) {
@@ -348,10 +348,10 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
             $fixedcid = $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/fixedcid");
             $results['fixedcid'] = preg_replace("/[^0-9\+]/", "", trim($fixedcid));
         } else {
-            die_freepbx("Cannot connect to Asterisk Manager");
+			throw new \RuntimeException("Cannot connect to Asterisk Manager");
         }
         return $results;
-    }
+    } 
 
     public function delete($grpnum){
         $sql = "DELETE FROM ringgroups WHERE grpnum = :grpnum";
