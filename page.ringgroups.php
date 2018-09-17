@@ -9,7 +9,7 @@ $usagehtml = '';
 
 $heading = _("Ring Groups");
 $border = 'no';
-switch($request['view']){
+switch($_GET['view']){
 	case "form":
 		$border = 'full';
 		if($request['extdisplay'] != ''){

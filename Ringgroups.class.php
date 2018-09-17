@@ -179,7 +179,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		if (empty($request['extdisplay'])) {
 			unset($buttons['delete']);
 		}
-		if($request['view'] != 'form'){
+		if($_GET['view'] != 'form'){
 			unset($buttons);
 		}
 		return $buttons;

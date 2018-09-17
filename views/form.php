@@ -1,6 +1,7 @@
 <?php
 extract($request);
 $freepbx = FreePBX::Create();
+/** TODO: Move out of view */
 if ($extdisplay) {
 	// We need to populate grplist with the existing extension list.
 	$account = ltrim($extdisplay,'GRP-');
@@ -262,7 +263,7 @@ $ccidrows .= '<option value="did" '.($default == 'did' ? 'SELECTED' : '').'>'._(
 $ccidrows .= '<option value="forcedid" '.($default == 'forcedid' ? 'SELECTED' : '').'>'._("Force Dialed Number").'</option>';
 $fixedcid_disabled = ($default != 'fixed' && $default != 'extern') ? ' disabled':'';
 ?>
-<form class="popover-form fpbx-submit" name="editGRP" action="" method="post" onsubmit="return checkGRP(editGRP);" data-fpbx-delete="config.php?display=ringgroups&action=delGRP&account=<?php echo $account ?>">
+<form class="popover-form fpbx-submit" name="editGRP" action="?display=ringgroups" method="post" onsubmit="return checkGRP(editGRP);" data-fpbx-delete="config.php?display=ringgroups&action=delGRP&account=<?php echo $account ?>">
 <input type="hidden" name="display" value="ringgroups">
 <input type="hidden" name="view" value="form">
 <input type="hidden" name="action" value="<?php echo ($extdisplay ? 'edtGRP' : 'addGRP'); ?>">
