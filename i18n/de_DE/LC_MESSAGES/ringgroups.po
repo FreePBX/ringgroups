@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-07 15:29-0400\n"
-"PO-Revision-Date: 2018-09-15 02:47+0000\n"
+"PO-Revision-Date: 2018-09-18 15:43+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
@@ -46,7 +46,7 @@ msgstr "Aktionen"
 
 #: views/bootnav.php:2 views/rggrid.php:2
 msgid "Add Ring Group"
-msgstr "Klingelgruppe hinzufügen"
+msgstr "Rufgruppe hinzufügen"
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
@@ -109,11 +109,11 @@ msgstr "Beschreibung"
 
 #: views/advanced_form.php:438 views/simple_form.php:141
 msgid "Destination if no answer"
-msgstr ""
+msgstr "Ziel, falls der Anruf nicht angenommen wird"
 
 #: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
-msgstr "Mitglieder der Nebenstellen-Klingelgruppe anzeigen"
+msgstr "Mitglieder der Nebenstellen-Rufgruppe anzeigen"
 
 #: views/advanced_form.php:411
 msgid "Dont Care"
@@ -180,7 +180,7 @@ msgstr ""
 
 #: views/advanced_form.php:244
 msgid "Ignore CF Settings"
-msgstr ""
+msgstr "Einstellungen zur Rufweiterleitung ignorieren"
 
 #: views/form.php:217
 msgid "Inherit"
@@ -200,7 +200,7 @@ msgstr "Ungültige Zeitangabe"
 
 #: views/bootnav.php:3
 msgid "List Ring Groups"
-msgstr "Klingelgruppen auflisten"
+msgstr "Rufgruppen auflisten"
 
 #: views/advanced_form.php:78
 msgid ""
@@ -240,6 +240,10 @@ msgid ""
 "priority to ensure that calls in the groups are (almost) evenly spread. "
 "Simulates a Queue when a Queue can not otherwise be used."
 msgstr ""
+"Sorgt dafür, dass ein Anruf zwischen den enthaltenen Nebenstellen ohne "
+"vorgegebene Priorität springt, um sicherzustellen, dasss Anrufen in den "
+"Gruppen (beinahe) gleichmäßig verteilt werden. Simuliert eine Warteschlange, "
+"wenn sonst keine Warteschlange genutzt werden kann."
 
 #: views/form.php:120
 msgid ""
@@ -287,7 +291,7 @@ msgstr "Nein"
 
 #: views/advanced_form.php:194 views/form.php:106
 msgid "None"
-msgstr "Keine"
+msgstr "Keine*r"
 
 #: assets/js/ringgroups.js:59
 msgid ""
@@ -328,7 +332,7 @@ msgstr "Geben Sie einen aussagekräftigen Titel für diese Klingelgruppe an."
 
 #: views/simple_form.php:20
 msgid "Provide a name for this Ring Group."
-msgstr "Geben Sie einen Namen für diese Klingelgruppe an."
+msgstr "Geben Sie einen Namen für diese Rufgruppe an."
 
 #: views/form.php:134
 msgid "Remote Announce"
@@ -344,38 +348,38 @@ msgstr "Klingeln"
 
 #: views/bootnav.php:13 views/rggrid.php:16
 msgid "Ring Group"
-msgstr "Klingelgruppe"
+msgstr "Rufgruppe"
 
 #: functions.inc.php:37
 #, php-format
 msgid "Ring Group %s: "
-msgstr "Klingelgruppe %s: "
+msgstr "Rufgruppe %s: "
 
 #: functions.inc.php:481
 msgid "Ring Group Membership"
-msgstr "Klingelgruppen-Mitgliedschaft"
+msgstr "Rufgruppen-Mitgliedschaft"
 
 #: ringgroups.i18n.php:14
 msgid "Ring Group Module"
-msgstr "Klingelgruppenmodul"
+msgstr "Rufgruppenmodul"
 
 #: views/simple_form.php:8
 msgid "Ring Group Name"
-msgstr "Name der Klingelgruppe"
+msgstr "Name der Rufgruppe"
 
 #: functions.inc.php:57 functions.inc.php:356
 #, php-format
 msgid "Ring Group: %s"
-msgstr "Klingelgruppe: %s"
+msgstr "Rufgruppe: %s"
 
 #: functions.inc.php:383
 #, php-format
 msgid "Ring Group: %s (%s)"
-msgstr "Klingelgruppe: %s (%s)"
+msgstr "Rufgruppe: %s (%s)"
 
 #: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
-msgstr "Klingelgruppen"
+msgstr "Rufgruppen"
 
 #: views/advanced_form.php:90 views/simple_form.php:64
 msgid "Ring Strategy"
@@ -407,11 +411,11 @@ msgstr ""
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
-msgstr "Nummer der Klingelgruppe"
+msgstr "Nummer der Rufgruppe"
 
 #: Ringgroups.class.php:124
 msgid "RingGroup"
-msgstr "Klingelgruppe"
+msgstr "Rufgruppe"
 
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
@@ -427,7 +431,7 @@ msgstr ""
 
 #: views/advanced_form.php:217
 msgid "Send Progress"
-msgstr ""
+msgstr "Fortschritt übermitteln"
 
 #: views/simple_form.php:70
 msgid "Sequential"
@@ -438,8 +442,8 @@ msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported."
 msgstr ""
-"Soll diese Klingelgruppe den Anruffortschritt an digitale Kanäle melden, "
-"wenn dies unterstützt wird."
+"Soll diese Rufruppe den Anruffortschritt an digitale Kanäle melden, wenn "
+"dies unterstützt wird."
 
 #: views/simple_form.php:69
 msgid "Simultaneous"
@@ -465,7 +469,7 @@ msgstr "Die Gruppenliste kann maximal 255 Zeichen enthalten."
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr ""
 "Die Nummer, die Benutzer anwählen werden, um Nebenstellen in dieser "
-"Klingelgruppe anzuläuten"
+"Rufgruppe anzuläuten"
 
 #: views/form.php:58
 msgid ""
@@ -477,7 +481,7 @@ msgstr ""
 
 #: functions.inc.php:297
 msgid "This ringgroup"
-msgstr "Diese Klingelgruppe"
+msgstr "Diese Rufgruppe"
 
 #: views/advanced_form.php:128
 msgid ""
@@ -509,6 +513,9 @@ msgid ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 msgstr ""
+"Die unten stehende feste Anruferkennung nur für Anrufe von außerhalb "
+"verwenden. Interne Anrufe von Nebenstelle zu Nebenstelle verwenden weiterhin "
+"den Standardmodus."
 
 #: views/form.php:251
 msgid ""
@@ -517,6 +524,11 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 msgstr ""
+"Für Anrufe von außerhalb die gewählte Nummer als Anruferkennung übermitteln. "
+"Interne Anrufe von Nebenstelle zu Nebenstelle verwenden weiterhin den "
+"Standardmodus. Hierfür ist eine Durchwahl aus der eingehenden Route "
+"erforderlich. Diese Kennung WIRD auf Hauptleitungen übermittelt, die fremde "
+"Anruferkennungen blockieren"
 
 #: views/form.php:249
 msgid ""
@@ -525,6 +537,11 @@ msgid ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 msgstr ""
+"Für Anrufe von außerhalb die gewählte Nummer als Anruferkennung übermitteln. "
+"Interne Anrufe von Nebenstelle zu Nebenstelle verwenden weiterhin den "
+"Standardmodus. Hierfür ist eine Durchwahl aus der eingehenden Route "
+"erforderlich. Diese Kennung wird auf Hauptleitungen BLOCKIERT, die fremde "
+"Anruferkennungen blockieren"
 
 #: views/form.php:243
 msgid "Transmits the Callers CID if allowed by the trunk."
@@ -574,6 +591,7 @@ msgstr ""
 #: views/advanced_form.php:450 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
+"Wohin Anrufer vermittelt werden sollen, wenn der Ruf nicht angenommen wird."
 
 #: views/advanced_form.php:222 views/advanced_form.php:249
 #: views/advanced_form.php:276 views/advanced_form.php:303
@@ -640,6 +658,8 @@ msgstr "nur den ersten verfügbaren Kanal anläuten"
 #: views/form.php:62
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr ""
+"nur den ersten verfügbaren Kanal anläuten, der nicht abgehoben ist - "
+"Rufweiterleitungen ignorieren"
 
 #: views/form.php:52
 msgid "ringall"
