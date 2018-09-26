@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 19:05-0400\n"
+"POT-Creation-Date: 2018-09-26 01:42-0400\n"
 "PO-Revision-Date: 2018-07-18 19:18+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: views/form.php:61
+#: views/form.php:62
 msgid "*-prim"
 msgstr "*-prim"
 
@@ -52,11 +52,11 @@ msgstr "Aggiungi Gruppo di Chiamata"
 msgid "Alert Info"
 msgstr "Informazioni di avviso"
 
-#: views/form.php:248
+#: views/form.php:249
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Trasmetti sempre il valore CID fisso di seguito."
 
-#: views/form.php:102
+#: views/form.php:103
 msgid "Announcement"
 msgstr "Annuncio"
 
@@ -94,7 +94,7 @@ msgstr ""
 "conferma della chiamata in cui il destinatario deve confermare se in realtà "
 "vuole prendere la chiamata prima che il chiamante venga trasferito."
 
-#: views/form.php:144 views/form.php:179 views/form.php:246 views/form.php:258
+#: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
 msgstr "Predefinito"
 
@@ -139,7 +139,7 @@ msgstr ""
 msgid "Extension List"
 msgstr "Lista Interni"
 
-#: views/advanced_form.php:407 views/form.php:248 views/form.php:259
+#: views/advanced_form.php:407 views/form.php:249 views/form.php:260
 msgid "Fixed CID Value"
 msgstr "Risolto valore CID"
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Force"
 msgstr "Forza"
 
-#: views/form.php:254 views/form.php:262
+#: views/form.php:255 views/form.php:263
 msgid "Force Dialed Number"
 msgstr "Forza numero composto"
 
@@ -169,7 +169,7 @@ msgstr "Descrizione Gruppo"
 msgid "INUSE"
 msgstr "INUSO"
 
-#: views/form.php:237
+#: views/form.php:238
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Ignore CF Settings"
 msgstr "Ignora Impostazioni Trasf. Chiamata"
 
-#: views/form.php:220
+#: views/form.php:221
 msgid "Inherit"
 msgstr "Ereditare"
 
@@ -231,7 +231,7 @@ msgstr ""
 "un'estensione su un sistema remoto o un numero esterno mediante il suffisso "
 "di un numero con un '#'. ad esempio: 2448089 # comporre il numero 2448089"
 
-#: views/form.php:67
+#: views/form.php:68
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Mark Answered Elsewhere"
 msgstr ""
 
-#: views/form.php:123
+#: views/form.php:124
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
@@ -255,7 +255,7 @@ msgstr ""
 "<br> Per aggiungere ulteriori registrazioni, utilizzare il menu \"System "
 "Recordings\" sopra"
 
-#: views/form.php:158
+#: views/form.php:159
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -265,7 +265,7 @@ msgstr ""
 "funzione \"Conferma chiamate\". <br> <br> Per aggiungere ulteriori "
 "registrazioni utilizzare il menu \"Registrazioni di sistema\" sopra"
 
-#: views/form.php:193
+#: views/form.php:194
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -275,7 +275,7 @@ msgstr ""
 "già stata accettata prima di premere 1. <br> <br> Per aggiungere ulteriori "
 "registrazioni utilizzare il menu \"Registrazioni di sistema\" sopra"
 
-#: views/form.php:244
+#: views/form.php:245
 msgid "Mode"
 msgstr "Modalità"
 
@@ -289,7 +289,7 @@ msgstr "Mai"
 msgid "No"
 msgstr "No"
 
-#: views/advanced_form.php:194 views/form.php:109
+#: views/advanced_form.php:194 views/form.php:110
 msgid "None"
 msgstr "Nessuno"
 
@@ -301,7 +301,7 @@ msgstr ""
 "Quando si seleziona la conferma, solo le strategie di squillo ringall, "
 "ringallv2, hunt e rispettive versioni -prim sono supportate"
 
-#: views/form.php:250 views/form.php:260
+#: views/form.php:251 views/form.php:261
 msgid "Outside Calls Fixed CID Value"
 msgstr "Chiamate esterne Fixed CID Value"
 
@@ -314,7 +314,7 @@ msgstr ""
 "Sostituisci il volume della suoneria. Nota: questo è valido solo per %s1 "
 "telefono in questo momento"
 
-#: views/form.php:212
+#: views/form.php:213
 msgid "Play Music On Hold"
 msgstr "Riproduci musica in attesa"
 
@@ -334,7 +334,7 @@ msgstr "Il titolo descrittivo per questo gruppo"
 msgid "Provide a name for this Ring Group."
 msgstr "Fornire un nome per questo gruppo di suoneria."
 
-#: views/form.php:137
+#: views/form.php:138
 msgid "Remote Announce"
 msgstr "Annuncio remoto"
 
@@ -342,7 +342,7 @@ msgstr "Annuncio remoto"
 msgid "Reset"
 msgstr "Azzerare"
 
-#: views/form.php:219
+#: views/form.php:220
 msgid "Ring"
 msgstr "Squillare"
 
@@ -397,11 +397,11 @@ msgstr "Durata squilli (max 300 sec)"
 msgid "Ring Tone"
 msgstr "Suoneria"
 
-#: views/form.php:55
+#: views/form.php:56
 msgid "Ring all available channels until one answers (default)"
 msgstr "chiama tutti fino a quando un interno non risponde (predefinito)"
 
-#: views/form.php:59
+#: views/form.php:60
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc."
@@ -461,7 +461,7 @@ msgstr "Salta Agenti Occupati"
 msgid "Submit"
 msgstr "Sottoscrivi"
 
-#: views/form.php:57
+#: views/form.php:58
 msgid "Take turns ringing each available extension"
 msgstr "chiama a circolo tutti gli interni disponibili"
 
@@ -473,7 +473,7 @@ msgstr "L'elenco dei gruppi può contenere solo un massimo di 255 caratteri."
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "Il numero del Gruppo di Chiamata"
 
-#: views/form.php:61
+#: views/form.php:62
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -511,11 +511,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "Il tempo deve essere compreso tra 1 e 300 secondi"
 
-#: views/form.php:172
+#: views/form.php:173
 msgid "Too-Late Announce"
 msgstr "Annuncio tardivo"
 
-#: views/form.php:250
+#: views/form.php:251
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -525,7 +525,7 @@ msgstr ""
 "dall'esterno. L'estensione interna alle chiamate di interno continuerà a "
 "funzionare in modalità predefinita."
 
-#: views/form.php:254
+#: views/form.php:255
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -538,7 +538,7 @@ msgstr ""
 "entrata per questo. Questo sarà trasmesso su tronchi che bloccano il "
 "CallerID straniero"
 
-#: views/form.php:252
+#: views/form.php:253
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -551,11 +551,11 @@ msgstr ""
 "entrata per questo. Questo sarà BLOCCATO su trunk che bloccano il CallerID "
 "esterno"
 
-#: views/form.php:246
+#: views/form.php:247
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Trasmette il CID del chiamante se consentito dal trunk."
 
-#: views/form.php:252 views/form.php:261
+#: views/form.php:253 views/form.php:262
 msgid "Use Dialed Number"
 msgstr "Usa numero composto"
 
@@ -649,19 +649,19 @@ msgstr ""
 "prefissa \"Vendite:\", una chiamata di John Doe viene visualizzata come "
 "\"Vendite: John Doe\" nelle estensioni che squillano."
 
-#: views/form.php:224
+#: views/form.php:225
 msgid "default"
 msgstr "predefinito"
 
-#: views/form.php:63
+#: views/form.php:64
 msgid "firstavailable"
 msgstr "firstavailable"
 
-#: views/form.php:65
+#: views/form.php:66
 msgid "firstnotonphone"
 msgstr "firstnotonphone"
 
-#: views/form.php:57
+#: views/form.php:58
 msgid "hunt"
 msgstr "hunt"
 
@@ -673,27 +673,27 @@ msgstr "è gia in uso"
 msgid "is not allowed for your account"
 msgstr "non ha i permessi per il tuo account"
 
-#: views/form.php:59
+#: views/form.php:60
 msgid "memoryhunt"
 msgstr "memoryhunt"
 
-#: views/form.php:223
+#: views/form.php:224
 msgid "none"
 msgstr "nessuna"
 
-#: views/form.php:67
+#: views/form.php:68
 msgid "random"
 msgstr "casuale"
 
-#: views/form.php:63
+#: views/form.php:64
 msgid "ring only the first available channel"
 msgstr "squilla solo il primo disponibile"
 
-#: views/form.php:65
+#: views/form.php:66
 msgid "ring only the first channel which is not offhook - ignore CW"
 msgstr "squilla solo il primo che è al telefono - ignora l'Avviso di Chiamata"
 
-#: views/form.php:55
+#: views/form.php:56
 msgid "ringall"
 msgstr "ringall"
 
