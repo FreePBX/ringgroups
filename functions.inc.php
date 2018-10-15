@@ -362,7 +362,7 @@ function ringgroups_change_destination($old_dest, $new_dest) {
 }
 
 function ringgroups_get($grpnum) {
-    return FreePBX::Ringgroups()->get($rgpnum);
+    return FreePBX::Ringgroups()->get($grpnum);
 }
 
 /* Get a list of all extensions that belongs to a ringgroup */
