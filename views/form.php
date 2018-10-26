@@ -53,13 +53,13 @@ $rshelp = '<b>' . _("ringall")				.'</b>: '. _("Ring all available channels unti
 		. '<br>'
 		. '<b>'. _("hunt")				.'</b>: '. _("Take turns ringing each available extension")
 		. '<br>'
-		. '<b>'. _("memoryhunt") 		.'</b>: '. _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc.")
+		. '<b>'. _("memoryhunt") 		.'</b>: '. _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work only when Confirm Calls is disabled.")
 		. '<br>'
 		. '<b>'. _("*-prim")  			.'</b>: '. _("These modes act as described above. However, if the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")
 		. '<br>'
-		. '<b>'. _("firstavailable")  	.'</b>: '. _("ring only the first available channel")
+		. '<b>'. _("firstavailable")  	.'</b>: '. _("ring only the first available channel. This strategy will work only when Confirm Calls is disabled.")
 		. '<br>'
-		. '<b>'. _("firstnotonphone")	.'</b>: '. _("ring only the first channel which is not offhook - ignore CW")
+		. '<b>'. _("firstnotonphone")	.'</b>: '. _("ring only the first channel which is not offhook - ignore CW. This strategy will work only when Confirm Calls is disabled.")
 		. '<br>'
 		. '<b>'. _("random") 			.'</b>: '. _("Makes a call could hop between the included extensions without a predefined priority to ensure that calls in the groups are (almost) evenly spread. Simulates a Queue when a Queue can not otherwise be used.")
 		. '<br>';
