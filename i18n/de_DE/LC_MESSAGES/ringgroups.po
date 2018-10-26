@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 15:29-0400\n"
+"POT-Creation-Date: 2018-10-26 02:29-0400\n"
 "PO-Revision-Date: 2018-10-19 19:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "*-prim"
 msgstr "*-prim"
 
@@ -30,9 +30,9 @@ msgid ""
 "br><strong>Sequential:</strong> Rings each extension separately in the order "
 "defined in the list"
 msgstr ""
-"<strong>Gleichzeitig:</strong> Läutet alle Nebenstellen auf einmal an. <br "
-"/><strong>Aufeinanderfolgend:</strong>Läutet die Nebenstellen nacheinander "
-"in der vorgegebenen Reihenfolge an"
+"<strong>Gleichzeitig:</strong> Läutet alle Nebenstellen auf einmal an. <br /"
+"><strong>Aufeinanderfolgend:</strong>Läutet die Nebenstellen nacheinander in "
+"der vorgegebenen Reihenfolge an"
 
 #: views/advanced_form.php:178
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
@@ -52,11 +52,11 @@ msgstr "Rufgruppe hinzufügen"
 msgid "Alert Info"
 msgstr "Alarminfo"
 
-#: views/form.php:245
+#: views/form.php:247
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Immer die unten stehende Anruferkennung übermitteln."
 
-#: views/form.php:99
+#: views/form.php:101
 msgid "Announcement"
 msgstr "Ansage"
 
@@ -68,15 +68,15 @@ msgstr "Anwendungen"
 msgid "CID Name Prefix"
 msgstr "Namenspräfix für Anruferkennung"
 
-#: views/advanced_form.php:404
+#: views/advanced_form.php:431
 msgid "Call Recording"
 msgstr "Anfrufaufzeichnungen"
 
-#: views/advanced_form.php:354
+#: views/advanced_form.php:381
 msgid "Change External CID Configuration"
 msgstr "Externe Konfiguration der Anurferkennung ändern"
 
-#: views/advanced_form.php:325
+#: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Anrufe bestätigen"
 
@@ -95,11 +95,11 @@ msgstr ""
 "Angerufene bestätigen muss, ob er den Anruf tatsächlich annehmen will, bevor "
 "der Anrufer durchgestellt wird."
 
-#: views/form.php:141 views/form.php:176 views/form.php:243 views/form.php:255
+#: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
 msgid "Default"
 msgstr "Standard"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr "Löschen"
 
@@ -107,7 +107,7 @@ msgstr "Löschen"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: views/advanced_form.php:438 views/simple_form.php:141
+#: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Ziel, falls der Anruf nicht angenommen wird"
 
@@ -115,15 +115,15 @@ msgstr "Ziel, falls der Anruf nicht angenommen wird"
 msgid "Display Extension Ring Group Members"
 msgstr "Mitglieder der Nebenstellen-Rufgruppe anzeigen"
 
-#: views/advanced_form.php:411
+#: views/advanced_form.php:438
 msgid "Dont Care"
 msgstr "Nicht beachten"
 
-#: views/advanced_form.php:298
+#: views/advanced_form.php:325
 msgid "Enable Call Pickup"
 msgstr "Heranholen von Anrufen aktivieren"
 
-#: views/advanced_form.php:340
+#: views/advanced_form.php:367
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -140,11 +140,11 @@ msgstr ""
 msgid "Extension List"
 msgstr "Nebenstellenliste"
 
-#: views/advanced_form.php:380 views/form.php:245 views/form.php:256
+#: views/advanced_form.php:407 views/form.php:247 views/form.php:258
 msgid "Fixed CID Value"
 msgstr "Feste Anruferkennung"
 
-#: views/advanced_form.php:392
+#: views/advanced_form.php:419
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -154,11 +154,11 @@ msgstr ""
 "nur aus Ziffern bestehen, optional kann ein führendes '+' für das E164-"
 "Format verwendet werden."
 
-#: views/advanced_form.php:409
+#: views/advanced_form.php:436
 msgid "Force"
 msgstr "Erzwingen"
 
-#: views/form.php:251 views/form.php:259
+#: views/form.php:253 views/form.php:261
 msgid "Force Dialed Number"
 msgstr "Gewählte Nummer erzwingen"
 
@@ -166,11 +166,11 @@ msgstr "Gewählte Nummer erzwingen"
 msgid "Group Description"
 msgstr "Beschreibung der Gruppe"
 
-#: functions.inc.php:357
+#: functions.inc.php:334
 msgid "INUSE"
 msgstr "INUSE"
 
-#: views/form.php:234
+#: views/form.php:236
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -178,11 +178,11 @@ msgstr ""
 "Wählen Sie statt „Klingeln“ eine Warteschleifenmusik, die gespielt werden "
 "soll, so hört der Anrufer diese während er darauf wartet, dass jemand abhebt."
 
-#: views/advanced_form.php:244
+#: views/advanced_form.php:271
 msgid "Ignore CF Settings"
 msgstr "Einstellungen zur Rufweiterleitung ignorieren"
 
-#: views/form.php:217
+#: views/form.php:219
 msgid "Inherit"
 msgstr "Erben"
 
@@ -207,19 +207,19 @@ msgid ""
 "List extensions to ring, one per line, or use the Extension Quick Select "
 "insert them here.<br><br>You can include an extension on a remote system, or "
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
-"dial 2448089 on the appropriate trunk (see Outbound Routing)"
-"<br><br>Extensions without a '#' will not ring a user's Follow-Me. To dial "
-"Follow-Me, Queues and other numbers that are not extensions, put a '#' at "
-"the end."
+"dial 2448089 on the appropriate trunk (see Outbound "
+"Routing)<br><br>Extensions without a '#' will not ring a user's Follow-Me. "
+"To dial Follow-Me, Queues and other numbers that are not extensions, put a "
+"'#' at the end."
 msgstr ""
 "Listen Sie die Nebenstellen (eine pro Zeile) auf, die angeläutet werden "
 "sollen, oder verwenden Sie die Schnellauswahl.<br /><br />Sie können auch "
 "Nebenstellen auf einem entfernten System oder eine externe Nummern "
 "eintragen, wenn Sie ein '#' anhängen. 08154711# würde z.B. die 08154711 über "
-"die entsprechende Hauptleitung anwählen (sh. Ausgehende Routen).<br /><br />"
-"Nebenstellen ohne '#' werden keine „Folge-mir“-Ziele von Benutzern anläuten. "
-"Um Nummern anzuwählen, die keine Nebenstellen sind, setzen Sie ein '#' an "
-"das Ende der Nummer."
+"die entsprechende Hauptleitung anwählen (sh. Ausgehende Routen).<br /><br /"
+">Nebenstellen ohne '#' werden keine „Folge-mir“-Ziele von Benutzern "
+"anläuten. Um Nummern anzuwählen, die keine Nebenstellen sind, setzen Sie ein "
+"'#' an das Ende der Nummer."
 
 #: views/simple_form.php:52
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 "eintragen, wenn Sie ein '#' anhängen. 08154711# würde z.B. die 08154711 "
 "anwählen"
 
-#: views/form.php:64
+#: views/form.php:66
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -245,7 +245,11 @@ msgstr ""
 "Gruppen (beinahe) gleichmäßig verteilt werden. Simuliert eine Warteschlange, "
 "wenn sonst keine Warteschlange genutzt werden kann."
 
-#: views/form.php:120
+#: views/advanced_form.php:244
+msgid "Mark Answered Elsewhere"
+msgstr ""
+
+#: views/form.php:122
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
@@ -254,7 +258,7 @@ msgstr ""
 "wird.<br /><br />Um weitere Aufnahmen hinzuzufügen, nutzen Sie bitte das "
 "Menü „Systemaufnahmen“ oben"
 
-#: views/form.php:155
+#: views/form.php:157
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -264,7 +268,7 @@ msgstr ""
 "Option „Anrufe bestätigen“ aktiviert ist.<br /><br />Um weitere Aufnahmen "
 "hinzuzufügen, nutzen Sie bitte das Menü „Systemaufnahmen“ oben"
 
-#: views/form.php:190
+#: views/form.php:192
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -275,21 +279,21 @@ msgstr ""
 "weitere Aufnahmen hinzuzufügen, nutzen Sie bitte das Menü „Systemaufnahmen“ "
 "oben"
 
-#: views/form.php:241
+#: views/form.php:243
 msgid "Mode"
 msgstr "Modus"
 
-#: views/advanced_form.php:413
+#: views/advanced_form.php:440
 msgid "Never"
 msgstr "Nie"
 
 #: views/advanced_form.php:224 views/advanced_form.php:251
 #: views/advanced_form.php:278 views/advanced_form.php:305
-#: views/advanced_form.php:332
+#: views/advanced_form.php:332 views/advanced_form.php:359
 msgid "No"
 msgstr "Nein"
 
-#: views/advanced_form.php:194 views/form.php:106
+#: views/advanced_form.php:194 views/form.php:108
 msgid "None"
 msgstr "Kein*e"
 
@@ -301,7 +305,7 @@ msgstr ""
 "Wenn die Bestätigung aktiviert ist, werden nur 'ringall','ringallv2', 'hunt' "
 "und die entsprechenden '-prim'-Versionen unterstützt"
 
-#: views/form.php:247 views/form.php:257
+#: views/form.php:249 views/form.php:259
 msgid "Outside Calls Fixed CID Value"
 msgstr "Feste Anruferkennung für externe Anrufe"
 
@@ -314,7 +318,7 @@ msgstr ""
 "Ruftonlautstärke übersteuern. Hinweis: Dies gilt zur Zeit nur für Telefone "
 "von %s"
 
-#: views/form.php:209
+#: views/form.php:211
 msgid "Play Music On Hold"
 msgstr "Warteschleifenmusik abspielen"
 
@@ -334,15 +338,15 @@ msgstr "Geben Sie einen aussagekräftigen Titel für diese Klingelgruppe an."
 msgid "Provide a name for this Ring Group."
 msgstr "Geben Sie einen Namen für diese Rufgruppe an."
 
-#: views/form.php:134
+#: views/form.php:136
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: views/form.php:216
+#: views/form.php:218
 msgid "Ring"
 msgstr "Klingeln"
 
@@ -355,7 +359,7 @@ msgstr "Rufgruppe"
 msgid "Ring Group %s: "
 msgstr "Rufgruppe %s: "
 
-#: functions.inc.php:481
+#: functions.inc.php:458
 msgid "Ring Group Membership"
 msgstr "Rufgruppen-Mitgliedschaft"
 
@@ -367,12 +371,12 @@ msgstr "Rufgruppenmodul"
 msgid "Ring Group Name"
 msgstr "Name der Rufgruppe"
 
-#: functions.inc.php:57 functions.inc.php:356
+#: functions.inc.php:57 functions.inc.php:333
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Rufgruppe: %s"
 
-#: functions.inc.php:383
+#: functions.inc.php:360
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Rufgruppe: %s (%s)"
@@ -397,23 +401,22 @@ msgstr "Klingeldauer (max. 300 Sekunden)"
 msgid "Ring Tone"
 msgstr "Klingelton"
 
-#: views/form.php:52
+#: views/form.php:54
 msgid "Ring all available channels until one answers (default)"
 msgstr "Alle verfügbaren Kanäle anläuten bis einer antwortet (Standard)"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Läute die erste Nebenstelle in der Liste an, dann die erste und zweite, dann "
-"die erste, zweite und dritte… etc."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
 msgstr "Nummer der Rufgruppe"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr "Rufgruppe"
 
@@ -437,6 +440,10 @@ msgstr "Fortschritt übermitteln"
 msgid "Sequential"
 msgstr "Aufeinanderfolgend"
 
+#: views/advanced_form.php:259
+msgid "Should calls indicate answered elsewhere when a user answers."
+msgstr ""
+
 #: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
@@ -449,15 +456,15 @@ msgstr ""
 msgid "Simultaneous"
 msgstr "Gleichzeitig"
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:298
 msgid "Skip Busy Agent"
 msgstr "Beschäftigten Bearbeiter überspringen"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr "Absenden"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "Take turns ringing each available extension"
 msgstr "Jede verfügbare Nebenstelle abwechselnd anläuten"
 
@@ -471,7 +478,7 @@ msgstr ""
 "Die Nummer, die Benutzer anwählen werden, um Nebenstellen in dieser "
 "Rufgruppe anzuläuten"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -479,7 +486,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: functions.inc.php:297
+#: Ringgroups.class.php:246
 msgid "This ringgroup"
 msgstr "Diese Rufgruppe"
 
@@ -503,11 +510,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "Zeit muss zwischen 1 und 300 Sekunden liegen"
 
-#: views/form.php:169
+#: views/form.php:171
 msgid "Too-Late Announce"
 msgstr "„Zu spät“-Ankündigung"
 
-#: views/form.php:247
+#: views/form.php:249
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -517,7 +524,7 @@ msgstr ""
 "verwenden. Interne Anrufe von Nebenstelle zu Nebenstelle verwenden weiterhin "
 "den Standardmodus."
 
-#: views/form.php:251
+#: views/form.php:253
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -530,7 +537,7 @@ msgstr ""
 "erforderlich. Diese Kennung WIRD auf Hauptleitungen übermittelt, die fremde "
 "Anruferkennungen blockieren"
 
-#: views/form.php:249
+#: views/form.php:251
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -543,21 +550,21 @@ msgstr ""
 "erforderlich. Diese Kennung wird auf Hauptleitungen BLOCKIERT, die fremde "
 "Anruferkennungen blockieren"
 
-#: views/form.php:243
+#: views/form.php:245
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr ""
 "Übermittelt die Anruferkennung des Anrufers, wenn dies auf der Hauptleitung "
 "zulässig ist."
 
-#: views/form.php:249 views/form.php:258
+#: views/form.php:251 views/form.php:260
 msgid "Use Dialed Number"
 msgstr "Gewählte Nummer verwenden"
 
-#: Ringgroups.class.php:77
+#: Ringgroups.class.php:79
 msgid "Warning! Extension"
 msgstr "Warnung! Nebenstelle"
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:313
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -565,7 +572,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/advanced_form.php:313
+#: views/advanced_form.php:340
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number from any extension. "
@@ -575,7 +582,7 @@ msgid ""
 "ringing extension , which works whether or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:259
+#: views/advanced_form.php:286
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -588,18 +595,18 @@ msgid ""
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
-#: views/advanced_form.php:450 views/simple_form.php:153
+#: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
 "Wohin Anrufer vermittelt werden sollen, wenn der Ruf nicht angenommen wird."
 
 #: views/advanced_form.php:222 views/advanced_form.php:249
 #: views/advanced_form.php:276 views/advanced_form.php:303
-#: views/advanced_form.php:330
+#: views/advanced_form.php:330 views/advanced_form.php:357
 msgid "Yes"
 msgstr "Ja"
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -615,52 +622,69 @@ msgid ""
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
 
-#: views/form.php:221
+#: views/form.php:223
 msgid "default"
 msgstr "Standard"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "firstavailable"
 msgstr ""
 
-#: views/form.php:62
+#: views/form.php:64
 msgid "firstnotonphone"
 msgstr ""
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "hunt"
 msgstr ""
 
-#: functions.inc.php:297
+#: Ringgroups.class.php:246
 msgid "is already in use"
 msgstr "wird bereits verwendet"
 
-#: Ringgroups.class.php:77
+#: Ringgroups.class.php:79
 msgid "is not allowed for your account"
 msgstr "ist für Ihr Konto nicht erlaubt"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "memoryhunt"
 msgstr ""
 
-#: views/form.php:220
+#: views/form.php:222
 msgid "none"
 msgstr "keine"
 
-#: views/form.php:64
+#: views/form.php:66
 msgid "random"
 msgstr "zufällig"
 
-#: views/form.php:60
-msgid "ring only the first available channel"
-msgstr "nur den ersten verfügbaren Kanal anläuten"
-
 #: views/form.php:62
-msgid "ring only the first channel which is not offhook - ignore CW"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
 msgstr ""
-"nur den ersten verfügbaren Kanal anläuten, der nicht abgehoben ist - "
-"Rufweiterleitungen ignorieren"
 
-#: views/form.php:52
+#: views/form.php:64
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
+msgstr ""
+
+#: views/form.php:54
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Läute die erste Nebenstelle in der Liste an, dann die erste und zweite, "
+#~ "dann die erste, zweite und dritte… etc."
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "nur den ersten verfügbaren Kanal anläuten"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr ""
+#~ "nur den ersten verfügbaren Kanal anläuten, der nicht abgehoben ist - "
+#~ "Rufweiterleitungen ignorieren"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-10-26 02:29-0400\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -408,11 +408,9 @@ msgstr ""
 #: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Đổ chuông máy nhánh đầu tiên trong danh sách, sau đó đổ chuông các máy nhánh "
-"thứ nhất, thứ và thứ hai, tiếp theo là đổ chuông máy nhánh thứ nhất, thứ hai "
-"và thứ ba,... trong danh sách."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -680,16 +678,35 @@ msgid "random"
 msgstr "ngẫu nhiên"
 
 #: views/form.php:62
-msgid "ring only the first available channel"
-msgstr "Chỉ đổ chuông kênh khả dụng đầu tiên"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:64
-msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Call Waiting)"
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:54
 msgid "ringall"
 msgstr "Đổ chuông tất cả"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Đổ chuông máy nhánh đầu tiên trong danh sách, sau đó đổ chuông các máy "
+#~ "nhánh thứ nhất, thứ và thứ hai, tiếp theo là đổ chuông máy nhánh thứ "
+#~ "nhất, thứ hai và thứ ba,... trong danh sách."
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "Chỉ đổ chuông kênh khả dụng đầu tiên"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr ""
+#~ "Chỉ đổ chuông kênh đầu tiên không offhook- bỏ qua CW ( Call Waiting)"
 
 #~ msgid ""
 #~ "When enabled, this will allow calls to the Ring Group to be picked up "

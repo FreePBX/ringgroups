@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-10-26 02:29-0400\n"
 "PO-Revision-Date: 2016-12-15 23:31+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -404,10 +404,9 @@ msgstr "Toca todos os canais disponíveis até que um responda (padrão)"
 #: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Toca no primeiro ramal na lista, em seguida, toca no 1° e 2° ramal, em "
-"seguida, toca no 1°, 2° e 3° ramal na lista... etc."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -675,18 +674,35 @@ msgid "random"
 msgstr "aleatório"
 
 #: views/form.php:62
-msgid "ring only the first available channel"
-msgstr "tocar apenas o primeiro canal disponível"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:64
-msgid "ring only the first channel which is not offhook - ignore CW"
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
 msgstr ""
-"tocar apenas no primeiro canal que não é offhook - ignore CW(chamada em "
-"espera)"
 
 #: views/form.php:54
 msgid "ringall"
 msgstr "tocar todos"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Toca no primeiro ramal na lista, em seguida, toca no 1° e 2° ramal, em "
+#~ "seguida, toca no 1°, 2° e 3° ramal na lista... etc."
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "tocar apenas o primeiro canal disponível"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr ""
+#~ "tocar apenas no primeiro canal que não é offhook - ignore CW(chamada em "
+#~ "espera)"
 
 #~ msgid ""
 #~ "When enabled, this will allow calls to the Ring Group to be picked up "

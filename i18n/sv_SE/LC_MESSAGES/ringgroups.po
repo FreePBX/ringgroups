@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-10-26 02:29-0400\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -363,10 +363,9 @@ msgstr "Ring på alla anknytningar tills någon svarar (standard)"
 #: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Ring första anknytningen i listan, ring sedan ettan och tvåan, ring sedan "
-"första, andra och tredje i listan..... etc"
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -597,18 +596,35 @@ msgid "random"
 msgstr ""
 
 #: views/form.php:62
-msgid "ring only the first available channel"
-msgstr "ring bara den första tillgängliga kanalen"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:64
-msgid "ring only the first channel which is not offhook - ignore CW"
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
 msgstr ""
-"ring endast den första kanalen som inte är upptagen - strunta i Samtal "
-"Väntar (CF)"
 
 #: views/form.php:54
 msgid "ringall"
 msgstr "ringalla"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Ring första anknytningen i listan, ring sedan ettan och tvåan, ring sedan "
+#~ "första, andra och tredje i listan..... etc"
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "ring bara den första tillgängliga kanalen"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr ""
+#~ "ring endast den första kanalen som inte är upptagen - strunta i Samtal "
+#~ "Väntar (CF)"
 
 #~ msgid "(pick extension)"
 #~ msgstr "(välj anknytning)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 11:58-0700\n"
+"POT-Creation-Date: 2018-10-26 02:29-0400\n"
 "PO-Revision-Date: 2016-07-07 11:27+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com.com>\n"
 "Language-Team: Russian <http://weblate.postmet.com/freepbx/trunkbalance/"
@@ -389,10 +389,9 @@ msgstr "Звонят все каналы, пока один кто либо не
 #: views/form.php:58
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Звонит первый внутренний номер в списке, затем первый и второй, затем "
-"первый, второй и третий в списке, и так далее."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -663,16 +662,33 @@ msgid "random"
 msgstr "случайный-выбор"
 
 #: views/form.php:62
-msgid "ring only the first available channel"
-msgstr "звонит первый доступный канал"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:64
-msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr "звонит первый телефон, у которого не снята трубка - игнорировать CW"
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:54
 msgid "ringall"
 msgstr "звонят-все"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Звонит первый внутренний номер в списке, затем первый и второй, затем "
+#~ "первый, второй и третий в списке, и так далее."
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "звонит первый доступный канал"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr "звонит первый телефон, у которого не снята трубка - игнорировать CW"
 
 #~ msgid ""
 #~ "When enabled, this will allow calls to the Ring Group to be picked up "
