@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-26 01:42-0400\n"
+"POT-Creation-Date: 2018-10-26 02:30-0400\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ringgroups/bg/>\n"
@@ -403,10 +403,9 @@ msgstr "Звъни на всички достъпни канали докато 
 #: views/form.php:60
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
-"ring 1st 2nd and 3rd extension in the list.... etc."
+"ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
+"only when Confirm Calls is disabled."
 msgstr ""
-"Звъни на първата свободна вътрешна линия от списъка, след това на 1-та и 2-"
-"та, след това на 1-та, 2-та и 3-та вътрешна линия в списъка... и т.н."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -683,16 +682,33 @@ msgid "random"
 msgstr "случаен"
 
 #: views/form.php:64
-msgid "ring only the first available channel"
-msgstr "звъни само на първия свободен канал"
+msgid ""
+"ring only the first available channel. This strategy will work only when "
+"Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:66
-msgid "ring only the first channel which is not offhook - ignore CW"
-msgstr "звъни само на първия канал който не е отворен - игнорира CW"
+msgid ""
+"ring only the first channel which is not offhook - ignore CW. This strategy "
+"will work only when Confirm Calls is disabled."
+msgstr ""
 
 #: views/form.php:56
 msgid "ringall"
 msgstr "звъни на всички"
+
+#~ msgid ""
+#~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
+#~ "then ring 1st 2nd and 3rd extension in the list.... etc."
+#~ msgstr ""
+#~ "Звъни на първата свободна вътрешна линия от списъка, след това на 1-та и "
+#~ "2-та, след това на 1-та, 2-та и 3-та вътрешна линия в списъка... и т.н."
+
+#~ msgid "ring only the first available channel"
+#~ msgstr "звъни само на първия свободен канал"
+
+#~ msgid "ring only the first channel which is not offhook - ignore CW"
+#~ msgstr "звъни само на първия канал който не е отворен - игнорира CW"
 
 #~ msgid "Checking if recordings need migration.."
 #~ msgstr "Проверка дали записите имат нужда от преместване.."
