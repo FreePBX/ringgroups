@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:29-0400\n"
+"POT-Creation-Date: 2019-01-31 14:20+0530\n"
 "PO-Revision-Date: 2018-09-22 10:00+0000\n"
 "Last-Translator: james zhu <zhulizhong@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://*/projects/freepbx/ringgroups/"
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:149
 msgid "Delete"
 msgstr "删除"
 
@@ -300,7 +300,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr "远端播报"
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:159
 msgid "Reset"
 msgstr "重置"
 
@@ -374,7 +374,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "拨号小组号码"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:129
 msgid "RingGroup"
 msgstr "振铃组"
 
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "跳过忙碌的坐席"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:154
 msgid "Submit"
 msgstr "提交"
 
@@ -441,7 +441,7 @@ msgstr ""
 "就不会响铃。如果主分机是设置了免打扰，它就不会振铃。如果主分机设置了无条件转"
 "移呼叫，那么所有的分机会响铃"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "This ringgroup"
 msgstr "这个拨号小组"
 
@@ -575,7 +575,7 @@ msgstr "首个未离钩频道"
 msgid "hunt"
 msgstr "搜寻"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "is already in use"
 msgstr "已经在使用中了"
 

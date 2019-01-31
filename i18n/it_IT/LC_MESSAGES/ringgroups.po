@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:29-0400\n"
+"POT-Creation-Date: 2019-01-31 14:20+0530\n"
 "PO-Revision-Date: 2018-07-18 19:18+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "Predefinito"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:149
 msgid "Delete"
 msgstr "Elimina"
 
@@ -338,7 +338,7 @@ msgstr "Fornire un nome per questo gruppo di suoneria."
 msgid "Remote Announce"
 msgstr "Annuncio remoto"
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:159
 msgid "Reset"
 msgstr "Azzerare"
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Gruppo di Chiamata Numero"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:129
 msgid "RingGroup"
 msgstr "ringGroup"
 
@@ -456,7 +456,7 @@ msgstr "simultaneo"
 msgid "Skip Busy Agent"
 msgstr "Salta Agenti Occupati"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:154
 msgid "Submit"
 msgstr "Sottoscrivi"
 
@@ -485,7 +485,7 @@ msgstr ""
 "avanti. Se il primario è un Trasferimento di Chiamata incondizionato "
 "attivato su FreePBX, tutti squilleranno."
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "This ringgroup"
 msgstr "Questo Gruppo di Chiamata"
 
@@ -664,7 +664,7 @@ msgstr "firstnotonphone"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "is already in use"
 msgstr "è gia in uso"
 

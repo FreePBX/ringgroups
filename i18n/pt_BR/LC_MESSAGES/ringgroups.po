@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:29-0400\n"
+"POT-Creation-Date: 2019-01-31 14:20+0530\n"
 "PO-Revision-Date: 2016-12-15 23:31+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:149
 msgid "Delete"
 msgstr "Apagar"
 
@@ -338,7 +338,7 @@ msgstr "Forneça um nome para este Grupo de Toques."
 msgid "Remote Announce"
 msgstr "Anúncio Remoto"
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:159
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Número do Grupo de Toques"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:129
 msgid "RingGroup"
 msgstr "Grupo de Toque"
 
@@ -456,7 +456,7 @@ msgstr "Simultâneo"
 msgid "Skip Busy Agent"
 msgstr "Ignorar Agentes Ocupados"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:154
 msgid "Submit"
 msgstr "Enviar"
 
@@ -485,7 +485,7 @@ msgstr ""
 "o principal for FreePBX DND, ele não será tocado. Se o principal é FreePBX "
 "CF incondicional, então todos serão tocados"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "This ringgroup"
 msgstr "Este grupo de toques"
 
@@ -653,7 +653,7 @@ msgstr "primeiro que não estiver ao telefone"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "is already in use"
 msgstr "já está em uso"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:29-0400\n"
+"POT-Creation-Date: 2019-01-31 14:20+0530\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:146
+#: Ringgroups.class.php:149
 msgid "Delete"
 msgstr ""
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:156
+#: Ringgroups.class.php:159
 msgid "Reset"
 msgstr ""
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "מספר קבוצת צלצול"
 
-#: Ringgroups.class.php:126
+#: Ringgroups.class.php:129
 msgid "RingGroup"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "דלג הסוכן תפוס"
 
-#: Ringgroups.class.php:151
+#: Ringgroups.class.php:154
 msgid "Submit"
 msgstr ""
 
@@ -441,7 +441,7 @@ msgstr ""
 "לא יהיה נסיון לצלצל. אם השלוחה הראשית מוגדרת במרכזיה במצב עקוב אחרי ללא "
 "תנאים, כל השלוחות תצלצלנה"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "This ringgroup"
 msgstr "הקבוצת צלצול הנוכחי"
 
@@ -573,7 +573,7 @@ msgstr ""
 msgid "hunt"
 msgstr "ציד"
 
-#: Ringgroups.class.php:246
+#: Ringgroups.class.php:249
 msgid "is already in use"
 msgstr "כבר בשימוש"
 
