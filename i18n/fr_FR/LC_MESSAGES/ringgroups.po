@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2018-07-18 19:12+0000\n"
 "Last-Translator: philippebolduc <philippe@florenceinc.com>\n"
 "Language-Team: French <http://*/projects/freepbx/ringgroups/fr/>\n"
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Default"
 msgstr "Par défaut"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -333,7 +333,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr ""
 
@@ -408,7 +408,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Numéro de Groupe de Sonnerie"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "Passer Agent Occupé"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr ""
 
@@ -478,7 +478,7 @@ msgstr ""
 "pas. Si la primaire est FreePBX Ne pas Déranger, elle ne sonnera pas. Si la "
 "primaire est FreePBX Transfert d'Appel inconditionnel, alors toutes sonneront"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "Ce groupe de sonnerie"
 
@@ -613,7 +613,7 @@ msgstr "Premier pas au téléphone"
 msgid "hunt"
 msgstr "Chasse"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "est déjà utilisé"
 

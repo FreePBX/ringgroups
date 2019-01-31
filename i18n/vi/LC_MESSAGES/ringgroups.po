@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "Xóa"
 
@@ -341,7 +341,7 @@ msgstr "Đặt tên cho Ring Group này."
 msgid "Remote Announce"
 msgstr "Thông báo từ xa"
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -416,7 +416,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Số của Ring-Group"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr "RingGroup ( Đổ chuông nhóm)"
 
@@ -460,7 +460,7 @@ msgstr "Đồng thời"
 msgid "Skip Busy Agent"
 msgstr "Bỏ qua tổng đài viên đang bận"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr "Gửi đi"
 
@@ -489,7 +489,7 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
@@ -657,7 +657,7 @@ msgstr "firstnotonphone (notonphone đầu tiên)"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "đang được sử dụng"
 

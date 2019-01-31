@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "حذف"
 
@@ -333,7 +333,7 @@ msgstr "اختصاص یک نام به گروه زنگ."
 msgid "Remote Announce"
 msgstr "آگهی راه دور"
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr "باز نشانی"
 
@@ -407,7 +407,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "شماره گروه زنگ"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr "گروه زنگ"
 
@@ -450,7 +450,7 @@ msgstr "همزمان"
 msgid "Skip Busy Agent"
 msgstr "رفتن به عامل اشغال"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr "ارسال"
 
@@ -478,7 +478,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -642,7 +642,7 @@ msgstr "first notonphone"
 msgid "hunt"
 msgstr "شکار"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "در حال استفاده"
 

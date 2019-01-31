@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ringgroups/bg/>\n"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -337,7 +337,7 @@ msgstr "Въведете име за тази Група на Звънене."
 msgid "Remote Announce"
 msgstr "Съобщение за Приемащия Обаждането"
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr "Изчисти"
 
@@ -411,7 +411,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Номер на Група на Звънене"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr "Група на Звънене"
 
@@ -455,7 +455,7 @@ msgstr "Едновременно"
 msgid "Skip Busy Agent"
 msgstr "Пропусни Зает Агент"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr "Приеми"
 
@@ -485,7 +485,7 @@ msgstr ""
 "основната е FreePBX DND, няма да звъни. Ако основната е безусловен FreePBX "
 "CF, тогава всички ще звънят"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "Тази група на звънене"
 
@@ -661,7 +661,7 @@ msgstr "първия не на телефона"
 msgid "hunt"
 msgstr "преследване"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "вече се използва"
 

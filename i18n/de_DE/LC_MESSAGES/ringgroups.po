@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2018-07-27 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "Löschen"
 
@@ -338,7 +338,7 @@ msgstr "Geben Sie einen Namen für diese Klingelgruppe an."
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Nummer der Klingelgruppe"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr "Klingelgruppe"
 
@@ -456,7 +456,7 @@ msgstr "Gleichzeitig"
 msgid "Skip Busy Agent"
 msgstr "Beschäftigten Bearbeiter überspringen"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr "Absenden"
 
@@ -482,7 +482,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "Diese Klingelgruppe"
 
@@ -620,7 +620,7 @@ msgstr ""
 msgid "hunt"
 msgstr ""
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "wird bereits verwendet"
 

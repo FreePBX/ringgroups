@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "着信グループ番号"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr ""
 
@@ -445,7 +445,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "ビジー状態のエージェントをスキップ"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr ""
 
@@ -473,7 +473,7 @@ msgstr ""
 "not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが"
 "鳴ります"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "この着信グループ"
 
@@ -620,7 +620,7 @@ msgstr "電話中でない最初のもの"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "は既に使用中です"
 

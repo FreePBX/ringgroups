@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:30-0400\n"
+"POT-Creation-Date: 2019-01-31 14:23+0530\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Ringgroups.class.php:164
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr ""
 
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:174
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr ""
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Ringgruppsnummer"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "Ignorera upptagna telefoner"
 
-#: Ringgroups.class.php:169
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr ""
 
@@ -441,7 +441,7 @@ msgstr ""
 "inte att ringas. Om den första anknytningen är FreePBX Vidarebefordra Samtal "
 "(CF) kommer alla anknytningar att ringas"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "Denna ringgrupp"
 
@@ -575,7 +575,7 @@ msgstr "första-inte-upptagen"
 msgid "hunt"
 msgstr "runda"
 
-#: Ringgroups.class.php:264
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "används redan"
 
