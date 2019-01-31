@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-26 02:29-0400\n"
-"PO-Revision-Date: 2018-10-19 19:00+0000\n"
-"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"PO-Revision-Date: 2018-11-14 20:00+0000\n"
+"Last-Translator: hammer125 hammer125 <auswertung@aon.at>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "Anfrufaufzeichnungen"
 
 #: views/advanced_form.php:381
 msgid "Change External CID Configuration"
-msgstr "Externe Konfiguration der Anurferkennung ändern"
+msgstr "Konfiguration der externen Anruferkennung ändern"
 
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
@@ -411,6 +411,9 @@ msgid ""
 "ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
 "only when Confirm Calls is disabled."
 msgstr ""
+"Bei erster Durchwahl klingeln, dann bei 1. und 2. Durchwahl klingeln, dann "
+"bei 1., 2. und 3. Durchwahl klingeln ... usw. Diese Strategie funktioniert "
+"nur, wenn Anrufe bestätigen deaktiviert ist."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"

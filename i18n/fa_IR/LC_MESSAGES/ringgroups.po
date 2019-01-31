@@ -10,21 +10,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-26 02:29-0400\n"
-"PO-Revision-Date: 2016-05-05 04:27+0200\n"
-"Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
-"ringgroups/fa_IR/>\n"
+"PO-Revision-Date: 2019-01-26 21:00+0000\n"
+"Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
+"Language-Team: Persian <http://*/projects/freepbx/ringgroups/fa/>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/form.php:60
-#, fuzzy
 msgid "*-prim"
-msgstr "*-prim"
+msgstr "PRIM-*"
 
 #: views/simple_form.php:79
 msgid ""
@@ -62,7 +60,7 @@ msgstr "اطلاعیه"
 
 #: ringgroups.i18n.php:6
 msgid "Applications"
-msgstr "درخواست"
+msgstr "برنامه ها"
 
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
@@ -182,7 +180,7 @@ msgstr "لغو تنظیمات CF"
 
 #: views/form.php:219
 msgid "Inherit"
-msgstr "ارثی"
+msgstr "وارث"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
@@ -242,7 +240,7 @@ msgstr ""
 
 #: views/advanced_form.php:244
 msgid "Mark Answered Elsewhere"
-msgstr ""
+msgstr "علامت گذاری به عنوان پاسخ در جای دیگر"
 
 #: views/form.php:122
 msgid ""
@@ -288,7 +286,7 @@ msgstr "خیر"
 
 #: views/advanced_form.php:194 views/form.php:108
 msgid "None"
-msgstr "هیچ"
+msgstr "هیچکدام"
 
 #: assets/js/ringgroups.js:59
 msgid ""
@@ -308,6 +306,7 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"میزان رینگر را لغو کنید توجه: این در حال حاضر فقط برای تلفن های ٪s1 معتبر است"
 
 #: views/form.php:211
 msgid "Play Music On Hold"
@@ -335,7 +334,7 @@ msgstr "آگهی راه دور"
 
 #: Ringgroups.class.php:156
 msgid "Reset"
-msgstr "باز نشانی"
+msgstr "بازیابی"
 
 #: views/form.php:218
 msgid "Ring"
@@ -402,6 +401,9 @@ msgid ""
 "ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
 "only when Confirm Calls is disabled."
 msgstr ""
+"اولین حلقه را در لیست قرار دهید، سپس حلقه های 1 و 2 را حلقه کنید، سپس حلقه "
+"های اول و دوم را در فهرست لیست کنید .... و غیره. این استراتژی تنها زمانی کار "
+"می کند که تایید کردن تماس غیر فعال باشد."
 
 #: views/advanced_form.php:9
 msgid "Ring-Group Number"
@@ -413,7 +415,7 @@ msgstr "گروه زنگ"
 
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "رینگر دوره نادیده گرفتن"
 
 #: views/simple_form.php:130
 msgid ""
@@ -433,7 +435,7 @@ msgstr "متوالی"
 
 #: views/advanced_form.php:259
 msgid "Should calls indicate answered elsewhere when a user answers."
-msgstr ""
+msgstr "در صورتی که کاربر پاسخ دهد، تماسها باید پاسخ داده شوند."
 
 #: views/advanced_form.php:232
 msgid ""
@@ -573,6 +575,12 @@ msgid ""
 "Any extensions can still be picked up by doing a directed call pickup to the "
 "ringing extension , which works whether or not this is checked."
 msgstr ""
+"When enabled, this will allow calls to the Ring Group to be picked up with "
+"the directed call pickup feature using the group number from any extension. "
+"When not checked, individual extensions that are part of the group can still "
+"be picked up by doing a directed call pickup by dialing the group number. "
+"Any extensions can still be picked up by doing a directed call pickup to the "
+"ringing extension , which works whether or not this is checked."
 
 #: views/advanced_form.php:286
 msgid ""
@@ -667,12 +675,16 @@ msgid ""
 "ring only the first available channel. This strategy will work only when "
 "Confirm Calls is disabled."
 msgstr ""
+"فقط اولین کانال موجود را رقم بزنید این استراتژی تنها زمانی کار می کند که "
+"تأیید تماس غیرفعال شود."
 
 #: views/form.php:64
 msgid ""
 "ring only the first channel which is not offhook - ignore CW. This strategy "
 "will work only when Confirm Calls is disabled."
 msgstr ""
+"فقط کانال اول که خاموش نیست - CW را نادیده بگیرید. این استراتژی تنها زمانی "
+"کار می کند که تأیید تماس غیرفعال شود."
 
 #: views/form.php:54
 msgid "ringall"
