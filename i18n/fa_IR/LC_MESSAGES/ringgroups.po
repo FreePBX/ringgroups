@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-31 14:20+0530\n"
-"PO-Revision-Date: 2019-01-26 21:00+0000\n"
+"PO-Revision-Date: 2019-02-02 01:00+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/ringgroups/fa/>\n"
 "Language: fa_IR\n"
@@ -306,7 +306,7 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
-"میزان رینگر را لغو کنید توجه: این در حال حاضر فقط برای تلفن های ٪s1 معتبر است"
+"میزان رینگر را لغو کنید توجه: این در حال حاضر فقط برای تلفن های %s معتبر است"
 
 #: views/form.php:211
 msgid "Play Music On Hold"
@@ -415,7 +415,7 @@ msgstr "گروه زنگ"
 
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
-msgstr "رینگر دوره نادیده گرفتن"
+msgstr "بازنویسی صدای زنگ"
 
 #: views/simple_form.php:130
 msgid ""
