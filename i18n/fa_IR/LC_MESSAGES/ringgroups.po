@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:20+0530\n"
+"POT-Creation-Date: 2019-02-11 13:55-0500\n"
 "PO-Revision-Date: 2019-02-02 01:00+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/ringgroups/fa/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid "*-prim"
 msgstr "PRIM-*"
 
@@ -50,11 +50,11 @@ msgstr "افزودن گروه زنگ"
 msgid "Alert Info"
 msgstr "اطلاعات هشدار"
 
-#: views/form.php:247
+#: views/form.php:249
 msgid "Always transmit the Fixed CID Value below."
 msgstr "همیشه مقدار CID ثابت زیر را منتقل کن."
 
-#: views/form.php:101
+#: views/form.php:103
 msgid "Announcement"
 msgstr "اطلاعیه"
 
@@ -92,11 +92,11 @@ msgstr ""
 "where the callee has to confirm if they actually want to take the call "
 "before the caller is transferred."
 
-#: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
+#: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:167
 msgid "Delete"
 msgstr "حذف"
 
@@ -136,7 +136,7 @@ msgstr ""
 msgid "Extension List"
 msgstr "فهرست داخلی"
 
-#: views/advanced_form.php:407 views/form.php:247 views/form.php:258
+#: views/advanced_form.php:407 views/form.php:249 views/form.php:260
 msgid "Fixed CID Value"
 msgstr "مقدار ثابت CID"
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Force"
 msgstr "اجبار"
 
-#: views/form.php:253 views/form.php:261
+#: views/form.php:255 views/form.php:263
 msgid "Force Dialed Number"
 msgstr "اجبار شماره گیری"
 
@@ -162,11 +162,11 @@ msgstr "اجبار شماره گیری"
 msgid "Group Description"
 msgstr "شرح گروه"
 
-#: functions.inc.php:334
+#: functions.inc.php:326
 msgid "INUSE"
 msgstr "در حال استفاده"
 
-#: views/form.php:236
+#: views/form.php:238
 msgid ""
 "If you select a Music on Hold class to play, instead of 'Ring', they will "
 "hear that instead of Ringing while they are waiting for someone to pick up."
@@ -178,7 +178,7 @@ msgstr ""
 msgid "Ignore CF Settings"
 msgstr "لغو تنظیمات CF"
 
-#: views/form.php:219
+#: views/form.php:221
 msgid "Inherit"
 msgstr "وارث"
 
@@ -228,7 +228,7 @@ msgstr ""
 "an external number by suffixing a number with a '#'.  ex:  2448089# would "
 "dial 2448089"
 
-#: views/form.php:66
+#: views/form.php:68
 msgid ""
 "Makes a call could hop between the included extensions without a predefined "
 "priority to ensure that calls in the groups are (almost) evenly spread. "
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Mark Answered Elsewhere"
 msgstr "علامت گذاری به عنوان پاسخ در جای دیگر"
 
-#: views/form.php:122
+#: views/form.php:124
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
@@ -250,7 +250,7 @@ msgstr ""
 "پیام که برای تماس گیرنده قبل از شماره گیری این گروه پخش میشود.<br><br> برای "
 "افزودن پیام ضبط شده لطفا از منوی \"ضبط سیستمی\" بالا استفاده کنید"
 
-#: views/form.php:157
+#: views/form.php:159
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
@@ -260,7 +260,7 @@ msgstr ""
 "فعال باشد.<br><br> برای افزودن پیام ضبط شده از منوی \"ضبط سیستمی\" بالا "
 "استفاده کنید"
 
-#: views/form.php:192
+#: views/form.php:194
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1.<br><br>To add additional "
@@ -270,7 +270,7 @@ msgstr ""
 "تماس پذیرفته شده باشد<br><br> برای افزودن پیام ضبط شده از منوی \"ضبط سیستمی"
 "\" بالا استفاده کنید"
 
-#: views/form.php:243
+#: views/form.php:245
 msgid "Mode"
 msgstr "حالت"
 
@@ -284,7 +284,7 @@ msgstr "هرگز"
 msgid "No"
 msgstr "خیر"
 
-#: views/advanced_form.php:194 views/form.php:108
+#: views/advanced_form.php:194 views/form.php:110
 msgid "None"
 msgstr "هیچکدام"
 
@@ -296,7 +296,7 @@ msgstr ""
 "Only ringall, ringallv2, hunt and the  respective -prim versions are "
 "supported when confirmation is checked"
 
-#: views/form.php:249 views/form.php:259
+#: views/form.php:251 views/form.php:261
 msgid "Outside Calls Fixed CID Value"
 msgstr "مقدار ثابت CID تماس های خروجی"
 
@@ -308,7 +308,7 @@ msgid ""
 msgstr ""
 "میزان رینگر را لغو کنید توجه: این در حال حاضر فقط برای تلفن های %s معتبر است"
 
-#: views/form.php:211
+#: views/form.php:213
 msgid "Play Music On Hold"
 msgstr "پخش موزیک انتظار"
 
@@ -328,15 +328,15 @@ msgstr "لطفا یک عنوان توصیفی برای گروه تماس ایج�
 msgid "Provide a name for this Ring Group."
 msgstr "اختصاص یک نام به گروه زنگ."
 
-#: views/form.php:136
+#: views/form.php:138
 msgid "Remote Announce"
 msgstr "آگهی راه دور"
 
-#: Ringgroups.class.php:159
+#: Ringgroups.class.php:177
 msgid "Reset"
 msgstr "بازیابی"
 
-#: views/form.php:218
+#: views/form.php:220
 msgid "Ring"
 msgstr "زنگ"
 
@@ -349,7 +349,7 @@ msgstr "گروه زنگ"
 msgid "Ring Group %s: "
 msgstr "گروه زنگ %s: "
 
-#: functions.inc.php:458
+#: functions.inc.php:428
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
@@ -361,12 +361,12 @@ msgstr "ماژول گروه زنگ"
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
 
-#: functions.inc.php:57 functions.inc.php:333
+#: functions.inc.php:57 functions.inc.php:325
 #, php-format
 msgid "Ring Group: %s"
 msgstr "گروه زنگ: %s"
 
-#: functions.inc.php:360
+#: functions.inc.php:352
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
@@ -391,11 +391,11 @@ msgstr "مدت زنگ (حداکثر 300 ثانیه)"
 msgid "Ring Tone"
 msgstr "صدای زنگ"
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "Ring all available channels until one answers (default)"
 msgstr "زنگ تمام کانال های موجود تا یک پاسخ دهنده (پیشفرض)"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
@@ -409,7 +409,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "شماره گروه زنگ"
 
-#: Ringgroups.class.php:129
+#: Ringgroups.class.php:147
 msgid "RingGroup"
 msgstr "گروه زنگ"
 
@@ -452,11 +452,11 @@ msgstr "همزمان"
 msgid "Skip Busy Agent"
 msgstr "رفتن به عامل اشغال"
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:172
 msgid "Submit"
 msgstr "ارسال"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "Take turns ringing each available extension"
 msgstr "Take turns  ringing each available extension"
 
@@ -468,7 +468,7 @@ msgstr "فهرست گروه میتواند تنها شامل 255 کاراکتر 
 msgid "The number users will dial to ring extensions in this ring group"
 msgstr "The  number users will dial to ring extensions in this ring group"
 
-#: views/form.php:60
+#: views/form.php:62
 msgid ""
 "These modes act as described above. However, if the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -480,7 +480,7 @@ msgstr ""
 "primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 
-#: Ringgroups.class.php:249
+#: Ringgroups.class.php:267
 msgid "This ringgroup"
 msgstr "این گروه زنگ"
 
@@ -504,11 +504,11 @@ msgstr ""
 msgid "Time must be between 1 and 300 seconds"
 msgstr "زمان باید بین 1 و 300 ثانیه باشد"
 
-#: views/form.php:171
+#: views/form.php:173
 msgid "Too-Late Announce"
 msgstr "هشدار Too-Late"
 
-#: views/form.php:249
+#: views/form.php:251
 msgid ""
 "Transmit the Fixed CID Value below on calls that come in from outside only. "
 "Internal extension to extension calls will continue to operate in default "
@@ -518,7 +518,7 @@ msgstr ""
 "Internal extension to extension calls will continue to operate in default "
 "mode."
 
-#: views/form.php:253
+#: views/form.php:255
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -530,7 +530,7 @@ msgstr ""
 "default mode. There must be a DID on the inbound route for this. This WILL "
 "be transmitted on trunks that block foreign CallerID"
 
-#: views/form.php:251
+#: views/form.php:253
 msgid ""
 "Transmit the number that was dialed as the CID for calls coming from "
 "outside. Internal extension to extension calls will continue to operate in "
@@ -542,15 +542,15 @@ msgstr ""
 "default mode. There must be a DID on the inbound route for this. This will "
 "be BLOCKED on trunks that block foreign CallerID"
 
-#: views/form.php:245
+#: views/form.php:247
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "انتقال CID تماس گیرنده ها اگر توسط ترانک مجاز باشد."
 
-#: views/form.php:251 views/form.php:260
+#: views/form.php:253 views/form.php:262
 msgid "Use Dialed Number"
 msgstr "استفاده از شماره تماس های گرفته شده"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "Warning! Extension"
 msgstr "هشدار! داخلی"
 
@@ -634,43 +634,43 @@ msgstr ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 
-#: views/form.php:223
+#: views/form.php:225
 msgid "default"
 msgstr "پیشفرض"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid "firstavailable"
 msgstr "اولین دسترسی"
 
-#: views/form.php:64
+#: views/form.php:66
 msgid "firstnotonphone"
 msgstr "first notonphone"
 
-#: views/form.php:56
+#: views/form.php:58
 msgid "hunt"
 msgstr "شکار"
 
-#: Ringgroups.class.php:249
+#: Ringgroups.class.php:267
 msgid "is already in use"
 msgstr "در حال استفاده"
 
-#: Ringgroups.class.php:79
+#: Ringgroups.class.php:97
 msgid "is not allowed for your account"
 msgstr "برای حساب شما مجاز نیست"
 
-#: views/form.php:58
+#: views/form.php:60
 msgid "memoryhunt"
 msgstr "شکار حافظه"
 
-#: views/form.php:222
+#: views/form.php:224
 msgid "none"
 msgstr "هیچ"
 
-#: views/form.php:66
+#: views/form.php:68
 msgid "random"
 msgstr "تصادفی"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid ""
 "ring only the first available channel. This strategy will work only when "
 "Confirm Calls is disabled."
@@ -678,7 +678,7 @@ msgstr ""
 "فقط اولین کانال موجود را رقم بزنید این استراتژی تنها زمانی کار می کند که "
 "تأیید تماس غیرفعال شود."
 
-#: views/form.php:64
+#: views/form.php:66
 msgid ""
 "ring only the first channel which is not offhook - ignore CW. This strategy "
 "will work only when Confirm Calls is disabled."
@@ -686,7 +686,7 @@ msgstr ""
 "فقط کانال اول که خاموش نیست - CW را نادیده بگیرید. این استراتژی تنها زمانی "
 "کار می کند که تأیید تماس غیرفعال شود."
 
-#: views/form.php:54
+#: views/form.php:56
 msgid "ringall"
 msgstr "زنگ به همه"
 
