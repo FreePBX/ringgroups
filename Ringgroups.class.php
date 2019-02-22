@@ -7,30 +7,30 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 
 	public function install() {
 
-        $freepbx_conf = \freepbx_conf::create();
+		$freepbx_conf = \freepbx_conf::create();
 
-        /* EXTENSION_LIST_RINGGROUPS */
-        $set['value'] = false;
-        $set['defaultval'] = &$set['value'];
-        $set['readonly'] = 0;
-        $set['hidden'] = 0;
-        $set['level'] = 0;
-        $set['module'] = 'ringgroups';
-        $set['category'] = 'Ring Group Module';
-        $set['emptyok'] = 0;
-        $set['sortorder'] = 50;
-        $set['name'] = 'Display Extension Ring Group Members';
-        $set['description'] = 'When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of.';
-        $set['type'] = CONF_TYPE_BOOL;
-        $freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS', $set, true);
+		/* EXTENSION_LIST_RINGGROUPS */
+		$set['value'] = false;
+		$set['defaultval'] = &$set['value'];
+		$set['readonly'] = 0;
+		$set['hidden'] = 0;
+		$set['level'] = 0;
+		$set['module'] = 'ringgroups';
+		$set['category'] = 'Ring Group Module';
+		$set['emptyok'] = 0;
+		$set['sortorder'] = 50;
+		$set['name'] = 'Display Extension Ring Group Members';
+		$set['description'] = 'When set to true extensions that belong to one or more Ring Groups will have a Ring Group section and link back to each group they are a member of.';
+		$set['type'] = CONF_TYPE_BOOL;
+		$freepbx_conf->define_conf_setting('EXTENSION_LIST_RINGGROUPS', $set, true);
 
 
-        /*Fix recording status. If it's 'yes' or 'no, it should be 'force' or 'never'. */
-        $sql = 'UPDATE `ringgroups` SET `recording`="never" WHERE `recording`="no"';
-        $this->Database->query($sql)->execute();
-        $sql = 'UPDATE `ringgroups` SET `recording`="force" WHERE `recording`="yes"';
-        $this->Database->query($sql)->execute();
-    }
+		/*Fix recording status. If it's 'yes' or 'no, it should be 'force' or 'never'. */
+		$sql = 'UPDATE `ringgroups` SET `recording`="never" WHERE `recording`="no"';
+		$this->Database->query($sql)->execute();
+		$sql = 'UPDATE `ringgroups` SET `recording`="force" WHERE `recording`="yes"';
+		$this->Database->query($sql)->execute();
+	}
 	public function uninstall() {}
 
 	public function doConfigPageInit($page) {
@@ -189,7 +189,7 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 	}
 
 	public function listRinggroups($get_all=false) {
-        $sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
+		$sql = "SELECT grpnum, description FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
 		$stmt = $this->Database->prepare($sql);
 		$stmt->execute();
 		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
@@ -205,22 +205,22 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		}
 		if (isset($grps)){
 			return $grps;
-        }
+		}
 		return array();
 	}
 
 	public function getExtensionLists($grpnum) {
-	    $sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
-	    $sth = $this->Database->prepare($sql);
-	    $sth->execute(array($grpnum));
-	    $rows = $sth->fetch(\PDO::FETCH_ASSOC);
-	    return $rows;
+		$sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
+		$sth = $this->Database->prepare($sql);
+		$sth->execute(array($grpnum));
+		$rows = $sth->fetch(\PDO::FETCH_ASSOC);
+		return $rows;
 	}
 
 	public function updateExtensionLists($grpnum, $extensions) {
-	    $sql = "UPDATE ringgroups SET grplist = ? WHERE grpnum = ?";
-	    $sth = $this->Database->prepare($sql);
-	    $sth->execute(array($extensions, $grpnum));
+		$sql = "UPDATE ringgroups SET grplist = ? WHERE grpnum = ?";
+		$sth = $this->Database->prepare($sql);
+		$sth->execute(array($extensions, $grpnum));
 	}
 
 	public function ajaxRequest($req, &$setting) {
@@ -316,65 +316,56 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		if(!$editmode){
 			$grouplist = $this->listRinggroups();
 			if(isset($grouplist)) {
-			    foreach($grouplist as $list => $group) {
-			        $extensionlist = $this->getExtensionLists($group['grpnum']);
-			        $extensions = explode('-', $extensionlist['grplist']);
-			        $key = array_search($account, $extensions);
-			        if ($key !== FALSE) {
-			            unset($extensions[$key]);
-			            $new_grplist = implode('-',$extensions);
-			            $this->updateExtensionLists($group['grpnum'], $new_grplist);
-			        }
-			    }
+				foreach($grouplist as $list => $group) {
+					$extensionlist = $this->getExtensionLists($group['grpnum']);
+					$extensions = explode('-', $extensionlist['grplist']);
+					$key = array_search($account, $extensions);
+					if ($key !== FALSE) {
+						unset($extensions[$key]);
+						$new_grplist = implode('-',$extensions);
+						$this->updateExtensionLists($group['grpnum'], $new_grplist);
+					}
+				}
 			}
 		}
-    }
+	}
 
-    public function get($grpnum){
-        $sql = "SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = :grpnum LIMIT 1";
-        $stmt = $this->Database->prepare($sql);
-        $stmt->execute([':grpnum' => $grpnum]);
+	public function get($grpnum){
+		$sql = "SELECT grpnum, strategy, grptime, grppre, grplist, annmsg_id, postdest, description, alertinfo, needsconf, remotealert_id, toolate_id, ringing, cwignore, cfignore, cpickup, recording, progress, elsewhere,rvolume FROM ringgroups WHERE grpnum = :grpnum LIMIT 1";
+		$stmt = $this->Database->prepare($sql);
+		$stmt->execute([':grpnum' => $grpnum]);
 		$results = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($this->FreePBX->astman->connected()) {
-            $astdb_changecid = strtolower($this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/changecid"));
-            switch ($astdb_changecid) {
-                case 'default':
-                case 'did':
-                case 'forcedid':
-                case 'fixed':
-                case 'extern':
-                    break;
-                default:
-                    $astdb_changecid = 'default';
-            }
-            $results['changecid'] = $astdb_changecid;
-            $fixedcid = $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/fixedcid");
-            $results['fixedcid'] = preg_replace("/[^0-9\+]/", "", trim($fixedcid));
-        } else {
+		if ($this->FreePBX->astman->connected()) {
+			$astdb_changecid = strtolower($this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/changecid"));
+			switch ($astdb_changecid) {
+				case 'default':
+				case 'did':
+				case 'forcedid':
+				case 'fixed':
+				case 'extern':
+					break;
+				default:
+					$astdb_changecid = 'default';
+			}
+			$results['changecid'] = $astdb_changecid;
+			$fixedcid = $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/fixedcid");
+			$results['fixedcid'] = preg_replace("/[^0-9\+]/", "", trim($fixedcid));
+		} else {
 			throw new \RuntimeException("Cannot connect to Asterisk Manager");
-        }
-        return $results;
-    } 
-
-    public function delete($grpnum){
-        $sql = "DELETE FROM ringgroups WHERE grpnum = :grpnum";
-        $stmt = $this->Database->prepare($sql);
-        $stmt->execute([':grpnum' => $grpnum]);
-        if ($this->FreePBX->astman->connected()) {
-            $this->FreePBX->astman->database_deltree("RINGGROUP/" . $grpnum);
-        } else {
-            die_freepbx("Cannot connect to Asterisk Manager with");
-        }
-        return $this;
+		}
+		return $results;
 	}
 
-	public function setDatabase($pdo){
-		$this->Database = $pdo;
+	public function delete($grpnum){
+		$sql = "DELETE FROM ringgroups WHERE grpnum = :grpnum";
+		$stmt = $this->Database->prepare($sql);
+		$stmt->execute([':grpnum' => $grpnum]);
+		if ($this->FreePBX->astman->connected()) {
+			$this->FreePBX->astman->database_deltree("RINGGROUP/" . $grpnum);
+		} else {
+			die_freepbx("Cannot connect to Asterisk Manager with");
+		}
 		return $this;
 	}
 
-	public function resetDatabase(){
-		$this->Database = $this->FreePBX->Database;
-		return $this;
-	}
 }
