@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: 2008-11-06 14:54+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Default"
 msgstr "Predefinito"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr ""
 
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Gruppo di Chiamata Numero"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "Salta Agenti Occupati"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr ""
 

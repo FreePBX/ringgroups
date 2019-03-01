@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr ""
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "מספר קבוצת צלצול"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "דלג הסוכן תפוס"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr ""
 

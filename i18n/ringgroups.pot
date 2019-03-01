@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for ringgroups
-# Copyright (C) 2008-2018 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2019 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr ""
 
@@ -298,7 +298,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr ""
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr ""
 
@@ -377,7 +377,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr ""
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr ""
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr ""
 

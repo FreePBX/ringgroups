@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: 2016-05-05 04:27+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr "حذف"
 
@@ -329,7 +329,7 @@ msgstr "اختصاص یک نام به گروه زنگ."
 msgid "Remote Announce"
 msgstr "آگهی راه دور"
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr "باز نشانی"
 
@@ -403,7 +403,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "شماره گروه زنگ"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr "گروه زنگ"
 
@@ -442,7 +442,7 @@ msgstr "همزمان"
 msgid "Skip Busy Agent"
 msgstr "رفتن به عامل اشغال"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr "ارسال"
 

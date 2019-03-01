@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: 2017-03-06 20:45+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr "Apagar"
 
@@ -334,7 +334,7 @@ msgstr "Forneça um nome para este Grupo de Toques."
 msgid "Remote Announce"
 msgstr "Anúncio Remoto"
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -408,7 +408,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "Número do Grupo de Toques"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr "Grupo de Toque"
 
@@ -448,7 +448,7 @@ msgstr "Simultâneo"
 msgid "Skip Busy Agent"
 msgstr "Ignorar Agentes Ocupados"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr "Enviar"
 

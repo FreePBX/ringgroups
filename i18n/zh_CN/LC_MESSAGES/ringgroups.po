@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:26-0400\n"
+"POT-Creation-Date: 2019-03-01 16:21+0530\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ringgroups.class.php:144
+#: Ringgroups.class.php:146
 msgid "Delete"
 msgstr "删除"
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Remote Announce"
 msgstr "远端播报"
 
-#: Ringgroups.class.php:154
+#: Ringgroups.class.php:156
 msgid "Reset"
 msgstr "重新设置"
 
@@ -370,7 +370,7 @@ msgstr ""
 msgid "Ring-Group Number"
 msgstr "拨号小组号码"
 
-#: Ringgroups.class.php:124
+#: Ringgroups.class.php:126
 msgid "RingGroup"
 msgstr "振铃组"
 
@@ -406,7 +406,7 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "跳过忙碌的坐席"
 
-#: Ringgroups.class.php:149
+#: Ringgroups.class.php:151
 msgid "Submit"
 msgstr "提交"
 
