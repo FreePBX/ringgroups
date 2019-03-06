@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:23+0530\n"
+"POT-Creation-Date: 2019-03-06 18:14-0500\n"
 "PO-Revision-Date: 2016-12-15 23:31+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -109,10 +109,6 @@ msgstr "Descrição"
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Destino caso não responda"
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr "Exibir Membros do Grupo de Toques de Ramais"
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -359,10 +355,6 @@ msgstr "Grupo de Toque %s: "
 msgid "Ring Group Membership"
 msgstr "Membros do Grupo de Toque"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr "Módulo de Grupo de Toque"
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Nome do Grupo de Toque"
@@ -594,15 +586,6 @@ msgstr ""
 "final, por exemplo, para acessar o Siga-Me do ramal, podem não respeitar "
 "essa configuração."
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-"Quando configurado para ramais verdadeiros que pertencem a um ou mais Grupos "
-"de Toque terá uma seção de Grupo de Toques e um enlace para cada grupo do "
-"qual eles são membros."
-
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Onde enviar os usuários chamadores se não houver resposta."
@@ -688,6 +671,21 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "tocar todos"
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr "Exibir Membros do Grupo de Toques de Ramais"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "Módulo de Grupo de Toque"
+
+#~ msgid ""
+#~ "When set to true extensions that belong to one or more Ring Groups will "
+#~ "have a Ring Group section and link back to each group they are a member "
+#~ "of."
+#~ msgstr ""
+#~ "Quando configurado para ramais verdadeiros que pertencem a um ou mais "
+#~ "Grupos de Toque terá uma seção de Grupo de Toques e um enlace para cada "
+#~ "grupo do qual eles são membros."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

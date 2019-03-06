@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 21:25-0500\n"
+"POT-Creation-Date: 2019-03-06 18:14-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,10 +102,6 @@ msgstr ""
 #: views/advanced_form.php:465
 #: views/simple_form.php:141
 msgid "Destination if no answer"
-msgstr ""
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
 msgstr ""
 
 #: views/advanced_form.php:438
@@ -325,10 +321,6 @@ msgstr ""
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr ""
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -529,12 +521,6 @@ msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
-msgstr ""
-
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
 #: views/advanced_form.php:477

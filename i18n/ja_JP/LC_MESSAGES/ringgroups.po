@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:23+0530\n"
+"POT-Creation-Date: 2019-03-06 18:14-0500\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -132,10 +132,6 @@ msgstr ""
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "応答がない場合の転送先"
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr "内線着信グループのメンバーを表示する"
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -352,10 +348,6 @@ msgstr "着信グループ %s: "
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr "着信グループモジュール"
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -568,14 +560,6 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-"trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信グ"
-"ループ」の項目が追加され、所属するグループへのリンクが表示されます。"
-
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
@@ -655,6 +639,20 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr "内線着信グループのメンバーを表示する"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "着信グループモジュール"
+
+#~ msgid ""
+#~ "When set to true extensions that belong to one or more Ring Groups will "
+#~ "have a Ring Group section and link back to each group they are a member "
+#~ "of."
+#~ msgstr ""
+#~ "trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信"
+#~ "グループ」の項目が追加され、所属するグループへのリンクが表示されます。"
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

@@ -2,9 +2,9 @@
 namespace FreePBX\modules\Ringgroups;
 use FreePBX\modules\Backup as Base;
 class Restore Extends Base\RestoreBase{
-	public function runRestore($jobid){
+	public function runRestore(){
 		$configs = $this->getConfigs();
-		foreach($configs as $rg) {
+		foreach($configs['groups'] as $rg) {
 			$this->FreePBX->Ringgroups->delete($rg['grpnum'])
 			->add(
 				$rg['grpnum'],
@@ -31,9 +31,11 @@ class Restore Extends Base\RestoreBase{
 				$rg['rvolume']
 			);
 		}
+		$this->importAdvancedSettings($configs['settings']);
 	}
 
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
 		$this->restoreLegacyDatabase($pdo);
+		$this->restoreLegacyAdvancedSettings($pdo);
 	}
 }
