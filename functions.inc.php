@@ -77,7 +77,7 @@ function ringgroups_get_config($engine) {
 				foreach($ringlist as $item) {
 					$grpnum = ltrim($item['0']);
 					$grp = ringgroups_get($grpnum);
-					$ae = ($grp['elsewhere'] == 'yes')?'c':'';
+					$ae = ($grp['elsewhere'] == 'yes')?'cQ(NONE)':'';
 					$strategy = $grp['strategy'];
 					$grptime = $grp['grptime'];
 					$grplist = $grp['grplist'];
