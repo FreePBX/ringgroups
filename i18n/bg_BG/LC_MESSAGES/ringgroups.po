@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 18:14-0500\n"
+"POT-Creation-Date: 2019-03-25 16:21+0530\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ringgroups/bg/>\n"
@@ -108,6 +108,10 @@ msgstr "Описание"
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Направление ако не е отговорено"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr "Покажи Вътрешните Номера на Потребителите в Група на Звънене"
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -354,6 +358,10 @@ msgstr "Група на Звънене %s: "
 msgid "Ring Group Membership"
 msgstr "Потребител в Група на Звънене"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "Модул Групи на Звънене"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Име на Група на Звънене"
@@ -593,6 +601,15 @@ msgstr ""
 "въведени с '#' в края, например за достъп до Следвай Ме, може да не зачетат "
 "тези настройки."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Когато е установено вярно вътрешните линии които принадлежат на една или "
+"повече Групи на Звънене ще имат секция Група на Звънене и линк към всяка "
+"група в която участват."
+
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Къде да изпратите повикващите, ако няма отговор."
@@ -679,21 +696,6 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "звъни на всички"
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "Покажи Вътрешните Номера на Потребителите в Група на Звънене"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "Модул Групи на Звънене"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Когато е установено вярно вътрешните линии които принадлежат на една или "
-#~ "повече Групи на Звънене ще имат секция Група на Звънене и линк към всяка "
-#~ "група в която участват."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

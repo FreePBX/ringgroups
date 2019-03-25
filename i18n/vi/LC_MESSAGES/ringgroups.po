@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 18:14-0500\n"
+"POT-Creation-Date: 2019-03-25 16:21+0530\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -109,6 +109,11 @@ msgstr "Mô tả"
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Điểm đích nếu không trả lời"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr ""
+"Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy nhánh)"
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -357,6 +362,10 @@ msgstr "Ring Group (Nhóm đổ chuông): %s "
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "Mô đun Ring Group"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
@@ -590,6 +599,15 @@ msgstr ""
 "nhập dấu # ở cuối, chẳng hạn để truy nhập vào tính năng Follow-Me của máy "
 "nhánh, thì có thể không cần cài đặt này."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Ring Group sẽ "
+"có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là thành "
+"viên trong đấy."
+
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
@@ -674,23 +692,6 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "Đổ chuông tất cả"
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr ""
-#~ "Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy "
-#~ "nhánh)"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "Mô đun Ring Group"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Ring Group "
-#~ "sẽ có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là "
-#~ "thành viên trong đấy."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

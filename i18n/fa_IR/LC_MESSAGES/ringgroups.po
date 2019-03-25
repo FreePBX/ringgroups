@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 18:14-0500\n"
+"POT-Creation-Date: 2019-03-25 16:21+0530\n"
 "PO-Revision-Date: 2019-02-02 01:00+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/ringgroups/fa/>\n"
@@ -107,6 +107,10 @@ msgstr "شرح"
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "مقصد در صورت عدم پاسخگویی"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr "نمایش داخلی به اعضا گروه زنگ"
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -349,6 +353,10 @@ msgstr "گروه زنگ %s: "
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "ماژول گروه زنگ"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "نام گروه زنگ"
@@ -584,6 +592,14 @@ msgstr ""
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"When set to true extensions  that belong to one or more Ring Groups will "
+"have a Ring Group section and link back to each group they are a member of."
+
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "اگر پاسخ خیر باشد تماس گیرنده به کجا ارسال شود."
@@ -673,21 +689,6 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "زنگ به همه"
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "نمایش داخلی به اعضا گروه زنگ"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "ماژول گروه زنگ"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "When set to true extensions  that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 18:14-0500\n"
+"POT-Creation-Date: 2019-03-25 16:21+0530\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -101,6 +101,10 @@ msgstr "描述"
 #: views/advanced_form.php:465 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr ""
 
 #: views/advanced_form.php:438
 msgid "Dont Care"
@@ -317,6 +321,10 @@ msgstr "拨号小组 %s："
 msgid "Ring Group Membership"
 msgstr "振铃组成员"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr ""
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -517,6 +525,12 @@ msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
+msgstr ""
+
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
 msgstr ""
 
 #: views/advanced_form.php:477 views/simple_form.php:153
