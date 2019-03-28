@@ -20,15 +20,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-31 14:20+0530\n"
-"PO-Revision-Date: 2018-07-18 19:12+0000\n"
-"Last-Translator: philippebolduc <philippe@florenceinc.com>\n"
+"PO-Revision-Date: 2019-03-29 17:00+0000\n"
+"Last-Translator: jeremie cattan <freepbx@famillecattan.com>\n"
 "Language-Team: French <http://*/projects/freepbx/ringgroups/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.19.1\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/form.php:60
 msgid "*-prim"
@@ -278,13 +278,13 @@ msgstr ""
 
 #: views/advanced_form.php:440
 msgid "Never"
-msgstr ""
+msgstr "Jamais"
 
 #: views/advanced_form.php:224 views/advanced_form.php:251
 #: views/advanced_form.php:278 views/advanced_form.php:305
 #: views/advanced_form.php:332 views/advanced_form.php:359
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: views/advanced_form.php:194 views/form.php:108
 msgid "None"
@@ -335,7 +335,7 @@ msgstr ""
 
 #: Ringgroups.class.php:159
 msgid "Reset"
-msgstr ""
+msgstr "Réinitialiser"
 
 #: views/form.php:218
 msgid "Ring"
@@ -579,7 +579,7 @@ msgstr ""
 #: views/advanced_form.php:276 views/advanced_form.php:303
 #: views/advanced_form.php:330 views/advanced_form.php:357
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: views/advanced_form.php:448
 msgid ""
