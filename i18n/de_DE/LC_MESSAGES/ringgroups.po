@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-31 14:20+0530\n"
-"PO-Revision-Date: 2018-11-14 20:00+0000\n"
-"Last-Translator: hammer125 hammer125 <auswertung@aon.at>\n"
+"PO-Revision-Date: 2019-04-17 10:00+0000\n"
+"Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: views/advanced_form.php:436
 msgid "Force"
-msgstr "Erzwingen"
+msgstr "Erzwinge"
 
 #: views/form.php:253 views/form.php:261
 msgid "Force Dialed Number"
