@@ -5,7 +5,7 @@ class Backup Extends Base\BackupBase{
 	public function runBackup($id,$transaction){
 		$this->addDirectories($dirs);
 		$this->addDependency('core');
-		$this->addDependency('callrecordings');
+		$this->addDependency('callrecording');
 		$this->addConfigs([
 			'groups' => $this->FreePBX->Database->query('SELECT * FROM ringgroups')->fetchAll(\PDO::FETCH_ASSOC),
 			'settings' => $this->dumpAdvancedSettings()
