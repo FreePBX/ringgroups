@@ -3,7 +3,6 @@ namespace FreePBX\modules\Ringgroups;
 use FreePBX\modules\Backup as Base;
 class Backup Extends Base\BackupBase{
 	public function runBackup($id,$transaction){
-		$this->addDirectories($dirs);
 		$this->addDependency('core');
 		$this->addDependency('callrecording');
 		$this->addConfigs([
