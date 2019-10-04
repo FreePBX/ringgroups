@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>14.0.1.9</version>
+	<version>14.0.1.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
+		*14.0.1.10* Fixing FREEI-787 
 		*14.0.1.9* FREEPBX-19795
 		*14.0.1.8* FREEPBX-18379 
 		*14.0.1.7* FREEPBX-14518 Uniformity: Ring Groups Form return to grid 
