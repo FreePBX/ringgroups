@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-31 14:20+0530\n"
-"PO-Revision-Date: 2018-11-14 20:00+0000\n"
-"Last-Translator: hammer125 hammer125 <auswertung@aon.at>\n"
+"PO-Revision-Date: 2019-05-30 12:00+0000\n"
+"Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: views/advanced_form.php:436
 msgid "Force"
-msgstr "Erzwingen"
+msgstr "Erzwinge"
 
 #: views/form.php:253 views/form.php:261
 msgid "Force Dialed Number"
@@ -315,8 +315,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
-"Ruftonlautstärke übersteuern. Hinweis: Dies gilt zur Zeit nur für Telefone "
-"von %s"
+"Überschreibe die Klingeltonlautstärke. BEACHTE: Das gilt hier nur für %s "
+"Telefone"
 
 #: views/form.php:211
 msgid "Play Music On Hold"
@@ -432,8 +432,8 @@ msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
-"Wählen Sie aus der obigen Liste einen Klingelton. Hierdurch wird festgelegt, "
-"wie Ihr Telefon klingt, wenn es aus dieser Gruppe angeläutet wird."
+"Wählen Sie einen Klingelton aus der Liste hier drüber. So klingelt dann Ihr "
+"Telefon, wenn Sie von dieser Gruppe angerufen werden."
 
 #: views/advanced_form.php:217
 msgid "Send Progress"
@@ -655,7 +655,7 @@ msgstr ""
 
 #: views/form.php:222
 msgid "none"
-msgstr "keine"
+msgstr "nichts"
 
 #: views/form.php:66
 msgid "random"
