@@ -154,6 +154,9 @@
 		</div>
 	</div>
 </div>
+<?php if (!empty($last_ext)) { ?>
+<input type="hidden" id="account" name="account" value="<?php echo $last_ext?>">
+<?php } ?>
 <input type="hidden" id="grpre" name="grppre" value="<?php echo $grppre?>">
 <input type="hidden" id="cfignore" name="cfignore"  value="<?php echo $cfignore?>">
 <input type="hidden" id="cwignore" name="cwignore"  value="<?php echo $cwignore?>">
