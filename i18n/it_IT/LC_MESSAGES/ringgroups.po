@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-25 16:21+0530\n"
+"POT-Creation-Date: 2020-01-14 15:54+0530\n"
 "PO-Revision-Date: 2018-07-18 19:18+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
@@ -35,10 +35,11 @@ msgstr ""
 "estensione separatamente nell'ordine definito nell'elenco"
 
 #: views/advanced_form.php:178
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings."
 msgstr ""
-"ALERT_INFO può essere utilizzato per l'anello distintivo con i dispositivi "
-"SIP."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -60,10 +61,6 @@ msgstr "Trasmetti sempre il valore CID fisso di seguito."
 msgid "Announcement"
 msgstr "Annuncio"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Applicazioni"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefisso Nome CID"
@@ -79,20 +76,6 @@ msgstr "Modifica configurazione CID esterna"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Conferma Chiamate"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Crea un gruppo di estensioni che suonano tutte insieme. Le estensioni "
-"possono essere suonate tutte contemporaneamente o in varie configurazioni di "
-"\"caccia\". Inoltre, sono supportati numeri esterni e c'è un'opzione di "
-"conferma della chiamata in cui il destinatario deve confermare se in realtà "
-"vuole prendere la chiamata prima che il chiamante venga trasferito."
 
 #: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
@@ -110,7 +93,7 @@ msgstr "Descrizione"
 msgid "Destination if no answer"
 msgstr "Destinazione se nessuna risposta"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:4
 msgid "Display Extension Ring Group Members"
 msgstr "Visualizza membri del gruppo di squilli di estensione"
 
@@ -359,7 +342,7 @@ msgstr "Gruppo di Chiamata %s:"
 msgid "Ring Group Membership"
 msgstr "Appartenenza al gruppo di suoneria"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:6
 msgid "Ring Group Module"
 msgstr "Modulo del gruppo di suoneria"
 
@@ -377,7 +360,7 @@ msgstr "Gruppo di Chiamata: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Gruppi di chiamata"
 
@@ -604,7 +587,7 @@ msgstr ""
 "fine, ad esempio per accedere al Follow-Me dell'interno, potrebbero non "
 "rispettare questa impostazione."
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -699,6 +682,27 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr ""
+#~ "ALERT_INFO può essere utilizzato per l'anello distintivo con i "
+#~ "dispositivi SIP."
+
+#~ msgid "Applications"
+#~ msgstr "Applicazioni"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Crea un gruppo di estensioni che suonano tutte insieme. Le estensioni "
+#~ "possono essere suonate tutte contemporaneamente o in varie configurazioni "
+#~ "di \"caccia\". Inoltre, sono supportati numeri esterni e c'è un'opzione "
+#~ "di conferma della chiamata in cui il destinatario deve confermare se in "
+#~ "realtà vuole prendere la chiamata prima che il chiamante venga trasferito."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

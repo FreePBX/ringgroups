@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-25 16:21+0530\n"
+"POT-Creation-Date: 2020-01-14 15:54+0530\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -61,8 +61,11 @@ msgid ""
 msgstr ""
 
 #: views/advanced_form.php:178
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr "アラート情報（ALERT_INFO）を使ってSIP端末の着信音に設定できます。"
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings."
+msgstr ""
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -84,10 +87,6 @@ msgstr "常に以下の固定CIDを送信します。"
 msgid "Announcement"
 msgstr ""
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "アプリケーション"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "CID名前プリフィックス"
@@ -103,19 +102,6 @@ msgstr "外部CID設定を変更する"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "コールを確認する"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
-"様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
-"他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認でき"
-"るオプションも使えます。"
 
 #: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
@@ -133,7 +119,7 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr "応答がない場合の転送先"
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:4
 msgid "Display Extension Ring Group Members"
 msgstr "内線着信グループのメンバーを表示する"
 
@@ -352,7 +338,7 @@ msgstr "着信グループ %s: "
 msgid "Ring Group Membership"
 msgstr "所属する着信グループ"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:6
 msgid "Ring Group Module"
 msgstr "着信グループモジュール"
 
@@ -370,7 +356,7 @@ msgstr "着信グループ: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "着信グループ: %s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "着信グループ"
 
@@ -568,7 +554,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -655,6 +641,24 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr "アラート情報（ALERT_INFO）を使ってSIP端末の着信音に設定できます。"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "同時に呼び出される内線のグループを作成します。内線は全て同時に呼び出すか、"
+#~ "様々な'ハント'構成で呼び出すか設定できます。内線に加えて外部の番号が使える"
+#~ "他、コールを転送する前に、呼び出し先の人がコールを受けたいかどうかを確認で"
+#~ "きるオプションも使えます。"
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-25 16:21+0530\n"
+"POT-Creation-Date: 2020-01-14 15:54+0530\n"
 "PO-Revision-Date: 2018-07-27 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
@@ -35,10 +35,11 @@ msgstr ""
 "der vorgegebenen Reihenfolge an"
 
 #: views/advanced_form.php:178
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings."
 msgstr ""
-"ALERT_INFO kann für einen charakteristischen Klingelton auf SIP-Geräten "
-"genutzt werden."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -60,10 +61,6 @@ msgstr "Immer die unten stehende Anruferkennung übermitteln."
 msgid "Announcement"
 msgstr "Ankündigung"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Anwendungen"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Namenspräfix für Anruferkennung"
@@ -79,21 +76,6 @@ msgstr "Externe Konfiguration der Anurferkennung ändern"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Anrufe bestätigen"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Erzeugt eine Gruppe von Nebenstellen, die gemeinsam klingeln. Die "
-"Nebenstellen können alle auf einmal oder in verschiedenen „Jagd“-"
-"Konfigurationen angeläutet werden. Zusätzlich werden externe Rufnummern "
-"unterstützt und es existiert eine Option, Anrufe zu bestätigen, wobei der "
-"Angerufene bestätigen muss, ob er den Anruf tatsächlich annehmen will, bevor "
-"der Anrufer durchgestellt wird."
 
 #: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
@@ -111,7 +93,7 @@ msgstr "Beschreibung"
 msgid "Destination if no answer"
 msgstr ""
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:4
 msgid "Display Extension Ring Group Members"
 msgstr "Mitglieder der Nebenstellen-Klingelgruppe anzeigen"
 
@@ -359,7 +341,7 @@ msgstr "Klingelgruppe %s: "
 msgid "Ring Group Membership"
 msgstr "Klingelgruppen-Mitgliedschaft"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:6
 msgid "Ring Group Module"
 msgstr "Klingelgruppenmodul"
 
@@ -377,7 +359,7 @@ msgstr "Klingelgruppe: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Klingelgruppe: %s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Klingelgruppen"
 
@@ -572,7 +554,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -655,6 +637,28 @@ msgstr ""
 #: views/form.php:56
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr ""
+#~ "ALERT_INFO kann für einen charakteristischen Klingelton auf SIP-Geräten "
+#~ "genutzt werden."
+
+#~ msgid "Applications"
+#~ msgstr "Anwendungen"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Erzeugt eine Gruppe von Nebenstellen, die gemeinsam klingeln. Die "
+#~ "Nebenstellen können alle auf einmal oder in verschiedenen „Jagd“-"
+#~ "Konfigurationen angeläutet werden. Zusätzlich werden externe Rufnummern "
+#~ "unterstützt und es existiert eine Option, Anrufe zu bestätigen, wobei der "
+#~ "Angerufene bestätigen muss, ob er den Anruf tatsächlich annehmen will, "
+#~ "bevor der Anrufer durchgestellt wird."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
