@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>15.0.11.6</version>
+	<version>16.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,22 +11,7 @@
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
 	<changelog>
-		*15.0.11.6* FREEPBX-20683
-		*15.0.11.5* FREEI-787 Cannot edit Ring Groups in Basic Mode 
-		*15.0.11.4* Fixing FREEI-787 
-		*15.0.11.3* FREEPBX-20060 Remove bad method call in backup 
-		*15.0.11.2* FREEPBX-20038 Could not backup module ringgroups because it depends on callrecordings which is not enabled 
-		*15.0.11.1* FREEPBX-19795
-		*15.0.11* FREEPBX-18379 
-		*15.0.9* fixing legacy restore
-		*15.0.8* backup and restore
-		*15.0.7* FREEPBX-14518 Uniformity: Ring Groups Form return to grid
-		*15.0.6* Feature/FREEPBX-15651
-		*15.0.5* FREEPBX-18376 Fix parameter name in legacy function
-		*15.0.4* FREEPBX-18189 Fix form to redirect to landing
-		*15.0.3* FREEPBX-18135 Fix get method used to pull single data
-		*15.0.2* Packaging of ver 15.0.2
-		*15.0.1* Impliment 15 backup
+		*16.0.1alpha* 16.0.1 alpha release
 	</changelog>
 	<depends>
 		<module>callrecording ge 12.0.1</module>
@@ -67,6 +52,6 @@
 		</ringgroups>
  	</popovers>
 	<supported>
-		<version>15.0</version>
+		<version>16.0</version>
 	</supported>
 </module>
