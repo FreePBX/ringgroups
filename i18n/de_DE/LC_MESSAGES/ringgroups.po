@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2019-05-30 12:00+0000\n"
+"PO-Revision-Date: 2020-02-05 12:00+0000\n"
 "Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
@@ -40,6 +40,9 @@ msgid ""
 "having issues, see the \"Enforce RFC7462\" option found in Settings-"
 ">Advanced Settings."
 msgstr ""
+"ALERT_INFO kann für einen eindeutigen Rufton bei SIP-Geräten verwendet "
+"werden. <br> Wenn Sie Probleme haben, lesen Sie die Option \"RFC7462 "
+"erzwingen\" unter Einstellungen-> Erweiterte Einstellungen."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -322,7 +325,7 @@ msgstr "Geben Sie einen Namen für diese Rufgruppe an."
 
 #: views/form.php:136
 msgid "Remote Announce"
-msgstr ""
+msgstr "Remote-Ankündigung"
 
 #: Ringgroups.class.php:159
 msgid "Reset"
@@ -606,6 +609,10 @@ msgid ""
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
 "as \"Sales:John Doe\" on the extensions that ring."
 msgstr ""
+"Sie können dem CallerID-Namen optional ein Präfix voranstellen, wenn Sie "
+"Nebenstellen in dieser Gruppe anrufen. Dh: Wenn Sie \"Sales:\" voranstellen, "
+"wird ein Anruf von John Doe als \"Sales: John Doe\" auf den Nebenstellen "
+"angezeigt, die klingeln."
 
 #: views/form.php:223
 msgid "default"
@@ -648,6 +655,8 @@ msgid ""
 "ring only the first available channel. This strategy will work only when "
 "Confirm Calls is disabled."
 msgstr ""
+"Nur den ersten verfügbaren Kanal anrufen. Diese Strategie funktioniert nur, "
+"wenn Anrufe bestätigen deaktiviert ist."
 
 #: views/form.php:64
 msgid ""
