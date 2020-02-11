@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2020-02-11 14:19+0000\n"
+"PO-Revision-Date: 2020-02-12 07:01+0000\n"
 "Last-Translator: hammer125 <auswertung@mariner.at>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
@@ -325,7 +325,7 @@ msgstr "Geben Sie einen Namen für diese Rufgruppe an."
 
 #: views/form.php:136
 msgid "Remote Announce"
-msgstr "Remote-Ankündigung"
+msgstr "Ferndurchsage"
 
 #: Ringgroups.class.php:159
 msgid "Reset"
