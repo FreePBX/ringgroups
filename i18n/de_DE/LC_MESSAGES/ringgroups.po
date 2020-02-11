@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
 "PO-Revision-Date: 2020-02-11 14:19+0000\n"
-"Last-Translator: florian alberts <alberts@ar-systems.de>\n"
+"Last-Translator: hammer125 <auswertung@mariner.at>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: views/advanced_form.php:244
 msgid "Mark Answered Elsewhere"
-msgstr ""
+msgstr "Markierung anderswo beantwortet"
 
 #: views/form.php:122
 msgid ""
