@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2020-02-05 12:00+0000\n"
+"PO-Revision-Date: 2020-02-11 14:19+0000\n"
 "Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
 "Language: de_DE\n"
@@ -431,6 +431,7 @@ msgstr "Aufeinanderfolgend"
 #: views/advanced_form.php:259
 msgid "Should calls indicate answered elsewhere when a user answers."
 msgstr ""
+"Sollten Anrufe anderswo beantwortet werden, wenn ein Benutzer antwortet."
 
 #: views/advanced_form.php:232
 msgid ""
@@ -473,6 +474,11 @@ msgid ""
 "is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
 "unconditional, then all will be rung"
 msgstr ""
+"Diese Modi verhalten sich wie oben beschrieben. Wenn jedoch die primäre "
+"Nebenstelle (erste in der Liste) belegt ist, werden die anderen Nebenstellen "
+"nicht angerufen. Wenn die primäre FreePBX-DND ist, wird sie nicht angerufen. "
+"Wenn der primäre Server bedingungslos FreePBX CF ist, werden alle Teilnehmer "
+"angerufen"
 
 #: Ringgroups.class.php:249
 msgid "This ringgroup"
@@ -559,6 +565,11 @@ msgid ""
 "will not be presented with the call and in the various hunt style ring "
 "strategies, the next agent will be attempted."
 msgstr ""
+"Wenn diese Option aktiviert ist, werden Agenten, die sich an einem besetzten "
+"Telefon befinden, so übersprungen, als würde die Leitung besetzt "
+"zurückkehren. Dies bedeutet, dass Anklopfen oder Telefone mit mehreren "
+"Leitungen nicht mit dem Anruf verbunden werden und in den verschiedenen "
+"Klingelstrategien für den Sammelruf der nächste Agent versucht wird."
 
 #: views/advanced_form.php:340
 msgid ""
@@ -569,6 +580,14 @@ msgid ""
 "Any extensions can still be picked up by doing a directed call pickup to the "
 "ringing extension , which works whether or not this is checked."
 msgstr ""
+"Wenn diese Option aktiviert ist, können Anrufe an die Ringgruppe mit der "
+"Funktion zur gerichteten Anrufübernahme unter Verwendung der Gruppennummer "
+"von einer beliebigen Nebenstelle übernommen werden. Wenn diese Option nicht "
+"aktiviert ist, können einzelne Nebenstellen, die Teil der Gruppe sind, "
+"weiterhin durch gezielte Anrufübernahme durch Wählen der Gruppennummer "
+"übernommen werden. Alle Nebenstellen können weiterhin durch gezielte "
+"Anrufübernahme an die klingelnde Nebenstelle übernommen werden. Dies "
+"funktioniert unabhängig davon, ob dies aktiviert ist oder nicht."
 
 #: views/advanced_form.php:286
 msgid ""
@@ -576,12 +595,20 @@ msgid ""
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
+"Bei der Einstellung Ja werden Agenten, die versuchen, einen Anruf "
+"weiterzuleiten, ignoriert. Dies gilt für CF, CFU und CFB. Nebenstellen, die "
+"am Ende mit '#' eingegeben wurden, um beispielsweise auf die Follow-Me-"
+"Funktion der Erweiterung zuzugreifen, berücksichtigen diese Einstellung "
+"möglicherweise nicht."
 
 #: ringgroups.i18n.php:8
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
 msgstr ""
+"Bei der Einstellung \"True\" haben Nebenstellen, die zu einer oder mehreren "
+"Ringgruppen gehören, einen Abschnitt \"Ringgruppe\" und verweisen auf jede "
+"Gruppe, zu der sie gehören."
 
 #: views/advanced_form.php:477 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
@@ -602,6 +629,12 @@ msgid ""
 "recording will be blocked, unless they have the \"Override\" call recording "
 "setting."
 msgstr ""
+"Sie können Anrufe, die zu dieser Ringgruppe gehören, immer aufzeichnen "
+"(Force), niemals aufzeichnen (Never) oder zulassen, dass die Nebenstelle, "
+"die antwortet, bei Bedarf aufzeichnet (Dont Care). Wenn die Aufzeichnung "
+"verweigert wird, wird die One-Touch-Aufzeichnung bei Bedarf blockiert, es "
+"sei denn, sie verfügen über die Einstellung \"Anrufaufzeichnung außer Kraft "
+"setzen\"."
 
 #: views/advanced_form.php:154
 msgid ""
@@ -620,15 +653,15 @@ msgstr "Standard"
 
 #: views/form.php:62
 msgid "firstavailable"
-msgstr ""
+msgstr "zuerst verfügbar"
 
 #: views/form.php:64
 msgid "firstnotonphone"
-msgstr ""
+msgstr "erster nicht am Telefon"
 
 #: views/form.php:56
 msgid "hunt"
-msgstr ""
+msgstr "verfolgen"
 
 #: Ringgroups.class.php:249
 msgid "is already in use"
@@ -640,7 +673,7 @@ msgstr "ist für Ihr Konto nicht erlaubt"
 
 #: views/form.php:58
 msgid "memoryhunt"
-msgstr ""
+msgstr "Erinnerungsverfolgung"
 
 #: views/form.php:222
 msgid "none"
@@ -663,6 +696,8 @@ msgid ""
 "ring only the first channel which is not offhook - ignore CW. This strategy "
 "will work only when Confirm Calls is disabled."
 msgstr ""
+"klingelt nur den ersten Kanal, der nicht abgehoben ist - CW ignorieren. "
+"Diese Strategie funktioniert nur, wenn Anrufe bestätigen deaktiviert ist."
 
 #: views/form.php:54
 msgid "ringall"
