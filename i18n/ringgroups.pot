@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:54+0530\n"
+"POT-Creation-Date: 2020-02-12 11:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,10 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr ""
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr ""
@@ -71,6 +75,15 @@ msgstr ""
 
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
+msgstr ""
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
 msgstr ""
 
 #: views/form.php:145
@@ -94,7 +107,7 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr ""
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -315,7 +328,7 @@ msgstr ""
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:6
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr ""
 
@@ -335,6 +348,8 @@ msgid "Ring Group: %s (%s)"
 msgstr ""
 
 #: page.ringgroups.php:10
+#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr ""
 
@@ -519,7 +534,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
