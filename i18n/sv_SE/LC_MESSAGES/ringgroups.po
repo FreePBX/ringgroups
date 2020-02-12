@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ringgroups\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:49+0530\n"
+"POT-Creation-Date: 2020-02-12 11:41+0530\n"
 "PO-Revision-Date: 2008-10-11 19:18+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -56,6 +56,10 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr ""
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefix för nummerpresentation"
@@ -71,6 +75,15 @@ msgstr ""
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Bekräfta samtal"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
 
 #: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
 msgid "Default"
@@ -88,7 +101,7 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr "Destination vid inget svar"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -307,7 +320,7 @@ msgstr "Ringgrupp %s: "
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:6
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr ""
 
@@ -325,7 +338,7 @@ msgstr "Ringgrupp: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Ringgrupp: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Ringgrupper"
 
@@ -516,7 +529,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
