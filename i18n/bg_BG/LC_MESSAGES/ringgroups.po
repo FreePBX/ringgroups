@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:54+0530\n"
+"POT-Creation-Date: 2020-02-12 11:49+0530\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ringgroups/bg/>\n"
@@ -61,6 +61,10 @@ msgstr "Винаги предава Фиксиран CID определен по
 msgid "Announcement"
 msgstr "Съобщение"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Приложения"
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Префикс на CID Име"
@@ -76,6 +80,20 @@ msgstr "Промяна на Настройки за Външен CID"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "Потвърди Обажданията"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
+"могат да звънят едновременно или в различни конфигурации на 'преследване'. "
+"Допълнително се поддържат и външни номера, а също и опция за потвърждение на "
+"обаждането където трябва да се потвърди че искате да поемете обаждането "
+"преди да ви се прехвърли."
 
 #: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
@@ -93,7 +111,7 @@ msgstr "Описание"
 msgid "Destination if no answer"
 msgstr "Направление ако не е отговорено"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr "Покажи Вътрешните Номера на Потребителите в Група на Звънене"
 
@@ -342,7 +360,7 @@ msgstr "Група на Звънене %s: "
 msgid "Ring Group Membership"
 msgstr "Потребител в Група на Звънене"
 
-#: ringgroups.i18n.php:6
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr "Модул Групи на Звънене"
 
@@ -360,7 +378,7 @@ msgstr "Група на Звънене: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Група на Звънене: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Групи на Звънене"
 
@@ -585,7 +603,7 @@ msgstr ""
 "въведени с '#' в края, например за достъп до Следвай Ме, може да не зачетат "
 "тези настройки."
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -685,22 +703,6 @@ msgstr "звъни на всички"
 #~ msgstr ""
 #~ "ALERT_INFO може да се използва за различно звънене при някои SIP "
 #~ "устройства."
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Създава групи от вътрешни линии които да звънят заедно. Вътрешните линии "
-#~ "могат да звънят едновременно или в различни конфигурации на "
-#~ "'преследване'. Допълнително се поддържат и външни номера, а също и опция "
-#~ "за потвърждение на обаждането където трябва да се потвърди че искате да "
-#~ "поемете обаждането преди да ви се прехвърли."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "

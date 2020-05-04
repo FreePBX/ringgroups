@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:54+0530\n"
+"POT-Creation-Date: 2020-02-12 11:49+0530\n"
 "PO-Revision-Date: 2019-03-29 17:00+0000\n"
 "Last-Translator: jeremie cattan <freepbx@famillecattan.com>\n"
 "Language-Team: French <http://*/projects/freepbx/ringgroups/fr/>\n"
@@ -78,6 +78,10 @@ msgstr "Toujours transmettre l'ID appelant ci-dessous."
 msgid "Announcement"
 msgstr "Annonce"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Applications"
+
 #: views/advanced_form.php:142
 #, fuzzy
 msgid "CID Name Prefix"
@@ -99,6 +103,15 @@ msgstr "Modifier la configuration de l'ID appelant externe"
 msgid "Confirm Calls"
 msgstr "Confirmer les Appels"
 
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+
 #: views/form.php:145 views/form.php:180 views/form.php:247 views/form.php:259
 msgid "Default"
 msgstr "Par défaut"
@@ -115,7 +128,7 @@ msgstr ""
 msgid "Destination if no answer"
 msgstr "Destination si pas de réponse"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr ""
 
@@ -337,7 +350,7 @@ msgstr "Groupe de Sonnerie %s :"
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:6
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr ""
 
@@ -355,7 +368,7 @@ msgstr "Groupe de Sonnerie : %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Groupes de Sonnerie"
 
@@ -548,7 +561,7 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -641,9 +654,6 @@ msgstr "Sonner Partout"
 #~ "#-#-#-#-#  - (PACKAGE VERSION)  #-#-#-#-#\n"
 #~ "ALERT_INFO peut être utilisé pour avoir des sonneries distinctes avec les "
 #~ "périphériques SIP."
-
-#~ msgid "Applications"
-#~ msgstr "Applications"
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
