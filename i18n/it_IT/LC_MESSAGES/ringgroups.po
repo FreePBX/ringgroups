@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2018-07-18 19:18+0000\n"
-"Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
+"PO-Revision-Date: 2020-07-07 14:01+0000\n"
+"Last-Translator: Danilo Smaldone <dsmaldone@sangoma.com>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19.1\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
@@ -323,7 +323,7 @@ msgstr "Annuncio remoto"
 
 #: Ringgroups.class.php:159
 msgid "Reset"
-msgstr "Azzerare"
+msgstr "Resetta"
 
 #: views/form.php:218
 msgid "Ring"
@@ -441,7 +441,7 @@ msgstr "Salta Agenti Occupati"
 
 #: Ringgroups.class.php:154
 msgid "Submit"
-msgstr "Sottoscrivi"
+msgstr "Invia"
 
 #: views/form.php:56
 msgid "Take turns ringing each available extension"
