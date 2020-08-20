@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>13.0.23.4</version>
+	<version>13.0.23.5</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/Ring+Groups+Module</more-info>
 	<changelog>
+		*13.0.23.5* Packaging of ver 13.0.23.5
 		*13.0.23.4* FREEPBX-18343 After adding/editing a Ring Group entry the page is not redirecting to list page. 
 		*13.0.23.3* Feature/FREEPBX-15651 
 		*13.0.23.2* FREEPBX-14872
