@@ -3,16 +3,15 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2016-12-10 23:22+0200\n"
-"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
-"ringgroups/es_ES/>\n"
+"PO-Revision-Date: 2020-09-02 10:01+0000\n"
+"Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
+"Language-Team: Spanish <http://*/projects/freepbx/ringgroups/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -80,7 +79,7 @@ msgstr ""
 
 #: Ringgroups.class.php:149
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
@@ -313,7 +312,7 @@ msgstr "Anuncio Remoto"
 
 #: Ringgroups.class.php:159
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Restaura"
 
 #: views/form.php:218
 msgid "Ring"
