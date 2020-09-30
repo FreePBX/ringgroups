@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2020-09-02 10:01+0000\n"
+"PO-Revision-Date: 2020-09-30 16:02+0000\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://*/projects/freepbx/ringgroups/es/>\n"
 "Language: es_ES\n"
@@ -263,7 +263,7 @@ msgstr "No"
 
 #: views/advanced_form.php:194 views/form.php:108
 msgid "None"
-msgstr ""
+msgstr "Ninguna"
 
 #: assets/js/ringgroups.js:59
 msgid ""
