@@ -8,9 +8,10 @@ msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2020-07-07 14:01+0000\n"
+"PO-Revision-Date: 2020-11-17 09:01+0000\n"
 "Last-Translator: Danilo Smaldone <dsmaldone@sangoma.com>\n"
-"Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
+"Language-Team: Italian <http://weblate.freepbx.org/projects/freepbx/"
+"ringgroups/it/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,7 +167,7 @@ msgstr "Ignora Impostazioni Trasf. Chiamata"
 
 #: views/form.php:219
 msgid "Inherit"
-msgstr "Ereditare"
+msgstr "Eredita"
 
 #: assets/js/ringgroups.js:60
 msgid "Invalid CID"
@@ -323,7 +324,7 @@ msgstr "Annuncio remoto"
 
 #: Ringgroups.class.php:159
 msgid "Reset"
-msgstr "Resetta"
+msgstr "Ripristina"
 
 #: views/form.php:218
 msgid "Ring"
