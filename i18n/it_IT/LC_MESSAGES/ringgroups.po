@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2020-11-17 09:01+0000\n"
+"PO-Revision-Date: 2020-11-17 13:01+0000\n"
 "Last-Translator: Danilo Smaldone <dsmaldone@sangoma.com>\n"
 "Language-Team: Italian <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/it/>\n"
@@ -275,7 +275,7 @@ msgstr "No"
 
 #: views/advanced_form.php:194 views/form.php:108
 msgid "None"
-msgstr "Nessuno"
+msgstr "Nessuna"
 
 #: assets/js/ringgroups.js:59
 msgid ""
