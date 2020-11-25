@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>15.0.11.9</version>
+	<version>15.0.11.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -10,8 +10,9 @@
 	<description>
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
-  	<more-info>https://wiki.freepbx.org/display/F2/Ring+Groups+Module</more-info>
+  	<more-info>https://wiki.freepbx.org/display/FPG/Ring+Groups+Module</more-info>
 	<changelog>
+		*15.0.11.10* Packaging of ver 15.0.11.10
 		*15.0.11.9* Packaging of ver 15.0.11.9
 		*15.0.11.8* FREEPBX-21311 Ring Groups module, Mark Answered Elsewhere problem 
 		*15.0.11.7* FREEPBX-19795 Mark Answered Elsewhere broken after updating
