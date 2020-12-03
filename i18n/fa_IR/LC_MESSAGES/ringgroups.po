@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:49+0530\n"
+"POT-Creation-Date: 2020-02-12 11:41+0530\n"
 "PO-Revision-Date: 2019-02-02 01:00+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/ringgroups/fa/>\n"
@@ -61,6 +61,10 @@ msgstr "همیشه مقدار CID ثابت زیر را منتقل کن."
 msgid "Announcement"
 msgstr "اطلاعیه"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "برنامه ها"
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "پیشوند نام CID"
@@ -76,6 +80,20 @@ msgstr "تغییر تنظیمات داخلی CID"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr "تایید تماسها"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Creates a group of extensions that all ring  together. Extensions can be "
+"rung all at once, or in various 'hunt' configurations. Additionally, "
+"external numbers are supported, and there is a call confirmation option "
+"where the callee has to confirm if they actually want to take the call "
+"before the caller is transferred."
 
 #: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
 msgid "Default"
@@ -93,7 +111,7 @@ msgstr "شرح"
 msgid "Destination if no answer"
 msgstr "مقصد در صورت عدم پاسخگویی"
 
-#: ringgroups.i18n.php:4
+#: ringgroups.i18n.php:12
 msgid "Display Extension Ring Group Members"
 msgstr "نمایش داخلی به اعضا گروه زنگ"
 
@@ -338,7 +356,7 @@ msgstr "گروه زنگ %s: "
 msgid "Ring Group Membership"
 msgstr "اعضای گروه زنگ"
 
-#: ringgroups.i18n.php:6
+#: ringgroups.i18n.php:14
 msgid "Ring Group Module"
 msgstr "ماژول گروه زنگ"
 
@@ -356,7 +374,7 @@ msgstr "گروه زنگ: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "گروه زنگ: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "گروههای زنگ"
 
@@ -577,7 +595,7 @@ msgstr ""
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 
-#: ringgroups.i18n.php:8
+#: ringgroups.i18n.php:16
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -677,22 +695,6 @@ msgstr "زنگ به همه"
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr "اطلاعات هشدار استفاده میشود به عنوان زنگ متمایز برای وسایل SIP."
-
-#~ msgid "Applications"
-#~ msgstr "برنامه ها"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Creates a group of extensions that all ring  together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
 
 #~ msgid ""
 #~ "Ring first extension in the list, then ring the 1st and 2nd extension, "
