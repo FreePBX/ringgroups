@@ -57,10 +57,6 @@ msgstr "Siempre transmitir el valor de CID Fijado abajo."
 msgid "Announcement"
 msgstr "Anuncio"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Aplicaciones"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefijo Nombre de CID"
@@ -76,20 +72,6 @@ msgstr "Cambiar configuración externa de CID"
 #: views/advanced_form.php:352
 msgid "Confirm Calls"
 msgstr ""
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Crea un grupo de extensiones que suenan todas juntas. Las extensiones se "
-"pueden ejecutar de una sola vez, o en varias configuraciones de 'caza'. "
-"Además, los números externos son compatibles, y hay una opción de "
-"confirmación de llamada donde el receptor tiene que confirmar si realmente "
-"quieren tomar la llamada antes de que el llamante se transfiera."
 
 #: views/form.php:143 views/form.php:178 views/form.php:245 views/form.php:257
 msgid "Default"
@@ -107,7 +89,7 @@ msgstr "Descripción"
 msgid "Destination if no answer"
 msgstr ""
 
-#: ringgroups.i18n.php:12
+#: ringgroups.i18n.php:4
 msgid "Display Extension Ring Group Members"
 msgstr "Mostrar Extensiones Miembro del Grupo de Timbrado"
 
@@ -349,7 +331,7 @@ msgstr "Grupo de Timbrado %s: "
 msgid "Ring Group Membership"
 msgstr "Miembros del Grupo de Timbrado"
 
-#: ringgroups.i18n.php:14
+#: ringgroups.i18n.php:6
 msgid "Ring Group Module"
 msgstr "Modulo Grupo de Timbrado"
 
@@ -367,7 +349,7 @@ msgstr ""
 msgid "Ring Group: %s (%s)"
 msgstr ""
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Grupos de Timbrado"
 
@@ -588,7 +570,7 @@ msgstr ""
 "'#' al final, por ejemplo para acceder al Sigue-Me de la extensión, podrían "
 "no respetar este ajuste."
 
-#: ringgroups.i18n.php:16
+#: ringgroups.i18n.php:8
 msgid ""
 "When set to true extensions that belong to one or more Ring Groups will have "
 "a Ring Group section and link back to each group they are a member of."
@@ -687,6 +669,22 @@ msgstr "Sonar todos"
 #~ msgstr ""
 #~ "ALERT_INFO se puede utilizar para el timbrado distintivo con dispositivos "
 #~ "SIP."
+
+#~ msgid "Applications"
+#~ msgstr "Aplicaciones"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Crea un grupo de extensiones que suenan todas juntas. Las extensiones se "
+#~ "pueden ejecutar de una sola vez, o en varias configuraciones de 'caza'. "
+#~ "Además, los números externos son compatibles, y hay una opción de "
+#~ "confirmación de llamada donde el receptor tiene que confirmar si "
+#~ "realmente quieren tomar la llamada antes de que el llamante se transfiera."
 
 #~ msgid "ring only the first available channel"
 #~ msgstr "Sólo hace sonar el primer canal activo."
