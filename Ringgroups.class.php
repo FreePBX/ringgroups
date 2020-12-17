@@ -209,6 +209,21 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		return array();
 	}
 
+	public function getAllGroups() {
+		$sql = "SELECT * FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
+		$stmt = $this->Database->prepare($sql);
+		$stmt->execute();
+		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
+		foreach ($results as $result) {
+			if (isset($result['grpnum'])) {
+				$grps[] = $result;
+			}
+		}
+		if (isset($grps)){
+			return $grps;
+		}
+		return array();
+	}
 	public function getExtensionLists($grpnum) {
 		$sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
 		$sth = $this->Database->prepare($sql);
