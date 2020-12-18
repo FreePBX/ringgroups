@@ -14,64 +14,55 @@ class Ringgroups extends Base {
 		if($this->checkAllWriteScope()) {
 			return function() {
 				return [
-					'addRinggroup' => Relay::mutationWithClientMutationId([
-						'name' => 'addRinggroup',
-						'description' => 'Add a new Ringgroup',
+					'addRingGroup' => Relay::mutationWithClientMutationId([
+						'name' => 'addRingGroup',
+						'description' => _('Add a new Ringgroup'),
 						'inputFields' => $this->getMutationFields(),
-						'outputFields' => [
-							'ringgroup' => [
-								'type' => $this->typeContainer->get('ringgroup')->getObject(),
-								'resolve' => function ($payload) {
-									return $payload;
-								}
-							]
-						],
+						'outputFields' => $this->getOutputFields(),
 						'mutateAndGetPayload' => function ($input) {
-							$grpnum =$input['grpnum'];
-							$strategy = isset($input['strategy']) ? $input['strategy'] : 'ringall';
-							$grptime = isset($input['grptime']) ? $input['grptime'] : 'ringall';
-							$grppre = isset($input['strategy']) ? $input['strategy'] : 20;
-							$grplist= isset($input['grplist']) ? $input['grplist'] : '';
-							$annmsg_id =  isset($input['annmsg_id']) ? $input['annmsg_id'] : 0;
-							$postdest = isset($input['postdest']) ? $input['postdest'] : 'app-blackhole,hangup,1';
-							$desc = isset($input['desc']) ? $input['desc'] : 'ring group'.$grpnum;
-							$alertinfo = isset($input['alertinfo']) ? $input['alertinfo'] : '';
-							if(isset($input['needsconf']) && strtolower($input['needsconf'])=='yes' ){$needsconf = 'CHECKED';} else {$needsconf = '';}
-							$remotealert_id = isset($input['remotealert_id']) ? $input['remotealert_id'] : 0;
-							$toolate_id = isset($input['toolate_id']) ? $input['toolate_id'] : 0;
-							$ringing = isset($input['ringing']) ? $input['ringing'] : 'Ring';
-							if(isset($input['cwignore']) && strtolower($input['cwignore'])=='yes' ){$cwignore = 'CHECKED'; } else {$cwignore = '';}
-							if(isset($input['cfignore']) && strtolower($input['cfignore'])=='yes' ){$cfignore = 'CHECKED'; } else {$cfignore = '';}
-							if(isset($input['cpickup']) && strtolower($input['cpickup'])=='yes' ){$cpickup = 'CHECKED'; } else {$cpickup = '';}
-							$recording = isset($input['recording']) ? $input['recording'] : 'dontcare';
-							$progress = isset($input['progress']) ? $input['progress'] : 'no';
-							$elsewhere = isset($input['elsewhere']) ? $input['elsewhere'] : 'no';
-							$rvolume = isset($input['rvolume']) ? $input['rvolume'] : '';
-							$this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere,$rvolume);
-							$list = $this->freepbx->Ringgroups->getAllGroups(true);
-							$item = array_search($input['grpnum'], array_column($list, 'grpnum'));
-							return isset($list[$item]) ? $list[$item] : null;
+							$res = $this->addRingGroup($input);
+							if(isset($res) && $res == true){
+								return ['message' => _("Successfully added ringgroup"), 'status'=> true];
+							}else{
+								return ['message' => _("Sorry, unable to process your add Ringgroup request"), 'status' => false];
+							}
 						}
 					]),
-					'removeringgroup' => Relay::mutationWithClientMutationId([
-						'name' => 'removeRingGroup',
-						'description' => 'Remove a ring group',
+					'updateRingGroup' => Relay::mutationWithClientMutationId([
+						'name' => 'updateRingGroup',
+						'description' => _('Update a ringgroup'),
+						'inputFields' => $this->getMutationFields(),
+						'outputFields' => $this->getOutputFields(),
+						'mutateAndGetPayload' => function ($input) {
+							$res = $this->freepbx->Ringgroups->getExtensionLists($input['groupNumber']);
+							if(empty($res))
+								return ['message' =>_("Sorry, unable to find the Ringgroup"), 'status' => false];
+
+							$response = $this->freepbx->Ringgroups->delete($input['groupNumber']);
+							if(isset($response)){
+								$this->addRingGroup($input);
+								return ['message' => _("RingGroup updated Successfully"), 'status'=> true];
+							}else{
+								return ['message' => _("Sorry, unable to process your update request"),'status' => false];
+							}
+						}
+					]),
+					'deleteRingGroup' => Relay::mutationWithClientMutationId([
+						'name' => 'DeleteRingGroup',
+						'description' => _('Delete a ringgroup'),
 						'inputFields' => [
-							'grpnum' => [
+							'groupNumber' => [
 								'type' => Type::nonNull(Type::int())
 							]
 						],
-						'outputFields' => [
-							'deletedId' => [
-								'type' => Type::nonNull(Type::id()),
-								'resolve' => function ($payload) {
-									return $payload['grpnum'];
-								}
-							]
-						],
+						'outputFields' => $this->getOutputFields(),
 						'mutateAndGetPayload' => function ($input) {
-							$this->freepbx->Ringgroups->delete($input['grpnum']);
-							return ['id' => $input['grpnum']];
+							$response = $this->freepbx->Ringgroups->delete($input['groupNumber']);
+							if(isset($response)){
+								return ['message' => _("Successfully deleted ringgroup"), 'status'=> true];
+							}else{
+								return ['message' => _("Sorry, unable to process your delete request"),'status' => false];
+							}
 						}
 					])
 				];
@@ -83,26 +74,39 @@ class Ringgroups extends Base {
 		if($this->checkAllReadScope()) {
 			return function() {
 				return [
-					'allringgroups' => [
+					'fetchAllRingGroups' => [
 						'type' => $this->typeContainer->get('ringgroup')->getConnectionType(),
-						'description' => 'Used to manage a system wide list of blocked callers',
+						'description' => _('Use to get all the ringgroups'),
 						'args' => Relay::connectionArgs(),
 						'resolve' => function($root, $args) {
-							return Relay::connectionFromArray($this->freepbx->Ringgroups->getAllGroups(), $args);
+							$list = Relay::connectionFromArray($this->freepbx->Ringgroups->getAllGroups(), $args);
+							if(isset($list) && $list != null){
+								return ['response'=> _($list),'status'=>true];
+							}else{
+								return ['message'=> _("Sorry, unable to find any ringgroup"),'status' => false];
+							}
 						},
 					],
-					'ringgroup' => [
+					'fetchRingGroup' => [
 						'type' => $this->typeContainer->get('ringgroup')->getObject(),
 						'args' => [
-							'id' => [
+							'groupNumber' => [
 								'type' => Type::id(),
-								'description' => 'The ID',
+								'description' => _('The Ringgroup number to search for'),
 							]
 						],
 						'resolve' => function($root, $args) {
 							$list = $this->freepbx->Ringgroups->getAllGroups();
-							$item = array_search(Relay::fromGlobalId($args['id'])['id'], array_column($list, 'grpnum'));
-							return isset($list[$item]) ? $list[$item] : null;
+							$item = array_search($args['groupNumber'], array_column($list,'grpnum'));		
+							if(is_int($item)){
+								$list[$item]['status'] = true;
+								$list[$item]['message'] = _("Record found successfully");
+								return $list[$item];
+							}else{
+								$list[$item]['status'] = false;
+								$list[$item]['message'] = _("Sorry, unable to find any ringgroup");
+								return $list[$item];
+							}
 						}
 					],
 				];
@@ -111,91 +115,106 @@ class Ringgroups extends Base {
 	}
 
 	public function initializeTypes() {
-		$user = $this->typeContainer->create('ringgroup');
-		$user->setDescription('Used to manage a system wide list of blocked callers');
+		$ringgroups = $this->typeContainer->create('ringgroup');
+		$ringgroups->setDescription(_('Used to set ringgroup values'));
 
-		$user->addInterfaceCallback(function() {
+		$ringgroups->addInterfaceCallback(function() {
 			return [$this->getNodeDefinition()['nodeInterface']];
 		});
 
-		$user->setGetNodeCallback(function($id) {
+		$ringgroups->setGetNodeCallback(function($id) {
 			$list = $this->freepbx->Ringgroups->getAllGroups();
 			$item = array_search($id, array_column($list, 'number'));
 			return isset($list[$item]) ? $list[$item] : null;
 		});
 
-		$user->addFieldCallback(function() {
+		$ringgroups->addFieldCallback(function() {
 			return [
 				'id' => Relay::globalIdField('ringgroup', function($row) {
 					return $row['grpnum'];
 				}),
-				'grpnum' => [
+				'groupNumber' => [
 					'type' => Type::int(),
-					'description' => 'A Ring Group number'
+					'description' => _('A Ringgroup number'),
+					'resolve' => function($row) {
+						return isset($row['grpnum']) ? $row['grpnum'] : null;
+					}
 				],
 				'description' => [
 					'type' => Type::string(),
-					'description' => 'A descriptive title for this Ring Group'
+					'description' => _('A descriptive title for this Ringgroup')
 				],
-				'grplist' => [
+				'groupList' => [
 					'type' => Type::string(),
-					'description' => 'extensions to ring, one per line'
+					'description' => _('Extensions to ring, one per line'),
+					'resolve' => function($row) {
+						return isset($row['grplist']) ? $row['grplist'] : null;
+					}
 				],
-				'grptime' => [
+				'groupTime' => [
 					'type' => Type::int(),
-					'description' => 'Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung'
+					'description' => _('Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung'),
+					'resolve' => function($row) {
+						return isset($row['grptime']) ? $row['grptime'] : null;
+					}
 				],
 				'strategy' => [
 					'type' => new EnumType([
 						'name' => 'ringstrategies',
-						'description' => 'Ring Strategies',
+						'description' => _('Ring Strategies'),
 						'values' => [
 							'ringall' => [
 								'value' => 'ringall',
-								'description' => 'Ring all available channels until one answers (default)'
+								'description' => _('Ring all available channels until one answers (default)')
 							],
 							'ringallprim' => [
 								'value' => 'ringall-prim',
-								'description' => "Ring all available channels until one answers. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung"
+								'description' => _("Ring all available channels until one answers. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")
 							],
 							'hunt' => [
 								'value' => 'hunt',
-								'description' => 'Take turns ringing each available extension'
+								'description' => _('Take turns ringing each available extension')
 							],
 							'huntprim' => [
 								'value' => 'hunt-prim',
-								'description' => "Take turns ringing each available extension. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung"
+								'description' => _("Take turns ringing each available extension. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")
 							],
 							'memoryhunt' => [
 								'value' => 'memoryhunt',
-								'description' => 'Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc'
+								'description' => _('Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc')
 							],
 							'memoryhuntprim' => [
 								'value' => 'memoryhunt-prim',
-								'description' => "Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung"
+								'description' => _("Ring first extension in the list, then ring the 1st and 2nd extension, then ring 1st 2nd and 3rd extension in the list.... etc. If the primary extension (first in list) is occupied, the other extensions will not be rung. If the primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF unconditional, then all will be rung")
 							],
 							'firstavailable' => [
 								'value' => 'firstavailable',
-								'description' => 'Ring only the first available channel'
+								'description' => _('Ring only the first available channel')
 							],
 							'firstnotonphone' => [
 								'value' => 'firstnotonphone',
-								'description' => 'Ring only the first channel which is not offhook - ignore CW'
-
+								'description' => _('Ring only the first channel which is not offhook - ignore CW')
 							]
 						]
 					]),
-					'description' => 'Ring Strategy'
+					'description' => _('Ring Strategy')
 				],
-				
+				'message' =>[
+					'type' => Type::string(),
+					'description' => _('Message for the request')
+				],
+				'status' =>[
+					'type' => Type::boolean(),
+					'description' => _('Status for the request')
+				]
 			];
 		});
 
-		$user->setConnectionResolveNode(function ($edge) {
+		$ringgroups->setConnectionResolveNode(function ($edge) {
 			return $edge['node'];
 		});
 
-		$user->setConnectionFields(function() {
+		$ringgroups->setConnectionFields(function() {
 			return [
 				'totalCount' => [
 					'type' => Type::int(),
@@ -208,9 +227,17 @@ class Ringgroups extends Base {
 					'resolve' => function($root, $args) {
 						$data = array_map(function($row){
 							return $row['node'];
-						},$root['edges']);
-						return $data;
+						},$root['response']['edges']);
+						   return $data;
 					}
+				],
+				'message' =>[
+					'type' => Type::string(),
+					'description' => _('Message for the request')
+				],
+				'status' =>[
+					'type' => Type::boolean(),
+					'description' => _('Status for the request')
 				]
 			];
 		});
@@ -218,88 +245,135 @@ class Ringgroups extends Base {
 
 	private function getMutationFields() {
 		return [
-			'grpnum' => [
+			'groupNumber' => [
 				'type' => Type::nonNull(Type::id()),
 				'description' => _('RingGroup number')
 			],
-			'desc' => [
+			'description' => [
 				'type' => Type::string(),
 				'description' => _('Enter a description for this ringgroup.')
 			],
 			'strategy' => [
 				'type' => Type::nonNull(Type::string()),
-				'description' => _('Ring Strategy')
+				'description' => _('Ringing Strategy')
 			],
-			'grplist' => [
+			'extensionList' => [
 				'type' => Type::nonNull(Type::string()),
-				'description' => _('extensions to ring, seperated by -')
+				'description' => _('Extensions to ring, seperated by -')
 			],
-			'grptime' => [
+			'ringTime' => [
 				'type' => Type::string(),
 				'description' => _('Time in seconds that the phones will ring. For all hunt style ring strategies, this is the time for each iteration of phone(s) that are rung')
 			],
-			'grppre' => [
-				'type' => Type::int(),
+			'groupPrefix' => [
+				'type' => Type::string(),
 				'description' => _('You can optionally prefix the CallerID name when ringing extensions in this group. ie: If you prefix with "Sales:", a call from John Doe would display as "Sales:John Doe" on the extensions that ring.')
 			],
-			'annmsg_id' => [
+			'callerMessage' => [
 				'type' => Type::string(),
 				'description' => _('Message to be played to the caller before dialing this group.')
 			],
-			'postdest' => [
+			'postAnswer' => [
 				'type' => Type::string(),
-				'description' => 'Where to send callers if there is no answer.'
+				'description' => _('Where to send callers if there is no answer.')
 			],
-			'alertinfo' => [
+			'alertInfo' => [
 				'type' => Type::string(),
-				'description' => 'ALERT_INFO can be used for distinctive ring with SIP devices.'
+				'description' => _('Alert info can be used for distinctive ring with SIP devices.')
 			],
-			'needsconf' => [
-				'type' => Type::string(),
+			'needConf' => [
+				'type' => Type::boolean(),
 				'description' => _('Enable this if you\'re calling external numbers that need confirmation - eg, a mobile phone may go to voicemail which will pick up the call. Enabling this requires the remote side push 1 on their phone before the call is put through. This feature only works with the ringall ring strategy')
 			],
-			'remotealert_id' => [
+			'recevierMessageConfirmCall' => [
 				'type' => Type::string(),
 				'description' => _('Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
 			],
-			'toolate_id' => [
+			'recevierMessage' => [ 
 				'type' => Type::string(),
 				'description' => _('Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
 			],
-			'ringing' => [
+			'ringingMusic' => [
 				'type' => Type::string(),
-				'description' => _('If you select a Music on Hold class to play, instead of \'Ring\', they will hear that instead of Ringing while they are waiting for someone to pick up.')
+				'description' => _('If you select a music to play on hold, instead of \'Ring\', they will hear that instead of Ringing while they are waiting for someone to pick up.')
 			],
-			'cfignore' => [
-				'type' => Type::string(),
-				'description' => _('When set to Yes, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with \'#\' at the end, for example to access the extension\'s Follow-Me, might not honor this setting .')
+			'ignoreCallForward' => [ 
+				'type' => Type::boolean(),
+				'description' => _('When set to true, agents who attempt to Call Forward will be ignored, this applies to CF, CFU and CFB. Extensions entered with \'#\' at the end, for example to access the extension\'s Follow-Me, might not honor this setting .')
 			],
-			'cwignore' => [
-				'type' => Type::string(),
+			'ignoreCallWait' => [
+				'type' => Type::boolean(),
 				'description' => _('When enabled, agents who are on an occupied phone will be skipped as if the line were returning busy. This means that Call Waiting or multi-line phones will not be presented with the call and in the various hunt style ring strategies, the next agent will be attempted.')
 			],
-			'cpickup' => [
-				'type' => Type::string(),
+			'pickupCall' => [
+				'type' => Type::boolean(),
 				'description' => _('When enabled, this will allow calls to the Ring Group to be picked up with the directed call pickup feature using the group number from any extension. When not checked, individual extensions that are part of the group can still be picked up by doing a directed call pickup by dialing the group number. Any extensions can still be picked up by doing a directed call pickup to the ringing extension , which works whether or not this is checked.')
 			],
-			'recording' => [
+			'callRecording' => [
 				'type' => Type::string(),
-				'description' => _('You can always record calls that come into this ring group (Force), never record them (Never), or allow the extension that answers to do on-demand recording (Dont Care). ')
+				'description' => _('You can always record calls that come into this ringgroup (Force), never record them (Never), or allow the extension that answers to do on-demand recording (Dont Care). ')
 			],
-			'progress' => [
+			'callProgress' => [
+				'type' => Type::boolean(),
+				'description' => _('Should this ringgroup indicate call progress to digital channels where supported.(true/false)')
+			],
+			'answeredElseWhere' => [
+				'type' => Type::boolean(),
+				'description' => _('Should calls indicate answered elsewhere when a user answers.(true/false)')
+			],
+			'overrideRingerVolume' => [
 				'type' => Type::string(),
-				'description' => 'Should this ringgroup indicate call progress to digital channels where supported.(yes/no)'
+				'description' => _('Override the ringer volume. Note: This is only valid for Sangoma phones at this time')
 			],
-			'elsewhere' => [
-				'type' => Type::string(),
-				'description' => 'Should calls indicate answered elsewhere when a user answers.(yes/no)'
-			],
-			'rvolume' => [
-				'type' => Type::string(),
-				'description' => 'Override the ringer volume. Note: This is only valid for Sangoma phones at this time'
-			],
-			
 		];
 	}
 
+	public function getOutputFields(){
+		return [
+			'status' => [
+			'type' => Type::boolean(),
+			'resolve' => function ($payload) {
+				return $payload['status'];
+				}
+			],
+			'message' => [
+			'type' => Type::string(),
+				'resolve' => function ($payload) {
+				return $payload['message'];
+				}
+			],
+			'response' => [
+				'type' => $this->typeContainer->get('ringgroup')->getObject(),
+				'resolve' => function ($payload) {
+					return $payload['ringgroup'];
+					}
+				]
+			];
+	}
+
+	private function addRingGroup($input){
+
+		$grpnum = $input['groupNumber'];
+		$strategy = isset($input['strategy']) ? $input['strategy'] : 'ringall';
+		$grptime = isset($input['ringTime']) ? $input['ringTime'] : 20;
+		$grppre = isset($input['groupPrefix']) ? $input['groupPrefix'] : 'ringall';
+		$grplist = isset($input['extensionList']) ? $input['extensionList'] : '';
+		$annmsg_id = isset($input['callerMessage']) ? $input['callerMessage'] : 0;
+		$postdest = isset($input['postAnswer']) ? $input['postAnswer'] : 'app-blackhole,hangup,1';
+		$desc = isset($input['description']) ? $input['description'] : 'ring group'.$grpnum;
+		$alertinfo = isset($input['alertInfo']) ? $input['alertInfo'] : '';
+		$needsconf = (isset($input['needConf']) && $input['needConf'] == true) ?  'CHECKED' : '';
+		$remotealert_id = isset($input['recevierMessageConfirmCall']) ? $input['recevierMessageConfirmCall'] : 0;
+		$toolate_id = isset($input['recevierMessage']) ? $input['recevierMessage'] : 0;
+		$ringing = isset($input['ringingMusic']) ? $input['ringingMusic'] : 'Ring';
+		$cwignore = (isset($input['ignoreCallWait']) && $input['ignoreCallWait'] == true) ? 'CHECKED' : '';
+		$cfignore = (isset($input['ignoreCallForward']) && $input['ignoreCallForward'] == true) ? 'CHECKED' : '';
+		$cpickup = (isset($input['pickupCall']) && $input['pickupCall'] == true) ? 'CHECKED' : '';
+		$recording = isset($input['callRecording']) ? $input['callRecording'] : 'dontcare';
+		$progress = (isset($input['callProgress']) &&  $input['callProgress'] == true) ? 'yes' : 'no';
+		$elsewhere = (isset($input['answeredElseWhere']) && $input['answeredElseWhere'] == true) ? 'yes' : 'no';
+		$rvolume = isset($input['overrideRingerVolume']) ? $input['overrideRingerVolume'] : '';
+		
+		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,'default','',$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
+	}
 }
