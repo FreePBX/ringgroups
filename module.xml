@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>15.0.11.10</version>
+	<version>15.0.11.11</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/FPG/Ring+Groups+Module</more-info>
 	<changelog>
+		*15.0.11.11* Packaging of ver 15.0.11.11
 		*15.0.11.10* Packaging of ver 15.0.11.10
 		*15.0.11.9* Packaging of ver 15.0.11.9
 		*15.0.11.8* FREEPBX-21311 Ring Groups module, Mark Answered Elsewhere problem 
