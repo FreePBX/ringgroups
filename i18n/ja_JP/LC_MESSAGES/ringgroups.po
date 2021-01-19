@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 11:49+0530\n"
+"POT-Creation-Date: 2021-01-05 06:12+0000\n"
 "PO-Revision-Date: 2014-04-17 15:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ringgroups/"
@@ -60,6 +60,14 @@ msgid ""
 "defined in the list"
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:138
+msgid "A Ringgroup number"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:145
+msgid "A descriptive title for this Ringgroup"
+msgstr ""
+
 #: views/advanced_form.php:178
 msgid ""
 "ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
@@ -75,9 +83,17 @@ msgstr ""
 msgid "Add Ring Group"
 msgstr "着信グループを追加"
 
+#: Api/Gql/Ringgroups.php:19
+msgid "Add a new Ringgroup"
+msgstr ""
+
 #: views/advanced_form.php:166
 msgid "Alert Info"
 msgstr "アラート情報"
+
+#: Api/Gql/Ringgroups.php:282
+msgid "Alert info can be used for distinctive ring with SIP devices."
+msgstr ""
 
 #: views/form.php:249
 msgid "Always transmit the Fixed CID Value below."
@@ -128,6 +144,10 @@ msgstr "デフォルト"
 msgid "Delete"
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:52
+msgid "Delete a ringgroup"
+msgstr ""
+
 #: views/bootnav.php:14 views/rggrid.php:17
 msgid "Description"
 msgstr ""
@@ -148,7 +168,7 @@ msgstr ""
 msgid "Enable Call Pickup"
 msgstr "コールピックアップを有効にする"
 
-#: views/advanced_form.php:367
+#: Api/Gql/Ringgroups.php:286 views/advanced_form.php:367
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -160,9 +180,21 @@ msgstr ""
 "1 を押すまで、コールが転送されません。この機能は、ringall ストラテジーでのみ"
 "使用できます。"
 
+#: Api/Gql/Ringgroups.php:254
+msgid "Enter a description for this ringgroup."
+msgstr ""
+
 #: views/advanced_form.php:58 views/simple_form.php:32
 msgid "Extension List"
 msgstr "内線リスト"
+
+#: Api/Gql/Ringgroups.php:149
+msgid "Extensions to ring, one per line"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:262
+msgid "Extensions to ring, seperated by -"
+msgstr ""
 
 #: views/advanced_form.php:407 views/form.php:249 views/form.php:260
 msgid "Fixed CID Value"
@@ -198,6 +230,12 @@ msgid ""
 msgstr ""
 "「リング」の代わりに保留音クラスを選択した場合は、呼び出し中に通常の呼び出し"
 "音（リング）ではなく、保留音を再生します。"
+
+#: Api/Gql/Ringgroups.php:298
+msgid ""
+"If you select a music to play on hold, instead of 'Ring', they will hear "
+"that instead of Ringing while they are waiting for someone to pick up."
+msgstr ""
 
 #: views/advanced_form.php:271
 msgid "Ignore CF Settings"
@@ -253,10 +291,24 @@ msgstr ""
 msgid "Mark Answered Elsewhere"
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:204 Api/Gql/Ringgroups.php:236
+msgid "Message for the request"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:274
+msgid "Message to be played to the caller before dialing this group."
+msgstr ""
+
 #: views/form.php:124
 msgid ""
 "Message to be played to the caller before dialing this group.<br><br>To add "
 "additional recordings please use the \"System Recordings\" MENU above"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:290
+msgid ""
+"Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
+"enabled."
 msgstr ""
 
 #: views/form.php:159
@@ -264,6 +316,12 @@ msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled.<br><br>To add additional recordings use the \"System Recordings\" "
 "MENU above"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:294
+msgid ""
+"Message to be played to the person RECEIVING the call, if the call has "
+"already been accepted before they push 1."
 msgstr ""
 
 #: views/form.php:194
@@ -310,6 +368,12 @@ msgid ""
 "time"
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:326
+msgid ""
+"Override the ringer volume. Note: This is only valid for Sangoma phones at "
+"this time"
+msgstr ""
+
 #: views/form.php:213
 msgid "Play Music On Hold"
 msgstr ""
@@ -328,6 +392,10 @@ msgstr "この着信グループの説明。"
 
 #: views/simple_form.php:20
 msgid "Provide a name for this Ring Group."
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:103
+msgid "Record found successfully"
 msgstr ""
 
 #: views/form.php:138
@@ -377,7 +445,12 @@ msgstr "着信グループ: %s (%s)"
 msgid "Ring Groups"
 msgstr "着信グループ"
 
-#: views/advanced_form.php:90 views/simple_form.php:64
+#: Api/Gql/Ringgroups.php:164
+msgid "Ring Strategies"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:200 views/advanced_form.php:90
+#: views/simple_form.php:64
 msgid "Ring Strategy"
 msgstr ""
 
@@ -393,15 +466,46 @@ msgstr "呼び出し時間 (最大300秒)"
 msgid "Ring Tone"
 msgstr ""
 
-#: views/form.php:56
+#: Api/Gql/Ringgroups.php:168 views/form.php:56
 msgid "Ring all available channels until one answers (default)"
 msgstr "誰かが応答するまで全ての空いているチャネルを鳴らす(デフォルト)"
+
+#: Api/Gql/Ringgroups.php:172
+msgid ""
+"Ring all available channels until one answers. If the primary extension "
+"(first in list) is occupied, the other extensions will not be rung. If the "
+"primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
+"unconditional, then all will be rung"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:184
+msgid ""
+"Ring first extension in the list, then ring the 1st and 2nd extension, then "
+"ring 1st 2nd and 3rd extension in the list.... etc"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:188
+msgid ""
+"Ring first extension in the list, then ring the 1st and 2nd extension, then "
+"ring 1st 2nd and 3rd extension in the list.... etc. If the primary extension "
+"(first in list) is occupied, the other extensions will not be rung. If the "
+"primary is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
+"unconditional, then all will be rung"
+msgstr ""
 
 #: views/form.php:60
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc. This strategy will work "
 "only when Confirm Calls is disabled."
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:192
+msgid "Ring only the first available channel"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:196
+msgid "Ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 
 #: views/advanced_form.php:9
@@ -412,8 +516,20 @@ msgstr "着信グループ番号"
 msgid "RingGroup"
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:250
+msgid "RingGroup number"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:44
+msgid "RingGroup updated Successfully"
+msgstr ""
+
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:258
+msgid "Ringing Strategy"
 msgstr ""
 
 #: views/simple_form.php:130
@@ -434,10 +550,21 @@ msgstr ""
 msgid "Should calls indicate answered elsewhere when a user answers."
 msgstr ""
 
+#: Api/Gql/Ringgroups.php:322
+msgid ""
+"Should calls indicate answered elsewhere when a user answers.(true/false)"
+msgstr ""
+
 #: views/advanced_form.php:232
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported."
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:318
+msgid ""
+"Should this ringgroup indicate call progress to digital channels where "
+"supported.(true/false)"
 msgstr ""
 
 #: views/simple_form.php:69
@@ -448,13 +575,57 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "ビジー状態のエージェントをスキップ"
 
+#: Api/Gql/Ringgroups.php:86 Api/Gql/Ringgroups.php:107
+msgid "Sorry, unable to find any ringgroup"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:39
+msgid "Sorry, unable to find the Ringgroup"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:27
+msgid "Sorry, unable to process your add Ringgroup request"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:64
+msgid "Sorry, unable to process your delete request"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:46
+msgid "Sorry, unable to process your update request"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:208 Api/Gql/Ringgroups.php:240
+msgid "Status for the request"
+msgstr ""
+
 #: Ringgroups.class.php:172
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:58
+#: Api/Gql/Ringgroups.php:25
+msgid "Successfully added ringgroup"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:62
+msgid "Successfully deleted ringgroup"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:176 views/form.php:58
 msgid "Take turns ringing each available extension"
 msgstr "空いている内線を順番に鳴らす"
+
+#: Api/Gql/Ringgroups.php:180
+msgid ""
+"Take turns ringing each available extension. If the primary extension (first "
+"in list) is occupied, the other extensions will not be rung. If the primary "
+"is FreePBX DND, it won't be rung. If the primary is FreePBX CF "
+"unconditional, then all will be rung"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:95
+msgid "The Ringgroup number to search for"
+msgstr ""
 
 #: assets/js/ringgroups.js:80
 msgid "The group list can only contain a maximum of 255 characters."
@@ -476,10 +647,11 @@ msgstr ""
 "not disturb)の場合は鳴りません。もしメインがFreePBX 無条件転送の場合、全てが"
 "鳴ります"
 
-#: Ringgroups.class.php:267
+#: Ringgroups.class.php:283
 msgid "This ringgroup"
 msgstr "この着信グループ"
 
+#: Api/Gql/Ringgroups.php:156 Api/Gql/Ringgroups.php:266
 #: views/advanced_form.php:128
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
@@ -538,15 +710,27 @@ msgstr ""
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "発信者のCIDを送信する (トランクが許可する場合に)。"
 
+#: Api/Gql/Ringgroups.php:33
+msgid "Update a ringgroup"
+msgstr ""
+
 #: views/form.php:253 views/form.php:262
 msgid "Use Dialed Number"
 msgstr "ダイヤルした呼び出し側の番号を使用"
+
+#: Api/Gql/Ringgroups.php:79
+msgid "Use to get all the ringgroups"
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:119
+msgid "Used to set ringgroup values"
+msgstr ""
 
 #: Ringgroups.class.php:97
 msgid "Warning! Extension"
 msgstr "警告! 内線"
 
-#: views/advanced_form.php:313
+#: Api/Gql/Ringgroups.php:306 views/advanced_form.php:313
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -554,7 +738,7 @@ msgid ""
 "strategies, the next agent will be attempted."
 msgstr ""
 
-#: views/advanced_form.php:340
+#: Api/Gql/Ringgroups.php:310 views/advanced_form.php:340
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number from any extension. "
@@ -579,7 +763,15 @@ msgstr ""
 "trueに設定すると、1つ以上の着信グループに所属する内線の設定ページで「着信グ"
 "ループ」の項目が追加され、所属するグループへのリンクが表示されます。"
 
-#: views/advanced_form.php:477 views/simple_form.php:153
+#: Api/Gql/Ringgroups.php:302
+msgid ""
+"When set to true, agents who attempt to Call Forward will be ignored, this "
+"applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
+"example to access the extension's Follow-Me, might not honor this setting ."
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:278 views/advanced_form.php:477
+#: views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr ""
 
@@ -598,7 +790,14 @@ msgid ""
 "setting."
 msgstr ""
 
-#: views/advanced_form.php:154
+#: Api/Gql/Ringgroups.php:314
+msgid ""
+"You can always record calls that come into this ringgroup (Force), never "
+"record them (Never), or allow the extension that answers to do on-demand "
+"recording (Dont Care). "
+msgstr ""
+
+#: Api/Gql/Ringgroups.php:270 views/advanced_form.php:154
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
 "group. ie: If you prefix with \"Sales:\", a call from John Doe would display "
@@ -623,7 +822,7 @@ msgstr "電話中でない最初のもの"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:267
+#: Ringgroups.class.php:283
 msgid "is already in use"
 msgstr "は既に使用中です"
 

@@ -209,6 +209,21 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		return array();
 	}
 
+	public function getAllGroups() {
+		$sql = "SELECT * FROM ringgroups ORDER BY CAST(grpnum as UNSIGNED)";
+		$stmt = $this->Database->prepare($sql);
+		$stmt->execute();
+		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
+		foreach ($results as $result) {
+			if (isset($result['grpnum'])) {
+				$grps[] = $result;
+			}
+		}
+		if (isset($grps)){
+			return $grps;
+		}
+		return array();
+	}
 	public function getExtensionLists($grpnum) {
 		$sql = "SELECT grplist FROM ringgroups WHERE grpnum = ?";
 		$sth = $this->Database->prepare($sql);
@@ -259,12 +274,14 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 			return load_view(__DIR__."/views/bootnav.php",array());
 		}
 	}
-	public function add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere,$rvolume){
+	public function add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre='',$annmsg_id='0',$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid='default',$fixedcid='',$cpickup='', $recording='dontcare',$progress='yes',$elsewhere,$rvolume,$skipJs=0){
 		$extens = $this->listRinggroups(false);
 		if(is_array($extens)) {
 			foreach($extens as $exten) {
 				if ($exten[0]===$grpnum) {
-					echo "<script>javascript:alert('"._("This ringgroup")." ({$grpnum}) "._("is already in use")."');</script>";
+					if($skipJs == 0){
+						echo "<script>javascript:alert('"._("This ringgroup")." ({$grpnum}) "._("is already in use")."');</script>";
+					}
 					return false;
 				}
 			}
