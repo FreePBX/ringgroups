@@ -81,7 +81,7 @@ class Ringgroups extends Base {
 						'resolve' => function($root, $args) {
 							$list = Relay::connectionFromArray($this->freepbx->Ringgroups->getAllGroups(), $args);
 							if(isset($list) && $list != null){
-								return ['response'=> _($list),'status'=>true];
+								return ['response'=> $list,'status'=>true];
 							}else{
 								return ['message'=> _("Sorry, unable to find any ringgroup"),'status' => false];
 							}
