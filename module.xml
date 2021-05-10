@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>15.0.11.13</version>
+	<version>15.0.11.14</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/FPG/Ring+Groups+Module</more-info>
 	<changelog>
+		*15.0.11.14* FREEI-2636 bugfix for existing configuation getting lost in ringgroup 
 		*15.0.11.13* FREEI-2915 ringgroup API 
 		*15.0.11.12* Packaging of ver 15.0.11.12
 		*15.0.11.11* Packaging of ver 15.0.11.11
