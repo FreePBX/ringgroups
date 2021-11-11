@@ -245,10 +245,12 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="elsewhere"></i>
 					</div>
 					<div class="col-md-9 radioset">
-            <input type="radio" name="elsewhere" id="elsewhereyes" value="yes" <?php echo ($elsewhere == "yes"?"CHECKED":"") ?>>
-            <label for="elsewhereyes"><?php echo _("Yes");?></label>
-            <input type="radio" name="elsewhere" id="elsewhereno" value="no" <?php echo ($elsewhere == "yes"?"":"CHECKED") ?>>
-            <label for="elsewhereno"><?php echo _("No");?></label>
+					    <input type="radio" name="elsewhere" id="elsewherealways" value="always" <?php echo ($elsewhere == 'always'?'checked':'') ?>>
+					    <label for="elsewherealways"><?php echo _("Always");?></label>
+					    <input type="radio" name="elsewhere" id="elsewhereyes" value="yes" <?php echo 	($elsewhere == 'yes'?'checked':'') ?>>
+					    <label for="elsewhereyes"><?php echo _("Yes");?></label>
+					    <input type="radio" name="elsewhere" id="elsewhereno" value="no" <?php echo 	($elsewhere == 'no'?'checked':'') ?>>
+					    <label for="elsewhereno"><?php echo _("No");?></label>
 					</div>
 				</div>
 			</div>
@@ -256,7 +258,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<span id="elsewhere-help" class="help-block fpbx-help-block"><?php echo _("Should calls indicate answered elsewhere when a user answers.")?></span>
+			<span id="elsewhere-help" class="help-block fpbx-help-block"><?php echo _("You can mark calls answered elsewhere [always] or when a user actually answers a call.")?></span>
 		</div>
 	</div>
 </div>

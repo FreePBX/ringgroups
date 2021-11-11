@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-10 05:34+0000\n"
+"POT-Creation-Date: 2021-11-11 10:50+0000\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -70,6 +70,10 @@ msgstr "Thông tin cảnh báo"
 msgid "Alert info can be used for distinctive ring with SIP devices."
 msgstr ""
 
+#: views/advanced_form.php:249
+msgid "Always"
+msgstr ""
+
 #: views/form.php:249
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Luôn truyền giá trị CID cố định sau."
@@ -86,15 +90,15 @@ msgstr "Các ứng dụng"
 msgid "CID Name Prefix"
 msgstr "Tiền ngữ của tên CID"
 
-#: views/advanced_form.php:431
+#: views/advanced_form.php:433
 msgid "Call Recording"
 msgstr "Ghi âm cuộc gọi"
 
-#: views/advanced_form.php:381
+#: views/advanced_form.php:383
 msgid "Change External CID Configuration"
 msgstr "Thay đổi cấu hình CID nội bộ"
 
-#: views/advanced_form.php:352
+#: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Xác nhận các cuộc gọi"
 
@@ -128,7 +132,7 @@ msgstr ""
 msgid "Description"
 msgstr "Mô tả"
 
-#: views/advanced_form.php:465 views/simple_form.php:141
+#: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Điểm đích nếu không trả lời"
 
@@ -137,16 +141,16 @@ msgid "Display Extension Ring Group Members"
 msgstr ""
 "Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy nhánh)"
 
-#: views/advanced_form.php:438
+#: views/advanced_form.php:440
 msgid "Dont Care"
 msgstr "Không quan tâm"
 
-#: views/advanced_form.php:325
+#: views/advanced_form.php:327
 msgid "Enable Call Pickup"
 msgstr "Kích cuộc tính năng Nhấc cuộc gọi ( Call Pickup)"
 
 #: Api/Gql/Ringgroups.php:415 Api/Gql/Ringgroups.php:505
-#: views/advanced_form.php:367
+#: views/advanced_form.php:369
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -175,11 +179,11 @@ msgstr ""
 msgid "Extensions to ring, seperated by -"
 msgstr ""
 
-#: views/advanced_form.php:407 views/form.php:249 views/form.php:260
+#: views/advanced_form.php:409 views/form.php:249 views/form.php:260
 msgid "Fixed CID Value"
 msgstr "Gía trị CID cố định"
 
-#: views/advanced_form.php:419
+#: views/advanced_form.php:421
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -189,7 +193,7 @@ msgstr ""
 "dạng của giá trị này nên chỉ ở dạng chữ số với tùy chọn định dạng E164 bắt "
 "đầu bằng '+'."
 
-#: views/advanced_form.php:436
+#: views/advanced_form.php:438
 msgid "Force"
 msgstr "Buộc phải"
 
@@ -201,7 +205,7 @@ msgstr "Bắt buộc số điện thoại đã quay"
 msgid "Group Description"
 msgstr "Mô tả nhóm"
 
-#: functions.inc.php:326
+#: functions.inc.php:335
 msgid "INUSE"
 msgstr "INUSE"
 
@@ -220,7 +224,7 @@ msgid ""
 "that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:273
 msgid "Ignore CF Settings"
 msgstr "Bỏ qua các cài đặt CF"
 
@@ -343,13 +347,13 @@ msgstr ""
 msgid "Mode"
 msgstr "Chế độ"
 
-#: views/advanced_form.php:440
+#: views/advanced_form.php:442
 msgid "Never"
 msgstr "Không bao giờ"
 
-#: views/advanced_form.php:224 views/advanced_form.php:251
-#: views/advanced_form.php:278 views/advanced_form.php:305
-#: views/advanced_form.php:332 views/advanced_form.php:359
+#: views/advanced_form.php:224 views/advanced_form.php:253
+#: views/advanced_form.php:280 views/advanced_form.php:307
+#: views/advanced_form.php:334 views/advanced_form.php:361
 msgid "No"
 msgstr "Không"
 
@@ -429,7 +433,7 @@ msgstr "Tính năng Ring Group (Nhóm đổ chuông)"
 msgid "Ring Group %s: "
 msgstr "Ring Group (Nhóm đổ chuông): %s "
 
-#: functions.inc.php:428
+#: functions.inc.php:437
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
@@ -441,12 +445,12 @@ msgstr "Mô đun Ring Group"
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:334
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Nhóm đổ chuông: %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:361
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Nhóm đổ chuông: %s (%s)"
@@ -559,10 +563,6 @@ msgstr "Tiến trình gửi"
 msgid "Sequential"
 msgstr "Theo thứ tự"
 
-#: views/advanced_form.php:259
-msgid "Should calls indicate answered elsewhere when a user answers."
-msgstr ""
-
 #: Api/Gql/Ringgroups.php:451 Api/Gql/Ringgroups.php:541
 msgid ""
 "Should calls indicate answered elsewhere when a user answers.(true/false)"
@@ -586,7 +586,7 @@ msgstr ""
 msgid "Simultaneous"
 msgstr "Đồng thời"
 
-#: views/advanced_form.php:298
+#: views/advanced_form.php:300
 msgid "Skip Busy Agent"
 msgstr "Bỏ qua tổng đài viên đang bận"
 
@@ -753,7 +753,7 @@ msgid "Warning! Extension"
 msgstr "Cảnh báo! Máy nhánh"
 
 #: Api/Gql/Ringgroups.php:435 Api/Gql/Ringgroups.php:525
-#: views/advanced_form.php:313
+#: views/advanced_form.php:315
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -767,7 +767,7 @@ msgstr ""
 "theo."
 
 #: Api/Gql/Ringgroups.php:439 Api/Gql/Ringgroups.php:529
-#: views/advanced_form.php:340
+#: views/advanced_form.php:342
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number from any extension. "
@@ -777,7 +777,7 @@ msgid ""
 "ringing extension , which works whether or not this is checked."
 msgstr ""
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:288
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -805,17 +805,17 @@ msgid ""
 msgstr ""
 
 #: Api/Gql/Ringgroups.php:407 Api/Gql/Ringgroups.php:497
-#: views/advanced_form.php:477 views/simple_form.php:153
+#: views/advanced_form.php:479 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
 
-#: views/advanced_form.php:222 views/advanced_form.php:249
-#: views/advanced_form.php:276 views/advanced_form.php:303
-#: views/advanced_form.php:330 views/advanced_form.php:357
+#: views/advanced_form.php:222 views/advanced_form.php:251
+#: views/advanced_form.php:278 views/advanced_form.php:305
+#: views/advanced_form.php:332 views/advanced_form.php:359
 msgid "Yes"
 msgstr "Có"
 
-#: views/advanced_form.php:448
+#: views/advanced_form.php:450
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -833,6 +833,12 @@ msgid ""
 "You can always record calls that come into this ringgroup (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
 "recording (Dont Care). "
+msgstr ""
+
+#: views/advanced_form.php:261
+msgid ""
+"You can mark calls answered elsewhere [always] or when a user actually "
+"answers a call."
 msgstr ""
 
 #: Api/Gql/Ringgroups.php:399 Api/Gql/Ringgroups.php:489

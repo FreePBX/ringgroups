@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-10 05:34+0000\n"
+"POT-Creation-Date: 2021-11-11 10:50+0000\n"
 "PO-Revision-Date: 2018-07-18 19:18+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
@@ -69,6 +69,10 @@ msgstr "Informazioni di avviso"
 msgid "Alert info can be used for distinctive ring with SIP devices."
 msgstr ""
 
+#: views/advanced_form.php:249
+msgid "Always"
+msgstr ""
+
 #: views/form.php:249
 msgid "Always transmit the Fixed CID Value below."
 msgstr "Trasmetti sempre il valore CID fisso di seguito."
@@ -85,15 +89,15 @@ msgstr "Applicazioni"
 msgid "CID Name Prefix"
 msgstr "Prefisso Nome CID"
 
-#: views/advanced_form.php:431
+#: views/advanced_form.php:433
 msgid "Call Recording"
 msgstr "Registrazione chiamata"
 
-#: views/advanced_form.php:381
+#: views/advanced_form.php:383
 msgid "Change External CID Configuration"
 msgstr "Modifica configurazione CID esterna"
 
-#: views/advanced_form.php:352
+#: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Conferma Chiamate"
 
@@ -127,7 +131,7 @@ msgstr ""
 msgid "Description"
 msgstr "Descrizione"
 
-#: views/advanced_form.php:465 views/simple_form.php:141
+#: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Destinazione se nessuna risposta"
 
@@ -135,16 +139,16 @@ msgstr "Destinazione se nessuna risposta"
 msgid "Display Extension Ring Group Members"
 msgstr "Visualizza membri del gruppo di squilli di estensione"
 
-#: views/advanced_form.php:438
+#: views/advanced_form.php:440
 msgid "Dont Care"
 msgstr "Non preoccuparti"
 
-#: views/advanced_form.php:325
+#: views/advanced_form.php:327
 msgid "Enable Call Pickup"
 msgstr "Abilita Call Pickup"
 
 #: Api/Gql/Ringgroups.php:415 Api/Gql/Ringgroups.php:505
-#: views/advanced_form.php:367
+#: views/advanced_form.php:369
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
 "a mobile phone may go to voicemail which will pick up the call. Enabling "
@@ -173,11 +177,11 @@ msgstr ""
 msgid "Extensions to ring, seperated by -"
 msgstr ""
 
-#: views/advanced_form.php:407 views/form.php:249 views/form.php:260
+#: views/advanced_form.php:409 views/form.php:249 views/form.php:260
 msgid "Fixed CID Value"
 msgstr "Risolto valore CID"
 
-#: views/advanced_form.php:419
+#: views/advanced_form.php:421
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
 "Should be in a format of digits only with an option of E164 format using a "
@@ -187,7 +191,7 @@ msgstr ""
 "sopra. Dovrebbe essere in un formato di cifre solo con un'opzione del "
 "formato E164 utilizzando un \"+\" iniziale."
 
-#: views/advanced_form.php:436
+#: views/advanced_form.php:438
 msgid "Force"
 msgstr "Forza"
 
@@ -199,7 +203,7 @@ msgstr "Forza numero composto"
 msgid "Group Description"
 msgstr "Descrizione Gruppo"
 
-#: functions.inc.php:326
+#: functions.inc.php:335
 msgid "INUSE"
 msgstr "INUSO"
 
@@ -217,7 +221,7 @@ msgid ""
 "that instead of Ringing while they are waiting for someone to pick up."
 msgstr ""
 
-#: views/advanced_form.php:271
+#: views/advanced_form.php:273
 msgid "Ignore CF Settings"
 msgstr "Ignora Impostazioni Trasf. Chiamata"
 
@@ -339,13 +343,13 @@ msgstr ""
 msgid "Mode"
 msgstr "Modalità"
 
-#: views/advanced_form.php:440
+#: views/advanced_form.php:442
 msgid "Never"
 msgstr "Mai"
 
-#: views/advanced_form.php:224 views/advanced_form.php:251
-#: views/advanced_form.php:278 views/advanced_form.php:305
-#: views/advanced_form.php:332 views/advanced_form.php:359
+#: views/advanced_form.php:224 views/advanced_form.php:253
+#: views/advanced_form.php:280 views/advanced_form.php:307
+#: views/advanced_form.php:334 views/advanced_form.php:361
 msgid "No"
 msgstr "No"
 
@@ -425,7 +429,7 @@ msgstr "Gruppo di Chiamata"
 msgid "Ring Group %s: "
 msgstr "Gruppo di Chiamata %s:"
 
-#: functions.inc.php:428
+#: functions.inc.php:437
 msgid "Ring Group Membership"
 msgstr "Appartenenza al gruppo di suoneria"
 
@@ -437,12 +441,12 @@ msgstr "Modulo del gruppo di suoneria"
 msgid "Ring Group Name"
 msgstr "nome del gruppo di suoneria"
 
-#: functions.inc.php:57 functions.inc.php:325
+#: functions.inc.php:57 functions.inc.php:334
 #, php-format
 msgid "Ring Group: %s"
 msgstr "Gruppo di Chiamata: %s"
 
-#: functions.inc.php:352
+#: functions.inc.php:361
 #, php-format
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
@@ -554,10 +558,6 @@ msgstr "progresso invio"
 msgid "Sequential"
 msgstr "Sequenziale"
 
-#: views/advanced_form.php:259
-msgid "Should calls indicate answered elsewhere when a user answers."
-msgstr ""
-
 #: Api/Gql/Ringgroups.php:451 Api/Gql/Ringgroups.php:541
 msgid ""
 "Should calls indicate answered elsewhere when a user answers.(true/false)"
@@ -581,7 +581,7 @@ msgstr ""
 msgid "Simultaneous"
 msgstr "simultaneo"
 
-#: views/advanced_form.php:298
+#: views/advanced_form.php:300
 msgid "Skip Busy Agent"
 msgstr "Salta Agenti Occupati"
 
@@ -749,7 +749,7 @@ msgid "Warning! Extension"
 msgstr "Attenzione! L'interno"
 
 #: Api/Gql/Ringgroups.php:435 Api/Gql/Ringgroups.php:525
-#: views/advanced_form.php:313
+#: views/advanced_form.php:315
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
 "line were returning busy. This means that Call Waiting or multi-line phones "
@@ -763,7 +763,7 @@ msgstr ""
 "tentato il prossimo agente."
 
 #: Api/Gql/Ringgroups.php:439 Api/Gql/Ringgroups.php:529
-#: views/advanced_form.php:340
+#: views/advanced_form.php:342
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
 "the directed call pickup feature using the group number from any extension. "
@@ -781,7 +781,7 @@ msgstr ""
 "una chiamata diretta verso l'interno della suoneria, che funziona "
 "indipendentemente dal fatto che sia selezionata o meno."
 
-#: views/advanced_form.php:286
+#: views/advanced_form.php:288
 msgid ""
 "When set to Yes, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
@@ -809,17 +809,17 @@ msgid ""
 msgstr ""
 
 #: Api/Gql/Ringgroups.php:407 Api/Gql/Ringgroups.php:497
-#: views/advanced_form.php:477 views/simple_form.php:153
+#: views/advanced_form.php:479 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Dove inviare i chiamanti se non c'è risposta."
 
-#: views/advanced_form.php:222 views/advanced_form.php:249
-#: views/advanced_form.php:276 views/advanced_form.php:303
-#: views/advanced_form.php:330 views/advanced_form.php:357
+#: views/advanced_form.php:222 views/advanced_form.php:251
+#: views/advanced_form.php:278 views/advanced_form.php:305
+#: views/advanced_form.php:332 views/advanced_form.php:359
 msgid "Yes"
 msgstr "Si"
 
-#: views/advanced_form.php:448
+#: views/advanced_form.php:450
 msgid ""
 "You can always record calls that come into this ring group (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -838,6 +838,12 @@ msgid ""
 "You can always record calls that come into this ringgroup (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
 "recording (Dont Care). "
+msgstr ""
+
+#: views/advanced_form.php:261
+msgid ""
+"You can mark calls answered elsewhere [always] or when a user actually "
+"answers a call."
 msgstr ""
 
 #: Api/Gql/Ringgroups.php:399 Api/Gql/Ringgroups.php:489
