@@ -254,7 +254,7 @@ class Ringgroups extends Base {
 				],
 				'recevierMessageConfirmCall' => [
 					'type' => Type::string(),
-					'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessageConfirmCall instead.',
+					'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
 					'description' => _(''),
 					'resolve' => function($row) {
 						return isset($row['remotealert_id']) ? $row['remotealert_id'] : null;
@@ -262,7 +262,7 @@ class Ringgroups extends Base {
 				],
 				'recevierMessage' => [
 					'type' => Type::string(),
-					'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessage instead.',
+					'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
 					'description' => _(''),
 					'resolve' => function($row) {
 						return isset($row['toolate_id']) ? $row['toolate_id'] : null;
@@ -432,12 +432,12 @@ class Ringgroups extends Base {
 			],
 			'recevierMessageConfirmCall' => [
 				'type' => Type::string(),
-				'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessageConfirmCall instead.',
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
 				'description' => _('DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
 			],
 			'recevierMessage' => [ 
 				'type' => Type::string(),
-				'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessage instead.',
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
 				'description' => _('DEPRECATED: Use receiverMessage instead. Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
 			],
 			'receiverMessageConfirmCall' => [
@@ -532,12 +532,12 @@ class Ringgroups extends Base {
 			],
 			'recevierMessageConfirmCall' => [
 				'type' => Type::string(),
-				'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessageConfirmCall instead.',
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
 				'description' => _('DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
 			],
 			'recevierMessage' => [ 
 				'type' => Type::string(),
-				'deprecationReason' => 'Deprecated due to misspelling. Use receiverMessage instead.',
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
 				'description' => _('DEPRECATED: Use receiverMessage instead. Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
 			],
 			'receiverMessageConfirmCall' => [
