@@ -254,12 +254,28 @@ class Ringgroups extends Base {
 				],
 				'recevierMessageConfirmCall' => [
 					'type' => Type::string(),
+					'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
 					'description' => _(''),
 					'resolve' => function($row) {
 						return isset($row['remotealert_id']) ? $row['remotealert_id'] : null;
 					}
 				],
 				'recevierMessage' => [
+					'type' => Type::string(),
+					'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
+					'description' => _(''),
+					'resolve' => function($row) {
+						return isset($row['toolate_id']) ? $row['toolate_id'] : null;
+					}
+				],
+				'receiverMessageConfirmCall' => [
+					'type' => Type::string(),
+					'description' => _(''),
+					'resolve' => function($row) {
+						return isset($row['remotealert_id']) ? $row['remotealert_id'] : null;
+					}
+				],
+				'receiverMessage' => [
 					'type' => Type::string(),
 					'description' => _(''),
 					'resolve' => function($row) {
@@ -416,9 +432,19 @@ class Ringgroups extends Base {
 			],
 			'recevierMessageConfirmCall' => [
 				'type' => Type::string(),
-				'description' => _('Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
+				'description' => _('DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
 			],
 			'recevierMessage' => [ 
+				'type' => Type::string(),
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
+				'description' => _('DEPRECATED: Use receiverMessage instead. Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
+			],
+			'receiverMessageConfirmCall' => [
+				'type' => Type::string(),
+				'description' => _('Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
+			],
+			'receiverMessage' => [ 
 				'type' => Type::string(),
 				'description' => _('Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
 			],
@@ -506,9 +532,19 @@ class Ringgroups extends Base {
 			],
 			'recevierMessageConfirmCall' => [
 				'type' => Type::string(),
-				'description' => _('Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessageConfirmCall instead.'),
+				'description' => _('DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
 			],
 			'recevierMessage' => [ 
+				'type' => Type::string(),
+				'deprecationReason' => _('Deprecated due to misspelling. Use receiverMessage instead.'),
+				'description' => _('DEPRECATED: Use receiverMessage instead. Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
+			],
+			'receiverMessageConfirmCall' => [
+				'type' => Type::string(),
+				'description' => _('Message to be played to the person RECEIVING the call, if \'Confirm Calls\' is enabled.')
+			],
+			'receiverMessage' => [ 
 				'type' => Type::string(),
 				'description' => _('Message to be played to the person RECEIVING the call, if the call has already been accepted before they push 1.')
 			],
@@ -582,8 +618,19 @@ class Ringgroups extends Base {
 		$desc = isset($input['description']) ? $input['description'] : 'ring group'.$grpnum;
 		$alertinfo = isset($input['alertInfo']) ? $input['alertInfo'] : '';
 		$needsconf = (isset($input['needConf']) && $input['needConf'] == true) ?  'CHECKED' : '';
-		$remotealert_id = isset($input['recevierMessageConfirmCall']) ? $input['recevierMessageConfirmCall'] : 0;
-		$toolate_id = isset($input['recevierMessage']) ? $input['recevierMessage'] : 0;
+		$remotealert_id = isset($input['receiverMessageConfirmCall']) ? $input['receiverMessageConfirmCall'] : 0;
+		$toolate_id = isset($input['receiverMessage']) ? $input['receiverMessage'] : 0;
+
+		// Ongoing support of deprecated misspelling
+		if ($remotealert_id === 0 && isset($input['recevierMessageConfirmCall'])) {
+			$remotealert_id = $input['recevierMessageConfirmCall'];
+		}
+
+		// Ongoing support of deprecated misspelling
+		if ($toolate_id === 0 && isset($input['recevierMessage'])) {
+			$toolate_id = $input['recevierMessage'];
+		}
+
 		$ringing = isset($input['ringingMusic']) ? $input['ringingMusic'] : 'Ring';
 		$cwignore = (isset($input['ignoreCallWait']) && $input['ignoreCallWait'] == true) ? 'CHECKED' : '';
 		$cfignore = (isset($input['ignoreCallForward']) && $input['ignoreCallForward'] == true) ? 'CHECKED' : '';
@@ -613,16 +660,27 @@ class Ringgroups extends Base {
 		$desc = isset($input['description']) ? $input['description'] : $res['desc'];
 		$alertinfo = isset($input['alertInfo']) ? $input['alertInfo'] : $res['alertinfo'];
 		$needsconf = isset($input['needConf']) ? $input['needConf'] : $res['needsconf'];
-		$remotealert_id = isset($input['recevierMessageConfirmCall']) ? $input['recevierMessageConfirmCall'] : $res['remotealert_id'];;
-		$toolate_id = isset($input['recevierMessage']) ? $input['recevierMessage'] : $res['toolate_id'];;
+		$remotealert_id = isset($input['receiverMessageConfirmCall']) ? $input['receiverMessageConfirmCall'] : $res['remotealert_id'];
+		$toolate_id = isset($input['receiverMessage']) ? $input['receiverMessage'] : $res['toolate_id'];
+
+		// Ongoing support of deprecated misspelling
+		if ($remotealert_id === $res['remotealert_id'] && isset($input['recevierMessageConfirmCall'])) {
+			$remotealert_id = $input['recevierMessageConfirmCall'];
+		}
+
+		// Ongoing support of deprecated misspelling
+		if ($toolate_id === $res['toolate_id'] && isset($input['recevierMessage'])) {
+			$toolate_id = $input['recevierMessage'];
+		}
+
 		$ringing = isset($input['ringingMusic']) ? $input['ringingMusic'] : $res['ringing'];
 		$cwignore = isset($input['ignoreCallWait']) ? $input['ignoreCallWait'] : $res['cwignore'];
-		$cfignore = isset($input['ignoreCallForward']) ? $input['ignoreCallForward']: $res['cfignore'];;
-		$cpickup = isset($input['pickupCall']) ? $input['pickupCall'] : $res['cpickup'];;
+		$cfignore = isset($input['ignoreCallForward']) ? $input['ignoreCallForward']: $res['cfignore'];
+		$cpickup = isset($input['pickupCall']) ? $input['pickupCall'] : $res['cpickup'];
 		$recording = isset($input['callRecording']) ? $input['callRecording'] : $res['recording'];
 		$progress = isset($input['callProgress']) ?  $input['callProgress'] : $res['progress'];
-		$elsewhere = isset($input['answeredElseWhere']) ? $input['answeredElseWhere'] : $res['elsewhere'];;
-		$rvolume = isset($input['overrideRingerVolume']) ? $input['overrideRingerVolume'] : $res['rvolume'];;
+		$elsewhere = isset($input['answeredElseWhere']) ? $input['answeredElseWhere'] : $res['elsewhere'];
+		$rvolume = isset($input['overrideRingerVolume']) ? $input['overrideRingerVolume'] : $res['rvolume'];
 		
 		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,'default','',$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
