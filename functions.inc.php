@@ -108,7 +108,7 @@ function ringgroups_get_config($engine) {
 					// TODO: this looks potentially problematic given the new per-user DIAL_OPTIONS. Need to further
 					//			 evaluate/understand if there are implications. The issue may be that we are trying to
 					//			 avoid getting a 'polluted' version of the DIAL_OPTIONS in which case we may need to modify
-					//			 macro-user-callerid (where it is set) to preserve the version we should be using.
+					//			 sub-user-callerid (where it is set) to preserve the version we should be using.
 					//
 					if($ringing == 'Ring' || empty($ringing) ) {
 						$dialopts = '${DIAL_OPTIONS}'.$ae;
@@ -125,15 +125,15 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_progress());
 					}
 
-					$ext->add($contextname, $grpnum, 'cid', new ext_macro('user-callerid'));
+					$ext->add($contextname, $grpnum, 'cid', new gosub('1','s','sub-user-callerid'));
 
-					// block voicemail until phone is answered at which point a macro should be called on the answering
+					// block voicemail until phone is answered at which point a sub should be called on the answering
 					// line to clear this flag so that subsequent transfers can occur, if already set by a the caller
 					// then don't change.
 					//
-					$ext->add($contextname, $grpnum, '', new ext_macro('blkvm-setifempty'));
+					$ext->add($contextname, $grpnum, '', new gosub('1','s','sub-blkvm-setifempty'));
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$["${GOSUB_RETVAL}" = "TRUE"]', 'skipov'));
-					$ext->add($contextname, $grpnum, '', new ext_macro('blkvm-set','reset'));
+					$ext->add($contextname, $grpnum, '', new gosub('1','s','sub-blkvm-set','reset'));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
 
 					// Remember if NODEST was set later, but clear it in case the call is answered so that subsequent
@@ -146,7 +146,7 @@ function ringgroups_get_config($engine) {
 
 					// deal with group CID prefix
 					if ($grppre != '') {
-						$ext->add($contextname, $grpnum, '', new ext_macro('prepend-cid', $grppre));
+						$ext->add($contextname, $grpnum, '', new gosub('1','s','sub-prepend-cid', $grppre));
 					}
 
 					// Set Alert_Info
@@ -174,7 +174,7 @@ function ringgroups_get_config($engine) {
 						$pickup_code = $fc_code.$grpnum;
 
 						$ext->add($pickupcont,$pickup_code, '', new ext_set('ALLOWEDMEM',$grplist));
-						$ext->add($pickupcont,$pickup_code, '', new ext_macro('user-callerid'));
+						$ext->add($pickupcont,$pickup_code, '', new gosub('1','s','sub-user-callerid'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('EXTENS','${FIELDQTY(ALLOWEDMEM,-)}'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_setvar('ITER','1'));
 						$ext->add($pickupcont,$pickup_code, '', new ext_noop('$["${AMPUSER}" == "${CUT(ALLOWEDMEM,-,${ITER})}"]','pickup'));
@@ -190,7 +190,7 @@ function ringgroups_get_config($engine) {
 
 					// recording stuff
 					//$ext->add($contextname, $grpnum, '', new ext_setvar('RecordMethod','Group'));
-					//$ext->add($contextname, $grpnum, '', new ext_macro('record-enable',$grplist.',${RecordMethod}'));
+					//$ext->add($contextname, $grpnum, '', new gosub('1','s','sub-record-enable',$grplist.',${RecordMethod}'));
 
 					//TODO: hardcoded needs to be configurable in the ringgroup
 					$ext->add($contextname, $grpnum, '', new ext_gosub('1','s','sub-record-check',"rg,$grpnum,$recording"));
@@ -215,13 +215,13 @@ function ringgroups_get_config($engine) {
 					$toolate = recordings_get_file($toolate_id);
 					$len=strlen($grpnum)+4;
 					$ext->add("grps", "_RG-${grpnum}-.", '', new ext_nocdr(''));
-					$ext->add("grps", "_RG-${grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^${remotealert}^${toolate}^${grpnum})" . ',${EXTEN:' . $len . '}'));
+					$ext->add("grps", "_RG-${grpnum}-.", '', new gosub('1','s','sub-dial', "$grptime,$dialopts" . "M(confirm^${remotealert}^${toolate}^${grpnum})" . ',${EXTEN:' . $len . '}'));
 
 					 $ext->add($contextname, $grpnum, '', new ext_gotoif('$[$["${RG_CONFIRM}"="1"] | $[${LEN(${VQ_CONFIRMMSG})}>1]]','RGVQANNOUNCE','NORGVQANNOUNCE'));
-					$ext->add($contextname, $grpnum, 'RGVQANNOUNCE', new ext_macro('dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
+					$ext->add($contextname, $grpnum, 'RGVQANNOUNCE', new gosub('1','s','sub-dial-confirm',"$grptime,$dialopts,$grplist,$grpnum"));
 					//FREEPBX-15547	ring groups - timeout with external number ignores call confirmation on second attempt
 					$ext->add($contextname, $grpnum, '', new ext_goto('gosubhere'));
-					$ext->add($contextname, $grpnum, 'NORGVQANNOUNCE', new ext_macro('dial',$grptime.",$dialopts,".$grplist));
+					$ext->add($contextname, $grpnum, 'NORGVQANNOUNCE', new gosub('1','s','sub-dial',$grptime.",$dialopts,".$grplist));
 					$ext->add($contextname, $grpnum, 'gosubhere', new ext_gosub('1','s','sub-record-cancel'));
 					$ext->add($contextname, $grpnum, '', new ext_setvar('RingGroupMethod',''));
 
@@ -244,7 +244,7 @@ function ringgroups_get_config($engine) {
 						$ext->add($contextname, $grpnum, '', new ext_setvar('_FORWARD_CONTEXT', 'from-internal'));
 					}
 					$ext->add($contextname, $grpnum, '', new ext_setvar('__NODEST', ''));
-					$ext->add($contextname, $grpnum, '', new ext_macro('blkvm-clr'));
+					$ext->add($contextname, $grpnum, '', new gosub('1','s','sub-blkvm-clr'));
 
 					// where next?
 					if ((isset($postdest) ? $postdest : '') != '') {
@@ -256,7 +256,7 @@ function ringgroups_get_config($engine) {
 				}
 				// We need to have a hangup here, if call is ended by the caller during Playback it will end in the
 				// h context and do a proper hangup and clean the blkvm keys if set, see #4671
-				$ext->add($contextname, 'h', '', new ext_macro('hangupcall'));
+				$ext->add($contextname, 'h', '', new gosub('1','s','sub-hangupcall'));
 				/*
 					ASTDB Settings:
 					RINGGROUP/nnn/changecid default | did | fixed | extern
