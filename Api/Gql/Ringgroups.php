@@ -181,6 +181,20 @@ class Ringgroups extends Base {
 						return isset($row['rvolume']) ? $row['rvolume'] : null;
 					}
 				],
+				'changecid' => [
+					'type' => Type::string(),
+					'description' => _(''),
+					'resolve' => function($row) {
+						return isset($row['changecid']) ? $row['changecid'] : null;
+					}
+				],
+				'fixedcid' => [
+					'type' => Type::string(),
+					'description' => _(''),
+					'resolve' => function($row) {
+						return isset($row['fixedcid']) ? $row['fixedcid'] : null;
+					}
+				],
 				'callRecording' => [
 					'type' => Type::string(),
 					'description' => _(''),
@@ -480,6 +494,14 @@ class Ringgroups extends Base {
 				'type' => Type::string(),
 				'description' => _('Override the ringer volume. Note: This is only valid for Sangoma phones at this time')
 			],
+			'changecid' => [
+				'type' => Type::string(),
+				'description' => _('Change External CID Configuration.')
+			],
+			'fixedcid' => [
+				'type' => Type::string(),
+				'description' => _("Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading '+'.")
+			],
 		];
 	}
 	
@@ -580,6 +602,14 @@ class Ringgroups extends Base {
 				'type' => Type::string(),
 				'description' => _('Override the ringer volume. Note: This is only valid for Sangoma phones at this time')
 			],
+			'changecid' => [
+				'type' => Type::string(),
+				'description' => _('Change External CID Configuration.')
+			],
+			'fixedcid' => [
+				'type' => Type::string(),
+				'description' => _("Fixed value to replace the CID with used with some of the modes above. Should be in a format of digits only with an option of E164 format using a leading '+'.")
+			],
 		];
 	}
 
@@ -639,8 +669,13 @@ class Ringgroups extends Base {
 		$progress = (isset($input['callProgress']) &&  $input['callProgress'] == true) ? 'yes' : 'no';
 		$elsewhere = (isset($input['answeredElseWhere']) && $input['answeredElseWhere'] == true) ? 'yes' : 'no';
 		$rvolume = isset($input['overrideRingerVolume']) ? $input['overrideRingerVolume'] : '';
+		$changecid = isset($input['changecid']) ? $input['changecid'] : "default";
+		if(!in_array($changecid,array("fixed","extern","did","forcedid"))) {
+			$changecid = "default";
+		}
+		$fixedcid = isset($input['fixedcid']) ? $input['fixedcid'] : "";
 		
-		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,'default','',$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
+		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
 		
 	/**
@@ -681,8 +716,14 @@ class Ringgroups extends Base {
 		$progress = isset($input['callProgress']) ?  $input['callProgress'] : $res['progress'];
 		$elsewhere = isset($input['answeredElseWhere']) ? $input['answeredElseWhere'] : $res['elsewhere'];
 		$rvolume = isset($input['overrideRingerVolume']) ? $input['overrideRingerVolume'] : $res['rvolume'];
+
+		$changecid = isset($input['changecid']) ? $input['changecid'] : $res['changecid'];
+		if(!in_array($changecid,array("fixed","extern","did","forcedid"))) {
+			$changecid = "default";
+		}
+		$fixedcid = isset($input['fixedcid']) ? $input['fixedcid'] : $res['fixedcid'];
 		
-		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,'default','',$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
+		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
 
 	/**

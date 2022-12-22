@@ -216,6 +216,10 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
 		foreach ($results as $result) {
 			if (isset($result['grpnum'])) {
+				$changecid = strtolower($this->FreePBX->astman->database_get("RINGGROUP", $result['grpnum'] . "/changecid"));
+				$fixedcid = $this->FreePBX->astman->database_get("RINGGROUP", $result['grpnum'] . "/fixedcid");
+				$result['changecid'] = $changecid;
+				$result['fixedcid'] = $fixedcid;
 				$grps[] = $result;
 			}
 		}
