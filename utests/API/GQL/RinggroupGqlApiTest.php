@@ -180,6 +180,8 @@ class RinggroupGqlApiTest extends ApiBaseTestCase {
          callProgress:true
          answeredElseWhere:true
          overrideRingerVolume:\"20\"
+         changecid:\"fixed\"
+         fixedcid:\"123\"
       }
       ){ 
           status message
@@ -220,6 +222,8 @@ class RinggroupGqlApiTest extends ApiBaseTestCase {
          callProgress:false
          answeredElseWhere:true
          overrideRingerVolume:\"25\"
+         changecid:\"fixed\"
+         fixedcid:\"123\"
       }
       ){ 
           status message
