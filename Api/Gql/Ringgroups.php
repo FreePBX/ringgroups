@@ -692,7 +692,7 @@ class Ringgroups extends Base {
 		$grplist = isset($input['extensionList']) ? $input['extensionList'] : $res['grplist'];
 		$annmsg_id = isset($input['callerMessage']) ? $input['callerMessage'] : $res['annmsg_id'];
 		$postdest = isset($input['postAnswer']) ? $input['postAnswer'] :  $res['postdest'];
-		$desc = isset($input['description']) ? $input['description'] : $res['desc'];
+		$desc = isset($input['description']) ? $input['description'] : $res['description'];
 		$alertinfo = isset($input['alertInfo']) ? $input['alertInfo'] : $res['alertinfo'];
 		$needsconf = isset($input['needConf']) ? $input['needConf'] : $res['needsconf'];
 		$remotealert_id = isset($input['receiverMessageConfirmCall']) ? $input['receiverMessageConfirmCall'] : $res['remotealert_id'];
