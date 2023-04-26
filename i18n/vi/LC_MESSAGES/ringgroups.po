@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 15:35+0000\n"
+"POT-Creation-Date: 2023-01-03 12:26+0000\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Alert Info"
 msgstr "Thông tin cảnh báo"
 
-#: Api/Gql/Ringgroups.php:427 Api/Gql/Ringgroups.php:527
+#: Api/Gql/Ringgroups.php:441 Api/Gql/Ringgroups.php:549
 msgid "Alert info can be used for distinctive ring with SIP devices."
 msgstr ""
 
@@ -98,6 +98,10 @@ msgstr "Ghi âm cuộc gọi"
 msgid "Change External CID Configuration"
 msgstr "Thay đổi cấu hình CID nội bộ"
 
+#: Api/Gql/Ringgroups.php:499 Api/Gql/Ringgroups.php:607
+msgid "Change External CID Configuration."
+msgstr ""
+
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Xác nhận các cuộc gọi"
@@ -116,13 +120,13 @@ msgstr ""
 "cuộc gọi, theo đó người được gọi phải xác nhận nếu họ muốn nhận cuộc gọi "
 "trước khi người gọi gọi đến."
 
-#: Api/Gql/Ringgroups.php:441 Api/Gql/Ringgroups.php:541
+#: Api/Gql/Ringgroups.php:455 Api/Gql/Ringgroups.php:563
 msgid ""
 "DEPRECATED: Use receiverMessage instead. Message to be played to the person "
 "RECEIVING the call, if the call has already been accepted before they push 1."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:436 Api/Gql/Ringgroups.php:536
+#: Api/Gql/Ringgroups.php:450 Api/Gql/Ringgroups.php:558
 msgid ""
 "DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to "
 "the person RECEIVING the call, if 'Confirm Calls' is enabled."
@@ -140,13 +144,13 @@ msgstr "Xóa"
 msgid "Delete a ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:265 Api/Gql/Ringgroups.php:440
-#: Api/Gql/Ringgroups.php:540
+#: Api/Gql/Ringgroups.php:279 Api/Gql/Ringgroups.php:454
+#: Api/Gql/Ringgroups.php:562
 msgid "Deprecated due to misspelling. Use receiverMessage instead."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:257 Api/Gql/Ringgroups.php:435
-#: Api/Gql/Ringgroups.php:535
+#: Api/Gql/Ringgroups.php:271 Api/Gql/Ringgroups.php:449
+#: Api/Gql/Ringgroups.php:557
 msgid "Deprecated due to misspelling. Use receiverMessageConfirmCall instead."
 msgstr ""
 
@@ -171,7 +175,7 @@ msgstr "Không quan tâm"
 msgid "Enable Call Pickup"
 msgstr "Kích cuộc tính năng Nhấc cuộc gọi ( Call Pickup)"
 
-#: Api/Gql/Ringgroups.php:431 Api/Gql/Ringgroups.php:531
+#: Api/Gql/Ringgroups.php:445 Api/Gql/Ringgroups.php:553
 #: views/advanced_form.php:369
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
@@ -185,7 +189,7 @@ msgstr ""
 "điện thoại của họ trước khi cuộc gọi được thực hiện. Tính năng này chỉ hoạt "
 "động với chiến thuật đổ chuông tất cả (ringall)"
 
-#: Api/Gql/Ringgroups.php:399 Api/Gql/Ringgroups.php:499
+#: Api/Gql/Ringgroups.php:413 Api/Gql/Ringgroups.php:521
 msgid "Enter a description for this ringgroup."
 msgstr ""
 
@@ -197,7 +201,7 @@ msgstr "Danh sách máy nhánh"
 msgid "Extensions to ring, one per line"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:407 Api/Gql/Ringgroups.php:507
+#: Api/Gql/Ringgroups.php:421 Api/Gql/Ringgroups.php:529
 msgid "Extensions to ring, seperated by -"
 msgstr ""
 
@@ -205,6 +209,7 @@ msgstr ""
 msgid "Fixed CID Value"
 msgstr "Gía trị CID cố định"
 
+#: Api/Gql/Ringgroups.php:503 Api/Gql/Ringgroups.php:611
 #: views/advanced_form.php:421
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
@@ -240,7 +245,7 @@ msgstr ""
 "chờ ai đó nhấc máy họ sẽ nghe thấy tiếng nhạc chứ không phải tiếng chuông "
 "reo."
 
-#: Api/Gql/Ringgroups.php:453 Api/Gql/Ringgroups.php:553
+#: Api/Gql/Ringgroups.php:467 Api/Gql/Ringgroups.php:575
 msgid ""
 "If you select a music to play on hold, instead of 'Ring', they will hear "
 "that instead of Ringing while they are waiting for someone to pick up."
@@ -316,11 +321,11 @@ msgstr ""
 msgid "Mark Answered Elsewhere"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:349 Api/Gql/Ringgroups.php:381
+#: Api/Gql/Ringgroups.php:363 Api/Gql/Ringgroups.php:395
 msgid "Message for the request"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:519
+#: Api/Gql/Ringgroups.php:433 Api/Gql/Ringgroups.php:541
 msgid "Message to be played to the caller before dialing this group."
 msgstr ""
 
@@ -333,7 +338,7 @@ msgstr ""
 "này. <br><br> Để thêm các ghi âm bổ sung vui lòng sử dụng MENU \"System "
 "Recordings\" ở trên"
 
-#: Api/Gql/Ringgroups.php:445 Api/Gql/Ringgroups.php:545
+#: Api/Gql/Ringgroups.php:459 Api/Gql/Ringgroups.php:567
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled."
@@ -349,7 +354,7 @@ msgstr ""
 "cuộc gọi\" ('Confirm Calls') được kích hoạt. <br><br> Để thêm các ghi âm bổ "
 "sung vui lòng sử dụng MENU \"System Recordings\" ở trên"
 
-#: Api/Gql/Ringgroups.php:449 Api/Gql/Ringgroups.php:549
+#: Api/Gql/Ringgroups.php:463 Api/Gql/Ringgroups.php:571
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1."
@@ -404,7 +409,7 @@ msgstr ""
 "Ghi đè âm lượng chuông. Lưu ý: Điều này chỉ hợp lệ cho các điện thoại %s tại "
 "thời điểm hiện tại"
 
-#: Api/Gql/Ringgroups.php:481 Api/Gql/Ringgroups.php:581
+#: Api/Gql/Ringgroups.php:495 Api/Gql/Ringgroups.php:603
 msgid ""
 "Override the ringer volume. Note: This is only valid for Sangoma phones at "
 "this time"
@@ -481,11 +486,11 @@ msgstr "Nhóm đổ chuông: %s (%s)"
 msgid "Ring Groups"
 msgstr "Các nhóm đổ chuông"
 
-#: Api/Gql/Ringgroups.php:309
+#: Api/Gql/Ringgroups.php:323
 msgid "Ring Strategies"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:345 views/advanced_form.php:90
+#: Api/Gql/Ringgroups.php:359 views/advanced_form.php:90
 #: views/simple_form.php:64
 msgid "Ring Strategy"
 msgstr "Chiến lược đổ chuông"
@@ -502,12 +507,12 @@ msgstr "Thời gian đổ chuông ( tối đa 300 giây)"
 msgid "Ring Tone"
 msgstr "Nhạc chuông"
 
-#: Api/Gql/Ringgroups.php:313 views/form.php:56
+#: Api/Gql/Ringgroups.php:327 views/form.php:56
 msgid "Ring all available channels until one answers (default)"
 msgstr ""
 "Đổ chuông tất cả các kênh đến khi một cuộc gọi được trả lời ( mặc định)"
 
-#: Api/Gql/Ringgroups.php:317
+#: Api/Gql/Ringgroups.php:331
 msgid ""
 "Ring all available channels until one answers. If the primary extension "
 "(first in list) is occupied, the other extensions will not be rung. If the "
@@ -515,13 +520,13 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:329
+#: Api/Gql/Ringgroups.php:343
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:333
+#: Api/Gql/Ringgroups.php:347
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc. If the primary extension "
@@ -537,11 +542,11 @@ msgid ""
 "only when Confirm Calls is disabled."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:337
+#: Api/Gql/Ringgroups.php:351
 msgid "Ring only the first available channel"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:341
+#: Api/Gql/Ringgroups.php:355
 msgid "Ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 
@@ -553,7 +558,7 @@ msgstr "Số của Ring-Group"
 msgid "RingGroup"
 msgstr "RingGroup ( Đổ chuông nhóm)"
 
-#: Api/Gql/Ringgroups.php:395 Api/Gql/Ringgroups.php:495
+#: Api/Gql/Ringgroups.php:409 Api/Gql/Ringgroups.php:517
 msgid "RingGroup number"
 msgstr ""
 
@@ -565,7 +570,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr "Ghi đè âm lượng chuông"
 
-#: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:503
+#: Api/Gql/Ringgroups.php:417 Api/Gql/Ringgroups.php:525
 msgid "Ringing Strategy"
 msgstr ""
 
@@ -585,7 +590,7 @@ msgstr "Tiến trình gửi"
 msgid "Sequential"
 msgstr "Theo thứ tự"
 
-#: Api/Gql/Ringgroups.php:477 Api/Gql/Ringgroups.php:577
+#: Api/Gql/Ringgroups.php:491 Api/Gql/Ringgroups.php:599
 msgid ""
 "Should calls indicate answered elsewhere when a user answers.(true/false)"
 msgstr ""
@@ -598,7 +603,7 @@ msgstr ""
 "Ringgroup này nên chỉ thị tiến trình cuộc gọi đến các kênh kỹ thuật số được "
 "hỗ trợ."
 
-#: Api/Gql/Ringgroups.php:473 Api/Gql/Ringgroups.php:573
+#: Api/Gql/Ringgroups.php:487 Api/Gql/Ringgroups.php:595
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported.(true/false)"
@@ -632,7 +637,7 @@ msgstr ""
 msgid "Sorry,Ringgroup already exists"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:353 Api/Gql/Ringgroups.php:385
+#: Api/Gql/Ringgroups.php:367 Api/Gql/Ringgroups.php:399
 msgid "Status for the request"
 msgstr ""
 
@@ -648,11 +653,11 @@ msgstr ""
 msgid "Successfully deleted ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:321 views/form.php:58
+#: Api/Gql/Ringgroups.php:335 views/form.php:58
 msgid "Take turns ringing each available extension"
 msgstr "Thay phiên nhau đổ chuông từng máy nhánh khả dụng"
 
-#: Api/Gql/Ringgroups.php:325
+#: Api/Gql/Ringgroups.php:339
 msgid ""
 "Take turns ringing each available extension. If the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -685,12 +690,12 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: Ringgroups.class.php:283
+#: Ringgroups.class.php:287
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
-#: Api/Gql/Ringgroups.php:158 Api/Gql/Ringgroups.php:411
-#: Api/Gql/Ringgroups.php:511 views/advanced_form.php:128
+#: Api/Gql/Ringgroups.php:158 Api/Gql/Ringgroups.php:425
+#: Api/Gql/Ringgroups.php:533 views/advanced_form.php:128
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
 "strategies, this is the time for each iteration of phone(s) that are rung"
@@ -774,7 +779,7 @@ msgstr ""
 msgid "Warning! Extension"
 msgstr "Cảnh báo! Máy nhánh"
 
-#: Api/Gql/Ringgroups.php:461 Api/Gql/Ringgroups.php:561
+#: Api/Gql/Ringgroups.php:475 Api/Gql/Ringgroups.php:583
 #: views/advanced_form.php:315
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
@@ -788,7 +793,7 @@ msgstr ""
 "đổ chuông kiểu Hunt , cuộc gọi sẽ tiếp tục đổ chuông đến tổng đài viên tiếp "
 "theo."
 
-#: Api/Gql/Ringgroups.php:465 Api/Gql/Ringgroups.php:565
+#: Api/Gql/Ringgroups.php:479 Api/Gql/Ringgroups.php:587
 #: views/advanced_form.php:342
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
@@ -819,14 +824,14 @@ msgstr ""
 "có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là thành "
 "viên trong đấy."
 
-#: Api/Gql/Ringgroups.php:457 Api/Gql/Ringgroups.php:557
+#: Api/Gql/Ringgroups.php:471 Api/Gql/Ringgroups.php:579
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:423 Api/Gql/Ringgroups.php:523
+#: Api/Gql/Ringgroups.php:437 Api/Gql/Ringgroups.php:545
 #: views/advanced_form.php:479 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Nơi để gửi người gọi nếu không có trả lời nào."
@@ -850,7 +855,7 @@ msgstr ""
 "ghi âm yêu cầu (Dont Care). Nếu ghi âm bị từ chối thì khi nhấn vào yêu cầu "
 "thì ghi âm sẽ bị khóa, trừ khi bạn cài đặt ghi âm cuộc gọi là  \"Override\"."
 
-#: Api/Gql/Ringgroups.php:469 Api/Gql/Ringgroups.php:569
+#: Api/Gql/Ringgroups.php:483 Api/Gql/Ringgroups.php:591
 msgid ""
 "You can always record calls that come into this ringgroup (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -863,7 +868,7 @@ msgid ""
 "answers a call."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:415 Api/Gql/Ringgroups.php:515
+#: Api/Gql/Ringgroups.php:429 Api/Gql/Ringgroups.php:537
 #: views/advanced_form.php:154
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
@@ -890,7 +895,7 @@ msgstr "firstnotonphone (notonphone đầu tiên)"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:283
+#: Ringgroups.class.php:287
 msgid "is already in use"
 msgstr "đang được sử dụng"
 
