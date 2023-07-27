@@ -9,16 +9,16 @@ $usagehtml = '';
 
 $heading = _("Ring Groups");
 $border = 'no';
-switch($_GET['view']){
+switch($_GET['view']??''){
 	case "form":
 		$border = 'full';
 		if($request['extdisplay'] != ''){
-			$heading .= ": Edit ".ltrim($request['extdisplay'],'GRP-');
-			$usagehtml = FreePBX::View()->destinationUsage(ringgroups_getdest(ltrim($extdisplay,'GRP-')));
+			$heading .= ": Edit ".ltrim((string) $request['extdisplay'],'GRP-');
+			$usagehtml = FreePBX::View()->destinationUsage(ringgroups_getdest(ltrim((string) $extdisplay,'GRP-')));
 		}else{
 			$heading .= ": Add";
 		}
-		$content = load_view(__DIR__.'/views/form.php', array('request' => $request));
+		$content = load_view(__DIR__.'/views/form.php', ['request' => $request]);
 	break;
 	default:
 		$content = load_view(__DIR__.'/views/rggrid.php');

@@ -6,17 +6,17 @@ class Backup Extends Base\BackupBase{
 		$this->addDependency('core');
 		$this->addDependency('callrecording');
 		$astdbval = $this->FreePBX->astman->database_show("RINGGROUP");
-		$astValArr = array();
+		$astValArr = [];
 		foreach ($astdbval as $key => $value) {
-			$gdetails = explode("/", $key);
+			$gdetails = explode("/", (string) $key);
 			$astValArr[$gdetails[2]][$gdetails[3]] = $value;
 		}
 		$allringGroups = $this->FreePBX->Database->query('SELECT * FROM ringgroups')->fetchAll(\PDO::FETCH_ASSOC);
-		$rgrps = array();
+		$rgrps = [];
 		foreach ($allringGroups as $rgp) {
 			if(array_key_exists($rgp['grpnum'],$astValArr)) {
-				$rgp['changecid'] = isset($astValArr[$rgp['grpnum']]['changecid']) ? $astValArr[$rgp['grpnum']]['changecid'] : 'default';
-				$rgp['fixedcid'] = isset($astValArr[$rgp['grpnum']]['fixedcid']) ? $astValArr[$rgp['grpnum']]['fixedcid'] : '';
+				$rgp['changecid'] = $astValArr[$rgp['grpnum']]['changecid'] ?? 'default';
+				$rgp['fixedcid'] = $astValArr[$rgp['grpnum']]['fixedcid'] ?? '';
 			}
 			$rgrps[] = $rgp;
 		}

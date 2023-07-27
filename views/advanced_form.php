@@ -35,7 +35,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="description"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php echo htmlspecialchars($description); ?>">
+						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php $description??=''; echo htmlspecialchars((string) $description); ?>">
 					</div>
 				</div>
 			</div>
@@ -117,7 +117,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="grptime"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="number" min="0" max="300" class="form-control" id="grptime" name="grptime" value="<?php  echo $grptime?$grptime:20 ?>">
+						<input type="number" min="0" max="300" class="form-control" id="grptime" name="grptime" value="<?php  echo $grptime ?: 20 ?>">
 					</div>
 				</div>
 			</div>
@@ -167,7 +167,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
 					</div>
 					<div class="col-md-9">
-						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($alertinfo)?$alertinfo:''));?>
+						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",($alertinfo ?: ''));?>
 					</div>
 				</div>
 			</div>
@@ -410,7 +410,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="fixedcid"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?>" <?php echo $fixedcid_disabled ?>>
+						<input type="text" class="form-control" id="fixedcid" name="fixedcid" value="<?php $fixedcid??=''; echo $fixedcid ?>" <?php echo $fixedcid_disabled ?>>
 					</div>
 				</div>
 			</div>

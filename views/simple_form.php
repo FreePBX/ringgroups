@@ -9,7 +9,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="description"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php echo htmlspecialchars($description); ?>">
+						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php echo htmlspecialchars((string) $description); ?>">
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,7 @@
 					</div>
 					<div class="col-md-9">
 						<select class="form-control" name="grptime" id="grptime">
-							<?php  $grptime = isset($grptime) && trim($grptime) != "" ? $grptime : 20; ?>
+							<?php  $grptime = isset($grptime) && trim((string) $grptime) != "" ? $grptime : 20; ?>
 							<?php for($i=1;$i<=120;$i++) { ?>
 								<option value="<?php echo $i?>" <?php echo ($grptime == $i)?"selected":"" ?>><?php echo $i?></option>
 							<?php } ?>
@@ -119,7 +119,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
 					</div>
 					<div class="col-md-9">
-						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($alertinfo)?$alertinfo:''));?>
+						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",($alertinfo ?: ''));?>
 					</div>
 				</div>
 			</div>
@@ -142,7 +142,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="goto0"></i>
 					</div>
 					<div class="col-md-9">
-						<?php echo drawselects($goto,0,array("core" => array("extensions","voicemail")),false)?>
+						<?php echo drawselects($goto,0,["core" => ["extensions", "voicemail"]],false)?>
 					</div>
 				</div>
 			</div>
@@ -162,7 +162,7 @@
 <input type="hidden" id="cwignore" name="cwignore"  value="<?php echo $cwignore?>">
 <input type="hidden" id="cpickup" name="cpickup"  value="<?php echo $cpickup?>">
 <input type="hidden" id="needsconf" name="needsconf"  value="<?php echo $needsconf?>">
-<?php $changecid = (isset($changecid) ? $changecid : 'default');?>
+<?php $changecid ??= 'default';?>
 <input type="hidden" id="changecid" name="changecid"  value="<?php echo $changecid?>">
 <input type="hidden" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?>" <?php echo $fixedcid_disabled ?>>
 <input type="hidden" id="recording" name="recording" value="<?php echo $recording ?>">
