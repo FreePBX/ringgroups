@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>16.0.9</version>
+	<version>17.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,15 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/Ring+Groups+Module</more-info>
 	<changelog>
-		*16.0.9* FREEI-5052 backup and restore ringgroups fix 
-		*16.0.8* Bugfix/FREEPBX-23399 
-		*16.0.7* Release/15.0 [FREEPBX-22857] Always send ANSWERED_ELSEWHERE 
-		*16.0.6* FREEI-2636 bugfix for existing configuation getting lost in ringgroup 
-		*16.0.5* Packaging of ver 16.0.5
-		*16.0.4* FREEI-2915 ringgroup API 
-		*16.0.3* Packaging of ver 16.0.3
-		*16.0.2* FREEPBX-21311 Ring Groups module, Mark Answered Elsewhere problem 
-		*16.0.1alpha* 16.0.1 alpha release
+		*17.0.1* 1670.1 alpha release
 	</changelog>
 	<depends>
 		<module>callrecording ge 12.0.1</module>
