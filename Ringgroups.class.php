@@ -226,11 +226,16 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 	}
 
 	public function ajaxRequest($req, &$setting) {
-		return match ($req) {
-			'getJSON' => true,
-			default => false,
-		};
-	}
+		switch ($req) {
+			case 'getJSON':
+					return true;
+				break;
+			
+			default:
+				return false;
+				break;
+		}
+	}	
 
 	public function ajaxHandler() {
 		return match ($_REQUEST['command']) {
