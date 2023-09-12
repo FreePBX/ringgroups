@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:04+0000\n"
+"POT-Creation-Date: 2023-09-12 09:37+0000\n"
 "PO-Revision-Date: 2014-09-11 02:12+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Hebrew <http://git.freepbx.org/projects/freepbx/ringgroups/he/"
@@ -77,10 +77,6 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "יישומים"
-
 #: views/advanced_form.php:142
 #, fuzzy
 msgid "CID Name Prefix"
@@ -101,15 +97,6 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "אשר שיחות"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -152,10 +139,6 @@ msgstr ""
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "יעד אם אף אחד לא עונה"
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr ""
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -420,10 +403,6 @@ msgstr "קבוצת צלצול %s: "
 msgid "Ring Group Membership"
 msgstr ""
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr ""
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -438,7 +417,7 @@ msgstr "קבוצת צלצול %s:"
 msgid "Ring Group: %s (%s)"
 msgstr "קבוצת צלצול (%s% (s"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 #, fuzzy
 msgid "Ring Groups"
 msgstr "קבוצת צלצול"
@@ -643,7 +622,7 @@ msgstr ""
 "לא יהיה נסיון לצלצל. אם השלוחה הראשית מוגדרת במרכזיה במצב עקוב אחרי ללא "
 "תנאים, כל השלוחות תצלצלנה"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "This ringgroup"
 msgstr "הקבוצת צלצול הנוכחי"
 
@@ -742,12 +721,6 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -812,7 +785,7 @@ msgstr ""
 msgid "hunt"
 msgstr "ציד"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "is already in use"
 msgstr "כבר בשימוש"
 
@@ -848,6 +821,9 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "צלצל לכולם"
+
+#~ msgid "Applications"
+#~ msgstr "יישומים"
 
 #, fuzzy
 #~ msgid ""

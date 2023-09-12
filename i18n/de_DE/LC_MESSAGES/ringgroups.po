@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:04+0000\n"
+"POT-Creation-Date: 2023-09-12 09:37+0000\n"
 "PO-Revision-Date: 2018-07-27 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ringgroups/de/>\n"
@@ -81,10 +81,6 @@ msgstr "Immer die unten stehende Anruferkennung übermitteln."
 msgid "Announcement"
 msgstr "Ankündigung"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Anwendungen"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Namenspräfix für Anruferkennung"
@@ -104,21 +100,6 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Anrufe bestätigen"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Erzeugt eine Gruppe von Nebenstellen, die gemeinsam klingeln. Die "
-"Nebenstellen können alle auf einmal oder in verschiedenen „Jagd“-"
-"Konfigurationen angeläutet werden. Zusätzlich werden externe Rufnummern "
-"unterstützt und es existiert eine Option, Anrufe zu bestätigen, wobei der "
-"Angerufene bestätigen muss, ob er den Anruf tatsächlich annehmen will, bevor "
-"der Anrufer durchgestellt wird."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -161,10 +142,6 @@ msgstr "Beschreibung"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr ""
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr "Mitglieder der Nebenstellen-Klingelgruppe anzeigen"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -460,10 +437,6 @@ msgstr "Klingelgruppe %s: "
 msgid "Ring Group Membership"
 msgstr "Klingelgruppen-Mitgliedschaft"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr "Klingelgruppenmodul"
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Name der Klingelgruppe"
@@ -478,7 +451,7 @@ msgstr "Klingelgruppe: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Klingelgruppe: %s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Klingelgruppen"
 
@@ -682,7 +655,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "This ringgroup"
 msgstr "Diese Klingelgruppe"
 
@@ -787,12 +760,6 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -857,7 +824,7 @@ msgstr ""
 msgid "hunt"
 msgstr ""
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "is already in use"
 msgstr "wird bereits verwendet"
 
@@ -892,6 +859,29 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "ringall"
+
+#~ msgid "Applications"
+#~ msgstr "Anwendungen"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Erzeugt eine Gruppe von Nebenstellen, die gemeinsam klingeln. Die "
+#~ "Nebenstellen können alle auf einmal oder in verschiedenen „Jagd“-"
+#~ "Konfigurationen angeläutet werden. Zusätzlich werden externe Rufnummern "
+#~ "unterstützt und es existiert eine Option, Anrufe zu bestätigen, wobei der "
+#~ "Angerufene bestätigen muss, ob er den Anruf tatsächlich annehmen will, "
+#~ "bevor der Anrufer durchgestellt wird."
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr "Mitglieder der Nebenstellen-Klingelgruppe anzeigen"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "Klingelgruppenmodul"
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""

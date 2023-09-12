@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:04+0000\n"
+"POT-Creation-Date: 2023-09-12 09:37+0000\n"
 "PO-Revision-Date: 2015-10-16 08:39+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -80,10 +80,6 @@ msgstr "总是传输以下Fixed CID 值。"
 msgid "Announcement"
 msgstr "语音播报"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr ""
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "主叫ID名的前缀"
@@ -103,15 +99,6 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "呼叫确认"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -154,10 +141,6 @@ msgstr "描述"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "无人接听时的目的地"
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr ""
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -424,10 +407,6 @@ msgstr "拨号小组 %s："
 msgid "Ring Group Membership"
 msgstr "振铃组成员"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr ""
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -442,7 +421,7 @@ msgstr "拨号小组：%s"
 msgid "Ring Group: %s (%s)"
 msgstr "拨号小组：%s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "拨号小组"
 
@@ -643,7 +622,7 @@ msgstr ""
 "就不会响铃。如果主分机是设置了免打扰，它就不会振铃。如果主分机设置了无条件转"
 "移呼叫，那么所有的分机会响铃"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "This ringgroup"
 msgstr "这个拨号小组"
 
@@ -744,12 +723,6 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -814,7 +787,7 @@ msgstr "首个未离钩频道"
 msgid "hunt"
 msgstr "搜寻"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "is already in use"
 msgstr "已经在使用中了"
 

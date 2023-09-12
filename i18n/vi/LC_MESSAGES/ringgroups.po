@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:04+0000\n"
+"POT-Creation-Date: 2023-09-12 09:37+0000\n"
 "PO-Revision-Date: 2017-07-20 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -82,10 +82,6 @@ msgstr "Luôn truyền giá trị CID cố định sau."
 msgid "Announcement"
 msgstr "Thông báo"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Các ứng dụng"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Tiền ngữ của tên CID"
@@ -105,20 +101,6 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Xác nhận các cuộc gọi"
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Tạo một nhóm các máy nhánh đổ chuông cùng nhau. Các máy nhánh có thể đổ "
-"chuông cùng một thời điểm hay trong các cấu hình 'hunt' khác nhau. Ngoài ra, "
-"các số điện thoại bên ngoài được hỗ trợ và có thêm một tùy chọn xác nhận "
-"cuộc gọi, theo đó người được gọi phải xác nhận nếu họ muốn nhận cuộc gọi "
-"trước khi người gọi gọi đến."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -161,11 +143,6 @@ msgstr "Mô tả"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Điểm đích nếu không trả lời"
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr ""
-"Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy nhánh)"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -464,10 +441,6 @@ msgstr "Ring Group (Nhóm đổ chuông): %s "
 msgid "Ring Group Membership"
 msgstr "Thành viên của Ring Group"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr "Mô đun Ring Group"
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Tên của Ring Group"
@@ -482,7 +455,7 @@ msgstr "Nhóm đổ chuông: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Nhóm đổ chuông: %s (%s)"
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Các nhóm đổ chuông"
 
@@ -690,7 +663,7 @@ msgstr ""
 "Nếu máy nhánh chính là FreePBX CF vô điều kiện thì tất cả các máy sẽ đổ "
 "chuông"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "This ringgroup"
 msgstr "Ringgroup này"
 
@@ -815,15 +788,6 @@ msgstr ""
 "nhập dấu # ở cuối, chẳng hạn để truy nhập vào tính năng Follow-Me của máy "
 "nhánh, thì có thể không cần cài đặt này."
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-"Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Ring Group sẽ "
-"có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là thành "
-"viên trong đấy."
-
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -895,7 +859,7 @@ msgstr "firstnotonphone (notonphone đầu tiên)"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "is already in use"
 msgstr "đang được sử dụng"
 
@@ -930,6 +894,39 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "Đổ chuông tất cả"
+
+#~ msgid "Applications"
+#~ msgstr "Các ứng dụng"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Tạo một nhóm các máy nhánh đổ chuông cùng nhau. Các máy nhánh có thể đổ "
+#~ "chuông cùng một thời điểm hay trong các cấu hình 'hunt' khác nhau. Ngoài "
+#~ "ra, các số điện thoại bên ngoài được hỗ trợ và có thêm một tùy chọn xác "
+#~ "nhận cuộc gọi, theo đó người được gọi phải xác nhận nếu họ muốn nhận cuộc "
+#~ "gọi trước khi người gọi gọi đến."
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr ""
+#~ "Hiển thị các thành viên của Extension Ring Group ( Nhóm đổ chuông máy "
+#~ "nhánh)"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "Mô đun Ring Group"
+
+#~ msgid ""
+#~ "When set to true extensions that belong to one or more Ring Groups will "
+#~ "have a Ring Group section and link back to each group they are a member "
+#~ "of."
+#~ msgstr ""
+#~ "Khi cài đặt về True thì các máy nhánh thuộc về một hay nhiều Ring Group "
+#~ "sẽ có một lựa chọn Ring Group và kết nối trở lại với mỗi nhóm mà chúng là "
+#~ "thành viên trong đấy."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""

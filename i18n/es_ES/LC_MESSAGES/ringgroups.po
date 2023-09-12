@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo ringgroups module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:04+0000\n"
+"POT-Creation-Date: 2023-09-12 09:37+0000\n"
 "PO-Revision-Date: 2016-12-10 23:22+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -78,10 +78,6 @@ msgstr "Siempre transmitir el valor de CID Fijado abajo."
 msgid "Announcement"
 msgstr "Anuncio"
 
-#: ringgroups.i18n.php:6
-msgid "Applications"
-msgstr "Aplicaciones"
-
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefijo Nombre de CID"
@@ -101,20 +97,6 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr ""
-
-#: ringgroups.i18n.php:8
-msgid ""
-"Creates a group of extensions that all ring together. Extensions can be rung "
-"all at once, or in various 'hunt' configurations. Additionally, external "
-"numbers are supported, and there is a call confirmation option where the "
-"callee has to confirm if they actually want to take the call before the "
-"caller is transferred."
-msgstr ""
-"Crea un grupo de extensiones que suenan todas juntas. Las extensiones se "
-"pueden ejecutar de una sola vez, o en varias configuraciones de 'caza'. "
-"Además, los números externos son compatibles, y hay una opción de "
-"confirmación de llamada donde el receptor tiene que confirmar si realmente "
-"quieren tomar la llamada antes de que el llamante se transfiera."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -157,10 +139,6 @@ msgstr "Descripción"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr ""
-
-#: ringgroups.i18n.php:12
-msgid "Display Extension Ring Group Members"
-msgstr "Mostrar Extensiones Miembro del Grupo de Timbrado"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -450,10 +428,6 @@ msgstr "Grupo de Timbrado %s: "
 msgid "Ring Group Membership"
 msgstr "Miembros del Grupo de Timbrado"
 
-#: ringgroups.i18n.php:14
-msgid "Ring Group Module"
-msgstr "Modulo Grupo de Timbrado"
-
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Nombre de Grupo de Timbrado"
@@ -468,7 +442,7 @@ msgstr ""
 msgid "Ring Group: %s (%s)"
 msgstr ""
 
-#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
+#: page.ringgroups.php:10
 msgid "Ring Groups"
 msgstr "Grupos de Timbrado"
 
@@ -679,7 +653,7 @@ msgstr ""
 "molestar' (DND), no sonará. Si la primera extensión está en modo 'Desvío de "
 "llamada incondicional', entonces sonarán todas"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "This ringgroup"
 msgstr ""
 
@@ -803,15 +777,6 @@ msgstr ""
 "'#' al final, por ejemplo para acceder al Sigue-Me de la extensión, podrían "
 "no respetar este ajuste."
 
-#: ringgroups.i18n.php:16
-msgid ""
-"When set to true extensions that belong to one or more Ring Groups will have "
-"a Ring Group section and link back to each group they are a member of."
-msgstr ""
-"Cuando se establece como verdadero \"true\" extensiones que pertenecen a uno "
-"o más grupos de timbrado, tendrá una sección de grupo de timbres y un enlace "
-"a cada grupo al que pertenezcan."
-
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -884,7 +849,7 @@ msgstr "Primero que no esté al teléfono"
 msgid "hunt"
 msgstr "hunt"
 
-#: Ringgroups.class.php:256
+#: Ringgroups.class.php:261
 msgid "is already in use"
 msgstr "ya está en uso"
 
@@ -919,6 +884,37 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "Sonar todos"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicaciones"
+
+#~ msgid ""
+#~ "Creates a group of extensions that all ring together. Extensions can be "
+#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
+#~ "external numbers are supported, and there is a call confirmation option "
+#~ "where the callee has to confirm if they actually want to take the call "
+#~ "before the caller is transferred."
+#~ msgstr ""
+#~ "Crea un grupo de extensiones que suenan todas juntas. Las extensiones se "
+#~ "pueden ejecutar de una sola vez, o en varias configuraciones de 'caza'. "
+#~ "Además, los números externos son compatibles, y hay una opción de "
+#~ "confirmación de llamada donde el receptor tiene que confirmar si "
+#~ "realmente quieren tomar la llamada antes de que el llamante se transfiera."
+
+#~ msgid "Display Extension Ring Group Members"
+#~ msgstr "Mostrar Extensiones Miembro del Grupo de Timbrado"
+
+#~ msgid "Ring Group Module"
+#~ msgstr "Modulo Grupo de Timbrado"
+
+#~ msgid ""
+#~ "When set to true extensions that belong to one or more Ring Groups will "
+#~ "have a Ring Group section and link back to each group they are a member "
+#~ "of."
+#~ msgstr ""
+#~ "Cuando se establece como verdadero \"true\" extensiones que pertenecen a "
+#~ "uno o más grupos de timbrado, tendrá una sección de grupo de timbres y un "
+#~ "enlace a cada grupo al que pertenezcan."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""
