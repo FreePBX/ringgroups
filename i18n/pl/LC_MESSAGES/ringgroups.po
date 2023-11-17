@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2023-11-16 22:00+0000\n"
+"PO-Revision-Date: 2023-11-18 17:00+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/pl/>\n"
@@ -39,6 +39,9 @@ msgid ""
 "having issues, see the \"Enforce RFC7462\" option found in Settings-"
 ">Advanced Settings."
 msgstr ""
+"ALERT_INFO może być użyte do dzwonienia dystynktywnego w przypadku urządzeń "
+"SIP.<br>Jeśli masz problemy, zobacz opcję „Wymuś RFC7462” znajdującą się w "
+"Ustawieniach->Ustawieniach zaawansowanych."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -51,7 +54,7 @@ msgstr ""
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
-msgstr ""
+msgstr "Info alarmowe"
 
 #: views/form.php:247
 msgid "Always transmit the Fixed CID Value below."
@@ -299,7 +302,7 @@ msgstr ""
 
 #: Ringgroups.class.php:159
 msgid "Reset"
-msgstr ""
+msgstr "Zresetuj"
 
 #: views/form.php:218
 msgid "Ring"
@@ -416,7 +419,7 @@ msgstr ""
 
 #: Ringgroups.class.php:154
 msgid "Submit"
-msgstr ""
+msgstr "Wyślij"
 
 #: views/form.php:56
 msgid "Take turns ringing each available extension"
