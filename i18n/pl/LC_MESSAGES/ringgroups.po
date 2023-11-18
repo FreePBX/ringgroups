@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2023-11-18 17:00+0000\n"
+"PO-Revision-Date: 2023-11-20 15:01+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/pl/>\n"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
-msgstr "Info alarmowe"
+msgstr "Informacje o alertach"
 
 #: views/form.php:247
 msgid "Always transmit the Fixed CID Value below."
@@ -85,7 +85,7 @@ msgstr ""
 #: views/form.php:245
 #: views/form.php:257
 msgid "Default"
-msgstr ""
+msgstr "Domyślne"
 
 #: Ringgroups.class.php:149
 msgid "Delete"
@@ -150,7 +150,7 @@ msgstr ""
 
 #: views/advanced_form.php:34
 msgid "Group Description"
-msgstr ""
+msgstr "Opis grupy"
 
 #: functions.inc.php:334
 msgid "INUSE"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: views/form.php:243
 msgid "Mode"
-msgstr ""
+msgstr "Tryb"
 
 #: views/advanced_form.php:440
 msgid "Never"
@@ -256,7 +256,7 @@ msgstr "Nie"
 #: views/advanced_form.php:194
 #: views/form.php:108
 msgid "None"
-msgstr ""
+msgstr "Żaden"
 
 #: assets/js/ringgroups.js:59
 msgid ""
@@ -274,7 +274,7 @@ msgstr ""
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
-msgstr ""
+msgstr "Zastąp głośność dzwonka. Uwaga: To obecnie dotyczy tylko telefonów %s"
 
 #: views/form.php:211
 msgid "Play Music On Hold"
@@ -360,7 +360,7 @@ msgstr ""
 
 #: views/simple_form.php:118
 msgid "Ring Tone"
-msgstr ""
+msgstr "Dzwonek"
 
 #: views/form.php:54
 msgid "Ring all available channels until one answers (default)"
@@ -383,13 +383,15 @@ msgstr ""
 
 #: views/advanced_form.php:189
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Nadpisanie głośności dzwonka"
 
 #: views/simple_form.php:130
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"Wybierz dzwonek z powyższej listy opcji. To określi, jak brzmi Twój telefon, "
+"gdy dzwoni z tej grupy."
 
 #: views/advanced_form.php:217
 msgid "Send Progress"
