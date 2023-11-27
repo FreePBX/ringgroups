@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2023-11-20 15:01+0000\n"
+"PO-Revision-Date: 2023-11-29 00:01+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/pl/>\n"
@@ -421,7 +421,7 @@ msgstr ""
 
 #: Ringgroups.class.php:154
 msgid "Submit"
-msgstr "Wyślij"
+msgstr "Zatwierdź"
 
 #: views/form.php:56
 msgid "Take turns ringing each available extension"
