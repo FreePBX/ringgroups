@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 15:49+0530\n"
-"PO-Revision-Date: 2023-12-13 23:49+0000\n"
+"PO-Revision-Date: 2023-12-22 00:00+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "ringgroups/pl/>\n"
@@ -42,9 +42,9 @@ msgid ""
 "having issues, see the \"Enforce RFC7462\" option found in Settings-"
 ">Advanced Settings."
 msgstr ""
-"ALERT_INFO może być użyte do dzwonienia dystynktywnego w przypadku urządzeń "
-"SIP.<br>Jeśli masz problemy, zobacz opcję „Wymuś RFC7462” znajdującą się w "
-"Ustawieniach->Ustawieniach zaawansowanych."
+"ALERT_INFO może być używany do charakterystycznego dzwonka z urządzeniami "
+"SIP. <br>Jeśli masz problemy, zapoznaj się z opcją \"Wymuszaj RFC7462\" "
+"znajdującą się w Ustawienia->Ustawienia zaawansowane."
 
 #: views/rggrid.php:18
 msgid "Actions"
@@ -57,11 +57,11 @@ msgstr "Dodaj grupę dzwoniącą"
 
 #: views/advanced_form.php:166
 msgid "Alert Info"
-msgstr "Informacje o alertach"
+msgstr "Informacje o alercie"
 
 #: views/form.php:247
 msgid "Always transmit the Fixed CID Value below."
-msgstr "Zawsze przesyłaj stałą wartość CID poniżej."
+msgstr "Zawsze przesyłaj poniższą stałą wartość CID."
 
 #: views/form.php:101
 msgid "Announcement"
@@ -146,9 +146,9 @@ msgid ""
 "Should be in a format of digits only with an option of E164 format using a "
 "leading '+'."
 msgstr ""
-"Stała wartość zastępująca identyfikator CID używany w niektórych powyższych "
-"trybach. Powinien mieć format wyłącznie cyfr z opcją formatu E164 z wiodącym "
-"znakiem „+”."
+"Poprawiono wartość zastępowania CID używaną w niektórych z powyższych "
+"trybów. Powinien być tylko w formacie cyfr z opcją formatu E164 z "
+"początkowym znakiem \"+\"."
 
 #: views/advanced_form.php:436
 msgid "Force"
