@@ -413,7 +413,7 @@ function ringgroups_hookProcess_core($viewing_itemid, $request) {
 }
 
 global $amp_conf;
-if ($amp_conf['EXTENSION_LIST_RINGGROUPS']) {
+if (isset($amp_conf['EXTENSION_LIST_RINGGROUPS']) && $amp_conf['EXTENSION_LIST_RINGGROUPS']) {
 
 	function ringgroups_configpageinit($pagename) {
 		global $currentcomponent;
