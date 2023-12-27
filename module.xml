@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>17.0.2</version>
+	<version>17.0.2.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,13 +12,13 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/Ring+Groups+Module</more-info>
 	<changelog>
-		*17.0.2* Packaging of ver 17.0.2
+		*17.0.2.1* Packaging of ver 17.0.2.1
 		*17.0.1* 1670.1 alpha release
 	</changelog>
 	<depends>
-		<module>callrecording ge 12.0.1</module>
-		<module>core ge 12.0.16</module>
-		<version>13.0.70</version>
+		<module>callrecording ge 17.0.1</module>
+		<module>core ge 17.0.1</module>
+		<version>17.0.1</version>
 	</depends>
 	<menuitems>
 		<ringgroups needsenginedb="yes">Ring Groups</ringgroups>
