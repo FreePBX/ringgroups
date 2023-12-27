@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 09:37+0000\n"
+"POT-Creation-Date: 2023-12-27 05:47-0500\n"
 "PO-Revision-Date: 2016-07-07 11:27+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com.com>\n"
 "Language-Team: Russian <http://weblate.postmet.com/freepbx/trunkbalance/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
 #: views/form.php:64
@@ -78,6 +78,10 @@ msgstr "Всегда передавать фиксированное значе�
 msgid "Announcement"
 msgstr "Приветствие"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Приложения"
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Префикс ИД имени"
@@ -97,6 +101,21 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Подтверждение звонков"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Создаёт группу внутренних номеров, которые будут звонить одновременно. "
+"Сценарии групповых вызовов различны: все вместе, или различные варианты "
+"серийных исканий. Дополнительно в группе могут быть так же использованы "
+"внешние номера, и здесь можно указать опцию подтверждения для внешнего "
+"номера. Которая даёт возможность подтвердить желание принять звонок прежде, "
+"чем звонок будет туда перенаправлен."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -139,6 +158,10 @@ msgstr "Описание"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Назначение, если никто не ответил"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr "Отображает внутренние номера членов ринг-группы"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -421,6 +444,10 @@ msgstr "Группа вызова %s: "
 msgid "Ring Group Membership"
 msgstr "Членство в группе вызова"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "Модуль группы вызова"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -435,7 +462,7 @@ msgstr "Группа вызова %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Группа вызова: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Группы вызова"
 
@@ -769,6 +796,15 @@ msgstr ""
 "решёткой '#' на конце, как например - для внешних номеров в опциях Следуйте "
 "сюда, эта опция не будет иметь значения."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Если установлено в True, внутренние номера, которые принадлежат к одной или "
+"более ринг-группе будут отображаться как в секции Ринг-группы, так и в "
+"каждой ринг-группе, членами которой они являются."
+
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -876,38 +912,6 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "звонят-все"
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Создаёт группу внутренних номеров, которые будут звонить одновременно. "
-#~ "Сценарии групповых вызовов различны: все вместе, или различные варианты "
-#~ "серийных исканий. Дополнительно в группе могут быть так же использованы "
-#~ "внешние номера, и здесь можно указать опцию подтверждения для внешнего "
-#~ "номера. Которая даёт возможность подтвердить желание принять звонок "
-#~ "прежде, чем звонок будет туда перенаправлен."
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "Отображает внутренние номера членов ринг-группы"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "Модуль группы вызова"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Если установлено в True, внутренние номера, которые принадлежат к одной "
-#~ "или более ринг-группе будут отображаться как в секции Ринг-группы, так и "
-#~ "в каждой ринг-группе, членами которой они являются."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""

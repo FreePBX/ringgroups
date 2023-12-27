@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 09:37+0000\n"
+"POT-Creation-Date: 2023-12-27 05:47-0500\n"
 "PO-Revision-Date: 2019-03-29 17:00+0000\n"
 "Last-Translator: jeremie cattan <freepbx@famillecattan.com>\n"
 "Language-Team: French <http://*/projects/freepbx/ringgroups/fr/>\n"
@@ -98,6 +98,10 @@ msgstr "Toujours transmettre l'ID appelant ci-dessous."
 msgid "Announcement"
 msgstr "Annonce"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Applications"
+
 #: views/advanced_form.php:142
 #, fuzzy
 msgid "CID Name Prefix"
@@ -122,6 +126,15 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Confirmer les Appels"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -164,6 +177,10 @@ msgstr ""
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Destination si pas de réponse"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr ""
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -433,6 +450,10 @@ msgstr "Groupe de Sonnerie %s :"
 msgid "Ring Group Membership"
 msgstr ""
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr ""
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr ""
@@ -447,7 +468,7 @@ msgstr "Groupe de Sonnerie : %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Groupe de Sonnerie : %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Groupes de Sonnerie"
 
@@ -754,6 +775,12 @@ msgid ""
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -853,9 +880,6 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "Sonner Partout"
-
-#~ msgid "Applications"
-#~ msgstr "Applications"
 
 #, fuzzy
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
@@ -994,8 +1018,8 @@ msgstr "Sonner Partout"
 #~ msgstr ""
 #~ "Message qui sera joué à la personnne RECEVANT l'appel, si l'appel a déjà "
 #~ "été accepté avant qu'ils n'appuyent sur 1.<br><br>Pour ajouter des "
-#~ "enregistrements additionnels, utilisez le MENU  \"Enregistrements Système"
-#~ "\" sur la gauche"
+#~ "enregistrements additionnels, utilisez le MENU  \"Enregistrements "
+#~ "Système\" sur la gauche"
 
 #~ msgid "Play Music On Hold?"
 #~ msgstr "Jouer la Musique d'Attente ?"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 09:37+0000\n"
+"POT-Creation-Date: 2023-12-27 05:47-0500\n"
 "PO-Revision-Date: 2018-07-18 19:18+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ringgroups/it/>\n"
@@ -81,6 +81,10 @@ msgstr "Trasmetti sempre il valore CID fisso di seguito."
 msgid "Announcement"
 msgstr "Annuncio"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Applicazioni"
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefisso Nome CID"
@@ -100,6 +104,20 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Conferma Chiamate"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Crea un gruppo di estensioni che suonano tutte insieme. Le estensioni "
+"possono essere suonate tutte contemporaneamente o in varie configurazioni di "
+"\"caccia\". Inoltre, sono supportati numeri esterni e c'è un'opzione di "
+"conferma della chiamata in cui il destinatario deve confermare se in realtà "
+"vuole prendere la chiamata prima che il chiamante venga trasferito."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -142,6 +160,10 @@ msgstr "Descrizione"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Destinazione se nessuna risposta"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr "Visualizza membri del gruppo di squilli di estensione"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -438,6 +460,10 @@ msgstr "Gruppo di Chiamata %s:"
 msgid "Ring Group Membership"
 msgstr "Appartenenza al gruppo di suoneria"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "Modulo del gruppo di suoneria"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "nome del gruppo di suoneria"
@@ -452,7 +478,7 @@ msgstr "Gruppo di Chiamata: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Gruppo di Chiamata: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Gruppi di chiamata"
 
@@ -793,6 +819,15 @@ msgstr ""
 "fine, ad esempio per accedere al Follow-Me dell'interno, potrebbero non "
 "rispettare questa impostazione."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Se impostato su estensioni reali che appartengono a uno o più gruppi di "
+"suoneria, avrà una sezione Gruppi suoneria e ricollegherà a ciascun gruppo "
+"di cui fa parte."
+
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -901,37 +936,6 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "ringall"
-
-#~ msgid "Applications"
-#~ msgstr "Applicazioni"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Crea un gruppo di estensioni che suonano tutte insieme. Le estensioni "
-#~ "possono essere suonate tutte contemporaneamente o in varie configurazioni "
-#~ "di \"caccia\". Inoltre, sono supportati numeri esterni e c'è un'opzione "
-#~ "di conferma della chiamata in cui il destinatario deve confermare se in "
-#~ "realtà vuole prendere la chiamata prima che il chiamante venga trasferito."
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "Visualizza membri del gruppo di squilli di estensione"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "Modulo del gruppo di suoneria"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Se impostato su estensioni reali che appartengono a uno o più gruppi di "
-#~ "suoneria, avrà una sezione Gruppi suoneria e ricollegherà a ciascun "
-#~ "gruppo di cui fa parte."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""
@@ -1062,8 +1066,8 @@ msgstr "ringall"
 #~ msgstr ""
 #~ "Il messaggio da riprodurre alla persona che RICEVE la chiamata, se la "
 #~ "chiamata è già stata accettata prima di premere il tasto.<br><br>Per "
-#~ "aggiungere ulteriori registrazioni utilizzare \"Registrazioni di Sistema"
-#~ "\" nel MENU di sinistra"
+#~ "aggiungere ulteriori registrazioni utilizzare \"Registrazioni di "
+#~ "Sistema\" nel MENU di sinistra"
 
 #~ msgid "Play Music On Hold?"
 #~ msgstr "Riproduci Musica di Attesa?"

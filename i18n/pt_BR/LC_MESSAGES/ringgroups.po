@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 09:37+0000\n"
+"POT-Creation-Date: 2023-12-27 05:47-0500\n"
 "PO-Revision-Date: 2016-12-15 23:31+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -82,6 +82,10 @@ msgstr "Transmita sempre o Valor de CID Fixo abaixo."
 msgid "Announcement"
 msgstr "Anúncio"
 
+#: ringgroups.i18n.php:6
+msgid "Applications"
+msgstr "Aplicações"
+
 #: views/advanced_form.php:142
 msgid "CID Name Prefix"
 msgstr "Prefixo do Nome CID"
@@ -101,6 +105,20 @@ msgstr ""
 #: views/advanced_form.php:354
 msgid "Confirm Calls"
 msgstr "Confirmar Chamadas"
+
+#: ringgroups.i18n.php:8
+msgid ""
+"Creates a group of extensions that all ring together. Extensions can be rung "
+"all at once, or in various 'hunt' configurations. Additionally, external "
+"numbers are supported, and there is a call confirmation option where the "
+"callee has to confirm if they actually want to take the call before the "
+"caller is transferred."
+msgstr ""
+"Cria um grupo de ramais que tocam em conjunto. Os ramais podem ser "
+"executadas de uma só vez, ou em várias configurações de 'hunt'. Além disso, "
+"os números externos são suportados, e há uma opção de confirmação de chamada "
+"onde o destinatário tem de confirmar quer receber a chamada antes que "
+"usuário o chamador seja transferido."
 
 #: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
 msgid ""
@@ -143,6 +161,10 @@ msgstr "Descrição"
 #: views/advanced_form.php:467 views/simple_form.php:141
 msgid "Destination if no answer"
 msgstr "Destino caso não responda"
+
+#: ringgroups.i18n.php:12
+msgid "Display Extension Ring Group Members"
+msgstr "Exibir Membros do Grupo de Toques de Ramais"
 
 #: views/advanced_form.php:440
 msgid "Dont Care"
@@ -439,6 +461,10 @@ msgstr "Grupo de Toque %s: "
 msgid "Ring Group Membership"
 msgstr "Membros do Grupo de Toque"
 
+#: ringgroups.i18n.php:14
+msgid "Ring Group Module"
+msgstr "Módulo de Grupo de Toque"
+
 #: views/simple_form.php:8
 msgid "Ring Group Name"
 msgstr "Nome do Grupo de Toque"
@@ -453,7 +479,7 @@ msgstr "Grupo de Toque: %s"
 msgid "Ring Group: %s (%s)"
 msgstr "Grupo de Toque: %s (%s)"
 
-#: page.ringgroups.php:10
+#: page.ringgroups.php:10 ringgroups.i18n.php:4 ringgroups.i18n.php:10
 msgid "Ring Groups"
 msgstr "Grupos de Toques"
 
@@ -784,6 +810,15 @@ msgstr ""
 "final, por exemplo, para acessar o Siga-Me do ramal, podem não respeitar "
 "essa configuração."
 
+#: ringgroups.i18n.php:16
+msgid ""
+"When set to true extensions that belong to one or more Ring Groups will have "
+"a Ring Group section and link back to each group they are a member of."
+msgstr ""
+"Quando configurado para ramais verdadeiros que pertencem a um ou mais Grupos "
+"de Toque terá uma seção de Grupo de Toques e um enlace para cada grupo do "
+"qual eles são membros."
+
 #: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
@@ -891,37 +926,6 @@ msgstr ""
 #: views/form.php:58
 msgid "ringall"
 msgstr "tocar todos"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicações"
-
-#~ msgid ""
-#~ "Creates a group of extensions that all ring together. Extensions can be "
-#~ "rung all at once, or in various 'hunt' configurations. Additionally, "
-#~ "external numbers are supported, and there is a call confirmation option "
-#~ "where the callee has to confirm if they actually want to take the call "
-#~ "before the caller is transferred."
-#~ msgstr ""
-#~ "Cria um grupo de ramais que tocam em conjunto. Os ramais podem ser "
-#~ "executadas de uma só vez, ou em várias configurações de 'hunt'. Além "
-#~ "disso, os números externos são suportados, e há uma opção de confirmação "
-#~ "de chamada onde o destinatário tem de confirmar quer receber a chamada "
-#~ "antes que usuário o chamador seja transferido."
-
-#~ msgid "Display Extension Ring Group Members"
-#~ msgstr "Exibir Membros do Grupo de Toques de Ramais"
-
-#~ msgid "Ring Group Module"
-#~ msgstr "Módulo de Grupo de Toque"
-
-#~ msgid ""
-#~ "When set to true extensions that belong to one or more Ring Groups will "
-#~ "have a Ring Group section and link back to each group they are a member "
-#~ "of."
-#~ msgstr ""
-#~ "Quando configurado para ramais verdadeiros que pertencem a um ou mais "
-#~ "Grupos de Toque terá uma seção de Grupo de Toques e um enlace para cada "
-#~ "grupo do qual eles são membros."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""
