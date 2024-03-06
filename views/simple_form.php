@@ -9,7 +9,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="description"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php echo htmlspecialchars((string) $description); ?>">
+						<input type="text" maxlength="35" class="form-control maxlen" id="description" name="description" value="<?php echo isset($description) ? htmlspecialchars((string) $description) : ''; ?>">
 					</div>
 				</div>
 			</div>
