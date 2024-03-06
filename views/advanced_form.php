@@ -130,8 +130,8 @@
 	</div>
 </div>
 <!--END Ring Time (max 300 sec)-->
-<?php echo $announcementhtml?>
-<?php echo $ringhtml ?>
+<?php echo $announcementhtml ?? ''; ?>
+<?php echo $ringhtml ?? '' ?>
 <!--CID Name Prefix-->
 <div class="element-container">
 	<div class="row">
