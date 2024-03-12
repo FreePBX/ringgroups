@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>17.0.2.2</version>
+	<version>17.0.2.3</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -10,9 +10,9 @@
 	<description>
 		Creates a group of extensions that all ring together. Extensions can be rung all at once, or in various 'hunt' configurations. Additionally, external numbers are supported, and there is a call confirmation option where the callee has to confirm if they actually want to take the call before the caller is transferred.
 	</description>
-  	<more-info>https://wiki.freepbx.org/display/F2/Ring+Groups+Module</more-info>
+  	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/24477908/Ring+Groups+Module</more-info>
 	<changelog>
-		*17.0.2.2* Packaging of ver 17.0.2.2
+		*17.0.2.3* Packaging of ver 17.0.2.3
 		*17.0.1* 1670.1 alpha release
 	</changelog>
 	<depends>
