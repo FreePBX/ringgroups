@@ -155,17 +155,17 @@
 	</div>
 </div>
 <?php if (!empty($last_ext)) { ?>
-<input type="hidden" id="account" name="account" value="<?php echo $last_ext?>">
+<input type="hidden" id="account" name="account" value="<?php echo $last_ext ?? ''; ?>">
 <?php } ?>
-<input type="hidden" id="grpre" name="grppre" value="<?php echo $grppre?>">
-<input type="hidden" id="cfignore" name="cfignore"  value="<?php echo $cfignore?>">
-<input type="hidden" id="cwignore" name="cwignore"  value="<?php echo $cwignore?>">
-<input type="hidden" id="cpickup" name="cpickup"  value="<?php echo $cpickup?>">
-<input type="hidden" id="needsconf" name="needsconf"  value="<?php echo $needsconf?>">
+<input type="hidden" id="grpre" name="grppre" value="<?php echo $grppre ?? ''; ?>">
+<input type="hidden" id="cfignore" name="cfignore"  value="<?php echo $cfignore ?? ''; ?>">
+<input type="hidden" id="cwignore" name="cwignore"  value="<?php echo $cwignore ?? ''; ?>">
+<input type="hidden" id="cpickup" name="cpickup"  value="<?php echo $cpickup ?? ''; ?>">
+<input type="hidden" id="needsconf" name="needsconf"  value="<?php echo $needsconf ?? ''; ?>">
 <?php $changecid ??= 'default';?>
-<input type="hidden" id="changecid" name="changecid"  value="<?php echo $changecid?>">
-<input type="hidden" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?>" <?php echo $fixedcid_disabled ?>>
-<input type="hidden" id="recording" name="recording" value="<?php echo $recording ?>">
+<input type="hidden" id="changecid" name="changecid"  value="<?php echo $changecid ?? ''; ?>">
+<input type="hidden" id="fixedcid" name="fixedcid" value="<?php echo $fixedcid ?? ''; ?>" <?php echo $fixedcid_disabled ?? ''; ?>>
+<input type="hidden" id="recording" name="recording" value="<?php echo $recording ?? ''; ?>">
 <input type="hidden" id="remotealert_id" name="remotealert_id" value="<?php echo !empty($remotealert_id) ? $remotealert_id : "" ?>">
 <input type="hidden" id="toolate_id" name="toolate_id" value="<?php echo !empty($toolate_id) ? $toolate_id : "" ?>">
 <input type="hidden" id="annmsg_id" name="annmsg_id" value="<?php echo !empty($annmsg_id) ? $annmsg_id : "" ?>">
