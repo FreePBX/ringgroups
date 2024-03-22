@@ -310,26 +310,29 @@ class Ringgroups extends FreePBX_Helpers implements BMO {
 		$stmt = $this->Database->prepare($sql);
 		$stmt->execute([ ':grpnum' => $grpnum ]);
 		$results = $stmt->fetch(PDO::FETCH_ASSOC);
-		if ($this->FreePBX->astman->connected()) {
-			$astdb_changecid = strtolower((string) $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/changecid"));
-			switch ($astdb_changecid) {
-				case 'default':
-				case 'did':
-				case 'forcedid':
-				case 'fixed':
-				case 'extern':
-					break;
-				default:
-					$astdb_changecid = 'default';
+		$data = [];
+		if ($results !== false) {
+			$data = $results;
+			if ($this->FreePBX->astman->connected()) {
+				$astdb_changecid = strtolower((string) $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/changecid"));
+				switch ($astdb_changecid) {
+					case 'default':
+					case 'did':
+					case 'forcedid':
+					case 'fixed':
+					case 'extern':
+						break;
+					default:
+						$astdb_changecid = 'default';
+				}
+				$data['changecid'] = $astdb_changecid;
+				$fixedcid             = $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/fixedcid");
+				$data['fixedcid']  = preg_replace("/[^0-9\+]/", "", trim((string) $fixedcid));
+			} else {
+				throw new \RuntimeException("Cannot connect to Asterisk Manager");
 			}
-			$results['changecid'] = $astdb_changecid;
-			$fixedcid             = $this->FreePBX->astman->database_get("RINGGROUP", $grpnum . "/fixedcid");
-			$results['fixedcid']  = preg_replace("/[^0-9\+]/", "", trim((string) $fixedcid));
 		}
-		else {
-			throw new \RuntimeException("Cannot connect to Asterisk Manager");
-		}
-		return $results;
+		return $data;
 	}
 
 	public function delete($grpnum) {
