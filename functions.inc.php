@@ -214,7 +214,7 @@ function ringgroups_get_config($engine) {
 					$toolate     = recordings_get_file($toolate_id);
 					$len         = strlen($grpnum) + 4;
 					$ext->add("grps", "_RG-{$grpnum}-.", '', new ext_nocdr(''));
-					$ext->add("grps", "_RG-{$grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^{$remotealert}^{$toolate}^{$grpnum})" . ',{${EXTEN:' . $len . '}}'));
+					$ext->add("grps", "_RG-{$grpnum}-.", '', new ext_macro('dial', "$grptime,$dialopts" . "M(confirm^{$remotealert}^{$toolate}^{$grpnum})" . ',${EXTEN:' . $len . '}'));
 
 					$ext->add($contextname, $grpnum, '', new ext_gotoif('$[$["${RG_CONFIRM}"="1"] | $[${LEN(${VQ_CONFIRMMSG})}>1]]', 'RGVQANNOUNCE', 'NORGVQANNOUNCE'));
 					$ext->add($contextname, $grpnum, 'RGVQANNOUNCE', new ext_macro('dial-confirm', "$grptime,$dialopts,$grplist,$grpnum"));
