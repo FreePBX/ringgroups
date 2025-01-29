@@ -21,6 +21,7 @@ class Ringgroups extends Base {
 						'mutateAndGetPayload' => function ($input) {
 							$res = $this->addRingGroup($input);
 							if(isset($res) && $res == true){
+								needreload();
 								return ['message' => _("Successfully added ringgroup"), 'status'=> true];
 							}else{
 								return ['message' => _("Sorry,Ringgroup already exists"), 'status' => false];
@@ -42,6 +43,7 @@ class Ringgroups extends Base {
 							$response = $this->freepbx->Ringgroups->delete($input['groupNumber']);
 							if(isset($response) && is_int($item)){
 								$this->updateRingGroup($input,$list[$item]);
+								needreload();
 								return ['message' => _("RingGroup updated Successfully"), 'status'=> true];
 							}else{
 								return ['message' => _("Sorry, unable to process your update request"),'status' => false];
@@ -60,6 +62,7 @@ class Ringgroups extends Base {
 						'mutateAndGetPayload' => function ($input) {
 							$response = $this->freepbx->Ringgroups->delete($input['groupNumber']);
 							if(isset($response)){
+								needreload();
 								return ['message' => _("Successfully deleted ringgroup"), 'status'=> true];
 							}else{
 								return ['message' => _("Sorry, unable to process your delete request"),'status' => false];
