@@ -582,7 +582,6 @@ class Ringgroups extends Base {
 	}
 
 	private function addRingGroup($input){
-
 		$grpnum = $input['groupNumber'];
 		$strategy = $input['strategy'] ?? 'ringall';
 		$grptime = $input['ringTime'] ?? 20;
@@ -592,7 +591,7 @@ class Ringgroups extends Base {
 		$postdest = $input['postAnswer'] ?? 'app-blackhole,hangup,1';
 		$desc = $input['description'] ?? 'ring group'.$grpnum;
 		$alertinfo = $input['alertInfo'] ?? '';
-		$needsconf = (isset($input['needConf']) && $input['needConf'] == true) ?  'CHECKED' : '';
+		$needsconf = isset($input['needConf']) && $input['needConf'] ? 'CHECKED' : '';
 		$remotealert_id = $input['receiverMessageConfirmCall'] ?? 0;
 		$toolate_id = $input['receiverMessage'] ?? 0;
 
@@ -601,34 +600,28 @@ class Ringgroups extends Base {
 			$remotealert_id = $input['recevierMessageConfirmCall'];
 		}
 
-		// Ongoing support of deprecated misspelling
 		if ($toolate_id === 0 && isset($input['recevierMessage'])) {
 			$toolate_id = $input['recevierMessage'];
 		}
 
 		$ringing = $input['ringingMusic'] ?? 'Ring';
-		$cwignore = (isset($input['ignoreCallWait']) && $input['ignoreCallWait'] == true) ? 'CHECKED' : '';
-		$cfignore = (isset($input['ignoreCallForward']) && $input['ignoreCallForward'] == true) ? 'CHECKED' : '';
-		$cpickup = (isset($input['pickupCall']) && $input['pickupCall'] == true) ? 'CHECKED' : '';
+		$cwignore = isset($input['ignoreCallWait']) && $input['ignoreCallWait'] ? 'CHECKED' : '';
+		$cfignore = isset($input['ignoreCallForward']) && $input['ignoreCallForward'] ? 'CHECKED' : '';
+		$cpickup = isset($input['pickupCall']) && $input['pickupCall'] ? 'CHECKED' : '';
 		$recording = $input['callRecording'] ?? 'dontcare';
-		$progress = (isset($input['callProgress']) &&  $input['callProgress'] == true) ? 'yes' : 'no';
-		$elsewhere = (isset($input['answeredElseWhere']) && $input['answeredElseWhere'] == true) ? 'yes' : 'no';
+		$progress = isset($input['callProgress']) && $input['callProgress'] ? 'yes' : 'no';
+		$elsewhere = isset($input['answeredElseWhere']) && $input['answeredElseWhere'] ? 'yes' : 'no';
 		$rvolume = $input['overrideRingerVolume'] ?? '';
 		$changecid = $input['changecid'] ?? "default";
 		if(!in_array($changecid,["fixed", "extern", "did", "forcedid"])) {
 			$changecid = "default";
 		}
 		$fixedcid = $input['fixedcid'] ?? "";
-		
+
 		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
-		
-	/**
-  * updateRingGroup
-  *
-  * @return void
-  */
- private function updateRingGroup(mixed $input,$res){
+
+	private function updateRingGroup(mixed $input,$res){
 		$grpnum = $input['groupNumber'];
 		$strategy = $input['strategy'] ?? $res['strategy'];
 		$grptime = $input['ringTime'] ?? $res['grptime'];
@@ -638,7 +631,7 @@ class Ringgroups extends Base {
 		$postdest = $input['postAnswer'] ?? $res['postdest'];
 		$desc = $input['description'] ?? $res['description'];
 		$alertinfo = $input['alertInfo'] ?? $res['alertinfo'];
-		$needsconf = $input['needConf'] ?? $res['needsconf'];
+		$needsconf = isset($input['needConf']) && $input['needConf'] ? 'CHECKED' : $res['needsconf'];
 		$remotealert_id = $input['receiverMessageConfirmCall'] ?? $res['remotealert_id'];
 		$toolate_id = $input['receiverMessage'] ?? $res['toolate_id'];
 
@@ -647,18 +640,17 @@ class Ringgroups extends Base {
 			$remotealert_id = $input['recevierMessageConfirmCall'];
 		}
 
-		// Ongoing support of deprecated misspelling
 		if ($toolate_id === $res['toolate_id'] && isset($input['recevierMessage'])) {
 			$toolate_id = $input['recevierMessage'];
 		}
 
 		$ringing = $input['ringingMusic'] ?? $res['ringing'];
-		$cwignore = $input['ignoreCallWait'] ?? $res['cwignore'];
-		$cfignore = $input['ignoreCallForward'] ?? $res['cfignore'];
-		$cpickup = $input['pickupCall'] ?? $res['cpickup'];
+		$cwignore = isset($input['ignoreCallWait']) && $input['ignoreCallWait'] ? 'CHECKED' : $res['cwignore'];
+		$cfignore = isset($input['ignoreCallForward']) && $input['ignoreCallForward'] ? 'CHECKED' : $res['cfignore'];
+		$cpickup = isset($input['pickupCall']) && $input['pickupCall'] ? 'CHECKED' : $res['cpickup'];
 		$recording = $input['callRecording'] ?? $res['recording'];
-		$progress = $input['callProgress'] ?? $res['progress'];
-		$elsewhere = $input['answeredElseWhere'] ?? $res['elsewhere'];
+		$progress = isset($input['callProgress']) && $input['callProgress'] ? 'yes' : $res['progress'];
+		$elsewhere = isset($input['answeredElseWhere']) && $input['answeredElseWhere'] ? 'yes' : $res['elsewhere'];
 		$rvolume = $input['overrideRingerVolume'] ?? $res['rvolume'];
 
 		$changecid = $input['changecid'] ?? $res['changecid'];
@@ -666,7 +658,7 @@ class Ringgroups extends Base {
 			$changecid = "default";
 		}
 		$fixedcid = $input['fixedcid'] ?? $res['fixedcid'];
-		
+
 		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
 
