@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-27 05:47-0500\n"
+"POT-Creation-Date: 2025-05-06 07:58-0400\n"
 "PO-Revision-Date: 2016-07-07 11:27+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com.com>\n"
 "Language-Team: Russian <http://weblate.postmet.com/freepbx/trunkbalance/"
@@ -31,11 +31,11 @@ msgid ""
 "defined in the list"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:131
+#: Api/Gql/Ringgroups.php:134
 msgid "A Ringgroup number"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:136
+#: Api/Gql/Ringgroups.php:139
 msgid "A descriptive title for this Ringgroup"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Alert Info"
 msgstr "Дополнительная информация"
 
-#: Api/Gql/Ringgroups.php:389 Api/Gql/Ringgroups.php:497
+#: Api/Gql/Ringgroups.php:392 Api/Gql/Ringgroups.php:500
 msgid "Alert info can be used for distinctive ring with SIP devices."
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr "Запись соединений"
 msgid "Change External CID Configuration"
 msgstr "Изменить кофигурацию Caller ID для внешних вызовов"
 
-#: Api/Gql/Ringgroups.php:447 Api/Gql/Ringgroups.php:555
+#: Api/Gql/Ringgroups.php:450 Api/Gql/Ringgroups.php:558
 msgid "Change External CID Configuration."
 msgstr ""
 
@@ -117,13 +117,13 @@ msgstr ""
 "номера. Которая даёт возможность подтвердить желание принять звонок прежде, "
 "чем звонок будет туда перенаправлен."
 
-#: Api/Gql/Ringgroups.php:403 Api/Gql/Ringgroups.php:511
+#: Api/Gql/Ringgroups.php:406 Api/Gql/Ringgroups.php:514
 msgid ""
 "DEPRECATED: Use receiverMessage instead. Message to be played to the person "
 "RECEIVING the call, if the call has already been accepted before they push 1."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:398 Api/Gql/Ringgroups.php:506
+#: Api/Gql/Ringgroups.php:401 Api/Gql/Ringgroups.php:509
 msgid ""
 "DEPRECATED: Use receiverMessageConfirmCall instead. Message to be played to "
 "the person RECEIVING the call, if 'Confirm Calls' is enabled."
@@ -137,17 +137,17 @@ msgstr "По умолчанию"
 msgid "Delete"
 msgstr "Удалить"
 
-#: Api/Gql/Ringgroups.php:53
+#: Api/Gql/Ringgroups.php:55
 msgid "Delete a ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:248 Api/Gql/Ringgroups.php:402
-#: Api/Gql/Ringgroups.php:510
+#: Api/Gql/Ringgroups.php:251 Api/Gql/Ringgroups.php:405
+#: Api/Gql/Ringgroups.php:513
 msgid "Deprecated due to misspelling. Use receiverMessage instead."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:242 Api/Gql/Ringgroups.php:397
-#: Api/Gql/Ringgroups.php:505
+#: Api/Gql/Ringgroups.php:245 Api/Gql/Ringgroups.php:400
+#: Api/Gql/Ringgroups.php:508
 msgid "Deprecated due to misspelling. Use receiverMessageConfirmCall instead."
 msgstr ""
 
@@ -171,7 +171,7 @@ msgstr "Все равно"
 msgid "Enable Call Pickup"
 msgstr "Задействовать перехват звонка"
 
-#: Api/Gql/Ringgroups.php:393 Api/Gql/Ringgroups.php:501
+#: Api/Gql/Ringgroups.php:396 Api/Gql/Ringgroups.php:504
 #: views/advanced_form.php:369
 msgid ""
 "Enable this if you're calling external numbers that need confirmation - eg, "
@@ -185,7 +185,7 @@ msgstr ""
 "нажали \"1\" прежде чем вызов пойдёт далее. Эта возможность работает только "
 "если стратегия звонка в группе вызова установлена в значение \"Звонят все\""
 
-#: Api/Gql/Ringgroups.php:361 Api/Gql/Ringgroups.php:469
+#: Api/Gql/Ringgroups.php:364 Api/Gql/Ringgroups.php:472
 msgid "Enter a description for this ringgroup."
 msgstr ""
 
@@ -193,11 +193,11 @@ msgstr ""
 msgid "Extension List"
 msgstr "Лист внутренних номеров"
 
-#: Api/Gql/Ringgroups.php:140
+#: Api/Gql/Ringgroups.php:143
 msgid "Extensions to ring, one per line"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:369 Api/Gql/Ringgroups.php:477
+#: Api/Gql/Ringgroups.php:372 Api/Gql/Ringgroups.php:480
 msgid "Extensions to ring, seperated by -"
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "Fixed CID Value"
 msgstr "Фиксированное значение Caller ID"
 
-#: Api/Gql/Ringgroups.php:451 Api/Gql/Ringgroups.php:559
+#: Api/Gql/Ringgroups.php:454 Api/Gql/Ringgroups.php:562
 #: views/advanced_form.php:421
 msgid ""
 "Fixed value to replace the CID with used with some of the modes above. "
@@ -240,7 +240,7 @@ msgstr ""
 "Если выбран класс Музыки в ожидании вместо простого сигнала вызова, то "
 "позвонивший будет слушать музыку, пока кто-то не поднимет трубку."
 
-#: Api/Gql/Ringgroups.php:415 Api/Gql/Ringgroups.php:523
+#: Api/Gql/Ringgroups.php:418 Api/Gql/Ringgroups.php:526
 msgid ""
 "If you select a music to play on hold, instead of 'Ring', they will hear "
 "that instead of Ringing while they are waiting for someone to pick up."
@@ -303,11 +303,11 @@ msgstr ""
 msgid "Mark Answered Elsewhere"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:320 Api/Gql/Ringgroups.php:344
+#: Api/Gql/Ringgroups.php:323 Api/Gql/Ringgroups.php:347
 msgid "Message for the request"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:381 Api/Gql/Ringgroups.php:489
+#: Api/Gql/Ringgroups.php:384 Api/Gql/Ringgroups.php:492
 msgid "Message to be played to the caller before dialing this group."
 msgstr ""
 
@@ -320,7 +320,7 @@ msgstr ""
 "этой группы.<br><br>Для добавления дополнительных записей пожалуйста "
 "используйте пункт меню  \"Системные записи\""
 
-#: Api/Gql/Ringgroups.php:407 Api/Gql/Ringgroups.php:515
+#: Api/Gql/Ringgroups.php:410 Api/Gql/Ringgroups.php:518
 msgid ""
 "Message to be played to the person RECEIVING the call, if 'Confirm Calls' is "
 "enabled."
@@ -336,7 +336,7 @@ msgstr ""
 "вызовы' включено.<br><br> Для добавления дополнительных записей пожалуйста "
 "используйте пункт меню  \"Системные записи\" рядом"
 
-#: Api/Gql/Ringgroups.php:411 Api/Gql/Ringgroups.php:519
+#: Api/Gql/Ringgroups.php:414 Api/Gql/Ringgroups.php:522
 msgid ""
 "Message to be played to the person RECEIVING the call, if the call has "
 "already been accepted before they push 1."
@@ -389,7 +389,7 @@ msgid ""
 "time"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:443 Api/Gql/Ringgroups.php:551
+#: Api/Gql/Ringgroups.php:446 Api/Gql/Ringgroups.php:554
 msgid ""
 "Override the ringer volume. Note: This is only valid for Sangoma phones at "
 "this time"
@@ -415,7 +415,7 @@ msgstr "Предложите понятное название для этой �
 msgid "Provide a name for this Ring Group."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:102
+#: Api/Gql/Ringgroups.php:105
 msgid "Record found successfully"
 msgstr ""
 
@@ -466,11 +466,11 @@ msgstr "Группа вызова: %s (%s)"
 msgid "Ring Groups"
 msgstr "Группы вызова"
 
-#: Api/Gql/Ringgroups.php:280
+#: Api/Gql/Ringgroups.php:283
 msgid "Ring Strategies"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:316 views/advanced_form.php:90
+#: Api/Gql/Ringgroups.php:319 views/advanced_form.php:90
 #: views/simple_form.php:64
 msgid "Ring Strategy"
 msgstr "Стратегия вызова"
@@ -487,11 +487,11 @@ msgstr "Время звонка (макс. 300 сек.)"
 msgid "Ring Tone"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:284 views/form.php:58
+#: Api/Gql/Ringgroups.php:287 views/form.php:58
 msgid "Ring all available channels until one answers (default)"
 msgstr "Звонят все каналы, пока один кто либо не ответит (по умолчанию)"
 
-#: Api/Gql/Ringgroups.php:288
+#: Api/Gql/Ringgroups.php:291
 msgid ""
 "Ring all available channels until one answers. If the primary extension "
 "(first in list) is occupied, the other extensions will not be rung. If the "
@@ -499,13 +499,13 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:300
+#: Api/Gql/Ringgroups.php:303
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:304
+#: Api/Gql/Ringgroups.php:307
 msgid ""
 "Ring first extension in the list, then ring the 1st and 2nd extension, then "
 "ring 1st 2nd and 3rd extension in the list.... etc. If the primary extension "
@@ -521,11 +521,11 @@ msgid ""
 "only when Confirm Calls is disabled."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:308
+#: Api/Gql/Ringgroups.php:311
 msgid "Ring only the first available channel"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:312
+#: Api/Gql/Ringgroups.php:315
 msgid "Ring only the first channel which is not offhook - ignore CW"
 msgstr ""
 
@@ -537,11 +537,11 @@ msgstr "Номер группы вызова"
 msgid "RingGroup"
 msgstr "Группа Вызова"
 
-#: Api/Gql/Ringgroups.php:357 Api/Gql/Ringgroups.php:465
+#: Api/Gql/Ringgroups.php:360 Api/Gql/Ringgroups.php:468
 msgid "RingGroup number"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:45
+#: Api/Gql/Ringgroups.php:47
 msgid "RingGroup updated Successfully"
 msgstr ""
 
@@ -549,7 +549,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:365 Api/Gql/Ringgroups.php:473
+#: Api/Gql/Ringgroups.php:368 Api/Gql/Ringgroups.php:476
 msgid "Ringing Strategy"
 msgstr ""
 
@@ -567,7 +567,7 @@ msgstr ""
 msgid "Sequential"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:439 Api/Gql/Ringgroups.php:547
+#: Api/Gql/Ringgroups.php:442 Api/Gql/Ringgroups.php:550
 msgid ""
 "Should calls indicate answered elsewhere when a user answers.(true/false)"
 msgstr ""
@@ -578,7 +578,7 @@ msgid ""
 "supported."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:435 Api/Gql/Ringgroups.php:543
+#: Api/Gql/Ringgroups.php:438 Api/Gql/Ringgroups.php:546
 msgid ""
 "Should this ringgroup indicate call progress to digital channels where "
 "supported.(true/false)"
@@ -592,27 +592,27 @@ msgstr ""
 msgid "Skip Busy Agent"
 msgstr "Пропускать занятого оператора"
 
-#: Api/Gql/Ringgroups.php:85 Api/Gql/Ringgroups.php:106
+#: Api/Gql/Ringgroups.php:88 Api/Gql/Ringgroups.php:109
 msgid "Sorry, unable to find any ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:38
+#: Api/Gql/Ringgroups.php:39
 msgid "Sorry, unable to find the Ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:65
+#: Api/Gql/Ringgroups.php:68
 msgid "Sorry, unable to process your delete request"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:47
+#: Api/Gql/Ringgroups.php:49
 msgid "Sorry, unable to process your update request"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:26
+#: Api/Gql/Ringgroups.php:27
 msgid "Sorry,Ringgroup already exists"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:324 Api/Gql/Ringgroups.php:348
+#: Api/Gql/Ringgroups.php:327 Api/Gql/Ringgroups.php:351
 msgid "Status for the request"
 msgstr ""
 
@@ -620,19 +620,19 @@ msgstr ""
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: Api/Gql/Ringgroups.php:24
+#: Api/Gql/Ringgroups.php:25
 msgid "Successfully added ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:63
+#: Api/Gql/Ringgroups.php:66
 msgid "Successfully deleted ringgroup"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:292 views/form.php:60
+#: Api/Gql/Ringgroups.php:295 views/form.php:60
 msgid "Take turns ringing each available extension"
 msgstr "Звонок поступает на любой доступный внутренний номер"
 
-#: Api/Gql/Ringgroups.php:296
+#: Api/Gql/Ringgroups.php:299
 msgid ""
 "Take turns ringing each available extension. If the primary extension (first "
 "in list) is occupied, the other extensions will not be rung. If the primary "
@@ -640,7 +640,7 @@ msgid ""
 "unconditional, then all will be rung"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:94
+#: Api/Gql/Ringgroups.php:97
 msgid "The Ringgroup number to search for"
 msgstr ""
 
@@ -671,8 +671,8 @@ msgstr ""
 msgid "This ringgroup"
 msgstr "Эта группа вызова"
 
-#: Api/Gql/Ringgroups.php:145 Api/Gql/Ringgroups.php:373
-#: Api/Gql/Ringgroups.php:481 views/advanced_form.php:128
+#: Api/Gql/Ringgroups.php:148 Api/Gql/Ringgroups.php:376
+#: Api/Gql/Ringgroups.php:484 views/advanced_form.php:128
 #, fuzzy
 msgid ""
 "Time in seconds that the phones will ring. For all hunt style ring "
@@ -740,7 +740,7 @@ msgstr ""
 msgid "Transmits the Callers CID if allowed by the trunk."
 msgstr "Передавать Caller ID если позволяет транк."
 
-#: Api/Gql/Ringgroups.php:32
+#: Api/Gql/Ringgroups.php:33
 msgid "Update a ringgroup"
 msgstr ""
 
@@ -748,11 +748,11 @@ msgstr ""
 msgid "Use Dialed Number"
 msgstr "Использовать набранный номер"
 
-#: Api/Gql/Ringgroups.php:78
+#: Api/Gql/Ringgroups.php:81
 msgid "Use to get all the ringgroups"
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:117
+#: Api/Gql/Ringgroups.php:120
 msgid "Used to set ringgroup values"
 msgstr ""
 
@@ -760,7 +760,7 @@ msgstr ""
 msgid "Warning! Extension"
 msgstr "Внимание! Внутренний номер"
 
-#: Api/Gql/Ringgroups.php:423 Api/Gql/Ringgroups.php:531
+#: Api/Gql/Ringgroups.php:426 Api/Gql/Ringgroups.php:534
 #: views/advanced_form.php:315
 msgid ""
 "When enabled, agents who are on an occupied phone will be skipped as if the "
@@ -773,7 +773,7 @@ msgstr ""
 "вызова) или телефоны с несколькими линиями не будут учитываться в этот "
 "момент времени в любых стратегиях обзвона и будет выбран следующий агент."
 
-#: Api/Gql/Ringgroups.php:427 Api/Gql/Ringgroups.php:535
+#: Api/Gql/Ringgroups.php:430 Api/Gql/Ringgroups.php:538
 #: views/advanced_form.php:342
 msgid ""
 "When enabled, this will allow calls to the Ring Group to be picked up with "
@@ -805,14 +805,14 @@ msgstr ""
 "более ринг-группе будут отображаться как в секции Ринг-группы, так и в "
 "каждой ринг-группе, членами которой они являются."
 
-#: Api/Gql/Ringgroups.php:419 Api/Gql/Ringgroups.php:527
+#: Api/Gql/Ringgroups.php:422 Api/Gql/Ringgroups.php:530
 msgid ""
 "When set to true, agents who attempt to Call Forward will be ignored, this "
 "applies to CF, CFU and CFB. Extensions entered with '#' at the end, for "
 "example to access the extension's Follow-Me, might not honor this setting ."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:385 Api/Gql/Ringgroups.php:493
+#: Api/Gql/Ringgroups.php:388 Api/Gql/Ringgroups.php:496
 #: views/advanced_form.php:479 views/simple_form.php:153
 msgid "Where to send callers if there is no answer."
 msgstr "Куда отправлять вызывающих если нет ответа."
@@ -836,7 +836,7 @@ msgstr ""
 "равно). Если запись отключена, то запись по требованию будет заблокирована, "
 "если в настройках записи вызова не выбрано \"Переопределить\"."
 
-#: Api/Gql/Ringgroups.php:431 Api/Gql/Ringgroups.php:539
+#: Api/Gql/Ringgroups.php:434 Api/Gql/Ringgroups.php:542
 msgid ""
 "You can always record calls that come into this ringgroup (Force), never "
 "record them (Never), or allow the extension that answers to do on-demand "
@@ -849,7 +849,7 @@ msgid ""
 "answers a call."
 msgstr ""
 
-#: Api/Gql/Ringgroups.php:377 Api/Gql/Ringgroups.php:485
+#: Api/Gql/Ringgroups.php:380 Api/Gql/Ringgroups.php:488
 #: views/advanced_form.php:154
 msgid ""
 "You can optionally prefix the CallerID name when ringing extensions in this "
