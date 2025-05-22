@@ -621,7 +621,7 @@ class Ringgroups extends Base {
 		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
 	}
 
-	private function updateRingGroup(mixed $input,$res){
+	private function updateRingGroup(mixed $input, $res) {
 		$grpnum = $input['groupNumber'];
 		$strategy = $input['strategy'] ?? $res['strategy'];
 		$grptime = $input['ringTime'] ?? $res['grptime'];
@@ -631,7 +631,12 @@ class Ringgroups extends Base {
 		$postdest = $input['postAnswer'] ?? $res['postdest'];
 		$desc = $input['description'] ?? $res['description'];
 		$alertinfo = $input['alertInfo'] ?? $res['alertinfo'];
-		$needsconf = isset($input['needConf']) && $input['needConf'] ? 'CHECKED' : $res['needsconf'];
+		
+		// Modification pour gérer correctement les valeurs booléennes
+		$needsconf = isset($input['needConf']) 
+			? ($input['needConf'] ? 'CHECKED' : '') 
+			: $res['needsconf'];
+		
 		$remotealert_id = $input['receiverMessageConfirmCall'] ?? $res['remotealert_id'];
 		$toolate_id = $input['receiverMessage'] ?? $res['toolate_id'];
 
@@ -645,34 +650,47 @@ class Ringgroups extends Base {
 		}
 
 		$ringing = $input['ringingMusic'] ?? $res['ringing'];
-		$cwignore = isset($input['ignoreCallWait']) && $input['ignoreCallWait'] ? 'CHECKED' : $res['cwignore'];
-		$cfignore = isset($input['ignoreCallForward']) && $input['ignoreCallForward'] ? 'CHECKED' : $res['cfignore'];
-		$cpickup = isset($input['pickupCall']) && $input['pickupCall'] ? 'CHECKED' : $res['cpickup'];
+		
+		$cwignore = isset($input['ignoreCallWait']) ? ($input['ignoreCallWait'] ? 'CHECKED' : '') : $res['cwignore'];
+		
+		$cfignore = isset($input['ignoreCallForward']) ? ($input['ignoreCallForward'] ? 'CHECKED' : '') : $res['cfignore'];
+		
+		$cpickup = isset($input['pickupCall']) ? ($input['pickupCall'] ? 'CHECKED' : '') : $res['cpickup'];
+		
 		$recording = $input['callRecording'] ?? $res['recording'];
-		$progress = isset($input['callProgress']) && $input['callProgress'] ? 'yes' : $res['progress'];
-		$elsewhere = isset($input['answeredElseWhere']) && $input['answeredElseWhere'] ? 'yes' : $res['elsewhere'];
+		
+		$progress = isset($input['callProgress']) ? ($input['callProgress'] ? 'yes' : 'no') : $res['progress'];
+		
+		$elsewhere = isset($input['answeredElseWhere']) ? ($input['answeredElseWhere'] ? 'yes' : 'no') : $res['elsewhere'];
+		
 		$rvolume = $input['overrideRingerVolume'] ?? $res['rvolume'];
 
 		$changecid = $input['changecid'] ?? $res['changecid'];
-		if(!in_array($changecid,["fixed", "extern", "did", "forcedid"])) {
+		if (!in_array($changecid, ["fixed", "extern", "did", "forcedid"])) {
 			$changecid = "default";
 		}
 		$fixedcid = $input['fixedcid'] ?? $res['fixedcid'];
 
-		return $this->freepbx->Ringgroups->add($grpnum,$strategy,$grptime,$grplist,$postdest,$desc,$grppre,$annmsg_id,$alertinfo,$needsconf,$remotealert_id,$toolate_id,$ringing,$cwignore,$cfignore,$changecid,$fixedcid,$cpickup, $recording,$progress,$elsewhere,$rvolume,1);
+		return $this->freepbx->Ringgroups->add(
+			$grpnum, $strategy, $grptime, $grplist, $postdest, $desc, $grppre, 
+			$annmsg_id, $alertinfo, $needsconf, $remotealert_id, $toolate_id, 
+			$ringing, $cwignore, $cfignore, $changecid, $fixedcid, $cpickup, 
+			$recording, $progress, $elsewhere, $rvolume, 1
+		);
 	}
 
-	/**
+  
+  /**
   * validate
   *
   * @return boolean
   */
- private function validate(mixed $row){
+  private function validate(mixed $row){
 		if($row == 'CHECKED'){
 			return true;
 		}
 		else{
 			return false;
 		}
-	}
+  }
 }
