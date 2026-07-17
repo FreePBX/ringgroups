@@ -2,7 +2,7 @@
 	<rawname>ringgroups</rawname>
 	<repo>standard</repo>
 	<name>Ring Groups</name>
-	<version>17.0.2.8</version>
+	<version>18.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,15 +12,12 @@
 	</description>
   	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/24477908/Ring+Groups+Module</more-info>
 	<changelog>
-		*17.0.2.8* #issue-724 Improved Input Handling and Boolean Normalization for Call Settings 
-		*17.0.2.7* #issue-724 Refactor addRingGroup and updateRingGroup methods for improved 
-		*17.0.2.3* Packaging of ver 17.0.2.3
-		*17.0.1* 1670.1 alpha release
+		*18.0.1* initial release
 	</changelog>
 	<depends>
-		<module>callrecording ge 17.0.1</module>
-		<module>core ge 17.0.1</module>
-		<version>17.0.1</version>
+		<module>callrecording ge 18.0.1</module>
+		<module>core ge 18.0.1</module>
+		<version>18.0</version>
 	</depends>
 	<menuitems>
 		<ringgroups needsenginedb="yes">Ring Groups</ringgroups>
@@ -56,6 +53,6 @@
 		</ringgroups>
  	</popovers>
 	<supported>
-		<version>17.0</version>
+		<version>18.0</version>
 	</supported>
 </module>
